@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.illumiasolutions.com)",
+      "WebFetch(domain:webcache.googleusercontent.com)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)",
+      "Bash(npx create-next-app@latest illumia-web --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)",
+      "Bash(npm run:*)",
+      "Bash(curl:*)",
+      "Bash(node:*)",
+      "WebFetch(domain:web.archive.org)",
+      "mcp__claude_ai_Figma__get_metadata",
+      "mcp__claude_ai_Figma__use_figma",
+      "Bash(python3 -c ':*)",
+      "Bash(python3 ../skills/ui-ux-pro-max/scripts/search.py \"corporate IT security cloud enterprise professional\" --design-system -p \"Illumia Solutions\" -f markdown)",
+      "Bash(python O:/CODE/illumia-solutions/skills/ui-ux-pro-max/scripts/search.py \"corporate IT security cloud enterprise professional\" --design-system -p \"Illumia Solutions\" -f markdown)",
+      "Bash(ls \"O:\\\\\\\\CODE\\\\\\\\illumia-solutions\\\\\\\\illumia-web\\\\\\\\\")",
+      "Bash(dir \"O:\\\\CODE\\\\illumia-solutions\\\\illumia-web\")",
+      "Bash(powershell:*)",
+      "Bash(npx tsc:*)",
+      "Bash(python3 \".claude/skills/ui-ux-pro-max/scripts/search.py\" \"corporate IT solutions cybersecurity cloud enterprise professional\" --design-system -p \"Illumia Solutions\")",
+      "Bash(py \".claude/skills/ui-ux-pro-max/scripts/search.py\" \"corporate IT solutions cybersecurity cloud enterprise professional\" --design-system -p \"Illumia Solutions\")",
+      "mcp__claude_ai_Figma__get_design_context",
+      "mcp__claude_ai_Figma__get_screenshot",
+      "Bash(xargs ls *)",
+      "Bash(awk '{print $NF}')"
+    ]
+  }
+}
