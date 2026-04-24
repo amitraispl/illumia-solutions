@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
+import SlideTextButton from "@/components/kokonutui/slide-text-button";
 
 const LOGO_URL =
   "https://nextcloud.illumiasolutions.com/s/BoJ6wwwsN5ja8aR/download/Slide4_transparent-removebg-preview.png";
@@ -10,17 +11,13 @@ const LOGO_URL =
 const solutions = [
   { label: "Cloud Services", href: "/cloud-services" },
   { label: "Cyber Security", href: "/cyber-security" },
-  { label: "Application Solutions", href: "/application-solutions" },
-  { label: "Infrastructure Solutions", href: "/infrastructure-solutions" },
-  { label: "Web Meeting Solution", href: "/web-meeting-solution" },
-  { label: "PAM as a Service", href: "/pam-as-a-service" },
+  { label: "Open Source Solutions", href: "/open-source-solutions" },
 ];
 
 const company = [
   { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
   { label: "FAQs", href: "/faqs" },
-  { label: "Why Us", href: "/why-us" },
 ];
 
 const legal = [
@@ -70,15 +67,12 @@ export default function Footer() {
               <span className="italic text-[#ffb3b3]">next breakthrough.</span>
             </h3>
           </div>
-          <Link
+          <SlideTextButton
+            text="Start a Conversation"
+            hoverText="Get in Touch"
             href="/contact"
-            className="inline-flex items-center gap-3 bg-[#b31c33] hover:bg-[#920022] text-white px-8 py-4 rounded-xl font-body font-semibold text-sm tracking-wide shadow-lg shadow-[#b31c33]/30 transition-all duration-200 active:scale-95 shrink-0"
-          >
-            Start a Conversation
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+            className="h-auto py-4 rounded-xl bg-[#b31c33] hover:bg-[#920022] shadow-lg shadow-[#b31c33]/30 active:scale-95 tracking-wide font-body font-semibold shrink-0"
+          />
         </div>
       </div>
 
@@ -103,23 +97,6 @@ export default function Footer() {
             </p>
 
             {/* Address card */}
-            <div className="flex items-start gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/5 max-w-sm">
-              <svg className="w-5 h-5 shrink-0 text-[#b31c33] mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-              </svg>
-              <div className="flex flex-col gap-1">
-                <p className="font-body text-xs font-bold tracking-widest uppercase text-stone-200">
-                  Headquarters
-                </p>
-                <p className="text-stone-400 font-body text-xs leading-relaxed">
-                  2nd-FR, FL-C, 98/9, Gopal Lal Tagore Rd,
-                  <br />
-                  Baranagar, Kolkata — 700036, India
-                </p>
-              </div>
-            </div>
-
             {/* Social icons */}
             <div className="flex gap-3">
               <motion.a
@@ -203,6 +180,19 @@ export default function Footer() {
                   <span className="font-body text-[13px]">24/7 Multi-Timezone Support</span>
                   <span className="font-body text-[11px] text-stone-500">
                     Always on when you need us
+                  </span>
+                </div>
+              </li>
+              <li className="flex items-start gap-3 text-stone-400">
+                <svg className="w-4 h-4 mt-0.5 text-[#b31c33] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+                <div className="flex flex-col gap-0.5">
+                  <span className="font-body text-[13px]">Headquarters</span>
+                  <span className="font-body text-[11px] text-stone-500 leading-relaxed">
+                    2nd-FR, FL-C, 98/9, Gopal Lal Tagore Rd,<br />
+                    Baranagar, Kolkata — 700036, India
                   </span>
                 </div>
               </li>

@@ -24,7 +24,8 @@
       "mcp__claude_ai_Figma__get_design_context",
       "mcp__claude_ai_Figma__get_screenshot",
       "Bash(xargs ls *)",
-      "Bash(awk '{print $NF}')"
+      "Bash(awk '{print $NF}')",
+      "Bash(npm install *)"
     ]
   }
 }

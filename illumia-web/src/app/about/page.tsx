@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import ServicesEcosystem from "@/components/ServicesEcosystem";
+import AboutFlipCard from "@/components/AboutFlipCard";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -41,13 +42,16 @@ const values = [
 ];
 
 const whyUs = [
-  { number: "01", title: "Industry-Leading Credentials", desc: "Our team possesses several top-level, industry-leading certifications across cybersecurity, cloud platforms, and open-source ecosystems — ensuring we deliver the highest standards of service and expertise." },
-  { number: "02", title: "Experience Meets Innovation", desc: "We combine the fresh perspectives of young minds with the seasoned expertise of professionals who have over 20 years of industry experience. This blend creates unique, tailored solutions for every client." },
-  { number: "03", title: "Open-Source Excellence", desc: "We harness the power of open-source technologies to deliver infrastructure, application, and cybersecurity solutions that are transparent, auditable, cost-effective, and enterprise-grade." },
-  { number: "04", title: "Global Presence, Local Expertise", desc: "A diverse team with a global presence, supported by strategic partnerships, enabling us to understand and address unique challenges faced by businesses in different regions and industries." },
-  { number: "05", title: "24/7 Multi-Timezone Support", desc: "Our team operates across multiple time zones, ensuring prompt and effective service whenever you need it. Your business doesn't stop, and neither do we." },
-  { number: "06", title: "Innovative & Cost-Effective", desc: "We are dedicated to empowering businesses to achieve their goals through innovative and cost-effective solutions — making enterprise-grade technology accessible to organizations of every size." },
-  { number: "07", title: "Customer-Centric", desc: "We prioritize our clients' needs, working closely with them to understand their goals and deliver solutions that drive success." },
+  { number: "01", title: "Expertise Across Domains", desc: "Illumia Solutions brings together a wealth of experience and expertise in cybersecurity, cloud solutions, and open-source technologies. Our team of certified professionals, including CISA, CISSP, CEH, and CCIE, boasts over 20 years of industry-relevant experience, ensuring that your business receives top-tier protection and service tailored to your unique needs.", bg: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80&auto=format&fit=crop" },
+  { number: "02", title: "Comprehensive Cybersecurity Services", desc: "In the face of increasing cyber threats, Illumia Solutions offers robust cybersecurity services that cover everything from IT risk management and application security to mobile and cloud security. We help you navigate complex regulatory landscapes, ensure data privacy, and protect your digital assets with cutting-edge security strategies and technologies.", bg: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80&auto=format&fit=crop" },
+  { number: "03", title: "Advanced Cloud Solutions", desc: "Harness the power of cloud technology with Illumia Solutions. Our cloud services are designed to optimise your operations, enhance security, and ensure seamless scalability. Whether you need hosting, application services, migration, or maintenance, we provide comprehensive solutions that meet today's needs and scale for tomorrow's challenges.", bg: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&q=80&auto=format&fit=crop" },
+  { number: "04", title: "Innovative Open-Source Solutions", desc: "We leverage the flexibility and cost-effectiveness of open-source technologies to deliver tailored infrastructure, application, and cybersecurity solutions. Our services include hyperconverged infrastructure, high-performance block storage, and private cloud solutions that ensure your IT environment is robust, scalable, and future-proof.", bg: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80&auto=format&fit=crop" },
+  { number: "05", title: "Customer-Centric Approach", desc: "Illumia Solutions places a strong emphasis on understanding and meeting the specific needs of our clients. Our customer-centric approach ensures that solutions are not only effective but also seamlessly integrated into your existing operations. We offer ongoing support and maintenance to ensure your systems remain secure and efficient.", bg: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80&auto=format&fit=crop" },
+  { number: "06", title: "Global Reach, Local Touch", desc: "With a global presence, Illumia Solutions is well-equipped to meet your cybersecurity and IT needs regardless of location. Our team operates across multiple time zones, ensuring prompt and effective service whenever you need it.", bg: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80&auto=format&fit=crop" },
+  { number: "07", title: "Partnerships and Collaboration", desc: "Our strong partnerships with leading global auditor companies and certified professionals allow us to deliver high-quality services and achieve compliance swiftly. These collaborations enhance our ability to provide comprehensive and efficient solutions to our clients.", bg: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80&auto=format&fit=crop" },
+  { number: "08", title: "Innovative and Cost-Effective Solutions", desc: "By leveraging the latest technologies and open-source solutions, we provide innovative services that keep your business ahead of emerging threats while ensuring cost efficiency. Our transparent billing practices and no hidden charges policy ensure that you get the best value for your investment.", bg: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80&auto=format&fit=crop" },
+  { number: "09", title: "Continuous Support and Maintenance", desc: "Our dedicated support team provides continuous monitoring, management, and maintenance services to ensure your IT infrastructure operates smoothly and securely. We offer 24/7 support to address any issues promptly and minimise disruption to your operations.", bg: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80&auto=format&fit=crop" },
+  { number: "10", title: "Tailored Solutions for Diverse Needs", desc: "From high-security measures and regulatory compliance to scalable cloud solutions and efficient open-source technologies, Illumia Solutions provides a full stack of services designed to address the diverse needs of modern businesses. We customise our solutions to fit your specific requirements, ensuring maximum protection and operational efficiency.", bg: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80&auto=format&fit=crop" },
 ];
 
 export default function AboutPage() {
@@ -69,6 +73,25 @@ export default function AboutPage() {
         imageAlt="Illumia Solutions team collaboration"
         imagePosition="object-top"
       />
+
+      {/* Stats Bar */}
+      <section className="bg-[#b31c33] py-12">
+        <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-white text-center">
+            {[
+              { value: "20+", label: "Years Combined Experience" },
+              { value: "100%", label: "Open-Source Powered" },
+              { value: "47+", label: "Specialised Modules" },
+              { value: "24/7", label: "Support Coverage" },
+            ].map((s) => (
+              <div key={s.label}>
+                <p className="font-headline text-4xl font-bold">{s.value}</p>
+                <p className="font-body text-xs uppercase tracking-widest text-white/70 mt-1">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Our Narrative */}
       <section className="py-32 bg-[#f6f3f2]">
@@ -123,10 +146,43 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+
+          {/* ─── Our Approach wide card ───────────────────────────────────── */}
+          <div className="mt-8 bg-white rounded-2xl border border-[#e2bebd]/30 overflow-hidden flex flex-col lg:flex-row">
+            <div className="flex-1 p-10 lg:p-14 flex flex-col gap-6 justify-center">
+              <span className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold">
+                Our Approach
+              </span>
+              <h3 className="font-headline text-3xl md:text-4xl text-stone-900 leading-tight">
+                Dynamic expertise,{" "}
+                <span className="italic text-[#b31c33]">precision delivery.</span>
+              </h3>
+              <p className="text-[#5a4040] text-base leading-relaxed font-body">
+                We pride ourselves on our dynamic approach, combining the fresh perspectives
+                of young minds with the seasoned expertise of professionals who have over 20
+                years of industry experience. Our team possesses several top level
+                industry-leading credentials, ensuring that we deliver the highest standards
+                of service and expertise. This blend of innovation and experience allows us
+                to create unique, tailored solutions that address the specific needs of each
+                client. Our team works collaboratively to understand your challenges and
+                deliver effective, cutting-edge solutions that drive success.
+              </p>
+            </div>
+            <div className="relative lg:w-[44%] min-h-[300px] shrink-0">
+              <Image
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=900&q=80&auto=format&fit=crop"
+                alt="Illumia Solutions team collaborating"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 44vw, 100vw"
+              />
+              <div className="absolute inset-0 bg-[#1c1b1b]/20" />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Why Choose Illumia Bento */}
+      {/* Why Choose Illumia — Flip Cards */}
       <section className="py-32 bg-white px-6 md:px-12">
         <div className="max-w-screen-2xl mx-auto">
           <div className="mb-16">
@@ -139,38 +195,31 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div className="lg:col-span-2 bg-[#b31c33] rounded-2xl p-10 flex flex-col gap-4">
-              <span className="font-headline text-5xl italic text-[#ffdad9]">{whyUs[0].number}.</span>
-              <h3 className="font-headline text-3xl text-white">{whyUs[0].title}</h3>
-              <p className="font-body text-sm text-white/80 leading-relaxed">{whyUs[0].desc}</p>
-            </div>
+          {/*
+            Desktop 6-col asymmetric bento:
+              Row 1 (360px): [0] col-4 large-left  [1] col-2 small-right   — 2 longest descs (367, 353)
+              Row 2 (300px): [3] col-2  [7] col-2  [8] col-2               — 3 shorter descs (338, 295, 258)
+              Row 3 (360px): [9] col-2 small-left  [2] col-4 large-right   — next 2 long descs (348, 344)
+              Row 4 (300px): [4] col-2  [6] col-2  [5] col-2               — 3 shortest descs (335, 267, 230)
+          */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
+            {/* ── Row 1 — large left + small right (two longest) ── */}
+            <AboutFlipCard {...whyUs[0]} number="01" className="sm:col-span-2 lg:col-span-4 min-h-[360px]" />
+            <AboutFlipCard {...whyUs[1]} number="02" className="sm:col-span-2 lg:col-span-2 min-h-[360px]" />
 
-            <div className="relative rounded-2xl overflow-hidden min-h-[260px]">
-              <Image
-                src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80&auto=format&fit=crop"
-                alt="Illumia Solutions technology"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-[#1c1b1b]/55" />
-              <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                <p className="font-headline text-xl text-white italic leading-tight">
-                  &ldquo;Precision applied to every layer.&rdquo;
-                </p>
-              </div>
-            </div>
+            {/* ── Row 2 — three equal (medium-short) ── */}
+            <AboutFlipCard {...whyUs[3]} number="03" className="lg:col-span-2 min-h-[300px]" />
+            <AboutFlipCard {...whyUs[7]} number="04" className="lg:col-span-2 min-h-[300px]" />
+            <AboutFlipCard {...whyUs[8]} number="05" className="sm:col-span-2 lg:col-span-2 min-h-[300px]" />
 
-            {whyUs.slice(1).map((item) => (
-              <div
-                key={item.number}
-                className="bg-[#f6f3f2] rounded-2xl p-10 border border-transparent hover:bg-white hover:border-[#e2bebd]/40 hover:shadow-xl transition-all duration-300 flex flex-col gap-4"
-              >
-                <span className="font-headline text-4xl italic text-[#b31c33]">{item.number}.</span>
-                <h3 className="font-headline text-2xl text-stone-900">{item.title}</h3>
-                <p className="font-body text-sm text-[#5a4040] leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
+            {/* ── Row 3 — small left + large right (next two longest) ── */}
+            <AboutFlipCard {...whyUs[9]} number="06" className="sm:col-span-2 lg:col-span-2 min-h-[360px]" />
+            <AboutFlipCard {...whyUs[2]} number="07" className="sm:col-span-2 lg:col-span-4 min-h-[360px]" />
+
+            {/* ── Row 4 — three equal (shortest, last row) ── */}
+            <AboutFlipCard {...whyUs[4]} number="08" className="lg:col-span-2 min-h-[300px]" />
+            <AboutFlipCard {...whyUs[6]} number="09" className="lg:col-span-2 min-h-[300px]" />
+            <AboutFlipCard {...whyUs[5]} number="10" className="sm:col-span-2 lg:col-span-2 min-h-[300px]" />
           </div>
         </div>
       </section>

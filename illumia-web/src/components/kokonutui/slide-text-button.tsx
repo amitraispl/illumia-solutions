@@ -56,7 +56,7 @@ export default function SlideTextButton({
           <span className="flex items-center gap-2 opacity-100 transition-opacity duration-300 group-hover:opacity-0">
             <span className="font-medium">{text}</span>
           </span>
-          <span className="absolute top-full left-0 flex items-center gap-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <span className="absolute top-full left-1/2 -translate-x-1/2 whitespace-nowrap flex items-center gap-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
             <span className="font-medium">{slideText}</span>
           </span>
         </span>

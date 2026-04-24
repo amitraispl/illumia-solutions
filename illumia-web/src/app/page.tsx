@@ -3,6 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import ServicesEcosystem from "@/components/ServicesEcosystem";
 import PageHero from "@/components/PageHero";
+import { Marquee } from "@/components/ui/marquee";
+import SlideTextButton from "@/components/kokonutui/slide-text-button";
+import WhyChooseFlipCard from "@/components/WhyChooseFlipCard";
 
 export const metadata: Metadata = {
   title: "Illumia Solutions | Illuminating the Path to Success",
@@ -20,7 +23,7 @@ const stats = [
 const partnerLogos = [
   { src: "/photos/Seqrite_logo Partner-768x299.png", alt: "Seqrite — Partner", width: 160, height: 60 },
   { src: "/photos/Force Logo.png", alt: "Force Networks — Partner", width: 120, height: 60 },
-  { src: "/photos/zextras_Partner_logo_RGB_web-7.png", alt: "Zextras — Partner", width: 140, height: 60 },
+  { src: "/photos/zextras_Partner_logo_RGB_web-7.png", alt: "Zextras — Partner", width: 120, height: 50 },
   { src: "/photos/Proxmox-Silver-Partner.png", alt: "Proxmox — Silver Partner", width: 130, height: 60 },
   { src: "/photos/LifeBank-Foundation.png", alt: "LifeBank Foundation — Partner", width: 140, height: 60 },
   { src: "/photos/Apache-Guacamole-Partner.png", alt: "Apache Guacamole — Commercial Support Partner", width: 140, height: 60 },
@@ -102,23 +105,43 @@ export default function HomePage() {
       </PageHero>
 
       {/* ─── Partnership Strip ────────────────────────────────────────────── */}
-      <div className="border-y border-[#e2bebd]/30 bg-white">
-        <div className="max-w-screen-2xl mx-auto px-6 md:px-12 py-5 flex flex-col sm:flex-row items-center gap-6 sm:gap-12">
+      <div className="border-y border-[#e2bebd]/30 bg-white overflow-hidden">
+        <div className="max-w-screen-2xl mx-auto px-6 md:px-12 py-5 flex items-center gap-8">
           <span className="font-body text-[10px] tracking-[0.3em] uppercase text-[#8e706f] shrink-0 font-semibold">
             Strategic Partners
           </span>
-          <div className="flex flex-wrap items-center gap-8 sm:gap-12">
-            {partnerLogos.map((logo) => (
-              <Image
-                key={logo.alt}
-                src={logo.src}
-                alt={logo.alt}
-                width={logo.width}
-                height={logo.height}
-                className="object-contain max-h-10 opacity-60 hover:opacity-90 transition-opacity duration-200 grayscale hover:grayscale-0"
-              />
-            ))}
-          </div>
+          {/* paddingX formula: wider rendered logo → proportionally more gap
+              renderedW = (width/height)×40  |  px = round(20 + (renderedW/maxRenderedW)×20)
+              maxRenderedW = (160/60)×40 = 106.67 (Seqrite) */}
+          <Marquee
+            pauseOnHover
+            repeat={3}
+            className="flex-1 [--duration:16s] [--gap:0px] p-0"
+            style={{
+              maskImage: "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
+              WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
+            }}
+          >
+            {partnerLogos.map((logo) => {
+              const renderedW = (logo.width / logo.height) * 40;
+              const px = Math.round(20 + (renderedW / ((160 / 60) * 40)) * 20);
+              return (
+                <div
+                  key={logo.alt}
+                  style={{ paddingLeft: `${px}px`, paddingRight: `${px}px` }}
+                  className="flex items-center"
+                >
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={logo.width}
+                    height={logo.height}
+                    className="object-contain max-h-10 w-auto opacity-60 hover:opacity-90 transition-opacity duration-200 grayscale hover:grayscale-0"
+                  />
+                </div>
+              );
+            })}
+          </Marquee>
         </div>
       </div>
 
@@ -209,12 +232,13 @@ export default function HomePage() {
                 >
                   Our Story
                 </Link>
-                <Link
+                <SlideTextButton
+                  text="Get in Touch"
+                  hoverText="Contact Us"
                   href="/contact"
-                  className="border border-[#b31c33]/30 text-[#b31c33] px-8 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#ffdad9]/20 text-center"
-                >
-                  Get in Touch
-                </Link>
+                  variant="ghost"
+                  className="h-auto py-4 rounded-xl border-[#b31c33]/30 text-[#b31c33] hover:bg-[#ffdad9]/20 tracking-wide font-body font-semibold"
+                />
               </div>
             </div>
           </div>
@@ -389,21 +413,12 @@ export default function HomePage() {
               </Link>
             ))}
 
-            {/* Image cell */}
-            <div className="relative rounded-2xl overflow-hidden min-h-[240px]">
-              <Image
-                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80&auto=format&fit=crop"
-                alt="Illumia Solutions infrastructure"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-[#1c1b1b]/55" />
-              <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                <p className="font-headline text-xl text-white italic">
-                  &ldquo;Where precision meets purpose.&rdquo;
-                </p>
-              </div>
-            </div>
+            {/* Flip card — image front / Continuous Support back */}
+            <WhyChooseFlipCard
+              title={whyChoose[5].title}
+              description={whyChoose[5].description}
+              href={whyChoose[5].href}
+            />
 
             {/* Card 4 */}
             <Link
@@ -413,22 +428,6 @@ export default function HomePage() {
             >
               <h3 className="font-headline text-2xl text-stone-900 group-hover:text-[#b31c33] transition-colors duration-300">{whyChoose[4].title}</h3>
               <p className="font-body text-sm text-[#5a4040] leading-relaxed flex-1">{whyChoose[4].description}</p>
-              <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-[#b31c33]/60 group-hover:text-[#b31c33]">
-                Learn More
-                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </span>
-            </Link>
-
-            {/* Card 5 */}
-            <Link
-              href={whyChoose[5].href}
-              aria-label={`${whyChoose[5].title} — learn more`}
-              className="group bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:border-[#e2bebd]/60 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300 flex flex-col gap-4"
-            >
-              <h3 className="font-headline text-2xl text-stone-900 group-hover:text-[#b31c33] transition-colors duration-300">{whyChoose[5].title}</h3>
-              <p className="font-body text-sm text-[#5a4040] leading-relaxed flex-1">{whyChoose[5].description}</p>
               <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-[#b31c33]/60 group-hover:text-[#b31c33]">
                 Learn More
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
@@ -529,12 +528,12 @@ export default function HomePage() {
             or modernising legacy infrastructure — our team is ready to map the way forward.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
+            <SlideTextButton
+              text="Contact Us Today"
+              hoverText="Let's Talk"
               href="/contact"
-              className="bg-[#b31c33] text-white px-10 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-xl shadow-[#b31c33]/20 active:scale-95 transition-all duration-200"
-            >
-              Contact Us Today
-            </Link>
+              className="h-auto py-4 rounded-xl bg-[#b31c33] hover:bg-[#920022] shadow-xl shadow-[#b31c33]/20 active:scale-95 tracking-wide font-body font-semibold"
+            />
             <Link
               href="/about"
               className="border border-[#b31c33]/30 text-[#b31c33] px-10 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#ffdad9]/20 transition-colors duration-200"
