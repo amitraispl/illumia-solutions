@@ -60,7 +60,7 @@ export default function Footer() {
 
       {/* CTA band */}
       <div className="relative border-b border-white/5">
-        <div className="max-w-screen-2xl mx-auto px-6 md:px-12 py-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <div className="max-w-screen-2xl mx-auto px-6 md:px-12  pt-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-7">
           <div className="max-w-xl">
             <p className="font-body text-[11px] tracking-[0.3em] uppercase text-[#ffb3b3] font-bold mb-3">
               Ready to Start

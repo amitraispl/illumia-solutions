@@ -21,6 +21,9 @@ const partnerLogos = [
   { src: "/photos/Seqrite_logo Partner-768x299.png", alt: "Seqrite — Partner", width: 160, height: 60 },
   { src: "/photos/Force Logo.png", alt: "Force Networks — Partner", width: 120, height: 60 },
   { src: "/photos/zextras_Partner_logo_RGB_web-7.png", alt: "Zextras — Partner", width: 140, height: 60 },
+  { src: "/photos/Proxmox-Silver-Partner.png", alt: "Proxmox — Silver Partner", width: 130, height: 60 },
+  { src: "/photos/LifeBank-Foundation.png", alt: "LifeBank Foundation — Partner", width: 140, height: 60 },
+  { src: "/photos/Apache-Guacamole-Partner.png", alt: "Apache Guacamole — Commercial Support Partner", width: 140, height: 60 },
 ];
 
 const whyChoose = [
@@ -500,7 +503,7 @@ export default function HomePage() {
                 </span>
                 <div>
                   <h4 className="font-body text-xs font-bold uppercase tracking-widest text-[#ffb3b3] mb-1">Strategic Partners</h4>
-                  <p className="text-stone-400 text-sm font-body leading-relaxed">Seqrite · Force Networks · Zextras</p>
+                  <p className="text-stone-400 text-sm font-body leading-relaxed">Seqrite · Force Networks · Zextras · Proxmox · LifeBank Foundation · Apache Guacamole</p>
                 </div>
               </div>
             </div>
@@ -544,3 +547,4 @@ export default function HomePage() {
     </>
   );
 }
+           
