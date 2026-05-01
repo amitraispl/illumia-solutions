@@ -86,7 +86,7 @@ export default function ServicesEcosystem() {
   const [gridAnimDone, setGridAnimDone] = useState(false);
 
   return (
-    <section className="py-32 px-6 md:px-12 bg-[#f6f3f2] border-t border-[#e2bebd]/10">
+    <section className="py-20 px-6 md:px-12 bg-[#f6f3f2] border-t border-[#e2bebd]/10">
       <div className="max-w-screen-2xl mx-auto">
         {/* Header */}
         <motion.div

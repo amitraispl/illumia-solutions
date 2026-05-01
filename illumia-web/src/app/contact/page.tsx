@@ -43,7 +43,7 @@ function validate(form: FormData): FormErrors {
 
 function ErrorMsg({ id, text }: { id: string; text: string }) {
   return (
-    <p id={id} role="alert" className="text-[#b31c33] text-xs font-body flex items-center gap-1.5 mt-1">
+    <p id={id} role="alert" className="text-[#b31c33] text-sm font-body flex items-center gap-1.5 mt-1">
       <svg className="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
         <path
           fillRule="evenodd"

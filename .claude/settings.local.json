@@ -25,7 +25,16 @@
       "mcp__claude_ai_Figma__get_screenshot",
       "Bash(xargs ls *)",
       "Bash(awk '{print $NF}')",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "Bash(Get-ChildItem -Path \"O:\\\\CODE\\\\illumia-solutions\\\\illumia-web\" -Recurse -Directory)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Remove-Item *)",
+      "Bash(Get-ChildItem -Path \"O:\\\\CODE\\\\illumia-solutions\\\\website-content\" -File)",
+      "Bash(Select-Object FullName, Name)",
+      "Bash(Get-ChildItem *)",
+      "Bash(python3 *)",
+      "Bash(mktemp -d)",
+      "Bash(unzip -q 'O:\\\\CODE\\\\illumia-solutions\\\\website-content\\\\Under construction page contents\\\\Temporary website content V1.1' -d __TRACKED_VAR__/temp-v1-1)"
     ]
   }
 }

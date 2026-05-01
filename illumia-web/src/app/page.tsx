@@ -84,7 +84,7 @@ export default function HomePage() {
           </>
         }
         description="Enterprise-grade cybersecurity, cloud, and open-source solutions — engineered for resilience, built for scale. From Kolkata to the globe, we deliver precision technology that powers ambitious businesses forward."
-        primaryCta={{ label: "Start Your Journey", href: "/contact" }}
+        primaryCta={{ label: "Talk to Our Team", href: "/contact" }}
         secondaryCta={{ label: "Learn About Us", href: "/about" }}
         imageSrc="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1400&q=85&auto=format&fit=crop"
         imageAlt="Modern technology workspace with multiple screens"
@@ -146,7 +146,7 @@ export default function HomePage() {
       </div>
 
       {/* ─── About Snapshot ───────────────────────────────────────────────── */}
-      <section className="py-32 bg-[#f6f3f2]">
+      <section className="py-20 bg-[#f6f3f2]">
         <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             {/* Left: editorial text + image */}
@@ -246,7 +246,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── Expertise Ecosystem Bento ────────────────────────────────────── */}
-      <section className="py-32 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-8">
             <div>
@@ -258,7 +258,7 @@ export default function HomePage() {
               </h2>
             </div>
             <p className="text-[#5c5c5c] font-body text-sm max-w-xs leading-relaxed italic">
-              &ldquo;A unified suite of specialised instruments designed for the modern enterprise.&rdquo;
+              &ldquo;Three disciplines. One team. Zero compromises on security, scale, or cost.&rdquo;
             </p>
           </div>
 
@@ -286,7 +286,7 @@ export default function HomePage() {
                 ))}
               </div>
               <span className="mt-6 text-[#b31c33] font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest">
-                Learn More
+                Explore Cloud
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -339,7 +339,7 @@ export default function HomePage() {
                 <div>
                   <h3 className="font-headline text-2xl text-white mb-2">Open Source Integration</h3>
                   <span className="text-white/70 font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest">
-                    Learn More
+                    Explore Open Source
                     <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
@@ -377,7 +377,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── Why Choose Us Bento ──────────────────────────────────────────── */}
-      <section className="py-32 bg-[#f6f3f2] border-t border-[#e2bebd]/20">
+      <section className="py-20 bg-[#f6f3f2] border-t border-[#e2bebd]/20">
         <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
           <div className="mb-16">
             <span className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-4">
@@ -397,7 +397,7 @@ export default function HomePage() {
               <h3 className="font-headline text-2xl text-white">{whyChoose[0].title}</h3>
               <p className="font-body text-sm text-white/80 leading-relaxed flex-1">{whyChoose[0].description}</p>
               <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-white/70">
-                Learn More <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                Explore Our Expertise <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </span>
             </Link>
 
@@ -429,7 +429,7 @@ export default function HomePage() {
               <h3 className="font-headline text-2xl text-stone-900 group-hover:text-[#b31c33] transition-colors duration-300">{whyChoose[4].title}</h3>
               <p className="font-body text-sm text-[#5a4040] leading-relaxed flex-1">{whyChoose[4].description}</p>
               <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-[#b31c33]/60 group-hover:text-[#b31c33]">
-                Learn More
+                Our Global Reach
                 <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -440,7 +440,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── Global Reach ─────────────────────────────────────────────────── */}
-      <section className="py-32 bg-[#1c1b1b] text-white relative overflow-hidden">
+      <section className="py-20 bg-[#1c1b1b] text-white relative overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=70&auto=format&fit=crop"
           alt=""
@@ -513,7 +513,7 @@ export default function HomePage() {
       <ServicesEcosystem />
 
       {/* ─── CTA Strip ────────────────────────────────────────────────────── */}
-      <section className="bg-[#fcf9f8] py-28 border-t border-[#e2bebd]/20">
+      <section className="bg-[#fcf9f8] py-16 border-t border-[#e2bebd]/20">
         <div className="max-w-screen-2xl mx-auto px-6 md:px-12 text-center">
           <span className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-6">
             Start Today
@@ -538,7 +538,7 @@ export default function HomePage() {
               href="/about"
               className="border border-[#b31c33]/30 text-[#b31c33] px-10 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#ffdad9]/20 transition-colors duration-200"
             >
-              Learn More
+              About Illumia
             </Link>
           </div>
         </div>
