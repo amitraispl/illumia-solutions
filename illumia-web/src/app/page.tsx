@@ -7,6 +7,12 @@ import PageHero from "@/components/PageHero";
 import { Marquee } from "@/components/ui/marquee";
 import SlideTextButton from "@/components/kokonutui/slide-text-button";
 import WhyChooseFlipCard from "@/components/WhyChooseFlipCard";
+import seqriteLogo from "../../public/seqrite-logo-partner.png";
+import forceLogo from "../../public/force-logo.png";
+import zextrasLogo from "../../public/zextras_Partner_logo_RGB_web-7.png";
+import proxmoxLogo from "../../public/Proxmox-Silver-Partner.png";
+import lifebankLogo from "../../public/LifeBank-Foundation.png";
+import guacamoleLogo from "../../public/Apache-Guacamole-Partner.png";
 
 export const metadata: Metadata = {
   title: "Illumia Solutions | Illuminating the Path to Success",
@@ -22,12 +28,12 @@ const stats = [
 ];
 
 const partnerLogos = [
-  { src: "/seqrite-logo-partner.png", alt: "Seqrite — Partner", width: 160, height: 60 },
-  { src: "/force-logo.png", alt: "Force Networks — Partner", width: 120, height: 60 },
-  { src: "/zextras_Partner_logo_RGB_web-7.png", alt: "Zextras — Partner", width: 120, height: 50 },
-  { src: "/Proxmox-Silver-Partner.png", alt: "Proxmox — Silver Partner", width: 130, height: 60 },
-  { src: "/LifeBank-Foundation.png", alt: "LifeBank Foundation — Partner", width: 140, height: 60 },
-  { src: "/Apache-Guacamole-Partner.png", alt: "Apache Guacamole — Commercial Support Partner", width: 140, height: 60 },
+  { src: seqriteLogo, alt: "Seqrite — Partner", width: 160, height: 60 },
+  { src: forceLogo, alt: "Force Networks — Partner", width: 120, height: 60 },
+  { src: zextrasLogo, alt: "Zextras — Partner", width: 120, height: 50 },
+  { src: proxmoxLogo, alt: "Proxmox — Silver Partner", width: 130, height: 60 },
+  { src: lifebankLogo, alt: "LifeBank Foundation — Partner", width: 140, height: 60 },
+  { src: guacamoleLogo, alt: "Apache Guacamole — Commercial Support Partner", width: 140, height: 60 },
 ];
 
 const whyChoose = [
