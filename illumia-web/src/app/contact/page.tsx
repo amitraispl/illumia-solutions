@@ -72,10 +72,10 @@ export default function ContactPage() {
 
   const fieldClass = (field: keyof FormData) => {
     const base =
-      "w-full bg-[#f6f3f2] border-0 border-b-2 px-3 py-3 text-stone-900 font-body transition-all";
+      "w-full bg-[#f6f3f2] border rounded-xl px-4 py-3.5 text-stone-900 font-body transition-all outline-none focus:bg-white placeholder:text-stone-400";
     if (touched[field] && errors[field])
-      return `${base} border-[#b31c33] bg-[#ffdad9]/20`;
-    return `${base} border-[#e2bebd] focus:border-[#b31c33]`;
+      return `${base} border-[#b31c33] ring-2 ring-[#b31c33]/10 bg-[#ffdad9]/10`;
+    return `${base} border-[#e2bebd]/70 focus:border-[#b31c33]/70 focus:ring-2 focus:ring-[#b31c33]/10`;
   };
 
   const handleChange = (field: keyof FormData, value: string) => {
@@ -94,7 +94,6 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Mark all fields touched so errors surface
     const allTouched = Object.fromEntries(
       Object.keys(form).map((k) => [k, true])
     ) as Record<keyof FormData, boolean>;
@@ -110,7 +109,6 @@ export default function ContactPage() {
     }
 
     setIsLoading(true);
-    // Simulate network round-trip
     await new Promise((res) => setTimeout(res, 900));
     setIsLoading(false);
     setSubmitted(true);
@@ -141,7 +139,10 @@ export default function ContactPage() {
 
             {/* ── Form ── */}
             <div className="lg:col-span-7">
-              <div className="bg-white p-10 lg:p-16 rounded-2xl shadow-sm border border-[#e2bebd]/20">
+              <div className="bg-white p-6 sm:p-8 lg:p-16 rounded-2xl shadow-sm border border-[#e2bebd]/20 border-t-2 border-t-[#b31c33]">
+                <span className="font-body text-xs uppercase tracking-widest text-[#b31c33] font-bold block mb-3">
+                  Let&apos;s Talk
+                </span>
                 <h2 className="font-headline text-4xl text-stone-900 mb-2">Send an Inquiry</h2>
                 <p className="text-[#5a4040] font-body text-sm mb-12">
                   Fields marked{" "}
@@ -294,29 +295,36 @@ export default function ContactPage() {
                       >
                         How Can We Help?
                       </label>
-                      <select
-                        id="service"
-                        value={form.service}
-                        onChange={(e) => handleChange("service", e.target.value)}
-                        className={fieldClass("service")}
-                      >
-                        <option value="">Pick the closest match…</option>
-                        <option>Cloud Services</option>
-                        <option>Cyber Security Services</option>
-                        <option>Application Solutions</option>
-                        <option>Infrastructure Solutions</option>
-                        <option>PAM as a Service</option>
-                        <option>Virtual Private Server</option>
-                        <option>Mobile Security</option>
-                        <option>On-Premise Private Cloud</option>
-                        <option>Object Storage</option>
-                        <option>Container Solutions</option>
-                        <option>Vulnerability Management</option>
-                        <option>NMS as a Service</option>
-                        <option>SOAR</option>
-                        <option>EDR Solution</option>
-                        <option>Not sure yet — let&apos;s talk</option>
-                      </select>
+                      <div className="relative">
+                        <select
+                          id="service"
+                          value={form.service}
+                          onChange={(e) => handleChange("service", e.target.value)}
+                          className={`${fieldClass("service")} appearance-none cursor-pointer pr-10`}
+                        >
+                          <option value="">Pick the closest match…</option>
+                          <option>Cloud Services</option>
+                          <option>Cyber Security Services</option>
+                          <option>Application Solutions</option>
+                          <option>Infrastructure Solutions</option>
+                          <option>PAM as a Service</option>
+                          <option>Virtual Private Server</option>
+                          <option>Mobile Security</option>
+                          <option>On-Premise Private Cloud</option>
+                          <option>Object Storage</option>
+                          <option>Container Solutions</option>
+                          <option>Vulnerability Management</option>
+                          <option>NMS as a Service</option>
+                          <option>SOAR</option>
+                          <option>EDR Solution</option>
+                          <option>Not sure yet — let&apos;s talk</option>
+                        </select>
+                        <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#b31c33]">
+                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="m19 9-7 7-7-7" />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
 
                     {/* Message */}
@@ -376,7 +384,12 @@ export default function ContactPage() {
                           Sending…
                         </>
                       ) : (
-                        "Send Inquiry"
+                        <>
+                          Send Inquiry
+                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                          </svg>
+                        </>
                       )}
                     </button>
                   </form>
@@ -390,20 +403,26 @@ export default function ContactPage() {
               {/* Office image */}
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1519817650390-64a93db51149?w=1200&q=85&auto=format&fit=crop"
-                  alt="Kolkata cityscape — our home base"
+                  src="https://images.unsplash.com/photo-1742325646212-f917ba1feeaa?w=1200&q=85&auto=format&fit=crop"
+                  alt="Howrah Bridge at dusk, Kolkata — our home base"
                   fill
                   className="object-cover"
                   sizes="(min-width: 1024px) 40vw, 100vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1c1b1b]/75 via-[#1c1b1b]/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1c1b1b]/80 via-[#1c1b1b]/15 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <span className="font-body text-xs tracking-[0.3em] uppercase text-[#ffb3b3] font-bold block mb-2">
                     Headquarters
                   </span>
-                  <p className="font-headline text-2xl text-white italic leading-snug">
-                    Kolkata &middot; India
-                  </p>
+                  <div className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-white/70 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                    </svg>
+                    <p className="font-headline text-2xl text-white italic leading-snug">
+                      Kolkata &middot; India
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -429,7 +448,7 @@ export default function ContactPage() {
                 </span>
                 <div className="space-y-4">
                   <a
-                    href="mailto:solutions@illumiasolutions.com"
+                    href="mailto:sales@illumiasolutions.com"
                     className="flex items-center gap-4 group"
                   >
                     <div
@@ -441,12 +460,12 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <span className="font-body text-stone-700 group-hover:text-[#b31c33] transition-colors">
-                      solutions@illumiasolutions.com
+                      sales@illumiasolutions.com
                     </span>
                   </a>
 
                   <a
-                    href="https://www.linkedin.com/company/illumia-solutions"
+                    href="https://www.linkedin.com/company/illumia-solutions-pvt-ltd/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 group"
@@ -495,4 +514,3 @@ export default function ContactPage() {
     </>
   );
 }
-

@@ -97,7 +97,7 @@ export default function ServicePageTemplate({
       {/* CTA */}
       <section className="py-24 bg-[#f6f3f2] px-6 md:px-12">
         <div className="max-w-screen-2xl mx-auto text-center">
-          <h2 className="font-headline text-5xl text-stone-900 mb-6">
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900 mb-6">
             Ready to get started?
           </h2>
           <p className="text-[#5a4040] text-xl max-w-2xl mx-auto mb-10 font-body leading-relaxed">

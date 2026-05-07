@@ -46,7 +46,7 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
 
 function ColHeading({ num, label }: { num: string; label: string }) {
   return (
-    <div className="flex flex-col gap-2.5 pb-5 border-b border-white/[0.18]">
+    <div className="flex flex-col gap-2.5 pb-5 border-b border-white/[0.20]">
       <span className="font-body text-[9px] tracking-[0.3em] uppercase text-[#b31c33] font-bold tabular-nums">
         {num}
       </span>
@@ -123,7 +123,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-14">
 
           {/* Brand column */}
-          <div className="footer-brand lg:col-span-4 flex flex-col gap-7 lg:pr-14 lg:border-r lg:border-white/[0.12]">
+          <div className="footer-brand lg:col-span-4 flex flex-col gap-7 lg:pr-14 lg:border-r lg:border-white/[0.20]">
             <div className="flex flex-col gap-4">
               <span className="font-body text-[9px] tracking-[0.32em] uppercase text-[#b31c33] font-bold">
                 Illuminating the Path to Success
@@ -147,7 +147,7 @@ export default function Footer() {
             {/* Social icons */}
             <div className="flex gap-2">
               <motion.a
-                href="https://www.linkedin.com/company/illumia-solutions"
+                href="https://www.linkedin.com/company/illumia-solutions-pvt-ltd/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -160,7 +160,7 @@ export default function Footer() {
                 </svg>
               </motion.a>
               <motion.a
-                href="mailto:solutions@illumiasolutions.com"
+                href="mailto:sales@illumiasolutions.com"
                 aria-label="Email us"
                 whileHover={{ y: -3 }}
                 transition={{ duration: 0.18, ease: "easeOut" }}
@@ -202,7 +202,7 @@ export default function Footer() {
               <ul className="space-y-4 pt-1">
                 <li>
                   <a
-                    href="mailto:solutions@illumiasolutions.com"
+                    href="mailto:sales@illumiasolutions.com"
                     className="group flex items-start gap-3 text-stone-400 hover:text-white transition-colors duration-200"
                   >
                     <span className="w-6 h-6 rounded-md bg-white/[0.08] border border-white/[0.18] flex items-center justify-center shrink-0 mt-0.5 group-hover:border-[#b31c33]/40 group-hover:bg-[#b31c33]/10 transition-all duration-200">
@@ -210,9 +210,12 @@ export default function Footer() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                       </svg>
                     </span>
-                    <span className="font-body text-[12px] leading-relaxed break-all">
-                      solutions@illumiasolutions.com
-                    </span>
+                    <div className="flex flex-col gap-0.5">
+                      <span className="font-body text-[12px] text-stone-300">Sales Enquiry</span>
+                      <span className="font-body text-[12px] leading-relaxed break-all">
+                        sales@illumiasolutions.com
+                      </span>
+                    </div>
                   </a>
                 </li>
                 <li className="flex items-start gap-3 text-stone-400">
@@ -223,7 +226,13 @@ export default function Footer() {
                   </span>
                   <div className="flex flex-col gap-0.5">
                     <span className="font-body text-[12px] text-stone-300">24/7 Multi-Timezone Support</span>
-                    <span className="font-body text-[11px] text-stone-500">Always on when you need us</span>
+                    <a
+                      href="tel:+919332045178"
+                      className="group/ph inline-flex items-center gap-0 font-body text-[12px] text-stone-400 hover:text-white transition-colors duration-200 mt-1"
+                    >
+                      <span className="w-0 h-px bg-[#b31c33] group-hover/ph:w-3 mr-0 group-hover/ph:mr-1.5 transition-all duration-200 ease-out shrink-0" />
+                      (+91) 9332045178
+                    </a>
                   </div>
                 </li>
                 <li className="flex items-start gap-3 text-stone-400">
@@ -235,7 +244,7 @@ export default function Footer() {
                   </span>
                   <div className="flex flex-col gap-0.5">
                     <span className="font-body text-[12px] text-stone-300">Headquarters</span>
-                    <span className="font-body text-[11px] text-stone-500 leading-relaxed">
+                    <span className="font-body text-[12px] text-stone-400 leading-relaxed">
                       2nd-FR, FL-C, 98/9, Gopal Lal Tagore Rd,<br />
                       Baranagar, Kolkata — 700036, India
                     </span>
@@ -250,20 +259,20 @@ export default function Footer() {
         {/* ─── Bottom Bar ───────────────────────────────────────────────────── */}
         <div className="footer-bottom mt-14">
           {/* gradient separator */}
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-white/[0.22] to-transparent mb-6" />
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-white/[0.20] to-transparent mb-6" />
 
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-8">
             <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
-              <p className="font-body text-[11px] text-stone-500">
+              <p className="font-body text-[11px] text-stone-400">
                 © {new Date().getFullYear()} Illumia Solutions Pvt. Ltd. All rights reserved.
               </p>
-              <span className="hidden sm:block w-px h-3 bg-white/[0.25]" />
+              <span className="hidden sm:block w-px h-3 bg-white/[0.20]" />
               <ul className="flex gap-5">
                 {legal.map((l) => (
                   <li key={l.href}>
                     <Link
                       href={l.href}
-                      className="font-body text-[11px] text-stone-500 hover:text-white transition-colors duration-200 underline-offset-4 hover:underline decoration-[#b31c33]/40"
+                      className="font-body text-[11px] text-stone-400 hover:text-white transition-colors duration-200 underline-offset-4 hover:underline decoration-[#b31c33]/40"
                     >
                       {l.label}
                     </Link>
@@ -271,11 +280,11 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-            <div className="flex items-center gap-2 text-[10px] font-body text-stone-500">
+            <div className="flex items-center gap-2 text-[10px] font-body text-stone-400">
               <span className="w-5 h-px bg-gradient-to-r from-transparent to-[#b31c33]/50" />
               <span className="tracking-[0.2em] uppercase">Kolkata, India</span>
               <span className="w-[3px] h-[3px] rounded-full bg-white/[0.30]" />
-              <span className="tracking-[0.14em] uppercase italic text-stone-500">Enterprise Excellence</span>
+              <span className="tracking-[0.14em] uppercase italic text-stone-400">Enterprise Excellence</span>
               <span className="w-5 h-px bg-gradient-to-l from-transparent to-[#b31c33]/50" />
             </div>
           </div>

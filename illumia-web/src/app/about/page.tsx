@@ -189,7 +189,7 @@ export default function AboutPage() {
             <span className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-4">
               Why Choose Us
             </span>
-            <h2 className="font-headline text-5xl text-stone-900">
+            <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900">
               Why the World&apos;s Leaders{" "}
               <span className="italic text-[#b31c33]">Choose Illumia.</span>
             </h2>
@@ -236,7 +236,7 @@ export default function AboutPage() {
           <span className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-4">
             Partner With Us
           </span>
-          <h2 className="font-headline text-5xl text-stone-900 mb-6">
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900 mb-6">
             Ready to transform your business?
           </h2>
           <p className="text-[#5a4040] text-xl max-w-2xl mx-auto mb-10 font-body leading-relaxed">

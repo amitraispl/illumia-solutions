@@ -107,7 +107,7 @@ export default function HomePage() {
 
       {/* ─── Partnership Strip ────────────────────────────────────────────── */}
       <div className="border-y border-[#e2bebd]/30 bg-white overflow-hidden">
-        <div className="max-w-screen-2xl mx-auto px-6 md:px-12 py-6 flex items-center gap-10">
+        <div className="max-w-screen-2xl mx-auto px-6 md:px-12 py-6 flex items-center gap-4 md:gap-10">
           <div className="shrink-0 flex items-center gap-3">
             <span className="w-4 h-px bg-[#b31c33]" />
             <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold whitespace-nowrap">

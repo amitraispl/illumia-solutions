@@ -268,7 +268,7 @@ export default function InfrastructureSolutionsPage() {
           <span className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-6">
             Start Today
           </span>
-          <h2 className="font-headline text-5xl text-stone-900 mb-6">
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900 mb-6">
             Ready to build your infrastructure?
           </h2>
           <p className="text-[#5a4040] text-xl max-w-2xl mx-auto mb-10 font-body leading-relaxed">

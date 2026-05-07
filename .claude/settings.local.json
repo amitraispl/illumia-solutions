@@ -41,7 +41,11 @@
       "Bash(del *)",
       "Bash(python skills/ui-ux-pro-max/scripts/search.py \"enterprise IT services B2B landing page technology partner\" --design-system -p \"Illumia Solutions\" -f markdown)",
       "Bash(py *)",
-      "PowerShell(python \"O:\\\\CODE\\\\illumia-solutions\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"enterprise IT services B2B technology partner open-source\" --design-system -p \"Illumia Solutions\" -f markdown 2>&1)"
+      "PowerShell(python \"O:\\\\CODE\\\\illumia-solutions\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"enterprise IT services B2B technology partner open-source\" --design-system -p \"Illumia Solutions\" -f markdown 2>&1)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('Node engines:', d.get\\('engines',{}\\)\\); print\\('Scripts:', list\\(d.get\\('scripts',{}\\).keys\\(\\)\\)\\)\")",
+      "Bash(git -C O:/CODE/illumia-solutions remote -v)",
+      "Bash(git -C O:/CODE/illumia-solutions config --get remote.origin.url)",
+      "WebFetch(domain:unsplash.com)"
     ]
   }
 }

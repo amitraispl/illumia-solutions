@@ -118,7 +118,7 @@ export default function CyberSecurityContent() {
             <motion.span variants={fadeUp} className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
               Core Competencies
             </motion.span>
-            <motion.h2 variants={fadeUp} className="font-headline text-5xl text-stone-900">
+            <motion.h2 variants={fadeUp} className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900">
               Cyber Security Services
             </motion.h2>
           </motion.div>
@@ -227,7 +227,7 @@ export default function CyberSecurityContent() {
             <motion.span variants={fadeUp} className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-6">
               Specialized Intelligence
             </motion.span>
-            <motion.h2 variants={fadeUp} className="font-headline text-5xl text-stone-900 mb-8 leading-tight">
+            <motion.h2 variants={fadeUp} className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900 mb-8 leading-tight">
               Purpose-built defence for every vector.
             </motion.h2>
             <motion.div variants={stagger} className="space-y-6">

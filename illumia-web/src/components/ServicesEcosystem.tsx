@@ -109,7 +109,7 @@ export default function ServicesEcosystem() {
             </motion.span>
             <motion.h2
               variants={fadeUp}
-              className="font-headline text-5xl text-stone-900"
+              className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900"
             >
               Ecosystem of Services
             </motion.h2>

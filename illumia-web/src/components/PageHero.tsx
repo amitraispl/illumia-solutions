@@ -64,7 +64,7 @@ export default function PageHero({
 
           <motion.h1
             variants={fadeUp}
-            className="font-headline text-6xl md:text-7xl xl:text-8xl text-stone-900 leading-[0.93] tracking-tighter mb-8"
+            className="font-headline text-4xl sm:text-5xl md:text-7xl xl:text-8xl text-stone-900 leading-[0.93] tracking-tighter mb-8"
           >
             {title}
           </motion.h1>

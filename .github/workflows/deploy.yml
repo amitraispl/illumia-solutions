@@ -1,0 +1,57 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: illumia-web/package-lock.json
+
+      - name: Cache Next.js build
+        uses: actions/cache@v4
+        with:
+          path: illumia-web/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('illumia-web/package-lock.json') }}-${{ hashFiles('illumia-web/**/*.[jt]s', 'illumia-web/**/*.[jt]sx') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('illumia-web/package-lock.json') }}-
+
+      - name: Install
+        working-directory: illumia-web
+        run: npm ci
+
+      - name: Build static site
+        working-directory: illumia-web
+        env:
+          NEXT_PUBLIC_BASE_PATH: /illumia-solutions
+        run: npm run build
+
+      - name: Add .nojekyll
+        run: touch illumia-web/out/.nojekyll
+
+      - name: Publish to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./illumia-web/out
+          publish_branch: gh-pages
+          force_orphan: true
+          commit_message: "deploy: ${{ github.sha }}"

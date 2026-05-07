@@ -282,7 +282,7 @@ export default function CybersecuritySolutionsPage() {
           <span className="font-body text-xs tracking-[0.25em] uppercase text-[#ffb3b3] font-bold block mb-6">
             Start Today
           </span>
-          <h2 className="font-headline text-5xl text-white mb-6">
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl text-white mb-6">
             Ready to secure your business?
           </h2>
           <p className="text-stone-400 text-xl max-w-2xl mx-auto mb-10 font-body leading-relaxed">
