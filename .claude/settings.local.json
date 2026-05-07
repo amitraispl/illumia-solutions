@@ -45,7 +45,11 @@
       "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('Node engines:', d.get\\('engines',{}\\)\\); print\\('Scripts:', list\\(d.get\\('scripts',{}\\).keys\\(\\)\\)\\)\")",
       "Bash(git -C O:/CODE/illumia-solutions remote -v)",
       "Bash(git -C O:/CODE/illumia-solutions config --get remote.origin.url)",
-      "WebFetch(domain:unsplash.com)"
+      "WebFetch(domain:unsplash.com)",
+      "Bash(mv \"Force Logo.png\" \"force-logo.png\")",
+      "Bash(mv \"Seqrite_logo Partner-768x299.png\" \"seqrite-logo-partner.png\")",
+      "Bash(awk '{print $5, $NF}')",
+      "Bash(python -c ' *)"
     ]
   }
 }

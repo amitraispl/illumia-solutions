@@ -22,8 +22,8 @@ const stats = [
 ];
 
 const partnerLogos = [
-  { src: "/photos/Seqrite_logo Partner-768x299.png", alt: "Seqrite — Partner", width: 160, height: 60 },
-  { src: "/photos/Force Logo.png", alt: "Force Networks — Partner", width: 120, height: 60 },
+  { src: "/photos/seqrite-logo-partner.png", alt: "Seqrite — Partner", width: 160, height: 60 },
+  { src: "/photos/force-logo.png", alt: "Force Networks — Partner", width: 120, height: 60 },
   { src: "/photos/zextras_Partner_logo_RGB_web-7.png", alt: "Zextras — Partner", width: 120, height: 50 },
   { src: "/photos/Proxmox-Silver-Partner.png", alt: "Proxmox — Silver Partner", width: 130, height: 60 },
   { src: "/photos/LifeBank-Foundation.png", alt: "LifeBank Foundation — Partner", width: 140, height: 60 },
@@ -140,7 +140,7 @@ export default function HomePage() {
                     alt={logo.alt}
                     width={logo.width}
                     height={logo.height}
-                    className="object-contain max-h-12 w-auto opacity-55 hover:opacity-90 transition-all duration-200 grayscale hover:grayscale-0"
+                    className="object-contain max-h-12 max-w-[140px] w-auto opacity-55 hover:opacity-90 transition-all duration-200 grayscale hover:grayscale-0"
                   />
                 </div>
               );
