@@ -22,12 +22,12 @@ const stats = [
 ];
 
 const partnerLogos = [
-  { src: "/photos/seqrite-logo-partner.png", alt: "Seqrite — Partner", width: 160, height: 60 },
-  { src: "/photos/force-logo.png", alt: "Force Networks — Partner", width: 120, height: 60 },
-  { src: "/photos/zextras_Partner_logo_RGB_web-7.png", alt: "Zextras — Partner", width: 120, height: 50 },
-  { src: "/photos/Proxmox-Silver-Partner.png", alt: "Proxmox — Silver Partner", width: 130, height: 60 },
-  { src: "/photos/LifeBank-Foundation.png", alt: "LifeBank Foundation — Partner", width: 140, height: 60 },
-  { src: "/photos/Apache-Guacamole-Partner.png", alt: "Apache Guacamole — Commercial Support Partner", width: 140, height: 60 },
+  { src: "/seqrite-logo-partner.png", alt: "Seqrite — Partner", width: 160, height: 60 },
+  { src: "/force-logo.png", alt: "Force Networks — Partner", width: 120, height: 60 },
+  { src: "/zextras_Partner_logo_RGB_web-7.png", alt: "Zextras — Partner", width: 120, height: 50 },
+  { src: "/Proxmox-Silver-Partner.png", alt: "Proxmox — Silver Partner", width: 130, height: 60 },
+  { src: "/LifeBank-Foundation.png", alt: "LifeBank Foundation — Partner", width: 140, height: 60 },
+  { src: "/Apache-Guacamole-Partner.png", alt: "Apache Guacamole — Commercial Support Partner", width: 140, height: 60 },
 ];
 
 const whyChoose = [

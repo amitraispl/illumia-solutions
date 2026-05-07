@@ -50,7 +50,12 @@
       "Bash(mv \"Seqrite_logo Partner-768x299.png\" \"seqrite-logo-partner.png\")",
       "Bash(awk '{print $5, $NF}')",
       "Bash(python -c ' *)",
-      "Bash(grep -oE 'src=\"[^\"]*photos[^\"]*\"' C:\\\\\\\\Users\\\\\\\\amitra\\\\\\\\.claude\\\\\\\\projects\\\\\\\\O--CODE-illumia-solutions\\\\\\\\9602ecf0-ec96-473d-8be2-f780760c7262\\\\\\\\tool-results\\\\\\\\b3harijwo.txt)"
+      "Bash(grep -oE 'src=\"[^\"]*photos[^\"]*\"' C:\\\\\\\\Users\\\\\\\\amitra\\\\\\\\.claude\\\\\\\\projects\\\\\\\\O--CODE-illumia-solutions\\\\\\\\9602ecf0-ec96-473d-8be2-f780760c7262\\\\\\\\tool-results\\\\\\\\b3harijwo.txt)",
+      "Bash(cp \"photos/seqrite-logo-partner.png\" \"seqrite-logo-partner.png\")",
+      "Bash(cp \"photos/force-logo.png\" \"force-logo.png\")",
+      "Bash(cp \"photos/zextras_Partner_logo_RGB_web-7.png\" \"zextras_Partner_logo_RGB_web-7.png\")",
+      "Bash(cp \"photos/Proxmox-Silver-Partner.png\" \"Proxmox-Silver-Partner.png\")",
+      "Bash(cp \"photos/LifeBank-Foundation.png\" \"LifeBank-Foundation.png\")"
     ]
   }
 }
