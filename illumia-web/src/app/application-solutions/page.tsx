@@ -1,230 +1,336 @@
-import type { Metadata } from "next";
+"use client";
+
+import { motion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import ServicesEcosystem from "@/components/ServicesEcosystem";
 
-export const metadata: Metadata = {
-  title: "Application Solutions",
-  description:
-    "Our application solutions are designed to enhance collaboration, streamline project management, and ensure robust security leveraging the best open-source technologies.",
+const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 32 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
 };
 
-const solutions = [
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
+};
+
+const Arrow = () => (
+  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+  </svg>
+);
+
+const collaborationCards = [
   {
     num: "01",
-    title: "Web Meeting Solutions",
-    desc: "Top-tier web-meeting solutions using Carbonio, Jitsi Meet, and Nextcloud Talk. Secure, self-hosted video conferencing that keeps your communications private and compliant.",
-    href: "/web-meeting-solution",
-    tags: ["Carbonio", "Jitsi Meet", "Nextcloud Talk"],
-    image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=1200&q=85&auto=format&fit=crop",
-    imageAlt: "Team collaborating over video meeting",
+    title: "Mail Services",
+    desc: "Reliable and secure email solutions that facilitate seamless communication within your organization. Our mail services include a mobile application for on-the-go access and multi-factor authentication (MFA) to enhance security.",
+    href: "/email-as-a-service",
+    image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=900&q=80&auto=format&fit=crop",
+    imageAlt: "Secure enterprise mail services",
+    wide: true,
   },
   {
     num: "02",
-    title: "Collaboration Platforms",
-    desc: "Integrated collaboration suites powered by open-source technology. Email, calendar, file sharing, and real-time communication in a unified, secure environment.",
-    href: "/contact",
-    tags: ["Nextcloud", "Open-Source", "Self-Hosted"],
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=85&auto=format&fit=crop",
-    imageAlt: "Team collaborating around a shared workspace",
+    title: "Cloud Storage",
+    desc: "Scalable cloud storage solutions that provide secure and easy access to your data from anywhere, anytime.",
+    href: "/drive-as-a-service",
+    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=900&q=80&auto=format&fit=crop",
+    imageAlt: "Cloud storage infrastructure",
+    wide: false,
   },
   {
     num: "03",
-    title: "Project Management",
-    desc: "Streamlined project management tools designed for modern teams. Track progress, manage resources, and deliver projects on time with transparent, auditable workflows.",
-    href: "/contact",
-    tags: ["Agile", "Kanban", "Open-Source"],
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=1200&q=85&auto=format&fit=crop",
-    imageAlt: "Kanban board with sticky notes on a wall",
+    title: "Web-Meeting Solutions",
+    desc: "High-quality video conferencing tools that enable effective remote communication and collaboration.",
+    href: "/web-meeting-solution",
+    image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=900&q=80&auto=format&fit=crop",
+    imageAlt: "Video meeting collaboration",
+    wide: false,
   },
   {
     num: "04",
-    title: "Custom Application Development",
-    desc: "Bespoke application development leveraging the best open-source frameworks. From microservices to monoliths, we architect solutions that scale with your business.",
-    href: "/contact",
-    tags: ["Custom Dev", "API-First", "Microservices"],
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=85&auto=format&fit=crop",
-    imageAlt: "Developer writing application code",
+    title: "Collaborative Editing",
+    desc: "Real-time collaborative editing tools that enhance teamwork and productivity by allowing multiple users to work on documents simultaneously.",
+    href: "/application-solutions#collaboration",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80&auto=format&fit=crop",
+    imageAlt: "Team collaborative editing",
+    wide: true,
   },
-];
-
-const modules = [
-  { code: "OS-01", label: "Cloud Architecture" },
-  { code: "OS-02", label: "CI/CD Optimization" },
-  { code: "OS-03", label: "Legacy Migration" },
-  { code: "OS-04", label: "Security Auditing" },
-  { code: "OS-05", label: "Database Tuning" },
-  { code: "OS-06", label: "API Management" },
-  { code: "OS-07", label: "Penetration Testing" },
-  { code: "OS-08", label: "Edge Computing" },
-  { code: "OS-09", label: "Serverless Logic" },
-  { code: "OS-10", label: "Frontend Precision" },
-  { code: "OS-11", label: "Observability Stack" },
-  { code: "OS-12", label: "Compliance Guard" },
-  { code: "OS-13", label: "Network Integrity" },
-  { code: "OS-14", label: "Load Balancing" },
-  { code: "OS-15", label: "Workflow Engine" },
-  { code: "OS-16", label: "Caching Strategy" },
-  { code: "OS-17", label: "Event Sourcing" },
-  { code: "OS-18", label: "DR Orchestration" },
 ];
 
 export default function ApplicationSolutionsPage() {
   return (
     <>
-      {/* Hero */}
+      {/* ─── Hero ──────────────────────────────────────────────────────────── */}
       <PageHero
-        badge="Open Source Philosophy"
+        badge="Application Solutions"
         title={
           <>
-            Precision Engineering{" "}
-            <span className="italic text-[#b31c33]">Without Borders</span>
+            Application{" "}
+            <span className="italic font-normal text-[#b31c33]">Solutions.</span>
           </>
         }
-        description="Harnessing the collective intelligence of the global open-source community to deliver enterprise-grade reliability. Our application solutions enhance collaboration, streamline operations, and ensure robust security."
-        primaryCta={{ label: "Explore Solutions", href: "#solutions" }}
+        description="Our application solutions are designed to enhance collaboration, streamline project management, and ensure robust security. We leverage the best open-source technologies to deliver innovative solutions tailored to your business needs."
+        primaryCta={{ label: "Explore Solutions", href: "#collaboration" }}
         secondaryCta={{ label: "Contact Us", href: "/contact" }}
-        imageSrc="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=1400&q=85&auto=format&fit=crop"
+        imageSrc="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1400&q=85&auto=format&fit=crop"
         imageAlt="Application solutions — Illumia Solutions"
       />
 
-      {/* Introduction */}
-      <section className="bg-[#f6f3f2] py-24 px-6 md:px-12">
-        <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-5">
-            <h2 className="font-headline text-4xl text-stone-900 leading-tight">
-              The Open Standard of Excellence.
-            </h2>
-          </div>
-          <div className="lg:col-span-4">
-            <p className="text-lg text-[#5a4040] leading-relaxed font-body">
-              Illumia Solutions bridges the gap between community-driven innovation and
-              corporate-grade stability. Our application modules are designed for
-              transparency, security, and limitless scale. We don&apos;t just use open
-              source; we refine it into high-precision instruments for modern business.
-            </p>
-          </div>
-          <div className="lg:col-span-3">
-            <div className="relative aspect-square rounded-2xl overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=85&auto=format&fit=crop"
-                alt="Engineer reviewing open-source code"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 25vw, 100vw"
-              />
-            </div>
-          </div>
+      {/* ─── Collaboration Solutions ───────────────────────────────────────── */}
+      <section id="collaboration" className="py-20 px-6 md:px-12 bg-[#f6f3f2] scroll-mt-20">
+        <div className="max-w-screen-2xl mx-auto">
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            className="mb-14"
+          >
+            <motion.span variants={fadeUp} className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
+              01 / Collaboration Solutions
+            </motion.span>
+            <motion.h2 variants={fadeUp} className="font-headline text-4xl md:text-5xl text-stone-900">
+              Collaboration Solutions
+            </motion.h2>
+          </motion.div>
+
+          {/* Row 1: Mail (wide) + Cloud Storage */}
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-4"
+          >
+            {/* Mail Services — 2-wide image card */}
+            <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
+              <Link
+                href={collaborationCards[0].href}
+                className="group relative block rounded-2xl overflow-hidden min-h-[320px] h-full"
+              >
+                <Image
+                  src={collaborationCards[0].image}
+                  alt={collaborationCards[0].imageAlt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-[#1c1b1b]/60 group-hover:bg-[#1c1b1b]/50 transition-colors" />
+                <div className="absolute inset-0 p-10 flex flex-col justify-between">
+                  <span className="font-body text-xs tracking-[0.3em] uppercase text-white/60 font-bold">
+                    {collaborationCards[0].num}
+                  </span>
+                  <div>
+                    <h3 className="font-headline text-3xl text-white mb-3">{collaborationCards[0].title}</h3>
+                    <p className="text-white/70 text-sm font-body leading-relaxed mb-6 max-w-md">
+                      {collaborationCards[0].desc}
+                    </p>
+                    <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-white/80">
+                      Read More <Arrow />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Cloud Storage */}
+            <motion.div variants={fadeUp} className="h-full">
+              <Link
+                href={collaborationCards[1].href}
+                className="group block h-full bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300 flex flex-col gap-4 min-h-[320px]"
+              >
+                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold">
+                  {collaborationCards[1].num}
+                </span>
+                <div className="relative flex-1 rounded-xl overflow-hidden min-h-[160px]">
+                  <Image
+                    src={collaborationCards[1].image}
+                    alt={collaborationCards[1].imageAlt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <div>
+                  <h3 className="font-headline text-2xl text-stone-900 mb-2">{collaborationCards[1].title}</h3>
+                  <p className="text-[#5a4040] text-sm font-body leading-relaxed mb-4">{collaborationCards[1].desc}</p>
+                  <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-[#b31c33]/70 group-hover:text-[#b31c33]">
+                    Read More <Arrow />
+                  </span>
+                </div>
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          {/* Row 2: Web-Meeting + Collaborative Editing (wide) */}
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            className="grid grid-cols-1 lg:grid-cols-3 gap-4"
+          >
+            {/* Web-Meeting Solutions */}
+            <motion.div variants={fadeUp} className="h-full">
+              <Link
+                href={collaborationCards[2].href}
+                className="group block h-full bg-[#b31c33] rounded-2xl p-10 text-white hover:bg-[#920022] transition-colors duration-300 flex flex-col gap-4 min-h-[280px]"
+              >
+                <span className="font-body text-xs tracking-[0.3em] uppercase text-white/60 font-bold">
+                  {collaborationCards[2].num}
+                </span>
+                <div className="flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3 className="font-headline text-2xl text-white mb-3">{collaborationCards[2].title}</h3>
+                    <p className="text-white/75 text-sm font-body leading-relaxed">{collaborationCards[2].desc}</p>
+                  </div>
+                  <span className="mt-6 font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-white/80">
+                    Read More <Arrow />
+                  </span>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Collaborative Editing — 2-wide */}
+            <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
+              <Link
+                href={collaborationCards[3].href}
+                className="group relative block rounded-2xl overflow-hidden min-h-[280px] h-full"
+              >
+                <Image
+                  src={collaborationCards[3].image}
+                  alt={collaborationCards[3].imageAlt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-[#1c1b1b]/55 group-hover:bg-[#1c1b1b]/45 transition-colors" />
+                <div className="absolute inset-0 p-10 flex flex-col justify-between">
+                  <span className="font-body text-xs tracking-[0.3em] uppercase text-white/60 font-bold">
+                    {collaborationCards[3].num}
+                  </span>
+                  <div>
+                    <h3 className="font-headline text-3xl text-white mb-3">{collaborationCards[3].title}</h3>
+                    <p className="text-white/70 text-sm font-body leading-relaxed mb-6 max-w-md">
+                      {collaborationCards[3].desc}
+                    </p>
+                    <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-white/80">
+                      Read More <Arrow />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Solutions List */}
-      <section id="solutions" className="py-32 bg-white px-6 md:px-12">
-        <div className="max-w-screen-2xl mx-auto space-y-24">
-          {solutions.map((s, i) => (
-            <div
-              key={s.num}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center"
-            >
-              <div className={`lg:col-span-6 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
-                <div className="aspect-[4/3] rounded-2xl relative overflow-hidden shadow-xl shadow-stone-200/50">
-                  <Image
-                    src={s.image}
-                    alt={s.imageAlt}
-                    fill
-                    className="object-cover"
-                    sizes="(min-width: 1024px) 50vw, 100vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#1c1b1b]/20 via-transparent to-[#b31c33]/15" />
-                  <span className="absolute bottom-6 right-8 font-headline text-8xl font-bold text-white/25 select-none drop-shadow-md">{s.num}</span>
+      {/* ─── Project Management Solutions ─────────────────────────────────── */}
+      <section id="project-management" className="py-20 px-6 md:px-12 bg-white scroll-mt-20">
+        <div className="max-w-screen-2xl mx-auto">
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            className="mb-14"
+          >
+            <motion.span variants={fadeUp} className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
+              02 / Project Management
+            </motion.span>
+            <motion.h2 variants={fadeUp} className="font-headline text-4xl md:text-5xl text-stone-900">
+              Project Management Solutions
+            </motion.h2>
+          </motion.div>
+
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            className="grid grid-cols-1 lg:grid-cols-12 gap-4"
+          >
+            {/* Wide image card */}
+            <motion.div variants={fadeUp} className="lg:col-span-8 h-full">
+              <div className="relative rounded-2xl overflow-hidden min-h-[360px] h-full">
+                <Image
+                  src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=1200&q=85&auto=format&fit=crop"
+                  alt="Project management board"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#1c1b1b]/60 via-[#1c1b1b]/30 to-transparent" />
+                <div className="absolute inset-0 p-12 flex flex-col justify-end">
+                  <span className="font-body text-xs tracking-[0.3em] uppercase text-white/60 font-bold block mb-4">01</span>
+                  <h3 className="font-headline text-4xl text-white mb-3">Project Management</h3>
+                  <p className="text-white/70 text-sm font-body leading-relaxed max-w-lg">
+                    Comprehensive features for planning, tracking, and executing projects. These solutions ensure efficient resource allocation, clear communication, and timely delivery of project milestones.
+                  </p>
                 </div>
               </div>
-              <div className={`lg:col-span-6 flex flex-col gap-6 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
-                <span className="font-body text-[#b31c33] font-bold text-xs uppercase tracking-widest">
-                  {s.num} — Application Module
-                </span>
-                <h3 className="font-headline text-4xl italic text-stone-900">{s.title}</h3>
-                <p className="text-[#5a4040] text-lg font-body leading-relaxed">{s.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {s.tags.map((t) => (
-                    <span key={t} className="px-3 py-1.5 bg-[#f6f3f2] text-xs font-body font-semibold uppercase tracking-wider text-stone-700 rounded">
-                      {t}
-                    </span>
-                  ))}
+            </motion.div>
+
+            {/* Content + CTA card */}
+            <motion.div variants={fadeUp} className="lg:col-span-4 h-full">
+              <div className="bg-[#f6f3f2] rounded-2xl p-10 border border-[#e2bebd]/20 h-full flex flex-col justify-between min-h-[360px]">
+                <div>
+                  <p className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-6">
+                    Open-Source Powered
+                  </p>
+                  <p className="text-[#5a4040] font-body text-sm leading-relaxed mb-6">
+                    Our project management tools provide comprehensive features for planning, tracking, and executing projects — ensuring efficient resource allocation, clear communication, and timely delivery of project milestones.
+                  </p>
+                  <ul className="space-y-3 mb-8">
+                    {["Agile & Kanban Boards", "Resource Planning", "Milestone Tracking", "Team Collaboration", "Reporting & Analytics"].map((item) => (
+                      <li key={item} className="flex items-center gap-3 text-xs font-body font-semibold text-[#5c5c5c] uppercase tracking-wide">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#b31c33] shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
                 <Link
-                  href={s.href}
-                  className="text-[#b31c33] font-body font-bold text-sm tracking-widest uppercase border-b-2 border-[#b31c33]/20 pb-1 w-fit hover:border-[#b31c33] transition-all"
+                  href="/project-management-solutions"
+                  className="group inline-flex items-center gap-2 bg-[#b31c33] text-white px-6 py-3.5 rounded-xl font-body font-semibold text-sm tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/20 active:scale-95 transition-all duration-200"
                 >
-                  Learn More
+                  Read More
+                  <Arrow />
                 </Link>
               </div>
-            </div>
-          ))}
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Infrastructure Modules */}
-      <section className="py-32 bg-[#f6f3f2] px-6 md:px-12">
-        <div className="max-w-screen-2xl mx-auto">
-          <div className="mb-16 text-center space-y-4">
-            <h2 className="font-headline text-5xl font-semibold text-stone-900">
-              The Illumia Application Ecosystem
-            </h2>
-            <p className="text-[#5c5c5c] font-body tracking-widest uppercase text-xs">
-              47 Precision Modules Integrated
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-px bg-[#e2bebd]/30">
-            {modules.map((m) => (
-              <div
-                key={m.code}
-                className="bg-[#fcf9f8] p-6 flex flex-col justify-between min-h-[140px] hover:bg-white transition-colors"
-              >
-                <span className="text-xs font-body text-[#b31c33] font-bold uppercase tracking-tight">
-                  {m.code}
-                </span>
-                <span className="text-xs font-body text-stone-800 font-semibold uppercase">
-                  {m.label}
-                </span>
-              </div>
-            ))}
-          </div>
-          <div className="mt-12 flex justify-center">
-            <Link
-              href="/contact"
-              className="bg-[#b31c33] hover:bg-[#920022] text-white font-body text-xs tracking-widest px-10 py-4 uppercase transition-all rounded-xl shadow-lg"
-            >
-              Explore All 47 Services
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-24 bg-[#1c1b1b] text-white relative overflow-hidden">
-        <Image
-          src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1600&q=60&auto=format&fit=crop"
-          alt=""
-          fill
-          className="object-cover opacity-[0.15]"
-          aria-hidden="true"
-        />
-        <div className="max-w-screen-2xl mx-auto px-6 md:px-12 text-center relative z-10">
-          <h2 className="font-headline text-5xl mb-6">
-            Ready to modernize your applications?
+      {/* ─── CTA ──────────────────────────────────────────────────────────── */}
+      <section className="py-20 bg-[#1c1b1b] px-6 md:px-12">
+        <div className="max-w-screen-2xl mx-auto text-center">
+          <span className="font-body text-xs tracking-[0.25em] uppercase text-[#ffb3b3] font-bold block mb-6">
+            Start Today
+          </span>
+          <h2 className="font-headline text-5xl text-white mb-6">
+            Ready to modernise your applications?
           </h2>
           <p className="text-stone-400 text-xl max-w-2xl mx-auto mb-10 font-body leading-relaxed">
-            Our team of open-source experts will help you build, migrate, and optimize
-            your application stack for the modern enterprise.
+            Our team of open-source experts will help you build, migrate, and optimise your application stack for the modern enterprise.
           </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-[#b31c33] text-white px-12 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#d63849] shadow-lg shadow-[#b31c33]/30 active:scale-95"
-          >
-            Start a Conversation
-          </Link>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/contact"
+              className="inline-block bg-[#b31c33] text-white px-12 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/30 active:scale-95 transition-all"
+            >
+              Start a Conversation
+            </Link>
+            <Link
+              href="/open-source-solutions"
+              className="inline-block border border-white/20 text-white px-12 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-white/5 transition-colors"
+            >
+              Open Source Solutions
+            </Link>
+          </div>
         </div>
       </section>
 

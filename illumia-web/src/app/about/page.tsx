@@ -195,31 +195,15 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          {/*
-            Desktop 6-col asymmetric bento:
-              Row 1 (360px): [0] col-4 large-left  [1] col-2 small-right   — 2 longest descs (367, 353)
-              Row 2 (300px): [3] col-2  [7] col-2  [8] col-2               — 3 shorter descs (338, 295, 258)
-              Row 3 (360px): [9] col-2 small-left  [2] col-4 large-right   — next 2 long descs (348, 344)
-              Row 4 (300px): [4] col-2  [6] col-2  [5] col-2               — 3 shortest descs (335, 267, 230)
-          */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
-            {/* ── Row 1 — large left + small right (two longest) ── */}
-            <AboutFlipCard {...whyUs[0]} number="01" className="sm:col-span-2 lg:col-span-4 min-h-[360px]" />
-            <AboutFlipCard {...whyUs[1]} number="02" className="sm:col-span-2 lg:col-span-2 min-h-[360px]" />
-
-            {/* ── Row 2 — three equal (medium-short) ── */}
-            <AboutFlipCard {...whyUs[3]} number="03" className="lg:col-span-2 min-h-[300px]" />
-            <AboutFlipCard {...whyUs[7]} number="04" className="lg:col-span-2 min-h-[300px]" />
-            <AboutFlipCard {...whyUs[8]} number="05" className="sm:col-span-2 lg:col-span-2 min-h-[300px]" />
-
-            {/* ── Row 3 — small left + large right (next two longest) ── */}
-            <AboutFlipCard {...whyUs[9]} number="06" className="sm:col-span-2 lg:col-span-2 min-h-[360px]" />
-            <AboutFlipCard {...whyUs[2]} number="07" className="sm:col-span-2 lg:col-span-4 min-h-[360px]" />
-
-            {/* ── Row 4 — three equal (shortest, last row) ── */}
-            <AboutFlipCard {...whyUs[4]} number="08" className="lg:col-span-2 min-h-[300px]" />
-            <AboutFlipCard {...whyUs[6]} number="09" className="lg:col-span-2 min-h-[300px]" />
-            <AboutFlipCard {...whyUs[5]} number="10" className="sm:col-span-2 lg:col-span-2 min-h-[300px]" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {whyUs.map((item, i) => (
+              <AboutFlipCard
+                key={item.number}
+                {...item}
+                reverse={i % 2 === 1}
+                dark={Math.floor(i / 2) % 2 === 0}
+              />
+            ))}
           </div>
         </div>
       </section>

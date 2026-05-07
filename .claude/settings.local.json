@@ -34,7 +34,14 @@
       "Bash(Get-ChildItem *)",
       "Bash(python3 *)",
       "Bash(mktemp -d)",
-      "Bash(unzip -q 'O:\\\\CODE\\\\illumia-solutions\\\\website-content\\\\Under construction page contents\\\\Temporary website content V1.1' -d __TRACKED_VAR__/temp-v1-1)"
+      "Bash(unzip -q 'O:\\\\CODE\\\\illumia-solutions\\\\website-content\\\\Under construction page contents\\\\Temporary website content V1.1' -d __TRACKED_VAR__/temp-v1-1)",
+      "Bash(Select-Object -ExpandProperty Name)",
+      "Bash(Sort-Object)",
+      "Bash(claude plugin *)",
+      "Bash(del *)",
+      "Bash(python skills/ui-ux-pro-max/scripts/search.py \"enterprise IT services B2B landing page technology partner\" --design-system -p \"Illumia Solutions\" -f markdown)",
+      "Bash(py *)",
+      "PowerShell(python \"O:\\\\CODE\\\\illumia-solutions\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"enterprise IT services B2B technology partner open-source\" --design-system -p \"Illumia Solutions\" -f markdown 2>&1)"
     ]
   }
 }

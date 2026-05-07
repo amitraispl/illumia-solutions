@@ -398,7 +398,7 @@ export default function ContactPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1c1b1b]/75 via-[#1c1b1b]/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <span className="font-body text-[10px] tracking-[0.3em] uppercase text-[#ffb3b3] font-bold block mb-2">
+                  <span className="font-body text-xs tracking-[0.3em] uppercase text-[#ffb3b3] font-bold block mb-2">
                     Headquarters
                   </span>
                   <p className="font-headline text-2xl text-white italic leading-snug">

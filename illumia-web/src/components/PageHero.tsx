@@ -86,7 +86,7 @@ export default function PageHero({
             {secondaryCta && (
               <Link
                 href={secondaryCta.href}
-                className="bg-[#e5e2e1] text-[#b31c33] px-8 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#ebe7e7] transition-colors duration-200"
+                className="border border-[#b31c33]/40 text-[#b31c33] px-8 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#b31c33] hover:text-white hover:border-[#b31c33] transition-all duration-200"
               >
                 {secondaryCta.label}
               </Link>

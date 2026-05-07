@@ -230,19 +230,20 @@ export default function FAQsPage() {
 
             {/* Sidebar: Categories + image */}
             <div className="lg:col-span-3">
-              <p className="font-body text-xs uppercase tracking-widest text-stone-400 font-semibold mb-6">
-                Categories
-              </p>
-              <nav aria-label="FAQ categories" className="flex flex-row lg:flex-col gap-2 lg:gap-1 flex-wrap mb-10">
+              <div className="mb-7">
+                <span className="font-body text-[10px] uppercase tracking-[0.25em] text-[#b31c33] font-bold">Browse by</span>
+                <h2 className="font-headline text-3xl font-bold text-stone-900 mt-0.5">Categories</h2>
+              </div>
+              <nav aria-label="FAQ categories" className="flex flex-row lg:flex-col gap-2 lg:gap-1.5 flex-wrap mb-10">
                 {categories.map((cat) => (
                   <button
                     key={cat.id}
                     onClick={() => setActiveCategory(cat.id)}
                     aria-pressed={activeCategory === cat.id}
-                    className={`text-left font-body text-xs uppercase tracking-widest font-semibold py-2 px-0 transition-colors duration-200 border-b lg:border-b-0 lg:border-l-2 lg:pl-3 ${
+                    className={`text-left font-body text-base font-semibold py-3.5 px-5 rounded-xl transition-all duration-200 w-full ${
                       activeCategory === cat.id
-                        ? "text-[#b31c33] border-[#b31c33]"
-                        : "text-stone-400 border-transparent hover:text-stone-700 hover:border-stone-300"
+                        ? "bg-[#b31c33] text-white shadow-md shadow-[#b31c33]/20"
+                        : "text-stone-500 hover:bg-stone-100 hover:text-stone-800"
                     }`}
                   >
                     {cat.label}

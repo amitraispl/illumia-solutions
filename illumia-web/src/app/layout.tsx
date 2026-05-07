@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn("h-full", "font-sans", inter.variable)}>
-      <body className="min-h-full flex flex-col bg-[#fcf9f8] text-[#1c1b1b]">
+      <body className="min-h-full flex flex-col bg-[#fcf9f8] text-[#1c1b1b] selection:bg-primary-container selection:text-on-primary-container">
         {/* Skip link for keyboard / screen-reader users — WCAG 2.4.1 */}
         <a href="#main-content" className="skip-link">
           Skip to main content

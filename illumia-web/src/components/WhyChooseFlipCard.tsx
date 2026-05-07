@@ -37,8 +37,15 @@ export default function WhyChooseFlipCard({ title, description, href }: Props) {
           />
           <div className="absolute inset-0 bg-[#1c1b1b]/55" />
           <div className="absolute inset-0 p-8 flex flex-col justify-between">
-            <span className="font-body text-[10px] tracking-[0.25em] uppercase text-white/35 font-semibold">
-              Tap to explore
+            <span className="font-body text-xs tracking-[0.25em] uppercase text-white/70 font-semibold flex items-center gap-2">
+              <svg className="w-3.5 h-3.5 shrink-0 md:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11" />
+              </svg>
+              <svg className="w-3.5 h-3.5 shrink-0 hidden md:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zm-7.518-.267A8.25 8.25 0 1120.25 10.5M8.288 14.212A5.25 5.25 0 1117.25 10.5" />
+              </svg>
+              <span className="md:hidden">Tap to explore</span>
+              <span className="hidden md:inline">Hover to explore</span>
             </span>
             <p className="font-headline text-xl text-white italic">
               &ldquo;Where precision meets purpose.&rdquo;

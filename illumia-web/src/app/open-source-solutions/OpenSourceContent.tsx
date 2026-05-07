@@ -123,7 +123,7 @@ export default function OpenSourceSolutionsContent() {
       </section>
 
       {/* ─── Core Solutions Bento ─────────────────────────────────────────── */}
-      <section className="py-32 px-6 md:px-12 bg-white">
+      <section className="py-20 px-6 md:px-12 bg-white">
         <div className="max-w-screen-2xl mx-auto">
           <motion.div
             variants={stagger}
@@ -148,20 +148,25 @@ export default function OpenSourceSolutionsContent() {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
           >
             {/* Infrastructure — RED accent, wide */}
-            <motion.div variants={fadeUp} className="lg:col-span-2 bg-[#b31c33] rounded-2xl p-10 text-white">
-              <div className="flex items-center gap-4 mb-4 text-white">
-                {modules[0].icon}
-                <span className="font-body text-[10px] tracking-[0.3em] uppercase font-bold text-white/60">Infrastructure</span>
-              </div>
-              <h3 className="font-headline text-3xl text-white mb-3">{modules[0].title}</h3>
-              <p className="text-white/80 text-sm font-body leading-relaxed mb-6">{modules[0].desc}</p>
-              <div className="space-y-2">
-                {modules[0].items.map((item, idx) => (
-                  <div key={item} className="flex items-center gap-3 text-xs font-body font-semibold uppercase tracking-wide text-white/70">
-                    <span className="text-[#ffdad9] font-bold">{String(idx + 1).padStart(2, "0")}</span> {item}
-                  </div>
-                ))}
-              </div>
+            <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
+              <Link href="/infrastructure-solutions" className="group block h-full bg-[#b31c33] rounded-2xl p-10 text-white hover:bg-[#920022] transition-colors duration-300">
+                <div className="flex items-center gap-4 mb-4 text-white">
+                  {modules[0].icon}
+                  <span className="font-body text-xs tracking-[0.3em] uppercase font-bold text-white/60">Infrastructure</span>
+                </div>
+                <h3 className="font-headline text-3xl text-white mb-3">{modules[0].title}</h3>
+                <p className="text-white/80 text-sm font-body leading-relaxed mb-6">{modules[0].desc}</p>
+                <div className="space-y-2 mb-6">
+                  {modules[0].items.map((item, idx) => (
+                    <div key={item} className="flex items-center gap-3 text-xs font-body font-semibold uppercase tracking-wide text-white/70">
+                      <span className="text-[#ffdad9] font-bold">{String(idx + 1).padStart(2, "0")}</span> {item}
+                    </div>
+                  ))}
+                </div>
+                <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-white/80">
+                  Read More <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                </span>
+              </Link>
             </motion.div>
 
             {/* Infrastructure image */}
@@ -183,37 +188,47 @@ export default function OpenSourceSolutionsContent() {
             </motion.div>
 
             {/* Application — wide */}
-            <motion.div variants={fadeUp} className="lg:col-span-2 bg-[#f6f3f2] rounded-2xl p-10 border border-[#e2bebd]/20">
-              <div className="flex items-center gap-4 mb-4 text-[#b31c33]">
-                {modules[1].icon}
-                <span className="font-body text-[10px] tracking-[0.3em] uppercase font-bold text-[#b31c33]">Application</span>
-              </div>
-              <h3 className="font-headline text-3xl text-stone-900 mb-3">{modules[1].title}</h3>
-              <p className="text-[#5a4040] text-sm font-body leading-relaxed mb-6">{modules[1].desc}</p>
-              <div className="space-y-2">
-                {modules[1].items.map((item, idx) => (
-                  <div key={item} className="flex items-center gap-3 text-xs font-body font-semibold uppercase tracking-wide text-[#5c5c5c]">
-                    <span className="text-[#b31c33] font-bold">{String(idx + 4).padStart(2, "0")}</span> {item}
-                  </div>
-                ))}
-              </div>
+            <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
+              <Link href="/application-solutions" className="group block h-full bg-[#f6f3f2] rounded-2xl p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center gap-4 mb-4 text-[#b31c33]">
+                  {modules[1].icon}
+                  <span className="font-body text-xs tracking-[0.3em] uppercase font-bold text-[#b31c33]">Application</span>
+                </div>
+                <h3 className="font-headline text-3xl text-stone-900 mb-3">{modules[1].title}</h3>
+                <p className="text-[#5a4040] text-sm font-body leading-relaxed mb-6">{modules[1].desc}</p>
+                <div className="space-y-2 mb-6">
+                  {modules[1].items.map((item, idx) => (
+                    <div key={item} className="flex items-center gap-3 text-xs font-body font-semibold uppercase tracking-wide text-[#5c5c5c]">
+                      <span className="text-[#b31c33] font-bold">{String(idx + 4).padStart(2, "0")}</span> {item}
+                    </div>
+                  ))}
+                </div>
+                <span className="text-[#b31c33] font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest">
+                  Read More <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                </span>
+              </Link>
             </motion.div>
 
             {/* Cybersecurity — wide */}
-            <motion.div variants={fadeUp} className="lg:col-span-2 bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300">
-              <div className="flex items-center gap-4 mb-4 text-[#b31c33]">
-                {modules[2].icon}
-                <span className="font-body text-[10px] tracking-[0.3em] uppercase font-bold text-[#b31c33]">Cybersecurity</span>
-              </div>
-              <h3 className="font-headline text-3xl text-stone-900 mb-3">{modules[2].title}</h3>
-              <p className="text-[#5a4040] text-sm font-body leading-relaxed mb-6">{modules[2].desc}</p>
-              <div className="space-y-2">
-                {modules[2].items.map((item, idx) => (
-                  <div key={item} className="flex items-center gap-3 text-xs font-body font-semibold uppercase tracking-wide text-[#5c5c5c]">
-                    <span className="text-[#b31c33] font-bold">{String(idx + 7).padStart(2, "0")}</span> {item}
-                  </div>
-                ))}
-              </div>
+            <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
+              <Link href="/cyber-security" className="group block h-full bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300">
+                <div className="flex items-center gap-4 mb-4 text-[#b31c33]">
+                  {modules[2].icon}
+                  <span className="font-body text-xs tracking-[0.3em] uppercase font-bold text-[#b31c33]">Cybersecurity</span>
+                </div>
+                <h3 className="font-headline text-3xl text-stone-900 mb-3">{modules[2].title}</h3>
+                <p className="text-[#5a4040] text-sm font-body leading-relaxed mb-6">{modules[2].desc}</p>
+                <div className="space-y-2 mb-6">
+                  {modules[2].items.map((item, idx) => (
+                    <div key={item} className="flex items-center gap-3 text-xs font-body font-semibold uppercase tracking-wide text-[#5c5c5c]">
+                      <span className="text-[#b31c33] font-bold">{String(idx + 7).padStart(2, "0")}</span> {item}
+                    </div>
+                  ))}
+                </div>
+                <span className="text-[#b31c33] font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest">
+                  Read More <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                </span>
+              </Link>
             </motion.div>
 
             {/* Cybersecurity image */}
@@ -246,59 +261,6 @@ export default function OpenSourceSolutionsContent() {
           <p className="font-body text-xs tracking-[0.3em] uppercase text-stone-500">
             — Illumia Open-Source Philosophy
           </p>
-        </div>
-      </section>
-
-      {/* ─── Ecosystem Grid ───────────────────────────────────────────────── */}
-      <section className="bg-[#f6f3f2] py-32 px-6 md:px-12">
-        <div className="max-w-screen-2xl mx-auto">
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
-            className="mb-16 text-center space-y-4"
-          >
-            <motion.h2 variants={fadeUp} className="font-headline text-5xl text-stone-900">
-              The Illumia Open Source Ecosystem
-            </motion.h2>
-            <motion.p variants={fadeUp} className="text-[#5c5c5c] font-body tracking-widest uppercase text-xs">
-              47 Precision Modules Integrated
-            </motion.p>
-          </motion.div>
-
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
-            className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-px bg-[#e2bebd]/30"
-          >
-            {solutions.map((s) => (
-              <motion.div
-                key={s.code}
-                variants={fadeUp}
-                whileHover={{ backgroundColor: "#ffffff", y: -2 }}
-                transition={{ duration: 0.2 }}
-                className="bg-[#fcf9f8] p-6 flex flex-col justify-between min-h-[140px] cursor-default"
-              >
-                <span className="text-xs font-body text-[#b31c33] font-bold uppercase tracking-tight">{s.code}</span>
-                <span className="text-xs font-body text-stone-800 font-semibold uppercase">{s.label}</span>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-12 flex justify-center"
-          >
-            <Link href="/contact" className="bg-[#b31c33] hover:bg-[#920022] text-white font-body text-xs tracking-widest px-10 py-4 uppercase transition-all duration-200 rounded-xl shadow-lg active:scale-95">
-              Explore All 47 Services
-            </Link>
-          </motion.div>
         </div>
       </section>
 

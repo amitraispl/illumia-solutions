@@ -52,41 +52,44 @@ export default function ServicePageTemplate({
       />
 
       {/* Features */}
-      <section className="py-32 bg-white px-6 md:px-12">
+      <section className="py-20 bg-white px-6 md:px-12">
         <div className="max-w-screen-2xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((f, i) => (
-              <div
-                key={f.title}
-                className={`p-10 rounded-2xl border flex flex-col gap-4 ${
-                  i === 0
-                    ? "bg-[#b31c33] text-white border-transparent"
-                    : "bg-[#f6f3f2] border-transparent hover:bg-white hover:border-[#e2bebd]/40 hover:shadow-xl transition-all"
-                }`}
-              >
-                <span
-                  className={`font-headline text-4xl italic ${
-                    i === 0 ? "text-[#ffdad9]" : "text-[#b31c33]"
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            {features.map((f, i) => {
+              const isRed = i === 0;
+              const isDark = i === 5;
+              const isWide = i === 0 || i === 3 || i === 5;
+              return (
+                <div
+                  key={f.title}
+                  className={`${isWide ? "lg:col-span-2" : ""} p-10 rounded-2xl flex flex-col gap-4 ${
+                    isRed
+                      ? "bg-[#b31c33]"
+                      : isDark
+                      ? "bg-[#1c1b1b]"
+                      : i === 2
+                      ? "bg-white border border-[#e2bebd]/30 hover:shadow-xl transition-all"
+                      : "bg-[#f6f3f2] border border-transparent hover:bg-white hover:border-[#e2bebd]/40 hover:shadow-xl transition-all"
                   }`}
                 >
-                  {String(i + 1).padStart(2, "0")}.
-                </span>
-                <h3
-                  className={`font-headline text-2xl ${
-                    i === 0 ? "text-white" : "text-stone-900"
-                  }`}
-                >
-                  {f.title}
-                </h3>
-                <p
-                  className={`font-body text-sm leading-relaxed ${
-                    i === 0 ? "text-white/80" : "text-[#5a4040]"
-                  }`}
-                >
-                  {f.desc}
-                </p>
-              </div>
-            ))}
+                  <span className={`font-headline text-4xl italic ${
+                    isRed ? "text-[#ffdad9]" : isDark ? "text-[#ffb3b3]" : "text-[#b31c33]"
+                  }`}>
+                    {String(i + 1).padStart(2, "0")}.
+                  </span>
+                  <h3 className={`font-headline text-2xl ${
+                    isRed || isDark ? "text-white" : "text-stone-900"
+                  }`}>
+                    {f.title}
+                  </h3>
+                  <p className={`font-body text-sm leading-relaxed ${
+                    isRed ? "text-white/80" : isDark ? "text-stone-400" : "text-[#5a4040]"
+                  }`}>
+                    {f.desc}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -104,13 +107,13 @@ export default function ServicePageTemplate({
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-block bg-[#b31c33] text-white px-12 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/20 active:scale-95"
+              className="inline-block bg-[#b31c33] text-white px-8 py-3.5 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/20 active:scale-95"
             >
               Request a Consultation
             </Link>
             <Link
               href="/"
-              className="inline-block border border-[#b31c33]/30 text-[#b31c33] px-12 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#ffdad9]/20"
+              className="inline-block border border-[#b31c33]/30 text-[#b31c33] px-8 py-3.5 rounded-xl font-body font-semibold tracking-wide hover:bg-[#ffdad9]/20"
             >
               Explore All Services
             </Link>

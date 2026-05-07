@@ -1,45 +1,76 @@
 import type { Metadata } from "next";
-import ServicePageTemplate from "@/components/ServicePageTemplate";
+import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Virtual Private Server",
+  title: "Virtual Private Server — Flexible, Secure, No Lock-in | Illumia Solutions",
   description:
-    "VPS offerings meticulously designed to meet the diverse needs of modern businesses, combining scalability and performance.",
+    "VPS offerings meticulously designed to meet the diverse needs of modern businesses, combining scalability, performance, and cost-efficiency with enhanced cybersecurity options.",
 };
 
 export default function VPSPage() {
   return (
-    <ServicePageTemplate
+    <RichServicePageTemplate
       badge="Cloud Infrastructure"
       title="Virtual Private Server —"
-      titleHighlight="Performance Meets Control"
-      description="VPS offerings meticulously designed to meet the diverse needs of modern businesses, combining scalability, performance, and enterprise-grade isolation. Hosted in our own state-of-the-art data center for maximum reliability and cost-efficiency."
+      titleHighlight="Flexible, Secure, No Lock-in."
+      description="At Illumia Solutions, we understand that flexibility, security, and reliability are paramount when it comes to hosting solutions. Our Virtual Private Server (VPS) offerings are meticulously designed to meet the diverse needs of modern businesses, combining scalability, performance, and cost-efficiency with enhanced cybersecurity options."
+      sectionTitle="Our VPS Features"
       ctaText="Configure Your VPS"
-      heroImage="https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=1400&q=80&auto=format&fit=crop"
+      heroImage="https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=1400&q=85&auto=format&fit=crop"
+      closingText="Whether you're running high-traffic websites, complex databases, or critical applications, our VPS solutions offer the power, performance, and peace of mind you need. With Illumia Solutions, you're not just choosing a service provider; you're partnering with a team of experts dedicated to supporting your growth and success."
       features={[
         {
-          title: "Dedicated Resources",
-          desc: "Guaranteed CPU, RAM, and storage allocated exclusively to your VPS. No noisy neighbors — consistent performance you can count on.",
+          title: "Tailored Configuration",
+          items: [
+            {
+              label: "Customizable Resources",
+              text: "Choose any combination of CPU, RAM, and storage to precisely match your specific needs. Our VPS solutions are entirely flexible, allowing you to scale resources up or down as your business requirements evolve.",
+            },
+          ],
         },
         {
-          title: "Full Root Access",
-          desc: "Complete control over your server environment. Install any software, configure custom kernels, and manage your stack exactly as needed.",
+          title: "Enhanced Security Options",
+          items: [
+            {
+              label: "Cybersecurity Add-Ons",
+              text: "Strengthen your security posture with additional layers such as Endpoint Detection and Response (EDR), Data Loss Prevention (DLP), Security Information and Event Management (SIEM), Privileged Access Management (PAM), and Warm Disaster Recovery (DR) — available at fractional costs and supporting regulatory compliance.",
+            },
+          ],
         },
         {
-          title: "SSD NVMe Storage",
-          desc: "High-performance NVMe SSD storage for lightning-fast read/write speeds. Ideal for databases, web applications, and compute-intensive workloads.",
+          title: "Cost Efficiency",
+          items: [
+            {
+              label: "No Data Transfer Charges",
+              text: "We offer unrestricted data transfer, both in and out, without any additional charges.",
+            },
+            {
+              label: "No Charges on CPU Max-out",
+              text: "Experience uninterrupted service without any additional cost, even during periods of maximum CPU usage.",
+            },
+            {
+              label: "Straightforward Monthly Billing",
+              text: "Our billing is simple and transparent, with a flat monthly fee that makes financial planning easier.",
+            },
+          ],
         },
         {
-          title: "Managed Backups",
-          desc: "Automated daily backups with point-in-time recovery. Your data is protected with multiple redundant copies stored in geographically separated locations.",
+          title: "Freedom and Flexibility",
+          items: [
+            {
+              label: "No Vendor Lock-in",
+              text: "We believe in providing services that retain our customers through quality and performance, not contractual restrictions. You are free to modify, scale, or discontinue services according to your business needs.",
+            },
+          ],
         },
         {
-          title: "DDoS Protection",
-          desc: "Built-in network-level DDoS mitigation to keep your services online during attack scenarios. Protect your business continuity without extra costs.",
-        },
-        {
-          title: "Flexible OS Choice",
-          desc: "Deploy on your preferred Linux distribution — Ubuntu, Debian, CentOS, Rocky Linux, and more. Windows Server available on request.",
+          title: "Unmatched Reliability",
+          items: [
+            {
+              label: "99.9% Uptime Guarantee",
+              text: "Our VPS hosting is built on a robust infrastructure that ensures high availability and consistent performance, backed by 24/7 expert support.",
+            },
+          ],
         },
       ]}
     />

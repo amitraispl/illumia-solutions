@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import ServicesEcosystem from "@/components/ServicesEcosystem";
+import TechSpotlight from "@/components/TechSpotlight";
 import PageHero from "@/components/PageHero";
 import { Marquee } from "@/components/ui/marquee";
 import SlideTextButton from "@/components/kokonutui/slide-text-button";
@@ -93,10 +94,10 @@ export default function HomePage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-4 border-t border-[#e2bebd]/40">
           {stats.map((stat) => (
             <div key={stat.label} className="flex flex-col gap-1">
-              <span className="font-headline text-3xl font-bold text-[#b31c33]">
+              <span className="font-headline text-4xl font-bold text-[#b31c33] tabular-nums">
                 {stat.value}
               </span>
-              <span className="font-body text-[11px] text-[#5c5c5c] uppercase tracking-wider leading-tight">
+              <span className="font-body text-xs text-[#5c5c5c] uppercase tracking-widest leading-tight font-semibold">
                 {stat.label}
               </span>
             </div>
@@ -106,10 +107,13 @@ export default function HomePage() {
 
       {/* ─── Partnership Strip ────────────────────────────────────────────── */}
       <div className="border-y border-[#e2bebd]/30 bg-white overflow-hidden">
-        <div className="max-w-screen-2xl mx-auto px-6 md:px-12 py-5 flex items-center gap-8">
-          <span className="font-body text-[10px] tracking-[0.3em] uppercase text-[#8e706f] shrink-0 font-semibold">
-            Strategic Partners
-          </span>
+        <div className="max-w-screen-2xl mx-auto px-6 md:px-12 py-6 flex items-center gap-10">
+          <div className="shrink-0 flex items-center gap-3">
+            <span className="w-4 h-px bg-[#b31c33]" />
+            <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold whitespace-nowrap">
+              Strategic Partners
+            </span>
+          </div>
           {/* paddingX formula: wider rendered logo → proportionally more gap
               renderedW = (width/height)×40  |  px = round(20 + (renderedW/maxRenderedW)×20)
               maxRenderedW = (160/60)×40 = 106.67 (Seqrite) */}
@@ -136,7 +140,7 @@ export default function HomePage() {
                     alt={logo.alt}
                     width={logo.width}
                     height={logo.height}
-                    className="object-contain max-h-10 w-auto opacity-60 hover:opacity-90 transition-opacity duration-200 grayscale hover:grayscale-0"
+                    className="object-contain max-h-12 w-auto opacity-55 hover:opacity-90 transition-all duration-200 grayscale hover:grayscale-0"
                   />
                 </div>
               );
@@ -155,7 +159,7 @@ export default function HomePage() {
                 <span className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-6">
                   Who We Are
                 </span>
-                <h2 className="font-headline text-5xl md:text-6xl text-stone-900 leading-[0.95] tracking-tight mb-8">
+                <h2 className="font-headline text-5xl md:text-6xl text-stone-900 leading-[0.95] mb-8">
                   The intersection of{" "}
                   <span className="italic text-[#b31c33]">legacy wisdom</span>{" "}
                   and radical innovation.
@@ -210,7 +214,7 @@ export default function HomePage() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="bg-white rounded-2xl p-8 border border-[#e2bebd]/30 flex gap-5"
+                  className="bg-white rounded-2xl p-8 border border-[#e2bebd]/30 flex gap-5 transition-all duration-200 cursor-default [&:hover]:border-[#e2bebd]/60 [&:hover]:shadow-xl [&:hover]:shadow-stone-200/50 [&:hover]:-translate-y-2"
                 >
                   <div className="shrink-0 w-10 h-10 rounded-xl bg-[#b31c33]/10 flex items-center justify-center text-[#b31c33]">
                     {item.icon}
@@ -253,8 +257,9 @@ export default function HomePage() {
               <span className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-4">
                 Core Competencies
               </span>
-              <h2 className="font-headline text-5xl text-stone-900">
-                Expertise Ecosystem
+              <h2 className="font-headline text-5xl md:text-6xl text-stone-900 leading-[0.95]">
+                Expertise{" "}
+                <span className="italic text-[#b31c33]">Ecosystem</span>
               </h2>
             </div>
             <p className="text-[#5c5c5c] font-body text-sm max-w-xs leading-relaxed italic">
@@ -268,7 +273,7 @@ export default function HomePage() {
               href="/cloud-services"
               className="group lg:col-span-2 bg-[#f6f3f2] rounded-2xl p-10 hover:bg-white hover:shadow-2xl hover:shadow-stone-200/60 transition-all duration-300 border border-transparent hover:border-[#e2bebd]/40"
             >
-              <span className="font-body text-[10px] tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">
+              <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">
                 01 / Foundation
               </span>
               <h3 className="font-headline text-3xl text-stone-900 mb-3">
@@ -303,7 +308,7 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
                 </svg>
               </div>
-              <span className="font-body text-[10px] tracking-[0.3em] uppercase text-white/60 font-bold block mb-3">
+              <span className="font-body text-xs tracking-[0.3em] uppercase text-white/60 font-bold block mb-3">
                 02 / Adaptive
               </span>
               <h3 className="font-headline text-3xl text-white mb-3">
@@ -333,7 +338,7 @@ export default function HomePage() {
               />
               <div className="absolute inset-0 bg-[#1c1b1b]/60 group-hover:bg-[#1c1b1b]/50 transition-colors" />
               <div className="absolute inset-0 p-10 flex flex-col justify-between">
-                <span className="font-body text-[10px] tracking-[0.3em] uppercase text-white/60 font-bold">
+                <span className="font-body text-xs tracking-[0.3em] uppercase text-white/60 font-bold">
                   03 / Open Source
                 </span>
                 <div>
@@ -354,7 +359,7 @@ export default function HomePage() {
               className="group lg:col-span-2 bg-[#f6f3f2] rounded-2xl p-10 hover:bg-white hover:shadow-2xl hover:shadow-stone-200/60 transition-all duration-300 border border-transparent hover:border-[#e2bebd]/40 flex flex-col justify-between"
             >
               <div>
-                <span className="font-body text-[10px] tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">
+                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">
                   04 / Modernization
                 </span>
                 <h3 className="font-headline text-3xl text-stone-900 mb-3">
@@ -366,7 +371,7 @@ export default function HomePage() {
               </div>
               <div className="flex flex-wrap gap-2">
                 {["Application Dev", "DevSecOps", "Kubernetes", "Cloud-Native"].map((tag) => (
-                  <span key={tag} className="font-body text-[10px] font-bold uppercase tracking-wider text-[#5c5c5c] border border-[#e2bebd]/60 rounded-md px-3 py-1.5">
+                  <span key={tag} className="font-body text-xs font-bold uppercase tracking-wider text-[#b31c33] bg-[#b31c33]/8 border border-[#b31c33]/20 rounded-md px-3 py-1.5">
                     {tag}
                   </span>
                 ))}
@@ -376,68 +381,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── Why Choose Us Bento ──────────────────────────────────────────── */}
-      <section className="py-20 bg-[#f6f3f2] border-t border-[#e2bebd]/20">
-        <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
-          <div className="mb-16">
-            <span className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-4">
-              The Illumia Advantage
-            </span>
-            <h2 className="font-headline text-5xl text-stone-900">
-              Why Choose Illumia Solutions?
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {/* Card 0 — RED accent */}
-            <Link
-              href={whyChoose[0].href}
-              className="group bg-[#b31c33] rounded-2xl p-10 text-white hover:bg-[#920022] transition-colors duration-300 flex flex-col gap-4"
-            >
-              <h3 className="font-headline text-2xl text-white">{whyChoose[0].title}</h3>
-              <p className="font-body text-sm text-white/80 leading-relaxed flex-1">{whyChoose[0].description}</p>
-              <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-white/70">
-                Explore Our Expertise <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-              </span>
-            </Link>
-
-            {/* Cards 1-3 — white */}
-            {whyChoose.slice(1, 4).map((item) => (
-              <Link
-                key={item.title}
-                href={item.href}
-                className="group bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:border-[#e2bebd]/60 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300 flex flex-col gap-4"
-              >
-                <h3 className="font-headline text-2xl text-stone-900 group-hover:text-[#b31c33] transition-colors duration-300">{item.title}</h3>
-                <p className="font-body text-sm text-[#5a4040] leading-relaxed flex-1">{item.description}</p>
-              </Link>
-            ))}
-
-            {/* Flip card — image front / Continuous Support back */}
-            <WhyChooseFlipCard
-              title={whyChoose[5].title}
-              description={whyChoose[5].description}
-              href={whyChoose[5].href}
-            />
-
-            {/* Card 4 */}
-            <Link
-              href={whyChoose[4].href}
-              aria-label={`${whyChoose[4].title} — learn more`}
-              className="group bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:border-[#e2bebd]/60 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300 flex flex-col gap-4"
-            >
-              <h3 className="font-headline text-2xl text-stone-900 group-hover:text-[#b31c33] transition-colors duration-300">{whyChoose[4].title}</h3>
-              <p className="font-body text-sm text-[#5a4040] leading-relaxed flex-1">{whyChoose[4].description}</p>
-              <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-[#b31c33]/60 group-hover:text-[#b31c33]">
-                Our Global Reach
-                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </span>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <TechSpotlight />
 
       {/* ─── Global Reach ─────────────────────────────────────────────────── */}
       <section className="py-20 bg-[#1c1b1b] text-white relative overflow-hidden">
@@ -464,15 +408,15 @@ export default function HomePage() {
               </p>
               <div className="grid grid-cols-2 gap-3">
                 {globalReachCountries.map((country) => (
-                  <div key={country} className="flex items-center gap-3 border border-white/10 rounded-xl px-4 py-3 bg-white/5">
+                  <div key={country} className="flex items-center gap-3 border border-white/20 rounded-xl px-4 py-3 bg-white/10 hover:bg-white/15 transition-colors duration-200">
                     <span className="w-2 h-2 rounded-full bg-[#b31c33] shrink-0" />
-                    <span className="font-body text-sm font-semibold text-stone-300">{country}</span>
+                    <span className="font-body text-sm font-semibold text-stone-200">{country}</span>
                   </div>
                 ))}
               </div>
             </div>
             <div className="space-y-4">
-              <div className="flex items-start gap-4 border border-white/10 rounded-2xl p-6 bg-white/5">
+              <div className="flex items-start gap-4 border border-white/10 border-l-2 border-l-[#b31c33]/60 rounded-2xl p-6 bg-white/5">
                 <span className="w-10 h-10 rounded-xl bg-[#b31c33]/20 flex items-center justify-center text-[#ffb3b3] shrink-0">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
@@ -483,7 +427,7 @@ export default function HomePage() {
                   <p className="text-stone-400 text-sm font-body leading-relaxed">APAC · North America · Africa · ANZ</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 border border-white/10 rounded-2xl p-6 bg-white/5">
+              <div className="flex items-start gap-4 border border-white/10 border-l-2 border-l-[#b31c33]/60 rounded-2xl p-6 bg-white/5">
                 <span className="w-10 h-10 rounded-xl bg-[#b31c33]/20 flex items-center justify-center text-[#ffb3b3] shrink-0">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
@@ -494,7 +438,7 @@ export default function HomePage() {
                   <p className="text-stone-400 text-sm font-body leading-relaxed">24/7 multi-timezone support · Local delivery teams</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 border border-white/10 rounded-2xl p-6 bg-white/5">
+              <div className="flex items-start gap-4 border border-white/10 border-l-2 border-l-[#b31c33]/60 rounded-2xl p-6 bg-white/5">
                 <span className="w-10 h-10 rounded-xl bg-[#b31c33]/20 flex items-center justify-center text-[#ffb3b3] shrink-0">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
@@ -506,6 +450,70 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Why Choose Us Bento ──────────────────────────────────────────── */}
+      <section className="py-20 bg-[#f6f3f2] border-t border-[#e2bebd]/20">
+        <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
+          <div className="mb-16">
+            <span className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-4">
+              The Illumia Advantage
+            </span>
+            <h2 className="font-headline text-5xl md:text-6xl text-stone-900 leading-[0.95]">
+              Why Choose{" "}
+              <span className="italic text-[#b31c33]">Illumia Solutions?</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* Card 0 — RED accent */}
+            <Link
+              href={whyChoose[0].href}
+              className="group bg-[#b31c33] rounded-2xl p-10 text-white hover:bg-[#920022] transition-colors duration-300 flex flex-col gap-4"
+            >
+              <h3 className="font-headline text-2xl text-white">{whyChoose[0].title}</h3>
+              <p className="font-body text-sm text-white/80 leading-relaxed flex-1">{whyChoose[0].description}</p>
+              <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-white/70">
+                Explore Our Expertise <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </span>
+            </Link>
+
+            {/* Cards 1-3 — white */}
+            {whyChoose.slice(1, 4).map((item) => (
+              <Link
+                key={item.title}
+                href={item.href}
+                className="group bg-white rounded-2xl p-10 border border-[#e2bebd]/30 border-l-2 border-l-transparent hover:border-[#e2bebd]/60 hover:border-l-[#b31c33] hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300 flex flex-col gap-4"
+              >
+                <h3 className="font-headline text-2xl text-stone-900 group-hover:text-[#b31c33] transition-colors duration-300">{item.title}</h3>
+                <p className="font-body text-sm text-[#5a4040] leading-relaxed flex-1">{item.description}</p>
+              </Link>
+            ))}
+
+            {/* Flip card — image front / Continuous Support back */}
+            <WhyChooseFlipCard
+              title={whyChoose[5].title}
+              description={whyChoose[5].description}
+              href={whyChoose[5].href}
+            />
+
+            {/* Card 4 */}
+            <Link
+              href={whyChoose[4].href}
+              aria-label={`${whyChoose[4].title} — learn more`}
+              className="group bg-white rounded-2xl p-10 border border-[#e2bebd]/30 border-l-2 border-l-transparent hover:border-[#e2bebd]/60 hover:border-l-[#b31c33] hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300 flex flex-col gap-4"
+            >
+              <h3 className="font-headline text-2xl text-stone-900 group-hover:text-[#b31c33] transition-colors duration-300">{whyChoose[4].title}</h3>
+              <p className="font-body text-sm text-[#5a4040] leading-relaxed flex-1">{whyChoose[4].description}</p>
+              <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-[#b31c33]/60 group-hover:text-[#b31c33]">
+                Our Global Reach
+                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
+            </Link>
           </div>
         </div>
       </section>
@@ -534,12 +542,6 @@ export default function HomePage() {
               href="/contact"
               className="h-auto py-4 rounded-xl bg-[#b31c33] hover:bg-[#920022] shadow-xl shadow-[#b31c33]/20 active:scale-95 tracking-wide font-body font-semibold"
             />
-            <Link
-              href="/about"
-              className="border border-[#b31c33]/30 text-[#b31c33] px-10 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#ffdad9]/20 transition-colors duration-200"
-            >
-              About Illumia
-            </Link>
           </div>
         </div>
       </section>

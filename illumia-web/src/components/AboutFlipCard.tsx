@@ -2,10 +2,7 @@
 
 import { useRef } from "react";
 import Image from "next/image";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-
-gsap.registerPlugin(useGSAP);
+import { motion, useInView } from "motion/react";
 
 interface Props {
   number: string;
@@ -13,85 +10,70 @@ interface Props {
   desc: string;
   bg: string;
   className?: string;
+  reverse?: boolean;
+  dark?: boolean;
 }
 
-export default function AboutFlipCard({ number, title, desc, bg, className = "" }: Props) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const innerRef = useRef<HTMLDivElement>(null);
-  const flippedRef = useRef(false);
-
-  const { contextSafe } = useGSAP({ scope: containerRef });
-
-  const flip = contextSafe((toY: number) => {
-    gsap.to(innerRef.current, {
-      rotateY: toY,
-      duration: 0.6,
-      ease: "power2.inOut",
-    });
-  });
-
-  const onEnter = contextSafe(() => flip(180));
-  const onLeave  = contextSafe(() => flip(0));
-
-  const onTap = contextSafe(() => {
-    flippedRef.current = !flippedRef.current;
-    flip(flippedRef.current ? 180 : 0);
-  });
+export default function AboutWhyCard({
+  number,
+  title,
+  desc,
+  bg,
+  className = "",
+  reverse = false,
+  dark = false,
+}: Props) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <div
-      ref={containerRef}
-      className={`relative [perspective:1000px] cursor-pointer select-none ${className}`}
-      onMouseEnter={onEnter}
-      onMouseLeave={onLeave}
-      onClick={onTap}
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 32 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      className={`rounded-2xl overflow-hidden flex min-h-[300px] ${
+        reverse ? "flex-col-reverse md:flex-row-reverse" : "flex-col md:flex-row"
+      } ${dark ? "bg-[#1c1b1b]" : "bg-[#f6f3f2]"} ${className}`}
     >
-      <div
-        ref={innerRef}
-        className="relative w-full h-full [transform-style:preserve-3d]"
-        style={{ willChange: "transform" }}
-      >
-        {/* ── Front — image + number + title ───────────────────────────── */}
-        <div className="absolute inset-0 [backface-visibility:hidden] rounded-2xl overflow-hidden min-h-[inherit]">
-          <Image
-            src={bg}
-            alt={title}
-            fill
-            className="object-cover"
-            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1c1b1b]/95 via-[#1c1b1b]/40 to-transparent" />
-          <div className="absolute inset-0 p-7 flex flex-col justify-between">
-            <span className="font-headline text-6xl italic text-white/15 leading-none">
-              {number}.
-            </span>
-            <div className="space-y-2">
-              <h3 className="font-headline text-2xl text-white leading-snug">{title}</h3>
-              <span className="font-body text-[10px] uppercase tracking-[0.25em] text-white/40 block">
-                Hover to read
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* ── Back — written content ────────────────────────────────────── */}
-        <div
-          className="absolute inset-0 [backface-visibility:hidden] rounded-2xl bg-[#f6f3f2] border border-[#e2bebd]/40 p-7 flex flex-col"
-          style={{ transform: "rotateY(180deg)" }}
-        >
-          {/* Decorative watermark — absolute so it takes no vertical space */}
-          <span className="pointer-events-none select-none absolute top-3 right-4 font-headline text-8xl italic text-[#b31c33]/8 leading-none">
-            {number}.
-          </span>
-          <div className="space-y-3 flex flex-col h-full">
-            <div className="h-px w-10 bg-[#b31c33] shrink-0" />
-            <h3 className="font-headline text-xl text-stone-900 leading-snug shrink-0">{title}</h3>
-            <p className="font-body text-sm text-[#5a4040] leading-relaxed overflow-hidden">
-              {desc}
-            </p>
-          </div>
-        </div>
+      {/* Image */}
+      <div className="relative w-full md:w-[42%] shrink-0 min-h-[220px] md:min-h-0">
+        <Image
+          src={bg}
+          alt={title}
+          fill
+          className="object-cover"
+          sizes="(min-width: 768px) 42vw, 100vw"
+        />
+        <div className={`absolute inset-0 ${dark ? "bg-[#1c1b1b]/30" : "bg-[#1c1b1b]/15"}`} />
       </div>
-    </div>
+
+      {/* Content */}
+      <div className="flex-1 p-8 lg:p-10 flex flex-col justify-center gap-4">
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={inView ? { scaleX: 1 } : {}}
+          transition={{ duration: 0.45, delay: 0.2, ease: "easeOut" }}
+          style={{ originX: 0 }}
+          className="h-px w-10 bg-[#b31c33]"
+        />
+        <motion.h3
+          initial={{ opacity: 0, y: 14 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.28 }}
+          className={`font-headline text-2xl leading-snug ${dark ? "text-white" : "text-stone-900"}`}
+        >
+          {title}
+        </motion.h3>
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.38 }}
+          className={`font-body text-sm leading-relaxed ${dark ? "text-stone-300" : "text-[#5a4040]"}`}
+        >
+          {desc}
+        </motion.p>
+      </div>
+    </motion.div>
   );
 }
