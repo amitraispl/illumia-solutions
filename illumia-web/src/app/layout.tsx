@@ -2,10 +2,16 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Inter } from "next/font/google";
+import { Inter, Newsreader } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
+const newsreader = Newsreader({
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
+  weight: ['300','400','500','600','700'],
+  variable: '--font-newsreader',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -30,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("h-full", "font-sans", inter.variable)}>
+    <html lang="en" className={cn("h-full", "font-sans", inter.variable, newsreader.variable)}>
       <body className="min-h-full flex flex-col bg-[#fcf9f8] text-[#1c1b1b] selection:bg-primary-container selection:text-on-primary-container">
         {/* Skip link for keyboard / screen-reader users — WCAG 2.4.1 */}
         <a href="#main-content" className="skip-link">
