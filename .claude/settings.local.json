@@ -49,7 +49,8 @@
       "Bash(mv \"Force Logo.png\" \"force-logo.png\")",
       "Bash(mv \"Seqrite_logo Partner-768x299.png\" \"seqrite-logo-partner.png\")",
       "Bash(awk '{print $5, $NF}')",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "Bash(grep -oE 'src=\"[^\"]*photos[^\"]*\"' C:\\\\\\\\Users\\\\\\\\amitra\\\\\\\\.claude\\\\\\\\projects\\\\\\\\O--CODE-illumia-solutions\\\\\\\\9602ecf0-ec96-473d-8be2-f780760c7262\\\\\\\\tool-results\\\\\\\\b3harijwo.txt)"
     ]
   }
 }

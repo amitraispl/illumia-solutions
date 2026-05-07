@@ -140,6 +140,8 @@ export default function HomePage() {
                     alt={logo.alt}
                     width={logo.width}
                     height={logo.height}
+                    loading="eager"
+                    unoptimized
                     className="object-contain max-h-12 max-w-36 w-auto opacity-55 hover:opacity-90 transition-all duration-200 grayscale hover:grayscale-0"
                   />
                 </div>

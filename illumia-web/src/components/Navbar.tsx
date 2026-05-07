@@ -25,7 +25,7 @@ export default function Navbar() {
     pathname === href || pathname.startsWith(href + "/");
 
   return (
-    <nav aria-label="Main navigation" className="fixed top-0 w-full z-50 glass-header border-b border-[#e2bebd]/20 shadow-sm shadow-stone-900/5">
+    <nav aria-label="Main navigation" className="fixed top-0 w-full z-50 bg-[#fcf9f8]/85 backdrop-blur-xl supports-[backdrop-filter]:bg-[#fcf9f8]/70 border-b border-[#e2bebd]/20 shadow-sm shadow-stone-900/5">
       <div className="flex justify-between items-center px-6 md:px-12 py-4 w-full max-w-screen-2xl mx-auto">
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0">
