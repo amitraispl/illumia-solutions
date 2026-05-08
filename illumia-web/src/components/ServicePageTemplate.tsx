@@ -77,7 +77,7 @@ export default function ServicePageTemplate({
                   }`}>
                     {String(i + 1).padStart(2, "0")}.
                   </span>
-                  <h3 className={`font-headline text-2xl ${
+                  <h3 className={`font-headline text-xl sm:text-2xl ${
                     isRed || isDark ? "text-white" : "text-stone-900"
                   }`}>
                     {f.title}

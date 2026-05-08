@@ -113,9 +113,9 @@ export default function HomePage() {
 
       {/* ─── Partnership Strip ────────────────────────────────────────────── */}
       <div className="border-y border-[#e2bebd]/30 bg-white overflow-hidden">
-        <div className="max-w-screen-2xl mx-auto px-6 md:px-12 py-6 flex items-center gap-4 md:gap-10">
-          <div className="shrink-0 flex items-center gap-3">
-            <span className="w-4 h-px bg-[#b31c33]" />
+        <div className="max-w-screen-2xl mx-auto px-6 md:px-12 py-6 flex flex-col md:flex-row md:items-center gap-3 md:gap-10">
+          <div className="flex shrink-0 items-center justify-center md:justify-start gap-3 pt-2 pb-4 md:py-0">
+            <span className="hidden md:block w-4 h-px bg-[#b31c33]" />
             <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold whitespace-nowrap">
               Strategic Partners
             </span>
@@ -126,7 +126,7 @@ export default function HomePage() {
           <Marquee
             pauseOnHover
             repeat={3}
-            className="flex-1 [--duration:16s] [--gap:0px] p-0"
+            className="w-full md:flex-1 [--duration:16s] [--gap:0px] p-0"
             style={{
               maskImage: "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
               WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
@@ -158,16 +158,16 @@ export default function HomePage() {
       </div>
 
       {/* ─── About Snapshot ───────────────────────────────────────────────── */}
-      <section className="py-20 bg-[#f6f3f2]">
+      <section className="py-12 md:py-20 bg-[#f6f3f2]">
         <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16 items-center">
             {/* Left: editorial text + image */}
             <div className="lg:col-span-6 flex flex-col gap-8">
               <div>
                 <span className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-6">
                   Who We Are
                 </span>
-                <h2 className="font-headline text-5xl md:text-6xl text-stone-900 leading-[0.95] mb-8">
+                <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.95] mb-5 md:mb-8">
                   The intersection of{" "}
                   <span className="italic text-[#b31c33]">legacy wisdom</span>{" "}
                   and radical innovation.
@@ -222,7 +222,7 @@ export default function HomePage() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="bg-white rounded-2xl p-8 border border-[#e2bebd]/30 flex gap-5 transition-all duration-200 cursor-default [&:hover]:border-[#e2bebd]/60 [&:hover]:shadow-xl [&:hover]:shadow-stone-200/50 [&:hover]:-translate-y-2"
+                  className="bg-white rounded-2xl p-5 md:p-8 border border-[#e2bebd]/30 flex gap-4 md:gap-5 transition-all duration-200 cursor-default [&:hover]:border-[#e2bebd]/60 [&:hover]:shadow-xl [&:hover]:shadow-stone-200/50 [&:hover]:-translate-y-2"
                 >
                   <div className="shrink-0 w-10 h-10 rounded-xl bg-[#b31c33]/10 flex items-center justify-center text-[#b31c33]">
                     {item.icon}
@@ -237,7 +237,7 @@ export default function HomePage() {
                   </div>
                 </div>
               ))}
-              <div className="flex gap-4 pt-2">
+              <div className="flex flex-wrap gap-3 md:gap-4 pt-2">
                 <Link
                   href="/about"
                   className="bg-[#b31c33] text-white px-8 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/20 active:scale-95 text-center"
@@ -258,14 +258,14 @@ export default function HomePage() {
       </section>
 
       {/* ─── Expertise Ecosystem Bento ────────────────────────────────────── */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
-          <div className="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-8">
+          <div className="flex flex-col md:flex-row justify-between items-baseline mb-10 md:mb-16 gap-6 md:gap-8">
             <div>
               <span className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-4">
                 Core Competencies
               </span>
-              <h2 className="font-headline text-5xl md:text-6xl text-stone-900 leading-[0.95]">
+              <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.95]">
                 Expertise{" "}
                 <span className="italic text-[#b31c33]">Ecosystem</span>
               </h2>
@@ -279,7 +279,7 @@ export default function HomePage() {
             {/* Cell 1: Cloud Solutions — wide */}
             <Link
               href="/cloud-services"
-              className="group lg:col-span-2 bg-[#f6f3f2] rounded-2xl p-10 hover:bg-white hover:shadow-2xl hover:shadow-stone-200/60 transition-all duration-300 border border-transparent hover:border-[#e2bebd]/40"
+              className="group lg:col-span-2 bg-[#f6f3f2] rounded-2xl p-6 md:p-8 lg:p-10 hover:bg-white hover:shadow-2xl hover:shadow-stone-200/60 transition-all duration-300 border border-transparent hover:border-[#e2bebd]/40"
             >
               <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">
                 01 / Foundation
@@ -309,7 +309,7 @@ export default function HomePage() {
             {/* Cell 2: Cyber Security — RED accent */}
             <Link
               href="/cyber-security"
-              className="group bg-[#b31c33] rounded-2xl p-10 text-white hover:bg-[#920022] transition-colors duration-300"
+              className="group bg-[#b31c33] rounded-2xl p-6 md:p-8 lg:p-10 text-white hover:bg-[#920022] transition-colors duration-300"
             >
               <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center mb-6">
                 <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -364,7 +364,7 @@ export default function HomePage() {
             {/* Cell 4: Digital Transformation — wide */}
             <Link
               href="/application-solutions"
-              className="group lg:col-span-2 bg-[#f6f3f2] rounded-2xl p-10 hover:bg-white hover:shadow-2xl hover:shadow-stone-200/60 transition-all duration-300 border border-transparent hover:border-[#e2bebd]/40 flex flex-col justify-between"
+              className="group lg:col-span-2 bg-[#f6f3f2] rounded-2xl p-6 md:p-8 lg:p-10 hover:bg-white hover:shadow-2xl hover:shadow-stone-200/60 transition-all duration-300 border border-transparent hover:border-[#e2bebd]/40 flex flex-col justify-between"
             >
               <div>
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">
@@ -392,7 +392,7 @@ export default function HomePage() {
       <TechSpotlight />
 
       {/* ─── Global Reach ─────────────────────────────────────────────────── */}
-      <section className="py-20 bg-[#1c1b1b] text-white relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-[#1c1b1b] text-white relative overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=70&auto=format&fit=crop"
           alt=""
@@ -401,16 +401,16 @@ export default function HomePage() {
           aria-hidden="true"
         />
         <div className="relative z-10 max-w-screen-2xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
             <div>
               <span className="font-body text-xs tracking-[0.25em] uppercase text-[#ffb3b3] font-bold block mb-6">
                 Global Presence
               </span>
-              <h2 className="font-headline text-5xl md:text-6xl text-white leading-tight mb-8">
+              <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-5 md:mb-8">
                 Global Reach,{" "}
                 <span className="italic text-[#ffb3b3]">Local Precision.</span>
               </h2>
-              <p className="text-stone-400 text-lg leading-relaxed mb-10 font-body">
+              <p className="text-stone-400 text-base md:text-lg leading-relaxed mb-6 md:mb-10 font-body">
                 Our headquarters give us global satellite offices, enabling strategic partnerships and
                 enterprise-class support across the regions that matter to your business.
               </p>
@@ -463,13 +463,13 @@ export default function HomePage() {
       </section>
 
       {/* ─── Why Choose Us Bento ──────────────────────────────────────────── */}
-      <section className="py-20 bg-[#f6f3f2] border-t border-[#e2bebd]/20">
+      <section className="py-12 md:py-20 bg-[#f6f3f2] border-t border-[#e2bebd]/20">
         <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
-          <div className="mb-16">
+          <div className="mb-10 md:mb-16">
             <span className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-4">
               The Illumia Advantage
             </span>
-            <h2 className="font-headline text-5xl md:text-6xl text-stone-900 leading-[0.95]">
+            <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.95]">
               Why Choose{" "}
               <span className="italic text-[#b31c33]">Illumia Solutions?</span>
             </h2>
@@ -479,7 +479,7 @@ export default function HomePage() {
             {/* Card 0 — RED accent */}
             <Link
               href={whyChoose[0].href}
-              className="group bg-[#b31c33] rounded-2xl p-10 text-white hover:bg-[#920022] transition-colors duration-300 flex flex-col gap-4"
+              className="group bg-[#b31c33] rounded-2xl p-6 md:p-8 lg:p-10 text-white hover:bg-[#920022] transition-colors duration-300 flex flex-col gap-4"
             >
               <h3 className="font-headline text-2xl text-white">{whyChoose[0].title}</h3>
               <p className="font-body text-sm text-white/80 leading-relaxed flex-1">{whyChoose[0].description}</p>
@@ -493,7 +493,7 @@ export default function HomePage() {
               <Link
                 key={item.title}
                 href={item.href}
-                className="group bg-white rounded-2xl p-10 border border-[#e2bebd]/30 border-l-2 border-l-transparent hover:border-[#e2bebd]/60 hover:border-l-[#b31c33] hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300 flex flex-col gap-4"
+                className="group bg-white rounded-2xl p-6 md:p-8 lg:p-10 border border-[#e2bebd]/30 border-l-2 border-l-transparent hover:border-[#e2bebd]/60 hover:border-l-[#b31c33] hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300 flex flex-col gap-4"
               >
                 <h3 className="font-headline text-2xl text-stone-900 group-hover:text-[#b31c33] transition-colors duration-300">{item.title}</h3>
                 <p className="font-body text-sm text-[#5a4040] leading-relaxed flex-1">{item.description}</p>
@@ -511,7 +511,7 @@ export default function HomePage() {
             <Link
               href={whyChoose[4].href}
               aria-label={`${whyChoose[4].title} — learn more`}
-              className="group bg-white rounded-2xl p-10 border border-[#e2bebd]/30 border-l-2 border-l-transparent hover:border-[#e2bebd]/60 hover:border-l-[#b31c33] hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300 flex flex-col gap-4"
+              className="group bg-white rounded-2xl p-6 md:p-8 lg:p-10 border border-[#e2bebd]/30 border-l-2 border-l-transparent hover:border-[#e2bebd]/60 hover:border-l-[#b31c33] hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300 flex flex-col gap-4"
             >
               <h3 className="font-headline text-2xl text-stone-900 group-hover:text-[#b31c33] transition-colors duration-300">{whyChoose[4].title}</h3>
               <p className="font-body text-sm text-[#5a4040] leading-relaxed flex-1">{whyChoose[4].description}</p>
@@ -529,17 +529,17 @@ export default function HomePage() {
       <ServicesEcosystem />
 
       {/* ─── CTA Strip ────────────────────────────────────────────────────── */}
-      <section className="bg-[#fcf9f8] py-16 border-t border-[#e2bebd]/20">
+      <section className="bg-[#fcf9f8] py-10 md:py-16 border-t border-[#e2bebd]/20">
         <div className="max-w-screen-2xl mx-auto px-6 md:px-12 text-center">
-          <span className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-6">
+          <span className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-4 md:mb-6">
             Start Today
           </span>
-          <h2 className="font-headline text-5xl md:text-6xl text-stone-900 mb-8 leading-tight">
+          <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl text-stone-900 mb-5 md:mb-8 leading-tight">
             Ready to{" "}
             <span className="italic text-[#b31c33]">illuminate</span>{" "}
             your path?
           </h2>
-          <p className="text-[#5a4040] text-xl max-w-2xl mx-auto mb-12 font-body leading-relaxed">
+          <p className="text-[#5a4040] text-base md:text-xl max-w-2xl mx-auto mb-8 md:mb-12 font-body leading-relaxed">
             Whether you&apos;re hardening your security posture, migrating to the cloud,
             or modernising legacy infrastructure — our team is ready to map the way forward.
           </p>

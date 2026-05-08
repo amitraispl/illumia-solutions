@@ -38,7 +38,7 @@ export default function TechSpotlight() {
             <motion.span variants={fadeUp} className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-bold block mb-4">
               Technology Focus Areas
             </motion.span>
-            <motion.h2 variants={fadeUp} className="font-headline text-5xl md:text-6xl text-stone-900 leading-[0.95]">
+            <motion.h2 variants={fadeUp} className="font-headline text-4xl sm:text-5xl md:text-6xl text-stone-900 leading-[0.95]">
               Where Industry Is{" "}
               <span className="italic text-[#b31c33]">Moving Next?</span>
             </motion.h2>

@@ -55,7 +55,19 @@
       "Bash(cp \"photos/force-logo.png\" \"force-logo.png\")",
       "Bash(cp \"photos/zextras_Partner_logo_RGB_web-7.png\" \"zextras_Partner_logo_RGB_web-7.png\")",
       "Bash(cp \"photos/Proxmox-Silver-Partner.png\" \"Proxmox-Silver-Partner.png\")",
-      "Bash(cp \"photos/LifeBank-Foundation.png\" \"LifeBank-Foundation.png\")"
+      "Bash(cp \"photos/LifeBank-Foundation.png\" \"LifeBank-Foundation.png\")",
+      "Bash(git submodule *)",
+      "PowerShell(Get-ChildItem \"O:\\\\CODE\\\\illumia-solutions\\\\illumia-web\" -Force | Where-Object { $_.Name -eq \".git\" })",
+      "Bash(git status *)",
+      "Bash(git push *)",
+      "mcp__playwright__browser_evaluate",
+      "mcp__playwright__browser_resize",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_wait_for",
+      "mcp__playwright__browser_take_screenshot",
+      "Bash(npx skillfish *)",
+      "mcp__playwright__browser_run_code_unsafe",
+      "Bash(Select-Object FullName)"
     ]
   }
 }

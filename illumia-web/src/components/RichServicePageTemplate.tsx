@@ -77,7 +77,7 @@ export default function RichServicePageTemplate({
       />
 
       {/* ─── Features ─────────────────────────────────────────────────────── */}
-      <section className="py-24 bg-white px-6 md:px-12">
+      <section className="py-14 md:py-24 bg-white px-6 md:px-12">
         <div className="max-w-screen-2xl mx-auto">
 
           {/* Section heading */}
@@ -86,7 +86,7 @@ export default function RichServicePageTemplate({
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
-            className="mb-16"
+            className="mb-10 md:mb-16"
           >
             <motion.span
               variants={fadeUp}
@@ -96,7 +96,7 @@ export default function RichServicePageTemplate({
             </motion.span>
             <motion.h2
               variants={fadeUp}
-              className="font-headline text-4xl md:text-5xl text-stone-900 max-w-3xl"
+              className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900 max-w-3xl"
             >
               {sectionTitle}
             </motion.h2>
@@ -114,7 +114,7 @@ export default function RichServicePageTemplate({
               <motion.div
                 key={feature.title}
                 variants={fadeUp}
-                className="bg-white hover:bg-[#faf8f7] transition-colors duration-200 p-8 flex flex-col gap-5 border border-[#e2bebd]/30"
+                className="bg-white hover:bg-[#faf8f7] transition-colors duration-200 p-5 md:p-8 flex flex-col gap-4 md:gap-5 border border-[#e2bebd]/30"
               >
                 {/* Number + Title */}
                 <div className="flex items-start gap-4">
@@ -150,12 +150,12 @@ export default function RichServicePageTemplate({
 
       {/* ─── Closing + CTA ────────────────────────────────────────────────── */}
      
-<section className="relative bg-[#1a1919] px-6 md:px-12 py-24 overflow-hidden min-h-[320px] flex items-center">
+<section className="relative bg-[#1a1919] px-6 md:px-12 py-14 md:py-24 overflow-hidden min-h-[280px] md:min-h-[320px] flex items-center">
 
   {/* Ambient glow */}
   <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_0%_50%,rgba(179,28,51,0.07),transparent)]" />
 
-  <div className="relative w-full max-w-screen-2xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+  <div className="relative w-full max-w-screen-2xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-24 items-center">
 
     {/* Left — closing text */}
     {closingText ? (
@@ -194,17 +194,17 @@ export default function RichServicePageTemplate({
       after:absolute after:left-0 after:top-[20%] after:h-[60%] after:w-px
       after:bg-gradient-to-b after:from-transparent after:via-[#b31c33]/50 after:to-transparent">
 
-      <div className="ml-auto text-right pr-8 lg:pr-16">
+      <div className="lg:ml-auto text-left lg:text-right lg:pr-16">
         <span className="font-body text-[10px] tracking-[0.2em] uppercase text-[#ffb3b3]/75 font-bold block mb-3">
           Ready to get started?
         </span>
-        <h2 className="font-headline text-4xl text-white leading-[1.2] tracking-tight">
+        <h2 className="font-headline text-3xl md:text-4xl text-white leading-[1.2] tracking-tight">
           Contact us to{" "}
           <span className="text-white/45 font-normal">learn more.</span>
         </h2>
       </div>
 
-      <div className="flex flex-wrap gap-3 ml-auto pr-8 lg:pr-16">
+      <div className="flex flex-wrap gap-3 lg:ml-auto lg:pr-16">
         <Link
           href="/contact"
           className="inline-flex items-center gap-3 bg-[#b31c33] hover:bg-[#9e1829] text-white px-7 py-3.5 rounded-[10px] font-body text-sm font-semibold tracking-wide transition-all duration-200 active:scale-95"

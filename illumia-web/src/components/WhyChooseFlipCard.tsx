@@ -55,18 +55,23 @@ export default function WhyChooseFlipCard({ title, description, href }: Props) {
 
         {/* Back — Continuous Support content */}
         <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl bg-white border border-[#e2bebd]/30 p-8 flex flex-col gap-4">
-          <h3 className="font-headline text-2xl text-stone-900">{title}</h3>
+          <h3 className="font-headline text-xl sm:text-2xl text-stone-900">{title}</h3>
           <p className="font-body text-sm text-[#5a4040] leading-relaxed flex-1">{description}</p>
-          <Link
-            href={href}
-            className="font-body font-semibold text-xs inline-flex items-center gap-2 uppercase tracking-widest text-[#b31c33]/60 hover:text-[#b31c33] transition-colors duration-200"
-            onClick={(e) => e.stopPropagation()}
-          >
-            Get Support
-            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+          <div className="flex items-center justify-between">
+            <Link
+              href={href}
+              className="font-body font-semibold text-xs inline-flex items-center gap-2 uppercase tracking-widest text-[#b31c33]/60 hover:text-[#b31c33] transition-colors duration-200"
+              onClick={(e) => e.stopPropagation()}
+            >
+              Get Support
+              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+            <span className="md:hidden font-body text-[10px] uppercase tracking-widest text-stone-300">
+              Tap to close
+            </span>
+          </div>
         </div>
       </div>
     </div>

@@ -48,7 +48,7 @@ export default function PageHero({
   return (
     <section className="flex flex-col lg:flex-row min-h-screen overflow-hidden">
       {/* ── Text half ── */}
-      <div className="relative z-10 lg:w-[52%] bg-[#fcf9f8] pt-36 pb-20 px-6 md:px-12 lg:pl-12 xl:pl-20 lg:pr-12 xl:pr-16 flex items-center">
+      <div className="relative z-10 lg:w-[52%] bg-[#fcf9f8] pt-24 pb-12 md:pt-36 md:pb-20 px-6 md:px-12 lg:pl-12 xl:pl-20 lg:pr-12 xl:pr-16 flex items-center">
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -64,14 +64,14 @@ export default function PageHero({
 
           <motion.h1
             variants={fadeUp}
-            className="font-headline text-4xl sm:text-5xl md:text-7xl xl:text-8xl text-stone-900 leading-[0.93] tracking-tighter mb-8"
+            className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-stone-900 leading-[0.93] tracking-tighter mb-5 md:mb-8"
           >
             {title}
           </motion.h1>
 
           <motion.p
             variants={fadeUp}
-            className="text-lg md:text-xl text-[#5a4040] font-body leading-relaxed mb-10 max-w-lg"
+            className="text-base md:text-xl text-[#5a4040] font-body leading-relaxed mb-8 md:mb-10 max-w-lg"
           >
             {description}
           </motion.p>
@@ -102,7 +102,7 @@ export default function PageHero({
       </div>
 
       {/* ── Image half — full-bleed to screen edge ── */}
-      <div className="relative h-[65vw] lg:h-auto lg:flex-1">
+      <div className="relative h-[55vw] md:h-[42vw] lg:h-auto lg:flex-1">
         <Image
           src={imageSrc}
           alt={imageAlt}
