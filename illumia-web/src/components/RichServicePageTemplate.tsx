@@ -70,7 +70,7 @@ export default function RichServicePageTemplate({
           )
         }
         description={description}
-        primaryCta={{ label: ctaText, href: "/contact" }}
+        primaryCta={{ label: ctaText, href: "/contact#contact-form" }}
         secondaryCta={{ label: "All Services", href: "/" }}
         imageSrc={heroImage}
         imageAlt={`${title} — Illumia Solutions`}
@@ -206,7 +206,7 @@ export default function RichServicePageTemplate({
 
       <div className="flex flex-wrap gap-3 lg:ml-auto lg:pr-16">
         <Link
-          href="/contact"
+          href="/contact#contact-form"
           className="inline-flex items-center gap-3 bg-[#b31c33] hover:bg-[#9e1829] text-white px-7 py-3.5 rounded-[10px] font-body text-sm font-semibold tracking-wide transition-all duration-200 active:scale-95"
         >
           {ctaText}

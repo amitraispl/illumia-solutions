@@ -218,7 +218,7 @@ export default function FAQsPage() {
         }
         description="Answers to the questions our clients ask most often — covering our cloud services, cybersecurity portfolio, and open-source solutions."
         primaryCta={{ label: "Browse Topics", href: "#topics" }}
-        secondaryCta={{ label: "Contact Us", href: "/contact" }}
+        secondaryCta={{ label: "Contact Us", href: "/contact#contact-form" }}
         imageSrc="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=85"
         imageAlt="Illumia Solutions knowledge base — connected systems"
       />
@@ -310,7 +310,7 @@ export default function FAQsPage() {
                       </p>
                     </div>
                     <Link
-                      href="/contact"
+                      href="/contact#contact-form"
                       className="relative shrink-0 inline-block bg-[#b31c33] text-white px-8 py-3.5 rounded-xl font-body font-semibold text-sm tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/20 transition-colors duration-200 active:scale-95"
                     >
                       Contact Expertise

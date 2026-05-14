@@ -60,7 +60,7 @@ export default function TechSpotlight() {
           {/* ── AI Governance — RED 2-wide ─────────────────────────────────── */}
           <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
             <Link
-              href="/contact"
+              href="/contact#contact-form"
               className="group block h-full bg-[#b31c33] rounded-2xl p-10 text-white hover:bg-[#920022] transition-colors duration-300 cursor-pointer"
             >
               <div className="flex items-center justify-between mb-6">
@@ -98,7 +98,7 @@ export default function TechSpotlight() {
           {/* ── Proxmox — cream ────────────────────────────────────────────── */}
           <motion.div variants={fadeUp} className="h-full">
             <Link
-              href="/contact"
+              href="/contact#contact-form"
               className="group block h-full bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:shadow-2xl hover:shadow-stone-200/70 transition-all duration-300 cursor-pointer flex flex-col"
             >
               <div className="flex items-center gap-3 mb-6">
@@ -134,7 +134,7 @@ export default function TechSpotlight() {
           {/* ── ERPNext — white ────────────────────────────────────────────── */}
           <motion.div variants={fadeUp} className="h-full">
             <Link
-              href="/contact"
+              href="/contact#contact-form"
               className="group block h-full bg-[#f6f3f2] rounded-2xl p-10 border border-transparent hover:bg-white hover:border-[#e2bebd]/40 hover:shadow-2xl hover:shadow-stone-200/60 transition-all duration-300 cursor-pointer flex flex-col"
             >
               <div className="flex items-center gap-3 mb-6">
@@ -173,7 +173,7 @@ export default function TechSpotlight() {
           {/* ── NetBox — dark 2-wide ────────────────────────────────────────── */}
           <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
             <Link
-              href="/contact"
+              href="/contact#contact-form"
               className="group block h-full bg-[#1c1b1b] rounded-2xl p-10 text-white hover:bg-[#111010] transition-colors duration-300 cursor-pointer"
             >
               <div className="flex flex-col lg:flex-row gap-10 h-full">

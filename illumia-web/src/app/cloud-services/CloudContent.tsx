@@ -86,7 +86,7 @@ export default function CloudServicesContent() {
           </>
         }
         description="At Illumia, we specialize in providing comprehensive cloud solutions tailored to meet the dynamic needs of businesses across industries. We leverage advanced cloud technology to optimize operations, enhance security, and ensure seamless scalability."
-        primaryCta={{ label: "Consult an Expert", href: "/contact" }}
+        primaryCta={{ label: "Consult an Expert", href: "/contact#contact-form" }}
         secondaryCta={{ label: "View Services", href: "#hosting" }}
         imageSrc="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1600&q=85&auto=format&fit=crop"
         imageAlt="Cloud infrastructure — Illumia Solutions"
@@ -457,7 +457,7 @@ export default function CloudServicesContent() {
             </div>
             <div className="flex flex-col gap-4 items-end">
               <Link
-                href="/contact"
+                href="/contact#contact-form"
                 className="inline-block bg-[#b31c33] text-white px-8 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/30 active:scale-95 transition-all text-sm"
               >
                 Activate Migration Plans
@@ -511,7 +511,7 @@ export default function CloudServicesContent() {
                 </p>
               </div>
               <Link
-                href="/contact"
+                href="/contact#contact-form"
                 className="inline-block bg-white text-[#b31c33] px-8 py-3 rounded-xl font-body font-bold tracking-wide hover:bg-[#ffdad9] active:scale-95 transition-all text-sm w-fit"
               >
                 Request On-site Support
@@ -577,7 +577,7 @@ export default function CloudServicesContent() {
             </motion.div>
             <motion.div variants={fadeUp}>
               <Link
-                href="/contact"
+                href="/contact#contact-form"
                 className="inline-block bg-[#b31c33] text-white px-8 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/20 transition-all duration-200 active:scale-95"
               >
                 Discuss Your Cloud Strategy
@@ -629,13 +629,13 @@ export default function CloudServicesContent() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/contact"
+              href="/contact#contact-form"
               className="inline-block bg-[#b31c33] text-white px-12 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/30 transition-all duration-200 active:scale-95"
             >
               Get Started
             </Link>
             <Link
-              href="/contact"
+              href="/contact#contact-form"
               className="inline-block border border-white/20 text-white px-12 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-white/5 transition-colors"
             >
               Contact Sales

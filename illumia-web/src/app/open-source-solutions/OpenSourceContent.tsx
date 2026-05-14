@@ -97,7 +97,7 @@ export default function OpenSourceSolutionsContent() {
           </>
         }
         description="Harnessing the collective intelligence of the global open-source community to deliver enterprise-grade reliability. We don't just use open source — we refine it into high-precision instruments for modern business."
-        primaryCta={{ label: "Explore Our Ecosystem", href: "/contact" }}
+        primaryCta={{ label: "Explore Our Ecosystem", href: "/contact#contact-form" }}
         imageSrc="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1400&q=85&auto=format&fit=crop"
         imageAlt="Open source coding and development"
       />

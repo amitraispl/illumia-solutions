@@ -97,8 +97,8 @@ export default function CyberSecurityContent() {
           </>
         }
         description="Navigating the complexities of modern digital threats requires more than just tools. It requires a partner dedicated to precision in cybersecurity strategy — protecting your assets, maintaining compliance, and ensuring business continuity."
-        primaryCta={{ label: "Audit your Infrastructure", href: "/contact" }}
-        secondaryCta={{ label: "View Case Studies", href: "/contact" }}
+        primaryCta={{ label: "Audit your Infrastructure", href: "/contact#contact-form" }}
+        secondaryCta={{ label: "View Case Studies", href: "/contact#contact-form" }}
         imageSrc="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1400&q=85&auto=format&fit=crop"
         imageAlt="Cybersecurity professional"
         imageGrayscale={true}
@@ -292,7 +292,7 @@ export default function CyberSecurityContent() {
             Continuous monitoring, detection, and response with our Security Operations Centre. AI-driven and Human-led Partner Solutions.
           </p>
           <Link
-            href="/contact"
+            href="/contact#contact-form"
             className="inline-block bg-[#b31c33] text-white px-12 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#d63849] shadow-xl shadow-[#b31c33]/30 active:scale-95 transition-all duration-200"
           >
             Activate 24/7 Defence

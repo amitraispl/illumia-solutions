@@ -67,7 +67,7 @@ export default function AboutPage() {
           </>
         }
         description="Illumia Solutions is built on the philosophy of precision applied to technical infrastructure. We don't just solve problems; we engineer narratives of success through technological excellence and meticulous strategic planning."
-        primaryCta={{ label: "Explore Expertise", href: "/contact" }}
+        primaryCta={{ label: "Explore Expertise", href: "/contact#contact-form" }}
         secondaryCta={{ label: "View Our Work", href: "/cloud-services" }}
         imageSrc="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1400&q=85&auto=format&fit=crop"
         imageAlt="Illumia Solutions team collaboration"
@@ -245,7 +245,7 @@ export default function AboutPage() {
             business needs. Let&apos;s build something precise together.
           </p>
           <Link
-            href="/contact"
+            href="/contact#contact-form"
             className="inline-flex items-center gap-3 bg-[#b31c33] hover:bg-[#920022] text-white px-10 py-5 rounded-xl font-body font-semibold text-sm tracking-wide shadow-lg shadow-[#b31c33]/30 transition-all duration-200 active:scale-95"
           >
             Start a Conversation

@@ -11,41 +11,117 @@ const LOGO_URL =
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
-const CASE_STUDIES = [
+type CaseStudyId = "nonprofit" | "cyber" | "pci";
+
+interface CaseStudyItem {
+  id: CaseStudyId;
+  href: string;
+  shortLabel: string;
+  subtitle: string;
+  label: string;
+  tag: string;
+  desc: string;
+  shortDesc: string;
+  highlights: string[];
+  image: string;
+}
+
+const CASE_STUDIES: CaseStudyItem[] = [
   {
-    id: "nonprofit" as const,
+    id: "nonprofit",
     href: "/case-studies/non-profit-open-source",
+    shortLabel: "Non-Profit OSS",
+    subtitle: "Open-source infrastructure transformation across 1,000+ branches",
     label: "Driving 50–65% IT Cost Reduction with Open Source Infrastructure",
     tag: "Open Source · Non-Profit",
-    desc: "Microfinance institution in the Philippines cut IT costs by up to 65% across 1,000+ branches.",
+    desc: "A leading Microfinance Non-Profit in the Philippines transformed its entire IT landscape — cutting costs, improving collaboration, and scaling operations across 1,000+ branches with an integrated open-source stack.",
+    shortDesc: "Cost reduction & collaboration overhaul",
+    highlights: [
+      "50–65% reduction in annual IT costs",
+      "1,000+ branches migrated in phased rollout",
+      "Nextcloud · ERPNext · Proxmox · Ceph stack",
+    ],
     image:
       "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=800&q=70",
   },
   {
-    id: "cyber" as const,
+    id: "cyber",
     href: "/case-studies/cybersecurity-open-source",
+    shortLabel: "Cybersecurity OSS",
+    subtitle: "Layered open-source defence with full audit visibility",
     label: "Strengthening Cybersecurity & Compliance with Open Source",
     tag: "Cybersecurity · Open Source",
-    desc: "End-to-end open-source security stack delivering visibility, compliance and cost control.",
+    desc: "One of the largest nonprofit microfinance institutions in the Philippines implemented a comprehensive open-source security stack — full visibility, threat detection, and compliance readiness.",
+    shortDesc: "Visibility, compliance & sovereignty",
+    highlights: [
+      "Wazuh SIEM/XDR with custom detection rules",
+      "Suricata IDS + OpenVAS vulnerability scanning",
+      "On-prem data sovereignty, audit-ready posture",
+    ],
     image:
       "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=70",
   },
   {
-    id: "pci" as const,
+    id: "pci",
     href: "/case-studies/pci-dss-grocery",
-    label: "PCI DSS Compliance for a Grocery Store Chain in Illinois",
+    shortLabel: "PCI DSS Retail",
+    subtitle: "PCI DSS Level 2 attestation for 17-location retail chain",
+    label: "PCI DSS Compliance for a Grocery Retail Store Chain in Illinois",
     tag: "Compliance · Retail",
-    desc: "Full PCI DSS Level 2 compliance delivered on time with zero downtime across 17 locations.",
+    desc: "During the pandemic surge in credit card transactions, Illumia delivered full PCI DSS Level 2 compliance for a 17-location grocery chain — on time, on budget, and with zero business disruption.",
+    shortDesc: "17-location first-attempt attestation",
+    highlights: [
+      "PCI DSS SAQ D Level 2 achieved first attempt",
+      "17 POS sites hardened, segmented and logged",
+      "Zero downtime through migration and audit",
+    ],
     image:
       "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=800&q=70",
   },
 ];
 
+// ── Case study selector icons ───────────────────────────────────────────────
+const HeartIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+  </svg>
+);
+
+const LockIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+    <rect x="3" y="11" width="18" height="11" rx="2" />
+    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+  </svg>
+);
+
+const CardIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+    <rect x="2" y="5" width="20" height="14" rx="2" />
+    <line x1="2" y1="10" x2="22" y2="10" />
+  </svg>
+);
+
+const CASE_STUDY_ICONS: Record<CaseStudyId, React.ReactNode> = {
+  nonprofit: <HeartIcon />,
+  cyber: <LockIcon />,
+  pci: <CardIcon />,
+};
+
 interface CaseMegaMenuProps {
   onClose: () => void;
+  activeCaseStudy: CaseStudyId;
+  onCaseStudyChange: (id: CaseStudyId) => void;
+  pageCaseStudy: CaseStudyId | null;
 }
 
-function CaseStudiesMegaMenu({ onClose }: CaseMegaMenuProps) {
+function CaseStudiesMegaMenu({
+  onClose,
+  activeCaseStudy,
+  onCaseStudyChange,
+  pageCaseStudy,
+}: CaseMegaMenuProps) {
+  const activeCs = CASE_STUDIES.find((cs) => cs.id === activeCaseStudy)!;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: -12 }}
@@ -54,70 +130,155 @@ function CaseStudiesMegaMenu({ onClose }: CaseMegaMenuProps) {
       transition={{ duration: 0.38, ease: EASE }}
       className="absolute top-full left-0 w-full bg-[#fcf9f8] border-b border-[#e2bebd]/40 shadow-2xl shadow-stone-900/10 z-50"
     >
-      <div className="max-w-screen-2xl mx-auto px-6 md:px-12 py-8">
-        {/* Header row: eyebrow on LEFT, View All on RIGHT */}
-        <div className="flex items-center justify-between border-b border-[#e2bebd]/40 pb-5 mb-7">
-          <div>
-            <p className="font-body text-[11px] tracking-[0.2em] uppercase text-[#b31c33] font-bold">
-              Case Studies
-            </p>
-            <p className="font-headline text-stone-900 text-base mt-1">
-              Real problems. <span className="italic text-[#b31c33]">Real results.</span>
-            </p>
-          </div>
+      <div className="max-w-screen-2xl mx-auto px-6 md:px-12 flex">
+
+        {/* Left: case study selector */}
+        <div className="w-64 xl:w-72 shrink-0 border-r border-[#e2bebd]/30 py-10 pr-8 flex flex-col gap-2">
+          <span className="font-body text-[11px] tracking-[0.2em] uppercase text-[#b31c33] font-bold mb-4 px-4">
+            Featured Work
+          </span>
+
+          {CASE_STUDIES.map((cs) => {
+            const selected = activeCaseStudy === cs.id;
+            const onPage = pageCaseStudy === cs.id;
+            return (
+              <button
+                key={cs.id}
+                onClick={() => onCaseStudyChange(cs.id)}
+                className={`group/cat flex items-center gap-3.5 w-full text-left px-4 py-3.5 border-l-2 transition-colors duration-200 ${
+                  selected
+                    ? "border-[#b31c33] bg-[#b31c33]/[0.06]"
+                    : "border-transparent hover:border-[#e2bebd] hover:bg-stone-50/80"
+                }`}
+              >
+                <span
+                  className={`shrink-0 transition-colors duration-200 ${selected ? "text-[#b31c33]" : "text-stone-400 group-hover/cat:text-stone-600"}`}
+                  aria-hidden
+                >
+                  {CASE_STUDY_ICONS[cs.id]}
+                </span>
+                <div className="min-w-0 text-left flex-1">
+                  <div className="flex items-center gap-2">
+                    <p className={`font-headline text-base leading-snug transition-colors duration-200 ${
+                      selected ? "text-[#b31c33]" : "text-stone-800 group-hover/cat:text-stone-900"
+                    }`}>
+                      {cs.shortLabel}
+                    </p>
+                    {onPage && !selected && (
+                      <span className="font-body text-[10px] tracking-widest uppercase text-[#b31c33]/60 font-semibold">
+                        current
+                      </span>
+                    )}
+                  </div>
+                  <p className="font-body text-xs text-stone-400 mt-0.5 leading-snug">
+                    {cs.shortDesc}
+                  </p>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Right: case study detail */}
+        <div className="flex-1 min-w-0 pl-10 py-10 relative overflow-hidden">
+          {/* All-case-studies link — AT TOP, prominent, with external-link icon */}
           <Link
             href="/case-studies"
             onClick={onClose}
-            className="group/all inline-flex items-center gap-2 rounded-xl bg-[#b31c33] px-5 py-3 font-body text-sm font-semibold text-white transition hover:bg-[#920022]"
+            className="group/catlink inline-flex items-center gap-2.5 mb-6 pb-5 border-b border-[#e2bebd]/40 w-full"
           >
-            View All Case Studies
-            <svg className="w-4 h-4 transition-transform duration-200 group-hover/all:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
+            <span className="font-headline text-xl text-stone-900 group-hover/catlink:text-[#b31c33] transition-colors duration-200 leading-none">
+              All Case Studies
+            </span>
+            <ExternalArrow className="w-4 h-4 text-stone-400 group-hover/catlink:text-[#b31c33] transition-colors duration-200 shrink-0" />
           </Link>
-        </div>
 
-        {/* 3 cards in a horizontal row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {CASE_STUDIES.map((cs) => (
-            <Link
-              key={cs.id}
-              href={cs.href}
-              onClick={onClose}
-              className="group/card flex flex-col overflow-hidden rounded-2xl border border-[#e2bebd]/50 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-stone-900/10 hover:border-[#b31c33]/40"
+          <AnimatePresence initial={false} mode="wait">
+            <motion.div
+              key={activeCaseStudy}
+              initial={{ opacity: 0, x: 18 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -18 }}
+              transition={{ duration: 0.3, ease: EASE }}
+              className="grid grid-cols-1 md:grid-cols-12 gap-8"
             >
-              <div className="relative aspect-[16/9] overflow-hidden bg-stone-100">
+              {/* Image */}
+              <Link
+                href={activeCs.href}
+                onClick={onClose}
+                className="group/img md:col-span-5 relative aspect-[4/3] overflow-hidden rounded-xl bg-stone-100"
+              >
                 <Image
-                  src={cs.image}
-                  alt={cs.label}
+                  src={activeCs.image}
+                  alt={activeCs.label}
                   fill
-                  sizes="(min-width: 768px) 33vw, 100vw"
-                  className="object-cover transition-transform duration-500 group-hover/card:scale-[1.05]"
+                  sizes="(min-width: 768px) 30vw, 100vw"
+                  className="object-cover transition-transform duration-500 group-hover/img:scale-[1.05]"
                 />
                 <div className="absolute inset-x-3 top-3">
                   <span className="inline-flex items-center rounded-full bg-white/95 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-[#b31c33] backdrop-blur">
-                    {cs.tag}
+                    {activeCs.tag}
                   </span>
                 </div>
-              </div>
-              <div className="flex flex-1 flex-col p-5">
-                <p className="font-headline text-sm leading-snug text-stone-900 transition-colors duration-200 group-hover/card:text-[#b31c33]">
-                  {cs.label}
+              </Link>
+
+              {/* Text */}
+              <div className="md:col-span-7 flex flex-col">
+                <p className="font-body text-[11px] tracking-[0.2em] uppercase text-[#b31c33] font-bold mb-2">
+                  {activeCs.subtitle}
                 </p>
-                <p className="mt-2 flex-1 font-body text-xs leading-relaxed text-[#5a4040]">
-                  {cs.desc}
+                <h3 className="font-headline text-xl md:text-2xl text-stone-900 leading-snug mb-4">
+                  {activeCs.label}
+                </h3>
+                <p className="font-body text-sm text-[#5a4040] leading-relaxed mb-5">
+                  {activeCs.desc}
                 </p>
-                <span className="mt-4 inline-flex items-center gap-1.5 font-body text-xs font-semibold text-[#b31c33] transition-all duration-200 group-hover/card:gap-2.5">
+                <ul className="space-y-2 mb-6">
+                  {activeCs.highlights.map((h) => (
+                    <li
+                      key={h}
+                      className="flex items-center gap-2.5 font-body text-xs text-stone-700 leading-snug"
+                    >
+                      <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#b31c33]/10 text-[#b31c33]">
+                        <svg className="w-2.5 h-2.5" viewBox="0 0 12 12" fill="none">
+                          <path
+                            d="M2.5 6.5L5 9L9.5 3.5"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </span>
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href={activeCs.href}
+                  onClick={onClose}
+                  className="group/cta inline-flex items-center gap-2 self-start rounded-lg bg-[#b31c33] px-5 py-2.5 font-body text-xs font-semibold text-white transition hover:bg-[#920022] mt-auto"
+                >
                   Read Case Study
-                  <ExternalArrow className="w-3 h-3" />
-                </span>
+                  <svg className="w-3.5 h-3.5 transition-transform duration-200 group-hover/cta:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
               </div>
-            </Link>
-          ))}
+            </motion.div>
+          </AnimatePresence>
         </div>
+
       </div>
     </motion.div>
   );
+}
+
+function getCaseStudyFromPath(p: string): CaseStudyId | null {
+  for (const cs of CASE_STUDIES) {
+    if (p === cs.href || p.startsWith(cs.href + "/")) return cs.id;
+  }
+  return null;
 }
 
 type ServiceCategory = "cloud" | "cyber" | "open";
@@ -376,6 +537,9 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [caseStudiesOpen, setCaseStudiesOpen] = useState(false);
+  const [activeCaseStudy, setActiveCaseStudy] = useState<CaseStudyId>(
+    () => getCaseStudyFromPath(pathname) ?? "nonprofit"
+  );
   const [activeCategory, setActiveCategory] = useState<ServiceCategory>(() => getCategoryFromPath(pathname));
   const [mobileServicesExpanded, setMobileServicesExpanded] = useState(false);
   const [mobileActiveCategory, setMobileActiveCategory] = useState<ServiceCategory | null>(null);
@@ -448,6 +612,7 @@ export default function Navbar() {
   }, [pathname]);
 
   const isCaseStudiesActive = pathname === "/case-studies" || pathname.startsWith("/case-studies/");
+  const pageCaseStudy = getCaseStudyFromPath(pathname);
 
   const navLinkClass = (href: string) =>
     `font-headline text-sm tracking-widest uppercase whitespace-nowrap transition-colors duration-200 ${
@@ -507,8 +672,13 @@ export default function Navbar() {
             aria-expanded={caseStudiesOpen}
             aria-haspopup="true"
             onClick={() => {
-              setCaseStudiesOpen((prev) => !prev);
-              if (servicesOpen) setServicesOpen(false);
+              setCaseStudiesOpen((prev) => {
+                if (!prev) {
+                  setActiveCaseStudy(getCaseStudyFromPath(pathname) ?? "nonprofit");
+                  if (servicesOpen) setServicesOpen(false);
+                }
+                return !prev;
+              });
             }}
             className={`flex items-center gap-1.5 font-headline text-sm tracking-widest uppercase whitespace-nowrap transition-colors duration-200 ${
               caseStudiesOpen || isCaseStudiesActive
@@ -530,7 +700,7 @@ export default function Navbar() {
             FAQs
           </Link>
 
-          <Link href="/contact" className={navLinkClass("/contact")}>
+          <Link href="/contact#contact-form" className={navLinkClass("/contact")}>
             Contact Us
           </Link>
         </div>
@@ -573,7 +743,12 @@ export default function Navbar() {
       {/* ── Case Studies mega menu ── */}
       <AnimatePresence>
         {caseStudiesOpen && (
-          <CaseStudiesMegaMenu onClose={() => setCaseStudiesOpen(false)} />
+          <CaseStudiesMegaMenu
+            onClose={() => setCaseStudiesOpen(false)}
+            activeCaseStudy={activeCaseStudy}
+            onCaseStudyChange={setActiveCaseStudy}
+            pageCaseStudy={pageCaseStudy}
+          />
         )}
       </AnimatePresence>
 
@@ -755,7 +930,7 @@ export default function Navbar() {
               </Link>
 
               <Link
-                href="/contact"
+                href="/contact#contact-form"
                 onClick={() => setMobileOpen(false)}
                 className={`block py-3.5 font-headline text-sm tracking-widest uppercase transition-colors duration-200 ${
                   isActive("/contact") ? "text-[#b31c33] font-bold" : "text-stone-700 hover:text-[#b31c33]"

@@ -10,7 +10,7 @@ const quickLinks = [
   { label: "Cyber Security", href: "/cyber-security" },
   { label: "Open Source Solutions", href: "/open-source-solutions" },
   { label: "About Us", href: "/about" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Contact Us", href: "/contact#contact-form" },
 ];
 
 export default function NotFound() {
@@ -77,7 +77,7 @@ export default function NotFound() {
             Back to Home
           </Link>
           <Link
-            href="/contact"
+            href="/contact#contact-form"
             className="border border-[#b31c33]/30 text-[#b31c33] px-8 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#ffdad9]/20 transition-colors duration-200"
           >
             Contact Us

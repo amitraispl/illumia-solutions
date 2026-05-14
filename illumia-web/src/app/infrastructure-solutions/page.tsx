@@ -38,7 +38,7 @@ export default function InfrastructureSolutionsPage() {
         }
         description="At Illumia Solutions, we provide comprehensive infrastructure solutions designed to enhance your IT capabilities while reducing costs and complexity."
         primaryCta={{ label: "Explore Solutions", href: "#solutions" }}
-        secondaryCta={{ label: "Contact Us", href: "/contact" }}
+        secondaryCta={{ label: "Contact Us", href: "/contact#contact-form" }}
         imageSrc="https://images.unsplash.com/photo-1569025690938-a00729c9e1f9?w=1400&q=85&auto=format&fit=crop"
         imageAlt="Infrastructure Solutions — Illumia Solutions"
       />
@@ -276,7 +276,7 @@ export default function InfrastructureSolutionsPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/contact"
+              href="/contact#contact-form"
               className="inline-block bg-[#b31c33] text-white px-12 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/30 active:scale-95 transition-all"
             >
               Start a Conversation

@@ -95,7 +95,7 @@ export default function CybersecuritySolutionsPage() {
         }
         description="Cybersecurity is at the core of our services at Illumia Solutions. We offer a range of solutions to protect your business from evolving cyber threats."
         primaryCta={{ label: "Explore Solutions", href: "#solutions" }}
-        secondaryCta={{ label: "Contact Us", href: "/contact" }}
+        secondaryCta={{ label: "Contact Us", href: "/contact#contact-form" }}
         imageSrc="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1400&q=85&auto=format&fit=crop"
         imageAlt="Cybersecurity Solutions — Illumia Solutions"
       />
@@ -290,7 +290,7 @@ export default function CybersecuritySolutionsPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/contact"
+              href="/contact#contact-form"
               className="inline-block bg-[#b31c33] text-white px-12 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/30 active:scale-95 transition-all"
             >
               Audit Your Infrastructure

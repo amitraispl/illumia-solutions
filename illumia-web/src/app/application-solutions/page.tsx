@@ -77,7 +77,7 @@ export default function ApplicationSolutionsPage() {
         }
         description="Our application solutions are designed to enhance collaboration, streamline project management, and ensure robust security. We leverage the best open-source technologies to deliver innovative solutions tailored to your business needs."
         primaryCta={{ label: "Explore Solutions", href: "#collaboration" }}
-        secondaryCta={{ label: "Contact Us", href: "/contact" }}
+        secondaryCta={{ label: "Contact Us", href: "/contact#contact-form" }}
         imageSrc="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1400&q=85&auto=format&fit=crop"
         imageAlt="Application solutions — Illumia Solutions"
       />
@@ -319,7 +319,7 @@ export default function ApplicationSolutionsPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/contact"
+              href="/contact#contact-form"
               className="inline-block bg-[#b31c33] text-white px-12 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/30 active:scale-95 transition-all"
             >
               Start a Conversation

@@ -69,7 +69,7 @@ const whyChoose = [
   },
   {
     title: "Continuous Support",
-    href: "/contact",
+    href: "/contact#contact-form",
     description:
       "Our dedicated support team provides continuous monitoring, management, and maintenance services to ensure your IT infrastructure operates smoothly and securely. We offer 24/7 support to address any issues promptly and minimise disruption.",
   },
@@ -91,10 +91,10 @@ export default function HomePage() {
           </>
         }
         description="Enterprise-grade cybersecurity, cloud, and open-source solutions — engineered for resilience, built for scale. From Kolkata to the globe, we deliver precision technology that powers ambitious businesses forward."
-        primaryCta={{ label: "Talk to Our Team", href: "/contact" }}
+        primaryCta={{ label: "Talk to Our Team", href: "/contact#contact-form" }}
         secondaryCta={{ label: "Learn About Us", href: "/about" }}
-        imageSrc="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1400&q=85&auto=format&fit=crop"
-        imageAlt="Modern technology workspace with multiple screens"
+        imageSrc="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1400&q=85&auto=format&fit=crop"
+        imageAlt="Diverse team collaborating around a table with laptops"
       >
         {/* Stats row inside hero */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-4 border-t border-[#e2bebd]/40">
@@ -247,7 +247,7 @@ export default function HomePage() {
                 <SlideTextButton
                   text="Get in Touch"
                   hoverText="Contact Us"
-                  href="/contact"
+                  href="/contact#contact-form"
                   variant="ghost"
                   className="h-auto py-4 rounded-xl border-[#b31c33]/30 text-[#b31c33] hover:bg-[#ffdad9]/20 tracking-wide font-body font-semibold"
                 />
@@ -547,7 +547,7 @@ export default function HomePage() {
             <SlideTextButton
               text="Contact Us Today"
               hoverText="Let's Talk"
-              href="/contact"
+              href="/contact#contact-form"
               className="h-auto py-4 rounded-xl bg-[#b31c33] hover:bg-[#920022] shadow-xl shadow-[#b31c33]/20 active:scale-95 tracking-wide font-body font-semibold"
             />
           </div>

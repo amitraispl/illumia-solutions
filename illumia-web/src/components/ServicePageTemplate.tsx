@@ -45,7 +45,7 @@ export default function ServicePageTemplate({
           )
         }
         description={description}
-        primaryCta={{ label: ctaText, href: "/contact" }}
+        primaryCta={{ label: ctaText, href: "/contact#contact-form" }}
         secondaryCta={{ label: "All Services", href: "/" }}
         imageSrc={heroImage}
         imageAlt={`${title} — Illumia Solutions`}
@@ -106,7 +106,7 @@ export default function ServicePageTemplate({
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/contact"
+              href="/contact#contact-form"
               className="inline-block bg-[#b31c33] text-white px-8 py-3.5 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/20 active:scale-95"
             >
               Request a Consultation

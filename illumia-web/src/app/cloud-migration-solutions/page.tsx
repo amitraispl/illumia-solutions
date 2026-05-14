@@ -110,7 +110,7 @@ export default function CloudMigrationPage() {
           </>
         }
         description="Seamless, low-risk migration pathways engineered to move your workloads with zero business disruption. From on-premises to public cloud, cloud-to-cloud, or repatriation — we manage the full lifecycle."
-        primaryCta={{ label: "Plan Your Migration", href: "/contact" }}
+        primaryCta={{ label: "Plan Your Migration", href: "/contact#contact-form" }}
         secondaryCta={{ label: "Cloud Services", href: "/cloud-services#migration" }}
         imageSrc="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1600&q=85&auto=format&fit=crop"
         imageAlt="Cloud migration data centre infrastructure"
@@ -289,7 +289,7 @@ export default function CloudMigrationPage() {
             </div>
             <div className="flex flex-col gap-4 lg:items-end">
               <Link
-                href="/contact"
+                href="/contact#contact-form"
                 className="inline-flex items-center gap-3 bg-[#b31c33] text-white px-8 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-xl shadow-[#b31c33]/20 active:scale-95 transition-all duration-200 group"
               >
                 Request Migration Assessment

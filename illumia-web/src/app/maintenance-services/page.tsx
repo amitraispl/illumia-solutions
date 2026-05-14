@@ -113,7 +113,7 @@ export default function MaintenanceServicesPage() {
           </>
         }
         description="Proactive infrastructure management and expert engineering support — remote and on-site — to keep your IT systems running at peak efficiency, security, and reliability."
-        primaryCta={{ label: "Get a Maintenance Plan", href: "/contact" }}
+        primaryCta={{ label: "Get a Maintenance Plan", href: "/contact#contact-form" }}
         secondaryCta={{ label: "Cloud Services", href: "/cloud-services#maintenance" }}
         imageSrc="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=85&auto=format&fit=crop"
         imageAlt="Infrastructure monitoring dashboard"
@@ -284,7 +284,7 @@ export default function MaintenanceServicesPage() {
               </motion.div>
               <motion.div variants={fadeUp}>
                 <Link
-                  href="/contact"
+                  href="/contact#contact-form"
                   className="inline-flex items-center gap-3 bg-white text-[#b31c33] px-8 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#ffdad9] active:scale-95 transition-all duration-200 group"
                 >
                   Request On-site Support
@@ -314,7 +314,7 @@ export default function MaintenanceServicesPage() {
             </div>
             <div className="flex flex-col gap-4 lg:items-end">
               <Link
-                href="/contact"
+                href="/contact#contact-form"
                 className="inline-flex items-center gap-3 bg-[#b31c33] text-white px-8 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-xl shadow-[#b31c33]/20 active:scale-95 transition-all duration-200 group"
               >
                 Start a Maintenance Plan

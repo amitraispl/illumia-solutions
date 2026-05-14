@@ -21,7 +21,7 @@ const solutions = [
 
 const company = [
   { label: "About Us", href: "/about" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Contact Us", href: "/contact#contact-form" },
   { label: "FAQs", href: "/faqs" },
 ];
 
