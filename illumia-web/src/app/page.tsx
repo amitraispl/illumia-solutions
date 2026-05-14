@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: "20+", label: "Years of Industry Experience" },
+  { value: "20+", label: "Years of Collective Industry Experience" },
   { value: "47+", label: "Specialized Service Modules" },
   { value: "100%", label: "Open-Source Powered" },
   { value: "24/7", label: "Multi-Timezone Support" },

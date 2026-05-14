@@ -79,7 +79,7 @@ export default function AboutPage() {
         <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-white text-center">
             {[
-              { value: "20+", label: "Years Combined Experience" },
+              { value: "20+", label: "Years of Collective Industry Experience" },
               { value: "100%", label: "Open-Source Powered" },
               { value: "47+", label: "Specialised Modules" },
               { value: "24/7", label: "Support Coverage" },

@@ -67,7 +67,16 @@
       "mcp__playwright__browser_take_screenshot",
       "Bash(npx skillfish *)",
       "mcp__playwright__browser_run_code_unsafe",
-      "Bash(Select-Object FullName)"
+      "Bash(Select-Object FullName)",
+      "WebFetch(domain:plaid.com)",
+      "Bash(npx next *)",
+      "mcp__playwright__browser_hover",
+      "WebFetch(domain:www.qualtrics.com)",
+      "Bash(Select-String gsap *)",
+      "Bash(Get-Content *)",
+      "PowerShell(Start-Sleep -Seconds 8; Invoke-WebRequest -Uri \"http://localhost:3001/case-studies/non-profit-open-source\" -UseBasicParsing -TimeoutSec 10 | Select-Object -ExpandProperty StatusCode)",
+      "Bash(npx eslint *)",
+      "Bash(git stash *)"
     ]
   }
 }
