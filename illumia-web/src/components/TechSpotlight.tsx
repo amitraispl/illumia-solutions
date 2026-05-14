@@ -1,7 +1,11 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
+import proxmoxLogo from "../../public/Proxmox-Silver-Partner.png";
+import erpnextLogo from "../../public/photos/erpnext-logo.png";
+import netboxLogo from "../../public/photos/netbox-logo-light.svg";
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
@@ -18,6 +22,25 @@ const stagger = {
 const Arrow = () => (
   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+  </svg>
+);
+
+const EuStars = () => (
+  <svg viewBox="0 0 100 100" className="w-full h-full" aria-hidden>
+    <g fill="currentColor">
+      {Array.from({ length: 12 }).map((_, i) => {
+        const angle = (i * Math.PI) / 6 - Math.PI / 2;
+        const cx = 50 + Math.cos(angle) * 36;
+        const cy = 50 + Math.sin(angle) * 36;
+        return (
+          <polygon
+            key={i}
+            points="0,-3.2 0.94,-0.99 3.04,-0.99 1.35,0.38 1.88,2.59 0,1.21 -1.88,2.59 -1.35,0.38 -3.04,-0.99 -0.94,-0.99"
+            transform={`translate(${cx} ${cy})`}
+          />
+        );
+      })}
+    </g>
   </svg>
 );
 
@@ -60,10 +83,15 @@ export default function TechSpotlight() {
           {/* ── AI Governance — RED 2-wide ─────────────────────────────────── */}
           <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
             <Link
-              href="/contact#contact-form"
-              className="group block h-full bg-[#b31c33] rounded-2xl p-10 text-white hover:bg-[#920022] transition-colors duration-300 cursor-pointer"
+              href="/ai-governance"
+              className="group relative block h-full bg-[#b31c33] rounded-2xl p-10 text-white hover:bg-[#920022] transition-colors duration-300 cursor-pointer overflow-hidden"
             >
-              <div className="flex items-center justify-between mb-6">
+              {/* EU stars watermark */}
+              <div className="pointer-events-none absolute -right-10 -bottom-10 w-56 h-56 text-white/[0.07] rotate-6">
+                <EuStars />
+              </div>
+
+              <div className="relative flex items-center justify-between mb-6">
                 <span className="font-body text-xs tracking-[0.25em] uppercase text-white/60 font-bold">
                   Responsible AI
                 </span>
@@ -72,15 +100,15 @@ export default function TechSpotlight() {
                 </span>
               </div>
 
-              <h3 className="font-headline text-3xl md:text-4xl text-white mb-4 leading-tight">
+              <h3 className="relative font-headline text-3xl md:text-4xl text-white mb-4 leading-tight">
                 Govern AI Before It{" "}
                 <span className="italic font-normal text-[#ffdad9]">Governs You.</span>
               </h3>
-              <p className="text-white/75 text-sm font-body leading-relaxed mb-8 max-w-xl">
+              <p className="relative text-white/75 text-sm font-body leading-relaxed mb-8 max-w-xl">
                 The EU AI Act is live. AI systems are proliferating across enterprises at a pace regulators are scrambling to match. Most organisations have no governance framework — no risk classification, no audit trail, no accountability layer. Illumia builds structured AI governance programs that let you deploy AI with confidence, not liability.
               </p>
 
-              <div className="grid grid-cols-2 gap-x-6 gap-y-2 mb-8">
+              <div className="relative grid grid-cols-2 gap-x-6 gap-y-2 mb-8">
                 {["Risk Classification Frameworks", "Bias & Fairness Auditing", "EU AI Act Alignment", "Model Accountability Policies", "AI Incident Response", "Regulatory Reporting"].map((b) => (
                   <div key={b} className="flex items-center gap-2 text-xs font-body font-semibold text-white/70 uppercase tracking-wide">
                     <span className="w-1 h-1 rounded-full bg-[#ffdad9]/60 shrink-0" />
@@ -89,27 +117,41 @@ export default function TechSpotlight() {
                 ))}
               </div>
 
-              <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-white/80">
-                Build Your AI Governance Framework <Arrow />
-              </span>
+              <div className="relative flex items-center justify-between gap-4 flex-wrap">
+                <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-white/80">
+                  Build Your AI Governance Framework <Arrow />
+                </span>
+                <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-body font-bold text-white/45">
+                  <span className="inline-flex items-center justify-center w-6 h-6 rounded-full border border-white/25">
+                    <span className="w-3 h-3 text-white/80">
+                      <EuStars />
+                    </span>
+                  </span>
+                  EU · NIST AI RMF · ISO 42001
+                </div>
+              </div>
             </Link>
           </motion.div>
 
           {/* ── Proxmox — cream ────────────────────────────────────────────── */}
           <motion.div variants={fadeUp} className="h-full">
             <Link
-              href="/contact#contact-form"
+              href="/proxmox-migration"
               className="group block h-full bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:shadow-2xl hover:shadow-stone-200/70 transition-all duration-300 cursor-pointer flex flex-col"
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-[#b31c33]/8 border border-[#b31c33]/20 flex items-center justify-center shrink-0">
-                  <svg className="w-5 h-5 text-[#b31c33]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
-                  </svg>
-                </div>
+              <div className="flex items-center justify-between gap-3 mb-6">
                 <span className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold">
                   VMware Alternative
                 </span>
+                <div className="relative h-10 w-24 shrink-0">
+                  <Image
+                    src={proxmoxLogo}
+                    alt="Proxmox Silver Partner"
+                    fill
+                    sizes="96px"
+                    className="object-contain object-right"
+                  />
+                </div>
               </div>
 
               <h3 className="font-headline text-2xl text-stone-900 mb-3 leading-tight group-hover:text-[#b31c33] transition-colors duration-300">
@@ -131,21 +173,25 @@ export default function TechSpotlight() {
             </Link>
           </motion.div>
 
-          {/* ── ERPNext — white ────────────────────────────────────────────── */}
+          {/* ── ERPNext — cream ────────────────────────────────────────────── */}
           <motion.div variants={fadeUp} className="h-full">
             <Link
-              href="/contact#contact-form"
+              href="/erpnext"
               className="group block h-full bg-[#f6f3f2] rounded-2xl p-10 border border-transparent hover:bg-white hover:border-[#e2bebd]/40 hover:shadow-2xl hover:shadow-stone-200/60 transition-all duration-300 cursor-pointer flex flex-col"
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-[#b31c33]/8 border border-[#b31c33]/20 flex items-center justify-center shrink-0">
-                  <svg className="w-5 h-5 text-[#b31c33]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
-                  </svg>
-                </div>
+              <div className="flex items-center justify-between gap-3 mb-6">
                 <span className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold">
                   Open-Source ERP
                 </span>
+                <div className="relative h-10 w-10 rounded-lg bg-white border border-[#e2bebd]/40 p-1 shrink-0">
+                  <Image
+                    src={erpnextLogo}
+                    alt="ERPNext"
+                    fill
+                    sizes="40px"
+                    className="object-contain p-0.5"
+                  />
+                </div>
               </div>
 
               <h3 className="font-headline text-2xl text-stone-900 mb-3 leading-tight group-hover:text-[#b31c33] transition-colors duration-300">
@@ -173,27 +219,27 @@ export default function TechSpotlight() {
           {/* ── NetBox — dark 2-wide ────────────────────────────────────────── */}
           <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
             <Link
-              href="/contact#contact-form"
+              href="/netbox"
               className="group block h-full bg-[#1c1b1b] rounded-2xl p-10 text-white hover:bg-[#111010] transition-colors duration-300 cursor-pointer"
             >
               <div className="flex flex-col lg:flex-row gap-10 h-full">
                 <div className="flex-1 flex flex-col">
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-body text-xs tracking-[0.25em] uppercase text-[#ffb3b3] font-bold">
+                    <span className="font-body text-xs tracking-[0.25em] uppercase text-[#00f2d4]/80 font-bold">
                       Network Source of Truth
                     </span>
                     <div className="hidden lg:flex items-center gap-2">
                       {["IPAM", "DCIM", "Automation"].map((tag) => (
-                        <span key={tag} className="font-body text-xs font-bold uppercase tracking-wider text-[#ffb3b3]/60 bg-white/5 border border-white/10 rounded-md px-2 py-1">
+                        <span key={tag} className="font-body text-xs font-bold uppercase tracking-wider text-[#00f2d4]/60 bg-white/5 border border-white/10 rounded-md px-2 py-1">
                           {tag}
                         </span>
                       ))}
                     </div>
                   </div>
 
-                  <h3 className="font-headline text-3xl md:text-4xl text-white mb-4 leading-tight group-hover:text-[#ffdad9] transition-colors duration-300">
+                  <h3 className="font-headline text-3xl md:text-4xl text-white mb-4 leading-tight group-hover:text-[#00f2d4] transition-colors duration-300">
                     Your Network, Documented.{" "}
-                    <span className="italic font-normal text-[#ffb3b3]">Precisely.</span>
+                    <span className="italic font-normal text-[#00f2d4]">Precisely.</span>
                   </h3>
                   <p className="text-stone-400 text-sm font-body leading-relaxed mb-8 flex-1">
                     Spreadsheets, Visio diagrams, and tribal knowledge are not a network strategy — they&apos;re a liability. NetBox is your single source of truth for IP addressing, data centre infrastructure, and rack management. It integrates natively with Ansible, Terraform, and Nautobot so provisioning becomes repeatable, handovers become seamless, and audits become painless.
@@ -212,24 +258,27 @@ export default function TechSpotlight() {
                   </span>
                 </div>
 
-                {/* Icon column */}
-                <div className="hidden lg:flex flex-col items-center justify-center gap-3 shrink-0">
-                  <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#b31c33]/20 group-hover:border-[#b31c33]/30 transition-all duration-300">
-                    <svg className="w-8 h-8 text-white/25 group-hover:text-[#ffb3b3] transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                    </svg>
+                {/* Logo column */}
+                <div className="hidden lg:flex flex-col items-center justify-center gap-6 shrink-0 lg:w-48">
+                  <div className="relative w-44 h-16 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                    <Image
+                      src={netboxLogo}
+                      alt="NetBox"
+                      fill
+                      sizes="176px"
+                      className="object-contain"
+                    />
                   </div>
-                  <div className="w-px h-6 bg-white/10" />
-                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#b31c33]/15 group-hover:border-[#b31c33]/20 transition-all duration-300">
-                    <svg className="w-6 h-6 text-white/20 group-hover:text-[#ffb3b3] transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
-                    </svg>
-                  </div>
-                  <div className="w-px h-6 bg-white/10" />
-                  <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#b31c33]/10 group-hover:border-[#b31c33]/15 transition-all duration-300">
-                    <svg className="w-5 h-5 text-white/15 group-hover:text-[#ffb3b3] transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
-                    </svg>
+                  <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#00f2d4]/40 to-transparent" />
+                  <div className="grid grid-cols-3 gap-2 w-full max-w-[176px]">
+                    {["IPv4", "IPv6", "VRF", "VLAN", "BGP", "ASN"].map((proto) => (
+                      <span
+                        key={proto}
+                        className="text-[10px] font-body font-bold tracking-wider text-[#00f2d4]/40 border border-[#00f2d4]/15 rounded-md px-1.5 py-1 text-center"
+                      >
+                        {proto}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
