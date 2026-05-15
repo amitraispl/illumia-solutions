@@ -121,66 +121,83 @@ Email: ${CONTACT_EMAIL}`,
 
 export default function TermsOfServicePage() {
   return (
-    <main className="bg-[#f6f3f2] min-h-screen">
+    <main className="bg-white min-h-screen">
 
       {/* Header */}
-      <div className="bg-[#1c1b1b] relative overflow-hidden">
+      <div className="bg-[#f6f3f2] border-b border-[#e2bebd]/50 relative overflow-hidden">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0"
           style={{
             backgroundImage:
-              "radial-gradient(ellipse 60% 50% at 100% 50%, rgba(179,28,51,0.08) 0%, transparent 100%)",
+              "radial-gradient(ellipse 50% 100% at 0% 50%, rgba(179,28,51,0.05) 0%, transparent 100%)",
           }}
         />
-        <div className="relative max-w-screen-xl mx-auto px-6 md:px-12 py-20">
-          <span className="font-body text-[10px] tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-5">
-            Legal
+        <div className="relative max-w-screen-xl mx-auto px-6 md:px-12 pt-16 pb-14">
+          <div className="w-10 h-[3px] bg-[#b31c33] rounded-full mb-7" />
+          <span className="font-body pt-6 text-[10px] tracking-[0.32em] uppercase text-[#b31c33] font-bold block mb-4">
+            Legal Document
           </span>
-          <h1 className="font-headline text-5xl md:text-6xl text-white mb-5">
-            Terms of <span className="italic font-normal text-white/50">Service.</span>
+          <h1 className="font-headline text-4xl sm:text-5xl text-stone-900 mb-5 leading-tight">
+            Terms of{" "}
+            <span className="italic font-normal text-stone-400">Service.</span>
           </h1>
-          <p className="font-body text-stone-400 text-sm leading-relaxed max-w-xl">
-            Effective date: {EFFECTIVE_DATE}. These Terms govern your use of the Illumia Solutions website and services. Please read them carefully.
-          </p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 font-body text-xs text-stone-400 uppercase tracking-widest">
+            <span>Effective {EFFECTIVE_DATE}</span>
+            <span className="w-1 h-1 rounded-full bg-stone-300 shrink-0" />
+            <span>Illumia Solutions Pvt. Ltd.</span>
+          </div>
         </div>
       </div>
 
       {/* Content */}
-      <div className="max-w-screen-xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div className="max-w-screen-xl mx-auto px-6 md:px-12 py-14 grid grid-cols-1 lg:grid-cols-12 gap-12">
 
         {/* Sidebar ToC */}
         <nav className="lg:col-span-3 hidden lg:block">
-          <div className="sticky top-8 flex flex-col gap-1">
-            <p className="font-body text-[10px] tracking-[0.25em] uppercase text-[#b31c33] font-bold mb-4">
+          <div className="sticky top-24 flex flex-col gap-0.5">
+            <p className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold mb-5">
               Contents
             </p>
             {sections.map((s, i) => (
               <a
                 key={s.id}
                 href={`#${s.id}`}
-                className="group flex items-center gap-2.5 font-body text-[12px] text-stone-500 hover:text-[#b31c33] transition-colors duration-150 py-1"
+                className="group flex items-center gap-3 font-body text-[12px] text-stone-400 hover:text-stone-800 transition-colors duration-150 py-1.5 px-2 -mx-2 rounded-md hover:bg-stone-50"
               >
-                <span className="font-headline italic text-[#b31c33]/40 group-hover:text-[#b31c33] text-xs tabular-nums transition-colors">
+                <span className="font-headline italic text-[#b31c33]/40 group-hover:text-[#b31c33] text-[11px] tabular-nums transition-colors shrink-0 w-5">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 {s.title}
               </a>
             ))}
+            <div className="mt-8 pt-6 border-t border-[#e2bebd]/40">
+              <p className="font-body text-[11px] text-stone-400 leading-relaxed">
+                Questions about these terms?{" "}
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  className="text-[#b31c33] hover:underline"
+                >
+                  Contact us
+                </a>
+              </p>
+            </div>
           </div>
         </nav>
 
         {/* Body */}
-        <article className="lg:col-span-9 flex flex-col gap-12">
+        <article className="lg:col-span-9 divide-y divide-[#e2bebd]/40">
           {sections.map((s, i) => (
-            <section key={s.id} id={s.id} className="scroll-mt-8">
-              <div className="flex items-start gap-4 mb-4">
-                <span className="font-headline italic text-[#b31c33] text-xl leading-none tabular-nums shrink-0 mt-1">
+            <section key={s.id} id={s.id} className="scroll-mt-24 py-10 first:pt-0">
+              <div className="flex items-baseline gap-3.5 mb-4">
+                <span className="font-headline italic text-[#b31c33] text-lg leading-none tabular-nums shrink-0">
                   {String(i + 1).padStart(2, "0")}.
                 </span>
-                <h2 className="font-headline text-2xl text-stone-900">{s.title}</h2>
+                <h2 className="font-headline text-xl sm:text-2xl text-stone-900 leading-snug">
+                  {s.title}
+                </h2>
               </div>
-              <div className="pl-9 border-l-2 border-[#e2bebd]/60 ml-[10px]">
+              <div className="pl-10">
                 <p className="font-body text-[14px] text-[#5a4040] leading-[1.85] whitespace-pre-line">
                   {s.content}
                 </p>
@@ -189,7 +206,7 @@ export default function TermsOfServicePage() {
           ))}
 
           {/* Back link */}
-          <div className="pt-6 border-t border-[#e2bebd]/40">
+          <div className="pt-8">
             <Link
               href="/"
               className="inline-flex items-center gap-2 font-body text-sm text-[#b31c33] hover:text-[#920022] transition-colors font-semibold"
