@@ -204,10 +204,10 @@ export default function RichServicePageTemplate({
         </h2>
       </div>
 
-      <div className="flex flex-wrap gap-3 lg:ml-auto lg:pr-16">
+      <div className="flex flex-col sm:flex-row flex-wrap gap-3 lg:ml-auto lg:pr-16">
         <Link
           href="/contact#contact-form"
-          className="inline-flex items-center gap-3 bg-[#b31c33] hover:bg-[#9e1829] text-white px-7 py-3.5 rounded-[10px] font-body text-sm font-semibold tracking-wide transition-all duration-200 active:scale-95"
+          className="inline-flex items-center justify-center gap-3 bg-[#b31c33] hover:bg-[#9e1829] text-white px-7 py-3.5 rounded-[10px] font-body text-sm font-semibold tracking-wide transition-all duration-200 active:scale-95"
         >
           {ctaText}
           <span className="flex items-center justify-center w-[22px] h-[22px] rounded-full bg-white/15 flex-shrink-0">
@@ -219,7 +219,7 @@ export default function RichServicePageTemplate({
 
         <Link
           href="/"
-          className="inline-flex items-center gap-2 border border-white/12 bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/25 text-white/60 hover:text-white/90 px-7 py-3.5 rounded-[10px] font-body text-sm font-medium transition-all duration-200"
+          className="inline-flex items-center justify-center gap-2 border border-white/12 bg-white/[0.03] hover:bg-white/[0.06] hover:border-white/25 text-white/60 hover:text-white/90 px-7 py-3.5 rounded-[10px] font-body text-sm font-medium transition-all duration-200"
         >
           Explore Services
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none">

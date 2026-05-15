@@ -135,7 +135,7 @@ export default function ContactPage() {
       {/* ─── Contact Form + Info ──────────────────────────────────────────── */}
       <section id="contact-form" className="bg-[#f6f3f2] py-24 overflow-hidden">
         <div className="px-6 md:px-12 max-w-screen-2xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
 
             {/* ── Form ── */}
             <div className="lg:col-span-7">

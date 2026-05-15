@@ -54,7 +54,7 @@ export default function ServicePageTemplate({
       {/* Features */}
       <section className="py-20 bg-white px-6 md:px-12">
         <div className="max-w-screen-2xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {features.map((f, i) => {
               const isRed = i === 0;
               const isDark = i === 5;
@@ -62,7 +62,7 @@ export default function ServicePageTemplate({
               return (
                 <div
                   key={f.title}
-                  className={`${isWide ? "lg:col-span-2" : ""} p-10 rounded-2xl flex flex-col gap-4 ${
+                  className={`${isWide ? "md:col-span-2 lg:col-span-2" : ""} p-6 sm:p-8 lg:p-10 rounded-2xl flex flex-col gap-4 ${
                     isRed
                       ? "bg-[#b31c33]"
                       : isDark
@@ -104,16 +104,16 @@ export default function ServicePageTemplate({
             Contact our team to learn how this solution can be tailored to your
             specific business requirements.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
             <Link
               href="/contact#contact-form"
-              className="inline-block bg-[#b31c33] text-white px-8 py-3.5 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/20 active:scale-95"
+              className="bg-[#b31c33] text-white px-8 py-3.5 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/20 active:scale-95 text-center"
             >
               Request a Consultation
             </Link>
             <Link
               href="/"
-              className="inline-block border border-[#b31c33]/30 text-[#b31c33] px-8 py-3.5 rounded-xl font-body font-semibold tracking-wide hover:bg-[#ffdad9]/20"
+              className="border border-[#b31c33]/30 text-[#b31c33] px-8 py-3.5 rounded-xl font-body font-semibold tracking-wide hover:bg-[#ffdad9]/20 text-center"
             >
               Explore All Services
             </Link>

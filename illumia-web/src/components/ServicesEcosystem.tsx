@@ -238,7 +238,7 @@ export default function ServicesEcosystem() {
                 >
                   <Link
                     href={s.href}
-                    className="flex items-center gap-4 py-4 px-3 hover:bg-white hover:pl-5 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#b31c33]"
+                    className="flex items-center gap-4 py-4 px-3 hover:bg-white group-hover:translate-x-2 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#b31c33]"
                   >
                     <span className="font-headline italic text-[#b31c33] text-sm w-7 shrink-0 tabular-nums leading-none">
                       {s.num}
@@ -292,9 +292,9 @@ export default function ServicesEcosystem() {
                     initial={{ opacity: 1 }}
                     exit={{ opacity: 0, transition: { duration: 0.15 } }}
                     onClick={() => setExpanded(true)}
-                    className="group inline-flex items-center gap-3 font-body text-xs font-bold uppercase tracking-widest text-stone-500 hover:text-[#b31c33] transition-colors duration-200 cursor-pointer"
+                    className="group inline-flex items-center gap-3 font-body text-xs font-bold uppercase tracking-widest text-stone-500 hover:text-[#b31c33] transition-colors duration-200 cursor-pointer min-h-[44px]"
                   >
-                    <span className="w-6 h-6 rounded-full border border-[#e2bebd]/60 group-hover:border-[#b31c33]/40 group-hover:bg-[#b31c33] inline-flex items-center justify-center text-stone-500 group-hover:text-white transition-all duration-200 shrink-0">
+                    <span className="w-11 h-11 rounded-full border border-[#e2bebd]/60 group-hover:border-[#b31c33]/40 group-hover:bg-[#b31c33] inline-flex items-center justify-center text-stone-500 group-hover:text-white transition-all duration-200 shrink-0">
                       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
                         <path d="M5 1v8M1 5h8" />
                       </svg>

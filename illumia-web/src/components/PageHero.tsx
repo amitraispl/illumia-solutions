@@ -76,17 +76,17 @@ export default function PageHero({
             {description}
           </motion.p>
 
-          <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
+          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
             <Link
               href={primaryCta.href}
-              className="bg-[#b31c33] text-white px-8 py-4 rounded-xl font-body font-semibold tracking-wide shadow-xl shadow-[#b31c33]/20 hover:bg-[#920022] active:scale-95 transition-all duration-200"
+              className="bg-[#b31c33] text-white px-8 py-4 rounded-xl font-body font-semibold tracking-wide shadow-xl shadow-[#b31c33]/20 hover:bg-[#920022] active:scale-95 transition-all duration-200 text-center"
             >
               {primaryCta.label}
             </Link>
             {secondaryCta && (
               <Link
                 href={secondaryCta.href}
-                className="border border-[#b31c33]/40 text-[#b31c33] px-8 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#b31c33] hover:text-white hover:border-[#b31c33] transition-all duration-200"
+                className="border border-[#b31c33]/40 text-[#b31c33] px-8 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#b31c33] hover:text-white hover:border-[#b31c33] transition-all duration-200 text-center"
               >
                 {secondaryCta.label}
               </Link>

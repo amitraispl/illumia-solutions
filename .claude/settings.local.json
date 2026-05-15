@@ -81,7 +81,8 @@
       "Bash(cp /tmp/illumia-logos/erpnext.png \"O:/CODE/illumia-solutions/illumia-web/public/photos/erpnext-logo.png\")",
       "Bash(cp /tmp/illumia-logos/netbox.svg \"O:/CODE/illumia-solutions/illumia-web/public/photos/netbox-logo.svg\")",
       "Bash(cp /tmp/illumia-logos/netbox-icon.svg \"O:/CODE/illumia-solutions/illumia-web/public/photos/netbox-icon.svg\")",
-      "Bash(cp /tmp/illumia-logos/ai-governance.svg \"O:/CODE/illumia-solutions/illumia-web/public/photos/eu-flag.svg\")"
+      "Bash(cp /tmp/illumia-logos/ai-governance.svg \"O:/CODE/illumia-solutions/illumia-web/public/photos/eu-flag.svg\")",
+      "PowerShell(Select-String *)"
     ]
   }
 }

@@ -15,7 +15,7 @@ export default function AIGovernancePage() {
       titleHighlight="Governs You."
       description="The EU AI Act is live. AI systems are proliferating across enterprises at a pace regulators are scrambling to match. Most organisations have no governance framework — no risk classification, no model inventory, no audit trail, no accountability layer. Illumia builds structured AI governance programs aligned with the EU AI Act, NIST AI RMF, and ISO/IEC 42001 — so you can deploy AI with confidence, not liability."
       sectionTitle="What the Program Covers"
-      ctaText="Build Your AI Governance Framework"
+      ctaText="Build Your AI Governance"
       heroImage="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1400&q=85&auto=format&fit=crop"
       darkHero={true}
       closingText="The window to operate AI without a governance framework has closed. The EU AI Act applies extraterritorially — any organisation placing AI systems on the EU market or whose outputs are used in the EU is in scope. Illumia's program gives you a defensible position: classified risk, documented controls, auditable decisions. Whether you are deploying generative AI internally, embedding ML in customer products, or procuring AI from third-party vendors, the same governance layer applies."

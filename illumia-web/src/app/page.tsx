@@ -97,13 +97,13 @@ export default function HomePage() {
         imageAlt="Diverse team collaborating around a table with laptops"
       >
         {/* Stats row inside hero */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-4 border-t border-[#e2bebd]/40">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-6 sm:gap-6 pt-4 border-t border-[#e2bebd]/40">
           {stats.map((stat) => (
-            <div key={stat.label} className="flex flex-col gap-1">
-              <span className="font-headline text-4xl font-bold text-[#b31c33] tabular-nums">
+            <div key={stat.label} className="flex flex-col gap-1 min-w-0">
+              <span className="font-headline text-3xl sm:text-4xl font-bold text-[#b31c33] tabular-nums">
                 {stat.value}
               </span>
-              <span className="font-body text-xs text-[#5c5c5c] uppercase tracking-widest leading-tight font-semibold">
+              <span className="font-body text-[10px] sm:text-xs text-[#5c5c5c] uppercase tracking-wider sm:tracking-widest leading-tight font-semibold line-clamp-2">
                 {stat.label}
               </span>
             </div>

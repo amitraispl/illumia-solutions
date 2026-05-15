@@ -145,7 +145,7 @@ export default function Footer() {
             </p>
 
             {/* Social icons */}
-            <div className="hidden md:flex gap-2">
+            <div className="flex gap-2">
               <motion.a
                 href="https://www.linkedin.com/company/illumia-solutions-pvt-ltd/"
                 target="_blank"

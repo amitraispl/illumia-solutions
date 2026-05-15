@@ -30,8 +30,8 @@ const EuStars = () => (
     <g fill="currentColor">
       {Array.from({ length: 12 }).map((_, i) => {
         const angle = (i * Math.PI) / 6 - Math.PI / 2;
-        const cx = 50 + Math.cos(angle) * 36;
-        const cy = 50 + Math.sin(angle) * 36;
+        const cx = parseFloat((50 + Math.cos(angle) * 36).toFixed(4));
+        const cy = parseFloat((50 + Math.sin(angle) * 36).toFixed(4));
         return (
           <polygon
             key={i}
@@ -84,7 +84,7 @@ export default function TechSpotlight() {
           <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
             <Link
               href="/ai-governance"
-              className="group relative block h-full bg-[#b31c33] rounded-2xl p-10 text-white hover:bg-[#920022] transition-colors duration-300 cursor-pointer overflow-hidden"
+              className="group relative block h-full bg-[#b31c33] rounded-2xl p-6 sm:p-8 lg:p-10 text-white hover:bg-[#920022] transition-colors duration-300 cursor-pointer overflow-hidden"
             >
               {/* EU stars watermark */}
               <div className="pointer-events-none absolute -right-10 -bottom-10 w-56 h-56 text-white/[0.07] rotate-6">
@@ -108,7 +108,7 @@ export default function TechSpotlight() {
                 The EU AI Act is live. AI systems are proliferating across enterprises at a pace regulators are scrambling to match. Most organisations have no governance framework — no risk classification, no audit trail, no accountability layer. Illumia builds structured AI governance programs that let you deploy AI with confidence, not liability.
               </p>
 
-              <div className="relative grid grid-cols-2 gap-x-6 gap-y-2 mb-8">
+              <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-8">
                 {["Risk Classification Frameworks", "Bias & Fairness Auditing", "EU AI Act Alignment", "Model Accountability Policies", "AI Incident Response", "Regulatory Reporting"].map((b) => (
                   <div key={b} className="flex items-center gap-2 text-xs font-body font-semibold text-white/70 uppercase tracking-wide">
                     <span className="w-1 h-1 rounded-full bg-[#ffdad9]/60 shrink-0" />
@@ -137,7 +137,7 @@ export default function TechSpotlight() {
           <motion.div variants={fadeUp} className="h-full">
             <Link
               href="/proxmox-migration"
-              className="group block h-full bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:shadow-2xl hover:shadow-stone-200/70 transition-all duration-300 cursor-pointer flex flex-col"
+              className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-2xl hover:shadow-stone-200/70 transition-all duration-300 cursor-pointer flex flex-col"
             >
               <div className="flex items-center justify-between gap-3 mb-6">
                 <span className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold">
@@ -177,7 +177,7 @@ export default function TechSpotlight() {
           <motion.div variants={fadeUp} className="h-full">
             <Link
               href="/erpnext"
-              className="group block h-full bg-[#f6f3f2] rounded-2xl p-10 border border-transparent hover:bg-white hover:border-[#e2bebd]/40 hover:shadow-2xl hover:shadow-stone-200/60 transition-all duration-300 cursor-pointer flex flex-col"
+              className="group block h-full bg-[#f6f3f2] rounded-2xl p-6 sm:p-8 lg:p-10 border border-transparent hover:bg-white hover:border-[#e2bebd]/40 hover:shadow-2xl hover:shadow-stone-200/60 transition-all duration-300 cursor-pointer flex flex-col"
             >
               <div className="flex items-center justify-between gap-3 mb-6">
                 <span className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold">
@@ -220,7 +220,7 @@ export default function TechSpotlight() {
           <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
             <Link
               href="/netbox"
-              className="group block h-full bg-[#1c1b1b] rounded-2xl p-10 text-white hover:bg-[#111010] transition-colors duration-300 cursor-pointer"
+              className="group block h-full bg-[#1c1b1b] rounded-2xl p-6 sm:p-8 lg:p-10 text-white hover:bg-[#111010] transition-colors duration-300 cursor-pointer"
             >
               <div className="flex flex-col lg:flex-row gap-10 h-full">
                 <div className="flex-1 flex flex-col">
