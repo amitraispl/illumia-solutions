@@ -106,7 +106,7 @@ export default function OpenSourceSolutionsContent() {
       <section className="py-24 bg-[#f6f3f2]">
         <div className="max-w-screen-2xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
-            <h2 className="font-headline text-5xl md:text-6xl text-stone-900 leading-[0.95]">
+            <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.95]">
               The Open Standard of{" "}
               <span className="italic text-[#b31c33]">Excellence.</span>
             </h2>
@@ -135,7 +135,7 @@ export default function OpenSourceSolutionsContent() {
             <motion.span variants={fadeUp} className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
               Core Solutions Architecture
             </motion.span>
-            <motion.h2 variants={fadeUp} className="font-headline text-5xl text-stone-900">
+            <motion.h2 variants={fadeUp} className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900">
               Precision-built on open foundations.
             </motion.h2>
           </motion.div>
@@ -149,7 +149,7 @@ export default function OpenSourceSolutionsContent() {
           >
             {/* Infrastructure — RED accent, wide */}
             <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
-              <Link href="/infrastructure-solutions" className="group block h-full bg-[#b31c33] rounded-2xl p-10 text-white hover:bg-[#920022] transition-colors duration-300">
+              <Link href="/infrastructure-solutions" className="group block h-full bg-[#b31c33] rounded-2xl p-6 sm:p-8 lg:p-10 text-white hover:bg-[#920022] transition-colors duration-300">
                 <div className="flex items-center gap-4 mb-4 text-white">
                   {modules[0].icon}
                   <span className="font-body text-xs tracking-[0.3em] uppercase font-bold text-white/60">Infrastructure</span>
@@ -189,7 +189,7 @@ export default function OpenSourceSolutionsContent() {
 
             {/* Application — wide */}
             <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
-              <Link href="/application-solutions" className="group block h-full bg-[#f6f3f2] rounded-2xl p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-xl transition-all duration-300">
+              <Link href="/application-solutions" className="group block h-full bg-[#f6f3f2] rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center gap-4 mb-4 text-[#b31c33]">
                   {modules[1].icon}
                   <span className="font-body text-xs tracking-[0.3em] uppercase font-bold text-[#b31c33]">Application</span>
@@ -211,7 +211,7 @@ export default function OpenSourceSolutionsContent() {
 
             {/* Cybersecurity — wide */}
             <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
-              <Link href="/cyber-security" className="group block h-full bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300">
+              <Link href="/cyber-security" className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300">
                 <div className="flex items-center gap-4 mb-4 text-[#b31c33]">
                   {modules[2].icon}
                   <span className="font-body text-xs tracking-[0.3em] uppercase font-bold text-[#b31c33]">Cybersecurity</span>
@@ -244,7 +244,7 @@ export default function OpenSourceSolutionsContent() {
       </section>
 
       {/* ─── Pull Quote ───────────────────────────────────────────────────── */}
-      <section className="py-28 bg-[#1c1b1b] text-white relative overflow-hidden">
+      <section className="py-14 lg:py-28 bg-[#1c1b1b] text-white relative overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=60&auto=format&fit=crop"
           alt=""

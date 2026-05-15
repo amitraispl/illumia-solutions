@@ -226,7 +226,7 @@ export default function FAQsPage() {
       {/* FAQ Body */}
       <section id="topics" className="bg-white py-24 px-6 md:px-12 scroll-mt-20">
         <div className="max-w-screen-2xl mx-auto">
-          <div className="grid lg:grid-cols-12 gap-16">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
 
             {/* Sidebar: Categories + image */}
             <div className="lg:col-span-3">
@@ -291,7 +291,7 @@ export default function FAQsPage() {
                   ))}
 
                   {/* Guidance card */}
-                  <div className="mt-12 rounded-2xl bg-[#f6f3f2] border border-[#e2bebd]/40 p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 overflow-hidden relative">
+                  <div className="mt-12 rounded-2xl bg-[#f6f3f2] border border-[#e2bebd]/40 p-6 sm:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 overflow-hidden relative">
                     <div className="absolute right-0 top-0 bottom-0 w-1/3 hidden md:block opacity-20">
                       <Image
                         src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1000&q=80"
@@ -311,7 +311,7 @@ export default function FAQsPage() {
                     </div>
                     <Link
                       href="/contact#contact-form"
-                      className="relative shrink-0 inline-block bg-[#b31c33] text-white px-8 py-3.5 rounded-xl font-body font-semibold text-sm tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/20 transition-colors duration-200 active:scale-95"
+                      className="relative shrink-0 block sm:inline-block text-center bg-[#b31c33] text-white px-8 py-3.5 rounded-xl font-body font-semibold text-sm tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/20 transition-colors duration-200 active:scale-95"
                     >
                       Contact Expertise
                     </Link>

@@ -112,7 +112,7 @@ export default function CloudServicesContent() {
             <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
               <Link
                 href="/virtual-private-server"
-                className="group block h-full bg-[#b31c33] rounded-2xl p-10 text-white hover:bg-[#920022] transition-colors duration-300"
+                className="group block h-full bg-[#b31c33] rounded-2xl p-6 sm:p-8 lg:p-10 text-white hover:bg-[#920022] transition-colors duration-300"
               >
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-white/60 font-bold block mb-4">01 / VPS</span>
                 <h3 className="font-headline text-3xl text-white mb-3">Virtual Private Server</h3>
@@ -136,7 +136,7 @@ export default function CloudServicesContent() {
             <motion.div variants={fadeUp} className="h-full">
               <Link
                 href="/physical-server"
-                className="group block h-full bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300"
+                className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300"
               >
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">02 / Bare-Metal</span>
                 <h3 className="font-headline text-2xl text-stone-900 mb-3">Physical Server</h3>
@@ -179,7 +179,7 @@ export default function CloudServicesContent() {
             <motion.div variants={fadeUp} className="h-full">
               <Link
                 href="/virtual-desktops"
-                className="group block h-full bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300"
+                className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300"
               >
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">04 / DaaS</span>
                 <h3 className="font-headline text-2xl text-stone-900 mb-3">Virtual Desktops</h3>
@@ -196,7 +196,7 @@ export default function CloudServicesContent() {
             <motion.div variants={fadeUp} className="h-full">
               <Link
                 href="/disaster-recovery"
-                className="group block h-full bg-[#f6f3f2] rounded-2xl p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-lg transition-all duration-300"
+                className="group block h-full bg-[#f6f3f2] rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-lg transition-all duration-300"
               >
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">05 / DR</span>
                 <h3 className="font-headline text-2xl text-stone-900 mb-3">Disaster Recovery</h3>
@@ -213,7 +213,7 @@ export default function CloudServicesContent() {
             <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
               <Link
                 href="/object-storage"
-                className="group block h-full bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300"
+                className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300"
               >
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">06 / Storage</span>
                 <h3 className="font-headline text-3xl text-stone-900 mb-3">Object Storage</h3>
@@ -249,7 +249,7 @@ export default function CloudServicesContent() {
             <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
               <Link
                 href="/siem-as-a-service"
-                className="group block h-full bg-[#b31c33] rounded-2xl p-10 text-white hover:bg-[#920022] transition-colors duration-300"
+                className="group block h-full bg-[#b31c33] rounded-2xl p-6 sm:p-8 lg:p-10 text-white hover:bg-[#920022] transition-colors duration-300"
               >
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-white/60 font-bold block mb-4">01 / Security</span>
                 <h3 className="font-headline text-3xl text-white mb-3">SIEM as a Service</h3>
@@ -266,7 +266,7 @@ export default function CloudServicesContent() {
             <motion.div variants={fadeUp} className="h-full">
               <Link
                 href="/honeypot-as-a-service"
-                className="group block h-full bg-[#f6f3f2] rounded-2xl p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-lg transition-all duration-300"
+                className="group block h-full bg-[#f6f3f2] rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-lg transition-all duration-300"
               >
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">02 / Deception</span>
                 <h3 className="font-headline text-2xl text-stone-900 mb-3">Honeypot as a Service</h3>
@@ -280,7 +280,7 @@ export default function CloudServicesContent() {
             <motion.div variants={fadeUp} className="h-full">
               <Link
                 href="/edr-solution"
-                className="group block h-full bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:shadow-lg transition-all duration-300"
+                className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-lg transition-all duration-300"
               >
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">03 / Endpoint</span>
                 <h3 className="font-headline text-2xl text-stone-900 mb-3">EDR as a Service</h3>
@@ -294,7 +294,7 @@ export default function CloudServicesContent() {
             <motion.div variants={fadeUp} className="h-full">
               <Link
                 href="/waf-as-a-service"
-                className="group block h-full bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:shadow-lg transition-all duration-300"
+                className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-lg transition-all duration-300"
               >
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">04 / Application</span>
                 <h3 className="font-headline text-2xl text-stone-900 mb-3">WAF as a Service</h3>
@@ -308,7 +308,7 @@ export default function CloudServicesContent() {
             <motion.div variants={fadeUp} className="h-full">
               <Link
                 href="/nms-as-a-service"
-                className="group block h-full bg-[#f6f3f2] rounded-2xl p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-lg transition-all duration-300"
+                className="group block h-full bg-[#f6f3f2] rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-lg transition-all duration-300"
               >
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">05 / Network</span>
                 <h3 className="font-headline text-2xl text-stone-900 mb-3">NMS as a Service</h3>
@@ -322,7 +322,7 @@ export default function CloudServicesContent() {
             <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
               <Link
                 href="/email-as-a-service"
-                className="group block h-full bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300"
+                className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300"
               >
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">06 / Communication</span>
                 <h3 className="font-headline text-3xl text-stone-900 mb-3">Email as a Service</h3>
@@ -339,7 +339,7 @@ export default function CloudServicesContent() {
             <motion.div variants={fadeUp} className="h-full">
               <Link
                 href="/pam-as-a-service"
-                className="group block h-full bg-[#f6f3f2] rounded-2xl p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-lg transition-all duration-300"
+                className="group block h-full bg-[#f6f3f2] rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-lg transition-all duration-300"
               >
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">07 / Access</span>
                 <h3 className="font-headline text-2xl text-stone-900 mb-3">PAM as a Service</h3>
@@ -353,7 +353,7 @@ export default function CloudServicesContent() {
             <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
               <Link
                 href="/drive-as-a-service"
-                className="group block h-full bg-[#f6f3f2] rounded-2xl p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-xl transition-all duration-300"
+                className="group block h-full bg-[#f6f3f2] rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-xl transition-all duration-300"
               >
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">08 / Storage</span>
                 <h3 className="font-headline text-3xl text-stone-900 mb-3">Drive as a Service</h3>
@@ -432,7 +432,7 @@ export default function CloudServicesContent() {
               <motion.div
                 key={item.num}
                 variants={fadeUp}
-                className="bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300"
+                className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300"
               >
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">{item.num}</span>
                 <h3 className="font-headline text-2xl text-stone-900 mb-3">{item.title}</h3>
@@ -446,7 +446,7 @@ export default function CloudServicesContent() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
-            className="bg-[#1c1b1b] rounded-2xl p-10 grid lg:grid-cols-2 gap-10 items-center"
+            className="bg-[#1c1b1b] rounded-2xl p-6 sm:p-8 lg:p-10 grid lg:grid-cols-2 gap-10 items-center"
           >
             <div>
               <span className="font-body text-xs tracking-[0.3em] uppercase text-[#ffb3b3] font-bold block mb-4">04 / End-to-End</span>
@@ -455,7 +455,7 @@ export default function CloudServicesContent() {
                 From assessment and planning through execution and post-migration optimisation — Illumia manages the full migration lifecycle. We specialise in complex Oracle-to-open-source transitions and legacy system modernisation at enterprise scale.
               </p>
             </div>
-            <div className="flex flex-col gap-4 items-end">
+            <div className="flex flex-col gap-4 items-start lg:items-end">
               <Link
                 href="/contact#contact-form"
                 className="inline-block bg-[#b31c33] text-white px-8 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/30 active:scale-95 transition-all text-sm"
@@ -486,7 +486,7 @@ export default function CloudServicesContent() {
             viewport={{ once: true, margin: "-60px" }}
             className="grid grid-cols-1 md:grid-cols-2 gap-4"
           >
-            <motion.div variants={fadeUp} className="bg-[#f6f3f2] rounded-2xl p-12 border border-[#e2bebd]/20 hover:bg-white hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300">
+            <motion.div variants={fadeUp} className="bg-[#f6f3f2] rounded-2xl p-7 sm:p-10 lg:p-12 border border-[#e2bebd]/20 hover:bg-white hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300">
               <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-6">01 / Remote</span>
               <h3 className="font-headline text-3xl text-stone-900 mb-4">Remote Managed Services</h3>
               <p className="text-[#5a4040] text-sm font-body leading-relaxed mb-8">
@@ -502,7 +502,7 @@ export default function CloudServicesContent() {
               </ul>
             </motion.div>
 
-            <motion.div variants={fadeUp} className="bg-[#b31c33] rounded-2xl p-12 text-white hover:bg-[#920022] transition-colors duration-300 flex flex-col justify-between">
+            <motion.div variants={fadeUp} className="bg-[#b31c33] rounded-2xl p-7 sm:p-10 lg:p-12 text-white hover:bg-[#920022] transition-colors duration-300 flex flex-col justify-between">
               <div>
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-white/60 font-bold block mb-6">02 / On-site</span>
                 <h3 className="font-headline text-3xl text-white mb-4">On-site Engineer Services</h3>
@@ -523,7 +523,7 @@ export default function CloudServicesContent() {
 
       {/* ─── Technical Excellence ─────────────────────────────────────────── */}
       <section className="py-20 px-6 md:px-12 bg-[#f6f3f2]">
-        <div className="max-w-screen-2xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
+        <div className="max-w-screen-2xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           <motion.div
             variants={stagger}
             initial="hidden"
@@ -590,7 +590,7 @@ export default function CloudServicesContent() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
-            className="bg-white rounded-2xl p-12 min-h-[400px] flex items-center justify-center border border-[#e2bebd]/30"
+            className="bg-white rounded-2xl p-7 sm:p-10 lg:p-12 min-h-[400px] flex items-center justify-center border border-[#e2bebd]/30"
           >
             <div className="text-center w-full">
               <div className="grid grid-cols-2 gap-4 mb-6">
@@ -627,16 +627,16 @@ export default function CloudServicesContent() {
           <p className="text-stone-400 text-xl max-w-2xl mx-auto mb-10 font-body leading-relaxed">
             Join the enterprises running on an Illumia cloud. Our team spans time zones and disciplines — someone is always ready to help.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
             <Link
               href="/contact#contact-form"
-              className="inline-block bg-[#b31c33] text-white px-12 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/30 transition-all duration-200 active:scale-95"
+              className="bg-[#b31c33] text-white px-12 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/30 transition-all duration-200 active:scale-95 text-center"
             >
               Get Started
             </Link>
             <Link
               href="/contact#contact-form"
-              className="inline-block border border-white/20 text-white px-12 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-white/5 transition-colors"
+              className="border border-white/20 text-white px-12 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-white/5 transition-colors text-center"
             >
               Contact Sales
             </Link>

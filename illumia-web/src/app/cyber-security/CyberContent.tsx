@@ -134,12 +134,12 @@ export default function CyberSecurityContent() {
             <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
               <Link
                 href={SERVICES[0].href}
-                className="group block h-full bg-[#b31c33] rounded-2xl p-10 text-white hover:bg-[#920022] transition-colors duration-300"
+                className="group block h-full bg-[#b31c33] rounded-2xl p-6 sm:p-8 lg:p-10 text-white hover:bg-[#920022] transition-colors duration-300"
               >
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-white/60 font-bold block mb-4">{SERVICES[0].num} / {SERVICES[0].eyebrow}</span>
                 <h3 className="font-headline text-3xl text-white mb-3">{SERVICES[0].title}</h3>
                 <p className="text-white/80 text-sm font-body leading-relaxed mb-6">{SERVICES[0].desc}</p>
-                <div className="grid grid-cols-2 gap-2 mb-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
                   {SERVICES[0].bullets!.map((b) => (
                     <div key={b} className="flex items-center gap-2 text-xs font-body font-semibold text-white/70 uppercase tracking-wide">
                       <span className="w-1 h-1 rounded-full bg-white/50 shrink-0" /> {b}
@@ -155,7 +155,7 @@ export default function CyberSecurityContent() {
             <motion.div variants={fadeUp} className="h-full">
               <Link
                 href={SERVICES[1].href}
-                className="group block h-full bg-[#f6f3f2] rounded-2xl p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-lg transition-all duration-300"
+                className="group block h-full bg-[#f6f3f2] rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-lg transition-all duration-300"
               >
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">{SERVICES[1].num} / {SERVICES[1].eyebrow}</span>
                 <h3 className="font-headline text-2xl text-stone-900 mb-3">{SERVICES[1].title}</h3>
@@ -171,7 +171,7 @@ export default function CyberSecurityContent() {
               <motion.div key={s.num} variants={fadeUp} className="h-full">
                 <Link
                   href={s.href}
-                  className="group block h-full bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:shadow-lg transition-all duration-300"
+                  className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-lg transition-all duration-300"
                 >
                   <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">{s.num} / {s.eyebrow}</span>
                   <h3 className="font-headline text-2xl text-stone-900 mb-3">{s.title}</h3>
@@ -187,7 +187,7 @@ export default function CyberSecurityContent() {
             <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
               <Link
                 href={SERVICES[5].href}
-                className="group block h-full bg-[#f6f3f2] rounded-2xl p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-xl transition-all duration-300"
+                className="group block h-full bg-[#f6f3f2] rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-xl transition-all duration-300"
               >
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">{SERVICES[5].num} / {SERVICES[5].eyebrow}</span>
                 <h3 className="font-headline text-3xl text-stone-900 mb-3">{SERVICES[5].title}</h3>
@@ -201,7 +201,7 @@ export default function CyberSecurityContent() {
             <motion.div variants={fadeUp} className="h-full">
               <Link
                 href={SERVICES[6].href}
-                className="group block h-full bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:shadow-lg transition-all duration-300"
+                className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-lg transition-all duration-300"
               >
                 <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">{SERVICES[6].num} / {SERVICES[6].eyebrow}</span>
                 <h3 className="font-headline text-2xl text-stone-900 mb-3">{SERVICES[6].title}</h3>
@@ -217,7 +217,7 @@ export default function CyberSecurityContent() {
 
       {/* ─── Pull Quote / Editorial ───────────────────────────────────────── */}
       <section className="py-20 px-6 md:px-12 bg-[#f6f3f2]">
-        <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <motion.div
             variants={stagger}
             initial="hidden"
@@ -256,7 +256,7 @@ export default function CyberSecurityContent() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
-            className="bg-white rounded-2xl p-12 border border-[#e2bebd]/30 shadow-xl shadow-stone-200/40"
+            className="bg-white rounded-2xl p-6 sm:p-8 lg:p-12 border border-[#e2bebd]/30 shadow-xl shadow-stone-200/40"
           >
             <blockquote className="font-headline text-3xl md:text-4xl italic text-stone-900 leading-tight mb-8">
               &ldquo;Security is not a final destination, but a state of{" "}

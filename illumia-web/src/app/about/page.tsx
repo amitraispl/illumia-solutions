@@ -85,7 +85,7 @@ export default function AboutPage() {
               { value: "24/7", label: "Support Coverage" },
             ].map((s) => (
               <div key={s.label}>
-                <p className="font-headline text-4xl font-bold">{s.value}</p>
+                <p className="font-headline text-3xl md:text-4xl font-bold">{s.value}</p>
                 <p className="font-body text-xs uppercase tracking-widest text-white/70 mt-1">{s.label}</p>
               </div>
             ))}
@@ -94,14 +94,14 @@ export default function AboutPage() {
       </section>
 
       {/* Our Narrative */}
-      <section className="py-32 bg-[#f6f3f2]">
+      <section className="py-16 lg:py-32 bg-[#f6f3f2]">
         <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-5">
               <span className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-6">
                 Our Narrative
               </span>
-              <h2 className="font-headline text-5xl md:text-6xl text-stone-900 leading-[0.95] mb-10">
+              <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.95] mb-10">
                 Born from a need for{" "}
                 <em className="not-italic font-bold text-stone-900">absolute certainty</em>{" "}
                 in a landscape of digital volatility.
@@ -183,7 +183,7 @@ export default function AboutPage() {
       </section>
 
       {/* Why Choose Illumia — Flip Cards */}
-      <section className="py-32 bg-white px-6 md:px-12">
+      <section className="py-16 lg:py-32 bg-white px-6 md:px-12">
         <div className="max-w-screen-2xl mx-auto">
           <div className="mb-16">
             <span className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-4">
@@ -209,7 +209,7 @@ export default function AboutPage() {
       </section>
 
       {/* Pull Quote */}
-      <section className="py-32 bg-[#1c1b1b] text-white relative overflow-hidden">
+      <section className="py-16 lg:py-32 bg-[#1c1b1b] text-white relative overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1600&q=60&auto=format&fit=crop"
           alt=""
@@ -231,7 +231,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6 md:px-12 bg-[#f6f3f2]">
+      <section className="py-14 lg:py-24 px-6 md:px-12 bg-[#f6f3f2]">
         <div className="max-w-screen-2xl mx-auto text-center">
           <span className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-4">
             Partner With Us
