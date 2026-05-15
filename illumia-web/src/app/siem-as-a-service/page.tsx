@@ -16,7 +16,7 @@ export default function SiemAsAServicePage() {
       description="Security Information and Event Management (SIEM) is essential for modern cybersecurity, aggregating and analyzing activity from multiple IT resources to provide real-time security alerts. SIEM tools offer comprehensive visibility and management of security events within an organization's IT environment."
       sectionTitle="SIEM as a Service Features"
       ctaText="Activate SIEM"
-      heroImage="https://images.unsplash.com/photo-1614064548016-0b5e35a7082d?w=1400&q=85&auto=format&fit=crop"
+      heroImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=85&auto=format&fit=crop"
       darkHero={true}
       closingText="Embracing SIEM as a Service with Illumia Solutions enhances your security and provides peace of mind with continuous expert monitoring. Partner with us to protect your business from evolving threats and ensure regulatory compliance."
       features={[

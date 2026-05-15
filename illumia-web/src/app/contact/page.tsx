@@ -9,6 +9,9 @@ type FormData = {
   company: string;
   email: string;
   phone: string;
+  city: string;
+  state: string;
+  country: string;
   service: string;
   message: string;
 };
@@ -24,10 +27,30 @@ function validate(form: FormData): FormErrors {
     errors.name = "Name must be at least 2 characters.";
   }
 
+  if (!form.company.trim()) {
+    errors.company = "Please enter your company or organisation name.";
+  }
+
   if (!form.email.trim()) {
     errors.email = "An email address is required so we can respond to you.";
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
     errors.email = "That doesn't look right — try name@company.com.";
+  }
+
+  if (!form.phone.trim()) {
+    errors.phone = "A phone number helps us reach you quickly.";
+  }
+
+  if (!form.city.trim()) {
+    errors.city = "Please enter your city.";
+  }
+
+  if (!form.state.trim()) {
+    errors.state = "Please enter your state or region.";
+  }
+
+  if (!form.country.trim()) {
+    errors.country = "Please enter your country.";
   }
 
   if (!form.message.trim()) {
@@ -62,6 +85,9 @@ export default function ContactPage() {
     company: "",
     email: "",
     phone: "",
+    city: "",
+    state: "",
+    country: "",
     service: "",
     message: "",
   });
@@ -225,17 +251,26 @@ export default function ContactPage() {
                           htmlFor="company"
                           className="font-body text-xs uppercase tracking-wider text-[#5c5c5c]"
                         >
-                          Company
+                          Company{" "}
+                          <span className="text-[#b31c33]" aria-hidden="true">*</span>
                         </label>
                         <input
                           id="company"
                           type="text"
+                          required
                           autoComplete="organization"
                           placeholder="Acme Corp"
                           value={form.company}
                           onChange={(e) => handleChange("company", e.target.value)}
+                          onBlur={() => handleBlur("company")}
+                          aria-required="true"
+                          aria-invalid={touched.company && !!errors.company ? true : undefined}
+                          aria-describedby={touched.company && errors.company ? "company-error" : undefined}
                           className={fieldClass("company")}
                         />
+                        {touched.company && errors.company && (
+                          <ErrorMsg id="company-error" text={errors.company} />
+                        )}
                       </div>
                     </div>
 
@@ -273,17 +308,110 @@ export default function ContactPage() {
                           htmlFor="phone"
                           className="font-body text-xs uppercase tracking-wider text-[#5c5c5c]"
                         >
-                          Phone Number
+                          Phone Number{" "}
+                          <span className="text-[#b31c33]" aria-hidden="true">*</span>
                         </label>
                         <input
                           id="phone"
                           type="tel"
+                          required
                           autoComplete="tel"
                           placeholder="+91 98765 43210"
                           value={form.phone}
                           onChange={(e) => handleChange("phone", e.target.value)}
+                          onBlur={() => handleBlur("phone")}
+                          aria-required="true"
+                          aria-invalid={touched.phone && !!errors.phone ? true : undefined}
+                          aria-describedby={touched.phone && errors.phone ? "phone-error" : undefined}
                           className={fieldClass("phone")}
                         />
+                        {touched.phone && errors.phone && (
+                          <ErrorMsg id="phone-error" text={errors.phone} />
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Row 3 — City + State + Country */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                      <div className="flex flex-col gap-1.5">
+                        <label
+                          htmlFor="city"
+                          className="font-body text-xs uppercase tracking-wider text-[#5c5c5c]"
+                        >
+                          City{" "}
+                          <span className="text-[#b31c33]" aria-hidden="true">*</span>
+                        </label>
+                        <input
+                          id="city"
+                          type="text"
+                          required
+                          autoComplete="address-level2"
+                          placeholder="Kolkata"
+                          value={form.city}
+                          onChange={(e) => handleChange("city", e.target.value)}
+                          onBlur={() => handleBlur("city")}
+                          aria-required="true"
+                          aria-invalid={touched.city && !!errors.city ? true : undefined}
+                          aria-describedby={touched.city && errors.city ? "city-error" : undefined}
+                          className={fieldClass("city")}
+                        />
+                        {touched.city && errors.city && (
+                          <ErrorMsg id="city-error" text={errors.city} />
+                        )}
+                      </div>
+
+                      <div className="flex flex-col gap-1.5">
+                        <label
+                          htmlFor="state"
+                          className="font-body text-xs uppercase tracking-wider text-[#5c5c5c]"
+                        >
+                          State{" "}
+                          <span className="text-[#b31c33]" aria-hidden="true">*</span>
+                        </label>
+                        <input
+                          id="state"
+                          type="text"
+                          required
+                          autoComplete="address-level1"
+                          placeholder="West Bengal"
+                          value={form.state}
+                          onChange={(e) => handleChange("state", e.target.value)}
+                          onBlur={() => handleBlur("state")}
+                          aria-required="true"
+                          aria-invalid={touched.state && !!errors.state ? true : undefined}
+                          aria-describedby={touched.state && errors.state ? "state-error" : undefined}
+                          className={fieldClass("state")}
+                        />
+                        {touched.state && errors.state && (
+                          <ErrorMsg id="state-error" text={errors.state} />
+                        )}
+                      </div>
+
+                      <div className="flex flex-col gap-1.5">
+                        <label
+                          htmlFor="country"
+                          className="font-body text-xs uppercase tracking-wider text-[#5c5c5c]"
+                        >
+                          Country{" "}
+                          <span className="text-[#b31c33]" aria-hidden="true">*</span>
+                        </label>
+                        <input
+                          id="country"
+                          type="text"
+                          required
+                          autoComplete="country-name"
+                          placeholder="India"
+                          value={form.country}
+                          onChange={(e) => handleChange("country", e.target.value)}
+                          onBlur={() => handleBlur("country")}
+                          aria-required="true"
+                          aria-invalid={touched.country && !!errors.country ? true : undefined}
+                          aria-describedby={touched.country && errors.country ? "country-error" : undefined}
+                          className={fieldClass("country")}
+                        />
+                        {touched.country && errors.country && (
+                          <ErrorMsg id="country-error" text={errors.country} />
+                        )}
                       </div>
                     </div>
 

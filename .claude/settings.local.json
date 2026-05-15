@@ -83,7 +83,8 @@
       "Bash(cp /tmp/illumia-logos/netbox-icon.svg \"O:/CODE/illumia-solutions/illumia-web/public/photos/netbox-icon.svg\")",
       "Bash(cp /tmp/illumia-logos/ai-governance.svg \"O:/CODE/illumia-solutions/illumia-web/public/photos/eu-flag.svg\")",
       "PowerShell(Select-String *)",
-      "Bash(dir /s /b \"O:\\\\CODE\\\\illumia-solutions\\\\illumia-web\\\\src\\\\app\\\\*page.tsx\")"
+      "Bash(dir /s /b \"O:\\\\CODE\\\\illumia-solutions\\\\illumia-web\\\\src\\\\app\\\\*page.tsx\")",
+      "PowerShell(New-Item *)"
     ]
   }
 }
