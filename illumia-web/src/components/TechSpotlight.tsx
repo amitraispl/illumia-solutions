@@ -198,7 +198,7 @@ export default function TechSpotlight() {
                 Enterprise ERP. No Enterprise Price Tag.
               </h3>
               <p className="text-[#5a4040] text-sm font-body leading-relaxed mb-6 flex-1">
-                SAP, Oracle, and Dynamics are priced for Fortune 500 budgets. ERPNext is 100% open-source — accounting, manufacturing, HR, CRM, inventory, and project management — deployed on your own infrastructure with no per-seat licensing and no vendor lock-in.
+                SAP, Oracle, and Dynamics are priced for Fortune 500 budgets. ERPNext is 100% open-source — accounting, manufacturing, HR, CRM, inventory, project management and much more — deployed on your own infrastructure with no per-seat licensing and no vendor lock-in.
               </p>
 
               <ul className="space-y-2 mb-6">

@@ -13,6 +13,7 @@ import zextrasLogo from "../../public/zextras_Partner_logo_RGB_web-7.png";
 import proxmoxLogo from "../../public/Proxmox-Silver-Partner.png";
 import lifebankLogo from "../../public/LifeBank-Foundation.png";
 import guacamoleLogo from "../../public/Apache-Guacamole-Partner.png";
+import netboxLabsLogo from "../../public/netbox-labs.png";
 
 export const metadata: Metadata = {
   title: "Illumia Solutions | Illuminating the Path to Success",
@@ -34,6 +35,7 @@ const partnerLogos = [
   { src: proxmoxLogo, alt: "Proxmox — Silver Partner", width: 130, height: 60 },
   { src: lifebankLogo, alt: "LifeBank Foundation — Partner", width: 140, height: 60 },
   { src: guacamoleLogo, alt: "Apache Guacamole — Commercial Support Partner", width: 140, height: 60 },
+  { src: netboxLabsLogo, alt: "NetBox Labs — Partner", width: 140, height: 50 },
 ];
 
 const whyChoose = [
@@ -454,7 +456,7 @@ export default function HomePage() {
                 </span>
                 <div>
                   <h4 className="font-body text-xs font-bold uppercase tracking-widest text-[#ffb3b3] mb-1">Strategic Partners</h4>
-                  <p className="text-stone-400 text-sm font-body leading-relaxed">Seqrite · Force Networks · Zextras · Proxmox · LifeBank Foundation · Apache Guacamole</p>
+                  <p className="text-stone-400 text-sm font-body leading-relaxed">Seqrite · Force Networks · Zextras · Proxmox · LifeBank Foundation · Apache Guacamole · NetBox Labs</p>
                 </div>
               </div>
             </div>

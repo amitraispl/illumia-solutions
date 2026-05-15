@@ -64,7 +64,7 @@ export default function ProxmoxMigrationPage() {
           items: [
             {
               label: "VMware Importer",
-              text: "Proxmox VE 8's native vCenter importer pulls VMs directly from your existing ESXi or vSphere environment — preserving disks, MACs, and network configuration.",
+              text: "Proxmox VE's native vCenter importer pulls VMs directly from your existing ESXi or vSphere environment — preserving disks, MACs, and network configuration.",
             },
             {
               label: "Phased Cutover",
