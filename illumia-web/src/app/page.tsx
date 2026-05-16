@@ -363,29 +363,35 @@ export default function HomePage() {
               </div>
             </Link>
 
-            {/* Cell 4: Digital Transformation — wide */}
+            {/* Cell 4: Digital Transformation — wide, dark */}
             <Link
               href="/application-solutions"
-              className="group lg:col-span-2 bg-[#f6f3f2] rounded-2xl p-6 md:p-8 lg:p-10 hover:bg-white hover:shadow-2xl hover:shadow-stone-200/60 transition-all duration-300 border border-transparent hover:border-[#e2bebd]/40 flex flex-col justify-between"
+              className="group lg:col-span-2 bg-[#1c1b1b] rounded-2xl p-6 md:p-8 lg:p-10 hover:bg-[#272524] transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">
+                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#ffb3b3] font-bold block mb-4">
                   04 / Modernization
                 </span>
-                <h3 className="font-headline text-3xl text-stone-900 mb-3">
+                <h3 className="font-headline text-3xl text-white mb-3">
                   Digital Transformation
                 </h3>
-                <p className="text-[#5a4040] text-sm font-body leading-relaxed mb-6">
+                <p className="text-stone-400 text-sm font-body leading-relaxed mb-6">
                   Streamlining legacy systems through automated innovations and bespoke application development for the modern enterprise.
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">
                 {["Application Dev", "DevSecOps", "Kubernetes", "Cloud-Native"].map((tag) => (
-                  <span key={tag} className="font-body text-xs font-bold uppercase tracking-wider text-[#b31c33] bg-[#b31c33]/8 border border-[#b31c33]/20 rounded-md px-3 py-1.5">
+                  <span key={tag} className="font-body text-xs font-bold uppercase tracking-wider text-[#ffb3b3] bg-white/8 border border-white/15 rounded-md px-3 py-1.5">
                     {tag}
                   </span>
                 ))}
               </div>
+              <span className="mt-6 text-[#ffb3b3] font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest">
+                Explore Solutions
+                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
             </Link>
           </div>
         </div>

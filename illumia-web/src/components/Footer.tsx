@@ -90,7 +90,7 @@ export default function Footer() {
   );
 
   return (
-    <footer ref={containerRef} className="w-full bg-[#0c0c0c] relative overflow-hidden">
+    <footer ref={containerRef} className="w-full bg-[#140c0c] relative overflow-hidden">
 
       {/* Layered ambient glows */}
       <div
@@ -98,7 +98,7 @@ export default function Footer() {
         className="pointer-events-none absolute inset-0"
         style={{
           backgroundImage:
-            "radial-gradient(ellipse 55% 35% at 8% 0%, rgba(179,28,51,0.15) 0%, transparent 100%), radial-gradient(ellipse 40% 30% at 92% 100%, rgba(179,28,51,0.11) 0%, transparent 100%)",
+            "radial-gradient(ellipse 300% 50% at 0% 0%, rgba(179,28,51,0.38) 0%, transparent 60%), radial-gradient(ellipse 110% 65% at 100% 100%, rgba(179,28,51,0.32) 0%, transparent 60%), radial-gradient(ellipse 70% 40% at 50% 50%, rgba(179,28,51,0.08) 0%, transparent 100%)",
         }}
       />
 

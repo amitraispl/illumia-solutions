@@ -1,0 +1,23 @@
+{
+  "skill_name": "make-responsive",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a hero section with text on the left and an image on the right using flex. On mobile it just shrinks both columns and the text becomes unreadable. Can you make it responsive so it stacks properly?",
+      "expected_output": "Should convert to flex-col on mobile with text first, image below. Image should use viewport-relative height. Text should have fluid sizing.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "My case study page has a split layout hero but the image takes up the whole screen on phones and pushes the title way down. Fix the mobile layout.",
+      "expected_output": "Should constrain image height on mobile using h-[55vw] or similar viewport-relative units, ensure text comes first in the stacking order, and add appropriate padding for navbar clearance.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I need to make this service page hero responsive. It has a badge, headline, description, two CTA buttons, and a photo on the right side. The buttons are tiny on mobile and the headline font is way too big.",
+      "expected_output": "Should apply fluid typography with clamp() or responsive Tailwind prefixes, make CTA buttons full-width and stacked on mobile with adequate touch targets (44px+), and properly stack the layout.",
+      "files": []
+    }
+  ]
+}

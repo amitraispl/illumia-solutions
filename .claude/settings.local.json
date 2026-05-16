@@ -85,7 +85,9 @@
       "PowerShell(Select-String *)",
       "Bash(dir /s /b \"O:\\\\CODE\\\\illumia-solutions\\\\illumia-web\\\\src\\\\app\\\\*page.tsx\")",
       "PowerShell(New-Item *)",
-      "PowerShell(dir \"O:\\\\CODE\\\\illumia-solutions\\\\illumia-web\\\\public\" -Recurse | Where-Object { !$_.PSIsContainer } | Select-Object Name, DirectoryName)"
+      "PowerShell(dir \"O:\\\\CODE\\\\illumia-solutions\\\\illumia-web\\\\public\" -Recurse | Where-Object { !$_.PSIsContainer } | Select-Object Name, DirectoryName)",
+      "PowerShell(Start-Sleep -Seconds 3; try { \\(Invoke-WebRequest -Uri \"http://localhost:3000\" -TimeoutSec 5 -UseBasicParsing\\).StatusCode } catch { \"not ready\" })",
+      "PowerShell(Start-Sleep -Seconds 8; try { \\(Invoke-WebRequest -Uri \"http://localhost:3000\" -TimeoutSec 5 -UseBasicParsing\\).StatusCode } catch { \"not ready yet\" })"
     ]
   }
 }
