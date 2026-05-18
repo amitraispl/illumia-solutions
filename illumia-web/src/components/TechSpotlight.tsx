@@ -46,7 +46,7 @@ const EuStars = () => (
 
 export default function TechSpotlight() {
   return (
-    <section className="py-20 bg-[#f6f3f2]">
+    <section className="py-12 md:py-20 bg-[#f6f3f2]">
       <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
 
         {/* ─── Header ──────────────────────────────────────────────────────── */}
@@ -61,7 +61,7 @@ export default function TechSpotlight() {
             <motion.span variants={fadeUp} className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-bold block mb-4">
               Technology Focus Areas
             </motion.span>
-            <motion.h2 variants={fadeUp} className="font-headline text-4xl sm:text-5xl md:text-6xl text-stone-900 leading-[0.95]">
+            <motion.h2 variants={fadeUp} className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.95]">
               Where Industry Is{" "}
               <span className="italic text-[#b31c33]">Moving Next?</span>
             </motion.h2>
@@ -91,7 +91,7 @@ export default function TechSpotlight() {
                 <EuStars />
               </div>
 
-              <div className="relative flex items-center justify-between mb-6">
+              <div className="relative flex items-center justify-between flex-wrap gap-2 mb-6">
                 <span className="font-body text-xs tracking-[0.25em] uppercase text-white/60 font-bold">
                   Responsible AI
                 </span>

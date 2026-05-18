@@ -169,7 +169,7 @@ export default function HomePage() {
                 <span className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-6">
                   Who We Are
                 </span>
-                <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.95] mb-5 md:mb-8">
+                <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.95] mb-5 md:mb-8">
                   The intersection of{" "}
                   <span className="italic text-[#b31c33]">legacy wisdom</span>{" "}
                   and radical innovation.
@@ -239,10 +239,10 @@ export default function HomePage() {
                   </div>
                 </div>
               ))}
-              <div className="flex flex-wrap gap-3 md:gap-4 pt-2">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 pt-2">
                 <Link
                   href="/about"
-                  className="bg-[#b31c33] text-white px-8 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/20 active:scale-95 text-center"
+                  className="bg-[#b31c33] text-white px-8 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/20 active:scale-95 text-center w-full sm:w-auto"
                 >
                   Our Story
                 </Link>
@@ -251,7 +251,7 @@ export default function HomePage() {
                   hoverText="Contact Us"
                   href="/contact#contact-form"
                   variant="ghost"
-                  className="h-auto py-4 rounded-xl border-[#b31c33]/30 text-[#b31c33] hover:bg-[#ffdad9]/20 tracking-wide font-body font-semibold"
+                  className="h-auto py-4 rounded-xl border-[#b31c33]/30 text-[#b31c33] hover:bg-[#ffdad9]/20 tracking-wide font-body font-semibold w-full sm:w-auto"
                 />
               </div>
             </div>
@@ -267,7 +267,7 @@ export default function HomePage() {
               <span className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-4">
                 Core Competencies
               </span>
-              <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.95]">
+              <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.95]">
                 Expertise{" "}
                 <span className="italic text-[#b31c33]">Ecosystem</span>
               </h2>
@@ -414,7 +414,7 @@ export default function HomePage() {
               <span className="font-body text-xs tracking-[0.25em] uppercase text-[#ffb3b3] font-bold block mb-6">
                 Global Presence
               </span>
-              <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-5 md:mb-8">
+              <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-5 md:mb-8">
                 Global Reach,{" "}
                 <span className="italic text-[#ffb3b3]">Local Precision.</span>
               </h2>
@@ -477,7 +477,7 @@ export default function HomePage() {
             <span className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-4">
               The Illumia Advantage
             </span>
-            <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.95]">
+            <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.95]">
               Why Choose{" "}
               <span className="italic text-[#b31c33]">Illumia Solutions?</span>
             </h2>
@@ -542,7 +542,7 @@ export default function HomePage() {
           <span className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-4 md:mb-6">
             Start Today
           </span>
-          <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl text-stone-900 mb-5 md:mb-8 leading-tight">
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 mb-5 md:mb-8 leading-tight">
             Ready to{" "}
             <span className="italic text-[#b31c33]">illuminate</span>{" "}
             your path?

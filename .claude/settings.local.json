@@ -87,7 +87,16 @@
       "PowerShell(New-Item *)",
       "PowerShell(dir \"O:\\\\CODE\\\\illumia-solutions\\\\illumia-web\\\\public\" -Recurse | Where-Object { !$_.PSIsContainer } | Select-Object Name, DirectoryName)",
       "PowerShell(Start-Sleep -Seconds 3; try { \\(Invoke-WebRequest -Uri \"http://localhost:3000\" -TimeoutSec 5 -UseBasicParsing\\).StatusCode } catch { \"not ready\" })",
-      "PowerShell(Start-Sleep -Seconds 8; try { \\(Invoke-WebRequest -Uri \"http://localhost:3000\" -TimeoutSec 5 -UseBasicParsing\\).StatusCode } catch { \"not ready yet\" })"
+      "PowerShell(Start-Sleep -Seconds 8; try { \\(Invoke-WebRequest -Uri \"http://localhost:3000\" -TimeoutSec 5 -UseBasicParsing\\).StatusCode } catch { \"not ready yet\" })",
+      "Bash(Start-Sleep -Seconds 6)",
+      "PowerShell(Get-ChildItem -Path \"O:\\\\CODE\\\\illumia-solutions\\\\illumia-web\\\\public\" -Recurse | Where-Object { !$_.PSIsContainer } | Select-Object FullName, Name | Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(\\(Get-ChildItem -Path \"C:\\\\Users\\\\amitra\\\\Downloads\" -Force | Measure-Object\\).Count)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\amitra\\\\Downloads\" -Force | Where-Object { $_.Extension -match '\\\\.\\(jpg|jpeg|png|webp|avif\\)$' } | Select-Object Name, LastWriteTime | Sort-Object LastWriteTime -Descending)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\amitra\\\\Downloads\" -Force -Recurse | Where-Object { $_.Extension -in @\\('.jpg','.jpeg','.png','.webp','.avif'\\) } | Select-Object FullName, LastWriteTime | Sort-Object LastWriteTime -Descending | Select-Object -First 30)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\amitra\" -Recurse -Directory -Force | Where-Object { $_.Name -match 'unsplash' } | Select-Object FullName)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\amitra\\\\Pictures\" -Recurse | Where-Object { $_.Name -match 'unsplash' -or $_.PSIsContainer } | Select-Object FullName | Select-Object -First 20)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\amitra\\\\Downloads\" -Force | Where-Object { $_.PSIsContainer } | Select-Object Name | Format-Table)"
     ]
   }
 }

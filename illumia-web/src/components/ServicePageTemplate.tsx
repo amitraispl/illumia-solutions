@@ -52,7 +52,7 @@ export default function ServicePageTemplate({
       />
 
       {/* Features */}
-      <section className="py-20 bg-white px-6 md:px-12">
+      <section className="py-12 md:py-20 bg-white px-6 md:px-12">
         <div className="max-w-screen-2xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {features.map((f, i) => {
@@ -95,7 +95,7 @@ export default function ServicePageTemplate({
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-[#f6f3f2] px-6 md:px-12">
+      <section className="py-14 md:py-24 bg-[#f6f3f2] px-6 md:px-12">
         <div className="max-w-screen-2xl mx-auto text-center">
           <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900 mb-6">
             Ready to get started?

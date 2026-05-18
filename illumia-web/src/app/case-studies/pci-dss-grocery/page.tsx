@@ -174,7 +174,7 @@ export default function PciDssCaseStudy() {
       </section>
 
       {/* Mobile sticky tab nav */}
-      <nav className="sticky top-16 z-30 border-b border-[#e2bebd]/60 bg-white/95 backdrop-blur lg:hidden">
+      <nav className="hidden">
         <div className="flex gap-1 overflow-x-auto px-4 py-2">
           {navSections.map((s) => (
             <a
