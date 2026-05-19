@@ -13,21 +13,59 @@ const newsreader = Newsreader({
   variable: '--font-newsreader',
 });
 
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Organization", "LocalBusiness"],
+  "@id": "https://illumiasolutions.com/#organization",
+  name: "Illumia Solutions",
+  alternateName: "Illumia Solutions Pvt. Ltd.",
+  url: "https://illumiasolutions.com",
+  telephone: "+919332045178",
+  email: "sales@illumiasolutions.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "98/9 Gopal Lal Tagore Rd, Baranagar",
+    addressLocality: "Kolkata",
+    addressRegion: "West Bengal",
+    postalCode: "700036",
+    addressCountry: "IN",
+  },
+  areaServed: [
+    { "@type": "Country", name: "India" },
+    { "@type": "Country", name: "United States" },
+    { "@type": "Country", name: "Philippines" },
+    { "@type": "Country", name: "Australia" },
+    { "@type": "Country", name: "Kenya" },
+    { "@type": "Country", name: "Mozambique" },
+  ],
+  sameAs: ["https://amitraispl.github.io/illumia-solutions/"],
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://illumiasolutions.com"),
   title: {
-    default: "Illumia Solutions | Illuminating the Path to Success",
+    default: "Illumia Solutions | Enterprise IT Services — Cloud, Cybersecurity & Open Source",
     template: "%s | Illumia Solutions",
   },
   description:
-    "At Illumia Solutions, we are dedicated to empowering businesses to achieve their goals through innovative and cost-effective IT solutions in cybersecurity, cloud infrastructure, and open-source technologies.",
+    "Enterprise-grade cybersecurity, cloud infrastructure, and open-source IT services for businesses across India, the USA, Australia, and beyond. Proxmox Silver Partner. CISA, CISSP, CEH, CCIE certified team with 20+ years of collective industry experience.",
   keywords: [
-    "IT solutions",
-    "cybersecurity",
-    "cloud services",
-    "infrastructure",
+    "IT services India",
+    "cybersecurity services",
+    "enterprise cloud solutions",
+    "open source IT",
+    "managed IT services Kolkata",
     "Illumia Solutions",
-    "Kolkata",
+    "MSSP India",
   ],
+  openGraph: {
+    type: "website",
+    siteName: "Illumia Solutions",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
@@ -38,6 +76,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("h-full", "font-sans", inter.variable, newsreader.variable)}>
       <body className="min-h-full flex flex-col bg-[#fcf9f8] text-[#1c1b1b] selection:bg-primary-container selection:text-on-primary-container">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
         {/* Skip link for keyboard / screen-reader users — WCAG 2.4.1 */}
         <a href="#main-content" className="skip-link">
           Skip to main content

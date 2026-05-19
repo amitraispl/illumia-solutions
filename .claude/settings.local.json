@@ -96,7 +96,17 @@
       "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\amitra\\\\Downloads\" -Force -Recurse | Where-Object { $_.Extension -in @\\('.jpg','.jpeg','.png','.webp','.avif'\\) } | Select-Object FullName, LastWriteTime | Sort-Object LastWriteTime -Descending | Select-Object -First 30)",
       "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\amitra\" -Recurse -Directory -Force | Where-Object { $_.Name -match 'unsplash' } | Select-Object FullName)",
       "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\amitra\\\\Pictures\" -Recurse | Where-Object { $_.Name -match 'unsplash' -or $_.PSIsContainer } | Select-Object FullName | Select-Object -First 20)",
-      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\amitra\\\\Downloads\" -Force | Where-Object { $_.PSIsContainer } | Select-Object Name | Format-Table)"
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\amitra\\\\Downloads\" -Force | Where-Object { $_.PSIsContainer } | Select-Object Name | Format-Table)",
+      "WebFetch(domain:amitraispl.github.io)",
+      "Bash(python \"C:\\\\Users\\\\amitra\\\\.claude\\\\plugins\\\\cache\\\\agricidaniel-seo\\\\claude-seo\\\\1.9.9\\\\scripts\\\\google_auth.py\" --check)",
+      "Bash(echo \"exit:$?\")",
+      "Bash(python \"C:\\\\Users\\\\amitra\\\\.claude\\\\plugins\\\\cache\\\\agricidaniel-seo\\\\claude-seo\\\\1.9.9\\\\scripts\\\\backlinks_auth.py\" --check)",
+      "Bash(dir O:\\\\CODE\\\\illumia-solutions *)",
+      "Bash(grep \"\\\\.css$\")",
+      "WebFetch(domain:powerconsulting.com)",
+      "WebFetch(domain:www.netatwork.com)",
+      "WebFetch(domain:www.ntiva.com)",
+      "Bash(grep -v \"^--$\")"
     ]
   }
 }

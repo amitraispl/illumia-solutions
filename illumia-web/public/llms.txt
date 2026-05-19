@@ -1,0 +1,48 @@
+# Illumia Solutions
+
+> Illumia Solutions is a global IT services firm headquartered in Kolkata, India
+> (98/9 Gopal Lal Tagore Rd, Baranagar, Kolkata 700036). Proxmox Silver Partner
+> and Apache Guacamole Commercial Support Partner. Specialises in enterprise
+> cybersecurity (PCI-DSS, ISO 27001, HIPAA, GDPR, SOC 2), open-source
+> infrastructure (Proxmox, ERPNext, NetBox, Wazuh, OpenVAS), and cloud solutions.
+> 20+ years of collective industry experience. Serves clients across India, USA,
+> Philippines, Australia, Kenya, and Mozambique with 24/7 multi-timezone support.
+> Contact: sales@illumiasolutions.com | +91 9332045178
+
+## Key Pages
+
+- Home: /
+- About Us: /about
+- Cloud Services: /cloud-services
+- Cyber Security: /cyber-security
+- Open Source Solutions: /open-source-solutions
+- Digital Transformation: /application-solutions
+- Case Studies: /case-studies
+- PCI-DSS Grocery Case Study: /case-studies/pci-dss-grocery
+- Cybersecurity Open Source Case Study: /case-studies/cybersecurity-open-source
+- Non-Profit Open Source Case Study: /case-studies/non-profit-open-source
+- FAQs: /faqs
+- Contact: /contact
+- AI Governance: /ai-governance
+- Proxmox Migration (VMware alternative): /proxmox-migration
+- ERPNext Implementation: /erpnext
+- NetBox — Network Source of Truth: /netbox
+- SIEM as a Service: /siem-as-a-service
+- EDR as a Service: /edr-as-a-service
+- PAM as a Service: /pam-as-a-service
+- Honeypot as a Service: /honeypot-as-a-service
+
+## Business Summary
+
+Illumia Solutions provides 47+ specialised IT service modules. Key capabilities:
+- PCI-DSS, ISO 27001, HIPAA, GDPR, SOC 2, EU AI Act compliance
+- EDR, SIEM (Wazuh/OSSIM), SOAR (Shuffle), PAM (Apache Guacamole), Honeypot (T-POT/MHN)
+- Proxmox private cloud, VMware migration, Ceph storage, hyperconverged infrastructure
+- ERPNext and NetBox implementation and managed hosting
+- 24/7 multi-timezone managed IT support across 6 countries
+
+## Certifications and Partnerships
+
+Team certifications: CISA, CISSP, CEH, CCIE
+Partners: Proxmox (Silver Partner), Apache Guacamole (Commercial Support Partner),
+Seqrite, Zextras, NetBox Labs, Force Networks, LifeBank Foundation

@@ -2,11 +2,37 @@ import type { Metadata } from "next";
 import CloudServicesContent from "./CloudContent";
 
 export const metadata: Metadata = {
-  title: "Cloud Services",
+  title: "Enterprise Cloud Services — Hosting, Migration, Storage & SD-WAN",
   description:
-    "At Illumia, we specialize in providing comprehensive cloud solutions tailored to meet the dynamic needs of businesses across various industries.",
+    "Comprehensive cloud infrastructure services: VPS, bare-metal hosting, cloud migration (Azure/AWS/GCP), Nextcloud storage, SD-WAN, disaster recovery, and 99.9% uptime SLA. Tailored for enterprise and mid-market businesses.",
+  alternates: { canonical: "/cloud-services/" },
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/cloud-services/#service",
+  name: "Enterprise Cloud Solutions",
+  serviceType: "Cloud Infrastructure Services",
+  description:
+    "Comprehensive cloud services including hosted infrastructure, SD-WAN, cloud migration, hosted storage, disaster recovery, and load balancing — designed to optimise operations, enhance security, and ensure seamless scalability.",
+  url: "https://illumiasolutions.com/cloud-services/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+  areaServed: [
+    { "@type": "Country", name: "India" },
+    { "@type": "Country", name: "United States" },
+  ],
+  category: "Cloud Computing",
 };
 
 export default function CloudServicesPage() {
-  return <CloudServicesContent />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <CloudServicesContent />
+    </>
+  );
 }
