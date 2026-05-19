@@ -16,7 +16,7 @@ import guacamoleLogo from "../../public/Apache-Guacamole-Partner.png";
 import netboxLabsLogo from "../../public/netbox-labs.png";
 
 export const metadata: Metadata = {
-  title: "Enterprise IT Services — Cloud, Cybersecurity & Open Source | Illumia Solutions",
+  title: "Illumia Solutions | Illuminating the Path to Success | Enterprise IT Services — Cloud, Cybersecurity & Open Source",
   description:
     "Enterprise-grade cloud infrastructure, cybersecurity, and open-source IT services. Proxmox Silver Partner serving businesses across India, USA, Australia, Philippines, Kenya, and Mozambique. CISA, CISSP, CEH, CCIE certified team.",
   alternates: { canonical: "/" },
@@ -88,13 +88,13 @@ export default function HomePage() {
         badge="Global IT Solutions"
         title={
           <>
-            Enterprise Cloud,{" "}
-            <span className="italic font-normal text-[#b31c33]">Cybersecurity</span>{" "}
-            & Open Source IT
+            Illuminating{" "}
+            <span className="italic font-normal text-[#b31c33]">the path</span>{" "}
+            to SUCCESS
           </>
         }
         description="Enterprise-grade cybersecurity, cloud, and open-source solutions — engineered for resilience, built for scale. From Kolkata to the globe, we deliver precision technology that powers ambitious businesses forward."
-        primaryCta={{ label: "Book a Free IT Assessment", href: "/contact#contact-form" }}
+        primaryCta={{ label: "Talk to Our Team", href: "/contact#contact-form" }}
         secondaryCta={{ label: "Learn About Us", href: "/about" }}
         imageSrc="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1400&q=85&auto=format&fit=crop"
         imageAlt="Diverse team collaborating around a table with laptops"
@@ -554,7 +554,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <SlideTextButton
-              text="Book a Free IT Assessment"
+              text="Contact Us Today"
               hoverText="Let's Talk"
               href="/contact#contact-form"
               className="h-auto py-4 rounded-xl bg-[#b31c33] hover:bg-[#920022] shadow-xl shadow-[#b31c33]/20 active:scale-95 tracking-wide font-body font-semibold"
