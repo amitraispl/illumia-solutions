@@ -30,13 +30,13 @@ const stats = [
 ];
 
 const partnerLogos = [
-  { src: seqriteLogo, alt: "Seqrite — Partner", width: 160, height: 60 },
-  { src: forceLogo, alt: "Force Networks — Partner", width: 120, height: 60 },
-  { src: zextrasLogo, alt: "Zextras — Partner", width: 120, height: 50 },
-  { src: proxmoxLogo, alt: "Proxmox — Silver Partner", width: 130, height: 60 },
-  { src: lifebankLogo, alt: "LifeBank Foundation — Partner", width: 140, height: 60 },
-  { src: guacamoleLogo, alt: "Apache Guacamole — Commercial Support Partner", width: 140, height: 60 },
-  { src: netboxLabsLogo, alt: "NetBox Labs — Partner", width: 140, height: 50 },
+  { src: seqriteLogo, alt: "Seqrite — Partner", width: 160, height: 60, href: "https://www.seqrite.com" },
+  { src: forceLogo, alt: "Force Networks — Partner", width: 120, height: 60, href: "https://www.forcetentech.com/new/index.html" },
+  { src: zextrasLogo, alt: "Zextras — Partner", width: 120, height: 50, href: "https://www.zextras.com" },
+  { src: proxmoxLogo, alt: "Proxmox — Silver Partner", width: 130, height: 60, href: "https://www.proxmox.com" },
+  { src: lifebankLogo, alt: "LifeBank Foundation — Partner", width: 140, height: 60, href: "https://lifebankfoundation.org" },
+  { src: guacamoleLogo, alt: "Apache Guacamole — Commercial Support Partner", width: 140, height: 60, href: "https://guacamole.apache.org" },
+  { src: netboxLabsLogo, alt: "NetBox Labs — Partner", width: 140, height: 50, href: "https://netboxlabs.com" },
 ];
 
 const whyChoose = [
@@ -139,8 +139,12 @@ export default function HomePage() {
               const renderedW = (logo.width / logo.height) * 40;
               const px = Math.round(20 + (renderedW / ((160 / 60) * 40)) * 20);
               return (
-                <div
+                <a
                   key={logo.alt}
+                  href={logo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={logo.alt}
                   style={{ paddingLeft: `${px}px`, paddingRight: `${px}px` }}
                   className="flex items-center"
                 >
@@ -153,7 +157,7 @@ export default function HomePage() {
                     unoptimized
                     className="object-contain max-h-12 max-w-36 w-auto opacity-55 hover:opacity-90 transition-all duration-200 grayscale hover:grayscale-0"
                   />
-                </div>
+                </a>
               );
             })}
           </Marquee>
