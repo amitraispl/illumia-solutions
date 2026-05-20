@@ -30,7 +30,7 @@ const collaborationCards = [
     title: "Mail Services",
     desc: "Reliable and secure email solutions that facilitate seamless communication within your organization. Our mail services include a mobile application for on-the-go access and multi-factor authentication (MFA) to enhance security.",
     href: "/email-as-a-service",
-    image: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=900&q=80&auto=format&fit=crop",
+    image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/jmQZAiwKdoDxDdt",
     imageAlt: "Secure enterprise mail services",
     wide: true,
   },
@@ -257,7 +257,7 @@ export default function ApplicationSolutionsPage() {
             <motion.div variants={fadeUp} className="lg:col-span-8 h-full">
               <div className="relative rounded-2xl overflow-hidden min-h-[360px] h-full">
                 <Image
-                  src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=1200&q=85&auto=format&fit=crop"
+                  src="https://nextcloud.illumiasolutions.com/public.php/dav/files/bn4533sctMcXbae"
                   alt="Project management board"
                   fill
                   className="object-cover"

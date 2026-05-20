@@ -99,7 +99,7 @@ export default function InfrastructureSolutionsPage() {
               className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl shadow-stone-200/60"
             >
               <Image
-                src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=1200&q=85&auto=format&fit=crop"
+                src="https://nextcloud.illumiasolutions.com/public.php/dav/files/WG6jaBQzC8KXMTw"
                 alt="On-premise private cloud infrastructure"
                 fill
                 className="object-cover"
@@ -128,7 +128,7 @@ export default function InfrastructureSolutionsPage() {
               className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl shadow-stone-300/40 order-2 lg:order-1"
             >
               <Image
-                src="https://images.unsplash.com/photo-1484557985045-edf25e08da73?w=1200&q=85&auto=format&fit=crop"
+                src="https://nextcloud.illumiasolutions.com/public.php/dav/files/RFRjxkgPS2AsG9t"
                 alt="Storage solutions"
                 fill
                 className="object-cover"

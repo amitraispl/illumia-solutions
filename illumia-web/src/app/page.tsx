@@ -131,7 +131,7 @@ export default function HomePage() {
           <Marquee
             pauseOnHover
             repeat={3}
-            className="w-full md:flex-1 [--duration:16s] [--gap:0px] p-0"
+            className="w-full md:flex-1 [--duration:30s] [--gap:0px] p-0"
             style={{
               maskImage: "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
               WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",

@@ -3,9 +3,9 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import proxmoxLogo from "../../public/Proxmox-Silver-Partner.png";
-import erpnextLogo from "../../public/photos/erpnext-logo.png";
-import netboxLogo from "../../public/photos/netbox-logo-light.svg";
+const proxmoxLogo = "https://nextcloud.illumiasolutions.com/public.php/dav/files/9m8WGwRQQkATm43";
+const erpnextLogo = "https://nextcloud.illumiasolutions.com/public.php/dav/files/S4WGDiE7tdR6x3Z";
+const netboxLogo = "https://nextcloud.illumiasolutions.com/public.php/dav/files/3kwHT7ekRWa5wtN";
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 

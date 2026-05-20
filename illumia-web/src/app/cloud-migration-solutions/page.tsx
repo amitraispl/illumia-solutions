@@ -36,14 +36,14 @@ const migrationTypes = [
     num: "02",
     title: "Cloud to Cloud",
     desc: "Migrate between cloud platforms or consolidate multi-cloud environments. Move workloads between Azure, AWS, GCP, and Oracle Cloud to optimise performance, cost, and compliance.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format&fit=crop",
+    image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/2WHwGdd9oY9Lg3D",
     imageAlt: "Cloud data transfer",
   },
   {
     num: "03",
     title: "Cloud to On-Prem",
     desc: "Repatriate workloads from public cloud back to on-premises or private cloud on VMware, Proxmox, or OpenStack — for sovereignty, compliance, or cost optimisation.",
-    image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=800&q=80&auto=format&fit=crop",
+    image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/pJ2xYkwB5KE8KSA",
     imageAlt: "On-premises data centre",
   },
 ];

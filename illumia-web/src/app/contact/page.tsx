@@ -531,7 +531,7 @@ export default function ContactPage() {
               {/* Office image */}
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://images.unsplash.com/photo-1742325646212-f917ba1feeaa?w=1200&q=85&auto=format&fit=crop"
+                  src="https://nextcloud.illumiasolutions.com/public.php/dav/files/6Rf9QKa4JbqEoPG"
                   alt="Howrah Bridge at dusk, Kolkata — our home base"
                   fill
                   className="object-cover"
