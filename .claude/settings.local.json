@@ -106,7 +106,9 @@
       "WebFetch(domain:powerconsulting.com)",
       "WebFetch(domain:www.netatwork.com)",
       "WebFetch(domain:www.ntiva.com)",
-      "Bash(grep -v \"^--$\")"
+      "Bash(grep -v \"^--$\")",
+      "Bash(powershell.exe *)",
+      "Bash(npm list *)"
     ]
   }
 }

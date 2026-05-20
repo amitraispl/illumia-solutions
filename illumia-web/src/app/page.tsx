@@ -96,7 +96,7 @@ export default function HomePage() {
         description="Enterprise-grade cybersecurity, cloud, and open-source solutions — engineered for resilience, built for scale. From Kolkata to the globe, we deliver precision technology that powers ambitious businesses forward."
         primaryCta={{ label: "Talk to Our Team", href: "/contact#contact-form" }}
         secondaryCta={{ label: "Learn About Us", href: "/about" }}
-        imageSrc="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1400&q=85&auto=format&fit=crop"
+        imageSrc="https://nextcloud.illumiasolutions.com/public.php/dav/files/f3oXqRHB6WJjT3i"
         imageAlt="Diverse team collaborating around a table with laptops"
       >
         {/* Stats row inside hero */}
