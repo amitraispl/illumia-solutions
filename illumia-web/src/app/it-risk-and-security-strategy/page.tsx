@@ -53,7 +53,7 @@ export default function ITRiskSecurityStrategyPage() {
       ]}
       closingText="Staying ahead of evolving threats requires more than reactive tools — it demands a continuously refined strategy. Illumia partners with your team to build, assess, and evolve a security programme that grows with your organisation."
       ctaText="Request a Risk Assessment"
-      heroImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1400&q=85&auto=format&fit=crop"
+      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/sRyZwMMPJnpiDoJ"
     />
   );
 }

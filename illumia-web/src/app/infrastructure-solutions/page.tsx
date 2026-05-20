@@ -39,7 +39,7 @@ export default function InfrastructureSolutionsPage() {
         description="At Illumia Solutions, we provide comprehensive infrastructure solutions designed to enhance your IT capabilities while reducing costs and complexity."
         primaryCta={{ label: "Explore Solutions", href: "#solutions" }}
         secondaryCta={{ label: "Contact Us", href: "/contact#contact-form" }}
-        imageSrc="https://images.unsplash.com/photo-1569025690938-a00729c9e1f9?w=1400&q=85&auto=format&fit=crop"
+        imageSrc="https://nextcloud.illumiasolutions.com/public.php/dav/files/sNr6oH4jcefKrQK"
         imageAlt="Infrastructure Solutions — Illumia Solutions"
       />
 

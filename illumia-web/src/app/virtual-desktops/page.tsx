@@ -16,7 +16,7 @@ export default function VirtualDesktopsPage() {
       description="Our Virtual Desktop Infrastructure (VDI) delivers robust, secure, and flexible desktop environments that cater to a variety of professional needs — from high-powered CPU and GPU desktops to secure sandboxed environments for software development teams."
       sectionTitle="Our Virtual Desktop Features"
       ctaText="Deploy Virtual Desktops"
-      heroImage="https://images.unsplash.com/photo-1617042375876-a13e36732a04?w=1400&q=85&auto=format&fit=crop"
+      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/D8SL256iSeBPC9C"
       closingText="Illumia Solutions' Virtual Desktop Infrastructure empowers your workforce to operate securely and productively from any location. Whether you're enabling remote teams, securing developer environments, or scaling desktop access across branches, our VDI solutions are purpose-built for the demands of modern business."
       features={[
         {

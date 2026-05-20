@@ -16,7 +16,7 @@ export default function WebMeetingSolutionPage() {
       description="In an increasingly remote and hybrid work environment, effective web-meeting solutions are essential for maintaining seamless communication and collaboration. Illumia Solutions provides top-tier web-meeting tools using Carbonio, Jitsi Meet, and Nextcloud Talk — delivering high-quality video and audio, robust security, and rich collaboration features."
       sectionTitle="Benefits of Our Web-Meeting Solutions"
       ctaText="Deploy Your Meeting Solution"
-      heroImage="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=1400&q=85&auto=format&fit=crop"
+      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/sBqb6TjTGsnYTyZ"
       closingText="Illumia Solutions' web-meeting solutions with Carbonio, Jitsi Meet, and Nextcloud Talk provide a secure, scalable, and cost-effective way to enhance your organization's communication and collaboration. With high-quality video and audio, robust security features, and seamless integration capabilities, our solutions ensure that your meetings are productive, secure, and efficient. Partner with Illumia Solutions to leverage the full potential of web-meeting tools and drive your business forward with confidence."
       features={[
         {

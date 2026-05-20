@@ -16,7 +16,7 @@ export default function DriveAsAServicePage() {
       description="In the era of digital transformation, efficient and secure data management is crucial for business success. Illumia Solutions provides cloud storage powered by Nextcloud — delivering unparalleled data privacy, secure file sharing, and robust collaboration capabilities to keep your data accessible, secure, and under your complete control."
       sectionTitle="Benefits of Our Cloud Storage Solutions"
       ctaText="Deploy Secure Drive"
-      heroImage="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1400&q=80&auto=format&fit=crop"
+      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/xj5MzKJMG87Ebg8"
       closingText="Illumia Solutions' cloud storage solutions with Nextcloud provide a secure, scalable, and cost-effective way to manage your organization's data. With advanced security features, seamless integration, and robust collaboration tools, our solutions ensure that your data is always protected, accessible, and under your control."
       features={[
         {

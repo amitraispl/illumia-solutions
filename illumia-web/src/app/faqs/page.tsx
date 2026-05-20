@@ -148,17 +148,17 @@ const faqData: Record<CategoryId, { q: string; a: string }[]> = {
 
 const categoryImages: Record<CategoryId, { src: string; alt: string; caption: string }> = {
   cloud: {
-    src: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1400&q=80",
+    src: "https://nextcloud.illumiasolutions.com/public.php/dav/files/xj5MzKJMG87Ebg8",
     alt: "Illuminated data centre corridor",
     caption: "Cloud infrastructure — built for availability and scale.",
   },
   security: {
-    src: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1400&q=80",
+    src: "https://nextcloud.illumiasolutions.com/public.php/dav/files/Enx2Nx5t3QN7PJy",
     alt: "Security operations centre dashboards",
     caption: "Cybersecurity — detecting, preventing, responding.",
   },
   "open-source": {
-    src: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1400&q=80",
+    src: "https://nextcloud.illumiasolutions.com/public.php/dav/files/pF4FqDGgdGEb7nZ",
     alt: "Open-source code on screen",
     caption: "Open source — freedom, transparency, control.",
   },
@@ -219,7 +219,7 @@ export default function FAQsPage() {
         description="Answers to the questions our clients ask most often — covering our cloud services, cybersecurity portfolio, and open-source solutions."
         primaryCta={{ label: "Browse Topics", href: "#topics" }}
         secondaryCta={{ label: "Contact Us", href: "/contact#contact-form" }}
-        imageSrc="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=85"
+        imageSrc="https://nextcloud.illumiasolutions.com/public.php/dav/files/SoSt49noKW8Kdem"
         imageAlt="Illumia Solutions knowledge base — connected systems"
       />
 
@@ -294,7 +294,7 @@ export default function FAQsPage() {
                   <div className="mt-12 rounded-2xl bg-[#f6f3f2] border border-[#e2bebd]/40 p-6 sm:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 overflow-hidden relative">
                     <div className="absolute right-0 top-0 bottom-0 w-1/3 hidden md:block opacity-20">
                       <Image
-                        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1000&q=80"
+                        src="https://nextcloud.illumiasolutions.com/public.php/dav/files/eF248ToaJKbaTZN"
                         alt=""
                         fill
                         className="object-cover"

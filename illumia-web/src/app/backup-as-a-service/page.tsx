@@ -16,7 +16,7 @@ export default function BackupAsAServicePage() {
       description="Backup as a Service provides a crucial safety net for businesses — ensuring data is continuously protected and readily recoverable from accidental deletions, hardware failures, and cyberattacks, with automated scheduling and fast recovery times."
       sectionTitle="Backup as a Service Features"
       ctaText="Protect Your Data"
-      heroImage="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&q=80&auto=format&fit=crop"
+      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/MGEq9LWor5NwxBx"
       darkHero={true}
       closingText="Partner with us to secure your business's most valuable asset — its data."
       features={[

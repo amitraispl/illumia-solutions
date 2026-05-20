@@ -25,7 +25,7 @@ export default function ServicePageTemplate({
   description,
   features,
   ctaText = "Get Started",
-  heroImage = "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1400&q=85&auto=format&fit=crop",
+  heroImage = "https://nextcloud.illumiasolutions.com/public.php/dav/files/yPMfpZFbJ9BX6Qo",
 }: ServicePageTemplateProps) {
   return (
     <>

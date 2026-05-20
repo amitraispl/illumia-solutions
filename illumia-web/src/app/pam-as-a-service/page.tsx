@@ -16,7 +16,7 @@ export default function PAMPage() {
       description="Privileged Access Management (PAM) as a Service offers robust security features through a cloud-based solution, providing essential management and monitoring of privileged accounts to prevent unauthorized access and potential security breaches."
       sectionTitle="PAM as a Service Features"
       ctaText="Secure Your Business"
-      heroImage="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1400&q=85&auto=format&fit=crop"
+      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/67QW8t95t8dW3dc"
       darkHero={true}
       closingText="With our expertise in Apache Guacamole, we offer seamless, secure remote access solutions tailored to your organization's needs, ensuring trusted connectivity and maintaining the highest levels of security and control."
       features={[

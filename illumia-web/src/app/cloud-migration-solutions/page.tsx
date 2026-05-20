@@ -29,7 +29,7 @@ const migrationTypes = [
     num: "01",
     title: "On-Prem to Public Cloud",
     desc: "Lift-and-shift or re-platform on-premises workloads to leading public cloud providers — Azure, AWS, GCP, and Oracle Cloud — with validated data integrity and minimal disruption.",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80&auto=format&fit=crop",
+    image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/SoSt49noKW8Kdem",
     imageAlt: "Global cloud network",
   },
   {
@@ -112,7 +112,7 @@ export default function CloudMigrationPage() {
         description="Seamless, low-risk migration pathways engineered to move your workloads with zero business disruption. From on-premises to public cloud, cloud-to-cloud, or repatriation — we manage the full lifecycle."
         primaryCta={{ label: "Plan Your Migration", href: "/contact#contact-form" }}
         secondaryCta={{ label: "Cloud Services", href: "/cloud-services#migration" }}
-        imageSrc="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1600&q=85&auto=format&fit=crop"
+        imageSrc="https://nextcloud.illumiasolutions.com/public.php/dav/files/yPMfpZFbJ9BX6Qo"
         imageAlt="Cloud migration data centre infrastructure"
       />
 

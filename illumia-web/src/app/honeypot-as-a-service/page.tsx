@@ -16,7 +16,7 @@ export default function HoneypotAsAServicePage() {
       description="As cybersecurity threats continue to evolve, businesses must implement advanced strategies to safeguard their data and assets. Illumia Solutions' Honeypot as a Service deploys deceptive systems that mimic legitimate targets — attracting attackers, gathering intelligence on their methods, and catching threats that bypass your primary defenses."
       sectionTitle="What We Offer"
       ctaText="Secure Your Business"
-      heroImage="https://images.unsplash.com/photo-1605792657660-596af9009e82?w=1400&q=85&auto=format&fit=crop"
+      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/TZijzYNdc9xB4bx"
       darkHero={true}
       closingText="Protect your business with our Honeypot as a Service and gain peace of mind knowing that your cybersecurity is in expert hands. Contact us today to learn more about how we can help secure your digital assets."
       features={[

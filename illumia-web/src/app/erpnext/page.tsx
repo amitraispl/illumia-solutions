@@ -16,7 +16,7 @@ export default function ERPNextPage() {
       description="SAP, Oracle, and Microsoft Dynamics are priced for Fortune 500 budgets. ERPNext — built by Frappe Technologies — is a 100% open-source ERP platform under the GNU GPLv3, covering accounting, manufacturing, HR, CRM, inventory, projects, and asset management. Deploy on your own servers or in Illumia's private cloud with no per-seat licensing, no concurrent-user limits, and no vendor lock-in."
       sectionTitle="What ERPNext Covers"
       ctaText="Start ERPNext Implementation"
-      heroImage="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1400&q=85&auto=format&fit=crop"
+      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/J8BGsyfYi89YSgR"
       darkHero={true}
       closingText="Illumia delivers ERPNext as a complete business platform — not just a software install. Our team handles requirements gathering, chart-of-accounts design, custom DocType development, data migration from legacy ERPs, user training, and post-go-live support. Whether you're a 30-person manufacturer or a multi-entity group, the same platform scales with you — without renegotiating a licence agreement every year."
       features={[

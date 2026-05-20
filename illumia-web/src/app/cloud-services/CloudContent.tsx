@@ -88,7 +88,7 @@ export default function CloudServicesContent() {
         description="At Illumia, we specialize in providing comprehensive cloud solutions tailored to meet the dynamic needs of businesses across industries. We leverage advanced cloud technology to optimize operations, enhance security, and ensure seamless scalability."
         primaryCta={{ label: "Consult an Expert", href: "/contact#contact-form" }}
         secondaryCta={{ label: "View Services", href: "#hosting" }}
-        imageSrc="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1600&q=85&auto=format&fit=crop"
+        imageSrc="https://nextcloud.illumiasolutions.com/public.php/dav/files/XrNLy3ECNjZanyn"
         imageAlt="Cloud infrastructure — Illumia Solutions"
       />
 
@@ -156,7 +156,7 @@ export default function CloudServicesContent() {
                 className="group relative block rounded-2xl overflow-hidden min-h-[220px] h-full"
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=900&q=80&auto=format&fit=crop"
+                  src="https://nextcloud.illumiasolutions.com/public.php/dav/files/xj5MzKJMG87Ebg8"
                   alt="Container infrastructure"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -373,7 +373,7 @@ export default function CloudServicesContent() {
                 className="group relative block rounded-2xl overflow-hidden min-h-[220px] h-full"
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80&auto=format&fit=crop"
+                  src="https://nextcloud.illumiasolutions.com/public.php/dav/files/MGEq9LWor5NwxBx"
                   alt="Backup infrastructure"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"

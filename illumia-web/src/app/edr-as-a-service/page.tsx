@@ -16,7 +16,7 @@ export default function EDRAsAServicePage() {
       description="Endpoint Detection and Response (EDR) is a cybersecurity solution designed to monitor and respond to potential threats on endpoints such as laptops, desktops, and mobile devices. EDR tools are equipped with advanced capabilities to detect, investigate, and mitigate suspicious activities and attacks in real-time."
       sectionTitle="EDR as a Service Features"
       ctaText="Contact Us"
-      heroImage="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1400&q=85&auto=format&fit=crop"
+      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/NW7zYB9ra9eBpmf"
       darkHero={true}
       closingText="Invest in our EDR as a service to safeguard your business from cyber threats and ensure peace of mind with expert-managed security. Contact us today to learn more about how we can protect your endpoints and enhance your company's defense."
       features={[

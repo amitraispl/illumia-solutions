@@ -42,7 +42,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
       "Nextcloud · ERPNext · Proxmox · Ceph stack",
     ],
     image:
-      "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=800&q=70",
+      "https://nextcloud.illumiasolutions.com/public.php/dav/files/7meetxSGsFNNkYa",
   },
   {
     id: "cyber",
@@ -59,7 +59,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
       "On-prem data sovereignty, audit-ready posture",
     ],
     image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=70",
+      "https://nextcloud.illumiasolutions.com/public.php/dav/files/FJHofMbWQQKjGW8",
   },
   {
     id: "pci",
@@ -76,7 +76,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
       "Zero downtime through migration and audit",
     ],
     image:
-      "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=800&q=70",
+      "https://nextcloud.illumiasolutions.com/public.php/dav/files/p7oPQLdGntqDDza",
   },
 ];
 

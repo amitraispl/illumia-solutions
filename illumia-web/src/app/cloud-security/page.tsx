@@ -53,7 +53,7 @@ export default function CloudSecurityPage() {
       ]}
       closingText="Cloud adoption shouldn't come at the cost of security. Illumia's cloud security practice ensures your cloud environments are protected, compliant, and continuously monitored — from first migration to full operation."
       ctaText="Request a Cloud Security Assessment"
-      heroImage="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1400&q=85&auto=format&fit=crop"
+      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/nzGtecWKC8T2P5R"
     />
   );
 }

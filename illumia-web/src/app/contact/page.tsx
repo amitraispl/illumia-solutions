@@ -154,7 +154,7 @@ export default function ContactPage() {
         description="Share your challenge and we'll map a path forward. Our team spans time zones and disciplines — someone is always ready to help."
         primaryCta={{ label: "Jump to the Form", href: "#contact-form" }}
         secondaryCta={{ label: "Our Story", href: "/about" }}
-        imageSrc="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=85&auto=format&fit=crop"
+        imageSrc="https://nextcloud.illumiasolutions.com/public.php/dav/files/tQBd3DwYsarGcS6"
         imageAlt="Modern collaborative office workspace"
       />
 

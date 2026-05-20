@@ -16,7 +16,7 @@ export default function SiemPage() {
       description="In today's dynamic cybersecurity landscape, organizations need advanced tools to detect, analyze, and respond to security threats effectively. Illumia Solutions provides robust Security Incident and Event Management (SIEM) solutions powered by Wazuh and OSSIM."
       sectionTitle="Benefits of Our SIEM Solutions"
       ctaText="Secure Your Organization"
-      heroImage="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1400&q=85&auto=format&fit=crop"
+      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/igAsTKzXSAAxdKz"
       closingText="Illumia Solutions' SIEM solutions with Wazuh and OSSIM provide a comprehensive, scalable, and cost-effective way to enhance your organization's cybersecurity capabilities."
       features={[
         {

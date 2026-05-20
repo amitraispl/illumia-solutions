@@ -39,7 +39,7 @@ const collaborationCards = [
     title: "Cloud Storage",
     desc: "Scalable cloud storage solutions that provide secure and easy access to your data from anywhere, anytime.",
     href: "/drive-as-a-service",
-    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=900&q=80&auto=format&fit=crop",
+    image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/xj5MzKJMG87Ebg8",
     imageAlt: "Cloud storage infrastructure",
     wide: false,
   },
@@ -48,7 +48,7 @@ const collaborationCards = [
     title: "Web-Meeting Solutions",
     desc: "High-quality video conferencing tools that enable effective remote communication and collaboration.",
     href: "/web-meeting-solution",
-    image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=900&q=80&auto=format&fit=crop",
+    image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/sBqb6TjTGsnYTyZ",
     imageAlt: "Video meeting collaboration",
     wide: false,
   },
@@ -57,7 +57,7 @@ const collaborationCards = [
     title: "Collaborative Editing",
     desc: "Real-time collaborative editing tools that enhance teamwork and productivity by allowing multiple users to work on documents simultaneously.",
     href: "/application-solutions#collaboration",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80&auto=format&fit=crop",
+    image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/go4pZCxPEdoHXCf",
     imageAlt: "Team collaborative editing",
     wide: true,
   },
@@ -78,7 +78,7 @@ export default function ApplicationSolutionsPage() {
         description="Our application solutions are designed to enhance collaboration, streamline project management, and ensure robust security. We leverage the best open-source technologies to deliver innovative solutions tailored to your business needs."
         primaryCta={{ label: "Explore Solutions", href: "#collaboration" }}
         secondaryCta={{ label: "Contact Us", href: "/contact#contact-form" }}
-        imageSrc="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1400&q=85&auto=format&fit=crop"
+        imageSrc="https://nextcloud.illumiasolutions.com/public.php/dav/files/NsbqnMb35DJeTe9"
         imageAlt="Application solutions — Illumia Solutions"
       />
 

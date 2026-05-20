@@ -11,9 +11,9 @@ if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
 const EXPO: any = [0.16, 1, 0.3, 1];
 
 const HERO_IMG =
-  "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1600&q=80";
+  "https://nextcloud.illumiasolutions.com/public.php/dav/files/FJHofMbWQQKjGW8";
 const SIDEBAR_IMG =
-  "https://images.unsplash.com/photo-1614064548237-096d4b40ebc7?auto=format&fit=crop&w=600&q=80";
+  "https://nextcloud.illumiasolutions.com/public.php/dav/files/jXwrQtSc38rXyMb";
 
 const navSections = [
   { id: "overview", label: "Client Overview" },

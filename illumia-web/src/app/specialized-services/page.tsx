@@ -53,7 +53,7 @@ export default function SpecializedServicesPage() {
       ]}
       closingText="Every business has unique security requirements. Illumia's specialised services are custom-scoped to fill the gaps your standard programmes leave behind — delivering targeted protection without operational disruption."
       ctaText="Request a Security Consultation"
-      heroImage="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=85&auto=format&fit=crop"
+      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/tQBd3DwYsarGcS6"
     />
   );
 }

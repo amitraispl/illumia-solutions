@@ -16,7 +16,7 @@ export default function DisasterRecoveryPage() {
       description="At Illumia Solutions, we understand the critical importance of maintaining business continuity under any circumstances. Our Disaster Recovery solutions provide robust, scalable, and secure recovery processes that ensure your business can continue operations with minimal disruption."
       sectionTitle="Our Disaster Recovery Solutions"
       ctaText="Protect Your Business"
-      heroImage="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1400&q=85&auto=format&fit=crop"
+      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/FJHofMbWQQKjGW8"
       darkHero={true}
       closingText="At Illumia Solutions, we are dedicated to providing Disaster Recovery solutions that not only secure your data but also ensure your operations can quickly resume after any disruption. Our DR solutions are designed to give you peace of mind, knowing that your business is always prepared for the unexpected. Contact us today to discuss how we can customize a DR solution that fits your business needs."
       features={[

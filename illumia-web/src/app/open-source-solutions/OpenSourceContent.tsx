@@ -28,7 +28,7 @@ const modules = [
     ),
     title: "Infrastructure Modules",
     desc: "Software-defined infrastructure built on the backbone of robust open-source foundations. Our modules focus on extreme availability and automated scaling.",
-    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=900&q=80&auto=format&fit=crop",
+    image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/xj5MzKJMG87Ebg8",
     imageAlt: "Server infrastructure and hardware",
     items: [
       "Container Orchestration & Kubernetes Fabrics",
@@ -45,7 +45,7 @@ const modules = [
     ),
     title: "Application Modules",
     desc: "Modular application blocks designed for seamless integration and rapid deployment. Accelerate your digital roadmap with pre-hardened components.",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80&auto=format&fit=crop",
+    image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/Ns7NS936ZKDEBMR",
     imageAlt: "Coding collaboration and application development",
     items: [
       "Microservices Frameworks & API Gateways",
@@ -62,7 +62,7 @@ const modules = [
     ),
     title: "Cybersecurity Modules",
     desc: "Open-source security that doesn't compromise. Trust but verify with our auditable, community-vetted protection layers.",
-    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=900&q=80&auto=format&fit=crop",
+    image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/igAsTKzXSAAxdKz",
     imageAlt: "Cybersecurity and code security",
     items: [
       "Identity & Access Management (IAM) Solutions",
@@ -98,7 +98,7 @@ export default function OpenSourceSolutionsContent() {
         }
         description="Harnessing the collective intelligence of the global open-source community to deliver enterprise-grade reliability. We don't just use open source — we refine it into high-precision instruments for modern business."
         primaryCta={{ label: "Explore Our Ecosystem", href: "/contact#contact-form" }}
-        imageSrc="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1400&q=85&auto=format&fit=crop"
+        imageSrc="https://nextcloud.illumiasolutions.com/public.php/dav/files/c5XdbEk78Jpnqm8"
         imageAlt="Open source coding and development"
       />
 
@@ -246,7 +246,7 @@ export default function OpenSourceSolutionsContent() {
       {/* ─── Pull Quote ───────────────────────────────────────────────────── */}
       <section className="py-14 lg:py-28 bg-[#1c1b1b] text-white relative overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=60&auto=format&fit=crop"
+          src="https://nextcloud.illumiasolutions.com/public.php/dav/files/Ns7NS936ZKDEBMR"
           alt=""
           fill
           className="object-cover opacity-[0.08]"

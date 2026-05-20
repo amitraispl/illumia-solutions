@@ -99,7 +99,7 @@ export default function CyberSecurityContent() {
         description="Navigating the complexities of modern digital threats requires more than just tools. It requires a partner dedicated to precision in cybersecurity strategy — protecting your assets, maintaining compliance, and ensuring business continuity."
         primaryCta={{ label: "Audit your Infrastructure", href: "/contact#contact-form" }}
         secondaryCta={{ label: "View Case Studies", href: "/contact#contact-form" }}
-        imageSrc="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1400&q=85&auto=format&fit=crop"
+        imageSrc="https://nextcloud.illumiasolutions.com/public.php/dav/files/24pgQ3pHZkCZmE9"
         imageAlt="Cybersecurity professional"
         imageGrayscale={true}
         imagePosition="object-top"
@@ -275,7 +275,7 @@ export default function CyberSecurityContent() {
       {/* ─── Managed SOC Banner ───────────────────────────────────────────── */}
       <section className="py-20 bg-[#1c1b1b] text-white text-center relative overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1563986768494-4759ece87d8b?w=1600&q=60&auto=format&fit=crop"
+          src="https://nextcloud.illumiasolutions.com/public.php/dav/files/3y5Xx2yCXRnm9SW"
           alt=""
           fill
           className="object-cover opacity-[0.12]"

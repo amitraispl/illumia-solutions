@@ -16,7 +16,7 @@ export default function MonitoringAnalyticsPage() {
       description="Illumia Solutions offers advanced monitoring and analytical system solutions powered by CheckMK and Elastiflow — providing real-time monitoring, network flow analysis, and detailed reporting to ensure your organization has the tools needed for efficient IT management."
       sectionTitle="Benefits of Our Monitoring and Analytical System Solutions"
       ctaText="Gain Full Visibility"
-      heroImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&q=80&auto=format&fit=crop"
+      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/aNxHyHwJoLJ4G9e"
       darkHero={true}
       closingText="Illumia Solutions' monitoring and analytical system solutions with CheckMK and Elastiflow provide a comprehensive, scalable, and cost-effective way to enhance your organization's IT management capabilities. With powerful monitoring, detailed reporting, and anomaly detection features, ensure your IT infrastructure is always performing at its best."
       features={[

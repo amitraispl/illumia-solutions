@@ -19,7 +19,7 @@ const caseStudies = [
     body:
       "The organisation was locked into a sprawl of proprietary licences across collaboration, ERP, virtualisation and storage. Annual renewals alone were eating into mission-critical programme budgets. Illumia delivered an end-to-end migration — Nextcloud for collaboration, ERPNext for financial operations, Proxmox for virtualisation, and Ceph for distributed storage — orchestrated across 1,000+ branch sites with zero data loss and no service interruption.",
     image:
-      "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=1600&q=80",
+      "https://nextcloud.illumiasolutions.com/public.php/dav/files/7meetxSGsFNNkYa",
     metrics: [
       { value: "50–65%", label: "IT Cost Reduction" },
       { value: "~1,000", label: "Branches Migrated" },
@@ -41,7 +41,7 @@ const caseStudies = [
     body:
       "Regulatory scrutiny and growing threat exposure demanded a defensible security posture without commercial-tool licensing inflation. Illumia engineered a layered defence: Wazuh for SIEM and XDR, Suricata for network IDS, OpenVAS for vulnerability scanning, and an internal SOC playbook for incident response. The result — full audit trails, 24/7 monitoring, and data sovereignty on the customer's own infrastructure.",
     image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1600&q=80",
+      "https://nextcloud.illumiasolutions.com/public.php/dav/files/FJHofMbWQQKjGW8",
     metrics: [
       { value: "24/7", label: "Monitoring" },
       { value: "Audit", label: "Ready" },
@@ -63,7 +63,7 @@ const caseStudies = [
     body:
       "A regional grocery chain processing rising card volumes faced a hard deadline to achieve PCI DSS SAQ D Level 2 attestation. Illumia owned the entire programme: scoping the cardholder data environment, segmenting payment networks, hardening point-of-sale endpoints, implementing logging and quarterly ASV scans, and authoring the evidence package for the QSA assessment. Compliance achieved on the first attempt.",
     image:
-      "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=1600&q=80",
+      "https://nextcloud.illumiasolutions.com/public.php/dav/files/p7oPQLdGntqDDza",
     metrics: [
       { value: "Level 2", label: "PCI DSS SAQ D" },
       { value: "17", label: "Locations" },
@@ -123,7 +123,7 @@ export default function CaseStudiesPage() {
         description="From cost transformation to compliance — see how Illumia Solutions has delivered measurable, durable impact for organisations across industries and geographies."
         primaryCta={{ label: "Explore Case Studies", href: "#case-studies" }}
         secondaryCta={{ label: "Start Your Story", href: "/contact#contact-form" }}
-        imageSrc="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=85"
+        imageSrc="https://nextcloud.illumiasolutions.com/public.php/dav/files/eF248ToaJKbaTZN"
         imageAlt="Illumia Solutions client success — team collaboration"
       >
         <div className="grid grid-cols-3 gap-4 max-w-md">

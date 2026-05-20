@@ -16,7 +16,7 @@ export default function ProjectManagementSolutionsPage() {
       description="Effective project management is essential for the success and growth of any organization. Illumia Solutions offers comprehensive project management solutions powered by Redmine, Zammad, and OpenProject, designed to streamline your project workflows, issue tracking, and customer support processes."
       sectionTitle="Benefits of Our Project Management Solutions"
       ctaText="Streamline Your Workflow"
-      heroImage="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1400&q=80&auto=format&fit=crop"
+      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/mb44gozHGc4PyXt"
       closingText="Illumia Solutions' project management solutions with Redmine, Zammad, and OpenProject provide a comprehensive, scalable, and cost-effective way to enhance your organization's project management and collaboration capabilities."
       features={[
         {

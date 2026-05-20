@@ -53,7 +53,7 @@ export default function ComplianceServicesPage() {
       ]}
       closingText="Compliance doesn't have to be a burden. Illumia's dedicated compliance practice simplifies the regulatory landscape — giving your team expert guidance, ongoing support, and cost-effective solutions that keep your organisation compliant."
       ctaText="Request a Compliance Consultation"
-      heroImage="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1400&q=85&auto=format&fit=crop"
+      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/Lfn93dPxRZmcRpY"
     />
   );
 }
