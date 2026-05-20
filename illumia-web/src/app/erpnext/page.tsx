@@ -47,6 +47,19 @@ export default function ERPNextPage() {
           ],
         },
         {
+          title: "Healthcare Management",
+          items: [
+            {
+              label: "Patient & Clinical Workflows",
+              text: "End-to-end OPD and IPD management — appointment scheduling, patient records, bed assignment, lab orders, radiology, and discharge — all linked to a single encrypted patient chart.",
+            },
+            {
+              label: "Billing, Pharmacy & Compliance",
+              text: "Automated healthcare billing, pharmacy inventory with expiry tracking, and NABH/ABDM-aligned audit logs. Reduce revenue leakage and meet accreditation requirements without separate compliance software.",
+            },
+          ],
+        },
+        {
           title: "Inventory & Warehouse",
           items: [
             {
