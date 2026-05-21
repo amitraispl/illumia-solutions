@@ -1,6 +1,6 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import PageHero from "@/components/PageHero";
-import ServicesEcosystem from "@/components/ServicesEcosystem";
+// import ServicesEcosystem from "@/components/ServicesEcosystem";
 
 interface Feature {
   title: string;
@@ -121,7 +121,7 @@ export default function ServicePageTemplate({
         </div>
       </section>
 
-      <ServicesEcosystem />
+      {/* <ServicesEcosystem /> */}
     </>
   );
 }

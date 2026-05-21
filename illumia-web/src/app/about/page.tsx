@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
-import ServicesEcosystem from "@/components/ServicesEcosystem";
+// import ServicesEcosystem from "@/components/ServicesEcosystem";
 import AboutFlipCard from "@/components/AboutFlipCard";
 
 export const metadata: Metadata = {
@@ -256,7 +256,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <ServicesEcosystem />
+      {/* <ServicesEcosystem /> */}
     </>
   );
 }

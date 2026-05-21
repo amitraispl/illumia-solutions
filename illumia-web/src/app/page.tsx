@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import ServicesEcosystem from "@/components/ServicesEcosystem";
+// import ServicesEcosystem from "@/components/ServicesEcosystem";
 import TechSpotlight from "@/components/TechSpotlight";
 import PageHero from "@/components/PageHero";
 import { Marquee } from "@/components/ui/marquee";
@@ -541,7 +541,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <ServicesEcosystem />
+      {/* <ServicesEcosystem /> */}
 
       {/* ─── CTA Strip ────────────────────────────────────────────────────── */}
       <section className="bg-[#fcf9f8] py-10 md:py-16 border-t border-[#e2bebd]/20">

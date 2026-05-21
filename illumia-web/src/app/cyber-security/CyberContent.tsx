@@ -1,10 +1,10 @@
-"use client";
+﻿"use client";
 
 import { motion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
-import ServicesEcosystem from "@/components/ServicesEcosystem";
+// import ServicesEcosystem from "@/components/ServicesEcosystem";
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
@@ -300,7 +300,7 @@ export default function CyberSecurityContent() {
         </div>
       </section>
 
-      <ServicesEcosystem />
+      {/* <ServicesEcosystem /> */}
     </>
   );
 }
