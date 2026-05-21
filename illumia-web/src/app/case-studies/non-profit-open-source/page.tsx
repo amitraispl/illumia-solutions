@@ -197,8 +197,8 @@ export default function NonProfitCaseStudy() {
                 ))}
               </div>
             </div>
-            <div className="np-hero-fade lg:col-span-5">
-              <div className="relative aspect-[5/4] overflow-hidden rounded-3xl border border-[#e2bebd]/60 shadow-lg">
+            <div className="np-hero-fade lg:col-span-5 flex flex-col items-center gap-10 lg:mt-10">
+              <div className="relative aspect-[5/4] w-full overflow-hidden rounded-3xl border border-[#e2bebd]/60 shadow-lg">
                 <Image
                   src={HERO_IMG}
                   alt="Community microfinance"
@@ -207,6 +207,21 @@ export default function NonProfitCaseStudy() {
                   className="object-cover"
                   priority
                 />
+              </div>
+              {/* Scroll indicator */}
+              <style>{`
+                @keyframes np-scroll-dot {
+                  0%   { transform: translateY(0);    opacity: 1; }
+                  65%  { transform: translateY(10px); opacity: 0; }
+                  100% { transform: translateY(0);    opacity: 0; }
+                }
+                .np-scroll-dot { animation: np-scroll-dot 1.8s cubic-bezier(0.45,0,0.55,1) infinite; }
+              `}</style>
+              <div className="flex flex-col items-center gap-2.5" aria-label="Scroll down to read">
+                <span className="select-none font-body text-[9px] font-bold uppercase tracking-[0.35em] text-[#b31c33]/40">Scroll</span>
+                <div className="relative flex h-9 w-[22px] items-start justify-center rounded-full border border-[#b31c33]/25 pt-[7px] shadow-[0_0_0_4px_rgba(179,28,51,0.04)]">
+                  <div className="np-scroll-dot h-[7px] w-[3px] rounded-full bg-[#b31c33]/50" />
+                </div>
               </div>
             </div>
           </div>
