@@ -141,6 +141,9 @@ export default function PrivacyPolicyPage() {
             <span className="w-1 h-1 rounded-full bg-stone-300 shrink-0" />
             <span>Illumia Solutions Pvt. Ltd.</span>
           </div>
+          <p className="mt-6 font-body text-sm text-stone-500 leading-relaxed max-w-2xl">
+            This Privacy Policy applies to visitors to our website and to prospective and existing clients who engage our services.
+          </p>
         </div>
       </div>
 
