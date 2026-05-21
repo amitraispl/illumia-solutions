@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Drive as a Service — Secure Cloud Storage | Illumia Solutions",
   description:
     "Secure self-hosted cloud storage powered by Nextcloud — seamless file access with complete data sovereignty.",
+  alternates: { canonical: "/drive-as-a-service/" },
 };
 
 export default function DriveAsAServicePage() {

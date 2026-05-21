@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Proxmox VE Migration — Escape the VMware Tax | Illumia Solutions",
   description:
     "End-to-end migration from VMware ESXi/vSphere to Proxmox Virtual Environment. Zero licensing cost, identical enterprise capabilities — VMs, containers, HA clusters, live migration. Typical hypervisor cost reduction of 60–80%.",
+  alternates: { canonical: "/proxmox-migration/" },
 };
 
 export default function ProxmoxMigrationPage() {

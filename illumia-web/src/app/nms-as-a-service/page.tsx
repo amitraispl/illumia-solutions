@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "NMS as a Service — Network Management System | Illumia Solutions",
   description:
     "Network Management System (NMS) as a Service — comprehensive tools and services to monitor, manage, and optimize your network infrastructure.",
+  alternates: { canonical: "/nms-as-a-service/" },
 };
 
 export default function NMSPage() {

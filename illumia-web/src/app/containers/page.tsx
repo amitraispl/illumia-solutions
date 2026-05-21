@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Container Solutions — LXC, LXD, Docker & Kubernetes | Illumia Solutions",
   description:
     "Container hosting with LXC, LXD, Docker, and Kubernetes orchestration — horizontal isolation, managed support, and flexible deployment for modern workloads.",
+  alternates: { canonical: "/containers/" },
 };
 
 export default function ContainersPage() {

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Project Management Solutions — Redmine, Zammad & OpenProject | Illumia Solutions",
   description:
     "Flexible open-source project management with Redmine, Zammad, and OpenProject tailored to your team's workflow.",
+  alternates: { canonical: "/project-management-solutions/" },
 };
 
 export default function ProjectManagementSolutionsPage() {

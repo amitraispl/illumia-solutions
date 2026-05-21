@@ -8,7 +8,8 @@ import AboutFlipCard from "@/components/AboutFlipCard";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Providing clients with the tools and guidance they need to excel in an ever-changing business landscape, Illumia Solutions envisions itself as the beacon of innovation.",
+    "Illumia Solutions — CISA, CISSP, CEH, CCIE certified IT services firm based in Kolkata, India. 20+ years collective experience in cybersecurity, cloud infrastructure, and open-source solutions across India, USA, Australia, and beyond.",
+  alternates: { canonical: "/about/" },
 };
 
 const values = [

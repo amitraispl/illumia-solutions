@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "IT Risk and Security Strategy | Illumia Solutions",
   description:
     "In today's fast-paced digital world, staying ahead of evolving threats is critical. Illumia Solutions provides a thorough IT risk and security strategy that continuously assesses and integrates the latest security frameworks.",
+  alternates: { canonical: "/it-risk-and-security-strategy/" },
 };
 
 export default function ITRiskSecurityStrategyPage() {

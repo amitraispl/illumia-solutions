@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Email as a Service — Enterprise Mail | Illumia Solutions",
   description:
     "Enterprise-grade email infrastructure built on Zimbra/Carbonio with Proxmox Mail Gateway for secure, reliable communications.",
+  alternates: { canonical: "/email-as-a-service/" },
 };
 
 export default function EmailAsAServicePage() {

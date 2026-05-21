@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Application Security | Illumia Solutions",
   description:
     "Illumia Solutions provides comprehensive application security services, from identifying vulnerabilities to enhancing security architecture and integrating secure development practices.",
+  alternates: { canonical: "/application-security/" },
 };
 
 export default function ApplicationSecurityPage() {

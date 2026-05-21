@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "PAM as a Service — Privileged Access Management | Illumia Solutions",
   description:
     "Privileged Access Management (PAM) as a Service — robust security features through a cloud-based solution, providing essential management and monitoring of privileged accounts.",
+  alternates: { canonical: "/pam-as-a-service/" },
 };
 
 export default function PAMPage() {

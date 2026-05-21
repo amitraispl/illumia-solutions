@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Virtual Private Server — Flexible, Secure, No Lock-in | Illumia Solutions",
   description:
     "VPS offerings meticulously designed to meet the diverse needs of modern businesses, combining scalability, performance, and cost-efficiency with enhanced cybersecurity options.",
+  alternates: { canonical: "/virtual-private-server/" },
 };
 
 export default function VPSPage() {

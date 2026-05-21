@@ -35,7 +35,7 @@
 Max is 60 chars. Google will rewrite it. Suggested fix:
 
 ```
-"Enterprise IT Services — Cloud, Cybersecurity & Open Source | Illumia Solutions"
+"Illumia Solutions | Enterprise IT Services — Cloud, Cybersecurity & Open Source"
 ```
 
 (Still 80 chars — trim further to stay under 60.)
@@ -63,18 +63,6 @@ twitter: {
 
 ---
 
-### 3. `.docx` files exposed in `/public/photos/`
-
-Four Word documents are publicly served and indexable by Google:
-
-- `Why choose Illumia Solutions.docx`
-- `FAQs.docx`
-- `Global Reach.docx`
-- `About Us.docx`
-
-Potential content/info leak and junk index entries. Delete from `public/` or move outside the repo's public directory.
-
----
 
 ### 4. Sitemap `lastModified: new Date()` — always shows today's date
 
@@ -98,20 +86,6 @@ return routes.map(({ path, priority, changeFrequency }) => ({
 
 ## High Priority (fix within 1 week)
 
-### 5. Duplicate URL pairs — canonical conflict risk
-
-Both variants exist in the sitemap with no canonical resolution:
-
-| Short URL | Long URL |
-|-----------|----------|
-| `/siem/` | `/siem-as-a-service/` |
-| `/edr-solution/` | `/edr-as-a-service/` |
-| `/pam/` | `/pam-as-a-service/` |
-| `/honeypot-solution/` | `/honeypot-as-a-service/` |
-
-If content is identical/near-identical → consolidate to one URL and 301 redirect the other.
-If content differs → add `alternates: { canonical: "/preferred-url/" }` to each page's metadata.
-
 ---
 
 ### 6. `/collaboration-solutions/` page missing from sitemap
@@ -132,54 +106,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about/" },
 };
 ```
-
----
-
-### 8. `images: { unoptimized: true }` — no WebP/AVIF delivery
-
-`next.config.ts:13` — forced by `output: "export"` (static export cannot do on-demand image optimization). Hero images from Unsplash are large JPEGs. Impact: slower LCP, larger payloads.
-
-Fix options:
-- Pre-optimize images at build time using `sharp` CLI
-- Use Cloudflare Image Resizing or similar CDN-level optimization
-
----
-
-### 9. `sameAs` in Organization schema points to GitHub Pages dev deployment
-
-`src/app/layout.tsx:41`
-
-```ts
-sameAs: ["https://amitraispl.github.io/illumia-solutions/"],
-```
-
-`sameAs` should link to authoritative profiles (LinkedIn, Crunchbase, Google Business Profile, etc.), not a dev/staging site. Wrong `sameAs` dilutes entity disambiguation in Knowledge Graph.
-
----
-
-## Medium Priority (fix within 1 month)
-
-### 10. No security headers
-
-Static export (`output: "export"`) cannot set HTTP headers via Next.js config. Must be set at CDN/hosting level (Cloudflare, Vercel, Netlify, etc.).
-
-Missing headers:
-- `Content-Security-Policy`
-- `Strict-Transport-Security`
-- `X-Content-Type-Options: nosniff`
-- `X-Frame-Options: SAMEORIGIN`
-- `Referrer-Policy: strict-origin-when-cross-origin`
-
----
-
-### 11. Missing structured data types
-
-| Schema Type | Page | Impact |
-|-------------|------|--------|
-| `WebSite` + `SearchAction` | Root layout | Sitelinks search box eligibility |
-| `BreadcrumbList` | All inner pages | Rich breadcrumb in SERPs |
-| `Service` | All service pages | Service rich results |
-| `FAQPage` | `/faqs/` | FAQ accordion rich results |
 
 ---
 
@@ -216,25 +142,9 @@ Current file explicitly allows GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot. 
 
 ---
 
-## Low Priority (backlog)
-
-### 15. IndexNow not implemented
-
-IndexNow lets you notify Bing/Yandex of URL changes instantly on deployment. Low effort, worthwhile for a 60+ page site that updates regularly.
-
-Reference: [indexnow.org](https://www.indexnow.org)
-
----
-
 ### 16. `keywords` meta tag in root layout — dead weight
 
 `src/app/layout.tsx:52` — Google has ignored the `keywords` meta tag since ~2009. Not harmful, but dead weight. Remove or leave as-is.
-
----
-
-### 17. External Unsplash hero images
-
-No control over CDN availability, image format, or caching headers. If Unsplash CDN has issues, above-fold hero images 404. Long-term: host critical above-fold images in `public/` with proper optimization.
 
 ---
 
@@ -244,25 +154,10 @@ Verify `src/app/collaboration-solutions/page.tsx` has an `export const metadata`
 
 ---
 
-## What's Working Well
-
-- `robots.txt` is clean, sitemap is referenced, AI crawler strategy appears intentional
-- `llms.txt` is present and well-structured — good GEO/AI visibility signal
-- Organization + LocalBusiness schema in root layout with full address, phone, email
-- Static export (`output: "export"`) means all content is in initial HTML — zero JS rendering issues for Googlebot
-- `trailingSlash: true` — consistent URL form across all pages
-- `metadataBase` set correctly in layout
-- Accessibility skip-link present (`<a href="#main-content">`)
-- Google Fonts loaded via Next.js font optimization — no layout shift from font swap
-- 60+ pages in sitemap with priority and changeFrequency signals
-- Title template `"%s | Illumia Solutions"` ensures consistent brand suffix on inner pages
-
----
 
 ## Top 3 Highest-ROI Fixes
 
 | Priority | Fix | Why |
 |----------|-----|-----|
 | 1 | Add default OG image | Immediate social CTR lift on every shared link |
-| 2 | Fix home page title to ≤60 chars | Prevents Google rewriting it with unpredictable text |
 | 3 | Add `alternates: { canonical }` to all inner pages | Protects against duplicate content penalties |

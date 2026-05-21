@@ -109,7 +109,9 @@
       "Bash(grep -v \"^--$\")",
       "Bash(powershell.exe *)",
       "Bash(npm list *)",
-      "WebFetch(domain:frappe.io)"
+      "WebFetch(domain:frappe.io)",
+      "Bash(Test-Path \"O:\\\\CODE\\\\illumia-solutions\\\\illumia-web\\\\.git\")",
+      "Bash(Select-Object Name)"
     ]
   }
 }

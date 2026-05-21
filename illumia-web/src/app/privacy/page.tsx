@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Illumia Solutions",
   description:
     "Privacy Policy for Illumia Solutions — how we collect, use, and protect your personal information.",
+  alternates: { canonical: "/privacy/" },
 };
 
 const EFFECTIVE_DATE = "1 January 2025";

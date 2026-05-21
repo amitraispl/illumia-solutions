@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "SOAR — Security Orchestration Automation and Response | Illumia Solutions",
   description:
     "Advanced SOAR solutions with Shuffle — offering security orchestration, automated workflows, and rapid incident response for efficient cybersecurity management.",
+  alternates: { canonical: "/soar/" },
 };
 
 export default function SOARPage() {

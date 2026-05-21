@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "ERPNext — Open-Source Enterprise ERP | Illumia Solutions",
   description:
     "Deploy ERPNext on your own infrastructure — full accounting, manufacturing, HR, CRM, inventory, and project management. No per-seat licensing, no vendor lock-in. Implementation, migration, and managed hosting by Illumia.",
+  alternates: { canonical: "/erpnext/" },
 };
 
 export default function ERPNextPage() {

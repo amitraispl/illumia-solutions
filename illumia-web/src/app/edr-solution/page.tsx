@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "EDR Solution — Endpoint Detection & Response | Illumia Solutions",
   description:
     "Advanced Endpoint Detection and Response solutions powered by OpenEDR — real-time threat detection, behavioral analysis, and automated response for comprehensive endpoint security.",
+  alternates: { canonical: "/edr-solution/" },
 };
 
 export default function EDRSolutionPage() {

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Governance, Risk & Compliance — GRC Framework | Illumia Solutions",
   description:
     "Advanced GRC solutions powered by OpenGRC — comprehensive risk management, compliance monitoring, and audit management.",
+  alternates: { canonical: "/governance-risk-compliance/" },
 };
 
 export default function GovernanceRiskCompliancePage() {

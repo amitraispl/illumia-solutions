@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Physical Server — Dedicated Bare-Metal | Illumia Solutions",
   description:
     "Dedicated bare-metal servers for workloads requiring maximum compute power, complete resource isolation, and hardware-level control.",
+  alternates: { canonical: "/physical-server/" },
 };
 
 export default function PhysicalServerPage() {

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "SIEM as a Service — Security Intelligence | Illumia Solutions",
   description:
     "Continuous security event correlation and threat intelligence powered by Wazuh and OSSIM for complete environment visibility.",
+  alternates: { canonical: "/siem-as-a-service/" },
 };
 
 export default function SiemAsAServicePage() {

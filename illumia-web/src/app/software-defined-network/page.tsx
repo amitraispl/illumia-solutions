@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Software-Defined Network — SDN & SD-WAN | Illumia Solutions",
   description:
     "Modern SDN and SD-WAN solutions featuring easy setup, high performance, end-to-end encryption, and a decentralized architecture.",
+  alternates: { canonical: "/software-defined-network/" },
 };
 
 export default function SoftwareDefinedNetworkPage() {

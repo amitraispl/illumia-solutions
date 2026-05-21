@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "NetBox — Network Source of Truth | Illumia Solutions",
   description:
     "Replace spreadsheets and Visio diagrams with NetBox — the open-source network source of truth for IPAM, DCIM, rack elevation, and infrastructure-as-code. Deployment, integration, and managed hosting by Illumia Solutions.",
+  alternates: { canonical: "/netbox/" },
 };
 
 export default function NetBoxPage() {

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Specialized Services | Illumia Solutions",
   description:
     "Our specialised cybersecurity services are tailored to address specific industry and business needs — including security gap analysis, custom security frameworks, secure payment implementation, continuous monitoring, and vulnerability management.",
+  alternates: { canonical: "/specialized-services/" },
 };
 
 export default function SpecializedServicesPage() {
