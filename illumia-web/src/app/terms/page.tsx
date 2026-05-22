@@ -82,7 +82,7 @@ We do not warrant that our website will be uninterrupted, error-free, or free of
     title: "Limitation of Liability",
     content: `To the fullest extent permitted by applicable law, Illumia Solutions shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of, or inability to use, our website or services — even if we have been advised of the possibility of such damages.
 
-Our total liability to you for any claims arising from these Terms or the use of our services shall not exceed the amount paid by you to Illumia Solutions in the twelve (12) months preceding the claim.`,
+Nothing in these Terms limits or excludes liability for death or personal injury caused by negligence, fraud, or any other liability that cannot be limited under applicable law. Subject to the foregoing, our total aggregate liability exceed the amount paid by you to Illumia Solutions in the twelve (12) months preceding the claim`,
   },
   {
     id: "indemnification",
