@@ -18,7 +18,7 @@ const netboxLabsLogo = "https://nextcloud.illumiasolutions.com/public.php/dav/fi
 
 
 export const metadata: Metadata = {
-  title: "Enterprise IT Services — Cloud, Cybersecurity & Open Source | Illumia Solutions",
+  title: "Illumia Solutions — Enterprise IT Services — Cloud, Cybersecurity & Open Source",
   description:
     "Enterprise-grade cloud infrastructure, cybersecurity, and open-source IT services. Proxmox Silver Partner serving businesses across India, USA, Australia, Philippines, Kenya, and Mozambique. CISA, CISSP, CEH, CCIE certified team.",
   alternates: { canonical: "/" },
