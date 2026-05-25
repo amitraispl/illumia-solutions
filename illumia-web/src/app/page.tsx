@@ -35,9 +35,9 @@ const partnerLogos = [
   { src: seqriteLogo, alt: "Seqrite — Partner", width: 160, height: 60, href: "https://www.seqrite.com" },
   { src: forceLogo, alt: "Force Networks — Partner", width: 120, height: 60, href: "https://www.forcetentech.com/new/index.html" },
   { src: zextrasLogo, alt: "Zextras — Partner", width: 120, height: 50, href: "https://www.zextras.com" },
-  { src: proxmoxLogo, alt: "Proxmox — Silver Partner", width: 130, height: 60, href: "https://www.proxmox.com" },
+  { src: proxmoxLogo, alt: "Proxmox — Silver Partner", width: 130, height: 60, href: "https://www.proxmox.com/en/partners/find-partner/all/partner/illumia-solutions" },
   { src: lifebankLogo, alt: "LifeBank Foundation — Partner", width: 140, height: 60, href: "https://lifebankfoundation.org" },
-  { src: guacamoleLogo, alt: "Apache Guacamole — Commercial Support Partner", width: 140, height: 60, href: "https://guacamole.apache.org" },
+  { src: guacamoleLogo, alt: "Apache Guacamole — Commercial Support Partner", width: 140, height: 60, href: "https://guacamole.apache.org/support/#commercial-support" },
   { src: netboxLabsLogo, alt: "NetBox Labs — Partner", width: 140, height: 50, href: "https://netboxlabs.com" },
 ];
 
