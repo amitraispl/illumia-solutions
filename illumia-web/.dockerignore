@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+.env*
+*.pem
+.DS_Store
+.git
+coverage
+*.tsbuildinfo
+unsplash-images

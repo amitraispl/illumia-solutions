@@ -47,15 +47,15 @@ export default function VirtualDesktopsPage() {
           ],
         },
         {
-          title: "Browser-Based Access with MFA",
+          title: "Browser-Based Access Up to 3-Factor Auth",
           items: [
             {
               label: "Zero-Client Access",
               text: "Access your virtual desktop from anywhere using just a web browser — no VPN client or special software required on the endpoint device.",
             },
             {
-              label: "Multi-Factor Authentication",
-              text: "Access can be locked down to employer-issued devices and enforced with MFA, ensuring only authorised users can reach sensitive desktop environments.",
+              label: "Up to 3-Factor Authentication",
+              text: "Access can be locked down to employer-issued devices and enforced with up to 3-factor authentication — combining something you know, something you have, and something you are — ensuring only authorised users can reach sensitive desktop environments.",
             },
           ],
         },
