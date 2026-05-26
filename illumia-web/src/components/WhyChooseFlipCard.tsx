@@ -35,7 +35,7 @@ export default function WhyChooseFlipCard({ title, description, href }: Props) {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-[#1c1b1b]/55" />
+          <div className="absolute inset-0 bg-on-surface/55" />
           <div className="absolute inset-0 p-8 flex flex-col justify-between">
             <span className="font-body text-xs tracking-[0.25em] uppercase text-white/70 font-semibold flex items-center gap-2">
               <svg className="w-3.5 h-3.5 shrink-0 md:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -54,13 +54,13 @@ export default function WhyChooseFlipCard({ title, description, href }: Props) {
         </div>
 
         {/* Back — Continuous Support content */}
-        <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl bg-white border border-[#e2bebd]/30 p-8 flex flex-col gap-4">
+        <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl bg-white border border-outline-variant/30 p-8 flex flex-col gap-4">
           <h3 className="font-headline text-xl sm:text-2xl text-stone-900">{title}</h3>
-          <p className="font-body text-sm text-[#5a4040] leading-relaxed flex-1">{description}</p>
+          <p className="font-body text-sm text-on-surface-variant leading-relaxed flex-1">{description}</p>
           <div className="flex items-center justify-between">
             <Link
               href={href}
-              className="font-body font-semibold text-xs inline-flex items-center gap-2 uppercase tracking-widest text-[#b31c33]/60 hover:text-[#b31c33] transition-colors duration-200"
+              className="font-body font-semibold text-xs inline-flex items-center gap-2 uppercase tracking-widest text-primary/60 hover:text-primary transition-colors duration-200"
               onClick={(e) => e.stopPropagation()}
             >
               Get Support

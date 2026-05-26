@@ -36,7 +36,7 @@ export default function ServicePageTemplate({
           titleHighlight ? (
             <>
               {title}{" "}
-              <span className="italic font-normal text-[#b31c33]">
+              <span className="italic font-normal text-primary">
                 {titleHighlight}
               </span>
             </>
@@ -64,16 +64,16 @@ export default function ServicePageTemplate({
                   key={f.title}
                   className={`${isWide ? "md:col-span-2 lg:col-span-2" : ""} p-6 sm:p-8 lg:p-10 rounded-2xl flex flex-col gap-4 ${
                     isRed
-                      ? "bg-[#b31c33]"
+                      ? "bg-primary"
                       : isDark
-                      ? "bg-[#1c1b1b]"
+                      ? "bg-on-surface"
                       : i === 2
-                      ? "bg-white border border-[#e2bebd]/30 hover:shadow-xl transition-all"
-                      : "bg-[#f6f3f2] border border-transparent hover:bg-white hover:border-[#e2bebd]/40 hover:shadow-xl transition-all"
+                      ? "bg-white border border-outline-variant/30 hover:shadow-xl transition-[box-shadow]"
+                      : "bg-surface-low border border-transparent hover:bg-white hover:border-outline-variant/40 hover:shadow-xl transition-[background-color,border-color,box-shadow]"
                   }`}
                 >
                   <span className={`font-headline text-4xl italic ${
-                    isRed ? "text-[#ffdad9]" : isDark ? "text-[#ffb3b3]" : "text-[#b31c33]"
+                    isRed ? "text-primary-light" : isDark ? "text-primary-subdued" : "text-primary"
                   }`}>
                     {String(i + 1).padStart(2, "0")}.
                   </span>
@@ -83,7 +83,7 @@ export default function ServicePageTemplate({
                     {f.title}
                   </h3>
                   <p className={`font-body text-sm leading-relaxed ${
-                    isRed ? "text-white/80" : isDark ? "text-stone-400" : "text-[#5a4040]"
+                    isRed ? "text-white/80" : isDark ? "text-stone-400" : "text-on-surface-variant"
                   }`}>
                     {f.desc}
                   </p>
@@ -95,25 +95,25 @@ export default function ServicePageTemplate({
       </section>
 
       {/* CTA */}
-      <section className="py-14 md:py-24 bg-[#f6f3f2] px-6 md:px-12">
+      <section className="py-14 md:py-24 bg-surface-low px-6 md:px-12">
         <div className="max-w-screen-2xl mx-auto text-center">
           <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900 mb-6">
             Ready to get started?
           </h2>
-          <p className="text-[#5a4040] text-xl max-w-2xl mx-auto mb-10 font-body leading-relaxed">
+          <p className="text-on-surface-variant text-xl max-w-2xl mx-auto mb-10 font-body leading-relaxed">
             Contact our team to learn how this solution can be tailored to your
             specific business requirements.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
             <Link
               href="/contact#contact-form"
-              className="bg-[#b31c33] text-white px-8 py-3.5 rounded-xl font-body font-semibold tracking-wide hover:bg-[#920022] shadow-lg shadow-[#b31c33]/20 active:scale-95 text-center"
+              className="bg-primary text-white px-8 py-3.5 rounded-xl font-body font-semibold tracking-wide hover:bg-primary-dark shadow-lg shadow-primary/20 active:scale-[0.98] text-center"
             >
               Request a Consultation
             </Link>
             <Link
               href="/"
-              className="border border-[#b31c33]/30 text-[#b31c33] px-8 py-3.5 rounded-xl font-body font-semibold tracking-wide hover:bg-[#ffdad9]/20 text-center"
+              className="border border-primary/30 text-primary px-8 py-3.5 rounded-xl font-body font-semibold tracking-wide hover:bg-primary-light/20 text-center"
             >
               Explore All Services
             </Link>

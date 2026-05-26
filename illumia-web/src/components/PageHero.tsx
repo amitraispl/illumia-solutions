@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import type { ReactNode } from "react";
 
+
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
 const fadeUp = {
@@ -46,9 +47,9 @@ export default function PageHero({
   children,
 }: PageHeroProps) {
   return (
-    <section className="flex flex-col lg:flex-row min-h-screen overflow-hidden">
+    <section className="flex flex-col lg:flex-row min-h-[100dvh] overflow-hidden">
       {/* ── Text half ── */}
-      <div className="relative z-10 lg:w-[52%] bg-[#fcf9f8] pt-24 pb-12 md:pt-36 md:pb-20 px-6 md:px-12 lg:pl-12 xl:pl-20 lg:pr-12 xl:pr-16 flex items-center">
+      <div className="relative z-10 lg:w-[52%] bg-surface pt-24 pb-12 md:pt-36 md:pb-20 px-6 md:px-12 lg:pl-12 xl:pl-20 lg:pr-12 xl:pr-16 flex items-center">
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -57,7 +58,7 @@ export default function PageHero({
         >
           <motion.span
             variants={fadeUp}
-            className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold mb-6 block"
+            className="font-body text-xs tracking-[0.25em] uppercase text-primary font-bold mb-6 block"
           >
             {badge}
           </motion.span>
@@ -71,7 +72,7 @@ export default function PageHero({
 
           <motion.p
             variants={fadeUp}
-            className="text-base md:text-xl text-[#5a4040] font-body leading-relaxed mb-8 md:mb-10 max-w-lg"
+            className="text-base md:text-xl text-on-surface-variant font-body leading-relaxed mb-8 md:mb-10 max-w-lg"
           >
             {description}
           </motion.p>
@@ -79,14 +80,14 @@ export default function PageHero({
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
             <Link
               href={primaryCta.href}
-              className="bg-[#b31c33] text-white px-8 py-4 rounded-xl font-body font-semibold tracking-wide shadow-xl shadow-[#b31c33]/20 hover:bg-[#920022] active:scale-95 transition-all duration-200 text-center"
+              className="bg-primary text-white px-8 py-4 rounded-xl font-body font-semibold tracking-wide shadow-xl shadow-primary/20 hover:bg-primary-dark active:scale-[0.98] transition-[background-color,box-shadow] duration-200 text-center"
             >
               {primaryCta.label}
             </Link>
             {secondaryCta && (
               <Link
                 href={secondaryCta.href}
-                className="border border-[#b31c33]/40 text-[#b31c33] px-8 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-[#b31c33] hover:text-white hover:border-[#b31c33] transition-all duration-200 text-center"
+                className="border border-primary/40 text-primary px-8 py-4 rounded-xl font-body font-semibold tracking-wide hover:bg-primary hover:text-white hover:border-primary active:scale-[0.98] transition-[color,background-color,border-color] duration-200 text-center"
               >
                 {secondaryCta.label}
               </Link>
@@ -107,15 +108,16 @@ export default function PageHero({
           src={imageSrc}
           alt={imageAlt}
           fill
+          sizes="(min-width: 1024px) 48vw, 100vw"
           className={`object-cover ${imagePosition} ${
             imageGrayscale ? "grayscale brightness-90 contrast-110" : ""
           }`}
           priority
         />
         {/* Subtle left-edge blend on desktop */}
-        <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#fcf9f8]/30 to-transparent pointer-events-none hidden lg:block" />
+        <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-surface/30 to-transparent pointer-events-none hidden lg:block" />
         {/* Bottom gradient on mobile */}
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#fcf9f8]/60 to-transparent pointer-events-none lg:hidden" />
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-surface/60 to-transparent pointer-events-none lg:hidden" />
       </div>
     </section>
   );

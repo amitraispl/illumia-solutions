@@ -2,10 +2,6 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-html {
-  scroll-behavior: smooth;
-}
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -30,6 +26,8 @@ html {
   --color-tertiary: #5c5c5c;
   --color-outline: #8e706f;
   --color-outline-variant: #e2bebd;
+  --color-primary-subdued: #ffb3b3;
+  --color-surface-inverse: #140c0c;
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
   --font-heading: var(--font-sans);
@@ -97,8 +95,8 @@ html {
 }
 
 body {
-  background-color: #fcf9f8;
-  color: #1c1b1b;
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
   font-family: var(--font-sans), 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -134,7 +132,7 @@ a, button {
 
 /* ── Focus ring for keyboard navigation ─────────────────────────────── */
 :focus-visible {
-  outline: 2px solid #b31c33;
+  outline: 2px solid var(--color-primary);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -143,7 +141,7 @@ a, button {
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #b31c33;
+  outline: 2px solid var(--color-primary);
   outline-offset: 1px;
   border-radius: 4px;
 }
@@ -153,8 +151,8 @@ textarea:focus-visible {
   position: absolute;
   top: -100%;
   left: 1rem;
-  background: #b31c33;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-surface-lowest, #ffffff);
   padding: 0.5rem 1rem;
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
@@ -183,17 +181,29 @@ textarea:focus-visible {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #f6f3f2;
+  background: var(--color-surface-low);
 }
 ::-webkit-scrollbar-thumb {
-  background: #e2bebd;
+  background: var(--color-outline-variant);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #b31c33;
+  background: var(--color-primary);
 }
 
 :root {
+  --color-primary: #b31c33;
+  --color-primary-dark: #920022;
+  --color-primary-light: #ffdad9;
+  --color-primary-subdued: #ffb3b3;
+  --color-surface: #fcf9f8;
+  --color-surface-low: #f6f3f2;
+  --color-surface-inverse: #140c0c;
+  --color-on-surface: #1c1b1b;
+  --color-on-surface-variant: #5a4040;
+  --color-outline-variant: #e2bebd;
+  --color-outline: #8e706f;
+  --color-tertiary: #5c5c5c;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);

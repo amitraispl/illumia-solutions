@@ -68,7 +68,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn("h-full", "font-sans", inter.variable, newsreader.variable)}>
-      <body className="min-h-full flex flex-col bg-[#fcf9f8] text-[#1c1b1b] selection:bg-primary-container selection:text-on-primary-container">
+      <body className="min-h-full flex flex-col bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}

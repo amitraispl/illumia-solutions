@@ -46,7 +46,7 @@ const EuStars = () => (
 
 export default function TechSpotlight() {
   return (
-    <section className="py-12 md:py-20 bg-[#f6f3f2]">
+    <section className="py-12 md:py-20 bg-surface-low">
       <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
 
         {/* ─── Header ──────────────────────────────────────────────────────── */}
@@ -58,15 +58,15 @@ export default function TechSpotlight() {
           className="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-8"
         >
           <div>
-            <motion.span variants={fadeUp} className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-bold block mb-4">
+            <motion.span variants={fadeUp} className="text-primary font-body text-xs tracking-[0.25em] uppercase font-bold block mb-4">
               Technology Focus Areas
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.95]">
               Where Industry Is{" "}
-              <span className="italic text-[#b31c33]">Moving Next?</span>
+              <span className="italic text-primary">Moving Next?</span>
             </motion.h2>
           </div>
-          <motion.p variants={fadeUp} className="text-[#5c5c5c] font-body text-sm max-w-xs leading-relaxed md:text-right">
+          <motion.p variants={fadeUp} className="text-tertiary font-body text-sm max-w-xs leading-relaxed md:text-right">
             Four high-demand technologies where Illumia&apos;s expertise creates outsized impact — and significant cost savings — for your business.
           </motion.p>
         </motion.div>
@@ -84,7 +84,7 @@ export default function TechSpotlight() {
           <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
             <Link
               href="/ai-governance"
-              className="group relative block h-full bg-[#b31c33] rounded-2xl p-6 sm:p-8 lg:p-10 text-white hover:bg-[#920022] transition-colors duration-300 cursor-pointer overflow-hidden"
+              className="group relative block h-full bg-primary rounded-2xl p-6 sm:p-8 lg:p-10 text-white hover:bg-primary-dark transition-colors duration-300 cursor-pointer overflow-hidden"
             >
               {/* EU stars watermark */}
               <div className="pointer-events-none absolute -right-10 -bottom-10 w-56 h-56 text-white/[0.07] rotate-6">
@@ -102,7 +102,7 @@ export default function TechSpotlight() {
 
               <h3 className="relative font-headline text-3xl md:text-4xl text-white mb-4 leading-tight">
                 Govern AI Before It{" "}
-                <span className="italic font-normal text-[#ffdad9]">Governs You.</span>
+                <span className="italic font-normal text-primary-light">Governs You.</span>
               </h3>
               <p className="relative text-white/75 text-sm font-body leading-relaxed mb-8 max-w-xl">
                 The EU AI Act is live. AI systems are proliferating across enterprises at a pace regulators are scrambling to match. Most organisations have no governance framework — no risk classification, no audit trail, no accountability layer. Illumia builds structured AI governance programs that let you deploy AI with confidence, not liability.
@@ -111,14 +111,14 @@ export default function TechSpotlight() {
               <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-8">
                 {["Risk Classification Frameworks", "Bias & Fairness Auditing", "EU AI Act Alignment", "Model Accountability Policies", "AI Incident Response", "Regulatory Reporting"].map((b) => (
                   <div key={b} className="flex items-center gap-2 text-xs font-body font-semibold text-white/70 uppercase tracking-wide">
-                    <span className="w-1 h-1 rounded-full bg-[#ffdad9]/60 shrink-0" />
+                    <span className="w-1 h-1 rounded-full bg-primary-light/60 shrink-0" />
                     {b}
                   </div>
                 ))}
               </div>
 
               <div className="relative flex items-center justify-between gap-4 flex-wrap">
-                <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-white/80">
+                <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] uppercase tracking-widest text-white/80">
                   Build Your AI Governance Framework <Arrow />
                 </span>
                 <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-body font-bold text-white/45">
@@ -137,10 +137,10 @@ export default function TechSpotlight() {
           <motion.div variants={fadeUp} className="h-full">
             <Link
               href="/proxmox-migration"
-              className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-2xl hover:shadow-stone-200/70 transition-all duration-300 cursor-pointer flex flex-col"
+              className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-outline-variant/30 hover:shadow-2xl hover:shadow-stone-200/70 transition-[box-shadow] duration-300 cursor-pointer flex flex-col"
             >
               <div className="flex items-center justify-between gap-3 mb-6">
-                <span className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold">
+                <span className="font-body text-xs tracking-[0.25em] uppercase text-primary font-bold">
                   VMware Alternative
                 </span>
                 <div className="relative h-10 w-24 shrink-0">
@@ -154,20 +154,20 @@ export default function TechSpotlight() {
                 </div>
               </div>
 
-              <h3 className="font-headline text-2xl text-stone-900 mb-3 leading-tight group-hover:text-[#b31c33] transition-colors duration-300">
+              <h3 className="font-headline text-2xl text-stone-900 mb-3 leading-tight group-hover:text-primary transition-colors duration-300">
                 Escape the VMware Tax.
               </h3>
-              <p className="text-[#5a4040] text-sm font-body leading-relaxed mb-6 flex-1">
+              <p className="text-on-surface-variant text-sm font-body leading-relaxed mb-6 flex-1">
                 Broadcom&apos;s VMware acquisition sent licensing costs through the roof — some enterprises saw 10× increases overnight. Proxmox VE delivers identical enterprise virtualisation — VMs, containers, HA clusters, live migration — at zero licensing cost. We handle the migration end-to-end with zero data loss.
               </p>
 
-              <div className="border-t border-[#e2bebd]/40 pt-5 mb-5">
-                <p className="font-body text-[10px] uppercase tracking-widest text-[#5c5c5c] font-bold mb-2">Typical Outcome</p>
-                <p className="font-headline text-3xl text-[#b31c33]">60–80%</p>
-                <p className="font-body text-xs text-[#5a4040]">reduction in hypervisor licensing costs</p>
+              <div className="border-t border-outline-variant/40 pt-5 mb-5">
+                <p className="font-body text-[10px] uppercase tracking-widest text-tertiary font-bold mb-2">Typical Outcome</p>
+                <p className="font-headline text-3xl text-primary">60–80%</p>
+                <p className="font-body text-xs text-on-surface-variant">reduction in hypervisor licensing costs</p>
               </div>
 
-              <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-[#b31c33]/70 group-hover:text-[#b31c33]">
+              <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] uppercase tracking-widest text-primary/70 group-hover:text-primary">
                 Migrate to Proxmox <Arrow />
               </span>
             </Link>
@@ -177,13 +177,13 @@ export default function TechSpotlight() {
           <motion.div variants={fadeUp} className="h-full">
             <Link
               href="/erpnext"
-              className="group block h-full bg-[#f6f3f2] rounded-2xl p-6 sm:p-8 lg:p-10 border border-transparent hover:bg-white hover:border-[#e2bebd]/40 hover:shadow-2xl hover:shadow-stone-200/60 transition-all duration-300 cursor-pointer flex flex-col"
+              className="group block h-full bg-surface-low rounded-2xl p-6 sm:p-8 lg:p-10 border border-transparent hover:bg-white hover:border-outline-variant/40 hover:shadow-2xl hover:shadow-stone-200/60 transition-[background-color,border-color,box-shadow] duration-300 cursor-pointer flex flex-col"
             >
               <div className="flex items-center justify-between gap-3 mb-6">
-                <span className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold">
+                <span className="font-body text-xs tracking-[0.25em] uppercase text-primary font-bold">
                   Open-Source ERP
                 </span>
-                <div className="relative h-10 w-10 rounded-lg bg-white border border-[#e2bebd]/40 p-1 shrink-0">
+                <div className="relative h-10 w-10 rounded-lg bg-white border border-outline-variant/40 p-1 shrink-0">
                   <Image
                     src={erpnextLogo}
                     alt="ERPNext"
@@ -194,23 +194,23 @@ export default function TechSpotlight() {
                 </div>
               </div>
 
-              <h3 className="font-headline text-2xl text-stone-900 mb-3 leading-tight group-hover:text-[#b31c33] transition-colors duration-300">
+              <h3 className="font-headline text-2xl text-stone-900 mb-3 leading-tight group-hover:text-primary transition-colors duration-300">
                 Enterprise ERP. No Enterprise Price Tag.
               </h3>
-              <p className="text-[#5a4040] text-sm font-body leading-relaxed mb-6 flex-1">
+              <p className="text-on-surface-variant text-sm font-body leading-relaxed mb-6 flex-1">
                 SAP, Oracle, and Dynamics are priced for Fortune 500 budgets. ERPNext is 100% open-source — accounting, manufacturing, HR, CRM, inventory, project management and much more — deployed on your own infrastructure with no per-seat licensing and no vendor lock-in.
               </p>
 
               <ul className="space-y-2 mb-6">
                 {["Full Accounting & Finance", "Manufacturing & MRP", "HR & Payroll", "CRM & Sales Pipeline"].map((f) => (
-                  <li key={f} className="flex items-center gap-2 text-xs font-body font-semibold text-[#5c5c5c] uppercase tracking-wide">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#b31c33] shrink-0" />
+                  <li key={f} className="flex items-center gap-2 text-xs font-body font-semibold text-tertiary uppercase tracking-wide">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
                     {f}
                   </li>
                 ))}
               </ul>
 
-              <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-[#b31c33]/70 group-hover:text-[#b31c33]">
+              <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] uppercase tracking-widest text-primary/70 group-hover:text-primary">
                 Explore ERPNext <Arrow />
               </span>
             </Link>
@@ -220,7 +220,7 @@ export default function TechSpotlight() {
           <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
             <Link
               href="/netbox"
-              className="group block h-full bg-[#1c1b1b] rounded-2xl p-6 sm:p-8 lg:p-10 text-white hover:bg-[#111010] transition-colors duration-300 cursor-pointer"
+              className="group block h-full bg-on-surface rounded-2xl p-6 sm:p-8 lg:p-10 text-white hover:bg-[#111010] transition-colors duration-300 cursor-pointer"
             >
               <div className="flex flex-col lg:flex-row gap-10 h-full">
                 <div className="flex-1 flex flex-col">
@@ -253,7 +253,7 @@ export default function TechSpotlight() {
                     ))}
                   </div>
 
-                  <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-stone-500 group-hover:text-white">
+                  <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] uppercase tracking-widest text-stone-500 group-hover:text-white">
                     Modernise Network Documentation <Arrow />
                   </span>
                 </div>
