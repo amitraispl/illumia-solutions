@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-26T00:00:00Z",
+  "title": "Design System: Illumia Solutions",
+  "extensions": {
+    "colorMeta": {
+      "crimson-authority": {
+        "role": "primary",
+        "displayName": "Crimson Authority",
+        "canonical": "oklch(44% 0.20 18)",
+        "tonalRamp": [
+          "oklch(15% 0.08 18)",
+          "oklch(25% 0.12 18)",
+          "oklch(35% 0.16 18)",
+          "oklch(44% 0.20 18)",
+          "oklch(55% 0.18 18)",
+          "oklch(68% 0.14 18)",
+          "oklch(80% 0.08 18)",
+          "oklch(92% 0.04 18)"
+        ]
+      },
+      "warm-vellum": {
+        "role": "neutral-bg",
+        "displayName": "Warm Vellum",
+        "canonical": "oklch(98% 0.004 50)",
+        "tonalRamp": [
+          "oklch(20% 0.002 50)",
+          "oklch(35% 0.003 50)",
+          "oklch(50% 0.003 50)",
+          "oklch(65% 0.003 50)",
+          "oklch(78% 0.003 50)",
+          "oklch(88% 0.004 50)",
+          "oklch(94% 0.004 50)",
+          "oklch(98% 0.004 50)"
+        ]
+      },
+      "obsidian-ink": {
+        "role": "neutral-dark",
+        "displayName": "Obsidian Ink",
+        "canonical": "oklch(8% 0.012 15)",
+        "tonalRamp": [
+          "oklch(8% 0.012 15)",
+          "oklch(16% 0.015 15)",
+          "oklch(26% 0.020 15)",
+          "oklch(38% 0.025 15)",
+          "oklch(52% 0.020 15)",
+          "oklch(66% 0.015 15)",
+          "oklch(80% 0.010 15)",
+          "oklch(93% 0.006 15)"
+        ]
+      },
+      "outline-blush": {
+        "role": "outline",
+        "displayName": "Outline Blush",
+        "canonical": "oklch(82% 0.04 15)",
+        "tonalRamp": [
+          "oklch(20% 0.04 15)",
+          "oklch(35% 0.05 15)",
+          "oklch(48% 0.06 15)",
+          "oklch(60% 0.06 15)",
+          "oklch(70% 0.05 15)",
+          "oklch(80% 0.04 15)",
+          "oklch(88% 0.03 15)",
+          "oklch(95% 0.02 15)"
+        ]
+      },
+      "ink-primary": {
+        "role": "on-surface",
+        "displayName": "Ink Primary",
+        "canonical": "oklch(13% 0.004 50)",
+        "tonalRamp": [
+          "oklch(8% 0.002 50)",
+          "oklch(13% 0.004 50)",
+          "oklch(22% 0.006 50)",
+          "oklch(35% 0.008 50)",
+          "oklch(50% 0.006 50)",
+          "oklch(65% 0.005 50)",
+          "oklch(80% 0.004 50)",
+          "oklch(94% 0.003 50)"
+        ]
+      },
+      "crimson-pale": {
+        "role": "primary-container",
+        "displayName": "Crimson Pale",
+        "canonical": "oklch(90% 0.06 18)",
+        "tonalRamp": [
+          "oklch(20% 0.08 18)",
+          "oklch(35% 0.10 18)",
+          "oklch(50% 0.12 18)",
+          "oklch(65% 0.10 18)",
+          "oklch(75% 0.08 18)",
+          "oklch(83% 0.07 18)",
+          "oklch(90% 0.06 18)",
+          "oklch(96% 0.03 18)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero H1 headlines only. Italic Crimson Authority phrase included as visual signature on every major landing surface."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings (H2), mega menu titles, major section openers."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card headings (H3), sub-section labels, footer column headings (italic variant for warmth)."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All descriptive and narrative text. Max 65ch line length enforced."
+      },
+      "label": {
+        "displayName": "Label / Eyebrow",
+        "purpose": "Eyebrow badges above headings. Always Crimson Authority, always uppercase, always Inter. The system's orientation device."
+      }
+    },
+    "shadows": [
+      {
+        "name": "nav-micro",
+        "value": "0 1px 4px rgba(0,0,0,0.05)",
+        "purpose": "Navigation bar only. Structural separator from page content."
+      },
+      {
+        "name": "mega-drop",
+        "value": "0 25px 50px rgba(0,0,0,0.10)",
+        "purpose": "Mega menu dropdowns. Clear structural lift above page content."
+      },
+      {
+        "name": "card-hover",
+        "value": "0 20px 40px rgba(0,0,0,0.08)",
+        "purpose": "Feature cards on hover only. Never on resting surfaces."
+      },
+      {
+        "name": "cta-glow",
+        "value": "0 20px 40px rgba(179,28,51,0.20)",
+        "purpose": "Primary button only. Crimson-temperature radiance at rest."
+      },
+      {
+        "name": "social-hover",
+        "value": "0 8px 24px rgba(179,28,51,0.20)",
+        "purpose": "Footer social icon on hover. Small-footprint crimson glow."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-entrance",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Primary easing for entrances and hover state transitions. High deceleration, zero bounce."
+      },
+      {
+        "name": "ease-quick",
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Short-duration state changes: link hovers, button color shifts, icon transitions."
+      },
+      {
+        "name": "duration-short",
+        "value": "200ms",
+        "purpose": "Color, opacity, border transitions."
+      },
+      {
+        "name": "duration-mid",
+        "value": "350ms",
+        "purpose": "Mega menu entrance, accordion reveal, card state changes."
+      },
+      {
+        "name": "duration-long",
+        "value": "700ms",
+        "purpose": "Hero entrance animations, GSAP scroll-triggered reveals."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" },
+      { "name": "2xl", "value": "1536px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA. Used in hero, section closers, and mega menus. Crimson glow at rest; deepens on hover; compresses on press.",
+      "html": "<button class=\"ds-btn-primary\">Talk to Our Team</button>",
+      "css": ".ds-btn-primary { background: #b31c33; color: #ffffff; padding: 16px 32px; border-radius: 12px; font-family: Inter, system-ui, sans-serif; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.04em; border: none; cursor: pointer; box-shadow: 0 20px 40px rgba(179,28,51,0.20); transition: background 0.2s cubic-bezier(0.4,0,0.2,1), transform 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.2s; display: inline-block; text-decoration: none; } .ds-btn-primary:hover { background: #920022; box-shadow: 0 24px 48px rgba(179,28,51,0.28); } .ds-btn-primary:active { transform: scale(0.95); } .ds-btn-primary:focus-visible { outline: 2px solid #b31c33; outline-offset: 3px; border-radius: 12px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary CTA. Pairs with Primary Button for binary choices. Transparent to opaque on hover.",
+      "html": "<button class=\"ds-btn-ghost\">Learn About Us</button>",
+      "css": ".ds-btn-ghost { background: transparent; color: #b31c33; padding: 16px 32px; border-radius: 12px; font-family: Inter, system-ui, sans-serif; font-size: 0.875rem; font-weight: 600; letter-spacing: 0.04em; border: 1px solid rgba(179,28,51,0.40); cursor: pointer; transition: background 0.2s cubic-bezier(0.4,0,0.2,1), color 0.2s, border-color 0.2s; display: inline-block; text-decoration: none; } .ds-btn-ghost:hover { background: #b31c33; color: #ffffff; border-color: #b31c33; } .ds-btn-ghost:focus-visible { outline: 2px solid #b31c33; outline-offset: 3px; border-radius: 12px; }"
+    },
+    {
+      "name": "Feature Card (Surface)",
+      "kind": "card",
+      "refersTo": null,
+      "description": "Default feature card. Flat at rest on Warm Vellum Low. Gains white surface, blush border, and diffuse shadow on hover.",
+      "html": "<div class=\"ds-card-surface\"><span class=\"ds-card-num\">01.</span><h3 class=\"ds-card-title\">Expertise Across Domains</h3><p class=\"ds-card-body\">CISA, CISSP, CEH, and CCIE certified professionals with 20+ years of industry experience delivering top-tier protection tailored to your needs.</p></div>",
+      "css": ".ds-card-surface { background: #f6f3f2; border: 1px solid transparent; border-radius: 16px; padding: 40px; display: flex; flex-direction: column; gap: 16px; transition: background 0.2s, border-color 0.2s, box-shadow 0.2s; cursor: pointer; } .ds-card-surface:hover { background: #ffffff; border-color: rgba(226,190,189,0.40); box-shadow: 0 20px 40px rgba(0,0,0,0.08); } .ds-card-num { font-family: Newsreader, Georgia, serif; font-size: 2.25rem; font-style: italic; color: #b31c33; line-height: 1; display: block; } .ds-card-title { font-family: Newsreader, Georgia, serif; font-size: 1.375rem; font-weight: 600; color: #1c1b1b; line-height: 1.25; margin: 0; } .ds-card-body { font-family: Inter, system-ui, sans-serif; font-size: 0.875rem; color: #5a4040; line-height: 1.65; margin: 0; }"
+    },
+    {
+      "name": "Feature Card (Crimson)",
+      "kind": "card",
+      "refersTo": null,
+      "description": "Anchoring feature card. Position 0 in feature grids. Inverted text on Crimson Authority background.",
+      "html": "<div class=\"ds-card-crimson\"><span class=\"ds-card-crimson-num\">01.</span><h3 class=\"ds-card-crimson-title\">Advanced Cloud Solutions</h3><p class=\"ds-card-crimson-body\">Cloud services optimised for security, scalability, and seamless migration — from hosting to private cloud.</p></div>",
+      "css": ".ds-card-crimson { background: #b31c33; border-radius: 16px; padding: 40px; display: flex; flex-direction: column; gap: 16px; } .ds-card-crimson-num { font-family: Newsreader, Georgia, serif; font-size: 2.25rem; font-style: italic; color: #ffdad9; line-height: 1; display: block; } .ds-card-crimson-title { font-family: Newsreader, Georgia, serif; font-size: 1.375rem; font-weight: 600; color: #ffffff; line-height: 1.25; margin: 0; } .ds-card-crimson-body { font-family: Inter, system-ui, sans-serif; font-size: 0.875rem; color: rgba(255,255,255,0.80); line-height: 1.65; margin: 0; }"
+    },
+    {
+      "name": "Feature Card (Dark)",
+      "kind": "card",
+      "refersTo": null,
+      "description": "Terminal card in a grid sequence. Obsidian Ink background with white headline and muted stone body text.",
+      "html": "<div class=\"ds-card-dark\"><span class=\"ds-card-dark-num\">06.</span><h3 class=\"ds-card-dark-title\">Continuous Support</h3><p class=\"ds-card-dark-body\">24/7 monitoring, management, and maintenance services across multiple time zones. Your infrastructure never sleeps — neither do we.</p></div>",
+      "css": ".ds-card-dark { background: #140c0c; border-radius: 16px; padding: 40px; display: flex; flex-direction: column; gap: 16px; } .ds-card-dark-num { font-family: Newsreader, Georgia, serif; font-size: 2.25rem; font-style: italic; color: #ffb3b3; line-height: 1; display: block; } .ds-card-dark-title { font-family: Newsreader, Georgia, serif; font-size: 1.375rem; font-weight: 600; color: #ffffff; line-height: 1.25; margin: 0; } .ds-card-dark-body { font-family: Inter, system-ui, sans-serif; font-size: 0.875rem; color: rgba(168,162,158,1); line-height: 1.65; margin: 0; }"
+    },
+    {
+      "name": "Eyebrow + Display Headline",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Signature pattern. Every major headline is preceded by a tracked uppercase eyebrow label in Crimson Authority. The italic em in the display headline is the system's visual signature.",
+      "html": "<div class=\"ds-headline-block\"><span class=\"ds-eyebrow\">Global IT Solutions</span><h1 class=\"ds-display\">Illuminating <em class=\"ds-display-em\">the path</em> to SUCCESS</h1></div>",
+      "css": ".ds-headline-block { display: flex; flex-direction: column; gap: 24px; } .ds-eyebrow { font-family: Inter, system-ui, sans-serif; font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: #b31c33; display: block; } .ds-display { font-family: Newsreader, Georgia, serif; font-size: clamp(2.25rem, 7vw, 5rem); font-weight: 700; color: #1c1b1b; line-height: 0.93; letter-spacing: -0.04em; margin: 0; } .ds-display-em { font-style: italic; font-weight: 400; color: #b31c33; }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Desktop navigation link. Newsreader serif, uppercase, wide tracking. Active state bold and crimson.",
+      "html": "<div style=\"display:flex;gap:32px;align-items:center;padding:16px;background:#fcf9f8\"><a class=\"ds-nav-link\" href=\"#\">About Us</a><a class=\"ds-nav-link ds-nav-link--active\" href=\"#\">Services</a><a class=\"ds-nav-link\" href=\"#\">Case Studies</a><a class=\"ds-nav-link\" href=\"#\">Contact Us</a></div>",
+      "css": ".ds-nav-link { font-family: Newsreader, Georgia, serif; font-size: 0.875rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: #737373; text-decoration: none; white-space: nowrap; transition: color 0.2s; } .ds-nav-link:hover { color: #b31c33; } .ds-nav-link--active { color: #b31c33; font-weight: 700; } .ds-nav-link:focus-visible { outline: 2px solid #b31c33; outline-offset: 3px; }"
+    },
+    {
+      "name": "Footer Social Icon",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "44x44 dark rounded square for social/contact actions. At rest: muted. On hover: fills Crimson Authority with glow.",
+      "html": "<div style=\"display:flex;gap:8px;background:#140c0c;padding:16px\"><a class=\"ds-social-icon\" href=\"#\" aria-label=\"LinkedIn\"><svg width=\"14\" height=\"14\" fill=\"currentColor\" viewBox=\"0 0 24 24\"><path d=\"M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z\"/></svg></a><a class=\"ds-social-icon\" href=\"#\" aria-label=\"Email\"><svg width=\"14\" height=\"14\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-width=\"1.75\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75\"/></svg></a></div>",
+      "css": ".ds-social-icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); display: inline-flex; align-items: center; justify-content: center; color: rgba(168,162,158,1); text-decoration: none; transition: background 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s; } .ds-social-icon:hover { background: #b31c33; border-color: #b31c33; color: #ffffff; box-shadow: 0 8px 24px rgba(179,28,51,0.20); } .ds-social-icon:focus-visible { outline: 2px solid #b31c33; outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Illuminated Dispatch",
+    "overview": "Illumia Solutions operates in a field where every competitor defaults to dark navy surfaces and neon threat-pulse graphics. This system refuses that reflex entirely. Instead it models the aesthetic grammar of a prestigious international publication — think the Financial Times or Monocle — adapted for enterprise IT procurement.\n\nThe surface is warm vellum, not clinical white. The accent is a single crimson used with the editorial discipline of a masthead — appearing on eyebrows, active states, and critical calls to action, never decorating for its own sake. Newsreader, a contemporary editorial serif with classical proportions, carries all headlines and display type; Inter handles body text and labels with the precision of a caption typeface. The system is typography-first: the grid, spacing, and components exist to serve the text, not the reverse.\n\nThis system explicitly rejects the cybersecurity dark-mode aesthetic (navy, neon, threat dashboards), the SaaS-cream template (gradient text, glassmorphism, hero metrics row), and the generic MSP checklist website. It operates in a premium register where restraint is the proof of confidence.",
+    "keyCharacteristics": [
+      "Typography-first hierarchy: serif display weight dominates every opening surface",
+      "Single-accent discipline: Crimson Authority (#b31c33) used on no more than 10% of any given surface",
+      "Tactile surface depth: flat at rest, depth earned on interaction",
+      "Dual-register surfaces: warm light pages for content, obsidian footer as a distinct closing register",
+      "Motion reinforces confidence: ease-out curves, no bounce, no choreography for its own sake"
+    ],
+    "rules": [
+      {
+        "name": "The One Voice Rule",
+        "body": "Crimson Authority appears on no more than 10% of any given screen. Its rarity is the point. Do not use it as a section background, as body text color, or as decorative fill.",
+        "section": "colors"
+      },
+      {
+        "name": "The Whisper Divider Rule",
+        "body": "Use Outline Blush (#e2bebd) for all dividers and borders. Every structural line in the system carries the brand's warmth.",
+        "section": "colors"
+      },
+      {
+        "name": "The Italic Signature Rule",
+        "body": "Every major headline surface contains at least one Newsreader italic phrase in Crimson Authority. Reserved for hero H1s only.",
+        "section": "typography"
+      },
+      {
+        "name": "The Eyebrow Obligation Rule",
+        "body": "No section or card headline appears without an eyebrow label (Inter, uppercase, tracked, Crimson Authority). No headline stands alone.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "Surfaces are flat at rest. Shadows appear only in response to state (hover, focus, structural layering). A shadow on a resting content card is a mistake.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use Newsreader italic in Crimson Authority for one emphasized phrase per major display headline.",
+      "Do prefix every section and card heading with an eyebrow label (Inter, uppercase, tracked, Crimson Authority).",
+      "Do use Outline Blush (#e2bebd) for all dividers, borders, and separators.",
+      "Do keep feature card grids asymmetric with the Crimson Authority card as visual anchor at grid position 0.",
+      "Do use tonal surface steps (Warm Vellum to Warm Vellum Low to Warm Vellum Container) to create section pacing without visible borders.",
+      "Do animate with fade + translate-Y at 200–700ms using ease [0.22, 1, 0.36, 1] for entrances.",
+      "Do constrain body text to max 65ch line length on all description blocks.",
+      "Do use italic Newsreader for footer column headings."
+    ],
+    "donts": [
+      "Don't use dark navy with neon accents (the Crowdstrike/Palo Alto aesthetic).",
+      "Don't use gradient text (background-clip: text with a gradient background).",
+      "Don't use glassmorphism as default. The glass-header class is limited to the navbar.",
+      "Don't deploy the hero-metric template (large number, small label, gradient accent row below CTAs).",
+      "Don't use identical card grids (same size, same icon + heading + text repeated across all positions).",
+      "Don't use border-left greater than 2px as a decorative colored stripe on resting cards or list items.",
+      "Don't use #000 or #fff for any text or background value. Every neutral is warm-tinted.",
+      "Don't produce any surface that could pass for a generic Tailwind landing page template."
+    ]
+  }
+}

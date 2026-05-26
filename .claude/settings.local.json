@@ -111,7 +111,8 @@
       "Bash(npm list *)",
       "WebFetch(domain:frappe.io)",
       "Bash(Test-Path \"O:\\\\CODE\\\\illumia-solutions\\\\illumia-web\\\\.git\")",
-      "Bash(Select-Object Name)"
+      "Bash(Select-Object Name)",
+      "Bash(not exist *)"
     ]
   }
 }
