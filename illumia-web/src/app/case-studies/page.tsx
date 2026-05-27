@@ -77,6 +77,50 @@ const caseStudies = [
       "QSA-ready evidence package and remediation",
     ],
   },
+  {
+    href: "/case-studies/proxmox-vmware-migration",
+    tag: "Infrastructure · Proxmox",
+    title: "80% Licensing Cost Reduction via VMware to Proxmox VE Migration",
+    summary:
+      "Lifebank Foundation Inc. faced unsustainable VMware licensing costs following Broadcom's acquisition. ISPL delivered a phased, rolling migration to Proxmox VE — zero new hardware, zero VMs lost, every downtime threshold met.",
+    body:
+      "With no new hardware permitted and production workloads classified across three downtime tiers, ISPL executed a node-by-node rolling migration: decommissioning each VMware host, commissioning it as a Proxmox VE node, migrating workloads offline, and validating with application owners before moving to the next. Veeam servers were repurposed as Proxmox Backup Server nodes with encryption at rest on all backup data — on-site and off-site.",
+    image:
+      "https://nextcloud.illumiasolutions.com/public.php/dav/files/w7MtAYxqXsfHgS5",
+    metrics: [
+      { value: "80%", label: "Licensing Cost Reduction" },
+      { value: "Zero", label: "VMs Lost" },
+      { value: "$0", label: "New Hardware Capex" },
+    ],
+    highlights: [
+      "Node-by-node rolling migration — VMware cluster live throughout",
+      "Proxmox VE built-in migration tooling — no third-party utilities",
+      "Orphaned VMs recovered from Veeam repository and re-platformed",
+      "Proxmox Backup Server replacing Veeam with encryption at rest",
+    ],
+  },
+  {
+    href: "/case-studies/proxmox-hci-expansion",
+    tag: "Infrastructure · HCI",
+    title: "Progressive HCI Expansion & NVMe Cluster for High-IOPS Workloads",
+    summary:
+      "As I/O-intensive workloads outgrew an existing SSD/HDD HCI cluster, ISPL designed and delivered a new NVMe cluster for high-IOPS VMs — scaling out without replacing, and wrapping the full estate in 24/7 managed services.",
+    body:
+      "The client's original Proxmox HCI cluster — hosting mail, collaboration, cloud storage, and business apps — was hitting performance limits as VM workloads grew. Rather than a disruptive rip-and-replace, ISPL commissioned a three-node NVMe/SSD cluster at the central office, migrated high-IOPS VMs over a ~14-day on-site engagement, and integrated both clusters under unified backup, logging, and monitoring. A comprehensive AMC and managed services contract now covers the full two-cluster estate.",
+    image:
+      "https://nextcloud.illumiasolutions.com/public.php/dav/files/zxZN9QmzGDYq8dB",
+    metrics: [
+      { value: "2", label: "Production Clusters" },
+      { value: "NVMe", label: "High-IOPS Tier" },
+      { value: "24/7", label: "Managed Services" },
+    ],
+    highlights: [
+      "Three-node NVMe/SSD cluster for low-latency, high-throughput VMs",
+      "~14-day on-site migration sprint for high-IOPS workloads",
+      "PBS backup architecture with incremental backups and restore drills",
+      "AMC covering both clusters, applications, security, and network devices",
+    ],
+  },
 ];
 
 const industries = [
@@ -84,6 +128,8 @@ const industries = [
   { label: "Retail", count: "17 locations" },
   { label: "Non-Profit", count: "Pan-APAC" },
   { label: "Compliance", count: "PCI DSS · GDPR" },
+  { label: "Infrastructure", count: "VMware · Proxmox · HCI" },
+  { label: "Managed Services", count: "AMC · 24/7 support" },
 ];
 
 const approach = [
@@ -129,7 +175,7 @@ export default function CaseStudiesPage() {
       >
         <div className="grid grid-cols-3 gap-4 max-w-md">
           <div>
-            <div className="font-headline text-2xl md:text-3xl text-[#b31c33] font-semibold">3</div>
+            <div className="font-headline text-2xl md:text-3xl text-[#b31c33] font-semibold">5</div>
             <div className="mt-1 text-[10px] uppercase tracking-wider text-[#5a4040]">Case Studies</div>
           </div>
           <div>

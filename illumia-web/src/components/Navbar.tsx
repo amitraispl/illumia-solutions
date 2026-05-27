@@ -11,7 +11,7 @@ const LOGO_URL =
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
-type CaseStudyId = "nonprofit" | "cyber" | "pci";
+type CaseStudyId = "nonprofit" | "cyber" | "pci" | "proxmox-vmware" | "proxmox-hci";
 
 interface CaseStudyItem {
   id: CaseStudyId;
@@ -78,6 +78,40 @@ const CASE_STUDIES: CaseStudyItem[] = [
     image:
       "https://nextcloud.illumiasolutions.com/public.php/dav/files/p7oPQLdGntqDDza",
   },
+  {
+    id: "proxmox-vmware",
+    href: "/case-studies/proxmox-vmware-migration",
+    shortLabel: "VMware → Proxmox VE",
+    subtitle: "80% licensing cost reduction — zero new hardware",
+    label: "80% Licensing Cost Reduction via VMware to Proxmox VE Migration",
+    tag: "Infrastructure · Proxmox",
+    desc: "Lifebank Foundation Inc. escaped unsustainable post-Broadcom VMware licensing via a phased, node-by-node migration to Proxmox VE — zero new hardware procured, zero VMs lost, every downtime threshold met.",
+    shortDesc: "Platform independence, zero capex",
+    highlights: [
+      "80% reduction in annual licensing costs",
+      "Rolling node-by-node migration — VMware live throughout",
+      "Proxmox Backup Server replacing Veeam, encryption at rest",
+    ],
+    image:
+      "https://nextcloud.illumiasolutions.com/public.php/dav/files/w7MtAYxqXsfHgS5",
+  },
+  {
+    id: "proxmox-hci",
+    href: "/case-studies/proxmox-hci-expansion",
+    shortLabel: "NVMe HCI Expansion",
+    subtitle: "Two-cluster HCI estate — scale out, not replace",
+    label: "Progressive HCI Expansion & NVMe Cluster for High-IOPS Workloads",
+    tag: "Infrastructure · HCI",
+    desc: "When I/O-intensive workloads outgrew an existing SSD/HDD Proxmox cluster, ISPL added a three-node NVMe cluster for high-IOPS VMs — preserving the original investment and wrapping the full estate in 24/7 managed services.",
+    shortDesc: "NVMe tier added, original preserved",
+    highlights: [
+      "Three-node NVMe/SSD cluster for high-IOPS VMs",
+      "~14-day on-site migration sprint — no disruption",
+      "Full AMC & 24/7 managed services across both clusters",
+    ],
+    image:
+      "https://nextcloud.illumiasolutions.com/public.php/dav/files/zxZN9QmzGDYq8dB",
+  },
 ];
 
 // ── Case study selector icons ───────────────────────────────────────────────
@@ -101,10 +135,36 @@ const CardIcon = () => (
   </svg>
 );
 
+const ServerIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+    <rect x="2" y="2" width="20" height="8" rx="2" />
+    <rect x="2" y="14" width="20" height="8" rx="2" />
+    <line x1="6" y1="6" x2="6.01" y2="6" />
+    <line x1="6" y1="18" x2="6.01" y2="18" />
+  </svg>
+);
+
+const CpuIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+    <rect x="4" y="4" width="16" height="16" rx="2" />
+    <rect x="9" y="9" width="6" height="6" />
+    <line x1="9" y1="1" x2="9" y2="4" />
+    <line x1="15" y1="1" x2="15" y2="4" />
+    <line x1="9" y1="20" x2="9" y2="23" />
+    <line x1="15" y1="20" x2="15" y2="23" />
+    <line x1="20" y1="9" x2="23" y2="9" />
+    <line x1="20" y1="14" x2="23" y2="14" />
+    <line x1="1" y1="9" x2="4" y2="9" />
+    <line x1="1" y1="14" x2="4" y2="14" />
+  </svg>
+);
+
 const CASE_STUDY_ICONS: Record<CaseStudyId, React.ReactNode> = {
   nonprofit: <HeartIcon />,
   cyber: <LockIcon />,
   pci: <CardIcon />,
+  "proxmox-vmware": <ServerIcon />,
+  "proxmox-hci": <CpuIcon />,
 };
 
 interface CaseMegaMenuProps {
@@ -133,11 +193,18 @@ function CaseStudiesMegaMenu({
       <div className="max-w-screen-2xl mx-auto px-6 md:px-12 flex">
 
         {/* Left: case study selector */}
-        <div className="w-64 xl:w-72 shrink-0 border-r border-outline-variant/30 py-10 pr-8 flex flex-col gap-2">
-          <span className="font-body text-[11px] tracking-[0.2em] uppercase text-primary font-bold mb-4 px-4">
+        <div className="w-64 xl:w-72 shrink-0 border-r border-outline-variant/30 py-10 pr-2 flex flex-col gap-0 max-h-[480px]">
+          <span className="font-body text-[11px] tracking-[0.2em] uppercase text-primary font-bold mb-4 px-4 shrink-0">
             Featured Work
           </span>
-
+          <style>{`
+            .cs-scroll::-webkit-scrollbar { width: 4px; }
+            .cs-scroll::-webkit-scrollbar-track { background: transparent; }
+            .cs-scroll::-webkit-scrollbar-thumb { background: #e2bebd; border-radius: 99px; }
+            .cs-scroll::-webkit-scrollbar-thumb:hover { background: #b31c33; }
+            .cs-scroll { scrollbar-width: thin; scrollbar-color: #e2bebd transparent; }
+          `}</style>
+          <div className="cs-scroll overflow-y-scroll flex flex-col gap-2 pr-4">
           {CASE_STUDIES.map((cs) => {
             const selected = activeCaseStudy === cs.id;
             const onPage = pageCaseStudy === cs.id;
@@ -177,6 +244,7 @@ function CaseStudiesMegaMenu({
               </button>
             );
           })}
+          </div>
         </div>
 
         {/* Right: case study detail */}
