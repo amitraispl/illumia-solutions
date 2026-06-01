@@ -73,10 +73,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
-        {/* Skip link for keyboard / screen-reader users — WCAG 2.4.1 */}
-        <a href="#main-content" className="skip-link">
-          Skip to main content
-        </a>
         <Navbar />
         <main id="main-content" className="flex-1">{children}</main>
         <Footer />

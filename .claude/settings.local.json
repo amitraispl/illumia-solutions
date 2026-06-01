@@ -113,7 +113,10 @@
       "Bash(Test-Path \"O:\\\\CODE\\\\illumia-solutions\\\\illumia-web\\\\.git\")",
       "Bash(Select-Object Name)",
       "Bash(not exist *)",
-      "Bash(python *)"
+      "Bash(python *)",
+      "WebFetch(domain:isplwebsiteapi.illumiasolutions.com)",
+      "mcp__playwright__browser_snapshot",
+      "Bash(dir src\\\\app\\\\admin /s /b)"
     ]
   }
 }

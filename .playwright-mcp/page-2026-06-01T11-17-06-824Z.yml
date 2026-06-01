@@ -1,0 +1,228 @@
+- generic [ref=e3]:
+  - generic:
+    - img
+  - generic [ref=e4]:
+    - generic [ref=e8]:
+      - heading "ispl-backend 1.0.0 OAS 3.1" [level=1] [ref=e9]:
+        - text: ispl-backend
+        - generic [ref=e10]:
+          - generic [ref=e12]: 1.0.0
+          - generic [ref=e14]: OAS 3.1
+      - link "/openapi.json" [ref=e15] [cursor=pointer]:
+        - /url: /openapi.json
+        - generic [ref=e16]: /openapi.json
+    - button "Authorize" [ref=e20] [cursor=pointer]:
+      - generic [ref=e21]: Authorize
+      - img [ref=e22]
+    - generic [ref=e26]:
+      - generic [ref=e28]:
+        - heading "Health Collapse operation" [level=3] [ref=e29] [cursor=pointer]:
+          - link "Health" [ref=e30]:
+            - /url: "#/Health"
+          - button "Collapse operation" [expanded] [ref=e31]:
+            - img [ref=e32]
+        - generic [ref=e38] [cursor=pointer]:
+          - button "GET /v1/health Health Check" [ref=e39]:
+            - generic [ref=e40]: GET
+            - generic [ref=e41]:
+              - link "/v1/health" [ref=e43]:
+                - /url: "#/Health/health_check_v1_health_get"
+                - generic [ref=e44]:
+                  - text: /v1
+                  - text: /health
+              - generic [ref=e45]: Health Check
+          - generic "Copy to clipboard"
+          - button "get /v1/health" [ref=e48]:
+            - img [ref=e49]
+      - generic [ref=e52]:
+        - heading "Auth Collapse operation" [level=3] [ref=e53] [cursor=pointer]:
+          - link "Auth" [ref=e54]:
+            - /url: "#/Auth"
+          - button "Collapse operation" [expanded] [ref=e55]:
+            - img [ref=e56]
+        - generic [ref=e62] [cursor=pointer]:
+          - button "POST /v1/auth/login Login" [ref=e63]:
+            - generic [ref=e64]: POST
+            - generic [ref=e65]:
+              - link "/v1/auth/login" [ref=e67]:
+                - /url: "#/Auth/login_v1_auth_login_post"
+                - generic [ref=e68]:
+                  - text: /v1
+                  - text: /auth
+                  - text: /login
+              - generic [ref=e69]: Login
+          - generic "Copy to clipboard"
+          - button "post /v1/auth/login" [ref=e72]:
+            - img [ref=e73]
+      - generic [ref=e76]:
+        - heading "Enquiries Collapse operation" [level=3] [ref=e77] [cursor=pointer]:
+          - link "Enquiries" [ref=e78]:
+            - /url: "#/Enquiries"
+          - button "Collapse operation" [expanded] [ref=e79]:
+            - img [ref=e80]
+        - generic [ref=e86] [cursor=pointer]:
+          - button "POST /v1/enquiries Submit Enquiry" [ref=e87]:
+            - generic [ref=e88]: POST
+            - generic [ref=e89]:
+              - link "/v1/enquiries" [ref=e91]:
+                - /url: "#/Enquiries/submit_enquiry_v1_enquiries_post"
+                - generic [ref=e92]:
+                  - text: /v1
+                  - text: /enquiries
+              - generic [ref=e93]: Submit Enquiry
+          - generic "Copy to clipboard"
+          - button "post /v1/enquiries" [ref=e96]:
+            - img [ref=e97]
+      - generic [ref=e100]:
+        - heading "Admin - Enquiries Collapse operation" [level=3] [ref=e101] [cursor=pointer]:
+          - link "Admin - Enquiries" [ref=e102]:
+            - /url: "#/Admin%20-%20Enquiries"
+          - button "Collapse operation" [expanded] [ref=e103]:
+            - img [ref=e104]
+        - generic [ref=e107]:
+          - generic [ref=e110] [cursor=pointer]:
+            - button "GET /v1/admin/enquiries List Enquiries Endpoint" [ref=e111]:
+              - generic [ref=e112]: GET
+              - generic [ref=e113]:
+                - link "/v1/admin/enquiries" [ref=e115]:
+                  - /url: "#/Admin%20-%20Enquiries/list_enquiries_endpoint_v1_admin_enquiries_get"
+                  - generic [ref=e116]:
+                    - text: /v1
+                    - text: /admin
+                    - text: /enquiries
+                - generic [ref=e117]: List Enquiries Endpoint
+            - generic "Copy to clipboard"
+            - button "authorization button unlocked" [ref=e120]:
+              - img [ref=e121]
+            - button "get /v1/admin/enquiries" [ref=e123]:
+              - img [ref=e124]
+          - generic [ref=e128] [cursor=pointer]:
+            - 'button "GET /v1/admin/enquiries/{enquiry_id} Get Enquiry Endpoint" [ref=e129]':
+              - generic [ref=e130]: GET
+              - generic [ref=e131]:
+                - 'link "/v1/admin/enquiries/{enquiry_id}" [ref=e133]':
+                  - /url: "#/Admin%20-%20Enquiries/get_enquiry_endpoint_v1_admin_enquiries__enquiry_id__get"
+                  - generic [ref=e134]:
+                    - text: /v1
+                    - text: /admin
+                    - text: /enquiries
+                    - text: "/{enquiry_id}"
+                - generic [ref=e135]: Get Enquiry Endpoint
+            - generic "Copy to clipboard"
+            - button "authorization button unlocked" [ref=e138]:
+              - img [ref=e139]
+            - 'button "get /v1/admin/enquiries/{enquiry_id}" [ref=e141]':
+              - img [ref=e142]
+          - generic [ref=e146] [cursor=pointer]:
+            - 'button "PATCH /v1/admin/enquiries/{enquiry_id}/status Update Status Endpoint" [ref=e147]':
+              - generic [ref=e148]: PATCH
+              - generic [ref=e149]:
+                - 'link "/v1/admin/enquiries/{enquiry_id}/status" [ref=e151]':
+                  - /url: "#/Admin%20-%20Enquiries/update_status_endpoint_v1_admin_enquiries__enquiry_id__status_patch"
+                  - generic [ref=e152]:
+                    - text: /v1
+                    - text: /admin
+                    - text: /enquiries
+                    - text: "/{enquiry_id}"
+                    - text: /status
+                - generic [ref=e153]: Update Status Endpoint
+            - generic "Copy to clipboard"
+            - button "authorization button unlocked" [ref=e156]:
+              - img [ref=e157]
+            - 'button "patch /v1/admin/enquiries/{enquiry_id}/status" [ref=e159]':
+              - img [ref=e160]
+          - generic [ref=e164] [cursor=pointer]:
+            - 'button "POST /v1/admin/enquiries/{enquiry_id}/retry-email Retry Email Endpoint" [ref=e165]':
+              - generic [ref=e166]: POST
+              - generic [ref=e167]:
+                - 'link "/v1/admin/enquiries/{enquiry_id}/retry-email" [ref=e169]':
+                  - /url: "#/Admin%20-%20Enquiries/retry_email_endpoint_v1_admin_enquiries__enquiry_id__retry_email_post"
+                  - generic [ref=e170]:
+                    - text: /v1
+                    - text: /admin
+                    - text: /enquiries
+                    - text: "/{enquiry_id}"
+                    - text: /retry-email
+                - generic [ref=e171]: Retry Email Endpoint
+            - generic "Copy to clipboard"
+            - button "authorization button unlocked" [ref=e174]:
+              - img [ref=e175]
+            - 'button "post /v1/admin/enquiries/{enquiry_id}/retry-email" [ref=e177]':
+              - img [ref=e178]
+      - generic [ref=e181]:
+        - heading "Admin Collapse operation" [level=3] [ref=e182] [cursor=pointer]:
+          - link "Admin" [ref=e183]:
+            - /url: "#/Admin"
+          - button "Collapse operation" [expanded] [ref=e184]:
+            - img [ref=e185]
+        - generic [ref=e191] [cursor=pointer]:
+          - button "POST /v1/admin/test-email Test Email" [ref=e192]:
+            - generic [ref=e193]: POST
+            - generic [ref=e194]:
+              - link "/v1/admin/test-email" [ref=e196]:
+                - /url: "#/Admin/test_email_v1_admin_test_email_post"
+                - generic [ref=e197]:
+                  - text: /v1
+                  - text: /admin
+                  - text: /test-email
+              - generic [ref=e198]: Test Email
+          - generic "Copy to clipboard"
+          - button "authorization button unlocked" [ref=e201]:
+            - img [ref=e202]
+          - button "post /v1/admin/test-email" [ref=e204]:
+            - img [ref=e205]
+    - generic [ref=e209]:
+      - heading "Schemas" [level=4] [ref=e210] [cursor=pointer]:
+        - button "Schemas" [expanded] [ref=e211]:
+          - generic [ref=e212]: Schemas
+          - img [ref=e213]
+      - generic [ref=e215]:
+        - article [ref=e216]:
+          - generic [ref=e217]:
+            - button "EmailStatus" [ref=e218] [cursor=pointer]:
+              - generic [ref=e220]: EmailStatus
+              - img [ref=e222]
+            - button "Expand all" [ref=e224] [cursor=pointer]
+            - strong [ref=e225]: string
+        - article [ref=e226]:
+          - generic [ref=e227]:
+            - button "EnquiryCreate" [ref=e228] [cursor=pointer]:
+              - generic [ref=e230]: EnquiryCreate
+              - img [ref=e232]
+            - button "Expand all" [ref=e234] [cursor=pointer]
+            - strong [ref=e235]: object
+        - article [ref=e236]:
+          - generic [ref=e237]:
+            - button "HTTPValidationError" [ref=e238] [cursor=pointer]:
+              - generic [ref=e240]: HTTPValidationError
+              - img [ref=e242]
+            - button "Expand all" [ref=e244] [cursor=pointer]
+            - strong [ref=e245]: object
+        - article [ref=e246]:
+          - generic [ref=e247]:
+            - button "LoginRequest" [ref=e248] [cursor=pointer]:
+              - generic [ref=e250]: LoginRequest
+              - img [ref=e252]
+            - button "Expand all" [ref=e254] [cursor=pointer]
+            - strong [ref=e255]: object
+        - article [ref=e256]:
+          - generic [ref=e257]:
+            - button "StatusUpdate" [ref=e258] [cursor=pointer]:
+              - generic [ref=e260]: StatusUpdate
+              - img [ref=e262]
+            - button "Expand all" [ref=e264] [cursor=pointer]
+            - strong [ref=e265]: object
+        - article [ref=e266]:
+          - generic [ref=e267]:
+            - button "TestEmailRequest" [ref=e268] [cursor=pointer]:
+              - generic [ref=e270]: TestEmailRequest
+              - img [ref=e272]
+            - button "Expand all" [ref=e274] [cursor=pointer]
+            - strong [ref=e275]: object
+        - article [ref=e276]:
+          - generic [ref=e277]:
+            - button "ValidationError" [ref=e278] [cursor=pointer]:
+              - generic [ref=e280]: ValidationError
+              - img [ref=e282]
+            - button "Expand all" [ref=e284] [cursor=pointer]
+            - strong [ref=e285]: object

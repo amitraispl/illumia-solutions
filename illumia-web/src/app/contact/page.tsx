@@ -95,6 +95,7 @@ export default function ContactPage() {
   const [touched, setTouched] = useState<Partial<Record<keyof FormData, boolean>>>({});
   const [submitted, setSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const fieldClass = (field: keyof FormData) => {
     const base =
@@ -135,9 +136,37 @@ export default function ContactPage() {
     }
 
     setIsLoading(true);
-    await new Promise((res) => setTimeout(res, 900));
-    setIsLoading(false);
-    setSubmitted(true);
+    setSubmitError(null);
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/v1/enquiries`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            fullName: form.name,
+            company: form.company,
+            emailAddress: form.email,
+            phoneNumber: form.phone,
+            city: form.city,
+            state: form.state,
+            country: form.country,
+            howCanWeHelp: form.service,
+            message: form.message,
+          }),
+        }
+      );
+      if (!res.ok) {
+        throw new Error(`Server responded with ${res.status}`);
+      }
+      setSubmitted(true);
+    } catch {
+      setSubmitError(
+        "Something went wrong sending your inquiry. Please try again or email us directly."
+      );
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -481,6 +510,12 @@ export default function ContactPage() {
                         <ErrorMsg id="message-error" text={errors.message} />
                       )}
                     </div>
+
+                    {submitError && (
+                      <p role="alert" className="text-[#b31c33] text-sm font-body bg-[#ffdad9]/30 border border-[#b31c33]/20 rounded-xl px-4 py-3">
+                        {submitError}
+                      </p>
+                    )}
 
                     <button
                       type="submit"
