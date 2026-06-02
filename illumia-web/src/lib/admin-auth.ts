@@ -16,3 +16,12 @@ export const authHeaders = (): Record<string, string> => {
   const base = { "Content-Type": "application/json" };
   return token ? { ...base, Authorization: `Bearer ${token}` } : base;
 };
+
+// API envelopes payloads as { success, data, message }. Unwrap `data`,
+// falling back to the raw body for endpoints that return it flat.
+export const unwrap = <T>(body: unknown): T => {
+  if (body && typeof body === "object" && "data" in body) {
+    return (body as { data: T }).data;
+  }
+  return body as T;
+};

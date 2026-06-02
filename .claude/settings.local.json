@@ -123,7 +123,9 @@
       "Bash(cp _cand/1698668975271-2ba9a323be6b.jpg case-study-vmware-vsan-ceph_sidebar.jpg)",
       "Bash(cp _cand/1695668548342-c0c1ad479aee.jpg case-study-bare-metal-proxmox_hero.jpg)",
       "Bash(rm -f _cand/*.jpg)",
-      "Bash(rmdir _cand)"
+      "Bash(rmdir _cand)",
+      "PowerShell(Get-CimInstance *)",
+      "PowerShell(npm run *)"
     ]
   }
 }

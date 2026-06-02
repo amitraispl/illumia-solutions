@@ -39,8 +39,12 @@ export default function AdminLoginPage() {
         return;
       }
       const data = await res.json();
+      const payload = data.data ?? data;
       const token: string | undefined =
-        data.access_token ?? data.token ?? data.jwt ?? data.accessToken;
+        payload.access_token ??
+        payload.token ??
+        payload.jwt ??
+        payload.accessToken;
       if (!token) {
         setError("Server returned no token. Check API response.");
         return;
