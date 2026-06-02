@@ -11,7 +11,15 @@ const LOGO_URL =
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
-type CaseStudyId = "nonprofit" | "cyber" | "pci" | "proxmox-vmware" | "proxmox-hci";
+type CaseStudyId =
+  | "nonprofit"
+  | "cyber"
+  | "pci"
+  | "proxmox-vmware"
+  | "proxmox-hci"
+  | "forceten"
+  | "dcc-ceph"
+  | "bare-metal";
 
 interface CaseStudyItem {
   id: CaseStudyId;
@@ -112,6 +120,57 @@ const CASE_STUDIES: CaseStudyItem[] = [
     image:
       "https://nextcloud.illumiasolutions.com/public.php/dav/files/zxZN9QmzGDYq8dB",
   },
+  {
+    id: "forceten",
+    href: "/case-studies/vmware-proxmox-migration-forceten",
+    shortLabel: "VMware → Proxmox (FTT)",
+    subtitle: "80% licensing cost reduction — financial-sector migration",
+    label: "80% Licensing Cost Reduction via VMware to Proxmox VE Migration",
+    tag: "Infrastructure · Proxmox",
+    desc: "Forceten Technologies, a financial software developer, escaped unsustainable post-Broadcom VMware licensing via a phased, node-by-node migration to Proxmox VE — zero new hardware, zero VMs lost, every downtime threshold met.",
+    shortDesc: "Financial-sector platform independence",
+    highlights: [
+      "80% reduction in annual licensing costs",
+      "Rolling node-by-node migration — VMware live throughout",
+      "Existing dual SAN reused, PBS replacing Veeam with encryption",
+    ],
+    image:
+      "https://nextcloud.illumiasolutions.com/public.php/dav/files/wLxcmBwerzBERD3",
+  },
+  {
+    id: "dcc-ceph",
+    href: "/case-studies/vmware-vsan-proxmox-ceph",
+    shortLabel: "vSAN → Proxmox Ceph",
+    subtitle: "Live hyper-converged re-platform — zero new hardware",
+    label: "VMware vSAN to Proxmox VE Ceph Migration with Zero New Hardware",
+    tag: "Infrastructure · Ceph HCI",
+    desc: "Data Consultants Corporation left VMware entirely after Broadcom's licensing overhaul — ISPL re-platformed a live vSphere + vSAN cluster to Proxmox VE with Ceph via a phased node-liberation strategy, on existing hardware, sub-24-hour downtime.",
+    shortDesc: "Node-liberation, sub-24h downtime",
+    highlights: [
+      "Phased node-liberation on a live production cluster",
+      "Ceph for self-healing hyper-converged storage — vSAN equivalence",
+      "SSDs as Ceph OSDs, NVMe as DB/WAL; PBS replacing Veeam",
+    ],
+    image:
+      "https://nextcloud.illumiasolutions.com/public.php/dav/files/SWNMwRaw5WCRoxQ",
+  },
+  {
+    id: "bare-metal",
+    href: "/case-studies/bare-metal-proxmox-migration",
+    shortLabel: "Bare Metal → HCI",
+    subtitle: "Two-cluster Proxmox HCI estate for 5,000+ employees",
+    label: "From Bare Metal to a Two-Cluster Proxmox HCI Estate",
+    tag: "Infrastructure · HCI",
+    desc: "ISPL modernised Lifebank Foundation from fragmented bare-metal servers onto a Proxmox VE + Ceph HCI cluster, then added a dedicated NVMe tier for high-IOPS workloads — 50+ VMs across two clusters, IOPS-driven interruptions cut to zero.",
+    shortDesc: "Consolidation, then NVMe expansion",
+    highlights: [
+      "50+ VMs consolidated across two HCI clusters",
+      "Dedicated NVMe/SSD tier — high-IOPS capacity up several times",
+      "On-site/off-site PBS backup, full 24/7 managed services",
+    ],
+    image:
+      "https://nextcloud.illumiasolutions.com/public.php/dav/files/DMG5xaPGnZLat4x",
+  },
 ];
 
 // ── Case study selector icons ───────────────────────────────────────────────
@@ -165,6 +224,9 @@ const CASE_STUDY_ICONS: Record<CaseStudyId, React.ReactNode> = {
   pci: <CardIcon />,
   "proxmox-vmware": <ServerIcon />,
   "proxmox-hci": <CpuIcon />,
+  forceten: <ServerIcon />,
+  "dcc-ceph": <CpuIcon />,
+  "bare-metal": <ServerIcon />,
 };
 
 interface CaseMegaMenuProps {

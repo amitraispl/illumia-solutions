@@ -116,7 +116,14 @@
       "Bash(python *)",
       "WebFetch(domain:isplwebsiteapi.illumiasolutions.com)",
       "mcp__playwright__browser_snapshot",
-      "Bash(dir src\\\\app\\\\admin /s /b)"
+      "Bash(dir src\\\\app\\\\admin /s /b)",
+      "Bash(cp _cand/1717386255950-f7fbe05eb6c0.jpg case-study-vmware-proxmox-forceten_hero.jpg)",
+      "Bash(cp _cand/1624965439943-09e0238644e2.jpg case-study-vmware-proxmox-forceten_sidebar.jpg)",
+      "Bash(cp _cand/1683322499436-f4383dd59f5a.jpg case-study-vmware-vsan-ceph_hero.jpg)",
+      "Bash(cp _cand/1698668975271-2ba9a323be6b.jpg case-study-vmware-vsan-ceph_sidebar.jpg)",
+      "Bash(cp _cand/1695668548342-c0c1ad479aee.jpg case-study-bare-metal-proxmox_hero.jpg)",
+      "Bash(rm -f _cand/*.jpg)",
+      "Bash(rmdir _cand)"
     ]
   }
 }

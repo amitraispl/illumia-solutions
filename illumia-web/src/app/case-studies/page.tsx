@@ -121,6 +121,72 @@ const caseStudies = [
       "AMC covering both clusters, applications, security, and network devices",
     ],
   },
+  {
+    href: "/case-studies/vmware-proxmox-migration-forceten",
+    tag: "Infrastructure · Proxmox",
+    title: "80% Licensing Cost Reduction via VMware to Proxmox VE Migration",
+    summary:
+      "Forceten Technologies Pvt. Ltd., a financial software developer, faced unsustainable VMware licensing after Broadcom's acquisition. ISPL delivered a phased, rolling migration to Proxmox VE — zero new hardware, zero VMs lost, every downtime threshold met.",
+    body:
+      "With no new hardware permitted and workloads classified across three downtime tiers, ISPL executed a node-by-node rolling migration: decommissioning each VMware host, commissioning it as a Proxmox VE node, migrating workloads offline via Proxmox's built-in tooling, and validating with application owners. Existing dual SAN headroom carved the new LUNs, and both Veeam servers were repurposed as Proxmox Backup Server nodes with encryption at rest.",
+    image:
+      "https://nextcloud.illumiasolutions.com/public.php/dav/files/wLxcmBwerzBERD3",
+    metrics: [
+      { value: "80%", label: "Licensing Cost Reduction" },
+      { value: "Zero", label: "VMs Lost" },
+      { value: "$0", label: "New Hardware Capex" },
+    ],
+    highlights: [
+      "Node-by-node rolling migration — VMware cluster live throughout",
+      "Proxmox VE built-in VMware migration tooling — no third-party utilities",
+      "Existing dual SAN reused — ~40% headroom carved into new LUNs",
+      "Proxmox Backup Server replacing Veeam with encryption at rest",
+    ],
+  },
+  {
+    href: "/case-studies/vmware-vsan-proxmox-ceph",
+    tag: "Infrastructure · Ceph HCI",
+    title: "VMware vSAN to Proxmox VE Ceph Migration with Zero New Hardware",
+    summary:
+      "Data Consultants Corporation, a US-based IT services firm, left VMware entirely after Broadcom's licensing overhaul. ISPL re-platformed a live hyper-converged cluster from vSphere with vSAN to Proxmox VE with Ceph — on existing hardware, sub-24-hour downtime.",
+    body:
+      "With no spare hardware, ISPL bootstrapped a Proxmox VE cluster from nodes still active in the vSAN cluster: spare drives became temporary local datastores, VMs were shifted off the vSAN pool, and nodes were evacuated one set at a time and re-provisioned as Proxmox VE with Ceph. SSDs became Ceph OSDs and NVMe drives the DB/WAL tier. A migrate → evacuate → expand cycle ran until VMware was fully decommissioned, with PBS replacing Veeam.",
+    image:
+      "https://nextcloud.illumiasolutions.com/public.php/dav/files/SWNMwRaw5WCRoxQ",
+    metrics: [
+      { value: "vSAN→Ceph", label: "Storage Re-Platformed" },
+      { value: "< 24 hrs", label: "Downtime Ceiling" },
+      { value: "$0", label: "New Hardware Capex" },
+    ],
+    highlights: [
+      "Phased node-liberation strategy on a live production cluster",
+      "Ceph for self-healing hyper-converged storage — vSAN equivalence",
+      "SSDs as Ceph OSDs, NVMe drives as Ceph DB/WAL tier",
+      "Proxmox Backup Server with encryption at rest and retention policy",
+    ],
+  },
+  {
+    href: "/case-studies/bare-metal-proxmox-migration",
+    tag: "Infrastructure · HCI",
+    title: "From Bare Metal to a Two-Cluster Proxmox HCI Estate",
+    summary:
+      "Lifebank Foundation's 5,000+ employees were served by fragmented bare-metal servers. ISPL consolidated them onto a Proxmox HCI cluster with Ceph and PBS, then added a dedicated NVMe tier — 50+ VMs across two clusters, IOPS interruptions cut to zero.",
+    body:
+      "A two-stage, open-source evolution: first migrating core services off siloed bare-metal servers onto a Proxmox VE + Ceph HCI cluster with on-site/off-site PBS backup; then, as workloads turned increasingly I/O-intensive over four years, commissioning a dedicated NVMe/SSD cluster and selectively migrating high-IOPS workloads via weekend cutovers. Both clusters run as one estate under full AMC and managed services.",
+    image:
+      "https://nextcloud.illumiasolutions.com/public.php/dav/files/DMG5xaPGnZLat4x",
+    metrics: [
+      { value: "50+", label: "VMs Across Two Clusters" },
+      { value: "Zero", label: "IOPS Interruptions" },
+      { value: "24/7", label: "Managed Services" },
+    ],
+    highlights: [
+      "Bare-metal consolidation onto Proxmox VE + Ceph HCI",
+      "Dedicated NVMe/SSD cluster — high-IOPS capacity up several times",
+      "Daily on-site PBS backups with off-site replication and restore drills",
+      "End-to-end AMC across both clusters, apps, security and network",
+    ],
+  },
 ];
 
 const industries = [
@@ -175,7 +241,7 @@ export default function CaseStudiesPage() {
       >
         <div className="grid grid-cols-3 gap-4 max-w-md">
           <div>
-            <div className="font-headline text-2xl md:text-3xl text-[#b31c33] font-semibold">5</div>
+            <div className="font-headline text-2xl md:text-3xl text-[#b31c33] font-semibold">8</div>
             <div className="mt-1 text-[10px] uppercase tracking-wider text-[#5a4040]">Case Studies</div>
           </div>
           <div>
