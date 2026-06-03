@@ -31,6 +31,29 @@ interface ListResponse {
 
 // ─── Test Email Modal ──────────────────────────────────────────────────────
 
+// Turn a FastAPI error body into a readable message. Handles the validation
+// shape `{ detail: [{ loc, msg, ... }] }`, the simple `{ detail: "..." }`
+// shape, and falls back to the HTTP status.
+function formatError(data: unknown, status: number): string {
+  const detail = (data as { detail?: unknown })?.detail;
+  if (Array.isArray(detail)) {
+    const msg = detail
+      .map((d) => {
+        const m = (d as { msg?: string; loc?: unknown[] })?.msg;
+        const loc = (d as { loc?: unknown[] })?.loc;
+        const field = Array.isArray(loc) ? loc.filter((p) => p !== "body").join(".") : "";
+        return field ? `${field}: ${m}` : m;
+      })
+      .filter(Boolean)
+      .join("; ");
+    if (msg) return msg;
+  }
+  if (typeof detail === "string" && detail) return detail;
+  const message = (data as { message?: unknown })?.message;
+  if (typeof message === "string" && message) return message;
+  return `Request failed (HTTP ${status}).`;
+}
+
 function TestEmailModal({ onClose }: { onClose: () => void }) {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
@@ -47,15 +70,13 @@ function TestEmailModal({ onClose }: { onClose: () => void }) {
         body: JSON.stringify({ toAddress: email }),
       });
       const data = await res.json().catch(() => ({}));
-      if (res.ok) {
-        setResult({ ok: true, msg: data.message ?? data.detail ?? "Test email sent successfully." });
+      // Treat any `detail` payload as an error — FastAPI uses `{ detail: ... }`
+      // for both validation (422) and raised HTTPExceptions, and the endpoint
+      // can return it with a 200 status, so res.ok alone is not enough.
+      if (res.ok && data?.detail == null) {
+        setResult({ ok: true, msg: data.message ?? "Test email sent successfully." });
       } else {
-        setResult({
-          ok: false,
-          msg: typeof data.detail === "string"
-            ? data.detail
-            : JSON.stringify(data.detail ?? data) || `Error ${res.status}`,
-        });
+        setResult({ ok: false, msg: formatError(data, res.status) });
       }
     } catch {
       setResult({ ok: false, msg: "Network error — could not reach the API server." });
