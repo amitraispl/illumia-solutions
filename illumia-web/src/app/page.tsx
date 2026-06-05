@@ -383,7 +383,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">
-                {["Application Dev", "DevSecOps", "Kubernetes", "Cloud-Native"].map((tag) => (
+                {["Cloud", "Web-Meeting", "Mail", "Collaboration"].map((tag) => (
                   <span key={tag} className="font-body text-xs font-bold uppercase tracking-wider text-primary-subdued bg-white/8 border border-white/15 rounded-md px-3 py-1.5">
                     {tag}
                   </span>

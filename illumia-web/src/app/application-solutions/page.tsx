@@ -39,7 +39,7 @@ const collaborationCards = [
     title: "Cloud Storage",
     desc: "Scalable cloud storage solutions that provide secure and easy access to your data from anywhere, anytime.",
     href: "/drive-as-a-service",
-    image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/xj5MzKJMG87Ebg8",
+    image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/yT6oorESzr75wQn",
     imageAlt: "Cloud storage infrastructure",
     wide: false,
   },
