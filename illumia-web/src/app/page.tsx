@@ -158,7 +158,7 @@ export default function HomePage() {
                     height={logo.height}
                     loading="eager"
                     unoptimized
-                    className="object-contain max-h-12 max-w-36 w-auto opacity-55 hover:opacity-90 transition-[opacity,filter] duration-200 grayscale hover:grayscale-0"
+                    className="object-contain max-h-12 max-w-36 w-auto transition-transform duration-200 hover:scale-110"
                   />
                 </a>
               );
@@ -486,10 +486,12 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1.4fr] gap-4">
 
-            {/* Left column: RED anchor + flip card stacked */}
-            <div className="flex flex-col gap-4">
+            {/* Left column: RED anchor + flip card stacked.
+                Below lg the wrapper collapses (contents) so all 6 cards share
+                one uniform grid; at lg it becomes the bento's left column. */}
+            <div className="contents lg:flex lg:flex-col lg:gap-4">
               <Link
                 href={whyChoose[0].href}
                 className="group bg-primary rounded-2xl p-6 md:p-8 lg:p-10 text-white hover:bg-primary-dark transition-colors duration-300 flex flex-col gap-4 flex-1"
@@ -508,8 +510,9 @@ export default function HomePage() {
               />
             </div>
 
-            {/* Right column: 2×2 sub-grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Right column: 2×2 sub-grid at lg; below lg collapses (contents)
+                into the parent grid so every card is equal width. */}
+            <div className="contents lg:grid lg:grid-cols-2 lg:gap-4">
               {whyChoose.slice(1, 5).map((item, i) => (
                 <Link
                   key={item.title}
