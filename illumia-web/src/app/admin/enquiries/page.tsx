@@ -7,10 +7,13 @@ import { getToken, clearToken, authHeaders, unwrap } from "@/lib/admin-auth";
 import {
   type EmailStatus,
   type Enquiry,
+  type ToastMsg,
   fmtDate,
+  formatError,
   Spinner,
   StatusSelect,
   StatusBadge,
+  Toast,
   Field,
   IconChevronLeft,
   IconRefresh,
@@ -30,6 +33,7 @@ function EnquiryDetail() {
   const [error, setError] = useState<string | null>(null);
   const [statusBusy, setStatusBusy] = useState(false);
   const [retryBusy, setRetryBusy] = useState(false);
+  const [toast, setToast] = useState<ToastMsg | null>(null);
 
   // Auth gate
   useEffect(() => {
@@ -98,9 +102,22 @@ function EnquiryDetail() {
         router.replace("/admin/login");
         return;
       }
-      if (!res.ok) setEnquiry(prev); // revert
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && (data as { detail?: unknown })?.detail == null) {
+        // Merge authoritative server record so the Overall badge and other
+        // derived fields refresh in place — no reload needed.
+        const updated = unwrap<Enquiry>(data);
+        if (updated && typeof updated === "object" && "id" in updated) {
+          setEnquiry((cur) => (cur ? { ...cur, ...updated } : cur));
+        }
+        setToast({ ok: true, text: "Status updated." });
+      } else {
+        setEnquiry(prev); // revert
+        setToast({ ok: false, text: formatError(data, res.status) });
+      }
     } catch {
       setEnquiry(prev);
+      setToast({ ok: false, text: "Network error — could not reach the API server." });
     } finally {
       setStatusBusy(false);
     }
@@ -347,6 +364,8 @@ function EnquiryDetail() {
           </div>
         ) : null}
       </main>
+
+      <Toast toast={toast} onClose={() => setToast(null)} />
     </div>
   );
 }

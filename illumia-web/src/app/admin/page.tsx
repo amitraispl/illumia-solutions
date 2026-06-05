@@ -7,9 +7,12 @@ import { getToken, clearToken, authHeaders, unwrap } from "@/lib/admin-auth";
 import {
   type EmailStatus,
   type Enquiry,
+  type ToastMsg,
   fmtDate,
+  formatError,
   Spinner,
   StatusSelect,
+  Toast,
   IconLogout,
   IconMail,
   IconRefresh,
@@ -30,29 +33,6 @@ interface ListResponse {
 }
 
 // ─── Test Email Modal ──────────────────────────────────────────────────────
-
-// Turn a FastAPI error body into a readable message. Handles the validation
-// shape `{ detail: [{ loc, msg, ... }] }`, the simple `{ detail: "..." }`
-// shape, and falls back to the HTTP status.
-function formatError(data: unknown, status: number): string {
-  const detail = (data as { detail?: unknown })?.detail;
-  if (Array.isArray(detail)) {
-    const msg = detail
-      .map((d) => {
-        const m = (d as { msg?: string; loc?: unknown[] })?.msg;
-        const loc = (d as { loc?: unknown[] })?.loc;
-        const field = Array.isArray(loc) ? loc.filter((p) => p !== "body").join(".") : "";
-        return field ? `${field}: ${m}` : m;
-      })
-      .filter(Boolean)
-      .join("; ");
-    if (msg) return msg;
-  }
-  if (typeof detail === "string" && detail) return detail;
-  const message = (data as { message?: unknown })?.message;
-  if (typeof message === "string" && message) return message;
-  return `Request failed (HTTP ${status}).`;
-}
 
 function TestEmailModal({ onClose }: { onClose: () => void }) {
   const [email, setEmail] = useState("");
@@ -215,6 +195,7 @@ export default function AdminDashboard() {
   // Per-row loading
   const [retryLoading, setRetryLoading] = useState<Record<number, boolean>>({});
   const [statusLoading, setStatusLoading] = useState<Record<number, boolean>>({});
+  const [toast, setToast] = useState<ToastMsg | null>(null);
 
   // Modals
   const [showTestEmail, setShowTestEmail] = useState(false);
@@ -316,12 +297,23 @@ export default function AdminDashboard() {
         router.replace("/admin/login");
         return;
       }
-      if (!res.ok) {
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && (data as { detail?: unknown })?.detail == null) {
+        // Merge authoritative server record so derived fields (overallStatus)
+        // update in place — no reload needed.
+        const updated = unwrap<Enquiry>(data);
+        if (updated && typeof updated === "object" && "id" in updated) {
+          setEnquiries((prev) => prev.map((e) => (e.id === id ? { ...e, ...updated } : e)));
+        }
+        setToast({ ok: true, text: "Status updated." });
+      } else {
         // Revert optimistic update on failure
         void fetchEnquiries(currentPage);
+        setToast({ ok: false, text: formatError(data, res.status) });
       }
     } catch {
       void fetchEnquiries(currentPage);
+      setToast({ ok: false, text: "Network error — could not reach the API server." });
     } finally {
       setStatusLoading((p) => ({ ...p, [id]: false }));
     }
@@ -717,6 +709,8 @@ export default function AdminDashboard() {
 
       {/* ── Modals ─────────────────────────────────────────────────────── */}
       {showTestEmail && <TestEmailModal onClose={() => setShowTestEmail(false)} />}
+
+      <Toast toast={toast} onClose={() => setToast(null)} />
     </div>
   );
 }

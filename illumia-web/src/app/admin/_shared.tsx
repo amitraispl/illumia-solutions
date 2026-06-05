@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect } from "react";
+
 // Shared types, helpers, and presentational components for the admin area.
 
 // ─── Types ─────────────────────────────────────────────────────────────────
@@ -42,6 +44,29 @@ export function fmtDate(s?: string): string {
   } catch {
     return s;
   }
+}
+
+// Turn a FastAPI error body into a readable message. Handles the validation
+// shape `{ detail: [{ loc, msg, ... }] }`, the simple `{ detail: "..." }`
+// shape, and falls back to the HTTP status.
+export function formatError(data: unknown, status: number): string {
+  const detail = (data as { detail?: unknown })?.detail;
+  if (Array.isArray(detail)) {
+    const msg = detail
+      .map((d) => {
+        const m = (d as { msg?: string; loc?: unknown[] })?.msg;
+        const loc = (d as { loc?: unknown[] })?.loc;
+        const field = Array.isArray(loc) ? loc.filter((p) => p !== "body").join(".") : "";
+        return field ? `${field}: ${m}` : m;
+      })
+      .filter(Boolean)
+      .join("; ");
+    if (msg) return msg;
+  }
+  if (typeof detail === "string" && detail) return detail;
+  const message = (data as { message?: unknown })?.message;
+  if (typeof message === "string" && message) return message;
+  return `Request failed (HTTP ${status}).`;
 }
 
 // ─── Icons ─────────────────────────────────────────────────────────────────
@@ -112,6 +137,58 @@ export function Spinner({ className = "w-5 h-5" }: { className?: string }) {
   );
 }
 
+// ─── Toast ─────────────────────────────────────────────────────────────────
+
+export interface ToastMsg {
+  ok: boolean;
+  text: string;
+}
+
+export function Toast({ toast, onClose }: { toast: ToastMsg | null; onClose: () => void }) {
+  useEffect(() => {
+    if (!toast) return;
+    const t = setTimeout(onClose, toast.ok ? 3500 : 7000);
+    return () => clearTimeout(t);
+  }, [toast, onClose]);
+
+  if (!toast) return null;
+
+  return (
+    <div className="fixed bottom-6 right-6 z-[100] max-w-sm animate-in fade-in slide-in-from-bottom-2">
+      <div
+        role="status"
+        className={`flex items-start gap-3 rounded-xl border px-4 py-3 shadow-lg ${
+          toast.ok
+            ? "bg-emerald-50 border-emerald-200 text-emerald-800"
+            : "bg-red-50 border-red-200 text-red-700"
+        }`}
+      >
+        <span className="mt-0.5 shrink-0">
+          {toast.ok ? (
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.25}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+          ) : (
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.25}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m0 3.75h.008M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          )}
+        </span>
+        <p className="text-sm font-medium leading-snug flex-1">{toast.text}</p>
+        <button
+          onClick={onClose}
+          className="shrink-0 opacity-50 hover:opacity-100 transition-opacity"
+          aria-label="Dismiss"
+        >
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  );
+}
+
 // ─── Status Badge ──────────────────────────────────────────────────────────
 
 const STATUS_STYLES: Record<EmailStatus, string> = {
@@ -163,7 +240,6 @@ export function StatusSelect({
       >
         <option value="pending">pending</option>
         <option value="sent">sent</option>
-        <option value="partial">partial</option>
         <option value="failed">failed</option>
       </select>
       {!disabled && (
