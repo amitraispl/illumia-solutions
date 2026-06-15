@@ -125,7 +125,8 @@
       "Bash(rm -f _cand/*.jpg)",
       "Bash(rmdir _cand)",
       "PowerShell(Get-CimInstance *)",
-      "PowerShell(npm run *)"
+      "PowerShell(npm run *)",
+      "WebFetch(domain:www.pexels.com)"
     ]
   }
 }

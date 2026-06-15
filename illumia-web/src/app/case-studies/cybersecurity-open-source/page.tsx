@@ -69,12 +69,12 @@ type Cat = keyof typeof stackCategories;
 const tools: { name: string; note: string; cat: Cat }[] = [
   { name: "OpenVAS", note: "Vulnerability Detection", cat: "vulnerability" },
   { name: "Wazuh", note: "Threat Detection, Integrity, Monitoring", cat: "detection" },
-  { name: "Graylog", note: "Centralized Log Mgmt & Analysis", cat: "detection" },
+  { name: "Graylog", note: "Centralized Log Management & Analysis", cat: "detection" },
   { name: "VAPT as a Service", note: "Recurring 3rd-party Pentest", cat: "vulnerability" },
   { name: "Nessus Pro", note: "Premium Scanning & Assessment", cat: "vulnerability" },
   { name: "Cuckoo Sandbox", note: "Malware Sample Analysis", cat: "response" },
   { name: "Snort / Suricata", note: "IDS Network Intrusion", cat: "detection" },
-  { name: "POAM Mgr.", note: "Plan of Action & Milestones", cat: "governance" },
+  { name: "POAM Manager", note: "Plan of Action & Milestones", cat: "governance" },
 ];
 
 const lifecycle = [

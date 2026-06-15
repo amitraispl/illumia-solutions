@@ -138,7 +138,14 @@ export default function CloudServicesContent() {
                 href="/physical-server"
                 className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300"
               >
-                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">02 / Bare-Metal</span>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold">02 / Bare-Metal</span>
+                  <div className="w-8 h-8 rounded-lg bg-[#b31c33]/8 flex items-center justify-center text-[#b31c33]/60 shrink-0">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 17.25v.75a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25v-.75m0-4.5v-9A2.25 2.25 0 014.5 3h15a2.25 2.25 0 012.25 2.25v9m-19.5 0h19.5m-10.5 3h.008v.008H11.25v-.008zm2.25 0h.008v.008H13.5v-.008z" />
+                    </svg>
+                  </div>
+                </div>
                 <h3 className="font-headline text-2xl text-stone-900 mb-3">Physical Server</h3>
                 <p className="text-[#5a4040] text-sm font-body leading-relaxed mb-4">
                   Dedicated bare-metal servers for workloads requiring maximum compute power, hardware-level control, and zero virtualisation overhead.
@@ -156,7 +163,7 @@ export default function CloudServicesContent() {
                 className="group relative block rounded-2xl overflow-hidden min-h-[220px] h-full"
               >
                 <Image
-                  src="https://nextcloud.illumiasolutions.com/public.php/dav/files/xj5MzKJMG87Ebg8"
+                  src="https://images.pexels.com/photos/5203849/pexels-photo-5203849.jpeg?w=1260&h=750&dpr=1"
                   alt="Container infrastructure"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -181,7 +188,14 @@ export default function CloudServicesContent() {
                 href="/virtual-desktops"
                 className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300"
               >
-                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">04 / DaaS</span>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold">04 / DaaS</span>
+                  <div className="w-8 h-8 rounded-lg bg-[#b31c33]/8 flex items-center justify-center text-[#b31c33]/60 shrink-0">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0H3" />
+                    </svg>
+                  </div>
+                </div>
                 <h3 className="font-headline text-2xl text-stone-900 mb-3">Virtual Desktops</h3>
                 <p className="text-[#5a4040] text-sm font-body leading-relaxed mb-4">
                   Secure remote desktop access from any device — all data stays in your data centre, eliminating endpoint risk.
@@ -198,7 +212,14 @@ export default function CloudServicesContent() {
                 href="/disaster-recovery"
                 className="group block h-full bg-[#f6f3f2] rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-lg transition-all duration-300"
               >
-                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">05 / DR</span>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold">05 / DR</span>
+                  <div className="w-8 h-8 rounded-lg bg-[#b31c33]/8 flex items-center justify-center text-[#b31c33]/60 shrink-0">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                    </svg>
+                  </div>
+                </div>
                 <h3 className="font-headline text-2xl text-stone-900 mb-3">Disaster Recovery</h3>
                 <p className="text-[#5a4040] text-sm font-body leading-relaxed mb-4">
                   Automated failover and continuous replication meeting aggressive RTO and RPO targets.
@@ -215,7 +236,14 @@ export default function CloudServicesContent() {
                 href="/object-storage"
                 className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300"
               >
-                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">06 / Storage</span>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold">06 / Storage</span>
+                  <div className="w-8 h-8 rounded-lg bg-[#b31c33]/8 flex items-center justify-center text-[#b31c33]/60 shrink-0">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 2.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125m16.5 4.5c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                    </svg>
+                  </div>
+                </div>
                 <h3 className="font-headline text-3xl text-stone-900 mb-3">Object Storage</h3>
                 <p className="text-[#5a4040] text-sm font-body leading-relaxed mb-6">
                   High-throughput, low-latency S3-compatible object storage for large-scale data, media archives, backup workloads, and analytics pipelines.
@@ -268,7 +296,14 @@ export default function CloudServicesContent() {
                 href="/honeypot-as-a-service"
                 className="group block h-full bg-[#f6f3f2] rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-lg transition-all duration-300"
               >
-                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">02 / Deception</span>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold">02 / Deception</span>
+                  <div className="w-8 h-8 rounded-lg bg-[#b31c33]/8 flex items-center justify-center text-[#b31c33]/60 shrink-0">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                    </svg>
+                  </div>
+                </div>
                 <h3 className="font-headline text-2xl text-stone-900 mb-3">Honeypot as a Service</h3>
                 <p className="text-[#5a4040] text-sm font-body leading-relaxed">
                   Sophisticated deception technology detecting threats before they reach production systems — zero false positives, all signal.
@@ -282,7 +317,14 @@ export default function CloudServicesContent() {
                 href="/edr-solution"
                 className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-lg transition-all duration-300"
               >
-                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">03 / Endpoint</span>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold">03 / Endpoint</span>
+                  <div className="w-8 h-8 rounded-lg bg-[#b31c33]/8 flex items-center justify-center text-[#b31c33]/60 shrink-0">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                    </svg>
+                  </div>
+                </div>
                 <h3 className="font-headline text-2xl text-stone-900 mb-3">EDR as a Service</h3>
                 <p className="text-[#5a4040] text-sm font-body leading-relaxed">
                   Real-time endpoint detection and automated response across your entire device fleet.
@@ -296,7 +338,14 @@ export default function CloudServicesContent() {
                 href="/waf-as-a-service"
                 className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-lg transition-all duration-300"
               >
-                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">04 / Application</span>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold">04 / Application</span>
+                  <div className="w-8 h-8 rounded-lg bg-[#b31c33]/8 flex items-center justify-center text-[#b31c33]/60 shrink-0">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                    </svg>
+                  </div>
+                </div>
                 <h3 className="font-headline text-2xl text-stone-900 mb-3">WAF as a Service</h3>
                 <p className="text-[#5a4040] text-sm font-body leading-relaxed">
                   Enterprise Web Application Firewall blocking OWASP Top 10, DDoS, and zero-day exploits.
@@ -310,7 +359,14 @@ export default function CloudServicesContent() {
                 href="/nms-as-a-service"
                 className="group block h-full bg-[#f6f3f2] rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-lg transition-all duration-300"
               >
-                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">05 / Network</span>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold">05 / Network</span>
+                  <div className="w-8 h-8 rounded-lg bg-[#b31c33]/8 flex items-center justify-center text-[#b31c33]/60 shrink-0">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
+                    </svg>
+                  </div>
+                </div>
                 <h3 className="font-headline text-2xl text-stone-900 mb-3">NMS as a Service</h3>
                 <p className="text-[#5a4040] text-sm font-body leading-relaxed">
                   Intelligent network management providing total visibility and predictive fault resolution.
@@ -324,7 +380,14 @@ export default function CloudServicesContent() {
                 href="/email-as-a-service"
                 className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300"
               >
-                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">06 / Communication</span>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold">06 / Communication</span>
+                  <div className="w-8 h-8 rounded-lg bg-[#b31c33]/8 flex items-center justify-center text-[#b31c33]/60 shrink-0">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                    </svg>
+                  </div>
+                </div>
                 <h3 className="font-headline text-3xl text-stone-900 mb-3">Email as a Service</h3>
                 <p className="text-[#5a4040] text-sm font-body leading-relaxed mb-4">
                   Enterprise email infrastructure on Zimbra/Carbonio with Proxmox Mail Gateway — AI spam filtering, AD integration, and complete data sovereignty.
@@ -339,13 +402,25 @@ export default function CloudServicesContent() {
             <motion.div variants={fadeUp} className="h-full">
               <Link
                 href="/pam-as-a-service"
-                className="group block h-full bg-[#f6f3f2] rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-lg transition-all duration-300"
+                className="group relative block rounded-2xl overflow-hidden min-h-[220px] h-full"
               >
-                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">07 / Access</span>
-                <h3 className="font-headline text-2xl text-stone-900 mb-3">PAM as a Service</h3>
-                <p className="text-[#5a4040] text-sm font-body leading-relaxed">
-                  Privileged Access Management precisely controlling the keys to your critical systems.
-                </p>
+                <Image
+                  src="https://images.pexels.com/photos/11391947/pexels-photo-11391947.jpeg?w=1260&h=750&dpr=1"
+                  alt="Privileged Access Management"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-[#1c1b1b]/65 group-hover:bg-[#1c1b1b]/55 transition-colors" />
+                <div className="absolute inset-0 p-8 flex flex-col justify-between">
+                  <span className="font-body text-xs tracking-[0.3em] uppercase text-white/70 font-bold">07 / Access</span>
+                  <div>
+                    <h3 className="font-headline text-2xl text-white mb-2">PAM as a Service</h3>
+                    <p className="text-white/60 text-xs font-body mb-3">Privileged Access Management precisely controlling the keys to your critical systems.</p>
+                    <span className="text-white/75 font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest">
+                      Explore PAM <Arrow />
+                    </span>
+                  </div>
+                </div>
               </Link>
             </motion.div>
 
@@ -355,7 +430,14 @@ export default function CloudServicesContent() {
                 href="/drive-as-a-service"
                 className="group block h-full bg-[#f6f3f2] rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/20 hover:bg-white hover:shadow-xl transition-all duration-300"
               >
-                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">08 / Storage</span>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold">08 / Storage</span>
+                  <div className="w-8 h-8 rounded-lg bg-[#b31c33]/8 flex items-center justify-center text-[#b31c33]/60 shrink-0">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" />
+                    </svg>
+                  </div>
+                </div>
                 <h3 className="font-headline text-3xl text-stone-900 mb-3">Drive as a Service</h3>
                 <p className="text-[#5a4040] text-sm font-body leading-relaxed mb-4">
                   Secure self-hosted cloud storage powered by Nextcloud — seamless file sync, collaborative editing with OnlyOffice, and complete data sovereignty.
@@ -412,33 +494,43 @@ export default function CloudServicesContent() {
             viewport={{ once: true, margin: "-60px" }}
             className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4"
           >
-            {[
-              {
-                num: "01",
-                title: "On-Prem to Public Cloud",
-                desc: "Lift-and-shift or re-platform on-premises workloads to leading public cloud providers with validated data integrity and minimal disruption.",
-              },
-              {
-                num: "02",
-                title: "Cloud to Cloud",
-                desc: "Migrate between cloud providers or consolidate multi-cloud environments with full data integrity validation at every stage.",
-              },
-              {
-                num: "03",
-                title: "Cloud to On-Prem",
-                desc: "Repatriate workloads back to on-premises or private cloud infrastructure when sovereignty, performance, or cost demands it.",
-              },
-            ].map((item) => (
-              <motion.div
-                key={item.num}
-                variants={fadeUp}
-                className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300"
-              >
-                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">{item.num}</span>
-                <h3 className="font-headline text-2xl text-stone-900 mb-3">{item.title}</h3>
-                <p className="text-[#5a4040] text-sm font-body leading-relaxed">{item.desc}</p>
+              {/* On-Prem to Public Cloud */}
+              <motion.div variants={fadeUp} className="h-full">
+                <div className="h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300">
+                  <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">01</span>
+                  <h3 className="font-headline text-2xl text-stone-900 mb-3">On-Prem to Public Cloud</h3>
+                  <p className="text-[#5a4040] text-sm font-body leading-relaxed">Lift-and-shift or re-platform on-premises workloads to leading public cloud providers with validated data integrity and minimal disruption.</p>
+                </div>
               </motion.div>
-            ))}
+
+              {/* Cloud to Cloud — image card */}
+              <motion.div variants={fadeUp} className="h-full">
+                <div className="group relative rounded-2xl overflow-hidden min-h-[220px] h-full">
+                  <Image
+                    src="https://images.pexels.com/photos/17323801/pexels-photo-17323801.jpeg?w=1260&h=750&dpr=1"
+                    alt="Cloud to Cloud Migration"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-[#1c1b1b]/65 group-hover:bg-[#1c1b1b]/55 transition-colors" />
+                  <div className="absolute inset-0 p-8 flex flex-col justify-between">
+                    <span className="font-body text-xs tracking-[0.3em] uppercase text-white/70 font-bold">02</span>
+                    <div>
+                      <h3 className="font-headline text-2xl text-white mb-2">Cloud to Cloud</h3>
+                      <p className="text-white/70 text-xs font-body">Migrate between cloud providers or consolidate multi-cloud environments with full data integrity validation at every stage.</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Cloud to On-Prem */}
+              <motion.div variants={fadeUp} className="h-full">
+                <div className="h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300">
+                  <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold block mb-4">03</span>
+                  <h3 className="font-headline text-2xl text-stone-900 mb-3">Cloud to On-Prem</h3>
+                  <p className="text-[#5a4040] text-sm font-body leading-relaxed">Repatriate workloads back to on-premises or private cloud infrastructure when sovereignty, performance, or cost demands it.</p>
+                </div>
+              </motion.div>
           </motion.div>
 
           <motion.div

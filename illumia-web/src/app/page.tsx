@@ -89,6 +89,7 @@ export default function HomePage() {
       {/* ─── Hero ─────────────────────────────────────────────────────────── */}
       <PageHero
         badge="Global IT Solutions"
+        badgeClassName="text-sm"
         title={
           <>
             Illuminating{" "}
@@ -428,7 +429,9 @@ export default function HomePage() {
               <div className="grid grid-cols-2 gap-3">
                 {globalReachCountries.map((country) => (
                   <div key={country} className="flex items-center gap-3 border border-white/20 rounded-xl px-4 py-3 bg-white/10 hover:bg-white/15 transition-colors duration-200">
-                    <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                    <svg className="w-4 h-4 text-primary shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.003 3.5-4.697 3.5-8.327a8 8 0 10-16 0c0 3.63 1.556 6.326 3.5 8.327a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+                    </svg>
                     <span className="font-body text-sm font-semibold text-stone-200">{country}</span>
                   </div>
                 ))}

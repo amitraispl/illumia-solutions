@@ -17,6 +17,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "nextcloud.illumiasolutions.com" },
       { protocol: "https", hostname: "placehold.co" },
       { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "images.pexels.com" },
     ],
   },
 };

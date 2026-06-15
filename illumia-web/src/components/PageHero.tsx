@@ -32,6 +32,8 @@ export interface PageHeroProps {
   imagePosition?: string;
   /** Extra content rendered below the CTAs (e.g. a stats row) */
   children?: ReactNode;
+  /** Additional classes for the badge span (e.g. to increase font size) */
+  badgeClassName?: string;
 }
 
 export default function PageHero({
@@ -45,6 +47,7 @@ export default function PageHero({
   imageGrayscale = false,
   imagePosition = "object-center",
   children,
+  badgeClassName = "",
 }: PageHeroProps) {
   return (
     <section className="flex flex-col lg:flex-row min-h-[100dvh] overflow-hidden">
@@ -58,7 +61,7 @@ export default function PageHero({
         >
           <motion.span
             variants={fadeUp}
-            className="font-body text-xs tracking-[0.25em] uppercase text-primary font-bold mb-6 block"
+            className={`font-body tracking-[0.25em] uppercase text-primary font-bold mb-6 block ${badgeClassName || "text-xs"}`}
           >
             {badge}
           </motion.span>
