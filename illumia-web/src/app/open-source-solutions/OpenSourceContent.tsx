@@ -97,7 +97,8 @@ export default function OpenSourceSolutionsContent() {
           </>
         }
         description="Harnessing the collective intelligence of the global open-source community to deliver enterprise-grade reliability. We don't just use open source — we refine it into high-precision instruments for modern business."
-        primaryCta={{ label: "Explore Our Ecosystem", href: "/contact#contact-form" }}
+        primaryCta={{ label: "Explore Our Ecosystem", href: "#core-solutions" }}
+        secondaryCta={{ label: "View Case Studies", href: "/case-studies" }}
         imageSrc="https://nextcloud.illumiasolutions.com/public.php/dav/files/c5XdbEk78Jpnqm8"
         imageAlt="Open source coding and development"
       />
@@ -123,7 +124,7 @@ export default function OpenSourceSolutionsContent() {
       </section>
 
       {/* ─── Core Solutions Bento ─────────────────────────────────────────── */}
-      <section className="py-20 px-6 md:px-12 bg-white">
+      <section id="core-solutions" className="py-20 px-6 md:px-12 bg-white">
         <div className="max-w-screen-2xl mx-auto">
           <motion.div
             variants={stagger}

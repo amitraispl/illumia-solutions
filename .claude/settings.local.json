@@ -126,7 +126,8 @@
       "Bash(rmdir _cand)",
       "PowerShell(Get-CimInstance *)",
       "PowerShell(npm run *)",
-      "WebFetch(domain:www.pexels.com)"
+      "WebFetch(domain:www.pexels.com)",
+      "PowerShell(Copy-Item *)"
     ]
   }
 }

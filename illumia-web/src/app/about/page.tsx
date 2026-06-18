@@ -44,7 +44,7 @@ const values = [
 
 const whyUs = [
   { number: "01", title: "Expertise Across Domains", desc: "Illumia Solutions brings together a wealth of experience and expertise in cybersecurity, cloud solutions, and open-source technologies. Our team of certified professionals, including CISA, CISSP, CEH, and CCIE, boasts over 20 years of industry-relevant experience, ensuring that your business receives top-tier protection and service tailored to your unique needs.", bg: "https://nextcloud.illumiasolutions.com/public.php/dav/files/7CtcpxZJFnQbEZi" },
-  { number: "02", title: "Comprehensive Cybersecurity Services", desc: "In the face of increasing cyber threats, Illumia Solutions offers robust cybersecurity services that cover everything from IT risk management and application security to mobile and cloud security. We help you navigate complex regulatory landscapes, ensure data privacy, and protect your digital assets with cutting-edge security strategies and technologies.", bg: "https://nextcloud.illumiasolutions.com/public.php/dav/files/Enx2Nx5t3QN7PJy" },
+  { number: "02", title: "Comprehensive Cybersecurity Services", desc: "In the face of increasing cyber threats, Illumia Solutions offers robust cybersecurity services that cover everything from IT risk management and application security to mobile and cloud security. We help you navigate complex regulatory landscapes, ensure data privacy, and protect your digital assets with cutting-edge security strategies and technologies.", bg: "https://nextcloud.illumiasolutions.com/public.php/dav/files/24pgQ3pHZkCZmE9" },
   { number: "03", title: "Advanced Cloud Solutions", desc: "Harness the power of cloud technology with Illumia Solutions. Our cloud services are designed to optimise your operations, enhance security, and ensure seamless scalability. Whether you need hosting, application services, migration, or maintenance, we provide comprehensive solutions that meet today's needs and scale for tomorrow's challenges.", bg: "https://nextcloud.illumiasolutions.com/public.php/dav/files/xj5MzKJMG87Ebg8" },
   { number: "04", title: "Innovative Open-Source Solutions", desc: "We leverage the flexibility and cost-effectiveness of open-source technologies to deliver tailored infrastructure, application, and cybersecurity solutions. Our services include hyperconverged infrastructure, high-performance block storage, and private cloud solutions that ensure your IT environment is robust, scalable, and future-proof.", bg: "https://nextcloud.illumiasolutions.com/public.php/dav/files/c5XdbEk78Jpnqm8" },
   { number: "05", title: "Customer-Centric Approach", desc: "Illumia Solutions places a strong emphasis on understanding and meeting the specific needs of our clients. Our customer-centric approach ensures that solutions are not only effective but also seamlessly integrated into your existing operations. We offer ongoing support and maintenance to ensure your systems remain secure and efficient.", bg: "https://nextcloud.illumiasolutions.com/public.php/dav/files/qLr6HTtbGgGetqr" },
@@ -70,7 +70,7 @@ export default function AboutPage() {
         description="Illumia Solutions is built on the philosophy of precision applied to technical infrastructure. We don't just solve problems; we engineer narratives of success through technological excellence and meticulous strategic planning."
         primaryCta={{ label: "Explore Expertise", href: "/contact#contact-form" }}
         secondaryCta={{ label: "View Our Work", href: "/cloud-services" }}
-        imageSrc="https://nextcloud.illumiasolutions.com/public.php/dav/files/dndzP8s8MwaFtc2"
+        imageSrc="https://nextcloud.illumiasolutions.com/public.php/dav/files/wRryHQaGd8Gt6YX"
         imageAlt="Illumia Solutions team collaboration"
         imagePosition="object-top"
       />
@@ -109,7 +109,7 @@ export default function AboutPage() {
               </h2>
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
                 <Image
-                  src="https://nextcloud.illumiasolutions.com/public.php/dav/files/go4pZCxPEdoHXCf"
+                  src="https://nextcloud.illumiasolutions.com/public.php/dav/files/ztC5aTNoffMeHJx"
                   alt="Illumia Solutions team meeting"
                   fill
                   className="object-cover"
@@ -171,7 +171,7 @@ export default function AboutPage() {
             </div>
             <div className="relative lg:w-[44%] min-h-[300px] shrink-0">
               <Image
-                src="https://nextcloud.illumiasolutions.com/public.php/dav/files/o7xBFBHJC5pSAXZ"
+                src="https://nextcloud.illumiasolutions.com/public.php/dav/files/xigf3B6X5kZmQYR"
                 alt="Illumia Solutions team collaborating"
                 fill
                 className="object-cover"

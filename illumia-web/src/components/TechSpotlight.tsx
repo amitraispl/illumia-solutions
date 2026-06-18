@@ -3,19 +3,21 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
+
 const proxmoxLogo = "https://nextcloud.illumiasolutions.com/public.php/dav/files/9m8WGwRQQkATm43";
-const erpnextLogo = "https://nextcloud.illumiasolutions.com/public.php/dav/files/S4WGDiE7tdR6x3Z";
-const netboxLogo = "https://nextcloud.illumiasolutions.com/public.php/dav/files/3kwHT7ekRWa5wtN";
+const erpnextLogo = "https://nextcloud.illumiasolutions.com/public.php/dav/files/sJgp3azLEFFKZdC";
+const netboxLogo  = "https://nextcloud.illumiasolutions.com/public.php/dav/files/3kwHT7ekRWa5wtN";
+
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 28 },
+  hidden:  { opacity: 0, y: 28 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: EASE } },
 };
 
 const stagger = {
-  hidden: {},
+  hidden:  {},
   visible: { transition: { staggerChildren: 0.11 } },
 };
 
@@ -61,7 +63,7 @@ export default function TechSpotlight() {
             <motion.span variants={fadeUp} className="text-primary font-body text-xs tracking-[0.25em] uppercase font-bold block mb-4">
               Technology Focus Areas
             </motion.span>
-            <motion.h2 variants={fadeUp} className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.95]">
+            <motion.h2 variants={fadeUp} className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.93] tracking-tight">
               Where Industry Is{" "}
               <span className="italic text-primary">Moving Next?</span>
             </motion.h2>
@@ -80,206 +82,192 @@ export default function TechSpotlight() {
           className="grid grid-cols-1 lg:grid-cols-3 gap-4"
         >
 
-          {/* ── AI Governance — RED 2-wide ─────────────────────────────────── */}
+          {/* ── Proxmox — RED 2-wide ───────────────────────────────────────── */}
           <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
             <Link
+              href="/proxmox-migration"
+              className="group relative block h-full bg-primary rounded-2xl p-6 sm:p-8 lg:p-10 text-white overflow-hidden transition-[background-color,box-shadow] duration-300 hover:bg-primary-dark hover:shadow-2xl hover:shadow-primary/40"
+            >
+              {/* Subtle noise texture overlay */}
+              <div className="pointer-events-none absolute inset-0 opacity-[0.04] rounded-2xl"
+                style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")" }}
+              />
+
+              {/* Proxmox logo — absolute so it never shifts heading */}
+              <div className="absolute top-6 right-6 sm:top-8 sm:right-8 lg:top-10 lg:right-10 h-16 w-52 pointer-events-none">
+                <Image
+                  src={proxmoxLogo}
+                  alt="Proxmox Silver Partner"
+                  fill
+                  sizes="208px"
+                  className="object-contain object-right brightness-0 invert"
+                />
+              </div>
+
+              <div className="relative mb-6">
+                <span className="font-body text-xs tracking-[0.25em] uppercase text-white/60 font-bold">
+                  VMware Alternative
+                </span>
+              </div>
+
+              <h3 className="relative font-headline text-3xl md:text-5xl text-white mb-4 leading-[0.95] tracking-tight">
+                Escape the VMware Tax.{" "}
+                <span className="italic font-normal text-white/70">For Good.</span>
+              </h3>
+              <p className="relative text-white/70 text-sm font-body leading-[1.7] mb-8 max-w-xl">
+                Broadcom&apos;s VMware acquisition sent licensing costs through the roof — some enterprises saw 10× increases overnight. Proxmox VE delivers identical enterprise virtualisation — VMs, containers, HA clusters, live migration — at zero licensing cost. We handle the migration end-to-end with zero data loss.
+              </p>
+
+              <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-8">
+                {["VMs & LXC Containers", "HA Clustering & Failover", "Live Migration", "Ceph Distributed Storage", "Automated Backup & Snapshots", "Zero-Downtime Migration"].map((b) => (
+                  <div key={b} className="flex items-center gap-2 text-xs font-body font-semibold text-white/70 uppercase tracking-wide">
+                    <span className="w-1.5 h-1.5 rounded-full bg-white/50 shrink-0" />{b}
+                  </div>
+                ))}
+              </div>
+
+              <div className="relative flex items-center justify-between gap-4 flex-wrap border-t border-white/15 pt-6">
+                <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] duration-200 uppercase tracking-widest text-white/70 group-hover:text-white">
+                  Migrate to Proxmox <Arrow />
+                </span>
+                <div className="text-right">
+                  <p className="font-body text-[10px] uppercase tracking-widest text-white/35 font-bold">Typical Outcome</p>
+                  <p className="font-headline text-2xl font-bold text-white">60–80% cost reduction</p>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+
+          {/* ── AI Governance — WHITE 1-col ─────────────────────────────────── */}
+          <motion.div variants={fadeUp} className="h-full">
+            <Link
               href="/ai-governance"
-              className="group relative block h-full bg-primary rounded-2xl p-6 sm:p-8 lg:p-10 text-white hover:bg-primary-dark transition-colors duration-300 cursor-pointer overflow-hidden"
+              className="group relative block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-stone-200/80 overflow-hidden flex flex-col transition-[box-shadow] duration-300 hover:shadow-xl hover:shadow-primary/10"
             >
               {/* EU stars watermark */}
-              <div className="pointer-events-none absolute -right-10 -bottom-10 w-56 h-56 text-white/[0.07] rotate-6">
+              <div className="pointer-events-none absolute -right-8 -bottom-8 w-52 h-52 text-primary/[0.05]">
                 <EuStars />
               </div>
 
               <div className="relative flex items-center justify-between flex-wrap gap-2 mb-6">
-                <span className="font-body text-xs tracking-[0.25em] uppercase text-white/60 font-bold">
+                <span className="font-body text-xs tracking-[0.25em] uppercase text-primary font-bold">
                   Responsible AI
                 </span>
-                <span className="font-body text-xs tracking-[0.2em] uppercase text-white/40 font-bold border border-white/20 rounded-full px-3 py-1">
+                <span className="font-body text-[10px] tracking-[0.2em] uppercase text-primary/60 font-bold border border-primary/20 rounded-full px-3 py-1">
                   EU AI Act 2025
                 </span>
               </div>
 
-              <h3 className="relative font-headline text-3xl md:text-4xl text-white mb-4 leading-tight">
+              <h3 className="relative font-headline text-3xl md:text-4xl text-stone-900 mb-4 leading-[0.95] tracking-tight group-hover:text-primary transition-colors duration-300">
                 Govern AI Before It{" "}
-                <span className="italic font-normal text-primary-light">Governs You.</span>
+                <span className="italic font-normal text-primary">Governs You.</span>
               </h3>
-              <p className="relative text-white/75 text-sm font-body leading-relaxed mb-8 max-w-xl">
-                The EU AI Act is live. AI systems are proliferating across enterprises at a pace regulators are scrambling to match. Most organisations have no governance framework — no risk classification, no audit trail, no accountability layer. Illumia builds structured AI governance programs that let you deploy AI with confidence, not liability.
+              <p className="relative text-stone-500 text-sm font-body leading-[1.7] mb-6 flex-1">
+                The EU AI Act is live. AI systems are proliferating across enterprises at a pace regulators are scrambling to match. Most organisations have no governance framework — no risk classification, no audit trail, no accountability layer. Illumia builds structured AI governance programs that let you deploy AI with confidence, not liability. We align your policies to EU, NIST AI RMF, and ISO 42001 standards.
               </p>
 
-              <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-8">
-                {["Risk Classification Frameworks", "Bias & Fairness Auditing", "EU AI Act Alignment", "Model Accountability Policies", "AI Incident Response", "Regulatory Reporting"].map((b) => (
-                  <div key={b} className="flex items-center gap-2 text-xs font-body font-semibold text-white/70 uppercase tracking-wide">
-                    <span className="w-1 h-1 rounded-full bg-primary-light/60 shrink-0" />
-                    {b}
+              <div className="relative grid grid-cols-2 gap-x-4 gap-y-2.5 mb-6">
+                {["Risk Classification", "Bias & Fairness Auditing", "EU AI Act Alignment", "AI Incident Response"].map((b) => (
+                  <div key={b} className="flex items-center gap-2 text-xs font-body font-semibold text-stone-500 uppercase tracking-wide">
+                    <span className="w-1 h-1 rounded-full bg-primary shrink-0" />{b}
                   </div>
                 ))}
               </div>
 
-              <div className="relative flex items-center justify-between gap-4 flex-wrap">
-                <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] uppercase tracking-widest text-white/80">
-                  Build Your AI Governance Framework <Arrow />
+              <div className="relative flex items-center justify-between gap-3 flex-wrap border-t border-stone-100 pt-5">
+                <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] duration-200 uppercase tracking-widest text-primary/60 group-hover:text-primary">
+                  Build Your Framework <Arrow />
                 </span>
-                <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-body font-bold text-white/45">
-                  <span className="inline-flex items-center justify-center w-6 h-6 rounded-full border border-white/25">
-                    <span className="w-3 h-3 text-white/80">
-                      <EuStars />
-                    </span>
-                  </span>
-                  EU · NIST AI RMF · ISO 42001
-                </div>
+                <p className="font-body text-[10px] uppercase tracking-widest text-stone-400 font-bold">EU · NIST · ISO 42001</p>
               </div>
             </Link>
           </motion.div>
 
-          {/* ── Proxmox — cream ────────────────────────────────────────────── */}
+          {/* ── NetBox — WHITE 1-col (teal accent) ─────────────────────────── */}
           <motion.div variants={fadeUp} className="h-full">
             <Link
-              href="/proxmox-migration"
-              className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-outline-variant/30 hover:shadow-2xl hover:shadow-stone-200/70 transition-[box-shadow] duration-300 cursor-pointer flex flex-col"
+              href="/netbox"
+              className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-stone-200/80 overflow-hidden flex flex-col transition-[box-shadow] duration-300 hover:shadow-xl hover:shadow-[#00f2d4]/15"
             >
-              <div className="flex items-center justify-between gap-3 mb-6">
-                <span className="font-body text-xs tracking-[0.25em] uppercase text-primary font-bold">
-                  VMware Alternative
+              <div className="mb-6">
+                <span className="font-body text-xs tracking-[0.25em] uppercase font-bold" style={{ color: "#00f2d4" }}>
+                  Network Source of Truth
                 </span>
-                <div className="relative h-10 w-24 shrink-0">
-                  <Image
-                    src={proxmoxLogo}
-                    alt="Proxmox Silver Partner"
-                    fill
-                    sizes="96px"
-                    className="object-contain object-right"
-                  />
-                </div>
               </div>
 
-              <h3 className="font-headline text-2xl text-stone-900 mb-3 leading-tight group-hover:text-primary transition-colors duration-300">
-                Escape the VMware Tax.
+              <h3 className="font-headline text-3xl md:text-4xl text-stone-900 mb-4 leading-[0.95] tracking-tight transition-colors duration-300 group-hover:text-[#00c4aa]">
+                Your Network, Documented.{" "}
+                <span className="italic font-normal" style={{ color: "#00f2d4" }}>Precisely.</span>
               </h3>
-              <p className="text-on-surface-variant text-sm font-body leading-relaxed mb-6 flex-1">
-                Broadcom&apos;s VMware acquisition sent licensing costs through the roof — some enterprises saw 10× increases overnight. Proxmox VE delivers identical enterprise virtualisation — VMs, containers, HA clusters, live migration — at zero licensing cost. We handle the migration end-to-end with zero data loss.
+              <p className="text-stone-500 text-sm font-body leading-[1.7] mb-6 flex-1">
+                Spreadsheets and tribal knowledge aren&apos;t a network strategy — they&apos;re a liability. NetBox is your single source of truth for IP addressing, DCIM, and rack management. Integrates natively with Ansible, Terraform, and Nautobot.
               </p>
 
-              <div className="border-t border-outline-variant/40 pt-5 mb-5">
-                <p className="font-body text-[10px] uppercase tracking-widest text-tertiary font-bold mb-2">Typical Outcome</p>
-                <p className="font-headline text-3xl text-primary">60–80%</p>
-                <p className="font-body text-xs text-on-surface-variant">reduction in hypervisor licensing costs</p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {["IP Address Management", "Data Centre Documentation", "Rack & Elevation Planning", "Ansible & Terraform Integration"].map((tag) => (
+                  <span key={tag} className="font-body text-[10px] font-bold uppercase tracking-wider rounded-md px-2.5 py-1.5 border border-stone-200 bg-stone-50 text-stone-800">
+                    {tag}
+                  </span>
+                ))}
               </div>
 
-              <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] uppercase tracking-widest text-primary/70 group-hover:text-primary">
-                Migrate to Proxmox <Arrow />
-              </span>
+              <div className="border-t pt-5" style={{ borderColor: "rgba(0,242,212,0.12)" }}>
+                <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] duration-200 uppercase tracking-widest" style={{ color: "rgba(0,242,212,0.6)" }}>
+                  Modernise Network Documentation <Arrow />
+                </span>
+              </div>
             </Link>
           </motion.div>
 
-          {/* ── ERPNext — cream ────────────────────────────────────────────── */}
-          <motion.div variants={fadeUp} className="h-full">
+          {/* ── ERPNext — DARK 2-wide ──────────────────────────────────────── */}
+          <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
             <Link
               href="/erpnext"
-              className="group block h-full bg-surface-low rounded-2xl p-6 sm:p-8 lg:p-10 border border-transparent hover:bg-white hover:border-outline-variant/40 hover:shadow-2xl hover:shadow-stone-200/60 transition-[background-color,border-color,box-shadow] duration-300 cursor-pointer flex flex-col"
+              className="group relative block h-full bg-on-surface rounded-2xl p-6 sm:p-8 lg:p-10 text-white overflow-hidden transition-[background-color,box-shadow] duration-300 hover:bg-[#111010] hover:shadow-2xl hover:shadow-black/50"
             >
-              <div className="flex items-center justify-between gap-3 mb-6">
-                <span className="font-body text-xs tracking-[0.25em] uppercase text-primary font-bold">
+              {/* Subtle noise */}
+              <div className="pointer-events-none absolute inset-0 opacity-[0.03] rounded-2xl"
+                style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")" }}
+              />
+
+              <div className="relative flex items-center justify-between gap-3 mb-6">
+                <span className="font-body text-xs tracking-[0.25em] uppercase font-bold" style={{ color: "rgba(0,136,254,0.8)" }}>
                   Open-Source ERP
                 </span>
-                <div className="relative h-10 w-10 rounded-lg bg-white border border-outline-variant/40 p-1 shrink-0">
+                <div className="relative h-14 w-14 rounded-xl overflow-hidden shrink-0 border border-white/10">
                   <Image
                     src={erpnextLogo}
                     alt="ERPNext"
                     fill
-                    sizes="40px"
-                    className="object-contain p-0.5"
+                    sizes="56px"
+                    className="object-cover"
                   />
                 </div>
               </div>
 
-              <h3 className="font-headline text-2xl text-stone-900 mb-3 leading-tight group-hover:text-primary transition-colors duration-300">
-                Enterprise ERP. No Enterprise Price Tag.
+              <h3 className="relative font-headline text-3xl md:text-5xl text-white mb-4 leading-[0.93] tracking-tight">
+                Enterprise ERP.{" "}
+                <span className="italic font-normal" style={{ color: "#0088fe" }}>No Enterprise Price Tag.</span>
               </h3>
-              <p className="text-on-surface-variant text-sm font-body leading-relaxed mb-6 flex-1">
-                SAP, Oracle, and Dynamics are priced for Fortune 500 budgets. ERPNext is 100% open-source — accounting, manufacturing, HR, CRM, inventory, project management and much more — deployed on your own infrastructure with no per-seat licensing and no vendor lock-in.
+              <p className="relative text-stone-400 text-sm font-body leading-[1.7] mb-8 max-w-xl">
+                SAP, Oracle, and Dynamics are priced for Fortune 500 budgets. ERPNext is 100% open-source — accounting, manufacturing, HR, CRM, inventory, and project management — deployed on your own infrastructure with no per-seat licensing and no vendor lock-in.
               </p>
 
-              <ul className="space-y-2 mb-6">
-                {["Full Accounting & Finance", "Manufacturing & MRP", "HR & Payroll", "CRM & Sales Pipeline"].map((f) => (
-                  <li key={f} className="flex items-center gap-2 text-xs font-body font-semibold text-tertiary uppercase tracking-wide">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                    {f}
-                  </li>
+              <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-8">
+                {["Full Accounting & Finance", "Manufacturing & MRP", "HR & Payroll", "CRM & Sales Pipeline", "Inventory & Supply Chain", "Project Management"].map((b) => (
+                  <div key={b} className="flex items-center gap-2 text-xs font-body font-semibold text-stone-400 uppercase tracking-wide">
+                    <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: "rgba(0,136,254,0.6)" }} />{b}
+                  </div>
                 ))}
-              </ul>
+              </div>
 
-              <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] uppercase tracking-widest text-primary/70 group-hover:text-primary">
-                Explore ERPNext <Arrow />
-              </span>
-            </Link>
-          </motion.div>
-
-          {/* ── NetBox — dark 2-wide ────────────────────────────────────────── */}
-          <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
-            <Link
-              href="/netbox"
-              className="group block h-full bg-on-surface rounded-2xl p-6 sm:p-8 lg:p-10 text-white hover:bg-[#111010] transition-colors duration-300 cursor-pointer"
-            >
-              <div className="flex flex-col lg:flex-row gap-10 h-full">
-                <div className="flex-1 flex flex-col">
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="font-body text-xs tracking-[0.25em] uppercase text-[#00f2d4]/80 font-bold">
-                      Network Source of Truth
-                    </span>
-                    <div className="hidden lg:flex items-center gap-2">
-                      {["IPAM", "DCIM", "Automation"].map((tag) => (
-                        <span key={tag} className="font-body text-xs font-bold uppercase tracking-wider text-[#00f2d4]/60 bg-white/5 border border-white/10 rounded-md px-2 py-1">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <h3 className="font-headline text-3xl md:text-4xl text-white mb-4 leading-tight group-hover:text-[#00f2d4] transition-colors duration-300">
-                    Your Network, Documented.{" "}
-                    <span className="italic font-normal text-[#00f2d4]">Precisely.</span>
-                  </h3>
-                  <p className="text-stone-400 text-sm font-body leading-relaxed mb-8 flex-1">
-                    Spreadsheets, Visio diagrams, and tribal knowledge are not a network strategy — they&apos;re a liability. NetBox is your single source of truth for IP addressing, data centre infrastructure, and rack management. It integrates natively with Ansible, Terraform, and Nautobot so provisioning becomes repeatable, handovers become seamless, and audits become painless.
-                  </p>
-
-                  <div className="flex flex-wrap gap-3 mb-8">
-                    {["IP Address Management", "Data Centre Documentation", "Rack & Elevation Planning", "Ansible & Terraform Integration"].map((item) => (
-                      <span key={item} className="font-body text-xs font-semibold uppercase tracking-wide text-stone-500 border border-white/10 rounded-lg px-3 py-1.5">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-
-                  <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] uppercase tracking-widest text-stone-500 group-hover:text-white">
-                    Modernise Network Documentation <Arrow />
-                  </span>
-                </div>
-
-                {/* Logo column */}
-                <div className="hidden lg:flex flex-col items-center justify-center gap-6 shrink-0 lg:w-48">
-                  <div className="relative w-44 h-16 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                    <Image
-                      src={netboxLogo}
-                      alt="NetBox"
-                      fill
-                      sizes="176px"
-                      className="object-contain"
-                    />
-                  </div>
-                  <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#00f2d4]/40 to-transparent" />
-                  <div className="grid grid-cols-3 gap-2 w-full max-w-[176px]">
-                    {["IPv4", "IPv6", "VRF", "VLAN", "BGP", "ASN"].map((proto) => (
-                      <span
-                        key={proto}
-                        className="text-[10px] font-body font-bold tracking-wider text-[#00f2d4]/40 border border-[#00f2d4]/15 rounded-md px-1.5 py-1 text-center"
-                      >
-                        {proto}
-                      </span>
-                    ))}
-                  </div>
+              <div className="relative flex items-center justify-between gap-4 flex-wrap border-t border-white/10 pt-6">
+                <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] duration-200 uppercase tracking-widest text-stone-500 group-hover:text-white">
+                  Explore ERPNext <Arrow />
+                </span>
+                <div className="text-right">
+                  <p className="font-body text-[10px] uppercase tracking-widest text-stone-600 font-bold">Licensing Cost</p>
+                  <p className="font-headline text-2xl font-bold" style={{ color: "#0088fe" }}>$0 per seat, forever</p>
                 </div>
               </div>
             </Link>

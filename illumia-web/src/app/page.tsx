@@ -21,7 +21,7 @@ const netboxLabsLogo = "https://nextcloud.illumiasolutions.com/public.php/dav/fi
 export const metadata: Metadata = {
   title: "Illumia Solutions — Enterprise IT Services — Cloud, Cybersecurity & Open Source",
   description:
-    "Enterprise-grade cloud infrastructure, cybersecurity, and open-source IT services. Proxmox Silver Partner serving businesses across India, USA, Australia, Philippines, Kenya, and Mozambique. CISA, CISSP, CEH, CCIE certified team.",
+    "Enterprise-grade cloud infrastructure, cybersecurity, and open-source IT services. Proxmox Silver Partner serving businesses across India, USA, Australia, Philippines, Kenya, and Nigeria. CISA, CISSP, CEH, CCIE certified team.",
   alternates: { canonical: "/" },
 };
 
@@ -81,7 +81,7 @@ const whyChoose = [
   },
 ];
 
-const globalReachCountries = ["India", "USA", "Philippines", "Australia", "Kenya", "Mozambique"];
+const globalReachCountries = ["India", "USA", "Philippines", "Australia", "Kenya", "Nigeria"];
 
 export default function HomePage() {
   return (
@@ -100,7 +100,7 @@ export default function HomePage() {
         description="Enterprise-grade cybersecurity, cloud, and open-source solutions — engineered for resilience, built for scale. From Kolkata to the globe, we deliver precision technology that powers ambitious businesses forward."
         primaryCta={{ label: "Talk to Our Team", href: "/contact#contact-form" }}
         secondaryCta={{ label: "Learn About Us", href: "/about" }}
-        imageSrc="https://nextcloud.illumiasolutions.com/public.php/dav/files/f3oXqRHB6WJjT3i"
+        imageSrc="/hero-home.avif"
         imageAlt="Diverse team collaborating around a table with laptops"
       >
         {/* Stats row inside hero */}
@@ -167,6 +167,8 @@ export default function HomePage() {
           </Marquee>
         </div>
       </div>
+
+      <TechSpotlight />
 
       {/* ─── About Snapshot ───────────────────────────────────────────────── */}
       <section className="py-12 md:py-20 bg-surface-low">
@@ -400,8 +402,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <TechSpotlight />
 
       {/* ─── Global Reach ─────────────────────────────────────────────────── */}
       <section className="py-12 md:py-20 bg-on-surface text-white relative overflow-hidden">
