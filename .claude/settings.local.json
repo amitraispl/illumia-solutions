@@ -127,7 +127,16 @@
       "PowerShell(Get-CimInstance *)",
       "PowerShell(npm run *)",
       "WebFetch(domain:www.pexels.com)",
-      "PowerShell(Copy-Item *)"
+      "PowerShell(Copy-Item *)",
+      "WebFetch(domain:netboxlabs.com)",
+      "WebFetch(domain:www.proxmox.com)",
+      "Bash(Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 5)",
+      "Bash(Select-Object -ExpandProperty StatusCode)",
+      "PowerShell(Start-Sleep -Seconds 4; try { \\(Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 5\\).StatusCode } catch { \"not ready\" })",
+      "PowerShell(Start-Sleep -Seconds 5; try { \\(Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 5\\).StatusCode } catch { \"waiting\" })",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "mcp__magic__logo_search",
+      "mcp__playwright__browser_click"
     ]
   }
 }

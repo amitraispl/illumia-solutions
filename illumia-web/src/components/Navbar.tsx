@@ -443,6 +443,7 @@ const SERVICE_GROUPS: ServiceGroup[] = [
       { label: "Software-Defined Network", href: "/software-defined-network" },
       { label: "Cloud Migration Solutions", href: "/cloud-migration-solutions" },
       { label: "On-Premise Private Cloud", href: "/on-premise-private-cloud" },
+      { label: "Private Cloud with Proxmox VE", href: "/on-premise-private-cloud-solutions" },
       { label: "Infrastructure Solutions", href: "/infrastructure-solutions" },
       { label: "Application Solutions", href: "/application-solutions" },
       { label: "Maintenance Services", href: "/cloud-services#maintenance" },
@@ -490,6 +491,7 @@ const SERVICE_GROUPS: ServiceGroup[] = [
       { label: "Email as a Service", href: "/email-as-a-service" },
       { label: "Drive as a Service", href: "/drive-as-a-service" },
       { label: "Backup as a Service", href: "/backup-as-a-service" },
+      { label: "NetBox Platform", href: "/netbox-platform" },
     ],
   },
 ];
@@ -617,43 +619,94 @@ function ServicesMegaMenu({ onClose, activeCategory, onCategoryChange, pageCateg
         </div>
 
         {/* Right: service items with category link at top */}
-        <div className="flex-1 min-w-0 pl-10 py-10 relative overflow-hidden">
-          <AnimatePresence initial={false}>
-            <motion.div
-              key={activeCategory}
-              initial={{ opacity: 0, x: 18 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -18, position: "absolute" as const, top: 0, left: 40, right: 0 }}
-              transition={{ duration: 0.3, ease: EASE }}
-            >
-              {/* Category page link — AT TOP, prominent, with external-link icon */}
-              <Link
-                href={activeGroup.href}
-                onClick={onClose}
-                className="group/catlink inline-flex items-center gap-2.5 mb-6 pb-5 border-b border-outline-variant/40 w-full"
+        <div className="flex-1 min-w-0 pl-10 py-10 flex flex-col">
+          <div className="relative overflow-hidden flex-1">
+            <AnimatePresence initial={false}>
+              <motion.div
+                key={activeCategory}
+                initial={{ opacity: 0, x: 18 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -18, position: "absolute" as const, top: 0, left: 0, right: 0 }}
+                transition={{ duration: 0.3, ease: EASE }}
               >
-                <span className="font-headline text-xl text-stone-900 group-hover/catlink:text-primary transition-colors duration-200 leading-none">
-                  {activeGroup.label} Services
-                </span>
-                <ExternalArrow className="w-4 h-4 text-stone-400 group-hover/catlink:text-primary transition-colors duration-200 shrink-0" />
-              </Link>
+                {/* Category page link — AT TOP, prominent, with external-link icon */}
+                <Link
+                  href={activeGroup.href}
+                  onClick={onClose}
+                  className="group/catlink inline-flex items-center gap-2.5 mb-6 pb-5 border-b border-outline-variant/40 w-full"
+                >
+                  <span className="font-headline text-xl text-stone-900 group-hover/catlink:text-primary transition-colors duration-200 leading-none">
+                    {activeGroup.label} Services
+                  </span>
+                  <ExternalArrow className="w-4 h-4 text-stone-400 group-hover/catlink:text-primary transition-colors duration-200 shrink-0" />
+                </Link>
 
-              {/* Items grid */}
-              <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1" data-category={activeGroup.id}>
-                {activeGroup.items.map((item) => (
-                  <Link
-                    key={item.href + item.label}
-                    href={item.href}
-                    onClick={onClose}
-                    className="group/item flex items-center gap-3 py-2.5 px-3 text-stone-600 hover:text-primary hover:bg-primary/[0.05] transition-colors duration-200"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-outline-variant group-hover/item:bg-primary shrink-0 transition-colors duration-200" />
-                    <span className="font-body text-sm leading-snug">{item.label}</span>
-                  </Link>
-                ))}
-              </div>
-            </motion.div>
-          </AnimatePresence>
+                {/* Items grid */}
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1" data-category={activeGroup.id}>
+                  {activeGroup.items.map((item) => (
+                    <Link
+                      key={item.href + item.label}
+                      href={item.href}
+                      onClick={onClose}
+                      className="group/item flex items-center gap-3 py-2.5 px-3 text-stone-600 hover:text-primary hover:bg-primary/[0.05] transition-colors duration-200"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-outline-variant group-hover/item:bg-primary shrink-0 transition-colors duration-200" />
+                      <span className="font-body text-sm leading-snug">{item.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Platform Spotlights — always visible, directs users to deep-dive pages */}
+          <div className="mt-6 pt-5 border-t border-outline-variant/25 shrink-0">
+            <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary font-bold mb-3">
+              Platform Deep-Dives
+            </p>
+            <div className="grid grid-cols-2 gap-3">
+              <Link
+                href="/on-premise-private-cloud-solutions"
+                onClick={onClose}
+                className="group/pl flex items-center gap-3 rounded-lg border border-outline-variant/30 px-4 py-3 hover:border-primary/30 hover:bg-primary/[0.04] transition-colors duration-200"
+              >
+                <div className="shrink-0 w-7 h-7 rounded-md bg-stone-100 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/proxmox.png"
+                    alt="Proxmox VE"
+                    className="w-5 h-5 object-contain"
+                  />
+                </div>
+                <div className="min-w-0">
+                  <p className="font-body text-sm font-semibold text-stone-800 group-hover/pl:text-primary transition-colors duration-200 leading-snug truncate">
+                    Proxmox VE
+                  </p>
+                  <p className="font-body text-[11px] text-stone-400 leading-snug">Private Cloud · Zero licensing</p>
+                </div>
+                <ExternalArrow className="w-3.5 h-3.5 text-stone-300 group-hover/pl:text-primary shrink-0 ml-auto transition-colors duration-200" />
+              </Link>
+              <Link
+                href="/netbox-platform"
+                onClick={onClose}
+                className="group/pl flex items-center gap-3 rounded-lg border border-outline-variant/30 px-4 py-3 hover:border-primary/30 hover:bg-primary/[0.04] transition-colors duration-200"
+              >
+                <div className="shrink-0 w-7 h-7 rounded-md bg-stone-100 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="https://github.com/netboxlabs.png"
+                    alt="NetBox Labs"
+                    className="w-7 h-7 object-cover"
+                  />
+                </div>
+                <div className="min-w-0">
+                  <p className="font-body text-sm font-semibold text-stone-800 group-hover/pl:text-primary transition-colors duration-200 leading-snug truncate">
+                    NetBox Platform
+                  </p>
+                  <p className="font-body text-[11px] text-stone-400 leading-snug">Network source of truth</p>
+                </div>
+                <ExternalArrow className="w-3.5 h-3.5 text-stone-300 group-hover/pl:text-primary shrink-0 ml-auto transition-colors duration-200" />
+              </Link>
+            </div>
+          </div>
         </div>
 
       </div>
