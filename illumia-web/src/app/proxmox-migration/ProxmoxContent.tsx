@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowRight, ArrowUpRight, CheckCircle2, Server, Layers, HardDrive, Shield, Network, Database, Cpu, RefreshCcw } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CheckCircle2, Server, Layers, HardDrive, Shield, Network, Database, Cpu, RefreshCcw, Globe2, ScanLine, ShieldAlert } from "lucide-react";
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
@@ -20,13 +20,13 @@ const staggerFast = { hidden: {}, visible: { transition: { staggerChildren: 0.05
 // Real images from proxmox.com
 const IMG = {
   logo: "https://nextcloud.illumiasolutions.com/public.php/dav/files/9m8WGwRQQkATm43",
-  dashboard: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-9.2-Datacenter-Dashboard.png",
-  ha: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-9-2-HA-Balancing-Migration.png",
-  esxi: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-8-2-VMware-ESXi-Guestimport.png",
-  cluster: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-8-2-Cluster-Summary.png",
-  metrics: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-9-0-Metrics.png",
-  sdn: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-8-1-SDN.png",
-  backup: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-6-3-Backup-Server-Encryption.png",
+  dashboard: "https://nextcloud.illumiasolutions.com/public.php/dav/files/49ggNxRmSb95wGG",
+  ha: "https://nextcloud.illumiasolutions.com/public.php/dav/files/zJ6qfBsTkjnAYCe",
+  esxi: "https://nextcloud.illumiasolutions.com/public.php/dav/files/jDwXgZzBDXgfTYs",
+  cluster: "https://nextcloud.illumiasolutions.com/public.php/dav/files/jxF4a5KgwbqT36Z",
+  metrics: "https://nextcloud.illumiasolutions.com/public.php/dav/files/L8cgsmNk4ko2FL5",
+  sdn: "https://nextcloud.illumiasolutions.com/public.php/dav/files/8Z2JqnWyo6PHSge",
+  backup: "https://nextcloud.illumiasolutions.com/public.php/dav/files/X7QD5i5xdHp3BEf",
 };
 
 function BrowserFrame({
@@ -73,6 +73,100 @@ const REMAINING_CAPS = [
   { icon: Shield, title: "Proxmox Backup Server", text: "Deduplicated, encrypted incremental backups with point-in-time restore. Replaces Veeam licensing." },
   { icon: Network, title: "SDN Stack", text: "VXLAN overlays, EVPN, and zone-based segmentation. Native OVS and Linux bridge." },
   { icon: Database, title: "REST API", text: "Every UI action has an API equivalent. Provision via Terraform, configure via Ansible." },
+];
+
+const AMS_PILLARS = [
+  {
+    n: "01",
+    icon: ScanLine,
+    title: "Gap Assessment, Recommendation & Remediation",
+    text: "Systematic evaluation of your Proxmox environment against security baselines and operational best practices. Findings delivered as prioritised action items with remediation handled end-to-end by Illumia engineers.",
+    items: ["Annual baseline audit", "Remediation roadmap", "Configuration hardening", "Post-remediation validation"],
+  },
+  {
+    n: "02",
+    icon: Globe2,
+    title: "Geo-Distributed Monitoring",
+    text: "24/7 observability across all nodes, clusters, and sites — latency, saturation, and error rates surfaced in a unified dashboard. Proactive alerting catches degradation before it becomes downtime.",
+    items: ["Multi-site cluster visibility", "Real-time metric collection", "Alerting & escalation runbooks", "Monthly uptime reports"],
+  },
+  {
+    n: "03",
+    icon: ShieldAlert,
+    title: "Quarterly Vulnerability Assessment",
+    text: "Four structured security reviews per year covering CVE exposure, network surface, and access controls. Each assessment closes with a risk-rated finding report and patch coordination.",
+    items: ["CVE scanning per node", "Network exposure review", "Privileged access audit", "Patch scheduling & coordination"],
+  },
+  {
+    n: "04",
+    icon: RefreshCcw,
+    title: "Proxmox Ecosystem Upgradation",
+    text: "Continuous alignment with the Proxmox VE release track — planned, tested, zero-downtime upgrades to PVE, PBS, and PMG components with full rollback procedures documented before every change.",
+    items: ["Version lifecycle tracking", "Staged rolling upgrades", "Pre-upgrade test validation", "Rollback runbook per upgrade"],
+  },
+];
+
+const PROXMOX_PRODUCTS = [
+  {
+    n: "01",
+    name: "Proxmox Virtual Environment",
+    abbr: "PVE",
+    tagline: "Type-1 Hypervisor Platform",
+    desc: "KVM virtualisation and LXC containers unified under one browser interface. Built-in HA clustering, live migration, Ceph HCI storage, ZFS, and a full REST API — zero per-core fees, zero seat counts.",
+    features: [
+      "KVM VMs and LXC containers on one platform",
+      "Built-in HA clustering and live migration",
+      "Ceph block/object + ZFS local storage",
+      "Full REST API — Terraform and Ansible ready",
+    ],
+    img: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-9.2-Datacenter-Dashboard.png",
+    imgAlt: "Proxmox VE Datacenter Dashboard",
+  },
+  {
+    n: "02",
+    name: "Proxmox Datacenter Manager",
+    abbr: "PDM",
+    tagline: "Centralised Fleet Control",
+    desc: "Single management plane across every Proxmox VE cluster in your estate. Monitor, coordinate upgrades, and enforce access policies from one interface — spanning multiple sites with no per-node agents.",
+    features: [
+      "Multi-cluster unified dashboard",
+      "Cross-site node and VM visibility",
+      "Centralised upgrade coordination",
+      "RBAC scoped to cluster or node level",
+    ],
+    img: "https://www.proxmox.com/images/proxmox/images/monitor-with-proxmox-datacenter-manager-01.png",
+    imgAlt: "Proxmox Datacenter Manager",
+  },
+  {
+    n: "03",
+    name: "Proxmox Backup Server",
+    abbr: "PBS",
+    tagline: "Deduplicated, Encrypted Backup",
+    desc: "Incremental block-level backups for VMs, containers, and physical hosts. Client-side AES-256 encryption, chunk-level deduplication, and verifiable point-in-time restores — replaces Veeam without the invoice.",
+    features: [
+      "Incremental block-level snapshot backups",
+      "Client-side AES-256 encryption",
+      "Chunk deduplication — 60–80% storage savings",
+      "Restore integrity verification before you need it",
+    ],
+    img: "https://www.proxmox.com/images/proxmox/screenshots/pbs/Proxmox-Backup-Server-4-2-Dashboard.png",
+    imgAlt: "Proxmox Backup Server Dashboard",
+  },
+  {
+    n: "04",
+    name: "Proxmox Mail Gateway",
+    abbr: "PMG",
+    tagline: "On-Premise Email Security",
+    desc: "Open-source SMTP proxy scanning all inbound and outbound mail traffic. Spam classification, virus scanning, DMARC/SPF/DKIM enforcement, and per-user quarantine — SMTP proxy architecture, no MX record change required.",
+    features: [
+      "Spam and phishing classification engine",
+      "Virus scanning — ClamAV and commercial feeds",
+      "DMARC / SPF / DKIM enforcement",
+      "Per-user quarantine and detailed reporting",
+    ],
+    img: "https://proxmox.com/images/proxmox/screenshots/pmg/Proxmox-Mail-Gateway-9.1-dashboard.png",
+    imgAlt: "Proxmox Mail Gateway Dashboard",
+  },
 ];
 
 const PHASES = [
@@ -142,7 +236,7 @@ export default function ProxmoxContent() {
               >
                 On-Premise<br />
                 Private Cloud.<br />
-                <span className="text-[#b31c33] italic font-normal">Zero Tax.</span>
+                <span className="text-[#b31c33] italic font-normal">Begone Big Bills.</span>
               </motion.h1>
 
               <motion.p variants={fadeUp} className="font-body text-[15px] text-[#5a4040] leading-[1.8] max-w-[520px] mb-9">
@@ -220,43 +314,314 @@ export default function ProxmoxContent() {
         </div>
       </section>
 
-      {/* ━━━ BROADCOM PROBLEM ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <section className="bg-[#0d0c0c] py-20 md:py-28 px-6 md:px-10 xl:px-16">
-        <div className="max-w-[1400px] mx-auto grid lg:grid-cols-[55%_45%] gap-14 lg:gap-20 items-start">
+      {/* ━━━ ANNUAL MAINTENANCE SERVICE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <section className="bg-[#fcf9f8] py-20 md:py-28 px-6 md:px-10 xl:px-16">
+        <div className="max-w-[1400px] mx-auto">
 
-          {/* Left: editorial */}
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
-            <motion.span variants={fadeUp} className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-6">
-              The Broadcom Problem
+          {/* ── Header ── */}
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12 pb-10 border-b border-[#e2bebd]/40"
+          >
+            <div>
+              <motion.span variants={fadeUp} className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-5">
+                Annual Maintenance Service
+              </motion.span>
+              <motion.h2
+                variants={fadeUp}
+                className="font-headline text-4xl md:text-[2.8rem] lg:text-[3.2rem] text-[#1c1b1b] leading-[1.03] tracking-tight"
+              >
+                Beyond migration.<br />
+                <span className="italic font-normal text-[#b31c33]">Infrastructure, sustained.</span>
+              </motion.h2>
+            </div>
+            <motion.div variants={fadeUp} className="flex flex-wrap items-end gap-x-10 gap-y-3 lg:pb-1 shrink-0">
+              {[
+                { v: "4", l: "Service pillars" },
+                { v: "Annual", l: "Commitment term" },
+                { v: "Quarterly", l: "Security cadence" },
+              ].map((s) => (
+                <div key={s.v}>
+                  <div className="font-headline text-[1.6rem] text-[#1c1b1b] leading-none mb-1">{s.v}</div>
+                  <div className="font-body text-[11px] text-[#8e706f] tracking-wide">{s.l}</div>
+                </div>
+              ))}
+            </motion.div>
+          </motion.div>
+
+          {/* ── Bento Grid ── */}
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5"
+          >
+            {/* Card 01 — Gap Assessment (tall, spans 2 rows on left) */}
+            <motion.div
+              variants={fadeUp}
+              className="md:row-span-2 bg-white border border-[#e2bebd]/40 rounded-2xl p-8 flex flex-col gap-6 group hover:border-[#b31c33]/25 hover:shadow-xl hover:shadow-[#b31c33]/[0.05] transition-all duration-300"
+            >
+              <div className="relative h-36 rounded-xl overflow-hidden bg-[#b31c33]/[0.025] border border-[#e2bebd]/50 shrink-0">
+                <div
+                  className="absolute inset-0 p-3"
+                  style={{ display: "grid", gridTemplateColumns: "repeat(10, 1fr)", gridTemplateRows: "repeat(6, 1fr)" }}
+                >
+                  {Array.from({ length: 60 }).map((_, i) => (
+                    <motion.div
+                      key={i}
+                      className="w-[3px] h-[3px] rounded-full bg-[#b31c33] self-center justify-self-center"
+                      animate={{ opacity: [0.07, 0.65, 0.07] }}
+                      transition={{ duration: 2.4, repeat: Infinity, delay: (i % 20) * 0.08, ease: "easeInOut" }}
+                    />
+                  ))}
+                </div>
+                <motion.div
+                  className="absolute inset-x-3 h-[1px] bg-gradient-to-r from-transparent via-[#b31c33]/65 to-transparent"
+                  animate={{ top: ["12px", "calc(100% - 12px)", "12px"] }}
+                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <span className="absolute bottom-2 right-3 font-body text-[8px] tracking-[0.22em] uppercase text-[#b31c33]/35 select-none">
+                  Scanning environment
+                </span>
+              </div>
+              <span className="font-headline italic text-[#b31c33] text-4xl leading-none tabular-nums">01</span>
+              <div>
+                <h3 className="font-headline text-[1.2rem] text-[#1c1b1b] leading-[1.2] tracking-tight mb-2.5">
+                  Gap Assessment,<br />Recommendation & Remediation
+                </h3>
+                <p className="font-body text-[13px] text-[#5a4040] leading-[1.8]">
+                  Systematic evaluation against security baselines and operational best practices. Findings delivered as prioritised action items — remediation handled end-to-end by Illumia engineers.
+                </p>
+              </div>
+              <ul className="flex flex-col gap-2 mt-auto pt-4 border-t border-[#e2bebd]/40">
+                {["Annual baseline audit", "Remediation roadmap", "Configuration hardening", "Post-remediation validation"].map(it => (
+                  <li key={it} className="flex items-center gap-2.5">
+                    <CheckCircle2 size={11} className="text-[#b31c33] shrink-0" strokeWidth={1.5} />
+                    <span className="font-body text-[12px] text-[#8e706f]">{it}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Card 02 — Geo Monitoring (wide, top right, col-span-2) */}
+            <motion.div
+              variants={fadeUp}
+              className="md:col-span-2 bg-white border border-[#e2bebd]/40 rounded-2xl p-8 flex flex-col gap-5 group hover:border-[#b31c33]/25 hover:shadow-xl hover:shadow-[#b31c33]/[0.05] transition-all duration-300"
+            >
+              <div className="relative h-20 rounded-xl overflow-hidden bg-[#b31c33]/[0.025] border border-[#e2bebd]/50 shrink-0">
+                <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none">
+                  {[
+                    { x1: "8%", y1: "50%", x2: "27%", y2: "28%", d: 0 },
+                    { x1: "27%", y1: "28%", x2: "50%", y2: "62%", d: 0.4 },
+                    { x1: "50%", y1: "62%", x2: "73%", y2: "22%", d: 0.8 },
+                    { x1: "73%", y1: "22%", x2: "92%", y2: "56%", d: 1.2 },
+                  ].map((l, i) => (
+                    <motion.line key={i} x1={l.x1} y1={l.y1} x2={l.x2} y2={l.y2}
+                      stroke="rgba(179,28,51,0.18)" strokeWidth="1"
+                      animate={{ opacity: [0.18, 0.55, 0.18] }}
+                      transition={{ duration: 2.5, repeat: Infinity, delay: l.d }}
+                    />
+                  ))}
+                </svg>
+                {[
+                  { left: "8%", top: "50%", delay: 0 },
+                  { left: "27%", top: "28%", delay: 0.4 },
+                  { left: "50%", top: "62%", delay: 0.8 },
+                  { left: "73%", top: "22%", delay: 1.2 },
+                  { left: "92%", top: "56%", delay: 1.6 },
+                ].map((n, i) => (
+                  <div key={i} className="absolute -translate-x-1/2 -translate-y-1/2" style={{ left: n.left, top: n.top }}>
+                    <motion.div
+                      className="absolute rounded-full border border-[#b31c33]/22"
+                      style={{ inset: "-7px" }}
+                      animate={{ scale: [1, 2.4], opacity: [0.4, 0] }}
+                      transition={{ duration: 2.2, repeat: Infinity, delay: n.delay, ease: "easeOut" }}
+                    />
+                    <motion.div
+                      className="w-2.5 h-2.5 rounded-full bg-[#b31c33]"
+                      animate={{ scale: [1, 1.15, 1], opacity: [0.6, 1, 0.6] }}
+                      transition={{ duration: 2.2, repeat: Infinity, delay: n.delay }}
+                    />
+                  </div>
+                ))}
+                <span className="absolute top-1.5 left-3 font-body text-[8px] tracking-[0.2em] uppercase text-[#b31c33]/30 select-none">AP-South</span>
+                <span className="absolute top-1.5 right-3 font-body text-[8px] tracking-[0.2em] uppercase text-[#b31c33]/30 select-none">EU-West</span>
+              </div>
+              <div className="flex items-start gap-5">
+                <span className="font-headline italic text-[#b31c33] text-4xl leading-none tabular-nums shrink-0">02</span>
+                <div>
+                  <h3 className="font-headline text-[1.2rem] text-[#1c1b1b] leading-[1.2] tracking-tight mb-2">Geo-Distributed Monitoring</h3>
+                  <p className="font-body text-[13px] text-[#5a4040] leading-[1.8]">
+                    24/7 observability across all nodes, clusters, and sites — latency, saturation, and error rates surfaced in a unified dashboard. Proactive alerting catches degradation before downtime.
+                  </p>
+                </div>
+              </div>
+              <ul className="grid grid-cols-2 gap-1.5 pt-4 border-t border-[#e2bebd]/40">
+                {["Multi-site cluster visibility", "Real-time metric collection", "Alerting & escalation runbooks", "Monthly uptime reports"].map(it => (
+                  <li key={it} className="flex items-center gap-2">
+                    <CheckCircle2 size={11} className="text-[#b31c33] shrink-0" strokeWidth={1.5} />
+                    <span className="font-body text-[12px] text-[#8e706f]">{it}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Card 03 — Quarterly Vulnerability */}
+            <motion.div
+              variants={fadeUp}
+              className="bg-white border border-[#e2bebd]/40 rounded-2xl p-8 flex flex-col gap-5 group hover:border-[#b31c33]/25 hover:shadow-xl hover:shadow-[#b31c33]/[0.05] transition-all duration-300"
+            >
+              <div className="relative w-14 h-14 shrink-0">
+                <motion.div className="absolute inset-0 rounded-full border border-dashed border-[#b31c33]/22"
+                  animate={{ rotate: 360 }} transition={{ duration: 12, repeat: Infinity, ease: "linear" }} />
+                <motion.div className="absolute inset-[7px] rounded-full border border-[#b31c33]/12"
+                  animate={{ rotate: -360 }} transition={{ duration: 8, repeat: Infinity, ease: "linear" }} />
+                <motion.div className="absolute inset-[2px] rounded-full bg-[#b31c33]/[0.04]"
+                  animate={{ opacity: [0.4, 1, 0.4] }} transition={{ duration: 3, repeat: Infinity }} />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <ShieldAlert size={19} className="text-[#b31c33]" strokeWidth={1.5} />
+                </div>
+              </div>
+              <span className="font-headline italic text-[#b31c33] text-4xl leading-none tabular-nums">03</span>
+              <div>
+                <h3 className="font-headline text-[1.2rem] text-[#1c1b1b] leading-[1.2] tracking-tight mb-2">Quarterly Vulnerability Assessment</h3>
+                <p className="font-body text-[13px] text-[#5a4040] leading-[1.8]">
+                  Four structured security reviews per year. CVE exposure, network surface, access controls — each closes with a risk-rated report and coordinated patch scheduling.
+                </p>
+              </div>
+              <ul className="flex flex-col gap-2 mt-auto pt-4 border-t border-[#e2bebd]/40">
+                {["CVE scanning per node", "Network exposure review", "Privileged access audit", "Patch scheduling"].map(it => (
+                  <li key={it} className="flex items-center gap-2.5">
+                    <CheckCircle2 size={11} className="text-[#b31c33] shrink-0" strokeWidth={1.5} />
+                    <span className="font-body text-[12px] text-[#8e706f]">{it}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Card 04 — Ecosystem Upgradation */}
+            <motion.div
+              variants={fadeUp}
+              className="bg-white border border-[#e2bebd]/40 rounded-2xl p-8 flex flex-col gap-5 group hover:border-[#b31c33]/25 hover:shadow-xl hover:shadow-[#b31c33]/[0.05] transition-all duration-300"
+            >
+              <div className="rounded-lg bg-[#b31c33]/[0.025] border border-[#e2bebd]/50 px-4 py-3 space-y-2 shrink-0">
+                {[
+                  { pkg: "PVE", from: "8.1.3", to: "8.2.4", delay: 0 },
+                  { pkg: "PBS", from: "3.2.1", to: "3.3.0", delay: 1.1 },
+                  { pkg: "PMG", from: "8.0.2", to: "8.1.1", delay: 2.2 },
+                ].map((v) => (
+                  <motion.div key={v.pkg} className="flex items-center gap-2 font-mono text-[11px]"
+                    animate={{ opacity: [0.35, 1, 0.35] }}
+                    transition={{ duration: 3.5, repeat: Infinity, delay: v.delay, ease: "easeInOut" }}
+                  >
+                    <span className="text-[#1c1b1b] font-semibold w-7">{v.pkg}</span>
+                    <span className="text-[#8e706f]">{v.from}</span>
+                    <ArrowRight size={9} className="text-[#b31c33] shrink-0" />
+                    <span className="text-[#b31c33] font-semibold">{v.to}</span>
+                    <motion.div className="ml-auto w-1.5 h-1.5 rounded-full bg-[#b31c33]"
+                      animate={{ opacity: [0, 1, 0] }}
+                      transition={{ duration: 3.5, repeat: Infinity, delay: v.delay + 1.5 }} />
+                  </motion.div>
+                ))}
+              </div>
+              <span className="font-headline italic text-[#b31c33] text-4xl leading-none tabular-nums">04</span>
+              <div>
+                <h3 className="font-headline text-[1.2rem] text-[#1c1b1b] leading-[1.2] tracking-tight mb-2">Proxmox Ecosystem Upgradation</h3>
+                <p className="font-body text-[13px] text-[#5a4040] leading-[1.8]">
+                  Continuous alignment with the Proxmox release track — planned, tested, zero-downtime upgrades to PVE, PBS, and PMG with full rollback procedures documented before every change.
+                </p>
+              </div>
+              <ul className="flex flex-col gap-2 mt-auto pt-4 border-t border-[#e2bebd]/40">
+                {["Version lifecycle tracking", "Staged rolling upgrades", "Pre-upgrade validation", "Rollback runbooks"].map(it => (
+                  <li key={it} className="flex items-center gap-2.5">
+                    <CheckCircle2 size={11} className="text-[#b31c33] shrink-0" strokeWidth={1.5} />
+                    <span className="font-body text-[12px] text-[#8e706f]">{it}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </motion.div>
+
+          {/* ── CTA strip ── */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-40px" }}
+            className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-6 pt-8 border-t border-[#e2bebd]/40"
+          >
+            <p className="font-body text-[14px] text-[#5a4040] max-w-lg">
+              AMS engagements are scoped annually with optional monthly reporting. Direct line to Illumia engineers — not a ticketing queue.
+            </p>
+            <Link
+              href="/contact#contact-form"
+              className="group inline-flex items-center gap-2.5 bg-[#b31c33] hover:bg-[#9e1829] text-white px-7 py-3.5 rounded-[10px] font-body text-sm font-semibold tracking-wide transition-all duration-200 active:scale-[0.97] shrink-0"
+            >
+              Request AMS Proposal
+              <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform duration-200" />
+            </Link>
+          </motion.div>
+
+        </div>
+      </section>
+
+      {/* ━━━ PROXMOX PRODUCT SUITE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <section className="bg-[#0d0c0c] py-20 md:py-28 px-6 md:px-10 xl:px-16">
+        <div className="max-w-[1400px] mx-auto">
+
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} className="mb-16">
+            <motion.span variants={fadeUp} className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-4">
+              Proxmox Product Suite
             </motion.span>
-            <motion.h2 variants={fadeUp} className="font-headline text-4xl md:text-[2.8rem] text-white leading-[1.05] tracking-tight mb-6 max-w-lg">
-              Broadcom bought VMware. Your budget paid for it.
+            <motion.h2 variants={fadeUp} className="font-headline text-4xl md:text-[2.8rem] text-white leading-[1.05] tracking-tight max-w-2xl">
+              One ecosystem.<br />
+              <span className="text-[#b31c33] italic font-normal">Four products.</span>
             </motion.h2>
-            <motion.p variants={fadeUp} className="font-body text-[15px] text-white/45 leading-[1.8] mb-5 max-w-[500px]">
-              Post-acquisition pricing killed perpetual licences, collapsed bundles, and pushed organisations onto per-core subscriptions. Many enterprises saw 5–10× cost increases overnight. The platform is identical — only the invoice changed.
-            </motion.p>
-            <motion.p variants={fadeUp} className="font-body text-[15px] text-white/45 leading-[1.8] max-w-[500px]">
-              Proxmox VE runs the same workloads, meets the same HA requirements, integrates with the same automation toolchain — and ships zero licensing fees.
+            <motion.p variants={fadeUp} className="font-body text-[15px] text-white/40 leading-[1.8] max-w-xl mt-5">
+              Proxmox ships a complete on-premise infrastructure stack — virtualisation, centralised management, backup, and mail security — all open-source, all under one licence model.
             </motion.p>
           </motion.div>
 
-          {/* Right: comparison */}
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
-            <motion.div variants={fadeUp} className="grid grid-cols-2 gap-4 mb-3 pb-2.5 border-b border-white/[0.08]">
-              <span className="font-body text-[10px] tracking-[0.2em] uppercase text-white/38 font-semibold">VMware today</span>
-              <span className="font-body text-[10px] tracking-[0.2em] uppercase text-[#b31c33] font-semibold">Proxmox VE</span>
-            </motion.div>
-            {COMPARISON.map((row, i) => (
-              <motion.div key={i} variants={fadeUp} className="grid grid-cols-2 gap-4 py-3 border-b border-white/[0.07]">
-                <span className="font-body text-[13px] text-white/35 line-through decoration-[#b31c33]/30 leading-snug">
-                  {row.before}
-                </span>
-                <span className="font-body text-[13px] text-white font-medium leading-snug">
-                  {row.after}
-                </span>
+          <div className="flex flex-col">
+            {PROXMOX_PRODUCTS.map((p, i) => (
+              <motion.div
+                key={p.n}
+                variants={stagger}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-80px" }}
+                className="grid lg:grid-cols-2 gap-10 xl:gap-16 items-center py-14 border-b border-white/[0.07] last:border-0"
+              >
+                <motion.div variants={fadeUp} className={`flex flex-col gap-5 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
+                  <div className="flex items-baseline gap-3">
+                    <span className="font-headline italic text-[#b31c33] text-2xl leading-none tabular-nums">{p.n}</span>
+                    <span className="font-body text-[9px] tracking-[0.28em] uppercase text-white/28 font-semibold">{p.abbr}</span>
+                  </div>
+                  <h3 className="font-headline text-3xl md:text-[2rem] text-white leading-[1.1] tracking-tight">
+                    {p.name}
+                  </h3>
+                  <p className="font-body text-[11px] tracking-[0.22em] uppercase text-[#b31c33] font-semibold">{p.tagline}</p>
+                  <p className="font-body text-[14px] text-white/42 leading-[1.85]">{p.desc}</p>
+                  <ul className="flex flex-col gap-2.5 pt-2">
+                    {p.features.map(f => (
+                      <li key={f} className="flex items-center gap-2.5">
+                        <CheckCircle2 size={13} className="text-[#b31c33] shrink-0" strokeWidth={1.5} />
+                        <span className="font-body text-sm text-white/52">{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+                <motion.div variants={fadeIn} className={`hidden lg:block ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+                  <BrowserFrame src={p.img} alt={p.imgAlt} />
+                </motion.div>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
+
         </div>
       </section>
 
@@ -391,6 +756,46 @@ export default function ProxmoxContent() {
                   <h4 className="font-headline text-[1rem] text-[#1c1b1b] mb-1.5">{cap.title}</h4>
                   <p className="font-body text-sm text-[#5a4040] leading-[1.7]">{cap.text}</p>
                 </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ━━━ BROADCOM PROBLEM ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <section className="bg-[#0d0c0c] py-20 md:py-28 px-6 md:px-10 xl:px-16">
+        <div className="max-w-[1400px] mx-auto grid lg:grid-cols-[55%_45%] gap-14 lg:gap-20 items-start">
+
+          {/* Left: editorial */}
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+            <motion.span variants={fadeUp} className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-6">
+              The Broadcom Problem
+            </motion.span>
+            <motion.h2 variants={fadeUp} className="font-headline text-4xl md:text-[2.8rem] text-white leading-[1.05] tracking-tight mb-6 max-w-lg">
+              Broadcom bought VMware. Your budget paid for it.
+            </motion.h2>
+            <motion.p variants={fadeUp} className="font-body text-[15px] text-white/45 leading-[1.8] mb-5 max-w-[500px]">
+              Post-acquisition pricing killed perpetual licences, collapsed bundles, and pushed organisations onto per-core subscriptions. Many enterprises saw 5–10× cost increases overnight. The platform is identical — only the invoice changed.
+            </motion.p>
+            <motion.p variants={fadeUp} className="font-body text-[15px] text-white/45 leading-[1.8] max-w-[500px]">
+              Proxmox VE runs the same workloads, meets the same HA requirements, integrates with the same automation toolchain — and ships zero licensing fees.
+            </motion.p>
+          </motion.div>
+
+          {/* Right: comparison */}
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+            <motion.div variants={fadeUp} className="grid grid-cols-2 gap-4 mb-3 pb-2.5 border-b border-white/[0.08]">
+              <span className="font-body text-[10px] tracking-[0.2em] uppercase text-white/38 font-semibold">VMware today</span>
+              <span className="font-body text-[10px] tracking-[0.2em] uppercase text-[#b31c33] font-semibold">Proxmox VE</span>
+            </motion.div>
+            {COMPARISON.map((row, i) => (
+              <motion.div key={i} variants={fadeUp} className="grid grid-cols-2 gap-4 py-3 border-b border-white/[0.07]">
+                <span className="font-body text-[13px] text-white/35 line-through decoration-[#b31c33]/30 leading-snug">
+                  {row.before}
+                </span>
+                <span className="font-body text-[13px] text-white font-medium leading-snug">
+                  {row.after}
+                </span>
               </motion.div>
             ))}
           </motion.div>

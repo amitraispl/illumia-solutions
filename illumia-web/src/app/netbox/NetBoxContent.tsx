@@ -22,11 +22,11 @@ const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } }
 
 // Real visuals from NetBox Labs
 const IMG = {
-  hero: "https://netboxlabscms.kinsta.cloud/wp-content/uploads/2025/05/NB-2.png",
-  dcim: "https://netboxlabscms.kinsta.cloud/wp-content/uploads/2025/04/DCIM-visual-2.png",
-  ipam: "https://netboxlabscms.kinsta.cloud/wp-content/uploads/2025/05/NB-2.png",
-  automation: "https://netboxlabscms.kinsta.cloud/wp-content/uploads/2025/04/network-automation-visual.png",
-  infrastructure: "https://netboxlabscms.kinsta.cloud/wp-content/uploads/2025/04/infrastructure-illustration-2.png",
+  hero: "https://nextcloud.illumiasolutions.com/public.php/dav/files/a9HE5y3yjycWq2Z",
+  dcim: "https://nextcloud.illumiasolutions.com/public.php/dav/files/Bemix6moQEgdtKH",
+  ipam: "https://nextcloud.illumiasolutions.com/public.php/dav/files/a9HE5y3yjycWq2Z",
+  automation: "https://nextcloud.illumiasolutions.com/public.php/dav/files/kCKRi35LeADJNtC",
+  infrastructure: "https://nextcloud.illumiasolutions.com/public.php/dav/files/sMAjE3ESZmCzDP3",
 };
 
 const REPLACES = [

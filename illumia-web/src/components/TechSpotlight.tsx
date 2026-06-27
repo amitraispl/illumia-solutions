@@ -85,7 +85,7 @@ export default function TechSpotlight() {
           {/* ── Proxmox — RED 2-wide ───────────────────────────────────────── */}
           <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
             <Link
-              href="/proxmox-migration"
+              href="/on-premise-private-cloud-solutions"
               className="group relative block h-full bg-primary rounded-2xl p-6 sm:p-8 lg:p-10 text-white overflow-hidden transition-[background-color,box-shadow] duration-300 hover:bg-primary-dark hover:shadow-2xl hover:shadow-primary/40"
             >
               {/* Subtle noise texture overlay */}
@@ -94,7 +94,7 @@ export default function TechSpotlight() {
               />
 
               {/* Proxmox logo — absolute so it never shifts heading */}
-              <div className="absolute top-6 right-6 sm:top-8 sm:right-8 lg:top-10 lg:right-10 h-16 w-52 pointer-events-none">
+              <div className="absolute top-6 right-6 sm:top-8 sm:right-8 lg:top-7 lg:right-7 h-16 w-52 pointer-events-none">
                 <Image
                   src={proxmoxLogo}
                   alt="Proxmox Silver Partner"
@@ -186,7 +186,7 @@ export default function TechSpotlight() {
           {/* ── NetBox — WHITE 1-col (teal accent) ─────────────────────────── */}
           <motion.div variants={fadeUp} className="h-full">
             <Link
-              href="/netbox"
+              href="/netbox-platform"
               className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-stone-200/80 overflow-hidden flex flex-col transition-[box-shadow] duration-300 hover:shadow-xl hover:shadow-[#00f2d4]/15"
             >
               <div className="mb-6">

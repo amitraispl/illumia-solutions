@@ -32,7 +32,6 @@ const collaborationCards = [
     href: "/email-as-a-service",
     image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/jmQZAiwKdoDxDdt",
     imageAlt: "Secure enterprise mail services",
-    wide: true,
   },
   {
     num: "02",
@@ -41,7 +40,6 @@ const collaborationCards = [
     href: "/drive-as-a-service",
     image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/yT6oorESzr75wQn",
     imageAlt: "Cloud storage infrastructure",
-    wide: false,
   },
   {
     num: "03",
@@ -50,16 +48,14 @@ const collaborationCards = [
     href: "/web-meeting-solution",
     image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/sBqb6TjTGsnYTyZ",
     imageAlt: "Video meeting collaboration",
-    wide: false,
   },
   {
     num: "04",
     title: "Collaborative Editing",
     desc: "Real-time collaborative editing tools that enhance teamwork and productivity by allowing multiple users to work on documents simultaneously.",
-    href: "/application-solutions#collaboration",
+    href: "/collaborative-editing",
     image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/go4pZCxPEdoHXCf",
     imageAlt: "Team collaborative editing",
-    wide: true,
   },
 ];
 
@@ -100,130 +96,44 @@ export default function ApplicationSolutionsPage() {
             </motion.h2>
           </motion.div>
 
-          {/* Row 1: Mail (wide) + Cloud Storage */}
+          {/* 2×2 equal bento grid — all cards same dark-overlay image style */}
           <motion.div
             variants={stagger}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
-            className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-4"
+            className="grid grid-cols-1 md:grid-cols-2 gap-4"
           >
-            {/* Mail Services — 2-wide image card */}
-            <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
-              <Link
-                href={collaborationCards[0].href}
-                className="group relative block rounded-2xl overflow-hidden min-h-[320px] h-full"
-              >
-                <Image
-                  src={collaborationCards[0].image}
-                  alt={collaborationCards[0].imageAlt}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-[#1c1b1b]/60 group-hover:bg-[#1c1b1b]/50 transition-colors" />
-                <div className="absolute inset-0 p-10 flex flex-col justify-between">
-                  <span className="font-body text-xs tracking-[0.3em] uppercase text-white/60 font-bold">
-                    {collaborationCards[0].num}
-                  </span>
-                  <div>
-                    <h3 className="font-headline text-3xl text-white mb-3">{collaborationCards[0].title}</h3>
-                    <p className="text-white/70 text-sm font-body leading-relaxed mb-6 max-w-md">
-                      {collaborationCards[0].desc}
-                    </p>
-                    <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-white/80">
-                      Read More <Arrow />
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
-
-            {/* Cloud Storage */}
-            <motion.div variants={fadeUp} className="h-full">
-              <Link
-                href={collaborationCards[1].href}
-                className="group block h-full bg-white rounded-2xl p-10 border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300 flex flex-col gap-4 min-h-[320px]"
-              >
-                <span className="font-body text-xs tracking-[0.3em] uppercase text-[#b31c33] font-bold">
-                  {collaborationCards[1].num}
-                </span>
-                <div className="relative flex-1 rounded-xl overflow-hidden min-h-[160px]">
+            {collaborationCards.map((card) => (
+              <motion.div key={card.num} variants={fadeUp} className="h-full">
+                <Link
+                  href={card.href}
+                  className="group relative block rounded-2xl overflow-hidden min-h-[340px] h-full"
+                >
                   <Image
-                    src={collaborationCards[1].image}
-                    alt={collaborationCards[1].imageAlt}
+                    src={card.image}
+                    alt={card.imageAlt}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                </div>
-                <div>
-                  <h3 className="font-headline text-2xl text-stone-900 mb-2">{collaborationCards[1].title}</h3>
-                  <p className="text-[#5a4040] text-sm font-body leading-relaxed mb-4">{collaborationCards[1].desc}</p>
-                  <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-[#b31c33]/70 group-hover:text-[#b31c33]">
-                    Read More <Arrow />
-                  </span>
-                </div>
-              </Link>
-            </motion.div>
-          </motion.div>
-
-          {/* Row 2: Web-Meeting + Collaborative Editing (wide) */}
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
-            className="grid grid-cols-1 lg:grid-cols-3 gap-4"
-          >
-            {/* Web-Meeting Solutions */}
-            <motion.div variants={fadeUp} className="h-full">
-              <Link
-                href={collaborationCards[2].href}
-                className="group block h-full bg-[#b31c33] rounded-2xl p-10 text-white hover:bg-[#920022] transition-colors duration-300 flex flex-col gap-4 min-h-[280px]"
-              >
-                <span className="font-body text-xs tracking-[0.3em] uppercase text-white/60 font-bold">
-                  {collaborationCards[2].num}
-                </span>
-                <div className="flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3 className="font-headline text-2xl text-white mb-3">{collaborationCards[2].title}</h3>
-                    <p className="text-white/75 text-sm font-body leading-relaxed">{collaborationCards[2].desc}</p>
-                  </div>
-                  <span className="mt-6 font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-white/80">
-                    Read More <Arrow />
-                  </span>
-                </div>
-              </Link>
-            </motion.div>
-
-            {/* Collaborative Editing — 2-wide */}
-            <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
-              <Link
-                href={collaborationCards[3].href}
-                className="group relative block rounded-2xl overflow-hidden min-h-[280px] h-full"
-              >
-                <Image
-                  src={collaborationCards[3].image}
-                  alt={collaborationCards[3].imageAlt}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-[#1c1b1b]/55 group-hover:bg-[#1c1b1b]/45 transition-colors" />
-                <div className="absolute inset-0 p-10 flex flex-col justify-between">
-                  <span className="font-body text-xs tracking-[0.3em] uppercase text-white/60 font-bold">
-                    {collaborationCards[3].num}
-                  </span>
-                  <div>
-                    <h3 className="font-headline text-3xl text-white mb-3">{collaborationCards[3].title}</h3>
-                    <p className="text-white/70 text-sm font-body leading-relaxed mb-6 max-w-md">
-                      {collaborationCards[3].desc}
-                    </p>
-                    <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-white/80">
-                      Read More <Arrow />
+                  <div className="absolute inset-0 bg-[#1c1b1b]/60 group-hover:bg-[#1c1b1b]/50 transition-colors" />
+                  <div className="absolute inset-0 p-10 flex flex-col justify-between">
+                    <span className="font-body text-xs tracking-[0.3em] uppercase text-white/60 font-bold">
+                      {card.num}
                     </span>
+                    <div>
+                      <h3 className="font-headline text-3xl text-white mb-3">{card.title}</h3>
+                      <p className="text-white/70 text-sm font-body leading-relaxed mb-6 max-w-md">
+                        {card.desc}
+                      </p>
+                      <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-all uppercase tracking-widest text-white/80">
+                        Read More <Arrow />
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            </motion.div>
+                </Link>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>
