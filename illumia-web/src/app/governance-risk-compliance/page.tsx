@@ -17,7 +17,7 @@ export default function GovernanceRiskCompliancePage() {
       description="In today's dynamic business environment, effective governance, risk, and compliance (GRC) management is crucial for maintaining organizational integrity and security. Illumia Solutions offers advanced GRC solutions using OpenGRC technology — designed to streamline risk management, ensure compliance, and simplify audit processes."
       sectionTitle="Benefits of Our GRC Solutions"
       ctaText="Build Your GRC Program"
-      heroImage="https://images.pexels.com/photos/10376251/pexels-photo-10376251.jpeg?w=1260&h=750&dpr=1"
+      heroImage="/gov.png"
       darkHero={true}
       closingText="Illumia Solutions' GRC solutions with OpenGRC provide a comprehensive, scalable, and cost-effective way to enhance your organization's governance, risk, and compliance capabilities. With powerful risk management, compliance tracking, audit management, and seamless integration features, our solutions ensure that your GRC posture is robust and your organization remains protected and compliant."
       features={[

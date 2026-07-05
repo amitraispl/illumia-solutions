@@ -54,7 +54,7 @@ export default function ApplicationSecurityPage() {
       ]}
       closingText="Illumia ensures your applications are built and maintained securely — without slowing down your development teams or compromising the user experience your customers rely on."
       ctaText="Request an Application Security Assessment"
-      heroImage="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?w=1260&h=750&dpr=1"
+      heroImage="/app-sec.png"
     />
   );
 }

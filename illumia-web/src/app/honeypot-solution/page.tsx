@@ -17,7 +17,7 @@ export default function HoneypotSolutionPage() {
       description="In the dynamic world of cybersecurity, honeypots play a crucial role in detecting, analyzing, and responding to malicious activities. Illumia Solutions offers advanced honeypot solutions powered by Modern Honey Network (MHN) and T-POT. Our solutions provide centralized management, extensive logging, and real-time threat detection to enhance your organization's security posture."
       sectionTitle="Benefits of Our Honeypot Solutions"
       ctaText="Contact Us"
-      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/NsbqnMb35DJeTe9"
+      heroImage="/honeypot.png"
       darkHero={true}
       closingText="Illumia Solutions' Honeypot solutions with Modern Honey Network (MHN) and T-POT provide a comprehensive, scalable, and cost-effective way to enhance your organization's cybersecurity capabilities. With centralized management, extensive logging, real-time visualization, and advanced threat detection features, our solutions ensure that your security posture is robust and your data is protected. Partner with Illumia Solutions to leverage the full potential of honeypots and safeguard your business against cyber threats."
       features={[

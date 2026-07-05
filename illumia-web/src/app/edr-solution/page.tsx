@@ -17,7 +17,7 @@ export default function EDRSolutionPage() {
       description="In today's cybersecurity landscape, protecting endpoints is crucial to safeguarding your organization's data and network. Illumia Solutions provides advanced Endpoint Detection and Response (EDR) solutions powered by OpenEDR."
       sectionTitle="Benefits of Our EDR Solutions"
       ctaText="Contact Us"
-      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/NW7zYB9ra9eBpmf"
+      heroImage="/edr.png"
       darkHero={true}
       closingText="Illumia Solutions' EDR solutions with OpenEDR provide a comprehensive, scalable, and cost-effective way to enhance your organization's endpoint security. With powerful real-time threat detection, behavioral analysis, and seamless integration features, our solutions ensure that your endpoints are protected and your data is secure. Partner with Illumia Solutions to leverage the full potential of EDR and safeguard your business against cyber threats."
       features={[

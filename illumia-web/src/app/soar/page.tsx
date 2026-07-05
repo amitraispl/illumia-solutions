@@ -17,7 +17,7 @@ export default function SOARPage() {
       description="In today's rapidly evolving cybersecurity landscape, organizations need advanced tools to effectively manage and respond to security incidents. Illumia Solutions provides top-tier Security Orchestration, Automation, and Response (SOAR) solutions using Shuffle."
       sectionTitle="Benefits of Our SOAR Solution"
       ctaText="Automate Your Security Operations"
-      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/S3De8oSGzBgHZB4"
+      heroImage="/soar.png"
       darkHero={true}
       closingText="Illumia Solutions' SOAR solutions with Shuffle provide a comprehensive, scalable, and cost-effective way to enhance your organization's cybersecurity capabilities. With advanced security orchestration, automation, and response features, our solutions ensure that your security operations are efficient, effective, and aligned with your organizational goals. Partner with Illumia Solutions to leverage the full potential of SOAR and protect your business against cyber threats with confidence."
       features={[

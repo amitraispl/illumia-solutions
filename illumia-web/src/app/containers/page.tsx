@@ -17,7 +17,7 @@ export default function ContainersPage() {
       description="Our Containers Hosting services are meticulously designed to meet the evolving needs of businesses seeking efficiency, scalability, and robust security in their application deployment strategies."
       sectionTitle="Our Container Hosting Features"
       ctaText="Containerize Your Workloads"
-      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/pF4FqDGgdGEb7nZ"
+      heroImage="/contain.png"
       closingText="At Illumia Solutions, we are committed to providing advanced, secure, and scalable Containers Hosting solutions that support the dynamic needs of modern enterprises."
       features={[
         {

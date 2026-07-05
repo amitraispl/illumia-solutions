@@ -136,7 +136,15 @@
       "PowerShell(Start-Sleep -Seconds 5; try { \\(Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 5\\).StatusCode } catch { \"waiting\" })",
       "WebFetch(domain:raw.githubusercontent.com)",
       "mcp__magic__logo_search",
-      "mcp__playwright__browser_click"
+      "mcp__playwright__browser_click",
+      "Bash(dir \"O:\\\\CODE\\\\illumia-solutions\\\\illumia-web\\\\public\")",
+      "WebFetch(domain:proxmox.com)",
+      "WebFetch(domain:netboxlabscms.kinsta.cloud)",
+      "WebFetch(domain:blog.digital-nomads-llc.com)",
+      "WebFetch(domain:www.mantra-networking.com)",
+      "WebFetch(domain:netodata.io)",
+      "WebFetch(domain:netdevops.blog)",
+      "Bash(sort -k6,7)"
     ]
   }
 }

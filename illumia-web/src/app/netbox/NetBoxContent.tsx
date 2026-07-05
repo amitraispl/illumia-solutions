@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowRight, ArrowUpRight, CheckCircle2, Network, MapPin, Cable, Tag, Code2, FileCheck } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CheckCircle2, Network, MapPin, Cable, Tag, Code2, FileCheck, Server, Users, Puzzle, Shield, GitBranch, FileCode } from "lucide-react";
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
@@ -69,6 +69,69 @@ const SPOTLIGHT_MODULES = [
     points: ["Native Ansible dynamic inventory plugin", "Official Terraform provider", "REST API and GraphQL endpoint", "Webhook triggers for CI/CD"],
     img: IMG.automation,
     imgAlt: "NetBox Network Automation Visual",
+    flip: false,
+  },
+];
+
+const ADDITIONAL_MODULES = [
+  {
+    tag: "Virtualization",
+    icon: Server,
+    title: "Virtual Machines & Clusters",
+    body: "Manage VMs, clusters, and hypervisors alongside physical infrastructure. Track vCPU, memory, and storage allocation with full VM-to-host mapping and cluster utilisation metrics.",
+    points: ["VM cluster management and host assignment", "VM-to-host mapping with resource utilisation", "Seamless physical and virtual inventory in one view"],
+    img: "https://raw.githubusercontent.com/netbox-community/netbox/main/docs/media/screenshots/home-dark.png",
+    imgAlt: "NetBox dashboard showing virtualization clusters and virtual machines",
+    flip: true,
+  },
+  {
+    tag: "Multi-Tenancy",
+    icon: Users,
+    title: "Tenant Isolation Across All Objects",
+    body: "Enforce tenant awareness across every infrastructure object. Separate IP spaces, VLANs, and device groups per tenant — built for managed service providers and multi-department enterprises.",
+    points: ["Tenant-scoped views and filtering", "Cross-tenant security boundaries", "Overlapping address spaces per tenant via VRF"],
+    img: "https://raw.githubusercontent.com/netbox-community/netbox/main/docs/media/screenshots/prefixes-list.png",
+    imgAlt: "NetBox prefixes list showing per-tenant IP address management",
+    flip: false,
+  },
+  {
+    tag: "Extensibility",
+    icon: Puzzle,
+    title: "Extend NetBox Without Code",
+    body: "Add organisation-specific attributes via custom fields and model entirely new infrastructure types with Custom Objects — no code required. Plugin architecture handles anything beyond that.",
+    points: ["Custom fields on any object type", "No-code Custom Objects for new data models", "Plugin architecture for advanced extensions"],
+    img: "https://raw.githubusercontent.com/netbox-community/netbox/main/docs/media/screenshots/cable-trace.png",
+    imgAlt: "NetBox cable trace interface showing extensible device component model",
+    flip: true,
+  },
+  {
+    tag: "RBAC",
+    icon: Shield,
+    title: "Role-Based Access Control",
+    body: "Fine-grained permissions down to individual objects. Restrict users and groups to specific sites, tenants, or object types with full JSON constraint-based access rules.",
+    points: ["Object-level permissions with JSON constraints", "User and group role management", "SOC 2 and ISO 27001 compliant audit trail"],
+    img: "https://storage.ghost.io/c/49/77/497795e8-85fb-4775-848e-ee5126597212/content/images/2023/10/image5-2.png",
+    imgAlt: "NetBox permissions management interface showing object-level RBAC controls",
+    flip: false,
+  },
+  {
+    tag: "Topology",
+    icon: GitBranch,
+    title: "Advanced Network Topology",
+    body: "Model BGP sessions, peering relationships, and full device role hierarchies. Visual Explorer renders interactive cable topology, floorplans, and WAN connectivity from your existing NetBox data.",
+    points: ["BGP communities, route targets, and AS routes", "Device type templates and role hierarchies", "Interactive Visual Explorer for topology and racks"],
+    img: "https://netboxlabscms.kinsta.cloud/wp-content/uploads/2026/03/nve3.png",
+    imgAlt: "NetBox Visual Explorer cable topology diagram showing interconnected network devices",
+    flip: true,
+  },
+  {
+    tag: "Config Templates",
+    icon: FileCode,
+    title: "Configuration Management & Templates",
+    body: "Render device configurations from Jinja2 templates using NetBox as the authoritative data source. Config contexts deliver device-specific variables to Ansible, Terraform, and custom pipelines.",
+    points: ["Dynamic Jinja2 config generation per device", "Config contexts for site and role variants", "Direct export to Ansible inventory and Terraform"],
+    img: "https://23319422.fs1.hubspotusercontent-na1.net/hubfs/23319422/Editing%20congif%20tempalte%20Jinja%202%20basic%20resized-1.png",
+    imgAlt: "NetBox Jinja2 configuration template editing interface",
     flip: false,
   },
 ];
@@ -257,6 +320,54 @@ export default function NetBoxContent() {
                 </motion.div>
 
                 {/* Image */}
+                <motion.div
+                  variants={fadeIn}
+                  className={`rounded-xl overflow-hidden border border-[#e2bebd]/30 shadow-xl shadow-[#1c1b1b]/[0.06] bg-white hidden lg:block ${mod.flip ? "lg:order-1" : ""}`}
+                >
+                  <img
+                    src={mod.img}
+                    alt={mod.imgAlt}
+                    className="w-full h-auto block"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Additional modules — alternating image + text */}
+          <div className="flex flex-col gap-0">
+            {ADDITIONAL_MODULES.map((mod) => (
+              <motion.div
+                key={mod.tag}
+                variants={stagger}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-80px" }}
+                className="grid lg:grid-cols-2 gap-10 xl:gap-16 items-center py-14 border-t border-[#e2bebd]/40"
+              >
+                <motion.div
+                  variants={fadeUp}
+                  className={`flex flex-col gap-5 ${mod.flip ? "lg:order-2" : ""}`}
+                >
+                  <div className="inline-flex items-center gap-2.5 self-start">
+                    <mod.icon size={14} className="text-[#b31c33]" strokeWidth={1.5} />
+                    <span className="font-body text-[10px] tracking-[0.2em] uppercase text-[#b31c33] font-bold">{mod.tag}</span>
+                  </div>
+                  <h3 className="font-headline text-3xl md:text-[2rem] text-[#1c1b1b] leading-[1.1] tracking-tight">
+                    {mod.title}
+                  </h3>
+                  <p className="font-body text-[14px] text-[#5a4040] leading-[1.8]">{mod.body}</p>
+                  <ul className="flex flex-col gap-2">
+                    {mod.points.map((pt) => (
+                      <li key={pt} className="flex items-center gap-2.5">
+                        <CheckCircle2 size={13} className="text-[#b31c33] shrink-0" strokeWidth={1.5} />
+                        <span className="font-body text-sm text-[#8e706f]">{pt}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
                 <motion.div
                   variants={fadeIn}
                   className={`rounded-xl overflow-hidden border border-[#e2bebd]/30 shadow-xl shadow-[#1c1b1b]/[0.06] bg-white hidden lg:block ${mod.flip ? "lg:order-1" : ""}`}
