@@ -705,6 +705,46 @@ function ServicesMegaMenu({ onClose, activeCategory, onCategoryChange, pageCateg
                 </div>
                 <ExternalArrow className="w-3.5 h-3.5 text-stone-300 group-hover/pl:text-primary shrink-0 ml-auto transition-colors duration-200" />
               </Link>
+              <Link
+                href="/odoo"
+                onClick={onClose}
+                className="group/pl flex items-center gap-3 rounded-lg border border-outline-variant/30 px-4 py-3 hover:border-primary/30 hover:bg-primary/[0.04] transition-colors duration-200"
+              >
+                <div className="shrink-0 w-7 h-7 rounded-md bg-stone-100 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="https://odoocdn.com/openerp_website/static/src/img/assets/png/odoo_logo.png"
+                    alt="Odoo"
+                    className="w-5 h-5 object-contain"
+                  />
+                </div>
+                <div className="min-w-0">
+                  <p className="font-body text-sm font-semibold text-stone-800 group-hover/pl:text-primary transition-colors duration-200 leading-snug truncate">
+                    Odoo
+                  </p>
+                  <p className="font-body text-[11px] text-stone-400 leading-snug">80+ integrated business apps</p>
+                </div>
+                <ExternalArrow className="w-3.5 h-3.5 text-stone-300 group-hover/pl:text-primary shrink-0 ml-auto transition-colors duration-200" />
+              </Link>
+              <Link
+                href="/erpnext"
+                onClick={onClose}
+                className="group/pl flex items-center gap-3 rounded-lg border border-outline-variant/30 px-4 py-3 hover:border-primary/30 hover:bg-primary/[0.04] transition-colors duration-200"
+              >
+                <div className="shrink-0 w-7 h-7 rounded-md bg-stone-100 flex items-center justify-center overflow-hidden">
+                  <img
+                    src="https://nextcloud.illumiasolutions.com/public.php/dav/files/sJgp3azLEFFKZdC"
+                    alt="ERPNext"
+                    className="w-5 h-5 object-contain"
+                  />
+                </div>
+                <div className="min-w-0">
+                  <p className="font-body text-sm font-semibold text-stone-800 group-hover/pl:text-primary transition-colors duration-200 leading-snug truncate">
+                    ERPNext
+                  </p>
+                  <p className="font-body text-[11px] text-stone-400 leading-snug">Open-source ERP suite</p>
+                </div>
+                <ExternalArrow className="w-3.5 h-3.5 text-stone-300 group-hover/pl:text-primary shrink-0 ml-auto transition-colors duration-200" />
+              </Link>
             </div>
           </div>
         </div>

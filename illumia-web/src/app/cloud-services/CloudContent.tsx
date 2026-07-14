@@ -405,7 +405,7 @@ export default function CloudServicesContent() {
                 className="group relative block rounded-2xl overflow-hidden min-h-[220px] h-full"
               >
                 <Image
-                  src="https://images.pexels.com/photos/11391947/pexels-photo-11391947.jpeg?w=1260&h=750&dpr=1"
+                  src="/pam.png"
                   alt="Privileged Access Management"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -455,7 +455,7 @@ export default function CloudServicesContent() {
                 className="group relative block rounded-2xl overflow-hidden min-h-[220px] h-full"
               >
                 <Image
-                  src="https://nextcloud.illumiasolutions.com/public.php/dav/files/MGEq9LWor5NwxBx"
+                  src="/backup.png"
                   alt="Backup infrastructure"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"

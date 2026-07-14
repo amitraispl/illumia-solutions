@@ -144,7 +144,10 @@
       "WebFetch(domain:www.mantra-networking.com)",
       "WebFetch(domain:netodata.io)",
       "WebFetch(domain:netdevops.blog)",
-      "Bash(sort -k6,7)"
+      "Bash(sort -k6,7)",
+      "WebFetch(domain:erpnext.com)",
+      "Bash(mkdir -p /c/Users/amitra/AppData/Local/Temp/claude/O--CODE-illumia-solutions/98447256-19db-4a61-a800-c6c1e9100d6e/scratchpad)",
+      "Bash(mv bom.png hero.png jobcard.png stock.png tasks.png /c/Users/amitra/AppData/Local/Temp/claude/O--CODE-illumia-solutions/98447256-19db-4a61-a800-c6c1e9100d6e/scratchpad/)"
     ]
   }
 }

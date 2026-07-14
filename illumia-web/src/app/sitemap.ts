@@ -24,6 +24,7 @@ const routes: { path: string; priority: number; changeFrequency: MetadataRoute.S
   { path: "/contact/", priority: 0.8, changeFrequency: "monthly" },
   { path: "/proxmox-migration/", priority: 0.85, changeFrequency: "monthly" },
   { path: "/erpnext/", priority: 0.85, changeFrequency: "monthly" },
+  { path: "/odoo/", priority: 0.85, changeFrequency: "monthly" },
   { path: "/netbox/", priority: 0.85, changeFrequency: "monthly" },
   { path: "/ai-governance/", priority: 0.8, changeFrequency: "monthly" },
   { path: "/cybersecurity-solutions/", priority: 0.8, changeFrequency: "monthly" },
