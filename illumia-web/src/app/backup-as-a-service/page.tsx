@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/backup-as-a-service/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/backup-as-a-service/#service",
+  name: "Backup as a Service",
+  serviceType: "Data Protection",
+  description:
+    "Automated, encrypted backup and recovery services ensuring your critical data is always protected and recoverable.",
+  url: "https://illumiasolutions.com/backup-as-a-service/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function BackupAsAServicePage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Data Protection"
       title="Backup —"
       titleHighlight="as a Service."
@@ -106,6 +123,7 @@ export default function BackupAsAServicePage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

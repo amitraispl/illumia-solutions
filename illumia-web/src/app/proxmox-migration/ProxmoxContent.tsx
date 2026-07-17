@@ -324,7 +324,7 @@ export default function ProxmoxContent() {
                   animate={{ y: [0, -6, 0] }}
                   transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  <BrowserFrame src={IMG.ha} alt="Proxmox HA Migration" />
+                  <BrowserFrame src={IMG.ha} alt="Proxmox HA Migration" source="proxmox.com" />
                 </motion.div>
               </motion.div>
 

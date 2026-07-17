@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/honeypot-solution/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/honeypot-solution/#service",
+  name: "Honeypot Solution",
+  serviceType: "Honeypot Solutions",
+  description:
+    "Advanced honeypot solutions powered by Modern Honey Network (MHN) and T-POT — centralized management, real-time visualization, and automated threat detection.",
+  url: "https://illumiasolutions.com/honeypot-solution/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function HoneypotSolutionPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Honeypot Solutions"
       title="Honeypot"
       titleHighlight="Solution."
@@ -230,6 +247,7 @@ export default function HoneypotSolutionPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

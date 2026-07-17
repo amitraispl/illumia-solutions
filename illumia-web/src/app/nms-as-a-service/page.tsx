@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/nms-as-a-service/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/nms-as-a-service/#service",
+  name: "NMS as a Service",
+  serviceType: "Empowering Your Network Management",
+  description:
+    "Network Management System (NMS) as a Service — comprehensive tools and services to monitor, manage, and optimize your network infrastructure.",
+  url: "https://illumiasolutions.com/nms-as-a-service/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function NMSPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Empowering Your Network Management"
       title="NMS —"
       titleHighlight="as a Service."
@@ -146,6 +163,7 @@ export default function NMSPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

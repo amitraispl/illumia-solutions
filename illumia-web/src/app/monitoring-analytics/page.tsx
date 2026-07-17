@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/monitoring-analytics/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/monitoring-analytics/#service",
+  name: "Monitoring & Analytics",
+  serviceType: "Infrastructure Intelligence",
+  description:
+    "Full-stack observability powered by CheckMK and Elastiflow — real-time metrics, network flow analysis, and intelligent alerting.",
+  url: "https://illumiasolutions.com/monitoring-analytics/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function MonitoringAnalyticsPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Infrastructure Intelligence"
       title="Monitoring &"
       titleHighlight="Analytics."
@@ -165,6 +182,7 @@ export default function MonitoringAnalyticsPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/email-as-a-service/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/email-as-a-service/#service",
+  name: "Email as a Service",
+  serviceType: "Secure Communications",
+  description:
+    "Enterprise-grade email infrastructure built on Zimbra/Carbonio with Proxmox Mail Gateway for secure, reliable communications.",
+  url: "https://illumiasolutions.com/email-as-a-service/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function EmailAsAServicePage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Secure Communications"
       title="Email —"
       titleHighlight="as a Service."
@@ -122,6 +139,7 @@ export default function EmailAsAServicePage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

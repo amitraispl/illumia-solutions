@@ -239,18 +239,18 @@ export default function CaseStudiesPage() {
         imageSrc="/images/case-studies/faqs-casestudies_guidance.jpg"
         imageAlt="Illumia Solutions client success — team collaboration"
       >
-        <div className="grid grid-cols-3 gap-4 max-w-md">
+        <div className="grid grid-cols-3 gap-2 sm:gap-4 max-w-md">
           <div>
             <div className="font-headline text-2xl md:text-3xl text-[#b31c33] font-semibold">8</div>
-            <div className="mt-1 text-[10px] uppercase tracking-wider text-[#5a4040]">Case Studies</div>
+            <div className="mt-1 text-[9px] sm:text-[10px] uppercase tracking-wider text-[#5a4040]">Case Studies</div>
           </div>
           <div>
             <div className="font-headline text-2xl md:text-3xl text-[#b31c33] font-semibold">17+</div>
-            <div className="mt-1 text-[10px] uppercase tracking-wider text-[#5a4040]">Industries</div>
+            <div className="mt-1 text-[9px] sm:text-[10px] uppercase tracking-wider text-[#5a4040]">Industries</div>
           </div>
           <div>
             <div className="font-headline text-2xl md:text-3xl text-[#b31c33] font-semibold">1k+</div>
-            <div className="mt-1 text-[10px] uppercase tracking-wider text-[#5a4040]">Branches Served</div>
+            <div className="mt-1 text-[9px] sm:text-[10px] uppercase tracking-wider text-[#5a4040]">Branches Served</div>
           </div>
         </div>
       </PageHero>
@@ -378,13 +378,13 @@ export default function CaseStudiesPage() {
                     </ul>
 
                     {/* Metrics */}
-                    <div className="grid grid-cols-3 gap-4 border-t border-[#e2bebd]/50 pt-6 mb-8">
+                    <div className="grid grid-cols-3 gap-2 sm:gap-4 border-t border-[#e2bebd]/50 pt-6 mb-8">
                       {cs.metrics.map((m) => (
                         <div key={m.label}>
                           <div className="font-headline text-2xl md:text-3xl font-semibold text-[#b31c33] leading-none">
                             {m.value}
                           </div>
-                          <div className="mt-2 text-[10px] uppercase tracking-wider text-[#5a4040]">
+                          <div className="mt-2 text-[9px] sm:text-[10px] uppercase tracking-wider text-[#5a4040]">
                             {m.label}
                           </div>
                         </div>

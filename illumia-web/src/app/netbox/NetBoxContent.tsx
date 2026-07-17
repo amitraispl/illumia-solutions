@@ -95,6 +95,7 @@ const SPOTLIGHT_MODULES = [
     points: ["Front and rear rack elevation diagrams", "Auto-generated from live device data", "SVG export for change requests and audits", "Device utilisation and space at a glance"],
     img: IMG.rackElevations,
     imgAlt: "NetBox rack elevation diagrams showing patch panels, switches, and PDUs across multiple racks",
+    source: "netboxlabs.com",
     flip: true,
   },
 ];
@@ -174,6 +175,7 @@ const ADDITIONAL_MODULES = [
     points: ["VLANs scoped by site, group, and role", "Collision prevention across the numbering plan", "VRFs, route targets, and BGP communities as data", "Direct read access for Ansible and Terraform"],
     img: IMG.vlans,
     imgAlt: "NetBox VLAN list showing VID, site, prefixes, tenant, and status",
+    source: "GitHub — netbox-community/netbox",
     flip: false,
   },
 ];
@@ -298,7 +300,6 @@ export default function NetBoxContent() {
                 style={{ maxHeight: "500px" }}
               />
             </motion.div>
-            <SourceCaption dark>GitHub — netbox-community/netbox</SourceCaption>
           </motion.div>
 
           {/* Strikethrough replacement list */}

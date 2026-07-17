@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/disaster-recovery/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/disaster-recovery/#service",
+  name: "Disaster Recovery",
+  serviceType: "Business Continuity",
+  description:
+    "Comprehensive disaster recovery solutions ensuring rapid restoration of critical systems with minimal data loss and downtime.",
+  url: "https://illumiasolutions.com/disaster-recovery/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function DisasterRecoveryPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Business Continuity"
       title="Disaster Recovery —"
       titleHighlight="Always Back Online."
@@ -113,6 +130,7 @@ export default function DisasterRecoveryPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

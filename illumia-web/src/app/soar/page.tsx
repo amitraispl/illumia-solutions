@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/soar/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/soar/#service",
+  name: "SOAR — Security Orchestration Automation and Response",
+  serviceType: "Security Operations",
+  description:
+    "Advanced SOAR solutions with Shuffle — offering security orchestration, automated workflows, and rapid incident response for efficient cybersecurity management.",
+  url: "https://illumiasolutions.com/soar/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function SOARPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Security Operations"
       title="SOAR —"
       titleHighlight="Security Automation & Response."
@@ -178,6 +195,7 @@ export default function SOARPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/honeypot-as-a-service/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/honeypot-as-a-service/#service",
+  name: "Honeypot as a Service",
+  serviceType: "Cyber Security Services",
+  description:
+    "Honeypot as a Service by Illumia Solutions — deceptive security systems that detect, analyze, and respond to threats that bypass your primary defenses. Expert-managed, 24/7.",
+  url: "https://illumiasolutions.com/honeypot-as-a-service/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function HoneypotAsAServicePage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Cyber Security Services"
       title="Honeypot as a Service —"
       titleHighlight="Your Last Line of Defense."
@@ -126,6 +143,7 @@ export default function HoneypotAsAServicePage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

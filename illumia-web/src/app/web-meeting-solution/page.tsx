@@ -8,16 +8,33 @@ export const metadata: Metadata = {
   alternates: { canonical: "/web-meeting-solution/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/web-meeting-solution/#service",
+  name: "Web Meeting Solution",
+  serviceType: "Application Solutions",
+  description:
+    "Top-tier web-meeting solutions using Carbonio, Jitsi Meet, and Nextcloud Talk — secure, private, self-hosted video conferencing.",
+  url: "https://illumiasolutions.com/web-meeting-solution/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function WebMeetingSolutionPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Application Solutions"
       title="Web Meeting Solutions —"
       titleHighlight="Secure & Private."
       description="In an increasingly remote and hybrid work environment, effective web-meeting solutions are essential for maintaining seamless communication and collaboration. Illumia Solutions provides top-tier web-meeting tools using Carbonio, Jitsi Meet, and Nextcloud Talk — delivering high-quality video and audio, robust security, and rich collaboration features."
       sectionTitle="Benefits of Our Web-Meeting Solutions"
       ctaText="Deploy Your Meeting Solution"
-      heroImage="/images/web-meeting-solution/hero.avif"
+      heroImage="/images/web-meeting-solution/hero.jpg"
       closingText="Illumia Solutions' web-meeting solutions with Carbonio, Jitsi Meet, and Nextcloud Talk provide a secure, scalable, and cost-effective way to enhance your organization's communication and collaboration. With high-quality video and audio, robust security features, and seamless integration capabilities, our solutions ensure that your meetings are productive, secure, and efficient. Partner with Illumia Solutions to leverage the full potential of web-meeting tools and drive your business forward with confidence."
       features={[
         {
@@ -277,6 +294,7 @@ export default function WebMeetingSolutionPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

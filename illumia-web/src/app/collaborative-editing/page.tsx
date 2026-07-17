@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/collaborative-editing/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/collaborative-editing/#service",
+  name: "Collaborative Editing",
+  serviceType: "Application Solutions",
+  description:
+    "Collaborative editing solutions using OnlyOffice — delivering document editing, real-time collaboration, and security for your organisation.",
+  url: "https://illumiasolutions.com/collaborative-editing/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function CollaborativeEditingPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Application Solutions"
       title="Collaborative Editing —"
       titleHighlight="Comprehensive & Secure."
@@ -160,6 +177,7 @@ export default function CollaborativeEditingPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/cloud-security/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/cloud-security/#service",
+  name: "Cloud Security",
+  serviceType: "Cloud Security",
+  description:
+    "Illumia Solutions offers advanced cloud security services, from secure application deployment to ensuring data compliance and secure migration. Your cloud data and regulatory compliance are protected.",
+  url: "https://illumiasolutions.com/cloud-security/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function CloudSecurityPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Cloud Security"
       title="Cloud"
       titleHighlight="Security."
@@ -55,6 +72,7 @@ export default function CloudSecurityPage() {
       closingText="Cloud adoption shouldn't come at the cost of security. Illumia's cloud security practice ensures your cloud environments are protected, compliant, and continuously monitored — from first migration to full operation."
       ctaText="Request a Cloud Security Assessment"
       heroImage="/images/cloud-security/hero.png"
-    />
+      />
+    </>
   );
 }

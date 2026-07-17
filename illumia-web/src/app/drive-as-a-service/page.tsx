@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/drive-as-a-service/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/drive-as-a-service/#service",
+  name: "Drive as a Service",
+  serviceType: "Cloud Storage",
+  description:
+    "Secure self-hosted cloud storage powered by Nextcloud — seamless file access with complete data sovereignty.",
+  url: "https://illumiasolutions.com/drive-as-a-service/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function DriveAsAServicePage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Cloud Storage"
       title="Drive —"
       titleHighlight="as a Service."
@@ -199,6 +216,7 @@ export default function DriveAsAServicePage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

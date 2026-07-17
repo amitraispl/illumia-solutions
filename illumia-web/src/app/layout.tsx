@@ -38,6 +38,8 @@ const orgSchema = {
     { "@type": "Country", name: "Kenya" },
     { "@type": "Country", name: "Mozambique" },
   ],
+  logo: "https://illumiasolutions.com/images/logos/illumia-logo.png",
+  image: "https://illumiasolutions.com/images/logos/illumia-logo.png",
   sameAs: ["https://amitraispl.github.io/illumia-solutions/"],
 };
 

@@ -24,9 +24,24 @@ const Arrow = () => (
   </svg>
 );
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/infrastructure-solutions/#service",
+  name: "IT Infrastructure Solutions",
+  description:
+    "Enterprise IT infrastructure services: hyperconverged private cloud on Proxmox, high-performance Ceph block storage, SDN/SD-WAN deployment, bare-metal and VPS hosting, and 24/7 proactive infrastructure monitoring.",
+  url: "https://illumiasolutions.com/infrastructure-solutions/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function InfrastructureSolutionsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       {/* ─── Hero ─────────────────────────────────────────────────────────── */}
       <PageHero
         badge="Infrastructure Solutions"

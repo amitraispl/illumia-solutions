@@ -944,14 +944,14 @@ export default function Navbar() {
             FAQs
           </Link>
 
-          <Link href="/contact#contact-form" className={navLinkClass("/contact")}>
+          <Link href="/contact" className={navLinkClass("/contact")}>
             Contact Us
           </Link>
         </div>
 
         {/* Hamburger */}
         <button
-          className="lg:hidden flex flex-col justify-center items-center gap-[5px] p-2.5"
+          className="lg:hidden flex flex-col justify-center items-center gap-[5px] min-h-11 min-w-11 p-2.5"
           onClick={() => setMobileOpen((o) => !o)}
           aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={mobileOpen}
@@ -1066,7 +1066,7 @@ export default function Navbar() {
                                 setMobileActiveCategory((c) => c === group.id ? null : group.id)
                               }
                               aria-label={`Toggle ${group.label} services`}
-                              className="p-1 text-stone-400 hover:text-primary transition-colors duration-200"
+                              className="flex items-center justify-center min-h-11 min-w-11 text-stone-400 hover:text-primary transition-colors duration-200"
                             >
                               <motion.span
                                 animate={{ rotate: mobileActiveCategory === group.id ? 180 : 0 }}
@@ -1174,7 +1174,7 @@ export default function Navbar() {
               </Link>
 
               <Link
-                href="/contact#contact-form"
+                href="/contact"
                 onClick={() => setMobileOpen(false)}
                 className={`block py-3.5 font-headline text-sm tracking-widest uppercase transition-colors duration-200 ${
                   isActive("/contact") ? "text-primary font-bold" : "text-stone-700 hover:text-primary"

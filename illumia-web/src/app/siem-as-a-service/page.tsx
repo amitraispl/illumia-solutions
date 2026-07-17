@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/siem-as-a-service/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/siem-as-a-service/#service",
+  name: "SIEM as a Service",
+  serviceType: "Security Intelligence",
+  description:
+    "Continuous security event correlation and threat intelligence powered by Wazuh and OSSIM for complete environment visibility.",
+  url: "https://illumiasolutions.com/siem-as-a-service/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function SiemAsAServicePage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Security Intelligence"
       title="SIEM —"
       titleHighlight="as a Service."
@@ -126,6 +143,7 @@ export default function SiemAsAServicePage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

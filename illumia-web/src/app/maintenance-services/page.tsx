@@ -101,9 +101,24 @@ const processSteps = [
   },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/maintenance-services/#service",
+  name: "IT Maintenance & Remote Support Services",
+  description:
+    "24/7 proactive IT maintenance and remote managed services: round-the-clock monitoring, patch management, performance tuning, and dedicated technical support — keeping your infrastructure secure and available.",
+  url: "https://illumiasolutions.com/maintenance-services/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function MaintenanceServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <PageHero
         badge="04 / Maintenance Services"
         title={

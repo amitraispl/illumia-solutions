@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/on-premise-private-cloud/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/on-premise-private-cloud/#service",
+  name: "On-Premise Private Cloud Solutions with Proxmox",
+  serviceType: "Infrastructure Solutions",
+  description:
+    "Our On-Premise Private Cloud Solutions are built on Hyperconverged Infrastructure (HCI), which integrates compute, storage, and networking into a single cohesive system.",
+  url: "https://illumiasolutions.com/on-premise-private-cloud/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function OnPremiseCloudPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Infrastructure Solutions"
       title="On-Premise Private Cloud"
       titleHighlight="Solutions with Proxmox."
@@ -147,6 +164,7 @@ export default function OnPremiseCloudPage() {
       closingText="A highly available, Proxmox-based virtualisation infrastructure spanning two data centres with full DR capability — designed for fault tolerance, scalability, and seamless failover, supporting multiple mission-critical VMs powered by Ceph-backed storage and automated disaster recovery."
       ctaText="Design Your Private Cloud"
       heroImage="/images/heroes/on-premise-private-cloud_hero.jpg"
-    />
+      />
+    </>
   );
 }

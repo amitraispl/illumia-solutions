@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/pam-as-a-service/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/pam-as-a-service/#service",
+  name: "PAM as a Service",
+  serviceType: "Cyber Security Services",
+  description:
+    "Privileged Access Management (PAM) as a Service — robust security features through a cloud-based solution, providing essential management and monitoring of privileged accounts.",
+  url: "https://illumiasolutions.com/pam-as-a-service/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function PAMPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Cyber Security Services"
       title="PAM —"
       titleHighlight="as a Service."
@@ -156,6 +173,7 @@ export default function PAMPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/custom-web-application/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/custom-web-application/#service",
+  name: "Custom Web Application Development",
+  serviceType: "Web Applications",
+  description:
+    "Custom web applications built on modern frameworks — from internal operations tools to customer-facing SaaS platforms — engineered for security, performance, and scale.",
+  url: "https://illumiasolutions.com/custom-web-application/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function CustomWebApplicationPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Web Applications"
       title="Custom Web Applications —"
       titleHighlight="Built to Scale With You."
@@ -99,6 +116,7 @@ export default function CustomWebApplicationPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/netbox/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/netbox/#service",
+  name: "NetBox",
+  serviceType: "Network Source of Truth",
+  description:
+    "Replace spreadsheets and Visio diagrams with NetBox — the open-source network source of truth for IPAM, DCIM, rack elevation, and infrastructure-as-code. Deployment, integration, and managed hosting by Illumia Solutions.",
+  url: "https://illumiasolutions.com/netbox/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function NetBoxPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Network Source of Truth"
       title="NetBox —"
       titleHighlight="Your Network, Documented Precisely."
@@ -139,6 +156,7 @@ export default function NetBoxPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

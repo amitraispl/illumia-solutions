@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/design-development/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/design-development/#service",
+  name: "Design & Development",
+  serviceType: "Design & Development",
+  description:
+    "End-to-end UI/UX design and software engineering — research, wireframing, interactive prototyping, design systems, and full-stack implementation by one accountable team.",
+  url: "https://illumiasolutions.com/design-development/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function DesignDevelopmentPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Design & Development"
       title="Design & Development —"
       titleHighlight="From Concept to Code."
@@ -99,6 +116,7 @@ export default function DesignDevelopmentPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

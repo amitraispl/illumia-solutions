@@ -94,12 +94,12 @@ export default function TechSpotlight() {
               />
 
               {/* Proxmox logo — absolute so it never shifts heading */}
-              <div className="absolute top-6 right-6 sm:top-8 sm:right-8 lg:top-7 lg:right-7 h-16 w-52 pointer-events-none">
+              <div className="absolute top-6 right-6 sm:top-8 sm:right-8 lg:top-7 lg:right-7 h-16 w-32 sm:w-40 lg:w-52 pointer-events-none">
                 <Image
                   src={proxmoxLogo}
                   alt="Proxmox Silver Partner"
                   fill
-                  sizes="208px"
+                  sizes="(min-width: 1024px) 208px, (min-width: 640px) 160px, 128px"
                   className="object-contain object-right brightness-0 invert"
                 />
               </div>

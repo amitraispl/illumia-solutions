@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/virtual-desktops/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/virtual-desktops/#service",
+  name: "Virtual Desktops",
+  serviceType: "Desktop as a Service",
+  description:
+    "Centrally managed virtual desktop infrastructure enabling secure remote work from any device, anywhere. CPU, GPU, sandboxed, and browser-based VDI solutions.",
+  url: "https://illumiasolutions.com/virtual-desktops/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function VirtualDesktopsPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Desktop as a Service"
       title="Virtual Desktops —"
       titleHighlight="Work From Anywhere."
@@ -125,6 +142,7 @@ export default function VirtualDesktopsPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

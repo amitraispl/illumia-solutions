@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/pam/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/pam/#service",
+  name: "Privileged Access Management Solution",
+  serviceType: "Cybersecurity",
+  description:
+    "Advanced PAM solutions powered by Apache Guacamole — web-based, centralized, and scalable privileged access management for modern enterprises.",
+  url: "https://illumiasolutions.com/pam/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function PamPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Cybersecurity"
       title="Privileged Access"
       titleHighlight="Management (PAM) Solution."
@@ -186,6 +203,7 @@ export default function PamPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

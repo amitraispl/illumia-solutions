@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/governance-risk-compliance/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/governance-risk-compliance/#service",
+  name: "Governance, Risk & Compliance",
+  serviceType: "GRC Framework",
+  description:
+    "Advanced GRC solutions powered by OpenGRC — comprehensive risk management, compliance monitoring, and audit management.",
+  url: "https://illumiasolutions.com/governance-risk-compliance/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function GovernanceRiskCompliancePage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="GRC Framework"
       title="Governance, Risk,"
       titleHighlight="& Compliance."
@@ -191,6 +208,7 @@ export default function GovernanceRiskCompliancePage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/object-storage/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/object-storage/#service",
+  name: "Storage Solutions",
+  serviceType: "Storage Solutions",
+  description:
+    "Illumia Solutions provides cutting-edge storage solutions — high-performance block storage, scalable object storage, and cost-efficient cold storage — each designed to meet specific data storage requirements.",
+  url: "https://illumiasolutions.com/object-storage/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function ObjectStoragePage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Storage Solutions"
       title="Storage"
       titleHighlight="Solutions."
@@ -131,6 +148,7 @@ export default function ObjectStoragePage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

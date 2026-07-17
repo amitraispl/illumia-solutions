@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/custom-mobile-application/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/custom-mobile-application/#service",
+  name: "Custom Mobile Application Development",
+  serviceType: "Mobile Applications",
+  description:
+    "Native iOS and Android apps or cross-platform builds engineered for performance, offline resilience, and App Store-ready polish, with full post-launch support.",
+  url: "https://illumiasolutions.com/custom-mobile-application/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function CustomMobileApplicationPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Mobile Applications"
       title="Custom Mobile Applications —"
       titleHighlight="Native Performance, Any Platform."
@@ -99,6 +116,7 @@ export default function CustomMobileApplicationPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

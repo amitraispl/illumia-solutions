@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/waf-as-a-service/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/waf-as-a-service/#service",
+  name: "WAF as a Service",
+  serviceType: "Cyber Security Services",
+  description:
+    "A Web Application Firewall (WAF) is an essential security measure that provides comprehensive protection against a range of cyber threats.",
+  url: "https://illumiasolutions.com/waf-as-a-service/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function WafAsAServicePage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Cyber Security Services"
       title="WAF —"
       titleHighlight="as a Service."
@@ -106,6 +123,7 @@ export default function WafAsAServicePage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

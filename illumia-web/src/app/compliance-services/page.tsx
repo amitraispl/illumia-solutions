@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/compliance-services/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/compliance-services/#service",
+  name: "Compliance Services",
+  serviceType: "Compliance",
+  description:
+    "Illumia Solutions offers comprehensive compliance services to help you navigate complex regulatory requirements, ensuring your practices meet all necessary standards while managing costs effectively.",
+  url: "https://illumiasolutions.com/compliance-services/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function ComplianceServicesPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Compliance"
       title="Compliance"
       titleHighlight="Services."
@@ -55,6 +72,7 @@ export default function ComplianceServicesPage() {
       closingText="Compliance doesn't have to be a burden. Illumia's dedicated compliance practice simplifies the regulatory landscape — giving your team expert guidance, ongoing support, and cost-effective solutions that keep your organisation compliant."
       ctaText="Request a Compliance Consultation"
       heroImage="/images/compliance-services/hero.png"
-    />
+      />
+    </>
   );
 }

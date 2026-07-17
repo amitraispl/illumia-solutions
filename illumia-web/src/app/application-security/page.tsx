@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/application-security/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/application-security/#service",
+  name: "Application Security",
+  serviceType: "Application Security",
+  description:
+    "Illumia Solutions provides comprehensive application security services, from identifying vulnerabilities to enhancing security architecture and integrating secure development practices.",
+  url: "https://illumiasolutions.com/application-security/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function ApplicationSecurityPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Application Security"
       title="Application"
       titleHighlight="Security."
@@ -55,6 +72,7 @@ export default function ApplicationSecurityPage() {
       closingText="Illumia ensures your applications are built and maintained securely — without slowing down your development teams or compromising the user experience your customers rely on."
       ctaText="Request an Application Security Assessment"
       heroImage="/images/application-security/hero.png"
-    />
+      />
+    </>
   );
 }

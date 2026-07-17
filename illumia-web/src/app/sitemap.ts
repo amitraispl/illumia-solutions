@@ -4,6 +4,8 @@ export const dynamic = "force-static";
 
 const base = "https://illumiasolutions.com";
 
+const buildDate = new Date();
+
 const routes: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
   { path: "/", priority: 1.0, changeFrequency: "weekly" },
   { path: "/about/", priority: 0.9, changeFrequency: "monthly" },
@@ -11,6 +13,13 @@ const routes: { path: string; priority: number; changeFrequency: MetadataRoute.S
   { path: "/cyber-security/", priority: 0.9, changeFrequency: "monthly" },
   { path: "/open-source-solutions/", priority: 0.9, changeFrequency: "monthly" },
   { path: "/application-solutions/", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/software-development/", priority: 0.85, changeFrequency: "monthly" },
+  { path: "/custom-web-application/", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/custom-mobile-application/", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/design-development/", priority: 0.75, changeFrequency: "monthly" },
+  { path: "/third-party-integrations/", priority: 0.75, changeFrequency: "monthly" },
+  { path: "/netbox-platform/", priority: 0.75, changeFrequency: "monthly" },
+  { path: "/on-premise-private-cloud-solutions/", priority: 0.75, changeFrequency: "monthly" },
   { path: "/case-studies/", priority: 0.8, changeFrequency: "monthly" },
   { path: "/case-studies/pci-dss-grocery/", priority: 0.8, changeFrequency: "monthly" },
   { path: "/case-studies/cybersecurity-open-source/", priority: 0.8, changeFrequency: "monthly" },
@@ -73,6 +82,7 @@ const routes: { path: string; priority: number; changeFrequency: MetadataRoute.S
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map(({ path, priority, changeFrequency }) => ({
     url: `${base}${path}`,
+    lastModified: buildDate,
     changeFrequency,
     priority,
   }));

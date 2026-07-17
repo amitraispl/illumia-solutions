@@ -163,7 +163,7 @@ export default function CloudServicesContent() {
                 className="group relative block rounded-2xl overflow-hidden min-h-[220px] h-full"
               >
                 <Image
-                  src="/images/cloud-services/containers.jpg"
+                  src="/images/containers/hero.png"
                   alt="Container infrastructure"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"

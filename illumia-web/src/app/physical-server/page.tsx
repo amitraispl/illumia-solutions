@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/physical-server/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/physical-server/#service",
+  name: "Physical Server",
+  serviceType: "Dedicated Hardware",
+  description:
+    "Dedicated bare-metal servers for workloads requiring maximum compute power, complete resource isolation, and hardware-level control.",
+  url: "https://illumiasolutions.com/physical-server/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function PhysicalServerPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Dedicated Hardware"
       title="Physical Server —"
       titleHighlight="Full Metal Control."
@@ -95,6 +112,7 @@ export default function PhysicalServerPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

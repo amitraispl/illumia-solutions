@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/project-management-solutions/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/project-management-solutions/#service",
+  name: "Project Management Solutions",
+  serviceType: "Workflow Management",
+  description:
+    "Flexible open-source project management with Redmine, Zammad, and OpenProject tailored to your team's workflow.",
+  url: "https://illumiasolutions.com/project-management-solutions/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function ProjectManagementSolutionsPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Workflow Management"
       title="Project Management"
       titleHighlight="Solutions."
@@ -255,6 +272,7 @@ export default function ProjectManagementSolutionsPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

@@ -81,9 +81,24 @@ const SERVICES = [
   },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/cybersecurity-solutions/#service",
+  name: "Cybersecurity Solutions",
+  description:
+    "Open-source-powered cybersecurity solutions: SIEM (Wazuh/OSSIM), SOAR (Shuffle), EDR (OpenEDR), PAM (Apache Guacamole), vulnerability management (OpenVAS), and honeypot systems. Managed by CISA, CISSP, and CEH certified engineers.",
+  url: "https://illumiasolutions.com/cybersecurity-solutions/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function CybersecuritySolutionsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       {/* ─── Hero ─────────────────────────────────────────────────────────── */}
       <PageHero
         badge="Cybersecurity Solutions"

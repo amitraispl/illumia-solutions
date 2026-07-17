@@ -98,9 +98,24 @@ const platforms = [
   { name: "Hybrid / Private Cloud", category: "Hybrid" },
 ];
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/cloud-migration-solutions/#service",
+  name: "Cloud Migration Solutions",
+  description:
+    "End-to-end cloud migration services covering on-prem to Azure/AWS/GCP, cloud-to-cloud consolidation, and repatriation to Proxmox or VMware. Automated tooling, zero data loss guarantee, and a staged cutover with rollback capability.",
+  url: "https://illumiasolutions.com/cloud-migration-solutions/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function CloudMigrationPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <PageHero
         badge="03 / Migration Services"
         title={

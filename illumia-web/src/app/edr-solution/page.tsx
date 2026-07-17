@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/edr-solution/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/edr-solution/#service",
+  name: "EDR Solution",
+  serviceType: "Endpoint Security",
+  description:
+    "Advanced Endpoint Detection and Response solutions powered by OpenEDR — real-time threat detection, behavioral analysis, and automated response for comprehensive endpoint security.",
+  url: "https://illumiasolutions.com/edr-solution/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function EDRSolutionPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Endpoint Security"
       title="EDR —"
       titleHighlight="Endpoint Detection & Response."
@@ -204,6 +221,7 @@ export default function EDRSolutionPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

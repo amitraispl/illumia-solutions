@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/ai-governance/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/ai-governance/#service",
+  name: "AI Governance",
+  serviceType: "Responsible AI",
+  description:
+    "Structured AI governance programs covering risk classification, bias and fairness auditing, EU AI Act alignment, model accountability, AI incident response, and regulatory reporting. Deploy AI with confidence, not liability.",
+  url: "https://illumiasolutions.com/ai-governance/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function AIGovernancePage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Responsible AI"
       title="Govern AI Before It"
       titleHighlight="Governs You."
@@ -139,6 +156,7 @@ export default function AIGovernancePage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

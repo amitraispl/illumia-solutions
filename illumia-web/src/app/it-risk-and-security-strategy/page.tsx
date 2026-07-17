@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/it-risk-and-security-strategy/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/it-risk-and-security-strategy/#service",
+  name: "IT Risk and Security Strategy",
+  serviceType: "Risk & Governance",
+  description:
+    "In today's fast-paced digital world, staying ahead of evolving threats is critical. Illumia Solutions provides a thorough IT risk and security strategy that continuously assesses and integrates the latest security frameworks.",
+  url: "https://illumiasolutions.com/it-risk-and-security-strategy/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function ITRiskSecurityStrategyPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Risk & Governance"
       title="IT Risk and"
       titleHighlight="Security Strategy."
@@ -57,6 +74,7 @@ export default function ITRiskSecurityStrategyPage() {
       heroImage="/images/heroes/it-risk-security-strategy_hero.jpg"
       secondaryImage="/images/it-risk-and-security-strategy/secondary.png"
       secondaryImageAlt="IT risk and security strategy — Illumia Solutions"
-    />
+      />
+    </>
   );
 }

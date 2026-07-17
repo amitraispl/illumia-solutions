@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/third-party-integrations/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/third-party-integrations/#service",
+  name: "Third-Party Integrations",
+  serviceType: "Third-Party Integrations",
+  description:
+    "Reliable, secure third-party integrations connecting your applications to CRMs, ERPs, payment gateways, and the platforms your business already runs on.",
+  url: "https://illumiasolutions.com/third-party-integrations/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function ThirdPartyIntegrationsPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Third-Party Integrations"
       title="Third-Party Integrations —"
       titleHighlight="Connect Everything You Run."
@@ -99,6 +116,7 @@ export default function ThirdPartyIntegrationsPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

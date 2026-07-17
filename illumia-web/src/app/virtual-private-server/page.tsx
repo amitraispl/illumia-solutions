@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/virtual-private-server/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/virtual-private-server/#service",
+  name: "Virtual Private Server",
+  serviceType: "Cloud Infrastructure",
+  description:
+    "VPS offerings meticulously designed to meet the diverse needs of modern businesses, combining scalability, performance, and cost-efficiency with enhanced cybersecurity options.",
+  url: "https://illumiasolutions.com/virtual-private-server/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function VPSPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Cloud Infrastructure"
       title="Virtual Private Server —"
       titleHighlight="Flexible, Secure, No Lock-in."
@@ -74,6 +91,7 @@ export default function VPSPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

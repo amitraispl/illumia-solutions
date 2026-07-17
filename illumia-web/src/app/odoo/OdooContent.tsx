@@ -307,11 +307,12 @@ export default function OdooContent() {
             </motion.div>
 
             {/* ── Right: app icon wall ── */}
+            <div className="hidden lg:block">
             <motion.div
               variants={staggerFast}
               initial="hidden"
               animate="visible"
-              className="relative hidden lg:grid grid-cols-4 gap-4"
+              className="relative grid grid-cols-4 gap-4"
             >
               <div aria-hidden className="absolute -inset-8 bg-[radial-gradient(ellipse_60%_60%_at_50%_45%,rgba(179,28,51,0.05),transparent)] pointer-events-none" />
               {APP_WALL.map((app, i) => (
@@ -335,6 +336,8 @@ export default function OdooContent() {
                 </motion.div>
               ))}
             </motion.div>
+            <SourceCaption>odoo.com</SourceCaption>
+            </div>
           </div>
         </div>
       </section>

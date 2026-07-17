@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/containers/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/containers/#service",
+  name: "Container Solutions",
+  serviceType: "Infrastructure Solutions",
+  description:
+    "Container hosting with LXC, LXD, Docker, and Kubernetes orchestration — horizontal isolation, managed support, and flexible deployment for modern workloads.",
+  url: "https://illumiasolutions.com/containers/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function ContainersPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Infrastructure Solutions"
       title="Container Solutions —"
       titleHighlight="Modern Workload Management."
@@ -95,6 +112,7 @@ export default function ContainersPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

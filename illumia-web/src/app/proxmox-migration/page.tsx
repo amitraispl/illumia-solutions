@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/proxmox-migration/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/proxmox-migration/#service",
+  name: "Proxmox VE Migration",
+  serviceType: "VMware Alternative",
+  description:
+    "End-to-end migration from VMware ESXi/vSphere to Proxmox Virtual Environment. Zero licensing cost, identical enterprise capabilities — VMs, containers, HA clusters, live migration. Typical hypervisor cost reduction of 60–80%.",
+  url: "https://illumiasolutions.com/proxmox-migration/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function ProxmoxMigrationPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="VMware Alternative"
       title="Proxmox VE —"
       titleHighlight="Escape the VMware Tax."
@@ -139,6 +156,7 @@ export default function ProxmoxMigrationPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

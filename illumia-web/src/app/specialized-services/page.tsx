@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/specialized-services/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/specialized-services/#service",
+  name: "Specialized Services",
+  serviceType: "Specialized Services",
+  description:
+    "Our specialised cybersecurity services are tailored to address specific industry and business needs — including security gap analysis, custom security frameworks, secure payment implementation, continuous monitoring, and vulnerability management.",
+  url: "https://illumiasolutions.com/specialized-services/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function SpecializedServicesPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Specialized Services"
       title="Specialized"
       titleHighlight="Services."
@@ -55,6 +72,7 @@ export default function SpecializedServicesPage() {
       closingText="Every business has unique security requirements. Illumia's specialised services are custom-scoped to fill the gaps your standard programmes leave behind — delivering targeted protection without operational disruption."
       ctaText="Request a Security Consultation"
       heroImage="/images/specialized-services/hero.jpg"
-    />
+      />
+    </>
   );
 }

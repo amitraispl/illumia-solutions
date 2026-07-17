@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/edr-as-a-service/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/edr-as-a-service/#service",
+  name: "EDR as a Service",
+  serviceType: "Comprehensive Protection for Your Business",
+  description:
+    "Endpoint Detection and Response (EDR) as a Service — real-time threat detection, behavioral analysis, automated responses, and expert-managed endpoint security.",
+  url: "https://illumiasolutions.com/edr-as-a-service/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function EDRAsAServicePage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Comprehensive Protection for Your Business"
       title="EDR —"
       titleHighlight="as a Service."
@@ -106,6 +123,7 @@ export default function EDRAsAServicePage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

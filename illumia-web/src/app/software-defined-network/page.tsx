@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/software-defined-network/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/software-defined-network/#service",
+  name: "Software-Defined Network",
+  serviceType: "Network Infrastructure",
+  description:
+    "Modern SDN and SD-WAN solutions featuring easy setup, high performance, end-to-end encryption, and a decentralized architecture.",
+  url: "https://illumiasolutions.com/software-defined-network/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function SoftwareDefinedNetworkPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Network Infrastructure"
       title="Software-Defined"
       titleHighlight="Networking."
@@ -138,6 +155,7 @@ export default function SoftwareDefinedNetworkPage() {
           ],
         },
       ]}
-    />
+      />
+    </>
   );
 }

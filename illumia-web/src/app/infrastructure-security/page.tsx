@@ -8,9 +8,26 @@ export const metadata: Metadata = {
   alternates: { canonical: "/infrastructure-security/" },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://illumiasolutions.com/infrastructure-security/#service",
+  name: "Infrastructure Security",
+  serviceType: "Infrastructure Security",
+  description:
+    "Infrastructure security is the backbone of a secure IT environment. Illumia Solutions offers comprehensive services to secure your network and endpoints, providing real-time threat detection and response.",
+  url: "https://illumiasolutions.com/infrastructure-security/",
+  provider: { "@id": "https://illumiasolutions.com/#organization" },
+};
+
 export default function InfrastructureSecurityPage() {
   return (
-    <RichServicePageTemplate
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <RichServicePageTemplate
       badge="Infrastructure Security"
       title="Infrastructure"
       titleHighlight="Security."
@@ -55,6 +72,7 @@ export default function InfrastructureSecurityPage() {
       closingText="A secure infrastructure is the foundation of every resilient business. Illumia's infrastructure security services give you real-time visibility, automated response, and hardened access controls — so threats are stopped before they cause damage."
       ctaText="Request an Infrastructure Security Assessment"
       heroImage="/images/infrastructure-security/hero.png"
-    />
+      />
+    </>
   );
 }
