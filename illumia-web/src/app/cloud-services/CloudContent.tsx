@@ -88,7 +88,7 @@ export default function CloudServicesContent() {
         description="At Illumia, we specialize in providing comprehensive cloud solutions tailored to meet the dynamic needs of businesses across industries. We leverage advanced cloud technology to optimize operations, enhance security, and ensure seamless scalability."
         primaryCta={{ label: "Consult an Expert", href: "/contact#contact-form" }}
         secondaryCta={{ label: "View Services", href: "#hosting" }}
-        imageSrc="/cloud-hero.jpg"
+        imageSrc="/images/cloud-services/hero.jpg"
         imageAlt="Cloud infrastructure — Illumia Solutions"
       />
 
@@ -163,7 +163,7 @@ export default function CloudServicesContent() {
                 className="group relative block rounded-2xl overflow-hidden min-h-[220px] h-full"
               >
                 <Image
-                  src="/cloud-containers.jpg"
+                  src="/images/cloud-services/containers.jpg"
                   alt="Container infrastructure"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -405,7 +405,7 @@ export default function CloudServicesContent() {
                 className="group relative block rounded-2xl overflow-hidden min-h-[220px] h-full"
               >
                 <Image
-                  src="/pam.png"
+                  src="/images/shared/pam.png"
                   alt="Privileged Access Management"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -455,7 +455,7 @@ export default function CloudServicesContent() {
                 className="group relative block rounded-2xl overflow-hidden min-h-[220px] h-full"
               >
                 <Image
-                  src="/backup.png"
+                  src="/images/shared/backup.png"
                   alt="Backup infrastructure"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -507,7 +507,7 @@ export default function CloudServicesContent() {
               <motion.div variants={fadeUp} className="h-full">
                 <div className="group relative rounded-2xl overflow-hidden min-h-[220px] h-full">
                   <Image
-                    src="/cloud-migration-card.jpg"
+                    src="/images/cloud-services/migration-card.jpg"
                     alt="Cloud to Cloud Migration"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"

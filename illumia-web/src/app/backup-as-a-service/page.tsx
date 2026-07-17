@@ -17,7 +17,7 @@ export default function BackupAsAServicePage() {
       description="Backup as a Service provides a crucial safety net for businesses — ensuring data is continuously protected and readily recoverable from accidental deletions, hardware failures, and cyberattacks, with automated scheduling and fast recovery times."
       sectionTitle="Backup as a Service Features"
       ctaText="Protect Your Data"
-      heroImage="/backup.png"
+      heroImage="/images/shared/backup.png"
       darkHero={true}
       closingText="Partner with us to secure your business's most valuable asset — its data."
       features={[

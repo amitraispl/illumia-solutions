@@ -74,7 +74,7 @@ export default function ApplicationSolutionsPage() {
         description="Our application solutions are designed to enhance collaboration, streamline project management, and ensure robust security. We leverage the best open-source technologies to deliver innovative solutions tailored to your business needs."
         primaryCta={{ label: "Explore Solutions", href: "#collaboration" }}
         secondaryCta={{ label: "Contact Us", href: "/contact#contact-form" }}
-        imageSrc="/cicdp.png"
+        imageSrc="/images/application-solutions/cicdp.png"
         imageAlt="Application solutions — Illumia Solutions"
       />
 

@@ -17,7 +17,7 @@ export default function PamPage() {
       description="In the modern cybersecurity landscape, managing privileged access is critical to protecting your organization's sensitive data and systems. Illumia Solutions offers advanced Privileged Access Management (PAM) solutions powered by Apache Guacamole."
       sectionTitle="Benefits of Our PAM Solutions"
       ctaText="Secure Privileged Access"
-      heroImage="/pam.png"
+      heroImage="/images/shared/pam.png"
       closingText="Illumia Solutions' Privileged Access Management (PAM) solutions with Apache Guacamole provide a comprehensive, scalable, and cost-effective way to enhance your organization's security."
       features={[
         {

@@ -17,7 +17,7 @@ export default function CustomMobileApplicationPage() {
       description="Native iOS and Android apps, or a single cross-platform codebase — engineered for performance, offline resilience, and a polish that feels at home on the platform it runs on."
       sectionTitle="Our Mobile Development Capabilities"
       ctaText="Scope Your Mobile App"
-      heroImage="/custom-mobile-hero.jpg"
+      heroImage="/images/custom-mobile-application/hero.jpg"
       closingText="Whether it's a customer-facing app or an internal field tool, we build mobile software that performs — and that your team can maintain long after launch."
       features={[
         {

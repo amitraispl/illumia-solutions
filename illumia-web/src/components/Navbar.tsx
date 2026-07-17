@@ -693,7 +693,7 @@ function ServicesMegaMenu({ onClose, activeCategory, onCategoryChange, pageCateg
               >
                 <div className="shrink-0 w-7 h-7 rounded-md bg-stone-100 flex items-center justify-center overflow-hidden">
                   <img
-                    src="/proxmox-icon.png"
+                    src="/images/icons/proxmox-icon.png"
                     alt="Proxmox VE"
                     className="w-5 h-5 object-contain"
                   />
@@ -713,7 +713,7 @@ function ServicesMegaMenu({ onClose, activeCategory, onCategoryChange, pageCateg
               >
                 <div className="shrink-0 w-7 h-7 rounded-md bg-stone-100 flex items-center justify-center overflow-hidden">
                   <img
-                    src="/netbox-icon.png"
+                    src="/images/icons/netbox-icon.png"
                     alt="NetBox Labs"
                     className="w-7 h-7 object-cover"
                   />
@@ -733,7 +733,7 @@ function ServicesMegaMenu({ onClose, activeCategory, onCategoryChange, pageCateg
               >
                 <div className="shrink-0 w-7 h-7 rounded-md bg-stone-100 flex items-center justify-center overflow-hidden">
                   <img
-                    src="/odoo-logo.png"
+                    src="/images/logos/odoo-logo.png"
                     alt="Odoo"
                     className="w-5 h-5 object-contain"
                   />

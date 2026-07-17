@@ -34,7 +34,7 @@ const modules = [
     ),
     title: "Design & Development",
     desc: "End-to-end UI/UX design and engineering — wireframes, prototypes, and design systems carried through to production-ready code by one accountable team.",
-    image: "/swdev-design-card.jpg",
+    image: "/images/software-development/design-card.jpg",
     imageAlt: "UX wireframe sketch on a notepad next to a phone",
     items: [
       "UX Research & Wireframing",
@@ -52,7 +52,7 @@ const modules = [
     ),
     title: "Custom Mobile Application",
     desc: "Native iOS/Android and cross-platform apps engineered for performance, offline resilience, and App Store-ready polish.",
-    image: "/swdev-mobile-card.jpg",
+    image: "/images/software-development/mobile-card.jpg",
     imageAlt: "Hand holding a phone showing a custom app interface",
     items: [
       "Native iOS & Android Development",
@@ -70,7 +70,7 @@ const modules = [
     ),
     title: "Custom Web Application",
     desc: "Scalable, secure web applications on modern frameworks — from internal operations tools to customer-facing platforms.",
-    image: "/swdev-web-card.jpg",
+    image: "/images/software-development/web-card.jpg",
     imageAlt: "Multi-monitor code editor setup on a developer's desk",
     items: [
       "React / Next.js Front-Ends",
@@ -88,7 +88,7 @@ const modules = [
     ),
     title: "Third-Party Integrations",
     desc: "Seamless API integrations connecting your software to CRMs, payment gateways, ERPs, and the wider tools your business depends on.",
-    image: "/integration-network-card.png",
+    image: "/images/software-development/integration-network-card.png",
     imageAlt: "Illustration of a central platform connected to Razorpay, Zapier, and Bunny.net",
     items: [
       "CRM, ERP & Payment Gateway Sync",
@@ -181,7 +181,7 @@ export default function SoftwareDevelopmentContent() {
         description="From pixel-perfect design to production-grade mobile and web applications, our engineering team builds custom software precisely matched to your business logic — and connects it seamlessly to the tools you already run."
         primaryCta={{ label: "Consult an Expert", href: "/contact#contact-form" }}
         secondaryCta={{ label: "Explore Our Work", href: "#core-solutions" }}
-        imageSrc="/swdev-hero.jpg"
+        imageSrc="/images/software-development/hero.jpg"
         imageAlt="Developer working across multiple monitors of code"
       />
 
@@ -498,7 +498,7 @@ export default function SoftwareDevelopmentContent() {
       {/* ─── Pull Quote ───────────────────────────────────────────────────── */}
       <section className="py-14 lg:py-28 bg-[#1c1b1b] text-white relative overflow-hidden">
         <Image
-          src="/swdev-cta-bg.jpg"
+          src="/images/software-development/cta-bg.jpg"
           alt=""
           fill
           className="object-cover opacity-[0.1]"

@@ -96,7 +96,7 @@ export default function CybersecuritySolutionsPage() {
         description="Cybersecurity is at the core of our services at Illumia Solutions. We offer a range of solutions to protect your business from evolving cyber threats."
         primaryCta={{ label: "Explore Solutions", href: "#solutions" }}
         secondaryCta={{ label: "Contact Us", href: "/contact#contact-form" }}
-        imageSrc="/cyber-sol.png"
+        imageSrc="/images/cybersecurity-solutions/hero.png"
         imageAlt="Cybersecurity Solutions — Illumia Solutions"
       />
 

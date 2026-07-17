@@ -38,7 +38,7 @@ function SourceCaption({ children }: { children: string }) {
 
 // Real visuals — official Odoo assets (odoocdn.com)
 const IMG = {
-  logo: "/odoo-logo.png",
+  logo: "/images/logos/odoo-logo.png",
   crm: "/images/odoo/crm.webp",
   accounting: "/images/odoo/accounting.webp",
   inventory: "/images/odoo/inventory.webp",
@@ -50,7 +50,7 @@ const IMG = {
 };
 
 // Official Odoo app icons
-const appIcon = (slug: string) => `/odoo-icons/${slug}.png`;
+const appIcon = (slug: string) => `/images/odoo/icons/${slug}.png`;
 
 const APP_WALL = [
   { name: "CRM", slug: "crm" },

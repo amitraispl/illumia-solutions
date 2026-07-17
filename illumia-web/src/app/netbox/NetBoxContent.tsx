@@ -38,8 +38,8 @@ const IMG = {
   automation: "/images/netbox/automation.png",
   infrastructure: "/images/netbox/infrastructure.png",
   logo: "/images/logos/netbox-labs.png",
-  rackElevations: "/netbox-rack-elevations.png",
-  vlans: "/netbox-vlans.png",
+  rackElevations: "/images/netbox/rack-elevations.png",
+  vlans: "/images/netbox/vlans.png",
 };
 
 const REPLACES = [

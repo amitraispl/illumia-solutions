@@ -17,7 +17,7 @@ export default function CustomWebApplicationPage() {
       description="From internal operations tools to customer-facing platforms, we build web applications on modern, maintainable stacks — engineered for the load, security, and workflows your business actually has."
       sectionTitle="Our Web Application Capabilities"
       ctaText="Scope Your Web App"
-      heroImage="/custom-web-hero.jpg"
+      heroImage="/images/custom-web-application/hero.jpg"
       closingText="We build web applications the way we'd want to inherit them — clean architecture, sane defaults, and documentation that actually helps."
       features={[
         {

@@ -17,7 +17,7 @@ export default function WafAsAServicePage() {
       description="A Web Application Firewall (WAF) is an essential security measure that provides comprehensive protection against a range of cyber threats. Our WAF as a Service offers robust security, easy deployment, and significant benefits, especially for companies without dedicated IT personnel."
       sectionTitle="WAF as a Service Features"
       ctaText="Contact Us"
-      heroImage="/waf.png"
+      heroImage="/images/waf-as-a-service/hero.png"
       darkHero={true}
       closingText="Investing in our WAF as a Service ensures your web applications are protected against evolving threats, allowing you to focus on your core business operations without worrying about security. Contact us today to learn more about how our WAF solutions can benefit your company."
       features={[

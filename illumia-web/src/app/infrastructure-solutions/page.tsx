@@ -39,7 +39,7 @@ export default function InfrastructureSolutionsPage() {
         description="At Illumia Solutions, we provide comprehensive infrastructure solutions designed to enhance your IT capabilities while reducing costs and complexity."
         primaryCta={{ label: "Explore Solutions", href: "#solutions" }}
         secondaryCta={{ label: "Contact Us", href: "/contact#contact-form" }}
-        imageSrc="/infra.png"
+        imageSrc="/images/infrastructure-solutions/hero.png"
         imageAlt="Infrastructure Solutions — Illumia Solutions"
       />
 
@@ -99,7 +99,7 @@ export default function InfrastructureSolutionsPage() {
               className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl shadow-stone-200/60"
             >
               <Image
-                src="/proxmox-dashboard.png"
+                src="/images/infrastructure-solutions/proxmox-dashboard.png"
                 alt="On-premise private cloud infrastructure"
                 fill
                 className="object-cover"
@@ -128,7 +128,7 @@ export default function InfrastructureSolutionsPage() {
               className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl shadow-stone-300/40 order-2 lg:order-1"
             >
               <Image
-                src="/obj-str.png"
+                src="/images/shared/obj-str.png"
                 alt="Storage solutions"
                 fill
                 className="object-cover"

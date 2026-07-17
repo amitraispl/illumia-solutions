@@ -17,7 +17,7 @@ export default function DesignDevelopmentPage() {
       description="We take products from a blank page to production — user research, interaction design, and full-stack engineering handled by one team, so nothing gets lost in translation between design and build."
       sectionTitle="Our Design & Development Process"
       ctaText="Start Your Design Sprint"
-      heroImage="/design-development-hero.jpg"
+      heroImage="/images/design-development/hero.jpg"
       closingText="At Illumia Solutions, our design and development teams work as one — so your product's look, feel, and function are never compromises made in isolation."
       features={[
         {

@@ -17,7 +17,7 @@ export default function SoftwareDefinedNetworkPage() {
       description="In a world where connectivity and performance are critical, Illumia Solutions offers cutting-edge SDN solutions that redefine network architecture — eliminating the need for traditional central controllers and enhancing network resilience, performance, and simplicity."
       sectionTitle="Key Features and Benefits"
       ctaText="Modernise Your Network"
-      heroImage="/sdnet.png"
+      heroImage="/images/software-defined-network/hero.png"
       closingText="At Illumia Solutions, we are dedicated to empowering businesses to achieve their goals through innovative and cost-effective solutions."
       features={[
         {

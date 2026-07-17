@@ -54,7 +54,7 @@ export default function InfrastructureSecurityPage() {
       ]}
       closingText="A secure infrastructure is the foundation of every resilient business. Illumia's infrastructure security services give you real-time visibility, automated response, and hardened access controls — so threats are stopped before they cause damage."
       ctaText="Request an Infrastructure Security Assessment"
-      heroImage="/infra-sec.png"
+      heroImage="/images/infrastructure-security/hero.png"
     />
   );
 }

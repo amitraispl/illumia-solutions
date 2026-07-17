@@ -17,7 +17,7 @@ export default function NMSPage() {
       description="Network Management System (NMS) as a Service is a comprehensive solution that provides businesses with tools and services to monitor, manage, and optimize their network infrastructure. This service is crucial for maintaining network performance, ensuring security, and reducing downtime."
       sectionTitle="NMS as a Service Features"
       ctaText="Contact Us"
-      heroImage="/nms.png"
+      heroImage="/images/nms-as-a-service/hero.png"
       closingText="By leveraging NMS as a service, your company can ensure a robust, secure, and efficient network infrastructure that supports your business goals and drives growth."
       features={[
         {

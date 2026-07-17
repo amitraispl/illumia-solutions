@@ -17,7 +17,7 @@ export default function ObjectStoragePage() {
       description="In today's data-centric world, businesses need robust and scalable storage solutions to manage their ever-growing volumes of data efficiently. Illumia Solutions provides cutting-edge storage solutions that cater to diverse business needs, ensuring high performance, scalability, and cost-effectiveness."
       sectionTitle="Our storage offerings."
       ctaText="Start Storing at Scale"
-      heroImage="/obj-str.png"
+      heroImage="/images/shared/obj-str.png"
       closingText="At Illumia Solutions, we are committed to providing you with a powerful, secure, and scalable storage solution that fits seamlessly into your existing IT infrastructure — whether you are looking to enhance data accessibility, increase storage capacity, or improve data management."
       features={[
         {

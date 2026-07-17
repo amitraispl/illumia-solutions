@@ -17,7 +17,7 @@ export default function VPSPage() {
       description="At Illumia Solutions, we understand that flexibility, security, and reliability are paramount when it comes to hosting solutions. Our Virtual Private Server (VPS) offerings are meticulously designed to meet the diverse needs of modern businesses, combining scalability, performance, and cost-efficiency with enhanced cybersecurity options."
       sectionTitle="Our VPS Features"
       ctaText="Configure Your VPS"
-      heroImage="/vpnet.png"
+      heroImage="/images/virtual-private-server/hero.png"
       closingText="Whether you're running high-traffic websites, complex databases, or critical applications, our VPS solutions offer the power, performance, and peace of mind you need. With Illumia Solutions, you're not just choosing a service provider; you're partnering with a team of experts dedicated to supporting your growth and success."
       features={[
         {

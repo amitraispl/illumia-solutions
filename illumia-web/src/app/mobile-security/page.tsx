@@ -54,7 +54,7 @@ export default function MobileSecurityPage() {
       ]}
       closingText="As mobile devices become central to every business workflow, Illumia delivers the policies, tooling, and expertise needed to keep your mobile estate secure — without hampering productivity."
       ctaText="Request a Mobile Security Assessment"
-      heroImage="/mobile-sec.png"
+      heroImage="/images/mobile-security/hero.png"
     />
   );
 }

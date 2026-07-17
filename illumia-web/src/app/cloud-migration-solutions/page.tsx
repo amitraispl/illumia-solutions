@@ -112,7 +112,7 @@ export default function CloudMigrationPage() {
         description="Seamless, low-risk migration pathways engineered to move your workloads with zero business disruption. From on-premises to public cloud, cloud-to-cloud, or repatriation — we manage the full lifecycle."
         primaryCta={{ label: "Plan Your Migration", href: "/contact#contact-form" }}
         secondaryCta={{ label: "Cloud Services", href: "/cloud-services#migration" }}
-        imageSrc="/cld-mig.png"
+        imageSrc="/images/cloud-migration-solutions/hero.png"
         imageAlt="Cloud migration data centre infrastructure"
       />
 

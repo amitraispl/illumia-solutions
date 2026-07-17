@@ -100,7 +100,7 @@ export default function HomePage() {
         description="Enterprise-grade cybersecurity, cloud, and open-source solutions — engineered for resilience, built for scale. From Kolkata to the globe, we deliver precision technology that powers ambitious businesses forward."
         primaryCta={{ label: "Talk to Our Team", href: "/contact#contact-form" }}
         secondaryCta={{ label: "Learn About Us", href: "/about" }}
-        imageSrc="/hero-home.avif"
+        imageSrc="/images/home/hero.avif"
         imageAlt="Diverse team collaborating around a table with laptops"
       >
         {/* Stats row inside hero */}
