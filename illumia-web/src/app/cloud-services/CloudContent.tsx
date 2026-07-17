@@ -88,7 +88,7 @@ export default function CloudServicesContent() {
         description="At Illumia, we specialize in providing comprehensive cloud solutions tailored to meet the dynamic needs of businesses across industries. We leverage advanced cloud technology to optimize operations, enhance security, and ensure seamless scalability."
         primaryCta={{ label: "Consult an Expert", href: "/contact#contact-form" }}
         secondaryCta={{ label: "View Services", href: "#hosting" }}
-        imageSrc="https://plus.unsplash.com/premium_photo-1683120968693-9af51578770e?q=80&w=663&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        imageSrc="/cloud-hero.jpg"
         imageAlt="Cloud infrastructure — Illumia Solutions"
       />
 
@@ -163,7 +163,7 @@ export default function CloudServicesContent() {
                 className="group relative block rounded-2xl overflow-hidden min-h-[220px] h-full"
               >
                 <Image
-                  src="https://images.pexels.com/photos/5203849/pexels-photo-5203849.jpeg?w=1260&h=750&dpr=1"
+                  src="/cloud-containers.jpg"
                   alt="Container infrastructure"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -507,7 +507,7 @@ export default function CloudServicesContent() {
               <motion.div variants={fadeUp} className="h-full">
                 <div className="group relative rounded-2xl overflow-hidden min-h-[220px] h-full">
                   <Image
-                    src="https://images.pexels.com/photos/17323801/pexels-photo-17323801.jpeg?w=1260&h=750&dpr=1"
+                    src="/cloud-migration-card.jpg"
                     alt="Cloud to Cloud Migration"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"

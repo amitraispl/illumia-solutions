@@ -27,19 +27,30 @@ const popIn = {
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } } };
 const staggerFast = { hidden: {}, visible: { transition: { staggerChildren: 0.045 } } };
 
+/* Plain figure-caption style attribution — no background, sits below the image */
+function SourceCaption({ children }: { children: string }) {
+  return (
+    <p className="mt-2 font-body text-[11px] text-[#5a4040] italic">
+      Source: {children}
+    </p>
+  );
+}
+
 // Real visuals — official Odoo assets (odoocdn.com)
 const IMG = {
-  logo: "https://odoocdn.com/openerp_website/static/src/img/assets/png/odoo_logo.png",
+  logo: "/odoo-logo.png",
   crm: "https://odoocdn.com/openerp_website/static/src/img/apps/crm/hero_image.webp",
   accounting: "https://odoocdn.com/openerp_website/static/src/img/apps/accounting/accounting-hero-image.webp",
   inventory: "https://odoocdn.com/openerp_website/static/src/img/apps/inventory/hero_image.webp",
   manufacturing: "https://odoocdn.com/openerp_website/static/src/img/apps/manufacturing/hero_image.webp",
   pos: "https://odoocdn.com/openerp_website/static/src/img/apps/pos/interface.webp",
   reporting: "https://odoocdn.com/openerp_website/static/src/img/apps/crm/reporting.webp",
+  hospitalDashboard: "https://apps.odoocdn.com/apps/assets/16.0/base_hospital_management/assets/screenshots/add_medicine.png",
+  educationDashboard: "https://apps.odoocdn.com/apps/assets/15.0/education_erp_dashboard/assets/screenshots/dashboard.png",
 };
 
-// Official Odoo app icons — download.odoocdn.com
-const appIcon = (slug: string) => `https://download.odoocdn.com/icons/${slug}/static/description/icon.png`;
+// Official Odoo app icons
+const appIcon = (slug: string) => `/odoo-icons/${slug}.png`;
 
 const APP_WALL = [
   { name: "CRM", slug: "crm" },
@@ -84,6 +95,29 @@ const MODULE_SPOTLIGHTS = [
     points: ["Kanban pipeline with stage revenue forecasts", "Quotations with e-sign and online payment", "Built-in email, VoIP, and activity scheduling", "Lead scoring and automated assignment"],
     img: IMG.crm,
     imgAlt: "Odoo CRM kanban pipeline with opportunity stages",
+    source: "odoocdn.com",
+    flip: false,
+  },
+  {
+    tag: "Healthcare",
+    icon: HeartHandshake,
+    title: "Patient records, billing, and inventory on one database.",
+    body: "Odoo runs hospital and clinic operations end to end — appointment scheduling, patient records, pharmacy and medical-supply inventory with lot/expiry tracking, and insurance billing — without stitching together separate systems for each department.",
+    points: ["Appointment and patient record management", "Pharmacy & medical inventory with expiry tracking", "Insurance claims and patient billing", "HR and payroll for clinical staff"],
+    img: IMG.hospitalDashboard,
+    imgAlt: "Odoo hospital management pharmacy screen showing medicine stock, brand, and pricing",
+    source: "apps.odoocdn.com",
+    flip: true,
+  },
+  {
+    tag: "Education",
+    icon: UserSquare2,
+    title: "Admissions to alumni, run from a single platform.",
+    body: "Institutions use Odoo for admissions pipelines in CRM, fee invoicing and online payment, eLearning course delivery, and campus HR — with a parent/student portal reading live from the same records as the back office.",
+    points: ["Admissions pipeline via CRM", "Fee invoicing and online payment", "eLearning app for course delivery", "Student/parent self-service portal"],
+    img: IMG.educationDashboard,
+    imgAlt: "Odoo education dashboard with student, faculty, attendance, and exam-result charts",
+    source: "apps.odoocdn.com",
     flip: false,
   },
   {
@@ -94,6 +128,7 @@ const MODULE_SPOTLIGHTS = [
     points: ["Bank feeds with smart reconciliation", "AI bill digitisation from PDF and scan", "80+ country localisations, GST included", "Real-time P&L, balance sheet, and aged reports"],
     img: IMG.accounting,
     imgAlt: "Odoo accounting dashboard with invoices, bills, bank and cash",
+    source: "odoocdn.com",
     flip: true,
   },
   {
@@ -104,6 +139,7 @@ const MODULE_SPOTLIGHTS = [
     points: ["Double-entry stock moves, full traceability", "Routes: dropship, cross-dock, multi-step", "Barcode app for receipts, picks, and counts", "Lot, serial, and expiry tracking"],
     img: IMG.inventory,
     imgAlt: "Odoo inventory warehouse operations view",
+    source: "odoocdn.com",
     flip: false,
   },
   {
@@ -114,6 +150,7 @@ const MODULE_SPOTLIGHTS = [
     points: ["Multi-level BOMs with routings and versions", "Shop-floor tablet view with worksheets", "Work-centre load and capacity planning", "Integrated Maintenance, Quality, and PLM"],
     img: IMG.manufacturing,
     imgAlt: "Odoo manufacturing work order scheduling",
+    source: "odoocdn.com",
     flip: true,
   },
   {
@@ -124,6 +161,7 @@ const MODULE_SPOTLIGHTS = [
     points: ["Offline-first — sales continue without internet", "Restaurant floor plans and kitchen display", "Self-service kiosk and mobile ordering", "Direct posting to stock and ledger"],
     img: IMG.pos,
     imgAlt: "Odoo point of sale interface with product grid",
+    source: "odoocdn.com",
     flip: false,
   },
 ];
@@ -160,22 +198,6 @@ const ENGINEERING_POINTS = [
     text: "Every record you create is yours — export it, self-host it, or move it. Odoo.sh, on-premise, or Illumia's private cloud all run the same open codebase.",
   },
 ];
-
-// Odoo vs ERPNext decision helper
-const DECIDER = {
-  odoo: [
-    "You want website, eCommerce, and marketing native to the ERP",
-    "You'll grow app-by-app — start with CRM, add the rest later",
-    "Retail or restaurant POS is core to the business",
-    "You may want Enterprise extras (Studio, Odoo.sh) later",
-  ],
-  erpnext: [
-    "You want the entire suite 100% free under GPLv3 — no paid tier anywhere",
-    "Manufacturing and India statutory compliance lead the requirement",
-    "You prefer one integrated system over an app marketplace",
-    "Your team will customise deeply via the Frappe framework",
-  ],
-};
 
 const ADOPTION = [
   {
@@ -406,15 +428,18 @@ export default function OdooContent() {
 
                 <motion.div
                   variants={fadeIn}
-                  className={`hidden lg:block rounded-xl overflow-hidden border border-[#e2bebd]/30 shadow-xl shadow-[#1c1b1b]/[0.06] bg-white ${mod.flip ? "lg:order-1" : ""}`}
+                  className={`hidden lg:block ${mod.flip ? "lg:order-1" : ""}`}
                 >
-                  <img
-                    src={mod.img}
-                    alt={mod.imgAlt}
-                    className="w-full h-auto block"
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  <div className="rounded-xl overflow-hidden border border-[#e2bebd]/30 shadow-xl shadow-[#1c1b1b]/[0.06] bg-white">
+                    <img
+                      src={mod.img}
+                      alt={mod.imgAlt}
+                      className="w-full h-auto block"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  {mod.source && <SourceCaption>{mod.source}</SourceCaption>}
                 </motion.div>
               </motion.div>
             ))}
@@ -496,74 +521,6 @@ export default function OdooContent() {
                 <p className="font-body text-[13.5px] text-white/55 leading-[1.7]">{pt.text}</p>
               </motion.div>
             ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ━━━ ODOO OR ERPNEXT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <section className="bg-[#fcf9f8] py-20 md:py-28 px-6 md:px-10 xl:px-16">
-        <div className="max-w-[1400px] mx-auto">
-
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
-            <div>
-              <motion.span variants={fadeUp} className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-4">
-                Odoo or ERPNext?
-              </motion.span>
-              <motion.h2 variants={fadeUp} className="font-headline text-4xl md:text-[2.8rem] text-[#1c1b1b] leading-[1.05] tracking-tight max-w-2xl">
-                We implement both.<br />
-                <span className="italic font-normal text-[#b31c33]">So the answer is yours, not ours.</span>
-              </motion.h2>
-            </div>
-            <motion.p variants={fadeUp} className="font-body text-[13px] text-[#8e706f] leading-[1.8] max-w-xs lg:text-right lg:pb-1">
-              Both are open-source ERPs Illumia deploys in production. A 30-minute scoping call usually settles it.
-            </motion.p>
-          </motion.div>
-
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
-            className="grid lg:grid-cols-2 gap-px bg-[#e2bebd]/30 border border-[#e2bebd]/30 rounded-2xl overflow-hidden"
-          >
-            <motion.div variants={fadeUp} className="bg-white p-8 md:p-10 flex flex-col gap-6">
-              <div className="flex items-center gap-3">
-                <img src={IMG.logo} alt="Odoo" className="h-6 w-auto object-contain" loading="lazy" decoding="async" />
-                <span className="font-body text-[10px] tracking-[0.2em] uppercase text-[#8e706f] font-bold">This page</span>
-              </div>
-              <p className="font-headline text-[1.3rem] text-[#1c1b1b] leading-[1.2]">Choose Odoo when…</p>
-              <ul className="flex flex-col gap-3">
-                {DECIDER.odoo.map((pt) => (
-                  <li key={pt} className="flex gap-3 items-start">
-                    <span className="w-[5px] h-[5px] rounded-full bg-[#b31c33] shrink-0 mt-[8px]" />
-                    <span className="font-body text-[13.5px] text-[#5a4040] leading-[1.7]">{pt}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            <motion.div variants={fadeUp} className="bg-white p-8 md:p-10 flex flex-col gap-6">
-              <div className="flex items-center gap-3">
-                <Sparkles size={16} className="text-[#b31c33]" strokeWidth={1.5} />
-                <span className="font-body text-[10px] tracking-[0.2em] uppercase text-[#8e706f] font-bold">Sister platform</span>
-              </div>
-              <p className="font-headline text-[1.3rem] text-[#1c1b1b] leading-[1.2]">Choose ERPNext when…</p>
-              <ul className="flex flex-col gap-3">
-                {DECIDER.erpnext.map((pt) => (
-                  <li key={pt} className="flex gap-3 items-start">
-                    <span className="w-[5px] h-[5px] rounded-full bg-[#b31c33] shrink-0 mt-[8px]" />
-                    <span className="font-body text-[13.5px] text-[#5a4040] leading-[1.7]">{pt}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/erpnext"
-                className="group inline-flex items-center gap-2 font-body text-sm font-semibold text-[#b31c33] mt-auto self-start"
-              >
-                Explore ERPNext
-                <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform duration-200" />
-              </Link>
-            </motion.div>
           </motion.div>
         </div>
       </section>

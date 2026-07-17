@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowRight, ArrowUpRight, CheckCircle2, Network, MapPin, Cable, Tag, Code2, FileCheck, Server, Users, Puzzle, Shield, GitBranch, FileCode } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CheckCircle2, Network, MapPin, Cable, Tag, Code2, FileCheck, Server, Users, Puzzle, Shield, GitBranch, FileCode, LayoutGrid } from "lucide-react";
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
@@ -20,13 +20,26 @@ const slideLeft = {
 };
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } } };
 
-// Real visuals from NetBox Labs
+/* Plain figure-caption style attribution — no background, sits below the image.
+   `dark` = caption sits on a dark section bg, so use light text; otherwise dark text. */
+function SourceCaption({ children, dark = false }: { children: string; dark?: boolean }) {
+  return (
+    <p className={`mt-2 font-body text-[11px] italic ${dark ? "text-white/45" : "text-[#5a4040]"}`}>
+      Source: {children}
+    </p>
+  );
+}
+
+// Real visuals — official NetBox / NetBox Labs assets
 const IMG = {
-  hero: "https://nextcloud.illumiasolutions.com/public.php/dav/files/a9HE5y3yjycWq2Z",
-  dcim: "https://nextcloud.illumiasolutions.com/public.php/dav/files/Bemix6moQEgdtKH",
-  ipam: "https://nextcloud.illumiasolutions.com/public.php/dav/files/a9HE5y3yjycWq2Z",
-  automation: "https://nextcloud.illumiasolutions.com/public.php/dav/files/kCKRi35LeADJNtC",
-  infrastructure: "https://nextcloud.illumiasolutions.com/public.php/dav/files/sMAjE3ESZmCzDP3",
+  hero: "https://raw.githubusercontent.com/netbox-community/netbox/main/docs/media/screenshots/home-light.png",
+  dcim: "https://netboxlabscms.kinsta.cloud/wp-content/uploads/2025/04/DCIM-visual-2.png",
+  ipam: "https://netboxlabscms.kinsta.cloud/wp-content/uploads/2025/03/IPAM-visual.svg",
+  automation: "https://netboxlabscms.kinsta.cloud/wp-content/uploads/2025/04/network-automation-visual.png",
+  infrastructure: "https://raw.githubusercontent.com/netbox-community/netbox/main/docs/media/screenshots/rack.png",
+  logo: "https://nextcloud.illumiasolutions.com/public.php/dav/files/oDJeMiSmTjx4oso",
+  rackElevations: "/netbox-rack-elevations.png",
+  vlans: "/netbox-vlans.png",
 };
 
 const REPLACES = [
@@ -49,6 +62,7 @@ const SPOTLIGHT_MODULES = [
     points: ["Prefix allocation and utilisation tracking", "VRF and tenant isolation", "IPv4 and IPv6 dual-stack", "Import from Infoblox and SolarWinds"],
     img: IMG.ipam,
     imgAlt: "NetBox IPAM Visual",
+    source: "netboxlabs.com",
     flip: false,
   },
   {
@@ -59,6 +73,7 @@ const SPOTLIGHT_MODULES = [
     points: ["Rack front and rear elevation diagrams", "Device and component inventory", "Power draw and cooling tracking", "Site and location hierarchy"],
     img: IMG.dcim,
     imgAlt: "NetBox DCIM Visual",
+    source: "netboxlabs.com",
     flip: true,
   },
   {
@@ -69,7 +84,18 @@ const SPOTLIGHT_MODULES = [
     points: ["Native Ansible dynamic inventory plugin", "Official Terraform provider", "REST API and GraphQL endpoint", "Webhook triggers for CI/CD"],
     img: IMG.automation,
     imgAlt: "NetBox Network Automation Visual",
+    source: "netboxlabs.com",
     flip: false,
+  },
+  {
+    tag: "Visualization",
+    icon: LayoutGrid,
+    title: "See your infrastructure, not just query it.",
+    body: "Rack elevations render every device, patch panel, and PDU as a to-scale diagram — front and rear — generated live from inventory data. No Visio file to keep in sync; the picture is the database, so it's never out of date.",
+    points: ["Front and rear rack elevation diagrams", "Auto-generated from live device data", "SVG export for change requests and audits", "Device utilisation and space at a glance"],
+    img: IMG.rackElevations,
+    imgAlt: "NetBox rack elevation diagrams showing patch panels, switches, and PDUs across multiple racks",
+    flip: true,
   },
 ];
 
@@ -82,7 +108,8 @@ const ADDITIONAL_MODULES = [
     points: ["VM cluster management and host assignment", "VM-to-host mapping with resource utilisation", "Seamless physical and virtual inventory in one view"],
     img: "https://raw.githubusercontent.com/netbox-community/netbox/main/docs/media/screenshots/home-dark.png",
     imgAlt: "NetBox dashboard showing virtualization clusters and virtual machines",
-    flip: true,
+    source: "GitHub — netbox-community/netbox",
+    flip: false,
   },
   {
     tag: "Multi-Tenancy",
@@ -92,7 +119,8 @@ const ADDITIONAL_MODULES = [
     points: ["Tenant-scoped views and filtering", "Cross-tenant security boundaries", "Overlapping address spaces per tenant via VRF"],
     img: "https://raw.githubusercontent.com/netbox-community/netbox/main/docs/media/screenshots/prefixes-list.png",
     imgAlt: "NetBox prefixes list showing per-tenant IP address management",
-    flip: false,
+    source: "GitHub — netbox-community/netbox",
+    flip: true,
   },
   {
     tag: "Extensibility",
@@ -102,7 +130,8 @@ const ADDITIONAL_MODULES = [
     points: ["Custom fields on any object type", "No-code Custom Objects for new data models", "Plugin architecture for advanced extensions"],
     img: "https://raw.githubusercontent.com/netbox-community/netbox/main/docs/media/screenshots/cable-trace.png",
     imgAlt: "NetBox cable trace interface showing extensible device component model",
-    flip: true,
+    source: "GitHub — netbox-community/netbox",
+    flip: false,
   },
   {
     tag: "RBAC",
@@ -112,7 +141,8 @@ const ADDITIONAL_MODULES = [
     points: ["Object-level permissions with JSON constraints", "User and group role management", "SOC 2 and ISO 27001 compliant audit trail"],
     img: "https://storage.ghost.io/c/49/77/497795e8-85fb-4775-848e-ee5126597212/content/images/2023/10/image5-2.png",
     imgAlt: "NetBox permissions management interface showing object-level RBAC controls",
-    flip: false,
+    source: "NetBox Labs blog",
+    flip: true,
   },
   {
     tag: "Topology",
@@ -122,7 +152,8 @@ const ADDITIONAL_MODULES = [
     points: ["BGP communities, route targets, and AS routes", "Device type templates and role hierarchies", "Interactive Visual Explorer for topology and racks"],
     img: "https://netboxlabscms.kinsta.cloud/wp-content/uploads/2026/03/nve3.png",
     imgAlt: "NetBox Visual Explorer cable topology diagram showing interconnected network devices",
-    flip: true,
+    source: "netboxlabs.com",
+    flip: false,
   },
   {
     tag: "Config Templates",
@@ -132,13 +163,23 @@ const ADDITIONAL_MODULES = [
     points: ["Dynamic Jinja2 config generation per device", "Config contexts for site and role variants", "Direct export to Ansible inventory and Terraform"],
     img: "https://23319422.fs1.hubspotusercontent-na1.net/hubfs/23319422/Editing%20congif%20tempalte%20Jinja%202%20basic%20resized-1.png",
     imgAlt: "NetBox Jinja2 configuration template editing interface",
+    source: "netboxlabs.com",
+    flip: true,
+  },
+  {
+    tag: "VLAN & VRF",
+    icon: Tag,
+    title: "Every VLAN and VRF, queryable as data.",
+    body: "Catalogue every VLAN by site, group, and functional role, with ID-collision prevention built into the model. VRFs, route targets, and BGP communities exist as first-class objects your automation can query instead of reverse-engineering from device configs.",
+    points: ["VLANs scoped by site, group, and role", "Collision prevention across the numbering plan", "VRFs, route targets, and BGP communities as data", "Direct read access for Ansible and Terraform"],
+    img: IMG.vlans,
+    imgAlt: "NetBox VLAN list showing VID, site, prefixes, tenant, and status",
     flip: false,
   },
 ];
 
 const REMAINING_MODULES = [
   { icon: Cable, title: "Cable and Circuit Tracking", text: "End-to-end cable plant — type, length, colour, termination, and path tracing through patch panels. WAN circuits tied to interfaces and SLA tickets." },
-  { icon: Tag, title: "VLAN and VRF Management", text: "Catalogue every VLAN by site, group, and role. Prevent ID collisions. Track VRFs, route targets, BGP communities as queryable data." },
   { icon: FileCheck, title: "Audit and Change Management", text: "Every create, update, and delete is journaled with user, timestamp, and diff. SOC 2, ISO 27001, and PCI-DSS compliant audit trail." },
 ];
 
@@ -156,7 +197,7 @@ export default function NetBoxContent() {
             {/* NetBox Labs logo — big */}
             <motion.div variants={fadeUp} className="mb-5">
               <img
-                src="https://nextcloud.illumiasolutions.com/public.php/dav/files/oDJeMiSmTjx4oso"
+                src={IMG.logo}
                 alt="NetBox Labs"
                 className="h-8 md:h-10 w-auto object-contain"
                 loading="eager"
@@ -224,6 +265,7 @@ export default function NetBoxContent() {
             {/* Bottom gradient into dark section */}
             <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#1a1919] to-transparent pointer-events-none" />
           </motion.div>
+          <SourceCaption>GitHub — netbox-community/netbox</SourceCaption>
         </div>
       </section>
 
@@ -256,6 +298,7 @@ export default function NetBoxContent() {
                 style={{ maxHeight: "500px" }}
               />
             </motion.div>
+            <SourceCaption dark>GitHub — netbox-community/netbox</SourceCaption>
           </motion.div>
 
           {/* Strikethrough replacement list */}
@@ -322,15 +365,18 @@ export default function NetBoxContent() {
                 {/* Image */}
                 <motion.div
                   variants={fadeIn}
-                  className={`rounded-xl overflow-hidden border border-[#e2bebd]/30 shadow-xl shadow-[#1c1b1b]/[0.06] bg-white hidden lg:block ${mod.flip ? "lg:order-1" : ""}`}
+                  className={`hidden lg:block ${mod.flip ? "lg:order-1" : ""}`}
                 >
-                  <img
-                    src={mod.img}
-                    alt={mod.imgAlt}
-                    className="w-full h-auto block"
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  <div className="rounded-xl overflow-hidden border border-[#e2bebd]/30 shadow-xl shadow-[#1c1b1b]/[0.06] bg-white">
+                    <img
+                      src={mod.img}
+                      alt={mod.imgAlt}
+                      className="w-full h-auto block"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  {mod.source && <SourceCaption>{mod.source}</SourceCaption>}
                 </motion.div>
               </motion.div>
             ))}
@@ -370,15 +416,18 @@ export default function NetBoxContent() {
                 </motion.div>
                 <motion.div
                   variants={fadeIn}
-                  className={`rounded-xl overflow-hidden border border-[#e2bebd]/30 shadow-xl shadow-[#1c1b1b]/[0.06] bg-white hidden lg:block ${mod.flip ? "lg:order-1" : ""}`}
+                  className={`hidden lg:block ${mod.flip ? "lg:order-1" : ""}`}
                 >
-                  <img
-                    src={mod.img}
-                    alt={mod.imgAlt}
-                    className="w-full h-auto block"
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  <div className="rounded-xl overflow-hidden border border-[#e2bebd]/30 shadow-xl shadow-[#1c1b1b]/[0.06] bg-white">
+                    <img
+                      src={mod.img}
+                      alt={mod.imgAlt}
+                      className="w-full h-auto block"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  {mod.source && <SourceCaption>{mod.source}</SourceCaption>}
                 </motion.div>
               </motion.div>
             ))}
@@ -390,7 +439,7 @@ export default function NetBoxContent() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
-            className="mt-14 grid sm:grid-cols-3 gap-0 border-t border-[#e2bebd]/40"
+            className="mt-14 grid sm:grid-cols-2 gap-0 border-t border-[#e2bebd]/40"
           >
             {REMAINING_MODULES.map((mod, i) => (
               <motion.div

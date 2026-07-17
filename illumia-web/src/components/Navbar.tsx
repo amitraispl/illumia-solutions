@@ -411,7 +411,7 @@ function getCaseStudyFromPath(p: string): CaseStudyId | null {
   return null;
 }
 
-type ServiceCategory = "cloud" | "cyber" | "open";
+type ServiceCategory = "cloud" | "cyber" | "open" | "dev";
 
 interface ServiceItem {
   label: string;
@@ -494,6 +494,18 @@ const SERVICE_GROUPS: ServiceGroup[] = [
       { label: "NetBox Platform", href: "/netbox-platform" },
     ],
   },
+  {
+    id: "dev",
+    label: "Software Development",
+    href: "/software-development",
+    description: "Custom apps, web & integrations",
+    items: [
+      { label: "Design & Development", href: "/design-development" },
+      { label: "Custom Mobile Application", href: "/custom-mobile-application" },
+      { label: "Custom Web Application", href: "/custom-web-application" },
+      { label: "Third-Party Integrations", href: "/third-party-integrations" },
+    ],
+  },
 ];
 
 const ALL_SERVICE_HREFS = new Set(
@@ -531,10 +543,19 @@ const CodeIcon = () => (
   </svg>
 );
 
+const DevIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+    <rect x="3" y="4" width="18" height="13" rx="1.5" />
+    <line x1="8" y1="21" x2="16" y2="21" />
+    <line x1="12" y1="17" x2="12" y2="21" />
+  </svg>
+);
+
 const CATEGORY_ICONS: Record<ServiceCategory, React.ReactNode> = {
   cloud: <CloudIcon />,
   cyber: <ShieldIcon />,
   open: <CodeIcon />,
+  dev: <DevIcon />,
 };
 
 // ── Shared icons ────────────────────────────────────────────────────────────
@@ -672,7 +693,7 @@ function ServicesMegaMenu({ onClose, activeCategory, onCategoryChange, pageCateg
               >
                 <div className="shrink-0 w-7 h-7 rounded-md bg-stone-100 flex items-center justify-center overflow-hidden">
                   <img
-                    src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/proxmox.png"
+                    src="/proxmox-icon.png"
                     alt="Proxmox VE"
                     className="w-5 h-5 object-contain"
                   />
@@ -692,7 +713,7 @@ function ServicesMegaMenu({ onClose, activeCategory, onCategoryChange, pageCateg
               >
                 <div className="shrink-0 w-7 h-7 rounded-md bg-stone-100 flex items-center justify-center overflow-hidden">
                   <img
-                    src="https://github.com/netboxlabs.png"
+                    src="/netbox-icon.png"
                     alt="NetBox Labs"
                     className="w-7 h-7 object-cover"
                   />
@@ -712,7 +733,7 @@ function ServicesMegaMenu({ onClose, activeCategory, onCategoryChange, pageCateg
               >
                 <div className="shrink-0 w-7 h-7 rounded-md bg-stone-100 flex items-center justify-center overflow-hidden">
                   <img
-                    src="https://odoocdn.com/openerp_website/static/src/img/assets/png/odoo_logo.png"
+                    src="/odoo-logo.png"
                     alt="Odoo"
                     className="w-5 h-5 object-contain"
                   />

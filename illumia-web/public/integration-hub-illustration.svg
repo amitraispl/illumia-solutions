@@ -1,0 +1,77 @@
+<svg width="900" height="1100" viewBox="0 0 900 1100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="1100" fill="#f6f3f2" />
+
+  <!-- faint dot grid -->
+  <g fill="#e2bebd" opacity="0.35">
+    <circle cx="60" cy="60" r="2.5" /><circle cx="120" cy="60" r="2.5" /><circle cx="180" cy="60" r="2.5" />
+    <circle cx="60" cy="120" r="2.5" /><circle cx="780" cy="60" r="2.5" /><circle cx="840" cy="60" r="2.5" />
+    <circle cx="840" cy="120" r="2.5" /><circle cx="780" cy="120" r="2.5" />
+    <circle cx="60" cy="980" r="2.5" /><circle cx="60" cy="1040" r="2.5" /><circle cx="120" cy="1040" r="2.5" />
+    <circle cx="840" cy="980" r="2.5" /><circle cx="840" cy="1040" r="2.5" /><circle cx="780" cy="1040" r="2.5" />
+    <circle cx="450" cy="70" r="2.5" /><circle cx="450" cy="1030" r="2.5" />
+  </g>
+
+  <!-- connector lines: hub center (450,550) to each tile center -->
+  <g stroke="#b31c33" stroke-width="2.5" stroke-dasharray="2 10" stroke-linecap="round" opacity="0.55">
+    <line x1="450" y1="550" x2="160" y2="210" />
+    <line x1="450" y1="550" x2="740" y2="210" />
+    <line x1="450" y1="550" x2="160" y2="890" />
+    <line x1="450" y1="550" x2="740" y2="890" />
+  </g>
+
+  <!-- data-packet dots along the lines -->
+  <g fill="#b31c33">
+    <circle cx="305" cy="380" r="5" />
+    <circle cx="595" cy="380" r="5" />
+    <circle cx="305" cy="720" r="5" />
+    <circle cx="595" cy="720" r="5" />
+  </g>
+
+  <!-- ERPNext tile — top left -->
+  <g>
+    <rect x="90" y="140" width="140" height="140" rx="22" fill="#ffffff" stroke="#e2bebd" stroke-width="2" />
+    <g transform="translate(132,164) scale(2.33)">
+      <path fill="#0089FF" d="M2.88 0C1.29 0 0 1.29 0 2.88v18.24C0 22.71 1.29 24 2.88 24h18.24c1.59 0 2.88-1.29 2.88-2.88V2.88C24 1.29 22.71 0 21.12 0Zm5.04 5.76h8.254v2.146H7.92Zm0 5.033h7.85v2.146h-5.233v2.954h5.703v2.146H7.92Z"/>
+    </g>
+    <text x="160" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1" fill="#1c1b1b">ERPNEXT</text>
+  </g>
+
+  <!-- Stripe tile — top right -->
+  <g>
+    <rect x="670" y="140" width="140" height="140" rx="22" fill="#ffffff" stroke="#e2bebd" stroke-width="2" />
+    <g transform="translate(712,164) scale(2.33)">
+      <path fill="#635BFF" d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z"/>
+    </g>
+    <text x="740" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1" fill="#1c1b1b">STRIPE</text>
+  </g>
+
+  <!-- Odoo tile — bottom left -->
+  <g>
+    <rect x="90" y="760" width="140" height="140" rx="22" fill="#ffffff" stroke="#e2bebd" stroke-width="2" />
+    <g transform="translate(132,784) scale(2.33)">
+      <path fill="#714B67" d="M21.1002 15.7957c-1.6015 0-2.8997-1.2983-2.8997-2.8998s1.2983-2.8997 2.8997-2.8997c1.6015 0 2.8998 1.2982 2.8998 2.8997 0 1.5999-1.2979 2.8998-2.8998 2.8998zm0-1.2c.9388.0006 1.7003-.7601 1.7008-1.6989.0004-.9388-.7602-1.7003-1.699-1.7007h-.0018c-.9388.0004-1.6994.7619-1.699 1.7007.0005.9381.761 1.6985 1.699 1.699zm-6.0655 1.2c-1.6014 0-2.8997-1.2983-2.8997-2.8998s1.2983-2.8997 2.8997-2.8997c1.6015 0 2.8998 1.2982 2.8998 2.8997 0 1.5999-1.2999 2.8998-2.8998 2.8998zm0-1.2c.9389.0006 1.7003-.7601 1.7008-1.6989.0005-.9388-.7602-1.7003-1.699-1.7007h-.0018c-.9388.0004-1.6994.7619-1.699 1.7007.0005.9381.761 1.6985 1.699 1.699zM11.865 12.858c0 1.6199-1.2979 2.9378-2.8977 2.9378s-2.8998-1.314-2.8998-2.9358 1.1799-2.8597 2.8998-2.8597c.6359 0 1.2239.134 1.6998.484v-1.68a.6.6 0 0 1 1.2 0v4.0537h-.002zm-2.8977 1.7399c.9388.0005 1.7002-.7602 1.7007-1.699.0005-.9388-.7602-1.7003-1.699-1.7007h-.0017c-.9389.0004-1.6995.7619-1.699 1.7007.0004.9381.7608 1.6985 1.699 1.699zm-6.0675 1.1979C1.2983 15.7957 0 14.4974 0 12.8959s1.2983-2.8997 2.8998-2.8997 2.8997 1.2982 2.8997 2.8997c0 1.5999-1.2999 2.8998-2.8997 2.8998zm0-1.2c.9388.0006 1.7002-.7601 1.7007-1.699.0005-.9387-.7602-1.7002-1.699-1.7006h-.0017c-.9388.0004-1.6995.7619-1.699 1.7007.0004.9381.7608 1.6985 1.699 1.699z"/>
+    </g>
+    <text x="160" y="872" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1" fill="#1c1b1b">ODOO</text>
+  </g>
+
+  <!-- HubSpot tile — bottom right -->
+  <g>
+    <rect x="670" y="760" width="140" height="140" rx="22" fill="#ffffff" stroke="#e2bebd" stroke-width="2" />
+    <g transform="translate(712,784) scale(2.33)">
+      <path fill="#FF7A59" d="M18.164 7.93V5.084a2.198 2.198 0 001.267-1.978v-.067A2.2 2.2 0 0017.238.845h-.067a2.2 2.2 0 00-2.193 2.193v.067a2.196 2.196 0 001.252 1.973l.013.006v2.852a6.22 6.22 0 00-2.969 1.31l.012-.01-7.828-6.095A2.497 2.497 0 104.3 4.656l-.012.006 7.697 5.991a6.176 6.176 0 00-1.038 3.446c0 1.343.425 2.588 1.147 3.607l-.013-.02-2.342 2.343a1.968 1.968 0 00-.58-.095h-.002a2.033 2.033 0 102.033 2.033 1.978 1.978 0 00-.1-.595l.005.014 2.317-2.317a6.247 6.247 0 104.782-11.134l-.036-.005zm-.964 9.378a3.206 3.206 0 113.215-3.207v.002a3.206 3.206 0 01-3.207 3.207z"/>
+    </g>
+    <text x="740" y="872" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1" fill="#1c1b1b">HUBSPOT</text>
+  </g>
+
+  <!-- central hub -->
+  <g>
+    <rect x="340" y="465" width="220" height="170" rx="26" fill="#1c1b1b" />
+    <g transform="translate(410,505)" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+      <rect x="0" y="0" width="80" height="54" rx="8" />
+      <line x1="0" y1="16" x2="80" y2="16" />
+      <circle cx="12" cy="8" r="2.5" fill="#ffffff" stroke="none" />
+      <circle cx="22" cy="8" r="2.5" fill="#ffffff" stroke="none" />
+    </g>
+    <text x="450" y="608" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2" fill="#ffb3b3">YOUR PLATFORM</text>
+  </g>
+</svg>

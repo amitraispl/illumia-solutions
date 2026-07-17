@@ -17,44 +17,61 @@ const fadeIn = {
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } } };
 const staggerFast = { hidden: {}, visible: { transition: { staggerChildren: 0.05 } } };
 
-// Real images from proxmox.com
+// Real images — official proxmox.com screenshots
 const IMG = {
   logo: "https://nextcloud.illumiasolutions.com/public.php/dav/files/9m8WGwRQQkATm43",
-  dashboard: "https://nextcloud.illumiasolutions.com/public.php/dav/files/49ggNxRmSb95wGG",
-  ha: "https://nextcloud.illumiasolutions.com/public.php/dav/files/zJ6qfBsTkjnAYCe",
-  esxi: "https://nextcloud.illumiasolutions.com/public.php/dav/files/jDwXgZzBDXgfTYs",
-  cluster: "https://nextcloud.illumiasolutions.com/public.php/dav/files/jxF4a5KgwbqT36Z",
-  metrics: "https://nextcloud.illumiasolutions.com/public.php/dav/files/L8cgsmNk4ko2FL5",
-  sdn: "https://nextcloud.illumiasolutions.com/public.php/dav/files/8Z2JqnWyo6PHSge",
-  backup: "https://nextcloud.illumiasolutions.com/public.php/dav/files/X7QD5i5xdHp3BEf",
+  dashboard: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-9.2-Datacenter-Dashboard.png",
+  ha: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-9-2-HA-Balancing-Migration.png",
+  esxi: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-8-1-VMware-ESXi-Guestimport-general.png",
+  cluster: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-8-2-Cluster-Summary.png",
+  metrics: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-9-0-Metrics.png",
+  sdn: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-9-2-SDN-WireGuard-Fabrics.png",
+  backup: "https://www.proxmox.com/images/proxmox/screenshots/pbs/Proxmox-Backup-Server-4-2-Dashboard.png",
 };
+
+/* Plain figure-caption style attribution — no background, sits below the image.
+   `dark` = caption sits on a dark section bg, so use light text; otherwise dark text. */
+function SourceCaption({ children, dark = false }: { children: string; dark?: boolean }) {
+  return (
+    <p className={`mt-2 font-body text-[11px] italic ${dark ? "text-white/45" : "text-[#5a4040]"}`}>
+      Source: {children}
+    </p>
+  );
+}
 
 function BrowserFrame({
   src,
   alt,
+  source,
+  dark = false,
   className = "",
 }: {
   src: string;
   alt: string;
+  source?: string;
+  dark?: boolean;
   className?: string;
 }) {
   return (
-    <div className={`rounded-xl overflow-hidden border border-white/[0.09] shadow-2xl shadow-black/60 ${className}`}>
-      <div className="bg-[#1c1b1b] px-4 py-2.5 flex items-center gap-3 border-b border-white/[0.07]">
-        <div className="flex gap-1.5 shrink-0">
-          <span className="w-2.5 h-2.5 rounded-full bg-white/[0.12]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-white/[0.12]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-white/[0.12]" />
+    <div className={className}>
+      <div className="rounded-xl overflow-hidden border border-white/[0.09] shadow-2xl shadow-black/60">
+        <div className="bg-[#1c1b1b] px-4 py-2.5 flex items-center gap-3 border-b border-white/[0.07]">
+          <div className="flex gap-1.5 shrink-0">
+            <span className="w-2.5 h-2.5 rounded-full bg-white/[0.12]" />
+            <span className="w-2.5 h-2.5 rounded-full bg-white/[0.12]" />
+            <span className="w-2.5 h-2.5 rounded-full bg-white/[0.12]" />
+          </div>
+          <div className="flex-1 h-[18px] rounded bg-white/[0.06] max-w-[200px]" />
         </div>
-        <div className="flex-1 h-[18px] rounded bg-white/[0.06] max-w-[200px]" />
+        <img
+          src={src}
+          alt={alt}
+          className="w-full h-auto block"
+          loading="eager"
+          decoding="async"
+        />
       </div>
-      <img
-        src={src}
-        alt={alt}
-        className="w-full h-auto block"
-        loading="eager"
-        decoding="async"
-      />
+      {source && <SourceCaption dark={dark}>{source}</SourceCaption>}
     </div>
   );
 }
@@ -121,6 +138,7 @@ const PROXMOX_PRODUCTS = [
     ],
     img: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-9.2-Datacenter-Dashboard.png",
     imgAlt: "Proxmox VE Datacenter Dashboard",
+    source: "proxmox.com",
   },
   {
     n: "02",
@@ -136,6 +154,7 @@ const PROXMOX_PRODUCTS = [
     ],
     img: "https://www.proxmox.com/images/proxmox/images/monitor-with-proxmox-datacenter-manager-01.png",
     imgAlt: "Proxmox Datacenter Manager",
+    source: "proxmox.com",
   },
   {
     n: "03",
@@ -151,6 +170,7 @@ const PROXMOX_PRODUCTS = [
     ],
     img: "https://www.proxmox.com/images/proxmox/screenshots/pbs/Proxmox-Backup-Server-4-2-Dashboard.png",
     imgAlt: "Proxmox Backup Server Dashboard",
+    source: "proxmox.com",
   },
   {
     n: "04",
@@ -166,6 +186,7 @@ const PROXMOX_PRODUCTS = [
     ],
     img: "https://proxmox.com/images/proxmox/screenshots/pmg/Proxmox-Mail-Gateway-9.1-dashboard.png",
     imgAlt: "Proxmox Mail Gateway Dashboard",
+    source: "proxmox.com",
   },
 ];
 
@@ -215,7 +236,7 @@ export default function ProxmoxContent() {
               {/* Proxmox logo — big */}
               <motion.div variants={fadeUp} className="mb-5">
                 <img
-                  src="https://nextcloud.illumiasolutions.com/public.php/dav/files/9m8WGwRQQkATm43"
+                  src={IMG.logo}
                   alt="Proxmox"
                   className="h-8 md:h-10 w-auto object-contain"
                   loading="eager"
@@ -289,7 +310,7 @@ export default function ProxmoxContent() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, ease: EASE, delay: 0.15 }}
               >
-                <BrowserFrame src={IMG.dashboard} alt="Proxmox VE Datacenter Dashboard" />
+                <BrowserFrame src={IMG.dashboard} alt="Proxmox VE Datacenter Dashboard" source="proxmox.com" />
               </motion.div>
 
               {/* Floating secondary screenshot */}
@@ -616,7 +637,7 @@ export default function ProxmoxContent() {
                   </ul>
                 </motion.div>
                 <motion.div variants={fadeIn} className={`hidden lg:block ${i % 2 === 1 ? "lg:order-1" : ""}`}>
-                  <BrowserFrame src={p.img} alt={p.imgAlt} />
+                  <BrowserFrame src={p.img} alt={p.imgAlt} source={p.source} dark />
                 </motion.div>
               </motion.div>
             ))}
@@ -647,7 +668,7 @@ export default function ProxmoxContent() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-80px" }}
-              className="grid lg:grid-cols-[45%_55%] gap-10 xl:gap-16 items-center py-14 border-b border-[#e2bebd]/40"
+              className="grid lg:grid-cols-2 gap-10 xl:gap-16 items-center py-14 border-b border-[#e2bebd]/40"
             >
               <motion.div variants={fadeUp} className="flex flex-col gap-5">
                 <div className="inline-flex items-center gap-2.5 self-start">
@@ -670,7 +691,7 @@ export default function ProxmoxContent() {
                 </ul>
               </motion.div>
               <motion.div variants={fadeIn} className="hidden lg:block">
-                <BrowserFrame src={IMG.esxi} alt="Proxmox VMware ESXi Guest Import" />
+                <BrowserFrame src={IMG.esxi} alt="Proxmox VMware ESXi Guest Import" source="proxmox.com" />
               </motion.div>
             </motion.div>
 
@@ -680,10 +701,10 @@ export default function ProxmoxContent() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-80px" }}
-              className="grid lg:grid-cols-[55%_45%] gap-10 xl:gap-16 items-center py-14 border-b border-[#e2bebd]/40"
+              className="grid lg:grid-cols-2 gap-10 xl:gap-16 items-center py-14 border-b border-[#e2bebd]/40"
             >
               <motion.div variants={fadeIn} className="hidden lg:block">
-                <BrowserFrame src={IMG.ha} alt="Proxmox HA Balancing and Migration" />
+                <BrowserFrame src={IMG.ha} alt="Proxmox HA Balancing and Migration" source="proxmox.com" />
               </motion.div>
               <motion.div variants={fadeUp} className="flex flex-col gap-5">
                 <div className="inline-flex items-center gap-2.5 self-start">
@@ -713,7 +734,7 @@ export default function ProxmoxContent() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-80px" }}
-              className="grid lg:grid-cols-[45%_55%] gap-10 xl:gap-16 items-center py-14"
+              className="grid lg:grid-cols-2 gap-10 xl:gap-16 items-center py-14"
             >
               <motion.div variants={fadeUp} className="flex flex-col gap-5">
                 <div className="inline-flex items-center gap-2.5 self-start">
@@ -736,7 +757,7 @@ export default function ProxmoxContent() {
                 </ul>
               </motion.div>
               <motion.div variants={fadeIn} className="hidden lg:block">
-                <BrowserFrame src={IMG.metrics} alt="Proxmox VE Metrics Dashboard" />
+                <BrowserFrame src={IMG.metrics} alt="Proxmox VE Metrics Dashboard" source="proxmox.com" />
               </motion.div>
             </motion.div>
           </div>

@@ -8,6 +8,7 @@ import {
   Calculator, Package, Factory, Users, ClipboardList, Store, BadgeCheck, LifeBuoy, ShoppingCart, Wrench,
   Code2, Database, Workflow, Globe2,
   UserPlus, FileText, ClipboardCheck, Truck, Receipt, CreditCard,
+  HeartHandshake, GraduationCap,
 } from "lucide-react";
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
@@ -33,30 +34,47 @@ const IMG = {
   procurement: "https://frappe.io/files/imagefbc116.png",
   projects: "https://erpnext.com/files/v16_tasks.png",
   pos: "https://frappe.io/files/image3f4af0.png",
+  healthcare: "https://frappe.io/files/Screenshot%202024-12-26%20142555%20(2)%201.png",
+  education: "https://frappe.io/files/e1%20(2).png",
 };
 
-/* Framed screenshot for images without their own window chrome */
-function BrowserFrame({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
+/* Plain figure-caption style attribution — no background, sits below the image */
+function SourceCaption({ children }: { children: string }) {
   return (
-    <div className={`rounded-xl overflow-hidden border border-[#e2bebd]/40 shadow-2xl shadow-[#1c1b1b]/[0.12] bg-white ${className}`}>
-      <div className="bg-[#f4ecea] px-4 py-2.5 flex items-center gap-3 border-b border-[#e2bebd]/40">
-        <div className="flex gap-1.5 shrink-0">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#1c1b1b]/[0.1]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#1c1b1b]/[0.1]" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#1c1b1b]/[0.1]" />
+    <p className="mt-2 font-body text-[11px] text-[#5a4040] italic">
+      Source: {children}
+    </p>
+  );
+}
+
+/* Framed screenshot for images without their own window chrome */
+function BrowserFrame({ src, alt, source, className = "" }: { src: string; alt: string; source?: string; className?: string }) {
+  return (
+    <div className={className}>
+      <div className="rounded-xl overflow-hidden border border-[#e2bebd]/40 shadow-2xl shadow-[#1c1b1b]/[0.12] bg-white">
+        <div className="bg-[#f4ecea] px-4 py-2.5 flex items-center gap-3 border-b border-[#e2bebd]/40">
+          <div className="flex gap-1.5 shrink-0">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#1c1b1b]/[0.1]" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#1c1b1b]/[0.1]" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#1c1b1b]/[0.1]" />
+          </div>
+          <div className="flex-1 h-[18px] rounded bg-[#1c1b1b]/[0.05] max-w-[200px]" />
         </div>
-        <div className="flex-1 h-[18px] rounded bg-[#1c1b1b]/[0.05] max-w-[200px]" />
+        <img src={src} alt={alt} className="w-full h-auto block" loading="lazy" decoding="async" />
       </div>
-      <img src={src} alt={alt} className="w-full h-auto block" loading="lazy" decoding="async" />
+      {source && <SourceCaption>{source}</SourceCaption>}
     </div>
   );
 }
 
 /* v16 screenshots ship their own dark window bezel — render raw */
-function RawShot({ src, alt, className = "", eager = false }: { src: string; alt: string; className?: string; eager?: boolean }) {
+function RawShot({ src, alt, source, className = "", eager = false }: { src: string; alt: string; source?: string; className?: string; eager?: boolean }) {
   return (
-    <div className={`rounded-2xl overflow-hidden shadow-2xl shadow-[#1c1b1b]/[0.18] ${className}`}>
-      <img src={src} alt={alt} className="w-full h-auto block" loading={eager ? "eager" : "lazy"} decoding="async" />
+    <div className={className}>
+      <div className="rounded-2xl overflow-hidden shadow-2xl shadow-[#1c1b1b]/[0.18]">
+        <img src={src} alt={alt} className="w-full h-auto block" loading={eager ? "eager" : "lazy"} decoding="async" />
+      </div>
+      {source && <SourceCaption>{source}</SourceCaption>}
     </div>
   );
 }
@@ -119,6 +137,7 @@ const MODULE_SPOTLIGHTS = [
     points: ["Multi-company and multi-currency consolidation", "Real-time P&L, balance sheet, and cash flow", "GST, TDS, and e-invoicing preconfigured", "Bank reconciliation and payment entries"],
     img: IMG.accounting,
     imgAlt: "ERPNext accounting dashboard with financial statements",
+    source: "frappe.io",
     framed: true,
     flip: false,
   },
@@ -130,6 +149,7 @@ const MODULE_SPOTLIGHTS = [
     points: ["Multi-warehouse with bin-level tracking", "Serial, batch, and expiry management", "Automated reorder levels and material requests", "Perpetual valuation synced to accounts"],
     img: IMG.inventory,
     imgAlt: "ERPNext stock summary with projected quantities per warehouse",
+    source: "erpnext.com",
     framed: false,
     flip: true,
   },
@@ -141,6 +161,7 @@ const MODULE_SPOTLIGHTS = [
     points: ["Multi-level BOMs with operation costing", "Work orders and shop-floor job cards", "Capacity planning per workstation", "Subcontracting with material tracking"],
     img: IMG.manufacturing,
     imgAlt: "ERPNext job card calendar scheduling work orders",
+    source: "erpnext.com",
     framed: false,
     flip: false,
   },
@@ -152,7 +173,32 @@ const MODULE_SPOTLIGHTS = [
     points: ["Lead and opportunity pipeline", "Quotations with pricing rules and margins", "Sales orders linked to stock and delivery", "Customer portal for orders and invoices"],
     img: IMG.crm,
     imgAlt: "ERPNext CRM lead and opportunity view",
+    source: "frappe.io",
     framed: true,
+    flip: true,
+  },
+  {
+    tag: "Healthcare",
+    icon: HeartHandshake,
+    title: "Patient records and billing, without a separate hospital system.",
+    body: "Frappe Health extends the same ERPNext core into outpatient and inpatient care — appointment scheduling, patient records under HL7 FHIR, admission and bed management, and pharmacy stock — with every bill posting straight to the same ledger as the rest of the business.",
+    points: ["Patient records and medical history (HL7 FHIR)", "OPD/IPD admission and bed management", "Pharmacy stock synced to inventory", "Billing posts directly to the ledger"],
+    img: IMG.healthcare,
+    imgAlt: "ERPNext Healthcare patient appointment list by clinic department and status",
+    source: "frappe.io",
+    framed: false,
+    flip: false,
+  },
+  {
+    tag: "Education",
+    icon: GraduationCap,
+    title: "Admissions, fees, and attendance on the same framework.",
+    body: "Frappe Education runs admissions and program enrollment, fee schedules with online payment, course and class scheduling, and attendance — with a student portal reading live from the same DocTypes as accounts and HR.",
+    points: ["Admissions and program enrollment", "Fee schedules with online payment", "Course, class, and attendance scheduling", "Student portal for grades and fees"],
+    img: IMG.education,
+    imgAlt: "ERPNext Education program enrollment and student record",
+    source: "frappe.io",
+    framed: false,
     flip: true,
   },
   {
@@ -163,6 +209,7 @@ const MODULE_SPOTLIGHTS = [
     points: ["Material requests and multi-level approvals", "RFQs and supplier quotation comparison", "Three-way match on order, receipt, invoice", "Supplier scorecards and portals"],
     img: IMG.procurement,
     imgAlt: "ERPNext procurement purchase order workflow",
+    source: "frappe.io",
     framed: true,
     flip: false,
   },
@@ -174,6 +221,7 @@ const MODULE_SPOTLIGHTS = [
     points: ["Gantt, Kanban, and task dependencies", "Timesheets linked to billing and payroll", "Planned vs actual cost per project", "Milestone and retention billing"],
     img: IMG.projects,
     imgAlt: "ERPNext task Gantt chart with dependencies",
+    source: "erpnext.com",
     framed: false,
     flip: true,
   },
@@ -413,6 +461,7 @@ export default function ERPNextContent() {
             {/* Gradient bleed into dark section */}
             <div className="absolute inset-x-0 -bottom-1 h-28 bg-gradient-to-t from-[#0d0c0c] to-transparent pointer-events-none" />
           </motion.div>
+          <SourceCaption>GitHub — frappe/erpnext</SourceCaption>
         </div>
       </section>
 
@@ -548,8 +597,8 @@ export default function ERPNextContent() {
 
                 <motion.div variants={fadeIn} className={`hidden lg:block ${mod.flip ? "lg:order-1" : ""}`}>
                   {mod.framed
-                    ? <BrowserFrame src={mod.img} alt={mod.imgAlt} />
-                    : <RawShot src={mod.img} alt={mod.imgAlt} />}
+                    ? <BrowserFrame src={mod.img} alt={mod.imgAlt} source={mod.source} />
+                    : <RawShot src={mod.img} alt={mod.imgAlt} source={mod.source} />}
                 </motion.div>
               </motion.div>
             ))}

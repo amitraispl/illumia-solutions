@@ -1,0 +1,62 @@
+<svg width="900" height="700" viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="700" fill="#1c1b1b" />
+
+  <!-- faint dot grid -->
+  <g fill="#ffffff" opacity="0.06">
+    <circle cx="50" cy="50" r="2.5" /><circle cx="50" cy="650" r="2.5" />
+    <circle cx="850" cy="50" r="2.5" /><circle cx="850" cy="650" r="2.5" />
+    <circle cx="450" cy="40" r="2.5" /><circle cx="450" cy="660" r="2.5" />
+  </g>
+
+  <!-- connector lines: hub center (170,350) to each tile center -->
+  <g stroke="#b31c33" stroke-width="2.5" stroke-dasharray="2 10" stroke-linecap="round" opacity="0.6">
+    <line x1="170" y1="350" x2="700" y2="130" />
+    <line x1="170" y1="350" x2="700" y2="350" />
+    <line x1="170" y1="350" x2="700" y2="570" />
+  </g>
+
+  <g fill="#b31c33">
+    <circle cx="430" cy="245" r="5" />
+    <circle cx="430" cy="350" r="5" />
+    <circle cx="430" cy="455" r="5" />
+  </g>
+
+  <!-- Stripe tile — top -->
+  <g>
+    <rect x="620" y="60" width="160" height="140" rx="22" fill="#ffffff" />
+    <g transform="translate(672,90) scale(2.33)">
+      <path fill="#635BFF" d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z"/>
+    </g>
+    <text x="700" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1" fill="#1c1b1b">STRIPE</text>
+  </g>
+
+  <!-- HubSpot tile — middle -->
+  <g>
+    <rect x="620" y="280" width="160" height="140" rx="22" fill="#ffffff" />
+    <g transform="translate(672,310) scale(2.33)">
+      <path fill="#FF7A59" d="M18.164 7.93V5.084a2.198 2.198 0 001.267-1.978v-.067A2.2 2.2 0 0017.238.845h-.067a2.2 2.2 0 00-2.193 2.193v.067a2.196 2.196 0 001.252 1.973l.013.006v2.852a6.22 6.22 0 00-2.969 1.31l.012-.01-7.828-6.095A2.497 2.497 0 104.3 4.656l-.012.006 7.697 5.991a6.176 6.176 0 00-1.038 3.446c0 1.343.425 2.588 1.147 3.607l-.013-.02-2.342 2.343a1.968 1.968 0 00-.58-.095h-.002a2.033 2.033 0 102.033 2.033 1.978 1.978 0 00-.1-.595l.005.014 2.317-2.317a6.247 6.247 0 104.782-11.134l-.036-.005zm-.964 9.378a3.206 3.206 0 113.215-3.207v.002a3.206 3.206 0 01-3.207 3.207z"/>
+    </g>
+    <text x="700" y="402" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1" fill="#1c1b1b">HUBSPOT</text>
+  </g>
+
+  <!-- ERPNext tile — bottom -->
+  <g>
+    <rect x="620" y="500" width="160" height="140" rx="22" fill="#ffffff" />
+    <g transform="translate(672,530) scale(2.33)">
+      <path fill="#0089FF" d="M2.88 0C1.29 0 0 1.29 0 2.88v18.24C0 22.71 1.29 24 2.88 24h18.24c1.59 0 2.88-1.29 2.88-2.88V2.88C24 1.29 22.71 0 21.12 0Zm5.04 5.76h8.254v2.146H7.92Zm0 5.033h7.85v2.146h-5.233v2.954h5.703v2.146H7.92Z"/>
+    </g>
+    <text x="700" y="622" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1" fill="#1c1b1b">ERPNEXT</text>
+  </g>
+
+  <!-- central hub -->
+  <g>
+    <rect x="60" y="260" width="220" height="180" rx="26" fill="#b31c33" />
+    <g transform="translate(140,300)" stroke="#ffffff" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.95">
+      <rect x="0" y="0" width="60" height="42" rx="7" />
+      <line x1="0" y1="13" x2="60" y2="13" />
+      <circle cx="9" cy="6.5" r="2.2" fill="#ffffff" stroke="none" />
+      <circle cx="17" cy="6.5" r="2.2" fill="#ffffff" stroke="none" />
+    </g>
+    <text x="170" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2" fill="#ffdad9">YOUR PLATFORM</text>
+  </g>
+</svg>
