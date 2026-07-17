@@ -88,8 +88,8 @@ const modules = [
     ),
     title: "Third-Party Integrations",
     desc: "Seamless API integrations connecting your software to CRMs, payment gateways, ERPs, and the wider tools your business depends on.",
-    image: "/integration-network-card.svg",
-    imageAlt: "Illustration of a central platform connected to payments, CRM, and ERP systems",
+    image: "/integration-network-card.png",
+    imageAlt: "Illustration of a central platform connected to Razorpay, Zapier, and Bunny.net",
     items: [
       "CRM, ERP & Payment Gateway Sync",
       "Custom API Design & Management",
@@ -111,7 +111,7 @@ const deliverables = [
     title: "Full Source Code Ownership",
     desc: "Every repository transferred to your GitHub org on delivery. No proprietary lock-in, ever.",
     icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
       </svg>
     ),
@@ -120,26 +120,8 @@ const deliverables = [
     title: "Technical Documentation",
     desc: "Architecture diagrams, API references, and setup guides — written for the team that inherits the code.",
     icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m6 9.75h-6m6 3H8.25m9-13.5H6.75a2.25 2.25 0 00-2.25 2.25v15a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V11.25a9 9 0 00-9-9z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Staging & Production Environments",
-    desc: "Fully configured environments you control, not a black box we manage from behind the scenes.",
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 17.25v.75a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25v-.75m0-4.5v-9A2.25 2.25 0 014.5 3h15a2.25 2.25 0 012.25 2.25v9m-19.5 0h19.5" />
-      </svg>
-    ),
-  },
-  {
-    title: "QA & Cross-Device Testing",
-    desc: "Every release verified across browsers, devices, and edge cases before it reaches your users.",
-    icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
       </svg>
     ),
   },
@@ -147,7 +129,7 @@ const deliverables = [
     title: "Design Files & Assets",
     desc: "Figma files, component libraries, and brand assets — yours to reuse and extend.",
     icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
       </svg>
     ),
@@ -156,7 +138,7 @@ const deliverables = [
     title: "Post-Launch Support Window",
     desc: "A defined support period after go-live to catch what only real usage surfaces.",
     icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
       </svg>
     ),
@@ -342,8 +324,14 @@ export default function SoftwareDevelopmentContent() {
             </motion.div>
 
             {/* 04 / Integrations illustration */}
-            <motion.div variants={fadeUp} className="relative rounded-2xl overflow-hidden min-h-[280px] bg-[#1c1b1b]">
-              <Image src={modules[3].image} alt={modules[3].imageAlt} fill className="object-cover" />
+            <motion.div variants={fadeUp} className="relative rounded-2xl overflow-hidden min-h-[280px] bg-[#1c1b1b] p-3">
+              <div className="relative w-full h-full rounded-xl overflow-hidden">
+                <Image src={modules[3].image} alt={modules[3].imageAlt} fill className="object-cover" />
+                <div className="absolute inset-0 bg-[#1c1b1b]/55" />
+                <div className="absolute inset-0 p-8 flex items-end">
+                  <span className="font-headline text-4xl font-bold text-white/20 uppercase select-none">Third Party</span>
+                </div>
+              </div>
             </motion.div>
 
             {/* 04 / Third-Party Integrations — RED accent, wide */}
@@ -436,19 +424,19 @@ export default function SoftwareDevelopmentContent() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4"
           >
             {deliverables.map((item) => (
               <motion.div
                 key={item.title}
                 variants={fadeUp}
-                className="bg-[#f6f3f2] rounded-2xl p-6 lg:p-8 border border-[#e2bebd]/20 hover:bg-white hover:shadow-lg transition-all duration-300"
+                className="group relative overflow-hidden bg-[#f6f3f2] rounded-2xl p-8 lg:p-10 border border-[#e2bebd]/20 hover:bg-white hover:border-[#b31c33]/20 hover:shadow-xl hover:shadow-stone-200/60 hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#b31c33]/8 flex items-center justify-center text-[#b31c33] mb-5">
+                <div className="w-12 h-12 rounded-xl bg-[#b31c33]/8 group-hover:bg-[#b31c33] flex items-center justify-center text-[#b31c33] group-hover:text-white shrink-0 transition-colors duration-300 mb-6">
                   {item.icon}
                 </div>
-                <h3 className="font-headline text-lg text-stone-900 mb-2">{item.title}</h3>
-                <p className="text-[#5a4040] text-sm font-body leading-relaxed">{item.desc}</p>
+                <h3 className="font-headline text-xl text-stone-900 mb-2.5">{item.title}</h3>
+                <p className="text-[#5a4040] text-sm font-body leading-relaxed max-w-sm">{item.desc}</p>
               </motion.div>
             ))}
           </motion.div>

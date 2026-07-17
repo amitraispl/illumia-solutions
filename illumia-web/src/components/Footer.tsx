@@ -11,7 +11,7 @@ import Image from "next/image";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const LOGO_URL =
-  "https://nextcloud.illumiasolutions.com/s/BoJ6wwwsN5ja8aR/download/Slide4_transparent-removebg-preview.png";
+  "/images/logos/illumia-logo.png";
 
 const solutions = [
   { label: "Cloud Services", href: "/cloud-services" },

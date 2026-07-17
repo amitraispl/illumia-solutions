@@ -170,7 +170,7 @@ function EnquiryDetail() {
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3 shrink-0">
             <Image
-              src="https://nextcloud.illumiasolutions.com/s/BoJ6wwwsN5ja8aR/download/Slide4_transparent-removebg-preview.png"
+              src="/images/logos/illumia-logo.png"
               alt="Illumia Solutions"
               width={120}
               height={36}

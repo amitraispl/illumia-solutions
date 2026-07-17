@@ -55,6 +55,8 @@ export default function ITRiskSecurityStrategyPage() {
       closingText="Staying ahead of evolving threats requires more than reactive tools — it demands a continuously refined strategy. Illumia partners with your team to build, assess, and evolve a security programme that grows with your organisation."
       ctaText="Request a Risk Assessment"
       heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/sRyZwMMPJnpiDoJ"
+      secondaryImage="/it-risk.png"
+      secondaryImageAlt="IT risk and security strategy — Illumia Solutions"
     />
   );
 }

@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "motion/react";
 import PageHero from "@/components/PageHero";
 // import ServicesEcosystem from "@/components/ServicesEcosystem";
@@ -38,6 +39,8 @@ export interface RichServicePageTemplateProps {
   ctaText?: string;
   darkHero?: boolean;
   heroImage?: string;
+  secondaryImage?: string;
+  secondaryImageAlt?: string;
 }
 
 export default function RichServicePageTemplate({
@@ -51,6 +54,8 @@ export default function RichServicePageTemplate({
   ctaText = "Get Started",
   darkHero,
   heroImage = "https://nextcloud.illumiasolutions.com/public.php/dav/files/yPMfpZFbJ9BX6Qo",
+  secondaryImage,
+  secondaryImageAlt,
 }: RichServicePageTemplateProps) {
   return (
     <>
@@ -147,6 +152,28 @@ export default function RichServicePageTemplate({
           </motion.div>
         </div>
       </section>
+
+      {/* ─── Secondary image ──────────────────────────────────────────────── */}
+      {secondaryImage ? (
+        <section className="bg-white px-6 md:px-12 pb-14 md:pb-24">
+          <div className="max-w-screen-2xl mx-auto">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-60px" }}
+              className="relative rounded-2xl overflow-hidden min-h-[280px] md:min-h-[420px] shadow-xl shadow-stone-200/60"
+            >
+              <Image
+                src={secondaryImage}
+                alt={secondaryImageAlt || `${title} — Illumia Solutions`}
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+          </div>
+        </section>
+      ) : null}
 
       {/* ─── Closing + CTA ────────────────────────────────────────────────── */}
      

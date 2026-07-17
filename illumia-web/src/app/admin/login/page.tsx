@@ -66,7 +66,7 @@ export default function AdminLoginPage() {
           {/* Brand */}
           <div className="mb-8">
             <Image
-              src="https://nextcloud.illumiasolutions.com/s/BoJ6wwwsN5ja8aR/download/Slide4_transparent-removebg-preview.png"
+              src="/images/logos/illumia-logo.png"
               alt="Illumia Solutions"
               width={160}
               height={48}

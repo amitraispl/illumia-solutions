@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 
 const LOGO_URL =
-  "https://nextcloud.illumiasolutions.com/s/BoJ6wwwsN5ja8aR/download/Slide4_transparent-removebg-preview.png";
+  "/images/logos/illumia-logo.png";
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 

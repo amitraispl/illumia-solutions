@@ -17,7 +17,7 @@ export default function ThirdPartyIntegrationsPage() {
       description="Your software doesn't operate in isolation. We build reliable, secure integrations connecting your applications to the CRMs, payment gateways, ERPs, and platforms your business already depends on."
       sectionTitle="Our Integration Capabilities"
       ctaText="Discuss Your Integration"
-      heroImage="/integration-hub-illustration.svg"
+      heroImage="/integration-hub-illustration.png"
       closingText="Good integrations are invisible — data flows where it needs to, on time, without anyone thinking about it. That's the standard we build to."
       features={[
         {
