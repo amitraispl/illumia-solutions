@@ -53,7 +53,7 @@ export default function RichServicePageTemplate({
   closingText,
   ctaText = "Get Started",
   darkHero,
-  heroImage = "https://nextcloud.illumiasolutions.com/public.php/dav/files/yPMfpZFbJ9BX6Qo",
+  heroImage = "/images/heroes/cloud-migration_hero.jpg",
   secondaryImage,
   secondaryImageAlt,
 }: RichServicePageTemplateProps) {

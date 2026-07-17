@@ -146,7 +146,7 @@ export default function OnPremiseCloudPage() {
       ]}
       closingText="A highly available, Proxmox-based virtualisation infrastructure spanning two data centres with full DR capability — designed for fault tolerance, scalability, and seamless failover, supporting multiple mission-critical VMs powered by Ceph-backed storage and automated disaster recovery."
       ctaText="Design Your Private Cloud"
-      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/2gt9Zi8BWnjAziq"
+      heroImage="/images/heroes/on-premise-private-cloud_hero.jpg"
     />
   );
 }

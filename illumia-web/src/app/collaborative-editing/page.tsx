@@ -17,7 +17,7 @@ export default function CollaborativeEditingPage() {
       description="In today's fast-paced business environment, efficient document collaboration is essential for productivity and success. Illumia Solutions provides collaborative editing solutions using OnlyOffice, delivering document editing, real-time collaboration, and security."
       sectionTitle="Benefits of Our Collaborative Editing Solutions"
       ctaText="Deploy Collaborative Editing"
-      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/go4pZCxPEdoHXCf"
+      heroImage="/images/heroes/homepage-about_team-at-work.jpg"
       closingText="Illumia Solutions' collaborative editing solutions with OnlyOffice provide a comprehensive, secure, and cost-effective way to enhance your organization's document management and collaboration capabilities."
       features={[
         {

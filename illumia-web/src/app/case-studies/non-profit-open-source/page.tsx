@@ -11,9 +11,9 @@ if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
 const EXPO: any = [0.16, 1, 0.3, 1];
 
 const HERO_IMG =
-  "https://nextcloud.illumiasolutions.com/public.php/dav/files/7meetxSGsFNNkYa";
+  "/images/case-studies/case-study-nonprofit_hero.jpg";
 const SIDEBAR_IMG =
-  "https://nextcloud.illumiasolutions.com/public.php/dav/files/sBqb6TjTGsnYTyZ";
+  "/images/case-studies/case-study-nonprofit_sidebar-section.jpg";
 
 const navSections = [
   { id: "glance", label: "At A Glance" },

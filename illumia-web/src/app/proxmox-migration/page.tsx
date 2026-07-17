@@ -17,7 +17,7 @@ export default function ProxmoxMigrationPage() {
       description="Broadcom's VMware acquisition pushed enterprise hypervisor licensing through the roof — many organisations have seen 10× cost increases overnight. Proxmox Virtual Environment delivers the same enterprise virtualisation capabilities — KVM-based VMs, LXC containers, HA clusters, Ceph storage, live migration — under an open-source AGPL licence with zero seat fees. Illumia is a Proxmox Silver Partner and handles the entire migration with zero data loss."
       sectionTitle="Why Migrate to Proxmox VE"
       ctaText="Plan Your Proxmox Migration"
-      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/XXnL4NQSdo4WmmR"
+      heroImage="/images/heroes/proxmox-migration_hero.jpg"
       darkHero={true}
       closingText="As a certified Proxmox Silver Partner, Illumia Solutions delivers production-grade migrations that retire VMware licensing without compromising on enterprise capability. From workload assessment and design to cutover, hardening, and post-migration support, our engineers cover every stage — so you eliminate the Broadcom tax, not your uptime SLAs."
       features={[

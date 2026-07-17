@@ -11,9 +11,9 @@ if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
 const EXPO: any = [0.16, 1, 0.3, 1];
 
 const HERO_IMG =
-  "https://nextcloud.illumiasolutions.com/public.php/dav/files/FJHofMbWQQKjGW8";
+  "/images/case-studies/case-study-cybersecurity_hero.jpg";
 const SIDEBAR_IMG =
-  "https://nextcloud.illumiasolutions.com/public.php/dav/files/jXwrQtSc38rXyMb";
+  "/images/case-studies/case-study-cybersecurity_lifecycle-section.jpg";
 
 const navSections = [
   { id: "overview", label: "Client Overview" },

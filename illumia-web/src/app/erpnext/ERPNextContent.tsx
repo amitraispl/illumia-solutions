@@ -25,17 +25,17 @@ const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } }
 
 // Real visuals — official ERPNext v16 screenshots (erpnext.com / frappe GitHub) + frappe.io
 const IMG = {
-  logo: "https://nextcloud.illumiasolutions.com/public.php/dav/files/sJgp3azLEFFKZdC",
-  hero: "https://raw.githubusercontent.com/frappe/erpnext/develop/erpnext/public/images/v16/hero_image.png",
-  accounting: "https://frappe.io/files/image1f5eff.png",
-  inventory: "https://erpnext.com/files/v16_stock_summary.png",
-  manufacturing: "https://erpnext.com/files/v16_job_card.png",
-  crm: "https://frappe.io/files/image1ade62.png",
-  procurement: "https://frappe.io/files/imagefbc116.png",
-  projects: "https://erpnext.com/files/v16_tasks.png",
-  pos: "https://frappe.io/files/image3f4af0.png",
-  healthcare: "https://frappe.io/files/Screenshot%202024-12-26%20142555%20(2)%201.png",
-  education: "https://frappe.io/files/e1%20(2).png",
+  logo: "/images/logos/erpnext-logo.jpg",
+  hero: "/images/erpnext/hero.png",
+  accounting: "/images/erpnext/accounting.png",
+  inventory: "/images/erpnext/inventory.png",
+  manufacturing: "/images/erpnext/manufacturing.png",
+  crm: "/images/erpnext/crm.png",
+  procurement: "/images/erpnext/procurement.png",
+  projects: "/images/erpnext/projects.png",
+  pos: "/images/erpnext/pos.png",
+  healthcare: "/images/erpnext/healthcare.png",
+  education: "/images/erpnext/education.png",
 };
 
 /* Plain figure-caption style attribution — no background, sits below the image */

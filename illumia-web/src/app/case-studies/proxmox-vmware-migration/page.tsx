@@ -11,9 +11,9 @@ if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
 const EXPO: any = [0.16, 1, 0.3, 1];
 
 const HERO_IMG =
-  "https://nextcloud.illumiasolutions.com/public.php/dav/files/w7MtAYxqXsfHgS5";
+  "/images/case-studies/1-vmware-migration-hero.jpg";
 const SIDEBAR_IMG =
-  "https://nextcloud.illumiasolutions.com/public.php/dav/files/xTTzy6yNkad86Wp";
+  "/images/case-studies/2-vmware-migration-sidebar.jpg";
 
 const navSections = [
   { id: "glance", label: "At A Glance" },

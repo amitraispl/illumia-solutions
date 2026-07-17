@@ -43,16 +43,16 @@ const values = [
 ];
 
 const whyUs = [
-  { number: "01", title: "Expertise Across Domains", desc: "Illumia Solutions brings together a wealth of experience and expertise in cybersecurity, cloud solutions, and open-source technologies. Our team of certified professionals, including CISA, CISSP, CEH, and CCIE, boasts over 20 years of industry-relevant experience, ensuring that your business receives top-tier protection and service tailored to your unique needs.", bg: "https://nextcloud.illumiasolutions.com/public.php/dav/files/7CtcpxZJFnQbEZi" },
-  { number: "02", title: "Comprehensive Cybersecurity Services", desc: "In the face of increasing cyber threats, Illumia Solutions offers robust cybersecurity services that cover everything from IT risk management and application security to mobile and cloud security. We help you navigate complex regulatory landscapes, ensure data privacy, and protect your digital assets with cutting-edge security strategies and technologies.", bg: "https://nextcloud.illumiasolutions.com/public.php/dav/files/24pgQ3pHZkCZmE9" },
-  { number: "03", title: "Advanced Cloud Solutions", desc: "Harness the power of cloud technology with Illumia Solutions. Our cloud services are designed to optimise your operations, enhance security, and ensure seamless scalability. Whether you need hosting, application services, migration, or maintenance, we provide comprehensive solutions that meet today's needs and scale for tomorrow's challenges.", bg: "https://nextcloud.illumiasolutions.com/public.php/dav/files/xj5MzKJMG87Ebg8" },
-  { number: "04", title: "Innovative Open-Source Solutions", desc: "We leverage the flexibility and cost-effectiveness of open-source technologies to deliver tailored infrastructure, application, and cybersecurity solutions. Our services include hyperconverged infrastructure, high-performance block storage, and private cloud solutions that ensure your IT environment is robust, scalable, and future-proof.", bg: "https://nextcloud.illumiasolutions.com/public.php/dav/files/c5XdbEk78Jpnqm8" },
-  { number: "05", title: "Customer-Centric Approach", desc: "Illumia Solutions places a strong emphasis on understanding and meeting the specific needs of our clients. Our customer-centric approach ensures that solutions are not only effective but also seamlessly integrated into your existing operations. We offer ongoing support and maintenance to ensure your systems remain secure and efficient.", bg: "https://nextcloud.illumiasolutions.com/public.php/dav/files/qLr6HTtbGgGetqr" },
-  { number: "06", title: "Global Reach, Local Touch", desc: "With a global presence, Illumia Solutions is well-equipped to meet your cybersecurity and IT needs regardless of location. Our team operates across multiple time zones, ensuring prompt and effective service whenever you need it.", bg: "https://nextcloud.illumiasolutions.com/public.php/dav/files/SoSt49noKW8Kdem" },
-  { number: "07", title: "Partnerships and Collaboration", desc: "Our strong partnerships with leading global auditor companies and certified professionals allow us to deliver high-quality services and achieve compliance swiftly. These collaborations enhance our ability to provide comprehensive and efficient solutions to our clients.", bg: "https://nextcloud.illumiasolutions.com/public.php/dav/files/fS75eb873FCE3cy" },
-  { number: "08", title: "Innovative and Cost-Effective Solutions", desc: "By leveraging the latest technologies and open-source solutions, we provide innovative services that keep your business ahead of emerging threats while ensuring cost efficiency. Our transparent billing practices and no hidden charges policy ensure that you get the best value for your investment.", bg: "https://nextcloud.illumiasolutions.com/public.php/dav/files/MGEq9LWor5NwxBx" },
-  { number: "09", title: "Continuous Support and Maintenance", desc: "Our dedicated support team provides continuous monitoring, management, and maintenance services to ensure your IT infrastructure operates smoothly and securely. We offer 24/7 support to address any issues promptly and minimise disruption to your operations.", bg: "https://nextcloud.illumiasolutions.com/public.php/dav/files/XjwZDns785tiNiG" },
-  { number: "10", title: "Tailored Solutions for Diverse Needs", desc: "From high-security measures and regulatory compliance to scalable cloud solutions and efficient open-source technologies, Illumia Solutions provides a full stack of services designed to address the diverse needs of modern businesses. We customise our solutions to fit your specific requirements, ensuring maximum protection and operational efficiency.", bg: "https://nextcloud.illumiasolutions.com/public.php/dav/files/yPMfpZFbJ9BX6Qo" },
+  { number: "01", title: "Expertise Across Domains", desc: "Illumia Solutions brings together a wealth of experience and expertise in cybersecurity, cloud solutions, and open-source technologies. Our team of certified professionals, including CISA, CISSP, CEH, and CCIE, boasts over 20 years of industry-relevant experience, ensuring that your business receives top-tier protection and service tailored to your unique needs.", bg: "/images/content/maintenance-services_hero.jpg" },
+  { number: "02", title: "Comprehensive Cybersecurity Services", desc: "In the face of increasing cyber threats, Illumia Solutions offers robust cybersecurity services that cover everything from IT risk management and application security to mobile and cloud security. We help you navigate complex regulatory landscapes, ensure data privacy, and protect your digital assets with cutting-edge security strategies and technologies.", bg: "/images/content/cyber-security_hero.jpg" },
+  { number: "03", title: "Advanced Cloud Solutions", desc: "Harness the power of cloud technology with Illumia Solutions. Our cloud services are designed to optimise your operations, enhance security, and ensure seamless scalability. Whether you need hosting, application services, migration, or maintenance, we provide comprehensive solutions that meet today's needs and scale for tomorrow's challenges.", bg: "/images/content/drive-as-a-service_hero.jpg" },
+  { number: "04", title: "Innovative Open-Source Solutions", desc: "We leverage the flexibility and cost-effectiveness of open-source technologies to deliver tailored infrastructure, application, and cybersecurity solutions. Our services include hyperconverged infrastructure, high-performance block storage, and private cloud solutions that ensure your IT environment is robust, scalable, and future-proof.", bg: "/images/content/homepage-opensource_open-source-integration.jpg" },
+  { number: "05", title: "Customer-Centric Approach", desc: "Illumia Solutions places a strong emphasis on understanding and meeting the specific needs of our clients. Our customer-centric approach ensures that solutions are not only effective but also seamlessly integrated into your existing operations. We offer ongoing support and maintenance to ensure your systems remain secure and efficient.", bg: "/images/content/about_testimonial-section.jpg" },
+  { number: "06", title: "Global Reach, Local Touch", desc: "With a global presence, Illumia Solutions is well-equipped to meet your cybersecurity and IT needs regardless of location. Our team operates across multiple time zones, ensuring prompt and effective service whenever you need it.", bg: "/images/content/homepage-faqs_decorative-background.jpg" },
+  { number: "07", title: "Partnerships and Collaboration", desc: "Our strong partnerships with leading global auditor companies and certified professionals allow us to deliver high-quality services and achieve compliance swiftly. These collaborations enhance our ability to provide comprehensive and efficient solutions to our clients.", bg: "/images/content/about-partnerships.jpg" },
+  { number: "08", title: "Innovative and Cost-Effective Solutions", desc: "By leveraging the latest technologies and open-source solutions, we provide innovative services that keep your business ahead of emerging threats while ensuring cost efficiency. Our transparent billing practices and no hidden charges policy ensure that you get the best value for your investment.", bg: "/images/content/backup-as-a-service_hero.jpg" },
+  { number: "09", title: "Continuous Support and Maintenance", desc: "Our dedicated support team provides continuous monitoring, management, and maintenance services to ensure your IT infrastructure operates smoothly and securely. We offer 24/7 support to address any issues promptly and minimise disruption to your operations.", bg: "/images/content/about-continuous-support.jpg" },
+  { number: "10", title: "Tailored Solutions for Diverse Needs", desc: "From high-security measures and regulatory compliance to scalable cloud solutions and efficient open-source technologies, Illumia Solutions provides a full stack of services designed to address the diverse needs of modern businesses. We customise our solutions to fit your specific requirements, ensuring maximum protection and operational efficiency.", bg: "/images/heroes/cloud-migration_hero.jpg" },
 ];
 
 export default function AboutPage() {
@@ -70,7 +70,7 @@ export default function AboutPage() {
         description="Illumia Solutions is built on the philosophy of precision applied to technical infrastructure. We don't just solve problems; we engineer narratives of success through technological excellence and meticulous strategic planning."
         primaryCta={{ label: "Explore Expertise", href: "/contact#contact-form" }}
         secondaryCta={{ label: "View Our Work", href: "/cloud-services" }}
-        imageSrc="https://nextcloud.illumiasolutions.com/public.php/dav/files/wRryHQaGd8Gt6YX"
+        imageSrc="/images/content/hero-about.avif"
         imageAlt="Illumia Solutions team collaboration"
         imagePosition="object-top"
       />
@@ -109,7 +109,7 @@ export default function AboutPage() {
               </h2>
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
                 <Image
-                  src="https://nextcloud.illumiasolutions.com/public.php/dav/files/ztC5aTNoffMeHJx"
+                  src="/images/content/about-digital-volatility.avif"
                   alt="Illumia Solutions team meeting"
                   fill
                   className="object-cover"
@@ -171,7 +171,7 @@ export default function AboutPage() {
             </div>
             <div className="relative lg:w-[44%] min-h-[300px] shrink-0">
               <Image
-                src="https://nextcloud.illumiasolutions.com/public.php/dav/files/xigf3B6X5kZmQYR"
+                src="/images/content/about-our-approach.avif"
                 alt="Illumia Solutions team collaborating"
                 fill
                 className="object-cover"
@@ -212,7 +212,7 @@ export default function AboutPage() {
       {/* Pull Quote */}
       <section className="py-16 lg:py-32 bg-[#1c1b1b] text-white relative overflow-hidden">
         <Image
-          src="https://nextcloud.illumiasolutions.com/public.php/dav/files/qLr6HTtbGgGetqr"
+          src="/images/content/about_testimonial-section.jpg"
           alt=""
           fill
           className="object-cover opacity-[0.08]"

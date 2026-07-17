@@ -183,7 +183,7 @@ export default function ContactPage() {
         description="Share your challenge and we'll map a path forward. Our team spans time zones and disciplines — someone is always ready to help."
         primaryCta={{ label: "Jump to the Form", href: "#contact-form" }}
         secondaryCta={{ label: "Our Story", href: "/about" }}
-        imageSrc="https://nextcloud.illumiasolutions.com/public.php/dav/files/tQBd3DwYsarGcS6"
+        imageSrc="/images/content/specialized-services_hero.jpg"
         imageAlt="Modern collaborative office workspace"
       />
 
@@ -566,7 +566,7 @@ export default function ContactPage() {
               {/* Office image */}
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://nextcloud.illumiasolutions.com/public.php/dav/files/6Rf9QKa4JbqEoPG"
+                  src="/images/content/contact-kolkata.jpg"
                   alt="Howrah Bridge at dusk, Kolkata — our home base"
                   fill
                   className="object-cover"

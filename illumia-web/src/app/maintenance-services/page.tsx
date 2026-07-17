@@ -115,7 +115,7 @@ export default function MaintenanceServicesPage() {
         description="Proactive infrastructure management and expert engineering support — remote and on-site — to keep your IT systems running at peak efficiency, security, and reliability."
         primaryCta={{ label: "Get a Maintenance Plan", href: "/contact#contact-form" }}
         secondaryCta={{ label: "Cloud Services", href: "/cloud-services#maintenance" }}
-        imageSrc="https://nextcloud.illumiasolutions.com/public.php/dav/files/7CtcpxZJFnQbEZi"
+        imageSrc="/images/content/maintenance-services_hero.jpg"
         imageAlt="Infrastructure monitoring dashboard"
       />
 
@@ -192,7 +192,7 @@ export default function MaintenanceServicesPage() {
               </motion.p>
               <motion.div variants={fadeUp} className="relative h-72 rounded-2xl overflow-hidden">
                 <Image
-                  src="https://nextcloud.illumiasolutions.com/public.php/dav/files/aNxHyHwJoLJ4G9e"
+                  src="/images/heroes/monitoring-analytics_hero.jpg"
                   alt="Remote monitoring operations"
                   fill
                   className="object-cover"
@@ -270,7 +270,7 @@ export default function MaintenanceServicesPage() {
               </motion.p>
               <motion.div variants={fadeUp} className="relative h-64 rounded-2xl overflow-hidden">
                 <Image
-                  src="https://nextcloud.illumiasolutions.com/public.php/dav/files/3y5Xx2yCXRnm9SW"
+                  src="/images/content/mobile-security_hero.jpg"
                   alt="On-site engineer support"
                   fill
                   className="object-cover"

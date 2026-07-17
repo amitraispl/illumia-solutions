@@ -17,7 +17,7 @@ export default function EmailAsAServicePage() {
       description="Email as a Service (EaaS) provides businesses with a reliable and efficient email solution without the need to manage servers, updates, and security protocols. Our EaaS leverages open-source mail solutions — Zimbra and Carbonio — to deliver unique advantages including customization, transparency, and zero licensing fees."
       sectionTitle="Email as a Service Features"
       ctaText="Migrate Your Email"
-      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/3xAZAT6ML56Yqka"
+      heroImage="/images/heroes/email-as-a-service_hero.jpg"
       closingText="Experience the benefits of a reliable, secure, and cost-effective email service with our Email as a Service offering. Contact us today to learn more and get started."
       features={[
         {

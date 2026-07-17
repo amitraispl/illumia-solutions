@@ -25,7 +25,7 @@ export default function ServicePageTemplate({
   description,
   features,
   ctaText = "Get Started",
-  heroImage = "https://nextcloud.illumiasolutions.com/public.php/dav/files/yPMfpZFbJ9BX6Qo",
+  heroImage = "/images/heroes/cloud-migration_hero.jpg",
 }: ServicePageTemplateProps) {
   return (
     <>

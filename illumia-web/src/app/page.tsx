@@ -8,14 +8,14 @@ import { Marquee } from "@/components/ui/marquee";
 import SlideTextButton from "@/components/kokonutui/slide-text-button";
 import WhyChooseFlipCard from "@/components/WhyChooseFlipCard";
 import MagneticCta from "@/components/MagneticCta";
-const seqriteLogo = "https://nextcloud.illumiasolutions.com/public.php/dav/files/5iDigXG3KGz6dgx";
-const forceLogo = "https://nextcloud.illumiasolutions.com/public.php/dav/files/RwEzoaf9WNzXjoa";
-const zextrasLogo = "https://nextcloud.illumiasolutions.com/public.php/dav/files/JPiamiSL5pyaPeT";
-const proxmoxLogo = "https://nextcloud.illumiasolutions.com/public.php/dav/files/9m8WGwRQQkATm43";
-const lifebankLogo = "https://nextcloud.illumiasolutions.com/public.php/dav/files/w45mR8Eedwskiyc";
-const guacamoleLogo = "https://nextcloud.illumiasolutions.com/public.php/dav/files/zJNjTXjcRJCkPjb";
+const seqriteLogo = "/images/logos/seqrite-logo-partner.png";
+const forceLogo = "/images/logos/force-logo.png";
+const zextrasLogo = "/images/logos/zextras-partner-logo.png";
+const proxmoxLogo = "/images/logos/proxmox-silver-partner.png";
+const lifebankLogo = "/images/logos/lifebank-foundation.png";
+const guacamoleLogo = "/images/logos/apache-guacamole-partner.png";
 
-const netboxLabsLogo = "https://nextcloud.illumiasolutions.com/public.php/dav/files/oDJeMiSmTjx4oso";
+const netboxLabsLogo = "/images/logos/netbox-labs.png";
 
 
 export const metadata: Metadata = {
@@ -193,7 +193,7 @@ export default function HomePage() {
               </div>
               <div className="relative h-72 rounded-2xl overflow-hidden">
                 <Image
-                  src="https://nextcloud.illumiasolutions.com/public.php/dav/files/go4pZCxPEdoHXCf"
+                  src="/images/heroes/homepage-about_team-at-work.jpg"
                   alt="Illumia Solutions collaborative team at work"
                   fill
                   className="object-cover"
@@ -347,7 +347,7 @@ export default function HomePage() {
               className="group relative rounded-2xl overflow-hidden min-h-[280px]"
             >
               <Image
-                src="https://nextcloud.illumiasolutions.com/public.php/dav/files/c5XdbEk78Jpnqm8"
+                src="/images/content/homepage-opensource_open-source-integration.jpg"
                 alt="Open Source Integration"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -406,7 +406,7 @@ export default function HomePage() {
       {/* ─── Global Reach ─────────────────────────────────────────────────── */}
       <section className="py-12 md:py-20 bg-on-surface text-white relative overflow-hidden">
         <Image
-          src="https://nextcloud.illumiasolutions.com/public.php/dav/files/SoSt49noKW8Kdem"
+          src="/images/content/homepage-faqs_decorative-background.jpg"
           alt=""
           fill
           className="object-cover opacity-[0.08]"

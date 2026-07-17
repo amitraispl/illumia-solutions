@@ -17,7 +17,7 @@ export default function PhysicalServerPage() {
       description="We recognize that every business has unique hosting needs, which is why our Physical Server Hosting services are designed to offer unparalleled customization, robust security, and dedicated support. Whether you need brand-new servers, refurbished units, or specialized hosting for network appliances, we tailor every solution to your requirements."
       sectionTitle="Our Physical Server Features"
       ctaText="Configure Your Server"
-      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/yPMfpZFbJ9BX6Qo"
+      heroImage="/images/heroes/cloud-migration_hero.jpg"
       closingText="At Illumia Solutions, our commitment to excellence is reflected in every aspect of our Physical Server Hosting services. Partner with us to experience dedicated infrastructure built to your exact specifications."
       features={[
         {

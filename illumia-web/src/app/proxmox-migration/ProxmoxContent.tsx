@@ -19,14 +19,14 @@ const staggerFast = { hidden: {}, visible: { transition: { staggerChildren: 0.05
 
 // Real images — official proxmox.com screenshots
 const IMG = {
-  logo: "https://nextcloud.illumiasolutions.com/public.php/dav/files/9m8WGwRQQkATm43",
-  dashboard: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-9.2-Datacenter-Dashboard.png",
-  ha: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-9-2-HA-Balancing-Migration.png",
-  esxi: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-8-1-VMware-ESXi-Guestimport-general.png",
-  cluster: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-8-2-Cluster-Summary.png",
-  metrics: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-9-0-Metrics.png",
-  sdn: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-9-2-SDN-WireGuard-Fabrics.png",
-  backup: "https://www.proxmox.com/images/proxmox/screenshots/pbs/Proxmox-Backup-Server-4-2-Dashboard.png",
+  logo: "/images/logos/proxmox-silver-partner.png",
+  dashboard: "/images/proxmox/dashboard.png",
+  ha: "/images/proxmox/ha.png",
+  esxi: "/images/proxmox/esxi.png",
+  cluster: "/images/proxmox/cluster.png",
+  metrics: "/images/proxmox/metrics.png",
+  sdn: "/images/proxmox/sdn.png",
+  backup: "/images/proxmox/backup.png",
 };
 
 /* Plain figure-caption style attribution — no background, sits below the image.
@@ -136,7 +136,7 @@ const PROXMOX_PRODUCTS = [
       "Ceph block/object + ZFS local storage",
       "Full REST API — Terraform and Ansible ready",
     ],
-    img: "https://www.proxmox.com/images/proxmox/screenshots/Proxmox-VE-9.2-Datacenter-Dashboard.png",
+    img: "/images/proxmox/dashboard.png",
     imgAlt: "Proxmox VE Datacenter Dashboard",
     source: "proxmox.com",
   },
@@ -152,7 +152,7 @@ const PROXMOX_PRODUCTS = [
       "Centralised upgrade coordination",
       "RBAC scoped to cluster or node level",
     ],
-    img: "https://www.proxmox.com/images/proxmox/images/monitor-with-proxmox-datacenter-manager-01.png",
+    img: "/images/proxmox/pdm.png",
     imgAlt: "Proxmox Datacenter Manager",
     source: "proxmox.com",
   },
@@ -168,7 +168,7 @@ const PROXMOX_PRODUCTS = [
       "Chunk deduplication — 60–80% storage savings",
       "Restore integrity verification before you need it",
     ],
-    img: "https://www.proxmox.com/images/proxmox/screenshots/pbs/Proxmox-Backup-Server-4-2-Dashboard.png",
+    img: "/images/proxmox/backup.png",
     imgAlt: "Proxmox Backup Server Dashboard",
     source: "proxmox.com",
   },
@@ -184,7 +184,7 @@ const PROXMOX_PRODUCTS = [
       "DMARC / SPF / DKIM enforcement",
       "Per-user quarantine and detailed reporting",
     ],
-    img: "https://proxmox.com/images/proxmox/screenshots/pmg/Proxmox-Mail-Gateway-9.1-dashboard.png",
+    img: "/images/proxmox/pmg.png",
     imgAlt: "Proxmox Mail Gateway Dashboard",
     source: "proxmox.com",
   },

@@ -30,7 +30,7 @@ const collaborationCards = [
     title: "Mail Services",
     desc: "Reliable and secure email solutions that facilitate seamless communication within your organization. Our mail services include a mobile application for on-the-go access and multi-factor authentication (MFA) to enhance security.",
     href: "/email-as-a-service",
-    image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/jmQZAiwKdoDxDdt",
+    image: "/images/content/application-solutions-mail.jpg",
     imageAlt: "Secure enterprise mail services",
   },
   {
@@ -38,7 +38,7 @@ const collaborationCards = [
     title: "Cloud Storage",
     desc: "Scalable cloud storage solutions that provide secure and easy access to your data from anywhere, anytime.",
     href: "/drive-as-a-service",
-    image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/yT6oorESzr75wQn",
+    image: "/images/content/cloud.jpg",
     imageAlt: "Cloud storage infrastructure",
   },
   {
@@ -46,7 +46,7 @@ const collaborationCards = [
     title: "Web-Meeting Solutions",
     desc: "High-quality video conferencing tools that enable effective remote communication and collaboration.",
     href: "/web-meeting-solution",
-    image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/sBqb6TjTGsnYTyZ",
+    image: "/images/case-studies/case-study-nonprofit_sidebar-section.jpg",
     imageAlt: "Video meeting collaboration",
   },
   {
@@ -54,7 +54,7 @@ const collaborationCards = [
     title: "Collaborative Editing",
     desc: "Real-time collaborative editing tools that enhance teamwork and productivity by allowing multiple users to work on documents simultaneously.",
     href: "/collaborative-editing",
-    image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/go4pZCxPEdoHXCf",
+    image: "/images/heroes/homepage-about_team-at-work.jpg",
     imageAlt: "Team collaborative editing",
   },
 ];
@@ -167,7 +167,7 @@ export default function ApplicationSolutionsPage() {
             <motion.div variants={fadeUp} className="lg:col-span-8 h-full">
               <div className="relative rounded-2xl overflow-hidden min-h-[360px] h-full">
                 <Image
-                  src="https://nextcloud.illumiasolutions.com/public.php/dav/files/bn4533sctMcXbae"
+                  src="/images/content/application-solutions-project-mgmt.jpg"
                   alt="Project management board"
                   fill
                   className="object-cover"

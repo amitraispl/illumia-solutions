@@ -39,14 +39,14 @@ function SourceCaption({ children }: { children: string }) {
 // Real visuals — official Odoo assets (odoocdn.com)
 const IMG = {
   logo: "/odoo-logo.png",
-  crm: "https://odoocdn.com/openerp_website/static/src/img/apps/crm/hero_image.webp",
-  accounting: "https://odoocdn.com/openerp_website/static/src/img/apps/accounting/accounting-hero-image.webp",
-  inventory: "https://odoocdn.com/openerp_website/static/src/img/apps/inventory/hero_image.webp",
-  manufacturing: "https://odoocdn.com/openerp_website/static/src/img/apps/manufacturing/hero_image.webp",
-  pos: "https://odoocdn.com/openerp_website/static/src/img/apps/pos/interface.webp",
-  reporting: "https://odoocdn.com/openerp_website/static/src/img/apps/crm/reporting.webp",
-  hospitalDashboard: "https://apps.odoocdn.com/apps/assets/16.0/base_hospital_management/assets/screenshots/add_medicine.png",
-  educationDashboard: "https://apps.odoocdn.com/apps/assets/15.0/education_erp_dashboard/assets/screenshots/dashboard.png",
+  crm: "/images/odoo/crm.webp",
+  accounting: "/images/odoo/accounting.webp",
+  inventory: "/images/odoo/inventory.webp",
+  manufacturing: "/images/odoo/manufacturing.webp",
+  pos: "/images/odoo/pos.webp",
+  reporting: "/images/odoo/reporting.webp",
+  hospitalDashboard: "/images/odoo/hospital-dashboard.png",
+  educationDashboard: "/images/odoo/education-dashboard.png",
 };
 
 // Official Odoo app icons

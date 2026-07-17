@@ -20,7 +20,7 @@ const caseStudies = [
     body:
       "The organisation was locked into a sprawl of proprietary licences across collaboration, ERP, virtualisation and storage. Annual renewals alone were eating into mission-critical programme budgets. Illumia delivered an end-to-end migration — Nextcloud for collaboration, ERPNext for financial operations, Proxmox for virtualisation, and Ceph for distributed storage — orchestrated across 1,000+ branch sites with zero data loss and no service interruption.",
     image:
-      "https://nextcloud.illumiasolutions.com/public.php/dav/files/7meetxSGsFNNkYa",
+      "/images/case-studies/case-study-nonprofit_hero.jpg",
     metrics: [
       { value: "50–65%", label: "IT Cost Reduction" },
       { value: "~1,000", label: "Branches Migrated" },
@@ -42,7 +42,7 @@ const caseStudies = [
     body:
       "Regulatory scrutiny and growing threat exposure demanded a defensible security posture without commercial-tool licensing inflation. Illumia engineered a layered defence: Wazuh for SIEM and XDR, Suricata for network IDS, OpenVAS for vulnerability scanning, and an internal SOC playbook for incident response. The result — full audit trails, 24/7 monitoring, and data sovereignty on the customer's own infrastructure.",
     image:
-      "https://nextcloud.illumiasolutions.com/public.php/dav/files/FJHofMbWQQKjGW8",
+      "/images/case-studies/case-study-cybersecurity_hero.jpg",
     metrics: [
       { value: "24/7", label: "Monitoring" },
       { value: "Audit", label: "Ready" },
@@ -64,7 +64,7 @@ const caseStudies = [
     body:
       "A regional grocery chain processing rising card volumes faced a hard deadline to achieve PCI DSS SAQ D Level 2 attestation. Illumia owned the entire programme: scoping the cardholder data environment, segmenting payment networks, hardening point-of-sale endpoints, implementing logging and quarterly ASV scans, and authoring the evidence package for the QSA assessment. Compliance achieved on the first attempt.",
     image:
-      "https://nextcloud.illumiasolutions.com/public.php/dav/files/p7oPQLdGntqDDza",
+      "/images/case-studies/case-study-pci-dss_hero.jpg",
     metrics: [
       { value: "Level 2", label: "PCI DSS SAQ D" },
       { value: "17", label: "Locations" },
@@ -86,7 +86,7 @@ const caseStudies = [
     body:
       "With no new hardware permitted and production workloads classified across three downtime tiers, ISPL executed a node-by-node rolling migration: decommissioning each VMware host, commissioning it as a Proxmox VE node, migrating workloads offline, and validating with application owners before moving to the next. Veeam servers were repurposed as Proxmox Backup Server nodes with encryption at rest on all backup data — on-site and off-site.",
     image:
-      "https://nextcloud.illumiasolutions.com/public.php/dav/files/w7MtAYxqXsfHgS5",
+      "/images/case-studies/1-vmware-migration-hero.jpg",
     metrics: [
       { value: "80%", label: "Licensing Cost Reduction" },
       { value: "Zero", label: "VMs Lost" },
@@ -108,7 +108,7 @@ const caseStudies = [
     body:
       "The client's original Proxmox HCI cluster — hosting mail, collaboration, cloud storage, and business apps — was hitting performance limits as VM workloads grew. Rather than a disruptive rip-and-replace, ISPL commissioned a three-node NVMe/SSD cluster at the central office, migrated high-IOPS VMs over a ~14-day on-site engagement, and integrated both clusters under unified backup, logging, and monitoring. A comprehensive AMC and managed services contract now covers the full two-cluster estate.",
     image:
-      "https://nextcloud.illumiasolutions.com/public.php/dav/files/zxZN9QmzGDYq8dB",
+      "/images/case-studies/3-hci-expansion-hero.jpg",
     metrics: [
       { value: "2", label: "Production Clusters" },
       { value: "NVMe", label: "High-IOPS Tier" },
@@ -130,7 +130,7 @@ const caseStudies = [
     body:
       "With no new hardware permitted and workloads classified across three downtime tiers, ISPL executed a node-by-node rolling migration: decommissioning each VMware host, commissioning it as a Proxmox VE node, migrating workloads offline via Proxmox's built-in tooling, and validating with application owners. Existing dual SAN headroom carved the new LUNs, and both Veeam servers were repurposed as Proxmox Backup Server nodes with encryption at rest.",
     image:
-      "https://nextcloud.illumiasolutions.com/public.php/dav/files/wLxcmBwerzBERD3",
+      "/images/case-studies/forceten-hero.jpg",
     metrics: [
       { value: "80%", label: "Licensing Cost Reduction" },
       { value: "Zero", label: "VMs Lost" },
@@ -152,7 +152,7 @@ const caseStudies = [
     body:
       "With no spare hardware, ISPL bootstrapped a Proxmox VE cluster from nodes still active in the vSAN cluster: spare drives became temporary local datastores, VMs were shifted off the vSAN pool, and nodes were evacuated one set at a time and re-provisioned as Proxmox VE with Ceph. SSDs became Ceph OSDs and NVMe drives the DB/WAL tier. A migrate → evacuate → expand cycle ran until VMware was fully decommissioned, with PBS replacing Veeam.",
     image:
-      "https://nextcloud.illumiasolutions.com/public.php/dav/files/SWNMwRaw5WCRoxQ",
+      "/images/case-studies/dcc-hero.jpg",
     metrics: [
       { value: "vSAN→Ceph", label: "Storage Re-Platformed" },
       { value: "< 24 hrs", label: "Downtime Ceiling" },
@@ -174,7 +174,7 @@ const caseStudies = [
     body:
       "A two-stage, open-source evolution: first migrating core services off siloed bare-metal servers onto a Proxmox VE + Ceph HCI cluster with on-site/off-site PBS backup; then, as workloads turned increasingly I/O-intensive over four years, commissioning a dedicated NVMe/SSD cluster and selectively migrating high-IOPS workloads via weekend cutovers. Both clusters run as one estate under full AMC and managed services.",
     image:
-      "https://nextcloud.illumiasolutions.com/public.php/dav/files/DMG5xaPGnZLat4x",
+      "/images/case-studies/lbf-hero.jpg",
     metrics: [
       { value: "50+", label: "VMs Across Two Clusters" },
       { value: "Zero", label: "IOPS Interruptions" },
@@ -236,7 +236,7 @@ export default function CaseStudiesPage() {
         description="From cost transformation to compliance — see how Illumia Solutions has delivered measurable, durable impact for organisations across industries and geographies."
         primaryCta={{ label: "Explore Case Studies", href: "#case-studies" }}
         secondaryCta={{ label: "Start Your Story", href: "/contact#contact-form" }}
-        imageSrc="https://nextcloud.illumiasolutions.com/public.php/dav/files/eF248ToaJKbaTZN"
+        imageSrc="/images/case-studies/faqs-casestudies_guidance.jpg"
         imageAlt="Illumia Solutions client success — team collaboration"
       >
         <div className="grid grid-cols-3 gap-4 max-w-md">

@@ -28,7 +28,7 @@ const modules = [
     ),
     title: "Infrastructure Modules",
     desc: "Software-defined infrastructure built on the backbone of robust open-source foundations. Our modules focus on extreme availability and automated scaling.",
-    image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/xj5MzKJMG87Ebg8",
+    image: "/images/content/drive-as-a-service_hero.jpg",
     imageAlt: "Server infrastructure and hardware",
     items: [
       "Container Orchestration & Kubernetes Fabrics",
@@ -45,7 +45,7 @@ const modules = [
     ),
     title: "Application Modules",
     desc: "Modular application blocks designed for seamless integration and rapid deployment. Accelerate your digital roadmap with pre-hardened components.",
-    image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/Ns7NS936ZKDEBMR",
+    image: "/images/content/open-source-solutions_coding-collaboration.jpg",
     imageAlt: "Coding collaboration and application development",
     items: [
       "Microservices Frameworks & API Gateways",
@@ -62,7 +62,7 @@ const modules = [
     ),
     title: "Cybersecurity Modules",
     desc: "Open-source security that doesn't compromise. Trust but verify with our auditable, community-vetted protection layers.",
-    image: "https://nextcloud.illumiasolutions.com/public.php/dav/files/igAsTKzXSAAxdKz",
+    image: "/images/content/siem_hero.jpg",
     imageAlt: "Cybersecurity and code security",
     items: [
       "Identity & Access Management (IAM) Solutions",
@@ -99,7 +99,7 @@ export default function OpenSourceSolutionsContent() {
         description="Harnessing the collective intelligence of the global open-source community to deliver enterprise-grade reliability. We don't just use open source — we refine it into high-precision instruments for modern business."
         primaryCta={{ label: "Explore Our Ecosystem", href: "#core-solutions" }}
         secondaryCta={{ label: "View Case Studies", href: "/case-studies" }}
-        imageSrc="https://nextcloud.illumiasolutions.com/public.php/dav/files/c5XdbEk78Jpnqm8"
+        imageSrc="/images/content/homepage-opensource_open-source-integration.jpg"
         imageAlt="Open source coding and development"
       />
 
@@ -247,7 +247,7 @@ export default function OpenSourceSolutionsContent() {
       {/* ─── Pull Quote ───────────────────────────────────────────────────── */}
       <section className="py-14 lg:py-28 bg-[#1c1b1b] text-white relative overflow-hidden">
         <Image
-          src="https://nextcloud.illumiasolutions.com/public.php/dav/files/Ns7NS936ZKDEBMR"
+          src="/images/content/open-source-solutions_coding-collaboration.jpg"
           alt=""
           fill
           className="object-cover opacity-[0.08]"

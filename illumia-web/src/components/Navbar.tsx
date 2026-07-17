@@ -50,7 +50,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
       "Nextcloud · ERPNext · Proxmox · Ceph stack",
     ],
     image:
-      "https://nextcloud.illumiasolutions.com/public.php/dav/files/7meetxSGsFNNkYa",
+      "/images/case-studies/case-study-nonprofit_hero.jpg",
   },
   {
     id: "cyber",
@@ -67,7 +67,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
       "On-prem data sovereignty, audit-ready posture",
     ],
     image:
-      "https://nextcloud.illumiasolutions.com/public.php/dav/files/FJHofMbWQQKjGW8",
+      "/images/case-studies/case-study-cybersecurity_hero.jpg",
   },
   {
     id: "pci",
@@ -84,7 +84,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
       "Zero downtime through migration and audit",
     ],
     image:
-      "https://nextcloud.illumiasolutions.com/public.php/dav/files/p7oPQLdGntqDDza",
+      "/images/case-studies/case-study-pci-dss_hero.jpg",
   },
   {
     id: "proxmox-vmware",
@@ -101,7 +101,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
       "Proxmox Backup Server replacing Veeam, encryption at rest",
     ],
     image:
-      "https://nextcloud.illumiasolutions.com/public.php/dav/files/w7MtAYxqXsfHgS5",
+      "/images/case-studies/1-vmware-migration-hero.jpg",
   },
   {
     id: "proxmox-hci",
@@ -118,7 +118,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
       "Full AMC & 24/7 managed services across both clusters",
     ],
     image:
-      "https://nextcloud.illumiasolutions.com/public.php/dav/files/zxZN9QmzGDYq8dB",
+      "/images/case-studies/3-hci-expansion-hero.jpg",
   },
   {
     id: "forceten",
@@ -135,7 +135,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
       "Existing dual SAN reused, PBS replacing Veeam with encryption",
     ],
     image:
-      "https://nextcloud.illumiasolutions.com/public.php/dav/files/wLxcmBwerzBERD3",
+      "/images/case-studies/forceten-hero.jpg",
   },
   {
     id: "dcc-ceph",
@@ -152,7 +152,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
       "SSDs as Ceph OSDs, NVMe as DB/WAL; PBS replacing Veeam",
     ],
     image:
-      "https://nextcloud.illumiasolutions.com/public.php/dav/files/SWNMwRaw5WCRoxQ",
+      "/images/case-studies/dcc-hero.jpg",
   },
   {
     id: "bare-metal",
@@ -169,7 +169,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
       "On-site/off-site PBS backup, full 24/7 managed services",
     ],
     image:
-      "https://nextcloud.illumiasolutions.com/public.php/dav/files/DMG5xaPGnZLat4x",
+      "/images/case-studies/lbf-hero.jpg",
   },
 ];
 
@@ -753,7 +753,7 @@ function ServicesMegaMenu({ onClose, activeCategory, onCategoryChange, pageCateg
               >
                 <div className="shrink-0 w-7 h-7 rounded-md bg-stone-100 flex items-center justify-center overflow-hidden">
                   <img
-                    src="https://nextcloud.illumiasolutions.com/public.php/dav/files/sJgp3azLEFFKZdC"
+                    src="/images/logos/erpnext-logo.jpg"
                     alt="ERPNext"
                     className="w-5 h-5 object-contain"
                   />

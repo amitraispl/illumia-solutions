@@ -30,7 +30,7 @@ export default function WhyChooseFlipCard({ title, description, href }: Props) {
         {/* Front — image + quote */}
         <div className="absolute inset-0 [backface-visibility:hidden] rounded-2xl overflow-hidden">
           <Image
-            src="https://nextcloud.illumiasolutions.com/public.php/dav/files/yPMfpZFbJ9BX6Qo"
+            src="/images/heroes/cloud-migration_hero.jpg"
             alt="Illumia Solutions infrastructure"
             fill
             className="object-cover"

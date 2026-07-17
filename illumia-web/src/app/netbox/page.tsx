@@ -17,7 +17,7 @@ export default function NetBoxPage() {
       description="Spreadsheets, Visio diagrams, and tribal knowledge are not a network strategy — they are a liability. NetBox is the open-source source of truth for IP address management (IPAM), data centre infrastructure (DCIM), circuits, VLANs, and cable plant. It integrates natively with Ansible, Terraform, and Nautobot — so provisioning becomes repeatable, handovers become seamless, and audits become painless."
       sectionTitle="What NetBox Replaces"
       ctaText="Deploy NetBox"
-      heroImage="https://nextcloud.illumiasolutions.com/public.php/dav/files/ZLCMbHoRjW2jWZP"
+      heroImage="/images/heroes/netbox_hero.jpg"
       darkHero={true}
       closingText="Illumia delivers NetBox as a fully-integrated network operations platform — not just a documentation tool. We import your existing inventory from spreadsheets, IPAM legacy tools, or live device polling; integrate NetBox into your Ansible and Terraform pipelines; and operate it under SLA as a managed service. The result: a single, queryable, API-driven source of truth your NOC, engineering, and audit teams can all trust."
       features={[

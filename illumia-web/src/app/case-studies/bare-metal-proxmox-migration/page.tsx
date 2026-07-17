@@ -11,9 +11,9 @@ if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
 const EXPO: any = [0.16, 1, 0.3, 1];
 
 const HERO_IMG =
-  "https://nextcloud.illumiasolutions.com/public.php/dav/files/DMG5xaPGnZLat4x";
+  "/images/case-studies/lbf-hero.jpg";
 const SIDEBAR_IMG =
-  "https://nextcloud.illumiasolutions.com/public.php/dav/files/kEx2cWsSg6kfSnN";
+  "/images/case-studies/lbf-sidebar.jpg";
 
 const navSections = [
   { id: "glance", label: "At A Glance" },
