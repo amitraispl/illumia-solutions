@@ -173,19 +173,11 @@ export default function OpenSourceSolutionsContent() {
             {/* Infrastructure image */}
             <motion.div variants={fadeUp} className="relative rounded-2xl overflow-hidden min-h-[280px]">
               <Image src={modules[0].image} alt={modules[0].imageAlt} fill className="object-cover" />
-              <div className="absolute inset-0 bg-[#1c1b1b]/55" />
-              <div className="absolute inset-0 p-8 flex items-end">
-                <span className="font-headline text-4xl font-bold text-white/20 uppercase select-none">Infra</span>
-              </div>
             </motion.div>
 
             {/* Application image */}
             <motion.div variants={fadeUp} className="relative rounded-2xl overflow-hidden min-h-[280px]">
               <Image src={modules[1].image} alt={modules[1].imageAlt} fill className="object-cover" />
-              <div className="absolute inset-0 bg-[#1c1b1b]/55" />
-              <div className="absolute inset-0 p-8 flex items-end">
-                <span className="font-headline text-4xl font-bold text-white/20 uppercase select-none">App</span>
-              </div>
             </motion.div>
 
             {/* Application — wide */}
@@ -235,10 +227,6 @@ export default function OpenSourceSolutionsContent() {
             {/* Cybersecurity image */}
             <motion.div variants={fadeUp} className="relative rounded-2xl overflow-hidden min-h-[280px]">
               <Image src={modules[2].image} alt={modules[2].imageAlt} fill className="object-cover" />
-              <div className="absolute inset-0 bg-[#1c1b1b]/55" />
-              <div className="absolute inset-0 p-8 flex items-end">
-                <span className="font-headline text-4xl font-bold text-white/20 uppercase select-none">Cyber</span>
-              </div>
             </motion.div>
           </motion.div>
         </div>

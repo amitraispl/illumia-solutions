@@ -4,6 +4,8 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
+import IntegrationNetworkGraphic from "@/components/IntegrationNetworkGraphic";
+import AgileLoopGraphic from "@/components/AgileLoopGraphic";
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
@@ -88,8 +90,6 @@ const modules = [
     ),
     title: "Third-Party Integrations",
     desc: "Seamless API integrations connecting your software to CRMs, payment gateways, ERPs, and the wider tools your business depends on.",
-    image: "/images/software-development/integration-network-card.png",
-    imageAlt: "Illustration of a central platform connected to Razorpay, Zapier, and Bunny.net",
     items: [
       "CRM, ERP & Payment Gateway Sync",
       "Custom API Design & Management",
@@ -99,11 +99,13 @@ const modules = [
 ];
 
 const process = [
-  { n: "01", title: "Discover", desc: "Stakeholder interviews, technical audit, and scope definition — we map your actual workflows before writing a spec." },
-  { n: "02", title: "Design", desc: "Wireframes, prototypes, and design systems validated with real users before a line of production code is written." },
-  { n: "03", title: "Build", desc: "Iterative development in short sprints, with staging environments you can review and test throughout." },
-  { n: "04", title: "Integrate", desc: "Connected to your CRM, payment systems, and internal tools — tested end-to-end, not bolted on after launch." },
-  { n: "05", title: "Support", desc: "Monitoring, bug fixes, and continued feature work post-launch, on a retainer sized to your product's pace." },
+  { n: "01", title: "Discover", desc: "Stakeholder interviews, technical audits, and scope framing — revisited every sprint as real usage and new context reshape what we thought we knew." },
+  { n: "02", title: "Design", desc: "Wireframes and UX flows shaped with your team, sent back for another pass whenever testing or review surfaces something the first draft missed." },
+  { n: "03", title: "Prototype", desc: "Clickable prototypes validated with real users before production code is committed — and again, any time a later stage reveals a gap." },
+  { n: "04", title: "Develop", desc: "Iterative builds in short sprints, each one shippable to staging so scope can adapt before it hardens into something harder to change." },
+  { n: "05", title: "Test", desc: "QA folded into every sprint, not saved for the end — issues route straight back into design or development while they're still cheap to fix." },
+  { n: "06", title: "Review", desc: "Stakeholder walkthroughs each sprint surface what's working and what isn't, feeding directly into the next round of design and build." },
+  { n: "07", title: "Iterate", desc: "Insights from testing, review, and stakeholder feedback loop back into earlier phases — the cycle repeats until the product is right, not just shipped." },
 ];
 
 const deliverables = [
@@ -145,27 +147,6 @@ const deliverables = [
   },
 ];
 
-const engagementModels = [
-  {
-    tag: "01 / Defined Scope",
-    title: "Fixed-Scope Project",
-    desc: "Defined deliverables, timeline, and budget — ideal when requirements are well understood upfront.",
-    accent: false,
-  },
-  {
-    tag: "02 / Embedded Team",
-    title: "Dedicated Team",
-    desc: "A committed squad of designers and engineers embedded with your product, working exclusively on your roadmap.",
-    accent: true,
-  },
-  {
-    tag: "03 / Flexible Capacity",
-    title: "Staff Augmentation",
-    desc: "Individual engineers or designers slotted into your existing team to cover a skills gap or a deadline crunch.",
-    accent: false,
-  },
-];
-
 export default function SoftwareDevelopmentContent() {
   return (
     <>
@@ -175,7 +156,7 @@ export default function SoftwareDevelopmentContent() {
         title={
           <>
             Software Development{" "}
-            <span className="italic text-[#b31c33]">Built to Order.</span>
+            <span className="italic text-[#b31c33]">Engineered, Not Assembled.</span>
           </>
         }
         description="From pixel-perfect design to production-grade mobile and web applications, our engineering team builds custom software precisely matched to your business logic — and connects it seamlessly to the tools you already run."
@@ -254,20 +235,12 @@ export default function SoftwareDevelopmentContent() {
 
             {/* 01 / Design image */}
             <motion.div variants={fadeUp} className="relative rounded-2xl overflow-hidden min-h-[280px]">
-              <Image src={modules[0].image} alt={modules[0].imageAlt} fill className="object-cover" />
-              <div className="absolute inset-0 bg-[#1c1b1b]/55" />
-              <div className="absolute inset-0 p-8 flex items-end">
-                <span className="font-headline text-4xl font-bold text-white/20 uppercase select-none">Design</span>
-              </div>
+              <Image src={modules[0].image!} alt={modules[0].imageAlt!} fill className="object-cover" />
             </motion.div>
 
             {/* 02 / Mobile image */}
             <motion.div variants={fadeUp} className="relative rounded-2xl overflow-hidden min-h-[280px]">
-              <Image src={modules[1].image} alt={modules[1].imageAlt} fill className="object-cover" />
-              <div className="absolute inset-0 bg-[#1c1b1b]/55" />
-              <div className="absolute inset-0 p-8 flex items-end">
-                <span className="font-headline text-4xl font-bold text-white/20 uppercase select-none">Mobile</span>
-              </div>
+              <Image src={modules[1].image!} alt={modules[1].imageAlt!} fill className="object-cover" />
             </motion.div>
 
             {/* 02 / Custom Mobile Application — wide */}
@@ -316,21 +289,13 @@ export default function SoftwareDevelopmentContent() {
 
             {/* 03 / Web image */}
             <motion.div variants={fadeUp} className="relative rounded-2xl overflow-hidden min-h-[280px]">
-              <Image src={modules[2].image} alt={modules[2].imageAlt} fill className="object-cover" />
-              <div className="absolute inset-0 bg-[#1c1b1b]/55" />
-              <div className="absolute inset-0 p-8 flex items-end">
-                <span className="font-headline text-4xl font-bold text-white/20 uppercase select-none">Web</span>
-              </div>
+              <Image src={modules[2].image!} alt={modules[2].imageAlt!} fill className="object-cover" />
             </motion.div>
 
             {/* 04 / Integrations illustration */}
             <motion.div variants={fadeUp} className="relative rounded-2xl overflow-hidden min-h-[280px] bg-[#1c1b1b] p-3">
-              <div className="relative w-full h-full rounded-xl overflow-hidden">
-                <Image src={modules[3].image} alt={modules[3].imageAlt} fill className="object-cover" />
-                <div className="absolute inset-0 bg-[#1c1b1b]/55" />
-                <div className="absolute inset-0 p-8 flex items-end">
-                  <span className="font-headline text-4xl font-bold text-white/20 uppercase select-none">Third Party</span>
-                </div>
+              <div className="absolute inset-3 rounded-xl overflow-hidden bg-[#1c1b1b]">
+                <IntegrationNetworkGraphic variant="onDark" satelliteCount={5} />
               </div>
             </motion.div>
 
@@ -372,9 +337,14 @@ export default function SoftwareDevelopmentContent() {
             <motion.span variants={fadeUp} className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
               How We Work
             </motion.span>
-            <motion.h2 variants={fadeUp} className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900">
-              A process built for accountability.
+            <motion.h2 variants={fadeUp} className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900 mb-5">
+              A cycle, not a straight line.
             </motion.h2>
+            <motion.p variants={fadeUp} className="text-lg text-[#5a4040] leading-relaxed font-body max-w-3xl">
+              Discovery doesn&apos;t end when design starts, and testing doesn&apos;t wait
+              for the end. Every stage stays open to what the next one learns — your
+              team reviews and weighs in throughout, not just at kickoff and handoff.
+            </motion.p>
           </motion.div>
 
           <motion.div
@@ -382,7 +352,7 @@ export default function SoftwareDevelopmentContent() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-[#e2bebd]/30"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-px bg-[#e2bebd]/30"
           >
             {process.map((step) => (
               <motion.div
@@ -397,6 +367,22 @@ export default function SoftwareDevelopmentContent() {
                 <p className="text-[#5a4040] text-sm font-body leading-relaxed">{step.desc}</p>
               </motion.div>
             ))}
+          </motion.div>
+
+          {/* loop-back — Iterate feeds straight back into Discover */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex items-center justify-center gap-3 mt-8"
+          >
+            <svg className="w-5 h-5 text-[#b31c33] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+            </svg>
+            <span className="font-body text-xs tracking-[0.25em] uppercase text-[#5a4040]">
+              Iterate feeds straight back into Discover
+            </span>
           </motion.div>
         </div>
       </section>
@@ -443,7 +429,7 @@ export default function SoftwareDevelopmentContent() {
         </div>
       </section>
 
-      {/* ─── Engagement Models ────────────────────────────────────────────────── */}
+      {/* ─── Agile Delivery ──────────────────────────────────────────────────── */}
       <section className="py-20 px-6 md:px-12 bg-[#f6f3f2]">
         <div className="max-w-screen-2xl mx-auto">
           <motion.div
@@ -451,14 +437,28 @@ export default function SoftwareDevelopmentContent() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
-            className="mb-16"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16"
           >
-            <motion.span variants={fadeUp} className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
-              Engagement Models
-            </motion.span>
-            <motion.h2 variants={fadeUp} className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900">
-              However you need to work with us.
-            </motion.h2>
+            <div className="max-w-xl">
+              <motion.span variants={fadeUp} className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
+                Agile Delivery
+              </motion.span>
+              <motion.h2 variants={fadeUp} className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900 mb-5">
+                Those seven stages repeat — they don&apos;t run once.
+              </motion.h2>
+              <motion.p variants={fadeUp} className="text-lg text-[#5a4040] leading-relaxed font-body">
+                Discover, design, prototype, develop, test, review, and iterate
+                aren&apos;t a straight line we walk once and hand off. We work in
+                short sprints, so any stage can send us back to an earlier one —
+                you see working software early and often, and scope adapts as
+                testing, reviews, and stakeholder feedback teach us something the
+                initial spec couldn&apos;t.
+              </motion.p>
+            </div>
+
+            <motion.div variants={fadeUp} className="relative aspect-square max-w-md mx-auto w-full">
+              <AgileLoopGraphic />
+            </motion.div>
           </motion.div>
 
           <motion.div
@@ -466,29 +466,58 @@ export default function SoftwareDevelopmentContent() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
-            className="grid grid-cols-1 lg:grid-cols-3 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
           >
-            {engagementModels.map((model) => (
+            {[
+              {
+                title: "Short Sprints",
+                desc: "Work broken into fixed, short cycles — usually two weeks — each ending in something you can actually review.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6l4 2" />
+                    <circle cx="12" cy="12" r="9" strokeLinecap="round" />
+                  </svg>
+                ),
+              },
+              {
+                title: "Ship Early, Ship Often",
+                desc: "Staging environments updated every sprint, not unveiled at the end. You see the product take shape as it's built.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l4.5-1.5 10-10a2.121 2.121 0 00-3-3l-10 10L4.5 19.5z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 6l4 4" />
+                  </svg>
+                ),
+              },
+              {
+                title: "Backlog, Not a Blueprint",
+                desc: "Priorities re-ordered as we learn — from user feedback, real data, or a shift in your business — without renegotiating the whole project.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h10M4 18h6" />
+                  </svg>
+                ),
+              },
+              {
+                title: "Continuous Feedback",
+                desc: "Regular reviews with your team keep design, engineering, and integration work aligned to what's actually needed, sprint over sprint.",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M20 12a8 8 0 10-3.4 6.55L20 20l-1.2-3.6A7.96 7.96 0 0020 12z" />
+                  </svg>
+                ),
+              },
+            ].map((item) => (
               <motion.div
-                key={model.title}
+                key={item.title}
                 variants={fadeUp}
-                className={`h-full rounded-2xl p-7 sm:p-9 lg:p-10 transition-all duration-300 ${
-                  model.accent
-                    ? "bg-[#b31c33] text-white hover:bg-[#920022]"
-                    : "bg-white border border-[#e2bebd]/30 hover:shadow-xl hover:shadow-stone-200/60"
-                }`}
+                className="group bg-white rounded-2xl p-7 border border-[#e2bebd]/20 hover:border-[#b31c33]/20 hover:shadow-xl hover:shadow-stone-200/60 hover:-translate-y-1 transition-all duration-300"
               >
-                <span className={`font-body text-xs tracking-[0.3em] uppercase font-bold block mb-6 ${
-                  model.accent ? "text-white/60" : "text-[#b31c33]"
-                }`}>
-                  {model.tag}
-                </span>
-                <h3 className={`font-headline text-2xl mb-4 ${model.accent ? "text-white" : "text-stone-900"}`}>
-                  {model.title}
-                </h3>
-                <p className={`text-sm font-body leading-relaxed ${model.accent ? "text-white/80" : "text-[#5a4040]"}`}>
-                  {model.desc}
-                </p>
+                <div className="w-11 h-11 rounded-xl bg-[#b31c33]/8 group-hover:bg-[#b31c33] flex items-center justify-center text-[#b31c33] group-hover:text-white shrink-0 transition-colors duration-300 mb-5">
+                  {item.icon}
+                </div>
+                <h3 className="font-headline text-xl text-stone-900 mb-2.5">{item.title}</h3>
+                <p className="text-[#5a4040] text-sm font-body leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </motion.div>

@@ -30,6 +30,8 @@ export interface PageHeroProps {
   imageGrayscale?: boolean;
   /** Tailwind object-position class, e.g. "object-top" */
   imagePosition?: string;
+  /** Render this instead of the <Image> — for illustration/graphic heroes that aren't a photo */
+  imageNode?: ReactNode;
   /** Extra content rendered below the CTAs (e.g. a stats row) */
   children?: ReactNode;
   /** Additional classes for the badge span (e.g. to increase font size) */
@@ -46,6 +48,7 @@ export default function PageHero({
   imageAlt,
   imageGrayscale = false,
   imagePosition = "object-center",
+  imageNode,
   children,
   badgeClassName = "",
 }: PageHeroProps) {
@@ -107,16 +110,20 @@ export default function PageHero({
 
       {/* ── Image half — full-bleed to screen edge ── */}
       <div className="relative h-[55vw] md:h-[42vw] lg:h-auto lg:flex-1">
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          fill
-          sizes="(min-width: 1024px) 48vw, 100vw"
-          className={`object-cover ${imagePosition} ${
-            imageGrayscale ? "grayscale brightness-90 contrast-110" : ""
-          }`}
-          priority
-        />
+        {imageNode ? (
+          imageNode
+        ) : (
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            fill
+            sizes="(min-width: 1024px) 48vw, 100vw"
+            className={`object-cover ${imagePosition} ${
+              imageGrayscale ? "grayscale brightness-90 contrast-110" : ""
+            }`}
+            priority
+          />
+        )}
         {/* Subtle left-edge blend on desktop */}
         <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-surface/30 to-transparent pointer-events-none hidden lg:block" />
         {/* Bottom gradient on mobile */}

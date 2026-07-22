@@ -31,7 +31,7 @@ export default function CustomWebApplicationPage() {
       badge="Web Applications"
       title="Custom Web Applications —"
       titleHighlight="Built to Scale With You."
-      description="From internal operations tools to customer-facing platforms, we build web applications on modern, maintainable stacks — engineered for the load, security, and workflows your business actually has."
+      description="From internal operations tools to customer-facing platforms, we build web applications in iterative sprints on modern, maintainable stacks — engineered for the load, security, and workflows your business actually has."
       sectionTitle="Our Web Application Capabilities"
       ctaText="Scope Your Web App"
       heroImage="/images/custom-web-application/hero.jpg"

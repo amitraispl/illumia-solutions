@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
+import IntegrationNetworkGraphic from "@/components/IntegrationNetworkGraphic";
 
 export const metadata: Metadata = {
   title: "Third-Party Integrations — API, CRM, ERP & Payment Gateway Integration | Illumia Solutions",
@@ -31,10 +32,14 @@ export default function ThirdPartyIntegrationsPage() {
       badge="Third-Party Integrations"
       title="Third-Party Integrations —"
       titleHighlight="Connect Everything You Run."
-      description="Your software doesn't operate in isolation. We build reliable, secure integrations connecting your applications to the CRMs, payment gateways, ERPs, and platforms your business already depends on."
+      description="Your software doesn't operate in isolation. Sprint by sprint, we build reliable, secure integrations connecting your applications to the CRMs, payment gateways, ERPs, and platforms your business already depends on."
       sectionTitle="Our Integration Capabilities"
       ctaText="Discuss Your Integration"
-      heroImage="/images/third-party-integrations/hero.png"
+      heroImageNode={
+        <div className="absolute inset-0 bg-[#f6f3f2]">
+          <IntegrationNetworkGraphic variant="onLight" />
+        </div>
+      }
       closingText="Good integrations are invisible — data flows where it needs to, on time, without anyone thinking about it. That's the standard we build to."
       features={[
         {
