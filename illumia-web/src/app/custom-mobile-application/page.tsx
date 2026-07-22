@@ -31,7 +31,7 @@ export default function CustomMobileApplicationPage() {
       badge="Mobile Applications"
       title="Custom Mobile Applications —"
       titleHighlight="Native Performance, Any Platform."
-      description="Native iOS and Android apps, or a single cross-platform codebase — engineered for performance, offline resilience, and a polish that feels at home on the platform it runs on."
+      description="Native iOS and Android apps, or a single cross-platform codebase — built in short sprints with a staging build you can test every cycle, engineered for performance, offline resilience, and a polish that feels at home on the platform it runs on."
       sectionTitle="Our Mobile Development Capabilities"
       ctaText="Scope Your Mobile App"
       heroImage="/images/custom-mobile-application/hero.jpg"

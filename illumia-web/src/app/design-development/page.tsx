@@ -31,7 +31,7 @@ export default function DesignDevelopmentPage() {
       badge="Design & Development"
       title="Design & Development —"
       titleHighlight="From Concept to Code."
-      description="We take products from a blank page to production — user research, interaction design, and full-stack engineering handled by one team, so nothing gets lost in translation between design and build."
+      description="We take products from a blank page to production — user research, interaction design, and full-stack engineering handled by one team, in the same sprints, so nothing gets lost in translation between design and build."
       sectionTitle="Our Design & Development Process"
       ctaText="Start Your Design Sprint"
       heroImage="/images/design-development/hero.jpg"
@@ -42,11 +42,11 @@ export default function DesignDevelopmentPage() {
           items: [
             {
               label: "UX Research & Discovery",
-              text: "We start with your users — interviews, journey mapping, and competitive analysis to ground every decision in real behaviour.",
+              text: "Interviews, journey mapping, and competitive analysis that don't stop at kickoff — we go back to users mid-sprint whenever a build reveals something the original research didn't.",
             },
             {
               label: "Wireframing & Information Architecture",
-              text: "Low-fidelity wireframes and site maps that validate structure and flow before a single pixel is polished.",
+              text: "Wireframes and site maps validated early, then revisited whenever engineering surfaces a constraint the flow didn't account for. Nothing's locked once the build starts.",
             },
           ],
         },
@@ -55,11 +55,11 @@ export default function DesignDevelopmentPage() {
           items: [
             {
               label: "Clickable Prototypes",
-              text: "High-fidelity, interactive prototypes for stakeholder review and usability testing well before development begins.",
+              text: "Reviewed sprint by sprint alongside early engineering, not gated behind a separate design phase — each round of feedback loops straight back into the next iteration.",
             },
             {
               label: "Rapid Iteration",
-              text: "Fast design cycles informed by real feedback, keeping the product aligned with user needs at every stage.",
+              text: "Design and engineering trade findings sprint over sprint: a build constraint sends us back to the wireframe, real user feedback sends us back to the prototype.",
             },
           ],
         },
@@ -68,11 +68,11 @@ export default function DesignDevelopmentPage() {
           items: [
             {
               label: "Component Libraries & UI Kits",
-              text: "Reusable, documented component libraries that keep your product visually consistent as it scales.",
+              text: "Built alongside the first features that need them, then extended sprint by sprint — not designed upfront in isolation from the code that uses them.",
             },
             {
               label: "Brand-Aligned Visual Language",
-              text: "Typography, colour, and spacing systems built to reflect your brand across every screen.",
+              text: "Typography, colour, and spacing systems refined as real screens get built, not signed off before a line of code exists.",
             },
           ],
         },
@@ -81,24 +81,24 @@ export default function DesignDevelopmentPage() {
           items: [
             {
               label: "Production-Ready Engineering",
-              text: "Design handoff with zero ambiguity — the same team that designs the interface builds it, pixel-accurate.",
+              text: "No handoff, no waiting room — the same team designing the interface is building it in the same sprint, catching mismatches immediately instead of weeks later.",
             },
             {
               label: "Modern Frameworks",
-              text: "Built on React/Next.js, Node, and other modern, maintainable stacks chosen for your specific requirements.",
+              text: "React/Next.js, Node, and other modern, maintainable stacks — chosen early and revisited as the design work clarifies what your product actually needs.",
             },
           ],
         },
         {
-          title: "Quality & Accessibility",
+          title: "Iterative Workflow",
           items: [
             {
-              label: "Cross-Browser & Device Testing",
-              text: "Rigorous QA across browsers, devices, and screen sizes before anything ships.",
+              label: "Agile Sprint Cycles",
+              text: "Work broken into short, fixed sprints — each one ending in a reviewable build, not a black box you wait weeks to see.",
             },
             {
-              label: "WCAG-Aligned Accessibility",
-              text: "Interfaces built to be usable by everyone, following WCAG guidelines from the ground up.",
+              label: "Continuous Feedback Loops",
+              text: "Every stage stays open to what the next one learns — testing, review, and real usage loop straight back into design and development, sprint after sprint.",
             },
           ],
         },
@@ -107,7 +107,7 @@ export default function DesignDevelopmentPage() {
           items: [
             {
               label: "Design & Dev Retainers",
-              text: "Continued design and engineering support as your product evolves post-launch.",
+              text: "The same sprint cadence continues post-launch — design and engineering still looping on real usage data, not handed off to a different team.",
             },
             {
               label: "No Vendor Lock-in",

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import type { ReactNode } from "react";
 import { motion } from "motion/react";
 import PageHero from "@/components/PageHero";
 // import ServicesEcosystem from "@/components/ServicesEcosystem";
@@ -39,6 +40,8 @@ export interface RichServicePageTemplateProps {
   ctaText?: string;
   darkHero?: boolean;
   heroImage?: string;
+  /** Render this instead of the hero photo — for illustration/graphic heroes */
+  heroImageNode?: ReactNode;
   secondaryImage?: string;
   secondaryImageAlt?: string;
 }
@@ -54,6 +57,7 @@ export default function RichServicePageTemplate({
   ctaText = "Get Started",
   darkHero,
   heroImage = "/images/heroes/cloud-migration_hero.jpg",
+  heroImageNode,
   secondaryImage,
   secondaryImageAlt,
 }: RichServicePageTemplateProps) {
@@ -78,6 +82,7 @@ export default function RichServicePageTemplate({
         primaryCta={{ label: ctaText, href: "/contact#contact-form" }}
         secondaryCta={{ label: "All Services", href: "/" }}
         imageSrc={heroImage}
+        imageNode={heroImageNode}
         imageAlt={`${title} — Illumia Solutions`}
       />
 
