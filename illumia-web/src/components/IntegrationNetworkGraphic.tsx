@@ -41,17 +41,51 @@ function DbIcon({ cx, cy, color }: { cx: number; cy: number; color: string }) {
   );
 }
 
-function ServerIcon({ cx, cy, color }: { cx: number; cy: number; color: string }) {
-  const x0 = cx - 13;
-  const y0 = cy - 14;
+function BucketIcon({ cx, cy, color }: { cx: number; cy: number; color: string }) {
+  const yTop = cy - 12;
   return (
-    <g stroke={color} strokeWidth={1.6} fill="none" strokeLinecap="round">
-      <rect x={x0} y={y0} width={26} height={28} rx={2} />
-      <line x1={x0} y1={y0 + 9.3} x2={x0 + 26} y2={y0 + 9.3} />
-      <line x1={x0} y1={y0 + 18.7} x2={x0 + 26} y2={y0 + 18.7} />
-      <circle cx={x0 + 5} cy={y0 + 4.7} r={1.1} fill={color} stroke="none" />
-      <circle cx={x0 + 5} cy={y0 + 14} r={1.1} fill={color} stroke="none" />
-      <circle cx={x0 + 5} cy={y0 + 23.3} r={1.1} fill={color} stroke="none" />
+    <g stroke={color} strokeWidth={1.8} fill="none" strokeLinecap="round" strokeLinejoin="round">
+      <path d={`M ${cx - 13} ${yTop} L ${cx - 10} ${cy + 14} A 10 3 0 0 0 ${cx + 10} ${cy + 14} L ${cx + 13} ${yTop}`} />
+      <ellipse cx={cx} cy={yTop} rx={13} ry={3.6} />
+    </g>
+  );
+}
+
+// Small arrow from the App icon towards a neighboring icon, stopping short so
+// it doesn't collide with either glyph.
+function CenterArrow({
+  x1,
+  y1,
+  x2,
+  y2,
+  color,
+}: {
+  x1: number;
+  y1: number;
+  x2: number;
+  y2: number;
+  color: string;
+}) {
+  const dx = x2 - x1;
+  const dy = y2 - y1;
+  const len = Math.sqrt(dx * dx + dy * dy);
+  const ux = dx / len;
+  const uy = dy / len;
+  const startPad = 12;
+  const endPad = 22;
+  const sx = x1 + ux * startPad;
+  const sy = y1 + uy * startPad;
+  const ex = x2 - ux * endPad;
+  const ey = y2 - uy * endPad;
+  const ah = 4.5;
+  const leftX = ex - ux * ah - uy * ah;
+  const leftY = ey - uy * ah + ux * ah;
+  const rightX = ex - ux * ah + uy * ah;
+  const rightY = ey - uy * ah - ux * ah;
+  return (
+    <g stroke={color} strokeWidth={1.5} fill="none" strokeLinecap="round">
+      <line x1={sx} y1={sy} x2={ex} y2={ey} />
+      <path d={`M ${leftX} ${leftY} L ${ex} ${ey} L ${rightX} ${rightY}`} fill="none" />
     </g>
   );
 }
@@ -151,8 +185,20 @@ export default function IntegrationNetworkGraphic({
       role="img"
       aria-label="A central application connected to a network of third-party services"
     >
+      <style>{`
+        .inig-line {
+          stroke-dasharray: 2 10;
+          animation: inig-flow 0.9s linear infinite;
+        }
+        @keyframes inig-flow {
+          to { stroke-dashoffset: -24; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .inig-line { animation: none; }
+        }
+      `}</style>
       <g transform={`translate(${offsetX} ${offsetY})`}>
-        {/* Connecting lines + midpoint dots */}
+        {/* Connecting lines + midpoint dots — dashes flow outward from hub to node */}
         {points.map((p, i) => (
           <g key={`line-${i}`}>
             <line
@@ -162,14 +208,14 @@ export default function IntegrationNetworkGraphic({
               y2={p.y}
               stroke={LINE_COLOR}
               strokeWidth={2}
-              strokeDasharray="2 10"
               strokeLinecap="round"
+              className="inig-line"
             />
             <circle cx={(CX + p.x) / 2} cy={(CY + p.y) / 2} r={5} fill={LINE_COLOR} />
           </g>
         ))}
 
-        {/* Satellite nodes */}
+        {/* Satellite nodes — icons enlarged so they read clearly around the hub */}
         {points.map((p, i) => (
           <g key={`sat-${i}`}>
             <rect
@@ -180,15 +226,20 @@ export default function IntegrationNetworkGraphic({
               rx={20}
               fill={SAT_FILL}
             />
-            <p.Icon cx={p.x} cy={p.y} color={SAT_ICON_COLOR} />
+            <g transform={`translate(${p.x} ${p.y}) scale(1.5) translate(${-p.x} ${-p.y})`}>
+              <p.Icon cx={p.x} cy={p.y} color={SAT_ICON_COLOR} />
+            </g>
           </g>
         ))}
 
-        {/* Center node — App / Database / Server, arranged in a tight triangle */}
+        {/* Center node — App at the apex, Database + Bucket forming the base
+            of a triangle, with small arrows from App down to each */}
         <rect x={CX - 70} y={CY - 60} width={140} height={120} rx={18} fill={centerFill} />
-        <DbIcon cx={CX} cy={CY - 32} color="#ffffff" />
-        <AppIcon cx={CX - 36} cy={CY + 24} color="#ffffff" />
-        <ServerIcon cx={CX + 36} cy={CY + 24} color="#ffffff" />
+        <CenterArrow x1={CX} y1={CY - 32} x2={CX - 36} y2={CY + 24} color="#ffffff" />
+        <CenterArrow x1={CX} y1={CY - 32} x2={CX + 36} y2={CY + 24} color="#ffffff" />
+        <DbIcon cx={CX - 36} cy={CY + 24} color="#ffffff" />
+        <BucketIcon cx={CX + 36} cy={CY + 24} color="#ffffff" />
+        <AppIcon cx={CX} cy={CY - 32} color="#ffffff" />
       </g>
     </svg>
   );
