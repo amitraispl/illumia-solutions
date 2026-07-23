@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "NetBox — Network Source of Truth | Illumia Solutions",
+  title: "NetBox — Network Source of Truth",
   description:
     "Replace spreadsheets and Visio diagrams with NetBox — the open-source network source of truth for IPAM, DCIM, rack elevation, and infrastructure-as-code. Deployment, integration, and managed hosting by Illumia Solutions.",
   alternates: { canonical: "/netbox/" },

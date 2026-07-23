@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Custom Mobile Application Development — iOS, Android & Cross-Platform | Illumia Solutions",
+  title: "Custom Mobile Application Development — iOS, Android & Cross-Platform",
   description:
     "Native iOS and Android apps or cross-platform builds engineered for performance, offline resilience, and App Store-ready polish, with full post-launch support.",
   alternates: { canonical: "/custom-mobile-application/" },

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowRight, ArrowUpRight, CheckCircle2, Server, Layers, HardDrive, Shield, Network, Database, ScanLine, ShieldAlert } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CheckCircle2, Server, Layers, HardDrive, Shield, Network, Database, ScanLine } from "lucide-react";
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
@@ -369,8 +369,8 @@ export default function ProxmoxContent() {
                   ))}
                 </div>
                 <motion.div
-                  className="absolute inset-x-3 h-[1px] bg-gradient-to-r from-transparent via-[#b31c33]/65 to-transparent"
-                  animate={{ top: ["12px", "calc(100% - 12px)", "12px"] }}
+                  className="absolute inset-x-3 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#b31c33]/65 to-transparent will-change-transform"
+                  animate={{ y: [12, 132, 12] }}
                   transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
                 />
                 <span className="absolute bottom-2 right-3 font-body text-[8px] tracking-[0.22em] uppercase text-[#b31c33]/35 select-none">
@@ -383,7 +383,29 @@ export default function ProxmoxContent() {
                   Gap Assessment,<br />Recommendation & Remediation
                 </h3>
                 <p className="font-body text-[13px] text-[#5a4040] leading-[1.8]">
-                  Systematic evaluation against security baselines and operational best practices. Findings delivered as prioritised action items — remediation handled end-to-end by Illumia engineers.
+                  Systematic evaluation against security baselines and operational best practices — configuration drift, patch currency, access hygiene, and backup integrity all scored against the same rubric we apply across every managed cluster. Findings delivered as prioritised action items, ranked by risk and blast radius, with remediation handled end-to-end by Illumia engineers rather than left as a report you have to action yourself.
+                </p>
+              </div>
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-1.5">
+                  {["Q1", "Q2", "Q3", "Q4"].map((q, i) => (
+                    <div key={q} className="flex-1 h-[3px] rounded-full bg-[#b31c33]/10 overflow-hidden">
+                      <motion.div
+                        className="h-full w-full bg-[#b31c33]/55 rounded-full"
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: 1 }}
+                        viewport={{ once: true }}
+                        style={{ transformOrigin: "left" }}
+                        transition={{ duration: 0.6, delay: 0.15 + i * 0.15, ease: EASE }}
+                      />
+                    </div>
+                  ))}
+                </div>
+                <div className="flex justify-between font-body text-[9px] tracking-[0.2em] uppercase text-[#8e706f]">
+                  <span>Q1</span><span>Q2</span><span>Q3</span><span>Q4</span>
+                </div>
+                <p className="font-body text-[11px] text-[#8e706f]/80 leading-snug">
+                  Findings tracked against a rolling quarterly checkpoint — not a once-a-year snapshot.
                 </p>
               </div>
               <ul className="flex flex-col gap-2 mt-auto pt-4 border-t border-[#e2bebd]/40">
@@ -464,16 +486,25 @@ export default function ProxmoxContent() {
               variants={fadeUp}
               className="bg-white border border-[#e2bebd]/40 rounded-2xl p-8 flex flex-col gap-5 group hover:border-[#b31c33]/25 hover:shadow-xl hover:shadow-[#b31c33]/[0.05] transition-all duration-300"
             >
-              <div className="relative w-14 h-14 shrink-0">
-                <motion.div className="absolute inset-0 rounded-full border border-dashed border-[#b31c33]/22"
-                  animate={{ rotate: 360 }} transition={{ duration: 12, repeat: Infinity, ease: "linear" }} />
-                <motion.div className="absolute inset-[7px] rounded-full border border-[#b31c33]/12"
-                  animate={{ rotate: -360 }} transition={{ duration: 8, repeat: Infinity, ease: "linear" }} />
-                <motion.div className="absolute inset-[2px] rounded-full bg-[#b31c33]/[0.04]"
-                  animate={{ opacity: [0.4, 1, 0.4] }} transition={{ duration: 3, repeat: Infinity }} />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <ShieldAlert size={19} className="text-[#b31c33]" strokeWidth={1.5} />
-                </div>
+              <div className="relative h-20 rounded-xl overflow-hidden bg-[#b31c33]/[0.025] border border-[#e2bebd]/50 shrink-0 flex items-end justify-center gap-3 px-5 pb-3">
+                {[
+                  { label: "Critical", h: 85, delay: 0 },
+                  { label: "High", h: 62, delay: 0.15 },
+                  { label: "Medium", h: 42, delay: 0.3 },
+                  { label: "Low", h: 24, delay: 0.45 },
+                ].map((b) => (
+                  <div key={b.label} className="flex flex-col items-center justify-end h-full w-6">
+                    <motion.div
+                      className="w-full rounded-t-sm bg-[#b31c33]/30"
+                      initial={{ scaleY: 0 }}
+                      whileInView={{ scaleY: 1 }}
+                      viewport={{ once: true }}
+                      style={{ transformOrigin: "bottom", height: `${b.h}%` }}
+                      transition={{ duration: 0.7, delay: b.delay, ease: EASE }}
+                    />
+                  </div>
+                ))}
+                <span className="absolute top-1.5 left-3 font-body text-[8px] tracking-[0.2em] uppercase text-[#b31c33]/35 select-none">CVE severity scan</span>
               </div>
               <span className="font-headline italic text-[#b31c33] text-4xl leading-none tabular-nums">03</span>
               <div>

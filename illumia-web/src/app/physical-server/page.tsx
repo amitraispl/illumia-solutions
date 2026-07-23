@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Physical Server — Dedicated Bare-Metal | Illumia Solutions",
+  title: "Physical Server — Dedicated Bare-Metal",
   description:
     "Dedicated bare-metal servers for workloads requiring maximum compute power, complete resource isolation, and hardware-level control.",
   alternates: { canonical: "/physical-server/" },

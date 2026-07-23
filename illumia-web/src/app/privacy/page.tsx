@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Illumia Solutions",
+  title: "Privacy Policy",
   description:
     "Privacy Policy for Illumia Solutions — how we collect, use, and protect your personal information.",
   alternates: { canonical: "/privacy/" },

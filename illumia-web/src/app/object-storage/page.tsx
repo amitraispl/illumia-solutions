@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Storage Solutions | Illumia Solutions",
+  title: "Storage Solutions",
   description:
     "Illumia Solutions provides cutting-edge storage solutions — high-performance block storage, scalable object storage, and cost-efficient cold storage — each designed to meet specific data storage requirements.",
   alternates: { canonical: "/object-storage/" },

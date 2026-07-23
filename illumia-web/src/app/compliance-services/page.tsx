@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Compliance Services | Illumia Solutions",
+  title: "Compliance Services",
   description:
     "Illumia Solutions offers comprehensive compliance services to help you navigate complex regulatory requirements, ensuring your practices meet all necessary standards while managing costs effectively.",
   alternates: { canonical: "/compliance-services/" },

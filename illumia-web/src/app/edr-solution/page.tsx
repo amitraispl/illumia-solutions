@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "EDR Solution — Endpoint Detection & Response | Illumia Solutions",
+  title: "EDR Solution — Endpoint Detection & Response",
   description:
     "Advanced Endpoint Detection and Response solutions powered by OpenEDR — real-time threat detection, behavioral analysis, and automated response for comprehensive endpoint security.",
   alternates: { canonical: "/edr-solution/" },

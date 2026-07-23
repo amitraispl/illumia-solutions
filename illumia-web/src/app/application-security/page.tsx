@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Application Security | Illumia Solutions",
+  title: "Application Security",
   description:
     "Illumia Solutions provides comprehensive application security services, from identifying vulnerabilities to enhancing security architecture and integrating secure development practices.",
   alternates: { canonical: "/application-security/" },

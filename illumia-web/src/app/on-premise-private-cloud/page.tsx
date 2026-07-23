@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "On-Premise Private Cloud Solutions with Proxmox | Illumia Solutions",
+  title: "On-Premise Private Cloud Solutions with Proxmox",
   description:
     "Our On-Premise Private Cloud Solutions are built on Hyperconverged Infrastructure (HCI), which integrates compute, storage, and networking into a single cohesive system.",
   alternates: { canonical: "/on-premise-private-cloud/" },

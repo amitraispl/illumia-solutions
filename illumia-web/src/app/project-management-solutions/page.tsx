@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Project Management Solutions — Redmine, Zammad & OpenProject | Illumia Solutions",
+  title: "Project Management Solutions — Redmine, Zammad & OpenProject",
   description:
     "Flexible open-source project management with Redmine, Zammad, and OpenProject tailored to your team's workflow.",
   alternates: { canonical: "/project-management-solutions/" },

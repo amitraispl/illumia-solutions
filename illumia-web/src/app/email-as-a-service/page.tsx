@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Email as a Service — Enterprise Mail | Illumia Solutions",
+  title: "Email as a Service — Enterprise Mail",
   description:
     "Enterprise-grade email infrastructure built on Zimbra/Carbonio with Proxmox Mail Gateway for secure, reliable communications.",
   alternates: { canonical: "/email-as-a-service/" },

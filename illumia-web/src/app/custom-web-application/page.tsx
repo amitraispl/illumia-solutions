@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Custom Web Application Development — Scalable, Secure & Maintainable | Illumia Solutions",
+  title: "Custom Web Application Development — Scalable, Secure & Maintainable",
   description:
     "Custom web applications built on modern frameworks — from internal operations tools to customer-facing SaaS platforms — engineered for security, performance, and scale.",
   alternates: { canonical: "/custom-web-application/" },

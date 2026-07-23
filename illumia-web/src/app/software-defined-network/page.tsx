@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Software-Defined Network — SDN & SD-WAN | Illumia Solutions",
+  title: "Software-Defined Network — SDN & SD-WAN",
   description:
     "Modern SDN and SD-WAN solutions featuring easy setup, high performance, end-to-end encryption, and a decentralized architecture.",
   alternates: { canonical: "/software-defined-network/" },

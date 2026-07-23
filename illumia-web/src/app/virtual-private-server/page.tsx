@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Virtual Private Server — Flexible, Secure, No Lock-in | Illumia Solutions",
+  title: "Virtual Private Server — Flexible, Secure, No Lock-in",
   description:
     "VPS offerings meticulously designed to meet the diverse needs of modern businesses, combining scalability, performance, and cost-efficiency with enhanced cybersecurity options.",
   alternates: { canonical: "/virtual-private-server/" },

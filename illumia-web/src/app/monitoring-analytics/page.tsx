@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Monitoring & Analytics — Infrastructure Intelligence | Illumia Solutions",
+  title: "Monitoring & Analytics — Infrastructure Intelligence",
   description:
     "Full-stack observability powered by CheckMK and Elastiflow — real-time metrics, network flow analysis, and intelligent alerting.",
   alternates: { canonical: "/monitoring-analytics/" },

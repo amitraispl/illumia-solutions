@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Specialized Services | Illumia Solutions",
+  title: "Specialized Services",
   description:
     "Our specialised cybersecurity services are tailored to address specific industry and business needs — including security gap analysis, custom security frameworks, secure payment implementation, continuous monitoring, and vulnerability management.",
   alternates: { canonical: "/specialized-services/" },

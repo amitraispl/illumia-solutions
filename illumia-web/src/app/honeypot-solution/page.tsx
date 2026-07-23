@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Honeypot Solution — MHN & T-POT | Illumia Solutions",
+  title: "Honeypot Solution — MHN & T-POT",
   description:
     "Advanced honeypot solutions powered by Modern Honey Network (MHN) and T-POT — centralized management, real-time visualization, and automated threat detection.",
   alternates: { canonical: "/honeypot-solution/" },

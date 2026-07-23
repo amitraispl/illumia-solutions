@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "SIEM as a Service — Security Intelligence | Illumia Solutions",
+  title: "SIEM as a Service — Security Intelligence",
   description:
     "Continuous security event correlation and threat intelligence powered by Wazuh and OSSIM for complete environment visibility.",
   alternates: { canonical: "/siem-as-a-service/" },

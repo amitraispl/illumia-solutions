@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "PAM as a Service — Privileged Access Management | Illumia Solutions",
+  title: "PAM as a Service — Privileged Access Management",
   description:
     "Privileged Access Management (PAM) as a Service — robust security features through a cloud-based solution, providing essential management and monitoring of privileged accounts.",
   alternates: { canonical: "/pam-as-a-service/" },

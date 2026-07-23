@@ -3,7 +3,7 @@ import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 import IntegrationNetworkGraphic from "@/components/IntegrationNetworkGraphic";
 
 export const metadata: Metadata = {
-  title: "Third-Party Integrations — API, CRM, ERP & Payment Gateway Integration | Illumia Solutions",
+  title: "Third-Party Integrations — API, CRM, ERP & Payment Gateway Integration",
   description:
     "Reliable, secure third-party integrations connecting your applications to CRMs, ERPs, payment gateways, and the platforms your business already runs on.",
   alternates: { canonical: "/third-party-integrations/" },

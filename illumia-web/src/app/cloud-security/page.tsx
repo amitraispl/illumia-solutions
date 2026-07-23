@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Cloud Security | Illumia Solutions",
+  title: "Cloud Security",
   description:
     "Illumia Solutions offers advanced cloud security services, from secure application deployment to ensuring data compliance and secure migration. Your cloud data and regulatory compliance are protected.",
   alternates: { canonical: "/cloud-security/" },

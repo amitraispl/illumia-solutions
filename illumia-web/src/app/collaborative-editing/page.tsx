@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Collaborative Editing — OnlyOffice Solutions | Illumia Solutions",
+  title: "Collaborative Editing — OnlyOffice Solutions",
   description:
     "Collaborative editing solutions using OnlyOffice — delivering document editing, real-time collaboration, and security for your organisation.",
   alternates: { canonical: "/collaborative-editing/" },

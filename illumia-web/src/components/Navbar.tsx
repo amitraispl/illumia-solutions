@@ -37,7 +37,7 @@ interface CaseStudyItem {
 const CASE_STUDIES: CaseStudyItem[] = [
   {
     id: "nonprofit",
-    href: "/case-studies/non-profit-open-source",
+    href: "/case-studies/non-profit-open-source/",
     shortLabel: "Non-Profit OSS",
     subtitle: "Open-source infrastructure transformation across 1,000+ branches",
     label: "Driving 50–65% IT Cost Reduction with Open Source Infrastructure",
@@ -54,7 +54,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
   },
   {
     id: "cyber",
-    href: "/case-studies/cybersecurity-open-source",
+    href: "/case-studies/cybersecurity-open-source/",
     shortLabel: "Cybersecurity OSS",
     subtitle: "Layered open-source defence with full audit visibility",
     label: "Strengthening Cybersecurity & Compliance with Open Source",
@@ -71,7 +71,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
   },
   {
     id: "pci",
-    href: "/case-studies/pci-dss-grocery",
+    href: "/case-studies/pci-dss-grocery/",
     shortLabel: "PCI DSS Retail",
     subtitle: "PCI DSS Level 2 attestation for 17-location retail chain",
     label: "PCI DSS Compliance for a Grocery Retail Store Chain in Illinois",
@@ -88,7 +88,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
   },
   {
     id: "proxmox-vmware",
-    href: "/case-studies/proxmox-vmware-migration",
+    href: "/case-studies/proxmox-vmware-migration/",
     shortLabel: "VMware → Proxmox VE",
     subtitle: "80% licensing cost reduction — zero new hardware",
     label: "80% Licensing Cost Reduction via VMware to Proxmox VE Migration",
@@ -105,7 +105,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
   },
   {
     id: "proxmox-hci",
-    href: "/case-studies/proxmox-hci-expansion",
+    href: "/case-studies/proxmox-hci-expansion/",
     shortLabel: "NVMe HCI Expansion",
     subtitle: "Two-cluster HCI estate — scale out, not replace",
     label: "Progressive HCI Expansion & NVMe Cluster for High-IOPS Workloads",
@@ -122,7 +122,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
   },
   {
     id: "forceten",
-    href: "/case-studies/vmware-proxmox-migration-forceten",
+    href: "/case-studies/vmware-proxmox-migration-forceten/",
     shortLabel: "VMware → Proxmox (FTT)",
     subtitle: "80% licensing cost reduction — financial-sector migration",
     label: "80% Licensing Cost Reduction via VMware to Proxmox VE Migration",
@@ -139,7 +139,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
   },
   {
     id: "dcc-ceph",
-    href: "/case-studies/vmware-vsan-proxmox-ceph",
+    href: "/case-studies/vmware-vsan-proxmox-ceph/",
     shortLabel: "vSAN → Proxmox Ceph",
     subtitle: "Live hyper-converged re-platform — zero new hardware",
     label: "VMware vSAN to Proxmox VE Ceph Migration with Zero New Hardware",
@@ -156,7 +156,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
   },
   {
     id: "bare-metal",
-    href: "/case-studies/bare-metal-proxmox-migration",
+    href: "/case-studies/bare-metal-proxmox-migration/",
     shortLabel: "Bare Metal → HCI",
     subtitle: "Two-cluster Proxmox HCI estate for 5,000+ employees",
     label: "From Bare Metal to a Two-Cluster Proxmox HCI Estate",
@@ -313,7 +313,7 @@ function CaseStudiesMegaMenu({
         <div className="flex-1 min-w-0 pl-10 py-10 relative overflow-hidden">
           {/* All-case-studies link — AT TOP, prominent, with external-link icon */}
           <Link
-            href="/case-studies"
+            href="/case-studies/"
             onClick={onClose}
             className="group/catlink inline-flex items-center gap-2.5 mb-6 pb-5 border-b border-outline-variant/40 w-full"
           >
@@ -430,80 +430,80 @@ const SERVICE_GROUPS: ServiceGroup[] = [
   {
     id: "cloud",
     label: "Cloud",
-    href: "/cloud-services",
+    href: "/cloud-services/",
     description: "Infrastructure, hosting & compute",
     items: [
-      { label: "Hosting Services", href: "/cloud-services#hosting" },
-      { label: "Virtual Private Server", href: "/virtual-private-server" },
-      { label: "Physical Server", href: "/physical-server" },
-      { label: "Containers", href: "/containers" },
-      { label: "Virtual Desktops", href: "/virtual-desktops" },
-      { label: "Object Storage", href: "/object-storage" },
-      { label: "Disaster Recovery", href: "/disaster-recovery" },
-      { label: "Software-Defined Network", href: "/software-defined-network" },
-      { label: "Cloud Migration Solutions", href: "/cloud-migration-solutions" },
-      { label: "On-Premise Private Cloud", href: "/on-premise-private-cloud" },
-      { label: "Private Cloud with Proxmox VE", href: "/on-premise-private-cloud-solutions" },
-      { label: "Infrastructure Solutions", href: "/infrastructure-solutions" },
-      { label: "Application Solutions", href: "/application-solutions" },
-      { label: "Maintenance Services", href: "/cloud-services#maintenance" },
-      { label: "Monitoring & Analytics", href: "/monitoring-analytics" },
+      { label: "Hosting Services", href: "/cloud-services/#hosting" },
+      { label: "Virtual Private Server", href: "/virtual-private-server/" },
+      { label: "Physical Server", href: "/physical-server/" },
+      { label: "Containers", href: "/containers/" },
+      { label: "Virtual Desktops", href: "/virtual-desktops/" },
+      { label: "Object Storage", href: "/object-storage/" },
+      { label: "Disaster Recovery", href: "/disaster-recovery/" },
+      { label: "Software-Defined Network", href: "/software-defined-network/" },
+      { label: "Cloud Migration Solutions", href: "/cloud-migration-solutions/" },
+      { label: "On-Premise Private Cloud", href: "/on-premise-private-cloud/" },
+      { label: "Private Cloud with Proxmox VE", href: "/on-premise-private-cloud-solutions/" },
+      { label: "Infrastructure Solutions", href: "/infrastructure-solutions/" },
+      { label: "Application Solutions", href: "/application-solutions/" },
+      { label: "Maintenance Services", href: "/cloud-services/#maintenance" },
+      { label: "Monitoring & Analytics", href: "/monitoring-analytics/" },
     ],
   },
   {
     id: "cyber",
     label: "Cyber Security",
-    href: "/cyber-security",
+    href: "/cyber-security/",
     description: "Security, compliance & threat management",
     items: [
-      { label: "IT Risk & Security Strategy", href: "/it-risk-and-security-strategy" },
-      { label: "Application Security", href: "/application-security" },
-      { label: "Mobile Security", href: "/mobile-security" },
-      { label: "Cloud Security", href: "/cloud-security" },
-      { label: "Infrastructure Security", href: "/infrastructure-security" },
-      { label: "Compliance Services", href: "/compliance-services" },
-      { label: "Cybersecurity Solutions", href: "/cybersecurity-solutions" },
-      { label: "Specialized Services", href: "/specialized-services" },
-      { label: "SIEM as a Service", href: "/siem-as-a-service" },
-      { label: "EDR as a Service", href: "/edr-as-a-service" },
-      { label: "WAF as a Service", href: "/waf-as-a-service" },
-      { label: "PAM as a Service", href: "/pam-as-a-service" },
-      { label: "NMS as a Service", href: "/nms-as-a-service" },
-      { label: "Honeypot as a Service", href: "/honeypot-as-a-service" },
-      { label: "SIEM", href: "/siem" },
-      { label: "SOAR", href: "/soar" },
-      { label: "Endpoint Detection & Response", href: "/edr-solution" },
-      { label: "Vulnerability Management", href: "/vulnerability-management" },
-      { label: "Governance, Risk & Compliance", href: "/governance-risk-compliance" },
-      { label: "Privileged Access Management", href: "/pam" },
-      { label: "Honeypot Solutions", href: "/honeypot-solution" },
+      { label: "IT Risk & Security Strategy", href: "/it-risk-and-security-strategy/" },
+      { label: "Application Security", href: "/application-security/" },
+      { label: "Mobile Security", href: "/mobile-security/" },
+      { label: "Cloud Security", href: "/cloud-security/" },
+      { label: "Infrastructure Security", href: "/infrastructure-security/" },
+      { label: "Compliance Services", href: "/compliance-services/" },
+      { label: "Cybersecurity Solutions", href: "/cybersecurity-solutions/" },
+      { label: "Specialized Services", href: "/specialized-services/" },
+      { label: "SIEM as a Service", href: "/siem-as-a-service/" },
+      { label: "EDR as a Service", href: "/edr-as-a-service/" },
+      { label: "WAF as a Service", href: "/waf-as-a-service/" },
+      { label: "PAM as a Service", href: "/pam-as-a-service/" },
+      { label: "NMS as a Service", href: "/nms-as-a-service/" },
+      { label: "Honeypot as a Service", href: "/honeypot-as-a-service/" },
+      { label: "SIEM", href: "/siem/" },
+      { label: "SOAR", href: "/soar/" },
+      { label: "Endpoint Detection & Response", href: "/edr-solution/" },
+      { label: "Vulnerability Management", href: "/vulnerability-management/" },
+      { label: "Governance, Risk & Compliance", href: "/governance-risk-compliance/" },
+      { label: "Privileged Access Management", href: "/pam/" },
+      { label: "Honeypot Solutions", href: "/honeypot-solution/" },
     ],
   },
   {
     id: "open",
     label: "Open Source",
-    href: "/open-source-solutions",
+    href: "/open-source-solutions/",
     description: "Open-source powered enterprise tools",
     items: [
-      { label: "Collaboration Solutions", href: "/collaboration-solutions" },
-      { label: "Project Management Solutions", href: "/project-management-solutions" },
-      { label: "Web Meeting Solution", href: "/web-meeting-solution" },
-      { label: "Email as a Service", href: "/email-as-a-service" },
-      { label: "Drive as a Service", href: "/drive-as-a-service" },
-      { label: "Backup as a Service", href: "/backup-as-a-service" },
-      { label: "NetBox Platform", href: "/netbox-platform" },
+      { label: "Collaboration Solutions", href: "/collaboration-solutions/" },
+      { label: "Project Management Solutions", href: "/project-management-solutions/" },
+      { label: "Web Meeting Solution", href: "/web-meeting-solution/" },
+      { label: "Email as a Service", href: "/email-as-a-service/" },
+      { label: "Drive as a Service", href: "/drive-as-a-service/" },
+      { label: "Backup as a Service", href: "/backup-as-a-service/" },
+      { label: "NetBox Platform", href: "/netbox-platform/" },
     ],
   },
   {
     id: "dev",
     label: "Software Development",
-    href: "/software-development",
+    href: "/software-development/",
     description: "Custom apps, web & integrations",
     items: [
-      { label: "Design & Development", href: "/design-development" },
-      { label: "Custom Mobile Application", href: "/custom-mobile-application" },
-      { label: "Custom Web Application", href: "/custom-web-application" },
-      { label: "Third-Party Integrations", href: "/third-party-integrations" },
+      { label: "Design & Development", href: "/design-development/" },
+      { label: "Custom Mobile Application", href: "/custom-mobile-application/" },
+      { label: "Custom Web Application", href: "/custom-web-application/" },
+      { label: "Third-Party Integrations", href: "/third-party-integrations/" },
     ],
   },
 ];
@@ -687,7 +687,7 @@ function ServicesMegaMenu({ onClose, activeCategory, onCategoryChange, pageCateg
             </p>
             <div className="grid grid-cols-2 gap-3">
               <Link
-                href="/on-premise-private-cloud-solutions"
+                href="/on-premise-private-cloud-solutions/"
                 onClick={onClose}
                 className="group/pl flex items-center gap-3 rounded-lg border border-outline-variant/30 px-4 py-3 hover:border-primary/30 hover:bg-primary/[0.04] transition-colors duration-200"
               >
@@ -707,7 +707,7 @@ function ServicesMegaMenu({ onClose, activeCategory, onCategoryChange, pageCateg
                 <ExternalArrow className="w-3.5 h-3.5 text-stone-300 group-hover/pl:text-primary shrink-0 ml-auto transition-colors duration-200" />
               </Link>
               <Link
-                href="/netbox-platform"
+                href="/netbox-platform/"
                 onClick={onClose}
                 className="group/pl flex items-center gap-3 rounded-lg border border-outline-variant/30 px-4 py-3 hover:border-primary/30 hover:bg-primary/[0.04] transition-colors duration-200"
               >
@@ -727,7 +727,7 @@ function ServicesMegaMenu({ onClose, activeCategory, onCategoryChange, pageCateg
                 <ExternalArrow className="w-3.5 h-3.5 text-stone-300 group-hover/pl:text-primary shrink-0 ml-auto transition-colors duration-200" />
               </Link>
               <Link
-                href="/odoo"
+                href="/odoo/"
                 onClick={onClose}
                 className="group/pl flex items-center gap-3 rounded-lg border border-outline-variant/30 px-4 py-3 hover:border-primary/30 hover:bg-primary/[0.04] transition-colors duration-200"
               >
@@ -747,7 +747,7 @@ function ServicesMegaMenu({ onClose, activeCategory, onCategoryChange, pageCateg
                 <ExternalArrow className="w-3.5 h-3.5 text-stone-300 group-hover/pl:text-primary shrink-0 ml-auto transition-colors duration-200" />
               </Link>
               <Link
-                href="/erpnext"
+                href="/erpnext/"
                 onClick={onClose}
                 className="group/pl flex items-center gap-3 rounded-lg border border-outline-variant/30 px-4 py-3 hover:border-primary/30 hover:bg-primary/[0.04] transition-colors duration-200"
               >
@@ -886,7 +886,7 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <div className="hidden lg:flex items-center gap-7 xl:gap-9">
-          <Link href="/about" className={navLinkClass("/about")}>
+          <Link href="/about/" className={navLinkClass("/about")}>
             About Us
           </Link>
 
@@ -940,11 +940,11 @@ export default function Navbar() {
             </motion.span>
           </button>
 
-          <Link href="/faqs" className={navLinkClass("/faqs")}>
+          <Link href="/faqs/" className={navLinkClass("/faqs")}>
             FAQs
           </Link>
 
-          <Link href="/contact" className={navLinkClass("/contact")}>
+          <Link href="/contact/" className={navLinkClass("/contact")}>
             Contact Us
           </Link>
         </div>
@@ -1011,7 +1011,7 @@ export default function Navbar() {
           >
             <div className="px-6 py-4">
               <Link
-                href="/about"
+                href="/about/"
                 onClick={() => setMobileOpen(false)}
                 className={`block py-3.5 font-headline text-sm tracking-widest uppercase border-b border-outline-variant/20 transition-colors duration-200 ${
                   isActive("/about") ? "text-primary font-bold" : "text-stone-700 hover:text-primary"
@@ -1136,7 +1136,7 @@ export default function Navbar() {
                     >
                       <div className="ml-3 pb-2">
                         <Link
-                          href="/case-studies"
+                          href="/case-studies/"
                           onClick={() => setMobileOpen(false)}
                           className="flex items-center gap-2 py-2.5 pl-2 font-body text-sm text-stone-600 hover:text-primary transition-colors duration-200 border-b border-outline-variant/20 mb-1"
                         >
@@ -1164,7 +1164,7 @@ export default function Navbar() {
               </div>
 
               <Link
-                href="/faqs"
+                href="/faqs/"
                 onClick={() => setMobileOpen(false)}
                 className={`block py-3.5 font-headline text-sm tracking-widest uppercase border-b border-outline-variant/20 transition-colors duration-200 ${
                   isActive("/faqs") ? "text-primary font-bold" : "text-stone-700 hover:text-primary"
@@ -1174,7 +1174,7 @@ export default function Navbar() {
               </Link>
 
               <Link
-                href="/contact"
+                href="/contact/"
                 onClick={() => setMobileOpen(false)}
                 className={`block py-3.5 font-headline text-sm tracking-widest uppercase transition-colors duration-200 ${
                   isActive("/contact") ? "text-primary font-bold" : "text-stone-700 hover:text-primary"

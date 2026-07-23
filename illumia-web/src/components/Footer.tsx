@@ -14,20 +14,20 @@ const LOGO_URL =
   "/images/logos/illumia-logo.png";
 
 const solutions = [
-  { label: "Cloud Services", href: "/cloud-services" },
-  { label: "Cyber Security", href: "/cyber-security" },
-  { label: "Open Source Solutions", href: "/open-source-solutions" },
+  { label: "Cloud Services", href: "/cloud-services/" },
+  { label: "Cyber Security", href: "/cyber-security/" },
+  { label: "Open Source Solutions", href: "/open-source-solutions/" },
 ];
 
 const company = [
-  { label: "About Us", href: "/about" },
-  { label: "Contact Us", href: "/contact#contact-form" },
-  { label: "FAQs", href: "/faqs" },
+  { label: "About Us", href: "/about/" },
+  { label: "Contact Us", href: "/contact/#contact-form" },
+  { label: "FAQs", href: "/faqs/" },
 ];
 
 const legal = [
-  { label: "Privacy Policy", href: "/privacy" },
-  { label: "Terms of Service", href: "/terms" },
+  { label: "Privacy Policy", href: "/privacy/" },
+  { label: "Terms of Service", href: "/terms/" },
 ];
 
 function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {

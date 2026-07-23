@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Backup as a Service — Data Protection | Illumia Solutions",
+  title: "Backup as a Service — Data Protection",
   description:
     "Automated, encrypted backup and recovery services ensuring your critical data is always protected and recoverable.",
   alternates: { canonical: "/backup-as-a-service/" },

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Disaster Recovery — Business Continuity | Illumia Solutions",
+  title: "Disaster Recovery — Business Continuity",
   description:
     "Comprehensive disaster recovery solutions ensuring rapid restoration of critical systems with minimal data loss and downtime.",
   alternates: { canonical: "/disaster-recovery/" },

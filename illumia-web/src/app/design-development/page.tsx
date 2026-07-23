@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Design & Development — UI/UX Design to Production Code | Illumia Solutions",
+  title: "Design & Development — UI/UX Design to Production Code",
   description:
     "End-to-end UI/UX design and software engineering — research, wireframing, interactive prototyping, design systems, and full-stack implementation by one accountable team.",
   alternates: { canonical: "/design-development/" },

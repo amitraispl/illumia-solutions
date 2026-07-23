@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Governance, Risk & Compliance — GRC Framework | Illumia Solutions",
+  title: "Governance, Risk & Compliance — GRC Framework",
   description:
     "Advanced GRC solutions powered by OpenGRC — comprehensive risk management, compliance monitoring, and audit management.",
   alternates: { canonical: "/governance-risk-compliance/" },

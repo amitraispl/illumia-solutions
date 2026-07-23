@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "SOAR — Security Orchestration Automation and Response | Illumia Solutions",
+  title: "SOAR — Security Orchestration Automation and Response",
   description:
     "Advanced SOAR solutions with Shuffle — offering security orchestration, automated workflows, and rapid incident response for efficient cybersecurity management.",
   alternates: { canonical: "/soar/" },
