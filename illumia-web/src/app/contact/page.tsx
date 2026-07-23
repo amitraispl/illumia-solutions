@@ -18,6 +18,8 @@ type FormData = {
 
 type FormErrors = Partial<Record<keyof FormData, string>>;
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 function validate(form: FormData): FormErrors {
   const errors: FormErrors = {};
 
@@ -33,7 +35,7 @@ function validate(form: FormData): FormErrors {
 
   if (!form.email.trim()) {
     errors.email = "An email address is required so we can respond to you.";
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+  } else if (!EMAIL_RE.test(form.email)) {
     errors.email = "That doesn't look right — try name@company.com.";
   }
 

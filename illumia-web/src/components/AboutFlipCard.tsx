@@ -5,7 +5,6 @@ import Image from "next/image";
 import { motion, useInView } from "motion/react";
 
 interface Props {
-  number: string;
   title: string;
   desc: string;
   bg: string;
@@ -15,7 +14,6 @@ interface Props {
 }
 
 export default function AboutWhyCard({
-  number,
   title,
   desc,
   bg,

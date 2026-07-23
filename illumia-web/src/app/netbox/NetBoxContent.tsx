@@ -14,10 +14,6 @@ const fadeIn = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { duration: 0.5, ease: EASE } },
 };
-const slideLeft = {
-  hidden: { opacity: 0, x: -32 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.65, ease: EASE } },
-};
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } } };
 
 /* Plain figure-caption style attribution — no background, sits below the image.
@@ -283,7 +279,7 @@ export default function NetBoxContent() {
               Spreadsheets are not infrastructure documentation.
             </motion.h2>
             <motion.p variants={fadeUp} className="font-body text-[15px] text-white/45 leading-[1.8] mb-4">
-              IP address sheets drift from reality the moment they are created. Rack diagrams in Visio are one migration behind. Network topology in a shared wiki is nobody's responsibility.
+              IP address sheets drift from reality the moment they are created. Rack diagrams in Visio are one migration behind. Network topology in a shared wiki is nobody&apos;s responsibility.
             </motion.p>
             <motion.p variants={fadeUp} className="font-body text-[15px] text-white/45 leading-[1.8]">
               NetBox makes infrastructure documentation a first-class engineering discipline — API-driven, version-controlled, and integrated directly into your provisioning pipeline.

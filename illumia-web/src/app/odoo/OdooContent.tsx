@@ -480,7 +480,7 @@ export default function OdooContent() {
               Engineered, Not Just Licensed
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-4xl md:text-[2.8rem] text-white leading-[1.05] tracking-tight mb-6">
-              Open source doesn't mean slow, and AI isn't a bolt-on module.
+              Open source doesn&apos;t mean slow, and AI isn&apos;t a bolt-on module.
             </motion.h2>
             <motion.p variants={fadeUp} className="font-body text-[15px] text-white/45 leading-[1.8]">
               28 million people run their business on Odoo today. Illumia deploys the same platform — full source access, native AI, and an ecosystem too large for any single vendor to lock down.

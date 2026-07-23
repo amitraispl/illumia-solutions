@@ -72,18 +72,6 @@ const modules = [
   },
 ];
 
-const solutions = [
-  { code: "OS-01", label: "Cloud Architecture" }, { code: "OS-02", label: "CI/CD Optimization" },
-  { code: "OS-03", label: "Legacy Migration" }, { code: "OS-04", label: "Security Auditing" },
-  { code: "OS-05", label: "Database Tuning" }, { code: "OS-06", label: "API Management" },
-  { code: "OS-07", label: "Penetration Testing" }, { code: "OS-08", label: "Edge Computing" },
-  { code: "OS-09", label: "Serverless Logic" }, { code: "OS-10", label: "Frontend Precision" },
-  { code: "OS-11", label: "Observability Stack" }, { code: "OS-12", label: "Compliance Guard" },
-  { code: "OS-13", label: "Network Integrity" }, { code: "OS-14", label: "Load Balancing" },
-  { code: "OS-15", label: "Workflow Engine" }, { code: "OS-16", label: "Caching Strategy" },
-  { code: "OS-17", label: "Event Sourcing" }, { code: "OS-18", label: "DR Orchestration" },
-];
-
 export default function OpenSourceSolutionsContent() {
   return (
     <>

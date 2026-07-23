@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowRight, ArrowUpRight, CheckCircle2, Server, Layers, HardDrive, Shield, Network, Database, Cpu, RefreshCcw, Globe2, ScanLine, ShieldAlert } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CheckCircle2, Server, Layers, HardDrive, Shield, Network, Database, ScanLine, ShieldAlert } from "lucide-react";
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
@@ -15,7 +15,6 @@ const fadeIn = {
   visible: { opacity: 1, transition: { duration: 0.5, ease: EASE } },
 };
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } } };
-const staggerFast = { hidden: {}, visible: { transition: { staggerChildren: 0.05 } } };
 
 // Real images — official proxmox.com screenshots
 const IMG = {
@@ -90,37 +89,6 @@ const REMAINING_CAPS = [
   { icon: Shield, title: "Proxmox Backup Server", text: "Deduplicated, encrypted incremental backups with point-in-time restore. Replaces Veeam licensing." },
   { icon: Network, title: "SDN Stack", text: "VXLAN overlays, EVPN, and zone-based segmentation. Native OVS and Linux bridge." },
   { icon: Database, title: "REST API", text: "Every UI action has an API equivalent. Provision via Terraform, configure via Ansible." },
-];
-
-const AMS_PILLARS = [
-  {
-    n: "01",
-    icon: ScanLine,
-    title: "Gap Assessment, Recommendation & Remediation",
-    text: "Systematic evaluation of your Proxmox environment against security baselines and operational best practices. Findings delivered as prioritised action items with remediation handled end-to-end by Illumia engineers.",
-    items: ["Annual baseline audit", "Remediation roadmap", "Configuration hardening", "Post-remediation validation"],
-  },
-  {
-    n: "02",
-    icon: Globe2,
-    title: "Geo-Distributed Monitoring",
-    text: "24/7 observability across all nodes, clusters, and sites — latency, saturation, and error rates surfaced in a unified dashboard. Proactive alerting catches degradation before it becomes downtime.",
-    items: ["Multi-site cluster visibility", "Real-time metric collection", "Alerting & escalation runbooks", "Monthly uptime reports"],
-  },
-  {
-    n: "03",
-    icon: ShieldAlert,
-    title: "Quarterly Vulnerability Assessment",
-    text: "Four structured security reviews per year covering CVE exposure, network surface, and access controls. Each assessment closes with a risk-rated finding report and patch coordination.",
-    items: ["CVE scanning per node", "Network exposure review", "Privileged access audit", "Patch scheduling & coordination"],
-  },
-  {
-    n: "04",
-    icon: RefreshCcw,
-    title: "Proxmox Ecosystem Upgradation",
-    text: "Continuous alignment with the Proxmox VE release track — planned, tested, zero-downtime upgrades to PVE, PBS, and PMG components with full rollback procedures documented before every change.",
-    items: ["Version lifecycle tracking", "Staged rolling upgrades", "Pre-upgrade test validation", "Rollback runbook per upgrade"],
-  },
 ];
 
 const PROXMOX_PRODUCTS = [

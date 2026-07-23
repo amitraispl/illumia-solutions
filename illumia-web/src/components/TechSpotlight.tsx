@@ -6,7 +6,6 @@ import Link from "next/link";
 
 const proxmoxLogo = "/images/logos/proxmox-silver-partner.png";
 const erpnextLogo = "/images/logos/erpnext-logo.jpg";
-const netboxLogo  = "/images/logos/netbox-logo-light.png";
 
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
