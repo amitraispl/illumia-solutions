@@ -420,7 +420,7 @@ export default function HomePage() {
               </span>
               <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-5 md:mb-8">
                 Global Reach,{" "}
-                <span className="italic text-primary-subdued">Local Precision.</span>
+                <span className="italic text-primary-subdued">Local Touch.</span>
               </h2>
               <p className="text-stone-400 text-base md:text-lg leading-relaxed mb-6 md:mb-10 font-body">
                 Our headquarters give us global satellite offices, enabling strategic partnerships and
