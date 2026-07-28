@@ -6,13 +6,20 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 COPY . .
+ENV NODE_ENV=production
 RUN npm run build
 
-# Stage 2: Serve static export with nginx
-FROM nginx:alpine AS runner
+# Stage 2: Serve static export
+FROM node:20-alpine AS runner
+WORKDIR /app
 
-COPY --from=builder /app/out /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+RUN npm i -g serve@14 && \
+    addgroup -S app && adduser -S app -G app
 
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+COPY --from=builder /app/out ./out
+USER app
+
+EXPOSE 3000
+HEALTHCHECK --interval=30s --timeout=3s CMD wget -qO- http://localhost:3000/ || exit 1
+
+CMD ["serve", "-s", "out", "-l", "3000"]
