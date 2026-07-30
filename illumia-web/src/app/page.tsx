@@ -7,7 +7,6 @@ import PageHero from "@/components/PageHero";
 import { Marquee } from "@/components/ui/marquee";
 import SlideTextButton from "@/components/kokonutui/slide-text-button";
 import WhyChooseFlipCard from "@/components/WhyChooseFlipCard";
-import MagneticCta from "@/components/MagneticCta";
 const seqriteLogo = "/images/logos/seqrite-logo-partner.png";
 const forceLogo = "/images/logos/force-logo.png";
 const zextrasLogo = "/images/logos/zextras-partner-logo.png";
@@ -34,7 +33,7 @@ const stats = [
 
 const partnerLogos = [
   { src: seqriteLogo, alt: "Seqrite — Partner", width: 160, height: 60, href: "https://www.seqrite.com" },
-  { src: forceLogo, alt: "Force Networks — Partner", width: 120, height: 60, href: "https://www.forcetentech.com/new/index.html" },
+  { src: forceLogo, alt: "Force Ten Technologies — Partner", width: 120, height: 60, href: "https://www.forcetentech.com/new/index.html" },
   { src: zextrasLogo, alt: "Zextras — Partner", width: 120, height: 50, href: "https://www.zextras.com" },
   { src: proxmoxLogo, alt: "Proxmox — Silver Partner", width: 130, height: 60, href: "https://www.proxmox.com/en/partners/find-partner/all/partner/illumia-solutions" },
   { src: lifebankLogo, alt: "LifeBank Foundation — Partner", width: 140, height: 60, href: "https://lifebankfoundation.org" },
@@ -89,7 +88,7 @@ export default function HomePage() {
       {/* ─── Hero ─────────────────────────────────────────────────────────── */}
       <PageHero
         badge="Global IT Solutions"
-        badgeClassName="text-sm"
+        badgeClassName="text-sm lg:text-[17px]"
         title={
           <>
             Illuminating{" "}
@@ -97,7 +96,7 @@ export default function HomePage() {
             to SUCCESS
           </>
         }
-        description="Enterprise-grade cybersecurity, cloud, and open-source solutions — engineered for resilience, built for scale. From Kolkata to the globe, we deliver precision technology that powers ambitious businesses forward."
+        description="Enterprise-grade cybersecurity, cloud, and open-source solutions — engineered for resilience, built for scale. Globally we deliver precision technology that powers ambitious businesses forward."
         primaryCta={{ label: "Talk to Our Team", href: "/contact#contact-form" }}
         secondaryCta={{ label: "Learn About Us", href: "/about" }}
         imageSrc="/images/home/hero.jpg"
@@ -110,7 +109,7 @@ export default function HomePage() {
               <span className="font-headline text-3xl sm:text-4xl font-bold text-primary tabular-nums">
                 {stat.value}
               </span>
-              <span className="font-body text-[10px] sm:text-xs text-tertiary uppercase tracking-wider sm:tracking-widest leading-tight font-semibold line-clamp-2">
+              <span className="font-body text-[10px] sm:text-xs text-tertiary uppercase tracking-wider sm:tracking-widest leading-tight font-semibold">
                 {stat.label}
               </span>
             </div>
@@ -177,7 +176,7 @@ export default function HomePage() {
             {/* Left: editorial text + image */}
             <div className="lg:col-span-6 flex flex-col gap-8">
               <div>
-                <span className="font-body text-xs tracking-[0.25em] uppercase text-primary font-bold block mb-6">
+                <span className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-primary font-bold block mb-6">
                   Who We Are
                 </span>
                 <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.95] mb-5 md:mb-8">
@@ -251,7 +250,12 @@ export default function HomePage() {
                 </div>
               ))}
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 pt-2">
-                <MagneticCta href="/about" variant="primary">Our Story</MagneticCta>
+                <Link
+                  href="/about"
+                  className="block w-full sm:inline-block sm:w-auto px-8 py-4 rounded-xl font-body font-semibold tracking-wide text-center bg-primary text-white shadow-xl shadow-primary/20 hover:bg-primary-dark active:scale-[0.98] transition-[background-color,box-shadow] duration-200"
+                >
+                  Our Story
+                </Link>
                 <SlideTextButton
                   text="Get in Touch"
                   hoverText="Contact Us"
@@ -270,7 +274,7 @@ export default function HomePage() {
         <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row justify-between items-baseline mb-10 md:mb-16 gap-6 md:gap-8">
             <div>
-              <span className="text-primary font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-4">
+              <span className="text-primary font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase font-semibold block mb-4">
                 Core Competencies
               </span>
               <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.95]">
@@ -415,7 +419,7 @@ export default function HomePage() {
         <div className="relative z-10 max-w-screen-2xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
             <div>
-              <span className="font-body text-xs tracking-[0.25em] uppercase text-primary-subdued font-bold block mb-6">
+              <span className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-primary-subdued font-bold block mb-6">
                 Global Presence
               </span>
               <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-5 md:mb-8">
@@ -468,7 +472,7 @@ export default function HomePage() {
                 </span>
                 <div>
                   <h4 className="font-body text-xs font-bold uppercase tracking-widest text-primary-subdued mb-1">Strategic Partners</h4>
-                  <p className="text-stone-400 text-sm font-body leading-relaxed">Seqrite · Force Networks · Zextras · Proxmox · LifeBank Foundation · Apache Guacamole · NetBox Labs</p>
+                  <p className="text-stone-400 text-sm font-body leading-relaxed">Seqrite · Force Ten Technologies · Zextras · Proxmox · LifeBank Foundation · Apache Guacamole · NetBox Labs</p>
                 </div>
               </div>
             </div>
@@ -480,7 +484,7 @@ export default function HomePage() {
       <section className="py-12 md:py-20 bg-surface-low border-t border-outline-variant/20">
         <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
           <div className="mb-10 md:mb-16">
-            <span className="text-primary font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-4">
+            <span className="text-primary font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase font-semibold block mb-4">
               The Illumia Advantage
             </span>
             <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.95]">
@@ -515,7 +519,7 @@ export default function HomePage() {
 
             {/* Right column: 2×2 sub-grid at lg; below lg collapses (contents)
                 into the parent grid so every card is equal width. */}
-            <div className="contents lg:grid lg:grid-cols-2 lg:gap-4">
+            <div className="contents lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-4">
               {whyChoose.slice(1, 5).map((item, i) => (
                 <Link
                   key={item.title}
@@ -545,7 +549,7 @@ export default function HomePage() {
       {/* ─── CTA Strip ────────────────────────────────────────────────────── */}
       <section className="bg-surface py-10 md:py-16 border-t border-outline-variant/20">
         <div className="max-w-screen-2xl mx-auto px-6 md:px-12 text-center">
-          <span className="text-primary font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-4 md:mb-6">
+          <span className="text-primary font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase font-semibold block mb-4 md:mb-6">
             Start Today
           </span>
           <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 mb-5 md:mb-8 leading-tight">

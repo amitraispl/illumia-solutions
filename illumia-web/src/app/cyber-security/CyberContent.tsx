@@ -115,7 +115,7 @@ export default function CyberSecurityContent() {
             viewport={{ once: true, margin: "-60px" }}
             className="mb-14"
           >
-            <motion.span variants={fadeUp} className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
+            <motion.span variants={fadeUp} className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
               Core Competencies
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900">
@@ -224,7 +224,7 @@ export default function CyberSecurityContent() {
             whileInView="visible"
             viewport={{ once: true, margin: "-60px" }}
           >
-            <motion.span variants={fadeUp} className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-6">
+            <motion.span variants={fadeUp} className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-6">
               Specialized Intelligence
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900 mb-8 leading-tight">
@@ -282,7 +282,7 @@ export default function CyberSecurityContent() {
           aria-hidden="true"
         />
         <div className="relative z-10 max-w-screen-2xl mx-auto px-6 md:px-12">
-          <span className="font-body text-xs tracking-[0.25em] uppercase text-[#ffb3b3] font-bold block mb-6">
+          <span className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#ffb3b3] font-bold block mb-6">
             Always On
           </span>
           <h2 className="font-headline text-5xl md:text-6xl text-white mb-6 leading-tight">

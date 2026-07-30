@@ -99,7 +99,7 @@ export default function AboutPage() {
         <div className="max-w-screen-2xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <div className="lg:col-span-5">
-              <span className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-6">
+              <span className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-6">
                 Our Narrative
               </span>
               <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.95] mb-10">
@@ -187,7 +187,7 @@ export default function AboutPage() {
       <section className="py-16 lg:py-32 bg-white px-6 md:px-12">
         <div className="max-w-screen-2xl mx-auto">
           <div className="mb-16">
-            <span className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-4">
+            <span className="text-[#b31c33] font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase font-semibold block mb-4">
               Why Choose Us
             </span>
             <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900">
@@ -234,7 +234,7 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-14 lg:py-24 px-6 md:px-12 bg-[#f6f3f2]">
         <div className="max-w-screen-2xl mx-auto text-center">
-          <span className="text-[#b31c33] font-body text-xs tracking-[0.25em] uppercase font-semibold block mb-4">
+          <span className="text-[#b31c33] font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase font-semibold block mb-4">
             Partner With Us
           </span>
           <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900 mb-6">

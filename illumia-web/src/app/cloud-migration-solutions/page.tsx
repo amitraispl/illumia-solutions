@@ -141,7 +141,7 @@ export default function CloudMigrationPage() {
             viewport={{ once: true, margin: "-60px" }}
             className="mb-14"
           >
-            <motion.span variants={fadeUp} className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
+            <motion.span variants={fadeUp} className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
               Migration Pathways
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-4xl md:text-5xl text-stone-900">
@@ -197,7 +197,7 @@ export default function CloudMigrationPage() {
             viewport={{ once: true, margin: "-60px" }}
             className="mb-14"
           >
-            <motion.span variants={fadeUp} className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
+            <motion.span variants={fadeUp} className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
               Our Methodology
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-4xl md:text-5xl text-stone-900">
@@ -254,7 +254,7 @@ export default function CloudMigrationPage() {
             viewport={{ once: true, margin: "-60px" }}
             className="mb-14"
           >
-            <motion.span variants={fadeUp} className="font-body text-xs tracking-[0.25em] uppercase text-[#ffb3b3] font-bold block mb-4">
+            <motion.span variants={fadeUp} className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#ffb3b3] font-bold block mb-4">
               Platform Expertise
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-4xl md:text-5xl text-white">
@@ -291,7 +291,7 @@ export default function CloudMigrationPage() {
         <div className="max-w-screen-2xl mx-auto">
           <div className="bg-white rounded-2xl p-12 md:p-16 grid lg:grid-cols-2 gap-12 items-center border border-[#e2bebd]/30">
             <div>
-              <span className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
+              <span className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
                 Start Your Migration
               </span>
               <h2 className="font-headline text-4xl md:text-5xl text-stone-900 mb-6 leading-tight">

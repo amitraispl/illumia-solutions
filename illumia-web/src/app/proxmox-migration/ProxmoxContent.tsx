@@ -229,13 +229,13 @@ export default function ProxmoxContent() {
               </motion.h1>
 
               <motion.p variants={fadeUp} className="font-body text-[15px] text-[#5a4040] leading-[1.8] max-w-[520px] mb-9">
-                Proxmox Virtual Environment delivers KVM VMs, LXC containers, HA clustering, Ceph HCI storage, and live migration under an open-source AGPL licence — with no per-CPU fees, no seat counts, and no Broadcom renewal surprises.
+                Proxmox Virtual Environment delivers KVM VMs, LXC containers, HA clustering, Ceph HCI storage, and live migration under an open-source AGPL licence — with no per-CPU core fees, no seat counts, and no Broadcom renewal surprises.
               </motion.p>
 
               {/* Stats */}
               <motion.div variants={fadeIn} className="flex flex-wrap gap-x-8 gap-y-4 pb-9 mb-9 border-b border-[#e2bebd]/60">
                 {[
-                  { v: "60–80%", l: "vs VMware licensing" },
+                  { v: "60–80%", l: "Savings vs VMware" },
                   { v: "AGPL", l: "Open-source licence" },
                   { v: "0 data loss", l: "Migration methodology" },
                 ].map((s) => (
@@ -316,7 +316,7 @@ export default function ProxmoxContent() {
             className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12 pb-10 border-b border-[#e2bebd]/40"
           >
             <div>
-              <motion.span variants={fadeUp} className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-5">
+              <motion.span variants={fadeUp} className="font-body text-[11px] lg:text-[13px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-5">
                 Annual Maintenance Service
               </motion.span>
               <motion.h2
@@ -594,7 +594,7 @@ export default function ProxmoxContent() {
         <div className="max-w-[1400px] mx-auto">
 
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} className="mb-16">
-            <motion.span variants={fadeUp} className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-4">
+            <motion.span variants={fadeUp} className="font-body text-[11px] lg:text-[13px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-4">
               Proxmox Product Suite
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-4xl md:text-[2.8rem] text-white leading-[1.05] tracking-tight max-w-2xl">
@@ -650,7 +650,7 @@ export default function ProxmoxContent() {
         <div className="max-w-[1400px] mx-auto">
 
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} className="mb-16">
-            <motion.span variants={fadeUp} className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-4">
+            <motion.span variants={fadeUp} className="font-body text-[11px] lg:text-[13px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-4">
               Platform Capabilities
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-4xl md:text-[2.8rem] text-[#1c1b1b] leading-[1.05] tracking-tight max-w-xl">
@@ -788,7 +788,7 @@ export default function ProxmoxContent() {
 
           {/* Left: editorial */}
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
-            <motion.span variants={fadeUp} className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-6">
+            <motion.span variants={fadeUp} className="font-body text-[11px] lg:text-[13px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-6">
               The Broadcom Problem
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-4xl md:text-[2.8rem] text-white leading-[1.05] tracking-tight mb-6 max-w-lg">
@@ -805,8 +805,8 @@ export default function ProxmoxContent() {
           {/* Right: comparison */}
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
             <motion.div variants={fadeUp} className="grid grid-cols-2 gap-4 mb-3 pb-2.5 border-b border-white/[0.08]">
-              <span className="font-body text-[10px] tracking-[0.2em] uppercase text-white/38 font-semibold">VMware today</span>
-              <span className="font-body text-[10px] tracking-[0.2em] uppercase text-[#b31c33] font-semibold">Proxmox VE</span>
+              <span className="font-body text-[10px] tracking-[0.2em]  text-white/38 font-semibold">VMware Today</span>
+              <span className="font-body text-[10px] tracking-[0.2em]  text-[#b31c33] font-semibold">Proxmox VE</span>
             </motion.div>
             {COMPARISON.map((row, i) => (
               <motion.div key={i} variants={fadeUp} className="grid grid-cols-2 gap-4 py-3 border-b border-white/[0.07]">
@@ -827,7 +827,7 @@ export default function ProxmoxContent() {
         <div className="max-w-[1400px] mx-auto">
 
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} className="mb-14">
-            <motion.span variants={fadeUp} className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-4">
+            <motion.span variants={fadeUp} className="font-body text-[11px] lg:text-[13px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-4">
               Illumia Migration Methodology
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-4xl md:text-[2.8rem] text-[#1c1b1b] leading-[1.05] tracking-tight max-w-2xl">
@@ -872,7 +872,7 @@ export default function ProxmoxContent() {
         <div className="relative max-w-[1400px] mx-auto px-6 md:px-10 xl:px-16 py-20 md:py-28 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
           <div className="max-w-2xl">
             <div className="flex items-center gap-2.5 mb-5">
-              <img src={IMG.logo} alt="Proxmox" className="h-7 w-auto brightness-0 invert opacity-50" decoding="async" />
+              <img src={IMG.logo} alt="Proxmox" className="h-7 w-auto" decoding="async" />
               <span className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold">Silver Partner</span>
             </div>
             <h2 className="font-headline text-4xl md:text-[2.8rem] text-white leading-[1.05] tracking-tight mb-5">

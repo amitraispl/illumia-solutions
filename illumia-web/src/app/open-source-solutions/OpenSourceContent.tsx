@@ -121,7 +121,7 @@ export default function OpenSourceSolutionsContent() {
             viewport={{ once: true, margin: "-60px" }}
             className="mb-16"
           >
-            <motion.span variants={fadeUp} className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
+            <motion.span variants={fadeUp} className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
               Core Solutions Architecture
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900">

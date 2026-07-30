@@ -125,9 +125,6 @@ export default function Footer() {
           {/* Brand column */}
           <div className="footer-brand lg:col-span-4 flex flex-col gap-7 lg:pr-8 lg:border-r lg:border-white/[0.20]">
             <div className="flex flex-col gap-4">
-              <span className="font-body text-[9px] tracking-[0.32em] uppercase text-primary font-bold">
-                Illuminating the Path to Success
-              </span>
               <Link href="/" className="flex items-center shrink-0 w-fit group">
                 <Image
                   src={LOGO_URL}
@@ -137,6 +134,9 @@ export default function Footer() {
                   className="h-[40px] md:h-[48px] w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
                 />
               </Link>
+              <span className="font-body text-[9px] tracking-[0.32em] uppercase text-primary font-bold">
+                Illuminating the Path to Success
+              </span>
             </div>
 
             <p className="text-stone-400 font-body text-[12.5px] leading-[1.65] max-w-[300px]">
@@ -225,7 +225,7 @@ export default function Footer() {
                     </svg>
                   </span>
                   <div className="flex flex-col gap-0.5">
-                    <span className="font-body text-[12px] text-stone-300">24/7 Multi-Timezone Support</span>
+                    <span className="font-body text-[12px] text-stone-300">Talk to Sales</span>
                     <a
                       href="tel:+919332045178"
                       className="group/ph inline-flex items-center gap-0 font-body text-[12px] text-stone-400 hover:text-white transition-colors duration-200 mt-1"

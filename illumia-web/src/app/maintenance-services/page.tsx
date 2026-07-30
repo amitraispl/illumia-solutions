@@ -144,7 +144,7 @@ export default function MaintenanceServicesPage() {
             viewport={{ once: true, margin: "-60px" }}
             className="mb-14"
           >
-            <motion.span variants={fadeUp} className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
+            <motion.span variants={fadeUp} className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
               Our Process
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-4xl md:text-5xl text-stone-900">
@@ -229,7 +229,7 @@ export default function MaintenanceServicesPage() {
                   variants={fadeUp}
                   className="bg-[#f6f3f2] rounded-2xl p-8 border border-transparent hover:bg-white hover:border-[#e2bebd]/40 hover:shadow-xl hover:shadow-stone-200/60 transition-all duration-300"
                 >
-                  <span className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-3">
+                  <span className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-3">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h4 className="font-headline text-lg text-stone-900 mb-2">{f.title}</h4>
@@ -258,7 +258,7 @@ export default function MaintenanceServicesPage() {
                   variants={fadeUp}
                   className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-[#b31c33]/30 transition-all duration-300"
                 >
-                  <span className="font-body text-xs tracking-[0.25em] uppercase text-[#ffb3b3] font-bold block mb-3">
+                  <span className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#ffb3b3] font-bold block mb-3">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h4 className="font-headline text-lg text-white mb-2">{f.title}</h4>
@@ -316,7 +316,7 @@ export default function MaintenanceServicesPage() {
         <div className="max-w-screen-2xl mx-auto">
           <div className="bg-white rounded-2xl p-12 md:p-16 grid lg:grid-cols-2 gap-12 items-center border border-[#e2bebd]/30">
             <div>
-              <span className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
+              <span className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
                 Always On
               </span>
               <h2 className="font-headline text-4xl md:text-5xl text-stone-900 mb-6 leading-tight">

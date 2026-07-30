@@ -100,7 +100,7 @@ export default function RichServicePageTemplate({
           >
             <motion.span
               variants={fadeUp}
-              className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4"
+              className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4"
             >
               {badge}
             </motion.span>

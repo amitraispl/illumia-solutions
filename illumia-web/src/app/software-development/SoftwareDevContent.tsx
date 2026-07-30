@@ -196,7 +196,7 @@ export default function SoftwareDevelopmentContent() {
             viewport={{ once: true, margin: "-60px" }}
             className="mb-16"
           >
-            <motion.span variants={fadeUp} className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
+            <motion.span variants={fadeUp} className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
               Core Service Architecture
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900">
@@ -334,7 +334,7 @@ export default function SoftwareDevelopmentContent() {
             viewport={{ once: true, margin: "-60px" }}
             className="mb-16"
           >
-            <motion.span variants={fadeUp} className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
+            <motion.span variants={fadeUp} className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
               How We Work
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900 mb-5">
@@ -397,7 +397,7 @@ export default function SoftwareDevelopmentContent() {
             viewport={{ once: true, margin: "-60px" }}
             className="mb-16"
           >
-            <motion.span variants={fadeUp} className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
+            <motion.span variants={fadeUp} className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
               Full Transparency
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900">
@@ -440,7 +440,7 @@ export default function SoftwareDevelopmentContent() {
             className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16"
           >
             <div className="max-w-xl">
-              <motion.span variants={fadeUp} className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
+              <motion.span variants={fadeUp} className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
                 Agile Delivery
               </motion.span>
               <motion.h2 variants={fadeUp} className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900 mb-5">

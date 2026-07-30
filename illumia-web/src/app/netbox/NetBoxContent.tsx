@@ -272,7 +272,7 @@ export default function NetBoxContent() {
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-[48%_52%] gap-14 lg:gap-40 items-center">
 
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
-            <motion.span variants={fadeUp} className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-5">
+            <motion.span variants={fadeUp} className="font-body text-[11px] lg:text-[13px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-5">
               The Documentation Problem
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-4xl md:text-[2.8rem] text-white leading-[1.05] tracking-tight mb-6">
@@ -318,7 +318,7 @@ export default function NetBoxContent() {
         <div className="max-w-[1400px] mx-auto">
 
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} className="mb-16">
-            <motion.span variants={fadeUp} className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-4">
+            <motion.span variants={fadeUp} className="font-body text-[11px] lg:text-[13px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-4">
               Core Modules
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-4xl md:text-[2.8rem] text-[#1c1b1b] leading-[1.05] tracking-tight max-w-2xl">
@@ -459,7 +459,7 @@ export default function NetBoxContent() {
 
         <div className="relative max-w-[1400px] mx-auto grid lg:grid-cols-[1fr_auto] gap-10 items-center">
           <div className="max-w-2xl">
-            <span className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-5">
+            <span className="font-body text-[11px] lg:text-[13px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-5">
               Illumia Delivery
             </span>
             <h2 className="font-headline text-4xl md:text-[2.8rem] text-white leading-[1.05] tracking-tight mb-5">

@@ -650,10 +650,10 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Support Hours */}
+              {/* Sales Contact */}
               <div className="space-y-4">
                 <span className="font-body text-xs uppercase tracking-widest text-[#b31c33] font-bold">
-                  Support Hours
+                  Sales Contact
                 </span>
                 <div className="bg-white rounded-2xl p-6 border border-[#e2bebd]/30">
                   <div className="flex items-start gap-3">
@@ -662,11 +662,11 @@ export default function ContactPage() {
                     </svg>
                     <div>
                       <p className="font-body text-sm text-stone-900 font-semibold mb-1">
-                        24/7 Multi-Timezone Support
+                        Talk to Sales
                       </p>
                       <p className="font-body text-xs text-[#5a4040] leading-relaxed">
-                        Our teams operate around the clock across time zones —
-                        someone is always ready to help.
+                        Speak directly with our sales team about your requirements —
+                        we typically respond within one business day.
                       </p>
                       <a
                         href="tel:+919332045178"

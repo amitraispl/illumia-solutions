@@ -127,7 +127,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
     subtitle: "80% licensing cost reduction — financial-sector migration",
     label: "80% Licensing Cost Reduction via VMware to Proxmox VE Migration",
     tag: "Infrastructure · Proxmox",
-    desc: "Forceten Technologies, a financial software developer, escaped unsustainable post-Broadcom VMware licensing via a phased, node-by-node migration to Proxmox VE — zero new hardware, zero VMs lost, every downtime threshold met.",
+    desc: "Force Ten Technologies, a financial software developer, escaped unsustainable post-Broadcom VMware licensing via a phased, node-by-node migration to Proxmox VE — zero new hardware, zero VMs lost, every downtime threshold met.",
     shortDesc: "Financial-sector platform independence",
     highlights: [
       "80% reduction in annual licensing costs",
@@ -1103,6 +1103,39 @@ export default function Navbar() {
                           </AnimatePresence>
                         </div>
                       ))}
+
+                      {/* Platform Deep-Dives — mirrors desktop spotlight block */}
+                      <div className="ml-3 pt-3 pb-4">
+                        <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary font-bold mb-2.5">
+                          Platform Deep-Dives
+                        </p>
+                        <div className="flex flex-col gap-2">
+                          {[
+                            { href: "/on-premise-private-cloud-solutions/", icon: "/images/icons/proxmox-icon.png", label: "Proxmox VE", sub: "Private Cloud · Zero licensing" },
+                            { href: "/netbox-platform/", icon: "/images/icons/netbox-icon.png", label: "NetBox Platform", sub: "Network source of truth" },
+                            { href: "/odoo/", icon: "/images/logos/odoo-logo.png", label: "Odoo", sub: "80+ integrated business apps" },
+                            { href: "/erpnext/", icon: "/images/logos/erpnext-logo.jpg", label: "ERPNext", sub: "Open-source ERP suite" },
+                          ].map((pl) => (
+                            <Link
+                              key={pl.href}
+                              href={pl.href}
+                              onClick={() => setMobileOpen(false)}
+                              className="flex items-center gap-3 rounded-lg border border-outline-variant/30 px-3.5 py-2.5 hover:border-primary/30 hover:bg-primary/[0.04] transition-colors duration-200"
+                            >
+                              <span className="shrink-0 w-7 h-7 rounded-md bg-stone-100 flex items-center justify-center overflow-hidden">
+                                <img src={pl.icon} alt={pl.label} className="w-5 h-5 object-contain" />
+                              </span>
+                              <span className="min-w-0 flex-1">
+                                <span className="block font-body text-sm font-semibold text-stone-800 leading-snug truncate">
+                                  {pl.label}
+                                </span>
+                                <span className="block font-body text-[11px] text-stone-400 leading-snug">{pl.sub}</span>
+                              </span>
+                              <ExternalArrow className="w-3.5 h-3.5 text-stone-300 shrink-0" />
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>

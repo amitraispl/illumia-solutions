@@ -126,7 +126,7 @@ const caseStudies = [
     tag: "Infrastructure · Proxmox",
     title: "80% Licensing Cost Reduction via VMware to Proxmox VE Migration",
     summary:
-      "Forceten Technologies Pvt. Ltd., a financial software developer, faced unsustainable VMware licensing after Broadcom's acquisition. ISPL delivered a phased, rolling migration to Proxmox VE — zero new hardware, zero VMs lost, every downtime threshold met.",
+      "Force Ten Technologies Pvt. Ltd., a financial software developer, faced unsustainable VMware licensing after Broadcom's acquisition. ISPL delivered a phased, rolling migration to Proxmox VE — zero new hardware, zero VMs lost, every downtime threshold met.",
     body:
       "With no new hardware permitted and workloads classified across three downtime tiers, ISPL executed a node-by-node rolling migration: decommissioning each VMware host, commissioning it as a Proxmox VE node, migrating workloads offline via Proxmox's built-in tooling, and validating with application owners. Existing dual SAN headroom carved the new LUNs, and both Veeam servers were repurposed as Proxmox Backup Server nodes with encryption at rest.",
     image:
@@ -260,7 +260,7 @@ export default function CaseStudiesPage() {
         <div className="max-w-screen-2xl mx-auto">
           <div className="grid lg:grid-cols-12 gap-10 items-end mb-12">
             <div className="lg:col-span-7">
-              <span className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
+              <span className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
                 Impact at a Glance
               </span>
               <h2 className="font-headline text-3xl md:text-5xl text-stone-900 leading-tight">
@@ -301,7 +301,7 @@ export default function CaseStudiesPage() {
       >
         <div className="max-w-screen-2xl mx-auto">
           <div className="mb-14 md:mb-20 max-w-3xl">
-            <span className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
+            <span className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-4">
               Selected Engagements
             </span>
             <h2 className="font-headline text-3xl md:text-5xl text-stone-900 leading-tight">
@@ -413,7 +413,7 @@ export default function CaseStudiesPage() {
         <div className="max-w-screen-2xl mx-auto">
           <div className="grid lg:grid-cols-12 gap-10 items-end mb-12 md:mb-16">
             <div className="lg:col-span-7">
-              <span className="font-body text-xs tracking-[0.25em] uppercase text-[#ffb3b3] font-bold block mb-4">
+              <span className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#ffb3b3] font-bold block mb-4">
                 How We Deliver
               </span>
               <h2 className="font-headline text-3xl md:text-5xl text-white leading-tight">

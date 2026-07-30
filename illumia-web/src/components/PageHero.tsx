@@ -64,7 +64,7 @@ export default function PageHero({
         >
           <motion.span
             variants={fadeUp}
-            className={`font-body tracking-[0.25em] uppercase text-primary font-bold mb-6 block ${badgeClassName || "text-xs"}`}
+            className={`font-body tracking-[0.25em] uppercase text-primary font-bold mb-6 block ${badgeClassName || "text-[13px] lg:text-[15px]"}`}
           >
             {badge}
           </motion.span>

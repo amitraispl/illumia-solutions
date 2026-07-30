@@ -188,10 +188,10 @@ export default function ForcetenMigrationCaseStudy() {
                 Achieving <span className="text-[#b31c33]">80% Licensing Cost Reduction</span> via VMware to Proxmox VE Migration
               </h1>
               <p className="pm-hero-fade mt-6 font-headline text-xl italic text-[#5a4040] lg:text-2xl">
-                Forceten Technologies Pvt. Ltd. — Financial Software Developer
+                Force Ten Technologies Pvt. Ltd. — Financial Software Developer
               </p>
               <p className="pm-hero-fade mt-6 max-w-3xl text-base leading-relaxed text-[#5a4040] lg:text-lg">
-                Following Broadcom&apos;s VMware acquisition, Forceten Technologies — a software developer serving
+                Following Broadcom&apos;s VMware acquisition, Force Ten Technologies — a software developer serving
                 Microfinance, NBFC, co-operative societies and rural banks — faced unsustainable licensing costs.
                 ISPL delivered a phased, rolling migration from VMware vSphere and Veeam to Proxmox VE and
                 Proxmox Backup Server — zero new hardware, zero VMs lost, every downtime threshold met.
@@ -291,7 +291,7 @@ export default function ForcetenMigrationCaseStudy() {
               <h2 className="mt-3 font-headline text-3xl lg:text-4xl">A mature enterprise setup under financial pressure.</h2>
               <div className="mt-6 space-y-4 text-base leading-relaxed text-[#5a4040]">
                 <p>
-                  Forceten Technologies Pvt. Ltd., a software developer providing services to Microfinance, NBFC,
+                  Force Ten Technologies Pvt. Ltd., a software developer providing services to Microfinance, NBFC,
                   co-operative societies, rural banks and other financial institutions, operated a business-critical
                   IT infrastructure built around a multi-node VMware vSphere cluster — hosting everything from
                   mission-critical financial applications to supporting business functions, all demanding high availability.

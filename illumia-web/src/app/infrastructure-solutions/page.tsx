@@ -280,7 +280,7 @@ export default function InfrastructureSolutionsPage() {
       {/* ─── CTA ──────────────────────────────────────────────────────────── */}
       <section className="py-20 bg-[#f6f3f2] px-6 md:px-12">
         <div className="max-w-screen-2xl mx-auto text-center">
-          <span className="font-body text-xs tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-6">
+          <span className="font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase text-[#b31c33] font-bold block mb-6">
             Start Today
           </span>
           <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl text-stone-900 mb-6">

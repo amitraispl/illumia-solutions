@@ -59,7 +59,7 @@ export default function TechSpotlight() {
           className="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-8"
         >
           <div>
-            <motion.span variants={fadeUp} className="text-primary font-body text-xs tracking-[0.25em] uppercase font-bold block mb-4">
+            <motion.span variants={fadeUp} className="text-primary font-body text-[13px] lg:text-[15px] tracking-[0.25em] uppercase font-bold block mb-4">
               Technology Focus Areas
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-[0.93] tracking-tight">
@@ -85,7 +85,7 @@ export default function TechSpotlight() {
           <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
             <Link
               href="/on-premise-private-cloud-solutions"
-              className="group relative block h-full bg-primary rounded-2xl p-6 sm:p-8 lg:p-10 text-white overflow-hidden transition-[background-color,box-shadow] duration-300 hover:bg-primary-dark hover:shadow-2xl hover:shadow-primary/40"
+              className="group relative flex flex-col h-full bg-primary rounded-2xl p-6 sm:p-8 lg:p-10 text-white overflow-hidden transition-[background-color,box-shadow] duration-300 hover:bg-primary-dark hover:shadow-2xl hover:shadow-primary/40"
             >
               {/* Subtle noise texture overlay */}
               <div className="pointer-events-none absolute inset-0 opacity-[0.04] rounded-2xl"
@@ -99,7 +99,7 @@ export default function TechSpotlight() {
                   alt="Proxmox Silver Partner"
                   fill
                   sizes="(min-width: 1024px) 208px, (min-width: 640px) 160px, 128px"
-                  className="object-contain object-right brightness-0 invert"
+                  className="object-contain object-right"
                 />
               </div>
 
@@ -113,7 +113,7 @@ export default function TechSpotlight() {
                 Escape the VMware Tax.{" "}
                 <span className="italic font-normal text-white/70">For Good.</span>
               </h3>
-              <p className="relative text-white/70 text-sm font-body leading-[1.7] mb-8 max-w-xl">
+              <p className="relative text-white/70 text-sm font-body leading-[1.7] mb-8 max-w-xl flex-1">
                 Broadcom&apos;s VMware acquisition sent licensing costs through the roof — some enterprises saw 10× increases overnight. Proxmox VE delivers identical enterprise virtualisation — VMs, containers, HA clusters, live migration — at zero licensing cost. We handle the migration end-to-end with zero data loss.
               </p>
 
@@ -162,7 +162,7 @@ export default function TechSpotlight() {
                 <span className="italic font-normal text-primary">Governs You.</span>
               </h3>
               <p className="relative text-stone-500 text-sm font-body leading-[1.7] mb-6 flex-1">
-                The EU AI Act is live. AI systems are proliferating across enterprises at a pace regulators are scrambling to match. Most organisations have no governance framework — no risk classification, no audit trail, no accountability layer. Illumia builds structured AI governance programs that let you deploy AI with confidence, not liability. We align your policies to EU, NIST AI RMF, and ISO 42001 standards.
+                The EU AI Act is live, and most organisations still have no governance framework — no risk classification, no audit trail, no accountability layer. Illumia builds structured AI governance programs aligned to EU, NIST AI RMF, and ISO 42001 standards.
               </p>
 
               <div className="relative grid grid-cols-2 gap-x-4 gap-y-2.5 mb-6">
@@ -199,7 +199,7 @@ export default function TechSpotlight() {
                 <span className="italic font-normal" style={{ color: "#00f2d4" }}>Precisely.</span>
               </h3>
               <p className="text-stone-500 text-sm font-body leading-[1.7] mb-6 flex-1">
-                Spreadsheets and tribal knowledge aren&apos;t a network strategy — they&apos;re a liability. NetBox is your single source of truth for IP addressing, DCIM, and rack management. Integrates natively with Ansible, Terraform, and Nautobot.
+                Spreadsheets and tribal knowledge aren&apos;t a network strategy — they&apos;re a liability. NetBox is your single source of truth for IP addressing, DCIM, and rack management, integrating natively with Ansible, Terraform, and Nautobot.
               </p>
 
               <div className="flex flex-wrap gap-2 mb-6">
@@ -222,7 +222,7 @@ export default function TechSpotlight() {
           <motion.div variants={fadeUp} className="lg:col-span-2 h-full">
             <Link
               href="/erpnext"
-              className="group relative block h-full bg-on-surface rounded-2xl p-6 sm:p-8 lg:p-10 text-white overflow-hidden transition-[background-color,box-shadow] duration-300 hover:bg-[#111010] hover:shadow-2xl hover:shadow-black/50"
+              className="group relative flex flex-col h-full bg-on-surface rounded-2xl p-6 sm:p-8 lg:p-10 text-white overflow-hidden transition-[background-color,box-shadow] duration-300 hover:bg-[#111010] hover:shadow-2xl hover:shadow-black/50"
             >
               {/* Subtle noise */}
               <div className="pointer-events-none absolute inset-0 opacity-[0.03] rounded-2xl"
@@ -248,7 +248,7 @@ export default function TechSpotlight() {
                 Enterprise ERP.{" "}
                 <span className="italic font-normal" style={{ color: "#0088fe" }}>No Enterprise Price Tag.</span>
               </h3>
-              <p className="relative text-stone-400 text-sm font-body leading-[1.7] mb-8 max-w-xl">
+              <p className="relative text-stone-400 text-sm font-body leading-[1.7] mb-8 max-w-xl flex-1">
                 SAP, Oracle, and Dynamics are priced for Fortune 500 budgets. ERPNext is 100% open-source — accounting, manufacturing, HR, CRM, inventory, and project management — deployed on your own infrastructure with no per-seat licensing and no vendor lock-in.
               </p>
 
