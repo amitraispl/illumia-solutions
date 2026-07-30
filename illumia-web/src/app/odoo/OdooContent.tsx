@@ -250,7 +250,7 @@ export default function OdooContent() {
                 <img
                   src={IMG.logo}
                   alt="Odoo"
-                  className="h-9 md:h-11 w-auto object-contain"
+                  className="h-14 md:h-16 w-auto object-contain"
                   loading="eager"
                   decoding="async"
                 />

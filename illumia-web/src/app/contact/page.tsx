@@ -662,7 +662,7 @@ export default function ContactPage() {
                     </svg>
                     <div>
                       <p className="font-body text-sm text-stone-900 font-semibold mb-1">
-                        Talk to Sales
+                        Get in Touch with Our Team
                       </p>
                       <p className="font-body text-xs text-[#5a4040] leading-relaxed">
                         Speak directly with our sales team about your requirements —

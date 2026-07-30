@@ -134,7 +134,7 @@ export default function Footer() {
                   className="h-[40px] md:h-[48px] w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
                 />
               </Link>
-              <span className="font-body text-[9px] tracking-[0.32em] uppercase text-primary font-bold">
+              <span className="font-body text-[9px] tracking-[0.32em] uppercase text-white font-bold">
                 Illuminating the Path to Success
               </span>
             </div>
@@ -225,7 +225,7 @@ export default function Footer() {
                     </svg>
                   </span>
                   <div className="flex flex-col gap-0.5">
-                    <span className="font-body text-[12px] text-stone-300">Talk to Sales</span>
+                    <span className="font-body text-[12px] text-stone-300">Get in Touch with Our Team</span>
                     <a
                       href="tel:+919332045178"
                       className="group/ph inline-flex items-center gap-0 font-body text-[12px] text-stone-400 hover:text-white transition-colors duration-200 mt-1"

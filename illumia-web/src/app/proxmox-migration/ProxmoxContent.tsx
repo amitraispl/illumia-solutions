@@ -76,12 +76,12 @@ function BrowserFrame({
 }
 
 const COMPARISON = [
-  { before: "Per-core subscription — no perpetual licences", after: "AGPL open-source, zero seat fees" },
-  { before: "vCenter required for HA", after: "Built-in cluster management" },
-  { before: "vSAN billed separately", after: "Ceph integrated, no cost" },
-  { before: "Broadcom vendor lock-in", after: "Community + optional SLA" },
-  { before: "Thick-client vSphere admin", after: "Browser-native web console" },
-  { before: "ESXi proprietary kernel", after: "Debian, upstream patches same day" },
+  { before: "Free ESXi hypervisor tier discontinued", after: "Always free, no tier removal risk" },
+  { before: "DRS is an Enterprise Plus–only feature, not in Standard", after: "Cluster Resource Scheduler built into every install (v9.2+)" },
+  { before: "vSAN, NSX, Aria bundled only in higher-tier editions", after: "Ceph and firewall integrated at no extra tier" },
+  { before: "No backup tool bundled with vSphere itself", after: "Proxmox Backup Server — free, open-source (separate install)" },
+  { before: "Per-core licensing with a 16-core minimum per CPU", after: "No per-core minimums or core-count penalties" },
+  { before: "Feature access split across four consolidated SKUs (VCF, VVF, Standard, Enterprise Plus)", after: "Full feature set available in one free download" },
 ];
 
 const REMAINING_CAPS = [
@@ -202,21 +202,14 @@ export default function ProxmoxContent() {
             <motion.div variants={stagger} initial="hidden" animate="visible" className="flex flex-col gap-0">
 
               {/* Proxmox logo — big */}
-              <motion.div variants={fadeUp} className="mb-5">
+              <motion.div variants={fadeUp} className="mb-7">
                 <img
                   src={IMG.logo}
-                  alt="Proxmox"
-                  className="h-8 md:h-10 w-auto object-contain"
+                  alt="Proxmox Silver Partner"
+                  className="h-28 md:h-36 w-auto object-contain"
                   loading="eager"
                   decoding="async"
                 />
-              </motion.div>
-
-              {/* Badge */}
-              <motion.div variants={fadeUp} className="flex items-center gap-3 mb-7">
-                <span className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold">
-                  Silver Partner
-                </span>
               </motion.div>
 
               <motion.h1
@@ -530,9 +523,9 @@ export default function ProxmoxContent() {
             >
               <div className="rounded-lg bg-[#b31c33]/[0.025] border border-[#e2bebd]/50 px-4 py-3 space-y-2 shrink-0">
                 {[
-                  { pkg: "PVE", from: "8.1.3", to: "8.2.4", delay: 0 },
-                  { pkg: "PBS", from: "3.2.1", to: "3.3.0", delay: 1.1 },
-                  { pkg: "PMG", from: "8.0.2", to: "8.1.1", delay: 2.2 },
+                  { pkg: "PVE", from: "8.1.3", to: "9.2.4", delay: 0 },
+                  { pkg: "PBS", from: "3.2.1", to: "4.2.3", delay: 1.1 },
+                  { pkg: "PMG", from: "8.0.2", to: "9.1.2", delay: 2.2 },
                 ].map((v) => (
                   <motion.div key={v.pkg} className="flex items-center gap-2 font-mono text-[11px]"
                     animate={{ opacity: [0.35, 1, 0.35] }}
@@ -619,7 +612,7 @@ export default function ProxmoxContent() {
                 <motion.div variants={fadeUp} className={`flex flex-col gap-5 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
                   <div className="flex items-baseline gap-3">
                     <span className="font-headline italic text-[#b31c33] text-2xl leading-none tabular-nums">{p.n}</span>
-                    <span className="font-body text-[9px] tracking-[0.28em] uppercase text-white/28 font-semibold">{p.abbr}</span>
+                    <span className="font-body text-[12px] tracking-[0.28em] uppercase text-white font-semibold">{p.abbr}</span>
                   </div>
                   <h3 className="font-headline text-3xl md:text-[2rem] text-white leading-[1.1] tracking-tight">
                     {p.name}
@@ -784,10 +777,10 @@ export default function ProxmoxContent() {
 
       {/* ━━━ BROADCOM PROBLEM ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <section className="bg-[#0d0c0c] py-20 md:py-28 px-6 md:px-10 xl:px-16">
-        <div className="max-w-[1400px] mx-auto grid lg:grid-cols-[55%_45%] gap-14 lg:gap-20 items-start">
+        <div className="max-w-[1400px] mx-auto grid lg:grid-cols-[minmax(0,55%)_minmax(0,45%)] gap-14 lg:gap-20 items-start">
 
           {/* Left: editorial */}
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} className="min-w-0">
             <motion.span variants={fadeUp} className="font-body text-[11px] lg:text-[13px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-6">
               The Broadcom Problem
             </motion.span>
@@ -803,14 +796,14 @@ export default function ProxmoxContent() {
           </motion.div>
 
           {/* Right: comparison */}
-          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
+          <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} className="min-w-0">
             <motion.div variants={fadeUp} className="grid grid-cols-2 gap-4 mb-3 pb-2.5 border-b border-white/[0.08]">
-              <span className="font-body text-[10px] tracking-[0.2em]  text-white/38 font-semibold">VMware Today</span>
-              <span className="font-body text-[10px] tracking-[0.2em]  text-[#b31c33] font-semibold">Proxmox VE</span>
+              <span className="font-body text-[14px] tracking-[0.2em]  text-white font-semibold">VMware Today</span>
+              <span className="font-body text-[14px] tracking-[0.2em]  text-[#b31c33] font-semibold">Proxmox VE</span>
             </motion.div>
             {COMPARISON.map((row, i) => (
               <motion.div key={i} variants={fadeUp} className="grid grid-cols-2 gap-4 py-3 border-b border-white/[0.07]">
-                <span className="font-body text-[13px] text-white/35 line-through decoration-[#b31c33]/30 leading-snug">
+                <span className="font-body text-[13px] text-white/35 leading-snug">
                   {row.before}
                 </span>
                 <span className="font-body text-[13px] text-white font-medium leading-snug">

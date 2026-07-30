@@ -303,7 +303,7 @@ export default function ERPNextContent() {
               <img
                 src={IMG.logo}
                 alt="ERPNext"
-                className="h-9 md:h-11 w-auto rounded-lg object-contain"
+                className="h-14 md:h-16 w-auto rounded-lg object-contain"
                 loading="eager"
                 decoding="async"
               />

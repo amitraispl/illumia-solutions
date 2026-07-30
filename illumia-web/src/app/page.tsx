@@ -52,25 +52,25 @@ const whyChoose = [
     title: "Comprehensive Cybersecurity",
     href: "/cyber-security",
     description:
-      "Robust cybersecurity services covering IT risk management, application security, mobile and cloud security. We help you navigate complex regulatory landscapes and ensure data privacy with PCI-DSS, ISO 27001, HIPAA, and GDPR compliance.",
+      "Robust cybersecurity services covering IT risk management, application security, and cloud security — with compliance built in for PCI-DSS, ISO 27001, HIPAA, and GDPR from day one.",
   },
   {
     title: "Advanced Cloud Solutions",
     href: "/cloud-services",
     description:
-      "Cloud services designed to optimise your operations, enhance security, and ensure seamless scalability. Whether you need hosting, application services, migration, or maintenance, we provide comprehensive solutions that scale for tomorrow.",
+      "Cloud services designed to optimise your operations and strengthen security — hosting, application services, migration, and maintenance, delivered as solutions engineered to scale with your business.",
   },
   {
     title: "Innovative Open-Source",
     href: "/application-solutions",
     description:
-      "We leverage the flexibility and cost-effectiveness of open-source technologies to deliver tailored infrastructure, application, and cybersecurity solutions — including hyperconverged infrastructure, high-performance block storage, and private cloud.",
+      "We leverage the flexibility and cost-effectiveness of open-source technology to deliver tailored infrastructure, application, and security solutions — including hyperconverged systems and private cloud.",
   },
   {
     title: "Global Reach, Local Touch",
     href: "/about",
     description:
-      "With a global presence, Illumia Solutions is well-equipped to meet your IT needs regardless of location. Our team operates across multiple time zones, ensuring prompt and effective service whenever you need it.",
+      "With a global presence, Illumia Solutions meets your IT needs regardless of location — our team operates across multiple time zones, ensuring prompt, effective service wherever you need it.",
   },
   {
     title: "Continuous Support",
@@ -493,7 +493,7 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1.4fr] gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1fr_1.4fr] gap-4 lg:items-start">
 
             {/* Left column: RED anchor + flip card stacked.
                 Below lg the wrapper collapses (contents) so all 6 cards share
@@ -501,10 +501,10 @@ export default function HomePage() {
             <div className="contents lg:flex lg:flex-col lg:gap-4">
               <Link
                 href={whyChoose[0].href}
-                className="group bg-primary rounded-2xl p-6 md:p-8 lg:p-10 text-white hover:bg-primary-dark transition-colors duration-300 flex flex-col gap-4 flex-1"
+                className="group bg-primary rounded-2xl p-6 md:p-8 lg:p-10 text-white hover:bg-primary-dark transition-colors duration-300 flex flex-col gap-5 flex-1"
               >
                 <h3 className="font-headline text-2xl text-white">{whyChoose[0].title}</h3>
-                <p className="font-body text-sm text-white/80 leading-relaxed flex-1">{whyChoose[0].description}</p>
+                <p className="font-body text-sm text-white/80 leading-relaxed">{whyChoose[0].description}</p>
                 <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] uppercase tracking-widest text-white/70">
                   Explore Our Expertise
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
