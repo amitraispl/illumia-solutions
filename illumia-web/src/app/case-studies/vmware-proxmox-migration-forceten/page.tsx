@@ -34,8 +34,8 @@ const glance = [
 
 const challenges = [
   {
-    title: "Escalating VMware Licensing Costs",
-    body: "Broadcom's acquisition of VMware restructured the licensing model toward subscription-based pricing at considerably higher price points — a sharp, unavoidable increase in expenditure for FTT with no proportional gain in functionality or business value.",
+    title: "Licensing Cost Review",
+    body: "FTT's platform licensing was due for renewal under a subscription model. Leadership targeted a structural reduction in recurring virtualisation spend without reducing capability.",
   },
   {
     title: "Backup Infrastructure Tied to the Platform",
@@ -92,7 +92,7 @@ const phases = [
   {
     num: "03",
     title: "Rolling Node-by-Node Migration",
-    body: "For every remaining VMware host: workloads evacuated to other VMware nodes → host removed from vSphere → Proxmox VE installed → host joined the growing PVE cluster → VMs migrated offline → validated with application owners. Repeated until the VMware vSphere environment ceased to exist entirely. All migrations stayed within their downtime-tier windows.",
+    body: "For every remaining VMware host: workloads evacuated to other VMware nodes → host removed from vSphere → Proxmox VE installed → host joined the growing PVE cluster → VMs migrated offline → validated with application owners. Repeated until all hosts had been re-provisioned as Proxmox VE nodes. All migrations stayed within their downtime-tier windows.",
   },
   {
     num: "04",
@@ -113,7 +113,7 @@ const workloadTable = [
 ];
 
 const beforeItems = [
-  "VMware vSphere cluster with high-cost subscription licensing",
+  "Multi-node VMware vSphere cluster under subscription licensing",
   "Veeam Backup & Replication adding additional licensing overhead",
   "Dual SAN underutilised — ~40% headroom unused",
   "Orphaned VMs stranded in backup repository only",
@@ -191,8 +191,8 @@ export default function ForcetenMigrationCaseStudy() {
                 Force Ten Technologies Pvt. Ltd. — Financial Software Developer
               </p>
               <p className="pm-hero-fade mt-6 max-w-3xl text-base leading-relaxed text-[#5a4040] lg:text-lg">
-                Following Broadcom&apos;s VMware acquisition, Force Ten Technologies — a software developer serving
-                Microfinance, NBFC, co-operative societies and rural banks — faced unsustainable licensing costs.
+                Facing a virtualisation licensing renewal, Force Ten Technologies — a software developer serving
+                Microfinance, NBFC, co-operative societies and rural banks — set out to reduce recurring platform costs.
                 ISPL delivered a phased, rolling migration from VMware vSphere and Veeam to Proxmox VE and
                 Proxmox Backup Server — zero new hardware, zero VMs lost, every downtime threshold met.
               </p>
@@ -303,8 +303,8 @@ export default function ForcetenMigrationCaseStudy() {
                   Replication across an on-site primary and an off-site disaster recovery replica.
                 </p>
                 <p>
-                  The environment was technically sound. But it was entirely dependent on VMware&apos;s licensing model — which,
-                  following Broadcom&apos;s acquisition, was about to become a significant financial concern.
+                  The environment was technically sound. The driver for change was commercial: a structural
+                  reduction in recurring licensing was the objective.
                 </p>
               </div>
             </section>

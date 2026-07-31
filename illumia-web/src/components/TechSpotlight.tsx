@@ -105,16 +105,16 @@ export default function TechSpotlight() {
 
               <div className="relative mb-6">
                 <span className="font-body text-xs tracking-[0.25em] uppercase text-white/60 font-bold">
-                  VMware Alternative
+                  Proxmox Silver Partner
                 </span>
               </div>
 
               <h3 className="relative font-headline text-3xl md:text-5xl text-white mb-4 leading-[0.95] tracking-tight">
-                Escape the VMware Tax.{" "}
-                <span className="italic font-normal text-white/70">For Good.</span>
+                Enterprise Virtualisation.{" "}
+                <span className="italic font-normal text-white/70">Open Source.</span>
               </h3>
               <p className="relative text-white/70 text-sm font-body leading-[1.7] mb-8 max-w-xl flex-1">
-                Broadcom&apos;s VMware acquisition sent licensing costs through the roof — some enterprises saw 10× increases overnight. Proxmox VE delivers identical enterprise virtualisation — VMs, containers, HA clusters, live migration — at zero licensing cost. We handle the migration end-to-end with zero data loss.
+                Proxmox VE delivers enterprise virtualisation — VMs, containers, HA clusters, live migration — on an open-source platform with optional commercial support. As a Proxmox Silver Partner, we handle migrations end-to-end from VMware, Hyper-V, and other platforms, with zero data loss.
               </p>
 
               <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-8">

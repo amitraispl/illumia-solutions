@@ -34,8 +34,8 @@ const glance = [
 
 const challenges = [
   {
-    title: "Escalating VMware Licensing Costs",
-    body: "Broadcom's acquisition of VMware triggered a shift to subscription-based pricing with considerably higher price points — making VMware financially untenable for Lifebank with no proportional gain in value.",
+    title: "Licensing Cost Review",
+    body: "As part of a wider cost-optimisation programme, Lifebank reviewed its virtualisation licensing model against projected renewal costs and set a target to materially reduce recurring platform spend.",
   },
   {
     title: "Backup Infrastructure Tied to the Platform",
@@ -92,7 +92,7 @@ const phases = [
   {
     num: "03",
     title: "Rolling Node-by-Node Migration",
-    body: "For every remaining VMware host: workloads evacuated to other VMware nodes → host removed from vSphere → Proxmox VE installed → host joined the growing PVE cluster → VMs migrated offline → validated with application owners. Repeated until VMware vSphere ceased to exist entirely.",
+    body: "For every remaining VMware host: workloads evacuated to other VMware nodes → host removed from vSphere → Proxmox VE installed → host joined the growing PVE cluster → VMs migrated offline → validated with application owners. Repeated until all hosts had been re-provisioned as Proxmox VE nodes.",
   },
   {
     num: "04",
@@ -113,7 +113,7 @@ const workloadTable = [
 ];
 
 const beforeItems = [
-  "VMware vSphere cluster with high-cost subscription licensing",
+  "Multi-node VMware vSphere cluster under subscription licensing",
   "Veeam Backup & Replication adding additional licensing overhead",
   "Dual SAN underutilised — ~40% headroom unused",
   "Orphaned VMs stranded in backup repository only",
@@ -191,7 +191,7 @@ export default function ProxmoxMigrationCaseStudy() {
                 Lifebank Foundation Inc. — Non-Profit Microfinance, Philippines
               </p>
               <p className="pm-hero-fade mt-6 max-w-3xl text-base leading-relaxed text-[#5a4040] lg:text-lg">
-                Following Broadcom&apos;s VMware acquisition, Lifebank faced unsustainable licensing costs.
+                Facing a virtualisation licensing renewal, Lifebank set out to reduce recurring platform costs without compromising availability.
                 ISPL delivered a phased, rolling migration from VMware vSphere and Veeam to Proxmox VE and
                 Proxmox Backup Server — zero new hardware, zero VMs lost, every downtime threshold met.
               </p>
@@ -301,8 +301,8 @@ export default function ProxmoxMigrationCaseStudy() {
                   across two dedicated servers — an on-site primary and an off-site disaster recovery replica.
                 </p>
                 <p>
-                  The environment was technically sound. But it was entirely dependent on VMware&apos;s licensing model — which,
-                  following Broadcom&apos;s acquisition, was about to become a significant financial liability.
+                  The environment was technically sound. The driver for change was commercial rather than technical:
+                  leadership targeted a structural reduction in recurring platform licensing.
                 </p>
               </div>
             </section>

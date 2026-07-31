@@ -34,8 +34,8 @@ const glance = [
 
 const challenges = [
   {
-    title: "Escalating Licensing Costs",
-    body: "Broadcom's transition from perpetual to mandatory subscription-based licensing left DCC facing renewal costs disproportionate to business value delivered. For an IT services organization operating on defined margins, this unplanned expenditure was a direct threat to profitability.",
+    title: "Licensing Cost Review",
+    body: "As an IT services organization operating on defined margins, DCC targeted a structural reduction in recurring infrastructure licensing to protect profitability at its next renewal cycle.",
   },
   {
     title: "Vendor Lock-In & Strategic Risk",
@@ -117,7 +117,7 @@ const phases = [
 ];
 
 const beforeItems = [
-  "VMware vSphere with vSAN under high-cost subscription licensing",
+  "VMware vSphere with vSAN under subscription licensing",
   "Veeam Backup & Replication tied to the VMware ecosystem",
   "Single-vendor lock-in with unpredictable pricing roadmaps",
   "Proprietary hyper-converged storage array dependency",
@@ -133,7 +133,7 @@ const afterItems = [
 ];
 
 const outcomes = [
-  { value: "Drastic", title: "Licensing Cost Reduction", body: "Broadcom's VMware subscription exposure eliminated entirely — a recurring financial gain, not a one-time saving." },
+  { value: "Drastic", title: "Licensing Cost Reduction", body: "Recurring hypervisor licensing spend structurally reduced — an ongoing financial gain, not a one-time saving." },
   { value: "< 24 hrs", title: "Downtime Per Workload", body: "Individual workloads experienced only minimal disruption, far below the agreed 24-hour ceiling." },
   { value: "$0", title: "New Hardware Investment", body: "Executed on DCC's existing server and storage fleet; spare and Veeam drives repurposed as Ceph and PBS tiers." },
   { value: "100%", title: "VMware Decommissioned", body: "Every ESXi node re-provisioned as Proxmox VE; all VMs migrated to the new PVE + Ceph cluster." },
@@ -193,8 +193,8 @@ export default function DccVsanCephCaseStudy() {
                 Data Consultants Corporation — US-Based IT Services Organization
               </p>
               <p className="pm-hero-fade mt-6 max-w-3xl text-base leading-relaxed text-[#5a4040] lg:text-lg">
-                After Broadcom&apos;s VMware licensing overhaul threatened its operational margins, DCC chose to leave
-                VMware entirely. ISPL — a Proxmox Silver Partner — re-platformed a live hyper-converged cluster from
+                To protect its operational margins ahead of a licensing renewal, DCC elected to consolidate onto
+                Proxmox VE. ISPL — a Proxmox Silver Partner — re-platformed a live hyper-converged cluster from
                 vSphere with vSAN to Proxmox VE with Ceph using a phased node-liberation strategy, on existing
                 hardware, with downtime kept well below the 24-hour ceiling.
               </p>
@@ -304,10 +304,9 @@ export default function DccVsanCephCaseStudy() {
                   availability and data integrity were business-critical requirements, not merely IT concerns.
                 </p>
                 <p>
-                  In 2024, Broadcom&apos;s acquisition of VMware discontinued perpetual licenses and pushed customers toward
-                  subscription bundles at significantly higher price points. Faced with renewal figures hard to justify
-                  against no new functional gains, DCC&apos;s leadership decided to leave VMware entirely — without new
-                  hardware, and without exceeding a 24-hour downtime threshold per application.
+                  In 2024, DCC&apos;s VMware licensing model moved to a subscription basis, prompting a review of its
+                  virtualization platform strategy. DCC&apos;s leadership decided to consolidate onto Proxmox VE — without
+                  new hardware, and without exceeding a 24-hour downtime threshold per application.
                 </p>
               </div>
             </section>

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import RichServicePageTemplate from "@/components/RichServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Proxmox VE Migration — Escape the VMware Tax",
+  title: "Proxmox VE Migration & Deployment — Illumia Solutions",
   description:
-    "End-to-end migration from VMware ESXi/vSphere to Proxmox Virtual Environment. Zero licensing cost, identical enterprise capabilities — VMs, containers, HA clusters, live migration. Typical hypervisor cost reduction of 60–80%.",
+    "End-to-end migration to Proxmox Virtual Environment from VMware, Hyper-V, Nutanix, and other platforms. Enterprise capabilities — VMs, containers, HA clusters, live migration — with predictable open-source economics.",
   alternates: { canonical: "/proxmox-migration/" },
 };
 
@@ -13,9 +13,9 @@ const serviceSchema = {
   "@type": "Service",
   "@id": "https://illumiasolutions.com/proxmox-migration/#service",
   name: "Proxmox VE Migration",
-  serviceType: "VMware Alternative",
+  serviceType: "Virtualisation Migration Services",
   description:
-    "End-to-end migration from VMware ESXi/vSphere to Proxmox Virtual Environment. Zero licensing cost, identical enterprise capabilities — VMs, containers, HA clusters, live migration. Typical hypervisor cost reduction of 60–80%.",
+    "End-to-end migration to Proxmox Virtual Environment from VMware, Hyper-V, Nutanix, and other platforms. Enterprise capabilities — VMs, containers, HA clusters, live migration — with predictable open-source economics.",
   url: "https://illumiasolutions.com/proxmox-migration/",
   provider: { "@id": "https://illumiasolutions.com/#organization" },
 };
@@ -28,26 +28,26 @@ export default function ProxmoxMigrationPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <RichServicePageTemplate
-      badge="VMware Alternative"
+      badge="Proxmox Silver Partner"
       title="Proxmox VE —"
-      titleHighlight="Escape the VMware Tax."
-      description="Broadcom's VMware acquisition pushed enterprise hypervisor licensing through the roof — many organisations have seen 10× cost increases overnight. Proxmox Virtual Environment delivers the same enterprise virtualisation capabilities — KVM-based VMs, LXC containers, HA clusters, Ceph storage, live migration — under an open-source AGPL licence with zero seat fees. Illumia is a Proxmox Silver Partner and handles the entire migration with zero data loss."
+      titleHighlight="Enterprise Virtualisation, Open Source."
+      description="Proxmox Virtual Environment delivers enterprise virtualisation — KVM-based VMs, LXC containers, HA clusters, Ceph storage, live migration — under an open-source AGPL licence. Illumia is a Proxmox Silver Partner and handles the entire migration end-to-end with zero data loss, from VMware, Hyper-V, Nutanix, or bare metal."
       sectionTitle="Why Migrate to Proxmox VE"
       ctaText="Plan Your Proxmox Migration"
       heroImage="/images/heroes/proxmox-migration_hero.jpg"
       darkHero={true}
-      closingText="As a certified Proxmox Silver Partner, Illumia Solutions delivers production-grade migrations that retire VMware licensing without compromising on enterprise capability. From workload assessment and design to cutover, hardening, and post-migration support, our engineers cover every stage — so you eliminate the Broadcom tax, not your uptime SLAs."
+      closingText="As a certified Proxmox Silver Partner, Illumia Solutions delivers production-grade migrations to Proxmox VE without compromising on enterprise capability. From workload assessment and design to cutover, hardening, and post-migration support, our engineers cover every stage — so your uptime SLAs are never at risk."
       features={[
         {
           title: "Massive Cost Reduction",
           items: [
             {
               label: "Zero Licensing Fees",
-              text: "Proxmox VE is fully open-source under AGPL. Eliminate per-CPU, per-core, and per-VM licensing fees overnight — including vSphere, vCenter, and vSAN line items.",
+              text: "Proxmox VE is fully open-source under AGPL — no per-CPU, per-core, or per-VM licensing fees. Support is purchased separately and only where you need it.",
             },
             {
               label: "Optional Enterprise Support",
-              text: "Pay only for the support tier you actually need. No bundled add-ons, no surprise renewals, no Broadcom price hikes.",
+              text: "Pay only for the support tier you actually need — published pricing, no bundled add-ons.",
             },
           ],
         },
@@ -60,7 +60,7 @@ export default function ProxmoxMigrationPage() {
             },
             {
               label: "High Availability Clusters",
-              text: "Native HA with automated failover, live migration, and rolling upgrades. Match or exceed your existing vSphere SLAs.",
+              text: "Native HA with automated failover, live migration, and rolling upgrades — designed to meet your existing availability SLAs.",
             },
           ],
         },
@@ -69,7 +69,7 @@ export default function ProxmoxMigrationPage() {
           items: [
             {
               label: "Software-Defined Storage",
-              text: "Built-in Ceph for hyperconverged, software-defined block and object storage. Replace expensive vSAN clusters with commodity hardware.",
+              text: "Built-in Ceph for hyperconverged, software-defined block and object storage on commodity hardware.",
             },
             {
               label: "ZFS Snapshots & Replication",
@@ -108,7 +108,7 @@ export default function ProxmoxMigrationPage() {
           items: [
             {
               label: "Modern Web Console",
-              text: "Manage the entire cluster from a browser — no thick client, no separate vCenter VM, no per-admin licence.",
+              text: "Manage the entire cluster from a browser — no thick client and no separate management appliance required.",
             },
             {
               label: "Full REST API",

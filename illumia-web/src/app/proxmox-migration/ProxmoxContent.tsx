@@ -75,13 +75,15 @@ function BrowserFrame({
   );
 }
 
-const COMPARISON = [
-  { before: "Free ESXi hypervisor tier discontinued", after: "Always free, no tier removal risk" },
-  { before: "DRS is an Enterprise Plus–only feature, not in Standard", after: "Cluster Resource Scheduler built into every install (v9.2+)" },
-  { before: "vSAN, NSX, Aria bundled only in higher-tier editions", after: "Ceph and firewall integrated at no extra tier" },
-  { before: "No backup tool bundled with vSphere itself", after: "Proxmox Backup Server — free, open-source (separate install)" },
-  { before: "Per-core licensing with a 16-core minimum per CPU", after: "No per-core minimums or core-count penalties" },
-  { before: "Feature access split across four consolidated SKUs (VCF, VVF, Standard, Enterprise Plus)", after: "Full feature set available in one free download" },
+const PROXMOX_CAPABILITIES = [
+  "Ceph HCI storage",
+  "Cluster HA & fencing",
+  "Live migration",
+  "LXC + KVM",
+  "Integrated firewall & SDN",
+  "Proxmox Backup Server",
+  "Full REST API",
+  "Cluster Resource Scheduler",
 ];
 
 const REMAINING_CAPS = [
@@ -222,13 +224,13 @@ export default function ProxmoxContent() {
               </motion.h1>
 
               <motion.p variants={fadeUp} className="font-body text-[15px] text-[#5a4040] leading-[1.8] max-w-[520px] mb-9">
-                Proxmox Virtual Environment delivers KVM VMs, LXC containers, HA clustering, Ceph HCI storage, and live migration under an open-source AGPL licence — with no per-CPU core fees, no seat counts, and no Broadcom renewal surprises.
+                Proxmox Virtual Environment delivers KVM VMs, LXC containers, HA clustering, Ceph HCI storage, and live migration under an open-source AGPL licence — with no per-CPU core fees and no seat counts.
               </motion.p>
 
               {/* Stats */}
               <motion.div variants={fadeIn} className="flex flex-wrap gap-x-8 gap-y-4 pb-9 mb-9 border-b border-[#e2bebd]/60">
                 {[
-                  { v: "60–80%", l: "Savings vs VMware" },
+                  { v: "60–80%", l: "Typical Licensing Cost Reduction" },
                   { v: "AGPL", l: "Open-source licence" },
                   { v: "0 data loss", l: "Migration methodology" },
                 ].map((s) => (
@@ -707,7 +709,7 @@ export default function ProxmoxContent() {
                   HA clustering with automated failover — no extra licences.
                 </h3>
                 <p className="font-body text-[14px] text-[#5a4040] leading-[1.8]">
-                  Corosync quorum, automated fencing, and per-VM migration policies. Dynamic load balancing redistributes VMs across nodes in real time. Match or exceed your existing vSphere HA SLAs without a vCenter licensing line item.
+                  Corosync quorum, automated fencing, and per-VM migration policies, with dynamic load balancing across nodes — built into the platform.
                 </p>
                 <ul className="flex flex-col gap-2">
                   {["Automated VM and container failover", "Live migration and rolling upgrades", "Dynamic load balancer (Proxmox VE 9+)", "Fencing with IPMI, watchdog, agents"].map(it => (
@@ -737,7 +739,7 @@ export default function ProxmoxContent() {
                   Ceph HCI and ZFS — software-defined storage built in.
                 </h3>
                 <p className="font-body text-[14px] text-[#5a4040] leading-[1.8]">
-                  Hyperconverged Ceph block and object storage replicated across nodes — replaces expensive vSAN clusters on existing commodity hardware. ZFS for instant snapshots, async replication, and self-healing on local disks. Proxmox Backup Server ships free.
+                  Hyperconverged Ceph block and object storage replicated across nodes on commodity hardware. ZFS for instant snapshots, async replication, and self-healing on local disks. Proxmox Backup Server ships free.
                 </p>
                 <ul className="flex flex-col gap-2">
                   {["Ceph RBD block + CephFS shared storage", "Configurable replication factor", "ZFS snapshots and async send/receive", "Deduplicated PBS backups with encryption"].map(it => (
@@ -775,39 +777,33 @@ export default function ProxmoxContent() {
         </div>
       </section>
 
-      {/* ━━━ BROADCOM PROBLEM ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      {/* ━━━ WHY PROXMOX VE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <section className="bg-[#0d0c0c] py-20 md:py-28 px-6 md:px-10 xl:px-16">
         <div className="max-w-[1400px] mx-auto grid lg:grid-cols-[minmax(0,55%)_minmax(0,45%)] gap-14 lg:gap-20 items-start">
 
           {/* Left: editorial */}
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} className="min-w-0">
             <motion.span variants={fadeUp} className="font-body text-[11px] lg:text-[13px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-6">
-              The Broadcom Problem
+              Why Proxmox VE
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-4xl md:text-[2.8rem] text-white leading-[1.05] tracking-tight mb-6 max-w-lg">
-              Broadcom bought VMware. Your budget paid for it.
+              Enterprise virtualisation, open source.
             </motion.h2>
-            <motion.p variants={fadeUp} className="font-body text-[15px] text-white/45 leading-[1.8] mb-5 max-w-[500px]">
-              Post-acquisition pricing killed perpetual licences, collapsed bundles, and pushed organisations onto per-core subscriptions. Many enterprises saw 5–10× cost increases overnight. The platform is identical — only the invoice changed.
-            </motion.p>
             <motion.p variants={fadeUp} className="font-body text-[15px] text-white/45 leading-[1.8] max-w-[500px]">
-              Proxmox VE runs the same workloads, meets the same HA requirements, integrates with the same automation toolchain — and ships zero licensing fees.
+              Proxmox VE runs production workloads, meets enterprise HA requirements, and integrates with the same automation toolchain your team already uses — under an AGPL licence with optional commercial subscription support.
             </motion.p>
           </motion.div>
 
-          {/* Right: comparison */}
+          {/* Right: capability list */}
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} className="min-w-0">
-            <motion.div variants={fadeUp} className="grid grid-cols-2 gap-4 mb-3 pb-2.5 border-b border-white/[0.08]">
-              <span className="font-body text-[14px] tracking-[0.2em]  text-white font-semibold">VMware Today</span>
-              <span className="font-body text-[14px] tracking-[0.2em]  text-[#b31c33] font-semibold">Proxmox VE</span>
+            <motion.div variants={fadeUp} className="mb-3 pb-2.5 border-b border-white/[0.08]">
+              <span className="font-body text-[14px] tracking-[0.2em] text-[#b31c33] font-semibold">What Proxmox VE Includes</span>
             </motion.div>
-            {COMPARISON.map((row, i) => (
-              <motion.div key={i} variants={fadeUp} className="grid grid-cols-2 gap-4 py-3 border-b border-white/[0.07]">
-                <span className="font-body text-[13px] text-white/35 leading-snug">
-                  {row.before}
-                </span>
+            {PROXMOX_CAPABILITIES.map((cap, i) => (
+              <motion.div key={i} variants={fadeUp} className="flex items-center gap-3 py-3 border-b border-white/[0.07]">
+                <CheckCircle2 size={14} className="text-[#b31c33] shrink-0" strokeWidth={1.5} />
                 <span className="font-body text-[13px] text-white font-medium leading-snug">
-                  {row.after}
+                  {cap}
                 </span>
               </motion.div>
             ))}
@@ -824,7 +820,7 @@ export default function ProxmoxContent() {
               Illumia Migration Methodology
             </motion.span>
             <motion.h2 variants={fadeUp} className="font-headline text-4xl md:text-[2.8rem] text-[#1c1b1b] leading-[1.05] tracking-tight max-w-2xl">
-              VMware to Proxmox — zero data loss.
+              Zero data loss migration methodology.
             </motion.h2>
           </motion.div>
 
@@ -869,7 +865,7 @@ export default function ProxmoxContent() {
               <span className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold">Silver Partner</span>
             </div>
             <h2 className="font-headline text-4xl md:text-[2.8rem] text-white leading-[1.05] tracking-tight mb-5">
-              Ready to end the VMware tax?
+              Ready to plan your Proxmox migration?
             </h2>
             <p className="font-body text-[15px] text-white/42 leading-[1.8] max-w-xl">
               Illumia delivers production-grade migrations with direct escalation to Proxmox engineers, zero data loss methodology, and optional post-migration managed services under SLA.

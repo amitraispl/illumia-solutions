@@ -82,7 +82,7 @@ const caseStudies = [
     tag: "Infrastructure · Proxmox",
     title: "80% Licensing Cost Reduction via VMware to Proxmox VE Migration",
     summary:
-      "Lifebank Foundation Inc. faced unsustainable VMware licensing costs following Broadcom's acquisition. ISPL delivered a phased, rolling migration to Proxmox VE — zero new hardware, zero VMs lost, every downtime threshold met.",
+      "Lifebank Foundation Inc. undertook a virtualisation platform review as part of a licensing cost-optimisation programme. ISPL delivered a phased, rolling migration to Proxmox VE — zero new hardware, zero VMs lost, every downtime threshold met.",
     body:
       "With no new hardware permitted and production workloads classified across three downtime tiers, ISPL executed a node-by-node rolling migration: decommissioning each VMware host, commissioning it as a Proxmox VE node, migrating workloads offline, and validating with application owners before moving to the next. Veeam servers were repurposed as Proxmox Backup Server nodes with encryption at rest on all backup data — on-site and off-site.",
     image:
@@ -126,7 +126,7 @@ const caseStudies = [
     tag: "Infrastructure · Proxmox",
     title: "80% Licensing Cost Reduction via VMware to Proxmox VE Migration",
     summary:
-      "Force Ten Technologies Pvt. Ltd., a financial software developer, faced unsustainable VMware licensing after Broadcom's acquisition. ISPL delivered a phased, rolling migration to Proxmox VE — zero new hardware, zero VMs lost, every downtime threshold met.",
+      "Force Ten Technologies Pvt. Ltd., a financial software developer, initiated a virtualisation licensing review. ISPL delivered a phased, rolling migration to Proxmox VE — zero new hardware, zero VMs lost, every downtime threshold met.",
     body:
       "With no new hardware permitted and workloads classified across three downtime tiers, ISPL executed a node-by-node rolling migration: decommissioning each VMware host, commissioning it as a Proxmox VE node, migrating workloads offline via Proxmox's built-in tooling, and validating with application owners. Existing dual SAN headroom carved the new LUNs, and both Veeam servers were repurposed as Proxmox Backup Server nodes with encryption at rest.",
     image:
@@ -148,7 +148,7 @@ const caseStudies = [
     tag: "Infrastructure · Ceph HCI",
     title: "VMware vSAN to Proxmox VE Ceph Migration with Zero New Hardware",
     summary:
-      "Data Consultants Corporation, a US-based IT services firm, left VMware entirely after Broadcom's licensing overhaul. ISPL re-platformed a live hyper-converged cluster from vSphere with vSAN to Proxmox VE with Ceph — on existing hardware, sub-24-hour downtime.",
+      "Data Consultants Corporation, a US-based IT services firm, consolidated its virtualisation estate onto Proxmox VE. ISPL re-platformed a live hyper-converged cluster to Proxmox VE with Ceph — on existing hardware, sub-24-hour downtime.",
     body:
       "With no spare hardware, ISPL bootstrapped a Proxmox VE cluster from nodes still active in the vSAN cluster: spare drives became temporary local datastores, VMs were shifted off the vSAN pool, and nodes were evacuated one set at a time and re-provisioned as Proxmox VE with Ceph. SSDs became Ceph OSDs and NVMe drives the DB/WAL tier. A migrate → evacuate → expand cycle ran until VMware was fully decommissioned, with PBS replacing Veeam.",
     image:

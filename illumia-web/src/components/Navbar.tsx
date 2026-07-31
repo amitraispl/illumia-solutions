@@ -93,7 +93,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
     subtitle: "80% licensing cost reduction — zero new hardware",
     label: "80% Licensing Cost Reduction via VMware to Proxmox VE Migration",
     tag: "Infrastructure · Proxmox",
-    desc: "Lifebank Foundation Inc. escaped unsustainable post-Broadcom VMware licensing via a phased, node-by-node migration to Proxmox VE — zero new hardware procured, zero VMs lost, every downtime threshold met.",
+    desc: "Lifebank Foundation Inc. migrated from VMware to Proxmox VE via a phased, node-by-node migration — zero new hardware procured, zero VMs lost, every downtime threshold met.",
     shortDesc: "Platform independence, zero capex",
     highlights: [
       "80% reduction in annual licensing costs",
@@ -127,7 +127,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
     subtitle: "80% licensing cost reduction — financial-sector migration",
     label: "80% Licensing Cost Reduction via VMware to Proxmox VE Migration",
     tag: "Infrastructure · Proxmox",
-    desc: "Force Ten Technologies, a financial software developer, escaped unsustainable post-Broadcom VMware licensing via a phased, node-by-node migration to Proxmox VE — zero new hardware, zero VMs lost, every downtime threshold met.",
+    desc: "Force Ten Technologies, a financial software developer, migrated from VMware to Proxmox VE via a phased, node-by-node migration — zero new hardware, zero VMs lost, every downtime threshold met.",
     shortDesc: "Financial-sector platform independence",
     highlights: [
       "80% reduction in annual licensing costs",
@@ -144,7 +144,7 @@ const CASE_STUDIES: CaseStudyItem[] = [
     subtitle: "Live hyper-converged re-platform — zero new hardware",
     label: "VMware vSAN to Proxmox VE Ceph Migration with Zero New Hardware",
     tag: "Infrastructure · Ceph HCI",
-    desc: "Data Consultants Corporation left VMware entirely after Broadcom's licensing overhaul — ISPL re-platformed a live vSphere + vSAN cluster to Proxmox VE with Ceph via a phased node-liberation strategy, on existing hardware, sub-24-hour downtime.",
+    desc: "Data Consultants Corporation migrated from VMware vSAN to Proxmox VE with Ceph — ISPL re-platformed a live vSphere + vSAN cluster via a phased node-liberation strategy, on existing hardware, sub-24-hour downtime.",
     shortDesc: "Node-liberation, sub-24h downtime",
     highlights: [
       "Phased node-liberation on a live production cluster",
@@ -442,7 +442,6 @@ const SERVICE_GROUPS: ServiceGroup[] = [
       { label: "Disaster Recovery", href: "/disaster-recovery/" },
       { label: "Software-Defined Network", href: "/software-defined-network/" },
       { label: "Cloud Migration Solutions", href: "/cloud-migration-solutions/" },
-      { label: "On-Premise Private Cloud", href: "/on-premise-private-cloud/" },
       { label: "Private Cloud with Proxmox VE", href: "/on-premise-private-cloud-solutions/" },
       { label: "Infrastructure Solutions", href: "/infrastructure-solutions/" },
       { label: "Application Solutions", href: "/application-solutions/" },
