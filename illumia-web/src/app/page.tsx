@@ -10,7 +10,7 @@ import WhyChooseFlipCard from "@/components/WhyChooseFlipCard";
 const seqriteLogo = "/images/logos/seqrite-logo-partner.png";
 const forceLogo = "/images/logos/force-logo.png";
 const zextrasLogo = "/images/logos/zextras-partner-logo.png";
-const proxmoxLogo = "/images/logos/proxmox-silver-partner.png";
+const proxmoxLogo = "/images/logos/proxmox-logo.svg";
 const lifebankLogo = "/images/logos/lifebank-foundation.png";
 const guacamoleLogo = "/images/logos/apache-guacamole-partner.png";
 
@@ -35,7 +35,7 @@ const partnerLogos = [
   { src: seqriteLogo, alt: "Seqrite — Partner", width: 160, height: 60, href: "https://www.seqrite.com" },
   { src: forceLogo, alt: "Force Ten Technologies — Partner", width: 120, height: 60, href: "https://www.forcetentech.com/new/index.html" },
   { src: zextrasLogo, alt: "Zextras — Partner", width: 120, height: 50, href: "https://www.zextras.com" },
-  { src: proxmoxLogo, alt: "Proxmox — Silver Partner", width: 130, height: 60, href: "https://www.proxmox.com/en/partners/find-partner/all/partner/illumia-solutions" },
+  { src: proxmoxLogo, alt: "Proxmox — Silver Partner", width: 100, height: 60, href: "https://www.proxmox.com/en/partners/find-partner/all/partner/illumia-solutions", wide: true },
   { src: lifebankLogo, alt: "LifeBank Foundation — Partner", width: 140, height: 60, href: "https://lifebankfoundation.org" },
   { src: guacamoleLogo, alt: "Apache Guacamole — Commercial Support Partner", width: 140, height: 60, href: "https://guacamole.apache.org/support/#commercial-support" },
   { src: netboxLabsLogo, alt: "NetBox Labs — Partner", width: 140, height: 50, href: "https://netboxlabs.com" },
@@ -126,9 +126,9 @@ export default function HomePage() {
               Strategic Partners
             </span>
           </div>
-          {/* paddingX formula: wider rendered logo → proportionally more gap
-              renderedW = (width/height)×40  |  px = round(20 + (renderedW/maxRenderedW)×20)
-              maxRenderedW = (160/60)×40 = 106.67 (Seqrite) */}
+          {/* paddingX formula: wider rendered logo → proportionally more gap, capped at maxRenderedW
+              renderedW = (width/height)×40  |  px = round(20 + (min(renderedW,maxRenderedW)/maxRenderedW)×20)
+              maxRenderedW = (160/60)×40 = 106.67 (Seqrite) — cap prevents very wide lockups (e.g. Proxmox) from getting oversized gaps */}
           <Marquee
             pauseOnHover
             repeat={3}
@@ -140,7 +140,8 @@ export default function HomePage() {
           >
             {partnerLogos.map((logo) => {
               const renderedW = (logo.width / logo.height) * 40;
-              const px = Math.round(20 + (renderedW / ((160 / 60) * 40)) * 20);
+              const maxRenderedW = (160 / 60) * 40;
+              const px = Math.round(20 + (Math.min(renderedW, maxRenderedW) / maxRenderedW) * 20);
               return (
                 <a
                   key={logo.alt}
@@ -158,7 +159,7 @@ export default function HomePage() {
                     height={logo.height}
                     loading="eager"
                     unoptimized
-                    className="object-contain max-h-12 max-w-36 w-auto transition-transform duration-200 hover:scale-110"
+                    className={`object-contain max-h-12 w-auto transition-transform duration-200 hover:scale-110 ${logo.wide ? "max-w-72" : "max-w-36"}`}
                   />
                 </a>
               );

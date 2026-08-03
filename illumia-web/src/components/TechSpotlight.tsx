@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 
-const proxmoxLogo = "/images/logos/proxmox-silver-partner.png";
+const proxmoxLogo = "/images/logos/proxmox-silver-partner.avif";
 const erpnextLogo = "/images/logos/erpnext-logo.jpg";
 
 
@@ -92,21 +92,19 @@ export default function TechSpotlight() {
                 style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")" }}
               />
 
-              {/* Proxmox logo — absolute so it never shifts heading */}
-              <div className="absolute top-6 right-6 sm:top-8 sm:right-8 lg:top-7 lg:right-7 h-16 w-32 sm:w-40 lg:w-52 pointer-events-none">
-                <Image
-                  src={proxmoxLogo}
-                  alt="Proxmox Silver Partner"
-                  fill
-                  sizes="(min-width: 1024px) 208px, (min-width: 640px) 160px, 128px"
-                  className="object-contain object-right"
-                />
-              </div>
-
-              <div className="relative mb-6">
+              <div className="relative flex items-center justify-between gap-3 mb-6">
                 <span className="font-body text-xs tracking-[0.25em] uppercase text-white/60 font-bold">
                   Proxmox Silver Partner
                 </span>
+                <div className="relative h-15 w-28 sm:h-18 sm:w-40 lg:h-20 lg:w-52 shrink-0">
+                  <Image
+                    src={proxmoxLogo}
+                    alt="Proxmox Silver Partner"
+                    fill
+                    sizes="(min-width: 1024px) 208px, (min-width: 640px) 160px, 112px"
+                    className="object-contain object-right"
+                  />
+                </div>
               </div>
 
               <h3 className="relative font-headline text-3xl md:text-5xl text-white mb-4 leading-[0.95] tracking-tight">

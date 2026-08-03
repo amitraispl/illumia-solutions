@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SmoothScroll from "@/components/SmoothScroll";
 import { Inter, Newsreader } from "next/font/google";
 import { cn } from "@/lib/utils";
 
@@ -75,6 +76,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
+        <SmoothScroll />
         <Navbar />
         <main id="main-content" className="flex-1">{children}</main>
         <Footer />

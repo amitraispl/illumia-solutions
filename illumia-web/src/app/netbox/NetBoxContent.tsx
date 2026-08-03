@@ -34,6 +34,7 @@ const IMG = {
   automation: "/images/netbox/automation.png",
   infrastructure: "/images/netbox/infrastructure.png",
   logo: "/images/logos/netbox-labs.png",
+  logoDark: "/images/logos/netbox-logo-dark.svg",
   rackElevations: "/images/netbox/rack-elevations.png",
   vlans: "/images/netbox/vlans.png",
 };
@@ -453,23 +454,36 @@ export default function NetBoxContent() {
         </div>
       </section>
 
-      {/* ━━━ ILLUMIA DELIVERY + CTA ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <section className="relative bg-[#0d0c0c] overflow-hidden px-6 md:px-10 xl:px-16 py-20 md:py-28">
-        <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_65%_80%_at_100%_50%,rgba(179,28,51,0.06),transparent)]" />
+      {/* ━━━ CTA ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
+      <section className="relative bg-[#0d0c0c] overflow-hidden">
+        {/* Background screenshot — dimmed */}
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src={IMG.dcim}
+            alt=""
+            aria-hidden
+            className="w-full h-full object-cover opacity-[0.05] scale-105"
+            loading="lazy"
+            decoding="async"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0d0c0c] via-[#0d0c0c]/90 to-[#0d0c0c]/70" />
+        </div>
+        <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_85%_50%,rgba(179,28,51,0.07),transparent)]" />
 
-        <div className="relative max-w-[1400px] mx-auto grid lg:grid-cols-[1fr_auto] gap-10 items-center">
+        <div className="relative max-w-[1400px] mx-auto px-6 md:px-10 xl:px-16 py-20 md:py-28 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
           <div className="max-w-2xl">
-            <span className="font-body text-[11px] lg:text-[13px] tracking-[0.28em] uppercase text-[#b31c33] font-bold block mb-5">
-              Illumia Delivery
-            </span>
+            <div className="flex flex-col items-start gap-3 mb-5">
+              <img src={IMG.logoDark} alt="NetBox Labs" className="h-9 md:h-10 w-auto" decoding="async" />
+              <span className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold">Network Source of Truth</span>
+            </div>
             <h2 className="font-headline text-4xl md:text-[2.8rem] text-white leading-[1.05] tracking-tight mb-5">
               Clean data from day one.
             </h2>
-            <p className="font-body text-[15px] text-white/42 leading-[1.8]">
+            <p className="font-body text-[15px] text-white/42 leading-[1.8] max-w-xl">
               Illumia imports your existing inventory from spreadsheets, SolarWinds IPAM, Infoblox, or live device polling; integrates NetBox into your Ansible and Terraform pipelines; and operates it under SLA as a managed service. A single, queryable, API-driven source of truth your NOC, engineering, and audit teams can all trust.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0">
+          <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <Link
               href="/contact#contact-form"
               className="group inline-flex items-center justify-center gap-2.5 bg-[#b31c33] hover:bg-[#9e1829] text-white px-7 py-3.5 rounded-[10px] font-body text-sm font-semibold tracking-wide transition-all duration-200 active:scale-[0.97]"

@@ -18,7 +18,7 @@ const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } }
 
 // Real images — official proxmox.com screenshots
 const IMG = {
-  logo: "/images/logos/proxmox-silver-partner.png",
+  logo: "/images/logos/proxmox-silver-partner.avif",
   dashboard: "/images/proxmox-migration/dashboard.png",
   ha: "/images/proxmox-migration/ha.png",
   esxi: "/images/proxmox-migration/esxi.png",
@@ -208,7 +208,7 @@ export default function ProxmoxContent() {
                 <img
                   src={IMG.logo}
                   alt="Proxmox Silver Partner"
-                  className="h-28 md:h-36 w-auto object-contain"
+                  className="h-24 md:h-28 w-auto object-contain"
                   loading="eager"
                   decoding="async"
                 />
@@ -860,8 +860,8 @@ export default function ProxmoxContent() {
 
         <div className="relative max-w-[1400px] mx-auto px-6 md:px-10 xl:px-16 py-20 md:py-28 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-2.5 mb-5">
-              <img src={IMG.logo} alt="Proxmox" className="h-7 w-auto" decoding="async" />
+            <div className="flex flex-col items-start gap-3 mb-5">
+              <img src={IMG.logo} alt="Proxmox" className="h-16 md:h-22 w-auto" decoding="async" />
               <span className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold">Silver Partner</span>
             </div>
             <h2 className="font-headline text-4xl md:text-[2.8rem] text-white leading-[1.05] tracking-tight mb-5">

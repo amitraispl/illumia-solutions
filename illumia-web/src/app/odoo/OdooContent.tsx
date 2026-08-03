@@ -595,8 +595,8 @@ export default function OdooContent() {
 
         <div className="relative max-w-[1400px] mx-auto px-6 md:px-10 xl:px-16 py-20 md:py-28 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-2.5 mb-5">
-              <img src={IMG.logo} alt="Odoo" className="h-6 w-auto brightness-0 invert opacity-60" decoding="async" />
+            <div className="flex flex-col items-start gap-3 mb-5">
+              <img src={IMG.logo} alt="Odoo" className="h-9 md:h-10 w-auto brightness-0 invert opacity-60" decoding="async" />
               <span className="font-body text-[10px] tracking-[0.28em] uppercase text-[#b31c33] font-bold">Community & Enterprise</span>
             </div>
             <h2 className="font-headline text-4xl md:text-[2.8rem] text-white leading-[1.05] tracking-tight mb-5">
