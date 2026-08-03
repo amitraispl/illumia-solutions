@@ -123,7 +123,7 @@ export default function HomePage() {
           <div className="flex shrink-0 items-center justify-center md:justify-start gap-3 pt-2 pb-4 md:py-0">
             <span className="hidden md:block w-4 h-px bg-primary" />
             <span className="font-body text-xs tracking-[0.3em] uppercase text-primary font-bold whitespace-nowrap">
-              Strategic Partners
+              Trusted By
             </span>
           </div>
           {/* paddingX formula: wider rendered logo → proportionally more gap, capped at maxRenderedW

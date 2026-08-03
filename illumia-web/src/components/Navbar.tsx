@@ -701,7 +701,7 @@ function ServicesMegaMenu({ onClose, activeCategory, onCategoryChange, pageCateg
                   <p className="font-body text-sm font-semibold text-stone-800 group-hover/pl:text-primary transition-colors duration-200 leading-snug truncate">
                     Proxmox VE
                   </p>
-                  <p className="font-body text-[11px] text-stone-400 leading-snug">Private Cloud · Zero licensing</p>
+                  <p className="font-body text-[11px] text-stone-400 leading-snug">Private Cloud</p>
                 </div>
                 <ExternalArrow className="w-3.5 h-3.5 text-stone-300 group-hover/pl:text-primary shrink-0 ml-auto transition-colors duration-200" />
               </Link>
@@ -1110,7 +1110,7 @@ export default function Navbar() {
                         </p>
                         <div className="flex flex-col gap-2">
                           {[
-                            { href: "/on-premise-private-cloud-solutions/", icon: "/images/icons/proxmox-icon.png", label: "Proxmox VE", sub: "Private Cloud · Zero licensing" },
+                            { href: "/on-premise-private-cloud-solutions/", icon: "/images/icons/proxmox-icon.png", label: "Proxmox VE", sub: "Private Cloud" },
                             { href: "/netbox-platform/", icon: "/images/icons/netbox-icon.png", label: "NetBox Platform", sub: "Network source of truth" },
                             { href: "/odoo/", icon: "/images/logos/odoo-logo.png", label: "Odoo", sub: "80+ integrated business apps" },
                             { href: "/erpnext/", icon: "/images/logos/erpnext-logo.jpg", label: "ERPNext", sub: "Open-source ERP suite" },
