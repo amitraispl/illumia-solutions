@@ -40,6 +40,8 @@ export interface RichServicePageTemplateProps {
   ctaText?: string;
   darkHero?: boolean;
   heroImage?: string;
+  /** Set true when heroImage is portrait-oriented (taller than wide) so the mobile/tablet hero box doesn't crop most of it away */
+  heroPortrait?: boolean;
   /** Render this instead of the hero photo — for illustration/graphic heroes */
   heroImageNode?: ReactNode;
   secondaryImage?: string;
@@ -57,6 +59,7 @@ export default function RichServicePageTemplate({
   ctaText = "Get Started",
   darkHero,
   heroImage = "/images/heroes/cloud-migration_hero.jpg",
+  heroPortrait = false,
   heroImageNode,
   secondaryImage,
   secondaryImageAlt,
@@ -84,6 +87,7 @@ export default function RichServicePageTemplate({
         imageSrc={heroImage}
         imageNode={heroImageNode}
         imageAlt={`${title} — Illumia Solutions`}
+        portraitImage={heroPortrait}
       />
 
       {/* ─── Features ─────────────────────────────────────────────────────── */}

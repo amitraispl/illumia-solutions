@@ -90,6 +90,7 @@ export default function CloudServicesContent() {
         secondaryCta={{ label: "View Services", href: "#hosting" }}
         imageSrc="/images/cloud-services/hero.jpg"
         imageAlt="Cloud infrastructure — Illumia Solutions"
+        portraitImage
       />
 
       {/* ─── 01 / Hosting Services ────────────────────────────────────────── */}

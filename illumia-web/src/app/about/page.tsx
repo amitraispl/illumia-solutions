@@ -72,7 +72,8 @@ export default function AboutPage() {
         secondaryCta={{ label: "View Our Work", href: "/cloud-services" }}
         imageSrc="/images/content/hero-about.avif"
         imageAlt="Illumia Solutions team collaboration"
-        imagePosition="object-top"
+        imagePosition="object-[center_65%]"
+        portraitImage
       />
 
       {/* Stats Bar */}

@@ -164,6 +164,7 @@ export default function SoftwareDevelopmentContent() {
         secondaryCta={{ label: "Explore Our Work", href: "#core-solutions" }}
         imageSrc="/images/software-development/hero.jpg"
         imageAlt="Developer working across multiple monitors of code"
+        portraitImage
       />
 
       {/* ─── Editorial Intro ──────────────────────────────────────────────── */}

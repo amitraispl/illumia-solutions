@@ -171,7 +171,7 @@ export default function HCIExpansionCaseStudy() {
               </div>
             </div>
             <div className="hci-hero-fade lg:col-span-4 flex flex-col items-center gap-8 lg:mt-4">
-              <div className="relative aspect-[5/4] w-full overflow-hidden rounded-3xl border border-[#e2bebd]/60 shadow-lg">
+              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-3xl border border-[#e2bebd]/60 shadow-lg">
                 <Image
                   src={HERO_IMG}
                   alt="High-performance NVMe server hardware"

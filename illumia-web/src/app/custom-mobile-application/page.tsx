@@ -35,6 +35,7 @@ export default function CustomMobileApplicationPage() {
       sectionTitle="Our Mobile Development Capabilities"
       ctaText="Scope Your Mobile App"
       heroImage="/images/custom-mobile-application/hero.jpg"
+      heroPortrait
       closingText="Whether it's a customer-facing app or an internal field tool, we build mobile software that performs — and that your team can maintain long after launch."
       features={[
         {

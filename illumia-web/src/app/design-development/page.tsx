@@ -35,6 +35,7 @@ export default function DesignDevelopmentPage() {
       sectionTitle="Our Design & Development Process"
       ctaText="Start Your Design Sprint"
       heroImage="/images/design-development/hero.jpg"
+      heroPortrait
       closingText="At Illumia Solutions, our design and development teams work as one — so your product's look, feel, and function are never compromises made in isolation."
       features={[
         {

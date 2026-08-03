@@ -30,6 +30,8 @@ export interface PageHeroProps {
   imageGrayscale?: boolean;
   /** Tailwind object-position class, e.g. "object-top" */
   imagePosition?: string;
+  /** Set true for portrait-oriented (taller-than-wide) source images — gives the mobile/tablet image box more height so object-cover doesn't crop away most of the photo */
+  portraitImage?: boolean;
   /** Render this instead of the <Image> — for illustration/graphic heroes that aren't a photo */
   imageNode?: ReactNode;
   /** Extra content rendered below the CTAs (e.g. a stats row) */
@@ -48,6 +50,7 @@ export default function PageHero({
   imageAlt,
   imageGrayscale = false,
   imagePosition = "object-center",
+  portraitImage = false,
   imageNode,
   children,
   badgeClassName = "",
@@ -109,7 +112,11 @@ export default function PageHero({
       </div>
 
       {/* ── Image half — full-bleed to screen edge ── */}
-      <div className="relative h-[55vw] md:h-[42vw] lg:h-auto lg:flex-1">
+      <div
+        className={`relative lg:h-auto lg:flex-1 ${
+          portraitImage ? "h-[100vw] md:h-[75vw]" : "h-[55vw] md:h-[42vw]"
+        }`}
+      >
         {imageNode ? (
           imageNode
         ) : (
