@@ -476,8 +476,8 @@ export default function HomePage() {
                   </svg>
                 </span>
                 <div>
-                  <h4 className="font-body text-xs font-bold uppercase tracking-widest text-primary-subdued mb-1">Strategic Partners</h4>
-                  <p className="text-stone-400 text-sm font-body leading-relaxed">Seqrite · Force Ten Technologies · Zextras · Proxmox · LifeBank Foundation · Apache Guacamole · NetBox Labs</p>
+                  <h4 className="font-body text-xs font-bold uppercase tracking-widest text-primary-subdued mb-1">Trusted By</h4>
+                  <p className="text-stone-400 text-sm font-body leading-relaxed">Seqrite · Force Ten Technologies · Zextras · Proxmox · LifeBank Foundation · Apache Guacamole · NetBox Labs · Cybernet & AI Technologies · Data Consultants Corporation</p>
                 </div>
               </div>
             </div>
