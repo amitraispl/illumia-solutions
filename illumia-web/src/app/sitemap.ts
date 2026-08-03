@@ -72,6 +72,7 @@ const routes: { path: string; priority: number; changeFrequency: MetadataRoute.S
   { path: "/drive-as-a-service/", priority: 0.7, changeFrequency: "monthly" },
   { path: "/email-as-a-service/", priority: 0.7, changeFrequency: "monthly" },
   { path: "/web-meeting-solution/", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/collaboration-solutions/", priority: 0.7, changeFrequency: "monthly" },
   { path: "/collaborative-editing/", priority: 0.7, changeFrequency: "monthly" },
   { path: "/project-management-solutions/", priority: 0.7, changeFrequency: "monthly" },
   { path: "/nms-as-a-service/", priority: 0.7, changeFrequency: "monthly" },
