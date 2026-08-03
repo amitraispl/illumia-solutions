@@ -15,6 +15,8 @@ const lifebankLogo = "/images/logos/lifebank-foundation.png";
 const guacamoleLogo = "/images/logos/apache-guacamole-partner.png";
 
 const netboxLabsLogo = "/images/logos/netbox-labs.png";
+const cybernetLogo = "/images/logos/cybernet-ai-technologies-logo.png";
+const dccLogo = "/images/logos/data-consultants-corporation-logo.png";
 
 
 export const metadata: Metadata = {
@@ -39,6 +41,8 @@ const partnerLogos = [
   { src: lifebankLogo, alt: "LifeBank Foundation — Partner", width: 140, height: 60, href: "https://lifebankfoundation.org" },
   { src: guacamoleLogo, alt: "Apache Guacamole — Commercial Support Partner", width: 140, height: 60, href: "https://guacamole.apache.org/support/#commercial-support" },
   { src: netboxLabsLogo, alt: "NetBox Labs — Partner", width: 140, height: 50, href: "https://netboxlabs.com" },
+  { src: cybernetLogo, alt: "Cybernet & AI Technologies — Partner", width: 250, height: 60, href: "https://www.auscybernet.au/" },
+  { src: dccLogo, alt: "Data Consultants Corporation — Partner", width: 190, height: 60, href: "http://www.dccil.com/" },
 ];
 
 const whyChoose = [
