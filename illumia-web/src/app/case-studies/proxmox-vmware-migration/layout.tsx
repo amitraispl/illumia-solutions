@@ -21,12 +21,41 @@ const articleSchema = {
   image: "https://illumiasolutions.com/images/case-studies/1-vmware-migration-hero.jpg",
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://illumiasolutions.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Case Studies",
+      "item": "https://illumiasolutions.com/case-studies/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "VMware to Proxmox VE Migration — Lifebank Foundation",
+      "item": "https://illumiasolutions.com/case-studies/proxmox-vmware-migration/"
+    }
+  ]
+};
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {children}
     </>

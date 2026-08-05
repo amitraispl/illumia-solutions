@@ -20,12 +20,41 @@ const serviceSchema = {
   provider: { "@id": "https://illumiasolutions.com/#organization" },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://illumiasolutions.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Cyber Security",
+      "item": "https://illumiasolutions.com/cyber-security/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "NMS as a Service — Network Management System",
+      "item": "https://illumiasolutions.com/nms-as-a-service/"
+    }
+  ]
+};
+
 export default function NMSPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <RichServicePageTemplate
       badge="Empowering Your Network Management"

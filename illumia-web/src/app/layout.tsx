@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -41,7 +41,10 @@ const orgSchema = {
   ],
   logo: "https://illumiasolutions.com/images/logos/illumia-logo.png",
   image: "https://illumiasolutions.com/images/logos/illumia-logo.png",
-  sameAs: ["https://amitraispl.github.io/illumia-solutions/"],
+  sameAs: [
+    "https://www.linkedin.com/company/illumia-solutions-pvt-ltd/",
+    "https://www.proxmox.com/en/partners/find-partner/all/partner/illumia-solutions",
+  ],
 };
 
 export const metadata: Metadata = {
@@ -62,6 +65,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: ["/og-default.jpg"],
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#b31c33",
 };
 
 export default function RootLayout({

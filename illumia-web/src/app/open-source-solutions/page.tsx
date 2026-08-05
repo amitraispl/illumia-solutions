@@ -25,9 +25,32 @@ const serviceSchema = {
   category: "Open Source Technology",
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://illumiasolutions.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Open Source IT Solutions — Proxmox, ERPNext, NetBox, Wazuh & More",
+      "item": "https://illumiasolutions.com/open-source-solutions/"
+    }
+  ]
+};
+
 export default function OpenSourceSolutionsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

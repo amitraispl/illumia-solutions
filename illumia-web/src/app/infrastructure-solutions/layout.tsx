@@ -7,6 +7,39 @@ export const metadata: Metadata = {
   alternates: { canonical: "/infrastructure-solutions/" },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://illumiasolutions.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Cloud",
+      "item": "https://illumiasolutions.com/cloud-services/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "IT Infrastructure Solutions — Private Cloud, Storage & Network",
+      "item": "https://illumiasolutions.com/infrastructure-solutions/"
+    }
+  ]
+};
+
 export default function InfrastructureSolutionsLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {children}
+    </>
+  );
 }

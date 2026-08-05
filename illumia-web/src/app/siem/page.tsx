@@ -20,12 +20,41 @@ const serviceSchema = {
   provider: { "@id": "https://illumiasolutions.com/#organization" },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://illumiasolutions.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Cyber Security",
+      "item": "https://illumiasolutions.com/cyber-security/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Security Information and Event Management",
+      "item": "https://illumiasolutions.com/siem/"
+    }
+  ]
+};
+
 export default function SiemPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <RichServicePageTemplate
       badge="Cybersecurity"

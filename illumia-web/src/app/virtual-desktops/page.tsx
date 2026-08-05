@@ -20,12 +20,41 @@ const serviceSchema = {
   provider: { "@id": "https://illumiasolutions.com/#organization" },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://illumiasolutions.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Cloud",
+      "item": "https://illumiasolutions.com/cloud-services/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Virtual Desktops — Secure Remote Work",
+      "item": "https://illumiasolutions.com/virtual-desktops/"
+    }
+  ]
+};
+
 export default function VirtualDesktopsPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <RichServicePageTemplate
       badge="Desktop as a Service"

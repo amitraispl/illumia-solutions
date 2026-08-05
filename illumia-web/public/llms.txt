@@ -1,0 +1,47 @@
+# Illumia Solutions
+
+> Enterprise-grade cybersecurity, cloud infrastructure, open-source, and custom software development services for businesses across India, the USA, Australia, and beyond. Proxmox Silver Partner. Team holds CISA, CISSP, CEH, and CCIE certifications with 20+ years of collective industry experience.
+
+Illumia Solutions Pvt. Ltd. is based in Kolkata, India, and serves clients globally with 24/7 support across multiple time zones.
+
+## Cloud
+
+- [Cloud Services](https://illumiasolutions.com/cloud-services/): Hosting, migration, storage, SD-WAN, and disaster recovery.
+- [Private Cloud with Proxmox VE](https://illumiasolutions.com/on-premise-private-cloud-solutions/): On-premise virtualization built on Proxmox VE.
+- [Cloud Migration Solutions](https://illumiasolutions.com/cloud-migration-solutions/): VMware-to-Proxmox and cross-cloud migrations.
+- [Disaster Recovery](https://illumiasolutions.com/disaster-recovery/)
+- [Virtual Private Server](https://illumiasolutions.com/virtual-private-server/)
+
+## Cyber Security
+
+- [Cyber Security](https://illumiasolutions.com/cyber-security/): IT risk strategy, application/cloud/infrastructure security, and compliance.
+- [Compliance Services](https://illumiasolutions.com/compliance-services/): PCI-DSS, ISO 27001, HIPAA, GDPR.
+- [SIEM as a Service](https://illumiasolutions.com/siem-as-a-service/)
+- [EDR as a Service](https://illumiasolutions.com/edr-as-a-service/)
+- [Vulnerability Management](https://illumiasolutions.com/vulnerability-management/)
+
+## Open Source
+
+- [Open Source Solutions](https://illumiasolutions.com/open-source-solutions/): Collaboration, project management, email, and storage built on open-source stacks.
+- [NetBox Platform](https://illumiasolutions.com/netbox-platform/): Network source-of-truth deployments.
+- [ERPNext](https://illumiasolutions.com/erpnext/) and [Odoo](https://illumiasolutions.com/odoo/): Open-source ERP implementations.
+
+## Software Development
+
+- [Software Development](https://illumiasolutions.com/software-development/): Custom web and mobile application development.
+- [Custom Web Application](https://illumiasolutions.com/custom-web-application/)
+- [Custom Mobile Application](https://illumiasolutions.com/custom-mobile-application/)
+- [Third-Party Integrations](https://illumiasolutions.com/third-party-integrations/)
+
+## Case Studies
+
+- [All Case Studies](https://illumiasolutions.com/case-studies/)
+- [VMware to Proxmox VE Migration — Lifebank Foundation](https://illumiasolutions.com/case-studies/proxmox-vmware-migration/): 80% licensing cost reduction, zero new hardware.
+- [PCI DSS Compliance for a Grocery Retail Chain](https://illumiasolutions.com/case-studies/pci-dss-grocery/): PCI DSS Level 2 attestation across 17 locations.
+- [Open Source Infrastructure for a Microfinance Non-Profit](https://illumiasolutions.com/case-studies/non-profit-open-source/): 50–65% IT cost reduction across 1,000+ branches.
+
+## About
+
+- [About Illumia Solutions](https://illumiasolutions.com/about/)
+- [Contact](https://illumiasolutions.com/contact/)
+- [FAQs](https://illumiasolutions.com/faqs/)

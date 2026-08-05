@@ -21,12 +21,41 @@ const articleSchema = {
   image: "https://illumiasolutions.com/images/case-studies/3-hci-expansion-hero.jpg",
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://illumiasolutions.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Case Studies",
+      "item": "https://illumiasolutions.com/case-studies/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Progressive HCI Expansion & NVMe Cluster — High-IOPS Workloads",
+      "item": "https://illumiasolutions.com/case-studies/proxmox-hci-expansion/"
+    }
+  ]
+};
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {children}
     </>

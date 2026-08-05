@@ -20,9 +20,38 @@ const serviceSchema = {
   provider: { "@id": "https://illumiasolutions.com/#organization" },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://illumiasolutions.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Software Development",
+      "item": "https://illumiasolutions.com/software-development/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Custom Web Application Development — Scalable, Secure & Maintainable",
+      "item": "https://illumiasolutions.com/custom-web-application/"
+    }
+  ]
+};
+
 export default function CustomWebApplicationPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

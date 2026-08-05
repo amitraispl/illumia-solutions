@@ -25,12 +25,35 @@ const serviceSchema = {
   category: "Software Development",
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://illumiasolutions.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Software Development — Design, Mobile, Web & Integrations",
+      "item": "https://illumiasolutions.com/software-development/"
+    }
+  ]
+};
+
 export default function SoftwareDevelopmentPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <SoftwareDevelopmentContent />
     </>
