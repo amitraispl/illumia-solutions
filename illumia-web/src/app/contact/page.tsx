@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState, type MouseEvent } from "react";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
+import { getSmoothScroll } from "@/components/SmoothScroll";
 
 type FormData = {
   name: string;
@@ -99,6 +100,46 @@ export default function ContactPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
+  // The whole site's scroll is driven by Locomotive/Lenis (see SmoothScroll),
+  // which hijacks native scrolling and animates it via its own RAF loop.
+  // Native anchor navigation (`location.hash`, `scrollIntoView`) fights that
+  // loop — Lenis's next frame can override or race the native jump, which is
+  // what made the button feel inconsistent/laggy. Routing the jump through
+  // Lenis's own `scrollTo` means only one system ever drives the scroll, and
+  // — unlike native hash navigation — it's an imperative call, so it works
+  // identically on every click regardless of whether the URL already ends in
+  // "#contact-form".
+  const jumpToContactForm = () => {
+    const target = document.getElementById("contact-form");
+    if (!target) return;
+
+    if (window.location.hash !== "#contact-form") {
+      window.history.replaceState(null, "", "#contact-form");
+    }
+
+    const lenis = getSmoothScroll();
+    if (lenis) {
+      lenis.scrollTo(target);
+    } else {
+      target.scrollIntoView({ block: "start" });
+    }
+  };
+
+  // Land correctly even when the page is opened directly on "#contact-form"
+  // (shared link, refresh, bookmark): on a real network, fonts/images can
+  // still be loading when the page mounts, so the resting position can be
+  // off if we scroll too early. Trigger once layout has settled.
+  useEffect(() => {
+    if (window.location.hash !== "#contact-form") return;
+    const ready = "fonts" in document ? document.fonts.ready : Promise.resolve();
+    ready.then(() => requestAnimationFrame(() => requestAnimationFrame(jumpToContactForm)));
+  }, []);
+
+  const handleJumpToForm = (e: MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    jumpToContactForm();
+  };
+
   const fieldClass = (field: keyof FormData) => {
     const base =
       "w-full bg-[#f6f3f2] border rounded-xl px-4 py-3.5 text-stone-900 font-body transition-all outline-none focus:bg-white placeholder:text-stone-400";
@@ -183,7 +224,7 @@ export default function ContactPage() {
           </>
         }
         description="Share your challenge and we'll map a path forward. Our team spans time zones and disciplines — someone is always ready to help."
-        primaryCta={{ label: "Jump to the Form", href: "#contact-form" }}
+        primaryCta={{ label: "Jump to the Form", href: "#contact-form", onClick: handleJumpToForm }}
         secondaryCta={{ label: "Our Story", href: "/about" }}
         imageSrc="/images/content/specialized-services_hero.jpg"
         imageAlt="Modern collaborative office workspace"

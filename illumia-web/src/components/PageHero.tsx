@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
-import type { ReactNode } from "react";
+import type { MouseEvent, ReactNode } from "react";
 
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
@@ -22,7 +22,7 @@ export interface PageHeroProps {
   badge: string;
   title: ReactNode;
   description: string;
-  primaryCta: { label: string; href: string };
+  primaryCta: { label: string; href: string; onClick?: (e: MouseEvent<HTMLAnchorElement>) => void };
   secondaryCta?: { label: string; href: string };
   imageSrc: string;
   imageAlt: string;
@@ -89,6 +89,7 @@ export default function PageHero({
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
             <Link
               href={primaryCta.href}
+              onClick={primaryCta.onClick}
               className="bg-primary text-white px-8 py-4 rounded-xl font-body font-semibold tracking-wide shadow-xl shadow-primary/20 hover:bg-primary-dark active:scale-[0.98] transition-[background-color,box-shadow] duration-200 text-center"
             >
               {primaryCta.label}
