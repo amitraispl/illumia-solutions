@@ -53,14 +53,14 @@ export const metadata: Metadata = {
   description:
     "Enterprise-grade cybersecurity, cloud infrastructure, and open-source IT services for businesses across India, the USA, Australia, and beyond. Proxmox Silver Partner. CISA, CISSP, CEH, CCIE certified team with 20+ years of collective industry experience.",
   openGraph: {
-    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630 }],
     type: "website",
     siteName: "Illumia Solutions",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/og-default.png"],
+    images: ["/og-default.jpg"],
   },
 };
 
