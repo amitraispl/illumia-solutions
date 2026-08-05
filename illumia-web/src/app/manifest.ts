@@ -9,7 +9,7 @@ export default function manifest(): MetadataRoute.Manifest {
     description:
       "Enterprise-grade cybersecurity, cloud infrastructure, and open-source IT services.",
     start_url: "/",
-    display: "standalone",
+    display: "browser",
     background_color: "#fcf9f8",
     theme_color: "#b31c33",
     icons: [
