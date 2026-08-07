@@ -185,19 +185,14 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
           </svg>
         </motion.span>
       </button>
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            key="answer"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto", transition: { duration: 0.35, ease: EASE } }}
-            exit={{ opacity: 0, height: 0, transition: { duration: 0.22, ease: EASE } }}
-            className="overflow-hidden"
-          >
-            <p className="pb-6 text-[#5a4040] font-body leading-relaxed">{answer}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <motion.div
+        animate={{ opacity: open ? 1 : 0, height: open ? "auto" : 0 }}
+        initial={false}
+        transition={{ duration: open ? 0.35 : 0.22, ease: EASE }}
+        className="overflow-hidden"
+      >
+        <p className="pb-6 text-[#5a4040] font-body leading-relaxed">{answer}</p>
+      </motion.div>
     </div>
   );
 }
