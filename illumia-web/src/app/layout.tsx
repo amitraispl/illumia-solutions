@@ -20,6 +20,8 @@ const orgSchema = {
   "@id": "https://illumiasolutions.com/#organization",
   name: "Illumia Solutions",
   alternateName: "Illumia Solutions Pvt. Ltd.",
+  description:
+    "Enterprise-grade cybersecurity, cloud infrastructure, and open-source IT services for businesses across India, the USA, Australia, and beyond. Proxmox Silver Partner. CISA, CISSP, CEH, CCIE certified team with 20+ years of collective industry experience.",
   url: "https://illumiasolutions.com",
   telephone: "+919332045178",
   email: "sales@illumiasolutions.com",
@@ -45,6 +47,16 @@ const orgSchema = {
     "https://www.linkedin.com/company/illumia-solutions-pvt-ltd/",
     "https://www.proxmox.com/en/partners/find-partner/all/partner/illumia-solutions",
   ],
+};
+
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://illumiasolutions.com/#website",
+  url: "https://illumiasolutions.com",
+  name: "Illumia Solutions",
+  publisher: { "@id": "https://illumiasolutions.com/#organization" },
+  inLanguage: "en-US",
 };
 
 export const metadata: Metadata = {
@@ -82,6 +94,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
         <SmoothScroll />
         <Navbar />
