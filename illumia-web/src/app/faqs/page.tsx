@@ -164,8 +164,8 @@ const categoryImages: Record<CategoryId, { src: string; alt: string; caption: st
   },
 };
 
-function FAQItem({ question, answer }: { question: string; answer: string }) {
-  const [open, setOpen] = useState(false);
+function FAQItem({ question, answer, defaultOpen = false }: { question: string; answer: string; defaultOpen?: boolean }) {
+  const [open, setOpen] = useState(defaultOpen);
   return (
     <div className="border-b border-[#e2bebd]/40">
       <button
@@ -281,8 +281,8 @@ export default function FAQsPage() {
                   animate={{ opacity: 1, y: 0, transition: { duration: 0.4, ease: EASE } }}
                   exit={{ opacity: 0, y: -10, transition: { duration: 0.22, ease: EASE } }}
                 >
-                  {faqData[activeCategory].map((faq) => (
-                    <FAQItem key={faq.q} question={faq.q} answer={faq.a} />
+                  {faqData[activeCategory].map((faq, i) => (
+                    <FAQItem key={faq.q} question={faq.q} answer={faq.a} defaultOpen={i < 5} />
                   ))}
 
                   {/* Guidance card */}

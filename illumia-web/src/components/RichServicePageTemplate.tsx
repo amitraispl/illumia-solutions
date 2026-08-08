@@ -46,6 +46,8 @@ export interface RichServicePageTemplateProps {
   heroImageNode?: ReactNode;
   secondaryImage?: string;
   secondaryImageAlt?: string;
+  /** ISO date string — renders a visible "Updated [date]" line under the section heading */
+  updatedDate?: string;
 }
 
 export default function RichServicePageTemplate({
@@ -63,6 +65,7 @@ export default function RichServicePageTemplate({
   heroImageNode,
   secondaryImage,
   secondaryImageAlt,
+  updatedDate,
 }: RichServicePageTemplateProps) {
   return (
     <>
@@ -114,6 +117,15 @@ export default function RichServicePageTemplate({
             >
               {sectionTitle}
             </motion.h2>
+            {updatedDate && (
+              <motion.time
+                dateTime={updatedDate}
+                variants={fadeUp}
+                className="block mt-3 text-xs font-medium text-[#8e706f]"
+              >
+                Updated {new Date(updatedDate).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
+              </motion.time>
+            )}
           </motion.div>
 
           {/* Feature cards grid */}

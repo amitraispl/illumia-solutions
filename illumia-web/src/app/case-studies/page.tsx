@@ -124,7 +124,7 @@ const caseStudies = [
   {
     href: "/case-studies/vmware-proxmox-migration-forceten",
     tag: "Infrastructure · Proxmox",
-    title: "80% Licensing Cost Reduction via VMware to Proxmox VE Migration",
+    title: "Zero-Downtime VMware to Proxmox VE Migration for a Financial Software Developer",
     summary:
       "Force Ten Technologies Pvt. Ltd., a financial software developer, initiated a virtualisation licensing review. ISPL delivered a phased, rolling migration to Proxmox VE — zero new hardware, zero VMs lost, every downtime threshold met.",
     body:

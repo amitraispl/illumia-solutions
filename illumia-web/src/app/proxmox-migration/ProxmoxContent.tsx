@@ -1,8 +1,13 @@
 "use client";
 
+import { useMemo, useRef } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import { ArrowRight, ArrowUpRight, CheckCircle2, Server, Layers, HardDrive, Shield, Network, Database, ScanLine } from "lucide-react";
+
+gsap.registerPlugin(useGSAP);
 
 const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
 
@@ -35,6 +40,155 @@ function SourceCaption({ children, dark = false }: { children: string; dark?: bo
     <p className={`mt-2 font-body text-[11px] italic ${dark ? "text-white/45" : "text-[#5a4040]"}`}>
       Source: {children}
     </p>
+  );
+}
+
+/* Real released version numbers, oldest -> newest, one entry per stable point
+   release (pre-release "~N" build tags dropped). Pulled from each project's
+   actual debian/changelog on git.proxmox.com on 2026-08-08. The final entry
+   in each list is one release short of the "to" value shown on the card —
+   the wheel counts up through every real release it shipped, then stops
+   just short of the target, which is shown statically on the right. */
+const PVE_VERSIONS = [
+  "8.1.3", "8.1.4", "8.1.5", "8.1.6", "8.1.7", "8.1.8", "8.1.9", "8.1.10", "8.1.11",
+  "8.2.0", "8.2.1", "8.2.2", "8.2.3", "8.2.4", "8.2.5", "8.2.6", "8.2.7", "8.2.8", "8.2.9", "8.2.10",
+  "8.3.0", "8.3.1", "8.3.2", "8.3.3", "8.3.4", "8.3.5", "8.3.6", "8.3.7",
+  "8.4.0", "8.4.1",
+  "9.0.0", "9.0.1", "9.0.2", "9.0.3", "9.0.4", "9.0.5", "9.0.6", "9.0.7", "9.0.8", "9.0.9",
+  "9.0.10", "9.0.11", "9.0.12", "9.0.13", "9.0.14", "9.0.15", "9.0.16", "9.0.17", "9.0.18",
+  "9.1.0", "9.1.1", "9.1.2", "9.1.3", "9.1.4", "9.1.5", "9.1.6", "9.1.7", "9.1.8", "9.1.9",
+  "9.1.10", "9.1.11", "9.1.12", "9.1.13", "9.1.14", "9.1.15", "9.1.16", "9.1.17", "9.1.18", "9.1.19",
+  "9.2.0", "9.2.1", "9.2.2", "9.2.3",
+]; // -> 9.2.4 (git.proxmox.com/pve-manager, debian/changelog)
+
+const PBS_VERSIONS = [
+  "3.2.1", "3.2.2", "3.2.3", "3.2.4", "3.2.5", "3.2.6", "3.2.7", "3.2.8", "3.2.9", "3.2.10",
+  "3.2.11", "3.2.12", "3.2.13", "3.2.14",
+  "3.3.0", "3.3.1", "3.3.2", "3.3.3", "3.3.4", "3.3.5", "3.3.6", "3.3.7",
+  "3.4.0", "3.4.1", "3.4.2",
+  "4.0.0", "4.0.1", "4.0.2", "4.0.3", "4.0.4", "4.0.5", "4.0.6", "4.0.7", "4.0.8", "4.0.9",
+  "4.0.10", "4.0.11", "4.0.12", "4.0.13", "4.0.14", "4.0.15", "4.0.16", "4.0.17", "4.0.18",
+  "4.0.19", "4.0.20", "4.0.21", "4.0.22",
+  "4.1.0", "4.1.1", "4.1.2", "4.1.3", "4.1.4", "4.1.5", "4.1.6", "4.1.7", "4.1.8", "4.1.9",
+  "4.1.10", "4.1.11", "4.1.12", "4.1.13",
+  "4.2.0", "4.2.1", "4.2.2",
+]; // -> 4.2.3 (git.proxmox.com/proxmox-backup, debian/changelog)
+
+const PMG_VERSIONS = [
+  "8.0.2", "8.0.3", "8.0.4", "8.0.5", "8.0.6", "8.0.7", "8.0.8", "8.0.9", "8.0.10", "8.0.11", "8.0.12",
+  "8.1.0", "8.1.1", "8.1.2", "8.1.3", "8.1.4", "8.1.5", "8.1.6", "8.1.7", "8.1.8", "8.1.9",
+  "8.2.0", "8.2.1", "8.2.2", "8.2.3",
+  "9.0.0", "9.0.1", "9.0.2", "9.0.3", "9.0.4", "9.0.5", "9.0.6", "9.0.7", "9.0.8", "9.0.9",
+  "9.0.10", "9.0.11", "9.0.12", "9.0.13", "9.0.14",
+  "9.1.0", "9.1.1",
+]; // -> 9.1.2 (git.proxmox.com/pmg-api, debian/changelog)
+
+const REEL_DIGIT_H = 14; // px — one row height, must match the reel's font-size/line-height
+
+/* One rolling column (major, minor, or patch) — plain text that rolls out
+   upward and back in from below when its value changes, like a suitcase
+   lock tumbler. Handles variable-width numbers fine (e.g. "9" -> "10")
+   since it's a text swap, not a fixed 0-9 digit strip. */
+function PartRoller({ partRef, initial, widthCh }: { partRef: React.RefObject<HTMLSpanElement | null>; initial: string; widthCh: number }) {
+  return (
+    <span className="inline-block overflow-hidden align-middle" style={{ height: REEL_DIGIT_H, width: `${widthCh}ch` }}>
+      <span
+        ref={partRef}
+        className="block text-center tabular-nums"
+        style={{ height: REEL_DIGIT_H, lineHeight: `${REEL_DIGIT_H}px` }}
+      >
+        {initial}
+      </span>
+    </span>
+  );
+}
+
+/* Version ticker for the "Ecosystem Upgradation" card, driven by each
+   package's real release history (see the *_VERSIONS lists above) rather
+   than synthetic digit counting. Steps to the next real release every
+   TICK_INTERVAL; major/minor only roll on the tick their value actually
+   changes between consecutive real releases, so a wheel sits still unless
+   that release genuinely bumped it. Stops on the last real release short of
+   the target, holds, then loops back to the start. */
+function VersionTicker({ pkg, to, versions, delay }: { pkg: string; to: string; versions: string[]; delay: number }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const majorRef = useRef<HTMLSpanElement>(null);
+  const minorRef = useRef<HTMLSpanElement>(null);
+  const patchRef = useRef<HTMLSpanElement>(null);
+
+  const initialParts = (versions[0] ?? "0.0.0").split(".");
+  const widths = useMemo(() => {
+    const all = [...versions, to].map((v) => v.split("."));
+    return [0, 1, 2].map((i) => Math.max(...all.map((p) => p[i]?.length ?? 1)));
+  }, [versions, to]);
+
+  const TICK_INTERVAL = 0.8; // seconds between each real-release step
+  const ROLL_OUT = 0.25; // old value rolling up & out
+  const ROLL_IN = 0.25; // new value rolling in from below
+  const HOLD_DURATION = 2; // pause on the near-target release before looping
+
+  useGSAP(
+    () => {
+      const refs = [majorRef, minorRef, patchRef] as const;
+      refs.forEach((r, i) => { if (r.current) r.current.textContent = initialParts[i] ?? ""; });
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const totalTicks = versions.length - 1;
+      if (reduceMotion || totalTicks <= 0) return;
+
+      const tl = gsap.timeline({ repeat: -1, delay });
+      // Re-sync every column back to the starting release at the top of each
+      // cycle. `.call()`-driven textContent isn't a tracked GSAP property, so
+      // on repeat the timeline would otherwise leave stale digits (e.g. major
+      // already sitting on the target's value) showing through the next lap.
+      tl.call(() => {
+        refs.forEach((r, i) => {
+          if (!r.current) return;
+          r.current.textContent = initialParts[i] ?? "";
+          gsap.set(r.current, { y: 0, opacity: 1 });
+        });
+      }, undefined, 0);
+      for (let i = 1; i <= totalTicks; i++) {
+        const t = i * TICK_INTERVAL;
+        const prevParts = versions[i - 1].split(".");
+        const curParts = versions[i].split(".");
+        refs.forEach((ref, k) => {
+          const el = ref.current;
+          if (!el || prevParts[k] === curParts[k]) return;
+          tl.to(el, { y: -REEL_DIGIT_H, opacity: 0, duration: ROLL_OUT, ease: "power2.in" }, t)
+            .call(() => { el.textContent = curParts[k]; }, undefined, t + ROLL_OUT)
+            .set(el, { y: REEL_DIGIT_H, opacity: 0 }, t + ROLL_OUT)
+            .to(el, { y: 0, opacity: 1, duration: ROLL_IN, ease: "power2.out" }, t + ROLL_OUT);
+        });
+      }
+      tl.to({}, { duration: HOLD_DURATION });
+    },
+    { scope: containerRef, dependencies: [versions, to, delay] }
+  );
+
+  return (
+    <motion.div
+      ref={containerRef}
+      className="flex items-center gap-2 font-mono text-[11px]"
+      animate={{ opacity: [0.35, 1, 0.35] }}
+      transition={{ duration: 3.5, repeat: Infinity, delay, ease: "easeInOut" }}
+    >
+      <span className="text-[#1c1b1b] font-semibold w-7">{pkg}</span>
+      <span className="text-[#8e706f] inline-flex items-baseline leading-none">
+        <PartRoller partRef={majorRef} initial={initialParts[0]} widthCh={widths[0]} />
+        <span>.</span>
+        <PartRoller partRef={minorRef} initial={initialParts[1]} widthCh={widths[1]} />
+        <span>.</span>
+        <PartRoller partRef={patchRef} initial={initialParts[2]} widthCh={widths[2]} />
+      </span>
+      <ArrowRight size={9} className="text-[#b31c33] shrink-0" />
+      <span className="text-[#b31c33] font-semibold tabular-nums">{to}</span>
+      <motion.div
+        className="ml-auto w-1.5 h-1.5 rounded-full bg-[#b31c33]"
+        animate={{ opacity: [0, 1, 0] }}
+        transition={{ duration: 3.5, repeat: Infinity, delay: delay + 1.5 }}
+      />
+    </motion.div>
   );
 }
 
@@ -225,6 +379,10 @@ export default function ProxmoxContent() {
 
               <motion.p variants={fadeUp} className="font-body text-[15px] text-[#5a4040] leading-[1.8] max-w-[520px] mb-9">
                 Proxmox Virtual Environment delivers KVM VMs, LXC containers, HA clustering, Ceph HCI storage, and live migration under an open-source AGPL licence — with no per-CPU core fees and no seat counts.
+              </motion.p>
+
+              <motion.p variants={fadeUp} className="font-body text-sm font-semibold text-[#1c1b1b] mb-4">
+                How much does Proxmox migration save?
               </motion.p>
 
               {/* Stats */}
@@ -525,22 +683,11 @@ export default function ProxmoxContent() {
             >
               <div className="rounded-lg bg-[#b31c33]/[0.025] border border-[#e2bebd]/50 px-4 py-3 space-y-2 shrink-0">
                 {[
-                  { pkg: "PVE", from: "8.1.3", to: "9.2.4", delay: 0 },
-                  { pkg: "PBS", from: "3.2.1", to: "4.2.3", delay: 1.1 },
-                  { pkg: "PMG", from: "8.0.2", to: "9.1.2", delay: 2.2 },
+                  { pkg: "PVE", versions: PVE_VERSIONS, to: "9.2.4", delay: 0 },
+                  { pkg: "PBS", versions: PBS_VERSIONS, to: "4.2.3", delay: 1.1 },
+                  { pkg: "PMG", versions: PMG_VERSIONS, to: "9.1.2", delay: 2.2 },
                 ].map((v) => (
-                  <motion.div key={v.pkg} className="flex items-center gap-2 font-mono text-[11px]"
-                    animate={{ opacity: [0.35, 1, 0.35] }}
-                    transition={{ duration: 3.5, repeat: Infinity, delay: v.delay, ease: "easeInOut" }}
-                  >
-                    <span className="text-[#1c1b1b] font-semibold w-7">{v.pkg}</span>
-                    <span className="text-[#8e706f]">{v.from}</span>
-                    <ArrowRight size={9} className="text-[#b31c33] shrink-0" />
-                    <span className="text-[#b31c33] font-semibold">{v.to}</span>
-                    <motion.div className="ml-auto w-1.5 h-1.5 rounded-full bg-[#b31c33]"
-                      animate={{ opacity: [0, 1, 0] }}
-                      transition={{ duration: 3.5, repeat: Infinity, delay: v.delay + 1.5 }} />
-                  </motion.div>
+                  <VersionTicker key={v.pkg} pkg={v.pkg} versions={v.versions} to={v.to} delay={v.delay} />
                 ))}
               </div>
               <span className="font-headline italic text-[#b31c33] text-4xl leading-none tabular-nums">04</span>

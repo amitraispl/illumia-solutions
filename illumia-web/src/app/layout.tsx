@@ -21,7 +21,7 @@ const orgSchema = {
   name: "Illumia Solutions",
   alternateName: "Illumia Solutions Pvt. Ltd.",
   description:
-    "Enterprise-grade cybersecurity, cloud infrastructure, and open-source IT services for businesses across India, the USA, Australia, and beyond. Proxmox Silver Partner. CISA, CISSP, CEH, CCIE certified team with 20+ years of collective industry experience.",
+    "Illumia Solutions is a certified Proxmox Silver Partner based in Kolkata, India, delivering enterprise-grade cybersecurity, cloud infrastructure, and open-source IT services for businesses across India, the USA, Australia, and beyond. CISA, CISSP, CEH, CCIE certified team with 20+ years of collective industry experience.",
   url: "https://illumiasolutions.com",
   telephone: "+919332045178",
   email: "sales@illumiasolutions.com",

@@ -22,7 +22,7 @@ const dccLogo = "/images/logos/data-consultants-corporation-logo.png";
 export const metadata: Metadata = {
   title: "Illumia Solutions | Enterprise IT Services | Cloud, Cybersecurity & Open Source",
   description:
-    "Enterprise-grade cloud infrastructure, cybersecurity, open-source and software development services. Proxmox Silver Partner. CISA, CISSP, CEH, CCIE certified.",
+    "Illumia Solutions is a certified Proxmox Silver Partner based in Kolkata, India, delivering enterprise-grade cloud infrastructure, cybersecurity, open-source and software development services. CISA, CISSP, CEH, CCIE certified.",
   alternates: { canonical: "/" },
 };
 

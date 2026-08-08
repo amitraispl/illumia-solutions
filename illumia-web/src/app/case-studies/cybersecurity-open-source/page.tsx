@@ -161,8 +161,13 @@ export default function CybersecurityCaseStudy() {
         <div className="mx-auto max-w-7xl px-6 pt-28 pb-16 lg:px-8 lg:pt-32 lg:pb-20">
           <div className="grid items-center gap-12 lg:grid-cols-12">
             <div className="lg:col-span-7">
-              <div className="cy-hero-fade inline-flex items-center gap-2 rounded-full border border-[#b31c33]/30 bg-[#b31c33]/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#b31c33]">
-                Case Study
+              <div className="cy-hero-fade flex flex-wrap items-center gap-3">
+                <div className="inline-flex items-center gap-2 rounded-full border border-[#b31c33]/30 bg-[#b31c33]/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#b31c33]">
+                  Case Study
+                </div>
+                <time dateTime="2026-05-14" className="text-xs font-medium text-[#8e706f]">
+                  Updated May 14, 2026
+                </time>
               </div>
               <h1 className="cy-hero-fade mt-6 font-headline text-4xl leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-6xl">
                 Strengthening <span className="text-[#b31c33]">Cybersecurity &amp; Compliance</span> with Open Source Technologies
