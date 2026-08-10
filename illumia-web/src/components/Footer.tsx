@@ -17,6 +17,7 @@ const solutions = [
   { label: "Cloud Services", href: "/cloud-services/" },
   { label: "Cyber Security", href: "/cyber-security/" },
   { label: "Open Source Solutions", href: "/open-source-solutions/" },
+  { label: "Software Development", href: "/software-development/" },
 ];
 
 const company = [
