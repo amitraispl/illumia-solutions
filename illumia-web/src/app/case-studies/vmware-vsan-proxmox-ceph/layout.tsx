@@ -17,6 +17,7 @@ const articleSchema = {
   url: "https://illumiasolutions.com/case-studies/vmware-vsan-proxmox-ceph/",
   datePublished: "2026-06-02",
   dateModified: "2026-06-02",
+  author: { "@id": "https://illumiasolutions.com/#organization" },
   publisher: { "@id": "https://illumiasolutions.com/#organization" },
   image: "https://illumiasolutions.com/images/case-studies/dcc-hero.jpg",
 };

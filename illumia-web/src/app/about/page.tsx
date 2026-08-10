@@ -55,9 +55,22 @@ const whyUs = [
   { number: "10", title: "Tailored Solutions for Diverse Needs", desc: "From high-security measures and regulatory compliance to scalable cloud solutions and efficient open-source technologies, Illumia Solutions provides a full stack of services designed to address the diverse needs of modern businesses. We customise our solutions to fit your specific requirements, ensuring maximum protection and operational efficiency.", bg: "/images/heroes/cloud-migration_hero.jpg" },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://illumiasolutions.com/" },
+    { "@type": "ListItem", position: 2, name: "About Us", item: "https://illumiasolutions.com/about/" },
+  ],
+};
+
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero */}
       <PageHero
         badge="Our Story"

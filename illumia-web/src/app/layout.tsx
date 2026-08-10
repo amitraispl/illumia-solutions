@@ -25,6 +25,20 @@ const orgSchema = {
   url: "https://illumiasolutions.com",
   telephone: "+919332045178",
   email: "sales@illumiasolutions.com",
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+919332045178",
+    email: "sales@illumiasolutions.com",
+    contactType: "sales",
+  },
+  knowsAbout: [
+    "Cloud Infrastructure",
+    "Cybersecurity",
+    "Proxmox Virtualization",
+    "Open Source IT Solutions",
+    "PCI DSS Compliance",
+    "SIEM and Endpoint Detection",
+  ],
   address: {
     "@type": "PostalAddress",
     streetAddress: "98/9 Gopal Lal Tagore Rd, Baranagar",

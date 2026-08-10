@@ -1,33 +1,54 @@
-# Illumia Solutions
+# Illumia Solutions — Full Site Index
 
 > Enterprise-grade cybersecurity, cloud infrastructure, open-source, and custom software development for businesses in India, the USA, Australia, and beyond. Certified Proxmox Silver Partner.
 
-Illumia Solutions Pvt. Ltd. is based in Kolkata, India, and serves clients globally with 24/7 support across multiple time zones. Team holds CISA, CISSP, CEH, and CCIE certifications with 20+ years of collective industry experience.
+Illumia Solutions Pvt. Ltd. is based in Kolkata, India, and serves clients globally with 24/7 support across multiple time zones. Team holds CISA, CISSP, CEH, and CCIE certifications with 20+ years of collective industry experience. This file lists every indexable page on illumiasolutions.com. See [llms.txt](https://illumiasolutions.com/llms.txt) for the curated summary.
 
 ## Key Facts
 
 - Headquarters: 98/9 Gopal Lal Tagore Rd, Baranagar, Kolkata, West Bengal 700036, India
 - Areas served: India, United States, Philippines, Australia, Kenya, Mozambique
 - Certifications: Proxmox Silver Partner; team holds CISA, CISSP, CEH, CCIE
-- Full page list: [llms-full.txt](https://illumiasolutions.com/llms-full.txt)
+- Contact: sales@illumiasolutions.com / +91 9332045178
 
-## Cloud
+## Company
+
+- [Home](https://illumiasolutions.com/)
+- [About Illumia Solutions](https://illumiasolutions.com/about/)
+- [Contact](https://illumiasolutions.com/contact/)
+- [FAQs](https://illumiasolutions.com/faqs/): 30 common questions on cloud, cybersecurity, and open-source services.
+
+## Cloud & Infrastructure
 
 - [Cloud Services](https://illumiasolutions.com/cloud-services/): Hosting, migration, storage, SD-WAN, and disaster recovery.
 - [Private Cloud with Proxmox VE](https://illumiasolutions.com/on-premise-private-cloud-solutions/): On-premise virtualization built on Proxmox VE.
+- [On-Premise Private Cloud](https://illumiasolutions.com/on-premise-private-cloud/): Self-hosted private cloud deployment.
 - [Proxmox VE Migration](https://illumiasolutions.com/proxmox-migration/): End-to-end migration to Proxmox VE from VMware, Hyper-V, Nutanix, and bare metal.
 - [Cloud Migration Solutions](https://illumiasolutions.com/cloud-migration-solutions/): VMware-to-Proxmox and cross-cloud migrations.
+- [Infrastructure Solutions](https://illumiasolutions.com/infrastructure-solutions/): Physical server, VPS, container, and virtual desktop hosting.
 - [Disaster Recovery](https://illumiasolutions.com/disaster-recovery/): Remote access, VPN, monitoring, and failover orchestration.
 - [Virtual Private Server](https://illumiasolutions.com/virtual-private-server/): Managed VPS hosting.
+- [Physical Server](https://illumiasolutions.com/physical-server/): Dedicated bare-metal hosting.
+- [Containers](https://illumiasolutions.com/containers/): Managed container hosting.
+- [Virtual Desktops](https://illumiasolutions.com/virtual-desktops/): Hosted virtual desktop infrastructure.
+- [Object Storage](https://illumiasolutions.com/object-storage/): S3-compatible object storage.
+- [Backup as a Service](https://illumiasolutions.com/backup-as-a-service/): Managed backup and retention.
+- [Software-Defined Network](https://illumiasolutions.com/software-defined-network/): SDN/SD-WAN deployment and management.
+- [Monitoring & Analytics](https://illumiasolutions.com/monitoring-analytics/): Infrastructure monitoring and analytics.
+- [Maintenance Services](https://illumiasolutions.com/maintenance-services/): Ongoing infrastructure monitoring and support.
 
 ## Cybersecurity
 
 - [Cyber Security](https://illumiasolutions.com/cyber-security/): IT risk strategy, application/cloud/infrastructure security, and compliance.
-- [Compliance Services](https://illumiasolutions.com/compliance-services/): PCI-DSS, ISO 27001, HIPAA, GDPR.
-- [SIEM as a Service](https://illumiasolutions.com/siem-as-a-service/): Managed security information and event management.
-- [EDR as a Service](https://illumiasolutions.com/edr-as-a-service/): Managed endpoint detection and response powered by OpenEDR.
-- [PAM as a Service](https://illumiasolutions.com/pam-as-a-service/): Managed privileged access management.
-- [Honeypot as a Service](https://illumiasolutions.com/honeypot-as-a-service/): Managed deception/honeypot deployments for threat intelligence.
+- [Cybersecurity Solutions](https://illumiasolutions.com/cybersecurity-solutions/): Overview of the managed cybersecurity portfolio.
+- [SIEM](https://illumiasolutions.com/siem/): Security information and event management deployment.
+- [SIEM as a Service](https://illumiasolutions.com/siem-as-a-service/): Managed SIEM.
+- [EDR Solution](https://illumiasolutions.com/edr-solution/): Endpoint detection and response deployment powered by OpenEDR.
+- [EDR as a Service](https://illumiasolutions.com/edr-as-a-service/): Managed EDR.
+- [PAM](https://illumiasolutions.com/pam/): Privileged access management deployment.
+- [PAM as a Service](https://illumiasolutions.com/pam-as-a-service/): Managed PAM.
+- [Honeypot Solution](https://illumiasolutions.com/honeypot-solution/): Deception/honeypot deployment for threat intelligence.
+- [Honeypot as a Service](https://illumiasolutions.com/honeypot-as-a-service/): Managed honeypot service.
 - [SOAR](https://illumiasolutions.com/soar/): Security orchestration, automation, and response.
 - [Vulnerability Management](https://illumiasolutions.com/vulnerability-management/): Continuous scanning and remediation using OpenVAS.
 - [Governance, Risk & Compliance](https://illumiasolutions.com/governance-risk-compliance/): GRC program design and audit support.
@@ -36,6 +57,8 @@ Illumia Solutions Pvt. Ltd. is based in Kolkata, India, and serves clients globa
 - [Cloud Security](https://illumiasolutions.com/cloud-security/): Cloud configuration hardening and posture management.
 - [Infrastructure Security](https://illumiasolutions.com/infrastructure-security/): Network and infrastructure hardening.
 - [IT Risk & Security Strategy](https://illumiasolutions.com/it-risk-and-security-strategy/): Industry-specific risk frameworks and program assessments.
+- [Compliance Services](https://illumiasolutions.com/compliance-services/): PCI-DSS, ISO 27001, HIPAA, GDPR.
+- [Specialized Services](https://illumiasolutions.com/specialized-services/): Additional security service offerings.
 - [WAF as a Service](https://illumiasolutions.com/waf-as-a-service/): Managed web application firewall.
 
 ## AI Governance
@@ -45,26 +68,28 @@ Illumia Solutions Pvt. Ltd. is based in Kolkata, India, and serves clients globa
 ## Open Source
 
 - [Open Source Solutions](https://illumiasolutions.com/open-source-solutions/): Collaboration, project management, email, and storage built on open-source stacks.
-- [NetBox Platform](https://illumiasolutions.com/netbox-platform/): Network source-of-truth deployments.
+- [NetBox](https://illumiasolutions.com/netbox/): Network source-of-truth deployment.
+- [NetBox Platform](https://illumiasolutions.com/netbox-platform/): Managed NetBox platform service.
 - [ERPNext](https://illumiasolutions.com/erpnext/): Open-source ERP — accounting, inventory, manufacturing, CRM.
 - [Odoo](https://illumiasolutions.com/odoo/): Open-source ERP implementation and customisation.
 
 ## Software Development
 
 - [Software Development](https://illumiasolutions.com/software-development/): Custom web and mobile application development.
-- [Custom Web Application](https://illumiasolutions.com/custom-web-application/)
-- [Custom Mobile Application](https://illumiasolutions.com/custom-mobile-application/)
-- [Third-Party Integrations](https://illumiasolutions.com/third-party-integrations/)
+- [Application Solutions](https://illumiasolutions.com/application-solutions/): Custom application development overview.
+- [Custom Web Application](https://illumiasolutions.com/custom-web-application/): Bespoke web application development.
+- [Custom Mobile Application](https://illumiasolutions.com/custom-mobile-application/): Bespoke mobile application development.
+- [Design & Development](https://illumiasolutions.com/design-development/): UI/UX design and development services.
+- [Third-Party Integrations](https://illumiasolutions.com/third-party-integrations/): API and system integration work.
 
-## Infrastructure & Hosting
+## Collaboration Tools
 
-- [Infrastructure Solutions](https://illumiasolutions.com/infrastructure-solutions/): Physical server, VPS, container, and virtual desktop hosting.
-- [Object Storage](https://illumiasolutions.com/object-storage/): S3-compatible object storage.
-- [Backup as a Service](https://illumiasolutions.com/backup-as-a-service/): Managed backup and retention.
-- [Physical Server](https://illumiasolutions.com/physical-server/): Dedicated bare-metal hosting.
-- [Containers](https://illumiasolutions.com/containers/): Managed container hosting.
-- [Virtual Desktops](https://illumiasolutions.com/virtual-desktops/): Hosted virtual desktop infrastructure.
-- [Maintenance Services](https://illumiasolutions.com/maintenance-services/): Ongoing infrastructure monitoring and support.
+- [Drive as a Service](https://illumiasolutions.com/drive-as-a-service/): Managed cloud storage (Nextcloud-based).
+- [Email as a Service](https://illumiasolutions.com/email-as-a-service/): Managed business email hosting.
+- [Web Meeting Solution](https://illumiasolutions.com/web-meeting-solution/): Hosted video conferencing.
+- [Collaborative Editing](https://illumiasolutions.com/collaborative-editing/): Real-time document collaboration tools.
+- [Project Management Solutions](https://illumiasolutions.com/project-management-solutions/): Redmine, Zammad, and OpenProject deployments.
+- [NMS as a Service](https://illumiasolutions.com/nms-as-a-service/): Managed network monitoring system.
 
 ## Case Studies
 
@@ -77,12 +102,6 @@ Illumia Solutions Pvt. Ltd. is based in Kolkata, India, and serves clients globa
 - [Progressive HCI Expansion & NVMe Cluster](https://illumiasolutions.com/case-studies/proxmox-hci-expansion/): High-IOPS NVMe cluster expansion alongside an existing Proxmox deployment.
 - [VMware to Proxmox VE Migration — Force Ten Technologies](https://illumiasolutions.com/case-studies/vmware-proxmox-migration-forceten/): VMware-to-Proxmox migration for Force Ten Technologies.
 - [VMware vSAN to Proxmox VE Ceph Migration — Data Consultants Corp](https://illumiasolutions.com/case-studies/vmware-vsan-proxmox-ceph/): vSAN-to-Ceph storage migration alongside VMware-to-Proxmox VE.
-
-## About
-
-- [About Illumia Solutions](https://illumiasolutions.com/about/)
-- [Contact](https://illumiasolutions.com/contact/)
-- [FAQs](https://illumiasolutions.com/faqs/): 30 common questions on cloud, cybersecurity, and open-source services.
 
 ## Contact
 

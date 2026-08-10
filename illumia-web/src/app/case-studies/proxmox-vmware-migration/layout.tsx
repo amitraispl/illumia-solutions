@@ -17,6 +17,7 @@ const articleSchema = {
   url: "https://illumiasolutions.com/case-studies/proxmox-vmware-migration/",
   datePublished: "2026-05-27",
   dateModified: "2026-05-27",
+  author: { "@id": "https://illumiasolutions.com/#organization" },
   publisher: { "@id": "https://illumiasolutions.com/#organization" },
   image: "https://illumiasolutions.com/images/case-studies/1-vmware-migration-hero.jpg",
 };

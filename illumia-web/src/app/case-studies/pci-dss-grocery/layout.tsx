@@ -15,6 +15,7 @@ const articleSchema = {
   url: "https://illumiasolutions.com/case-studies/pci-dss-grocery/",
   datePublished: "2026-05-14",
   dateModified: "2026-05-14",
+  author: { "@id": "https://illumiasolutions.com/#organization" },
   publisher: { "@id": "https://illumiasolutions.com/#organization" },
   image: "https://illumiasolutions.com/images/case-studies/case-study-pci-dss_hero.jpg",
 };
