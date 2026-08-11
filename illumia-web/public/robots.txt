@@ -1,0 +1,10 @@
+User-Agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin/
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-Agent: Bytespider
+Disallow: /
+
+Sitemap: https://illumiasolutions.com/sitemap.xml
