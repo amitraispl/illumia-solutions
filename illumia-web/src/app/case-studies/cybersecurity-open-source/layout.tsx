@@ -14,7 +14,7 @@ const articleSchema = {
   description: "How Illumia Solutions strengthened cybersecurity and compliance for a major Philippine microfinance institution using an integrated open-source security stack.",
   url: "https://illumiasolutions.com/case-studies/cybersecurity-open-source/",
   datePublished: "2026-05-14",
-  dateModified: "2026-05-14",
+  dateModified: "2026-08-08",
   author: { "@id": "https://illumiasolutions.com/#organization" },
   publisher: { "@id": "https://illumiasolutions.com/#organization" },
   image: "https://illumiasolutions.com/images/case-studies/case-study-cybersecurity_hero.jpg",

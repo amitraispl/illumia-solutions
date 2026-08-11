@@ -154,7 +154,7 @@ export default function AboutPage() {
                     <div className="w-10 h-10 rounded-xl bg-[#b31c33]/10 flex items-center justify-center text-[#b31c33]">
                       {v.icon}
                     </div>
-                    <h4 className="font-headline text-xl text-stone-900 italic">{v.title}</h4>
+                    <h3 className="font-headline text-xl text-stone-900 italic">{v.title}</h3>
                     <p className="text-[#5a4040] text-sm leading-relaxed font-body">{v.content}</p>
                   </div>
                 ))}

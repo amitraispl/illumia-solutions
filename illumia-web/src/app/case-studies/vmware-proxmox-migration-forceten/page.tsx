@@ -185,8 +185,8 @@ export default function ForcetenMigrationCaseStudy() {
                 <div className="inline-flex items-center gap-2 rounded-full border border-[#b31c33]/30 bg-[#b31c33]/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#b31c33]">
                   Case Study
                 </div>
-                <time dateTime="2026-06-02" className="text-xs font-medium text-[#8e706f]">
-                  Updated June 2, 2026
+                <time dateTime="2026-08-08" className="text-xs font-medium text-[#8e706f]">
+                  Updated August 8, 2026
                 </time>
               </div>
               <h1 className="pm-hero-fade mt-6 font-headline text-4xl leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-6xl">

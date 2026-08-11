@@ -14,7 +14,7 @@ const articleSchema = {
   description: "How Illumia Solutions helped a leading Philippine microfinance non-profit achieve 50–65% IT cost reduction through a comprehensive open-source infrastructure transformation.",
   url: "https://illumiasolutions.com/case-studies/non-profit-open-source/",
   datePublished: "2026-05-14",
-  dateModified: "2026-05-14",
+  dateModified: "2026-08-08",
   author: { "@id": "https://illumiasolutions.com/#organization" },
   publisher: { "@id": "https://illumiasolutions.com/#organization" },
   image: "https://illumiasolutions.com/images/case-studies/case-study-nonprofit_hero.jpg",

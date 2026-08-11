@@ -16,7 +16,7 @@ const articleSchema = {
     "How Illumia Solutions delivered an 80% licensing cost reduction for Lifebank Foundation Inc. by migrating a multi-node VMware vSphere cluster to Proxmox VE — zero new hardware, zero VMs lost.",
   url: "https://illumiasolutions.com/case-studies/proxmox-vmware-migration/",
   datePublished: "2026-05-27",
-  dateModified: "2026-05-27",
+  dateModified: "2026-08-08",
   author: { "@id": "https://illumiasolutions.com/#organization" },
   publisher: { "@id": "https://illumiasolutions.com/#organization" },
   image: "https://illumiasolutions.com/images/case-studies/1-vmware-migration-hero.jpg",

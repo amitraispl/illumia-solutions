@@ -16,7 +16,7 @@ const articleSchema = {
     "How Illumia Solutions modernised Lifebank Foundation Inc. from fragmented bare-metal servers to a two-cluster Proxmox HCI estate with a dedicated NVMe tier — 50+ VMs, high-IOPS interruptions cut to zero, and full managed services.",
   url: "https://illumiasolutions.com/case-studies/bare-metal-proxmox-migration/",
   datePublished: "2026-06-02",
-  dateModified: "2026-06-02",
+  dateModified: "2026-08-08",
   author: { "@id": "https://illumiasolutions.com/#organization" },
   publisher: { "@id": "https://illumiasolutions.com/#organization" },
   image: "https://illumiasolutions.com/images/case-studies/lbf-hero.jpg",

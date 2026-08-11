@@ -16,7 +16,7 @@ const articleSchema = {
     "How Illumia Solutions delivered an 80% licensing cost reduction for Force Ten Technologies Pvt. Ltd. by migrating a multi-node VMware vSphere cluster and Veeam to Proxmox VE and Proxmox Backup Server — zero new hardware, no VM lost.",
   url: "https://illumiasolutions.com/case-studies/vmware-proxmox-migration-forceten/",
   datePublished: "2026-06-02",
-  dateModified: "2026-06-02",
+  dateModified: "2026-08-08",
   author: { "@id": "https://illumiasolutions.com/#organization" },
   publisher: { "@id": "https://illumiasolutions.com/#organization" },
   image: "https://illumiasolutions.com/images/case-studies/forceten-hero.jpg",

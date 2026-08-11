@@ -243,7 +243,7 @@ export default function CyberSecurityContent() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-body font-bold text-sm uppercase tracking-widest text-stone-900 mb-2">{item.label}</h4>
+                    <h3 className="font-body font-bold text-sm uppercase tracking-widest text-stone-900 mb-2">{item.label}</h3>
                     <p className="text-[#5a4040] text-sm font-body leading-relaxed">{item.desc}</p>
                   </div>
                 </motion.div>

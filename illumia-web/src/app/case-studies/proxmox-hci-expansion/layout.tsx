@@ -16,7 +16,7 @@ const articleSchema = {
     "How Illumia Solutions designed and delivered a two-cluster HCI landscape — expanding an existing SSD/HDD Proxmox cluster with a new NVMe cluster for high-IOPS workloads, plus full AMC and managed services.",
   url: "https://illumiasolutions.com/case-studies/proxmox-hci-expansion/",
   datePublished: "2026-05-27",
-  dateModified: "2026-05-27",
+  dateModified: "2026-08-08",
   author: { "@id": "https://illumiasolutions.com/#organization" },
   publisher: { "@id": "https://illumiasolutions.com/#organization" },
   image: "https://illumiasolutions.com/images/case-studies/3-hci-expansion-hero.jpg",

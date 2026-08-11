@@ -16,7 +16,7 @@ const articleSchema = {
     "How Illumia Solutions migrated Data Consultants Corporation from VMware vSphere with vSAN to Proxmox VE with Ceph — a phased node-liberation strategy on existing hardware, sub-24-hour downtime, and PBS replacing Veeam.",
   url: "https://illumiasolutions.com/case-studies/vmware-vsan-proxmox-ceph/",
   datePublished: "2026-06-02",
-  dateModified: "2026-06-02",
+  dateModified: "2026-08-08",
   author: { "@id": "https://illumiasolutions.com/#organization" },
   publisher: { "@id": "https://illumiasolutions.com/#organization" },
   image: "https://illumiasolutions.com/images/case-studies/dcc-hero.jpg",

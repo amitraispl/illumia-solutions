@@ -14,7 +14,7 @@ const articleSchema = {
   description: "How Illumia Solutions delivered full PCI DSS Level 2 compliance for a 17-location grocery chain in Illinois — on time, on budget, with zero downtime.",
   url: "https://illumiasolutions.com/case-studies/pci-dss-grocery/",
   datePublished: "2026-05-14",
-  dateModified: "2026-05-14",
+  dateModified: "2026-08-08",
   author: { "@id": "https://illumiasolutions.com/#organization" },
   publisher: { "@id": "https://illumiasolutions.com/#organization" },
   image: "https://illumiasolutions.com/images/case-studies/case-study-pci-dss_hero.jpg",

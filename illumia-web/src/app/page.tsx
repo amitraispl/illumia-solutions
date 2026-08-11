@@ -245,9 +245,9 @@ export default function HomePage() {
                     {item.icon}
                   </div>
                   <div>
-                    <h4 className="font-body text-xs font-bold uppercase tracking-widest text-primary mb-2">
+                    <h3 className="font-body text-xs font-bold uppercase tracking-widest text-primary mb-2">
                       {item.label}
-                    </h4>
+                    </h3>
                     <p className="font-body text-sm text-on-surface-variant leading-relaxed">
                       {item.text}
                     </p>
@@ -454,7 +454,7 @@ export default function HomePage() {
                   </svg>
                 </span>
                 <div>
-                  <h4 className="font-body text-xs font-bold uppercase tracking-widest text-primary-subdued mb-1">Regional Headquarters</h4>
+                  <h3 className="font-body text-xs font-bold uppercase tracking-widest text-primary-subdued mb-1">Regional Headquarters</h3>
                   <p className="text-stone-400 text-sm font-body leading-relaxed">APAC · North America · Africa · ANZ</p>
                 </div>
               </div>
@@ -465,7 +465,7 @@ export default function HomePage() {
                   </svg>
                 </span>
                 <div>
-                  <h4 className="font-body text-xs font-bold uppercase tracking-widest text-primary-subdued mb-1">Global Logistics</h4>
+                  <h3 className="font-body text-xs font-bold uppercase tracking-widest text-primary-subdued mb-1">Global Logistics</h3>
                   <p className="text-stone-400 text-sm font-body leading-relaxed">24/7 multi-timezone support · Local delivery teams</p>
                 </div>
               </div>
@@ -476,7 +476,7 @@ export default function HomePage() {
                   </svg>
                 </span>
                 <div>
-                  <h4 className="font-body text-xs font-bold uppercase tracking-widest text-primary-subdued mb-1">Trusted By</h4>
+                  <h3 className="font-body text-xs font-bold uppercase tracking-widest text-primary-subdued mb-1">Trusted By</h3>
                   <p className="text-stone-400 text-sm font-body leading-relaxed">Seqrite · Force Ten Technologies · Zextras · Proxmox · LifeBank Foundation · Apache Guacamole · NetBox Labs · Cybernet & AI Technologies · Data Consultants Corporation</p>
                 </div>
               </div>
