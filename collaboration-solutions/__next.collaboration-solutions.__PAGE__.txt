@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+3:I[97367,["/illumia-solutions/_next/static/chunks/10ll_0vfgfbfq.js","/illumia-solutions/_next/static/chunks/0d3shmwh5_nmn.js","/illumia-solutions/_next/static/chunks/0lsdh8wroq6j9.js","/illumia-solutions/_next/static/chunks/133mhgcxq7xst.js","/illumia-solutions/_next/static/chunks/0z~42eg9m3dib.js","/illumia-solutions/_next/static/chunks/0hhlr87qp~ztu.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":["$L2",null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"jM7sRHLpNQ0nzhSrkxLoB"}
+5:null
+2:E{"digest":"NEXT_REDIRECT;replace;/application-solutions#collaboration;307;"}

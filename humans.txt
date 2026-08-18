@@ -1,0 +1,7 @@
+/* TEAM */
+Illumia Solutions Pvt. Ltd.
+Kolkata, West Bengal, India
+Contact: sales@illumiasolutions.com
+
+/* SITE */
+Built with: Next.js, React, Tailwind CSS
