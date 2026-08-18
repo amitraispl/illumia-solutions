@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Physical Server — Dedicated Bare-Metal",
   description:
     "Dedicated bare-metal servers for workloads requiring maximum compute power, complete resource isolation, and hardware-level control.",
-  alternates: { canonical: "/physical-server/" },
+  alternates: {
+    canonical: "/physical-server/",
+    languages: { "en": "https://illumiasolutions.com/physical-server/", "x-default": "https://illumiasolutions.com/physical-server/" },
+  },
 };
 
 const serviceSchema = {

@@ -4,7 +4,10 @@ export const metadata: Metadata = {
   title: "Progressive HCI Expansion & NVMe Cluster — High-IOPS Workloads",
   description:
     "How Illumia Solutions designed and delivered a two-cluster HCI landscape — expanding an existing SSD/HDD Proxmox cluster with a new NVMe cluster for high-IOPS workloads, plus full AMC and managed services.",
-  alternates: { canonical: "/case-studies/proxmox-hci-expansion/" },
+  alternates: {
+    canonical: "/case-studies/proxmox-hci-expansion/",
+    languages: { "en": "https://illumiasolutions.com/case-studies/proxmox-hci-expansion/", "x-default": "https://illumiasolutions.com/case-studies/proxmox-hci-expansion/" },
+  },
 };
 
 const articleSchema = {

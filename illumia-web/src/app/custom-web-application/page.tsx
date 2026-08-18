@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Custom Web Application Development — Scalable, Secure & Maintainable",
   description:
     "Custom web applications built on modern frameworks — from internal operations tools to customer-facing SaaS platforms — engineered for security, performance, and scale.",
-  alternates: { canonical: "/custom-web-application/" },
+  alternates: {
+    canonical: "/custom-web-application/",
+    languages: { "en": "https://illumiasolutions.com/custom-web-application/", "x-default": "https://illumiasolutions.com/custom-web-application/" },
+  },
 };
 
 const serviceSchema = {

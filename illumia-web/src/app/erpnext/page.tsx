@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "ERPNext — Open-Source Enterprise ERP",
   description:
     "Deploy ERPNext — accounting, inventory, manufacturing, CRM, procurement, and projects on one open-source platform with zero per-seat licensing. Implementation, data migration, customisation, and managed hosting by Illumia Solutions.",
-  alternates: { canonical: "/erpnext/" },
+  alternates: {
+    canonical: "/erpnext/",
+    languages: { "en": "https://illumiasolutions.com/erpnext/", "x-default": "https://illumiasolutions.com/erpnext/" },
+  },
 };
 
 const serviceSchema = {

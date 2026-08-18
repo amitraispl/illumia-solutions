@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Honeypot as a Service — Your Last Line of Defense",
   description:
     "Honeypot as a Service by Illumia Solutions — deceptive security systems that detect, analyze, and respond to threats that bypass your primary defenses. Expert-managed, 24/7.",
-  alternates: { canonical: "/honeypot-as-a-service/" },
+  alternates: {
+    canonical: "/honeypot-as-a-service/",
+    languages: { "en": "https://illumiasolutions.com/honeypot-as-a-service/", "x-default": "https://illumiasolutions.com/honeypot-as-a-service/" },
+  },
 };
 
 const serviceSchema = {

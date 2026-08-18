@@ -4,7 +4,10 @@ export const metadata: Metadata = {
   title: "Bare Metal to Proxmox VE Migration — Lifebank Foundation",
   description:
     "How Illumia Solutions modernised Lifebank Foundation Inc. from fragmented bare-metal servers to a two-cluster Proxmox HCI estate with a dedicated NVMe tier — 50+ VMs, high-IOPS interruptions cut to zero, and full managed services.",
-  alternates: { canonical: "/case-studies/bare-metal-proxmox-migration/" },
+  alternates: {
+    canonical: "/case-studies/bare-metal-proxmox-migration/",
+    languages: { "en": "https://illumiasolutions.com/case-studies/bare-metal-proxmox-migration/", "x-default": "https://illumiasolutions.com/case-studies/bare-metal-proxmox-migration/" },
+  },
 };
 
 const articleSchema = {

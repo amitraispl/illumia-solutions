@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Disaster Recovery — Business Continuity",
   description:
     "Comprehensive disaster recovery solutions ensuring rapid restoration of critical systems with minimal data loss and downtime.",
-  alternates: { canonical: "/disaster-recovery/" },
+  alternates: {
+    canonical: "/disaster-recovery/",
+    languages: { "en": "https://illumiasolutions.com/disaster-recovery/", "x-default": "https://illumiasolutions.com/disaster-recovery/" },
+  },
 };
 
 const serviceSchema = {

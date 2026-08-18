@@ -4,7 +4,10 @@ export const metadata: Metadata = {
   title: "IT Infrastructure Solutions — Private Cloud, Storage & Network",
   description:
     "Enterprise IT infrastructure services: hyperconverged private cloud on Proxmox, high-performance Ceph block storage, SDN/SD-WAN deployment, bare-metal and VPS hosting, and 24/7 proactive infrastructure monitoring.",
-  alternates: { canonical: "/infrastructure-solutions/" },
+  alternates: {
+    canonical: "/infrastructure-solutions/",
+    languages: { "en": "https://illumiasolutions.com/infrastructure-solutions/", "x-default": "https://illumiasolutions.com/infrastructure-solutions/" },
+  },
 };
 
 const breadcrumbSchema = {

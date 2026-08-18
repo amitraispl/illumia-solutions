@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Monitoring & Analytics — Infrastructure Intelligence",
   description:
     "Full-stack observability powered by CheckMK and Elastiflow — real-time metrics, network flow analysis, and intelligent alerting.",
-  alternates: { canonical: "/monitoring-analytics/" },
+  alternates: {
+    canonical: "/monitoring-analytics/",
+    languages: { "en": "https://illumiasolutions.com/monitoring-analytics/", "x-default": "https://illumiasolutions.com/monitoring-analytics/" },
+  },
 };
 
 const serviceSchema = {

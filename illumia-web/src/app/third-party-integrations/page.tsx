@@ -6,7 +6,10 @@ export const metadata: Metadata = {
   title: "Third-Party Integrations — API, CRM, ERP & Payment Gateway Integration",
   description:
     "Reliable, secure third-party integrations connecting your applications to CRMs, ERPs, payment gateways, and the platforms your business already runs on.",
-  alternates: { canonical: "/third-party-integrations/" },
+  alternates: {
+    canonical: "/third-party-integrations/",
+    languages: { "en": "https://illumiasolutions.com/third-party-integrations/", "x-default": "https://illumiasolutions.com/third-party-integrations/" },
+  },
 };
 
 const serviceSchema = {

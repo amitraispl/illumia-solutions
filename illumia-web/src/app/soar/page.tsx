@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "SOAR — Security Orchestration Automation and Response",
   description:
     "Advanced SOAR solutions with Shuffle — offering security orchestration, automated workflows, and rapid incident response for efficient cybersecurity management.",
-  alternates: { canonical: "/soar/" },
+  alternates: {
+    canonical: "/soar/",
+    languages: { "en": "https://illumiasolutions.com/soar/", "x-default": "https://illumiasolutions.com/soar/" },
+  },
 };
 
 const serviceSchema = {

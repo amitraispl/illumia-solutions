@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Virtual Desktops — Secure Remote Work",
   description:
     "Centrally managed virtual desktop infrastructure enabling secure remote work from any device, anywhere. CPU, GPU, sandboxed, and browser-based VDI solutions.",
-  alternates: { canonical: "/virtual-desktops/" },
+  alternates: {
+    canonical: "/virtual-desktops/",
+    languages: { "en": "https://illumiasolutions.com/virtual-desktops/", "x-default": "https://illumiasolutions.com/virtual-desktops/" },
+  },
 };
 
 const serviceSchema = {

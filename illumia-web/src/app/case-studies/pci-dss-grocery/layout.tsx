@@ -3,7 +3,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "PCI DSS Compliance for Grocery Chain",
   description: "How Illumia Solutions delivered full PCI DSS Level 2 compliance for a 17-location grocery chain in Illinois — on time, on budget, with zero downtime.",
-  alternates: { canonical: "/case-studies/pci-dss-grocery/" },
+  alternates: {
+    canonical: "/case-studies/pci-dss-grocery/",
+    languages: { "en": "https://illumiasolutions.com/case-studies/pci-dss-grocery/", "x-default": "https://illumiasolutions.com/case-studies/pci-dss-grocery/" },
+  },
 };
 
 const articleSchema = {

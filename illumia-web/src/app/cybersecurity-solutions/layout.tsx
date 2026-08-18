@@ -4,7 +4,10 @@ export const metadata: Metadata = {
   title: "Cybersecurity Solutions — SIEM, SOAR, EDR, PAM & Honeypot",
   description:
     "Open-source-powered cybersecurity solutions: SIEM (Wazuh/OSSIM), SOAR (Shuffle), EDR (OpenEDR), PAM (Apache Guacamole), vulnerability management (OpenVAS), and honeypot systems. Managed by CISA, CISSP, and CEH certified engineers.",
-  alternates: { canonical: "/cybersecurity-solutions/" },
+  alternates: {
+    canonical: "/cybersecurity-solutions/",
+    languages: { "en": "https://illumiasolutions.com/cybersecurity-solutions/", "x-default": "https://illumiasolutions.com/cybersecurity-solutions/" },
+  },
 };
 
 const breadcrumbSchema = {

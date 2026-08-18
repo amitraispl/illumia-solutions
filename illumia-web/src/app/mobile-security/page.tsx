@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Mobile Security",
   description:
     "Illumia Solutions offers specialised mobile security services to protect your mobile infrastructure, ensuring quick identification and response to incidents and safeguarding your applications from vulnerabilities.",
-  alternates: { canonical: "/mobile-security/" },
+  alternates: {
+    canonical: "/mobile-security/",
+    languages: { "en": "https://illumiasolutions.com/mobile-security/", "x-default": "https://illumiasolutions.com/mobile-security/" },
+  },
 };
 
 const serviceSchema = {

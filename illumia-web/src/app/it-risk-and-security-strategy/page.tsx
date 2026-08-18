@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "IT Risk and Security Strategy",
   description:
     "In today's fast-paced digital world, staying ahead of evolving threats is critical. Illumia Solutions provides a thorough IT risk and security strategy that continuously assesses and integrates the latest security frameworks.",
-  alternates: { canonical: "/it-risk-and-security-strategy/" },
+  alternates: {
+    canonical: "/it-risk-and-security-strategy/",
+    languages: { "en": "https://illumiasolutions.com/it-risk-and-security-strategy/", "x-default": "https://illumiasolutions.com/it-risk-and-security-strategy/" },
+  },
 };
 
 const serviceSchema = {

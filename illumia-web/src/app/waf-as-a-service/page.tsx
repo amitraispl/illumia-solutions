@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "WAF as a Service — Web Application Firewall",
   description:
     "A Web Application Firewall (WAF) is an essential security measure that provides comprehensive protection against a range of cyber threats.",
-  alternates: { canonical: "/waf-as-a-service/" },
+  alternates: {
+    canonical: "/waf-as-a-service/",
+    languages: { "en": "https://illumiasolutions.com/waf-as-a-service/", "x-default": "https://illumiasolutions.com/waf-as-a-service/" },
+  },
 };
 
 const serviceSchema = {

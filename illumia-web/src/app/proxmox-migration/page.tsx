@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Proxmox VE Migration & Deployment — Illumia Solutions",
   description:
     "End-to-end migration to Proxmox Virtual Environment from VMware, Hyper-V, Nutanix, and other platforms. Enterprise capabilities — VMs, containers, HA clusters, live migration — with predictable open-source economics.",
-  alternates: { canonical: "/proxmox-migration/" },
+  alternates: {
+    canonical: "/proxmox-migration/",
+    languages: { "en": "https://illumiasolutions.com/proxmox-migration/", "x-default": "https://illumiasolutions.com/proxmox-migration/" },
+  },
 };
 
 const serviceSchema = {

@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Design & Development — UI/UX Design to Production Code",
   description:
     "End-to-end UI/UX design and software engineering — research, wireframing, interactive prototyping, design systems, and full-stack implementation by one accountable team.",
-  alternates: { canonical: "/design-development/" },
+  alternates: {
+    canonical: "/design-development/",
+    languages: { "en": "https://illumiasolutions.com/design-development/", "x-default": "https://illumiasolutions.com/design-development/" },
+  },
 };
 
 const serviceSchema = {

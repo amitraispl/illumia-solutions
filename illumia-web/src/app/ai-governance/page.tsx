@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "AI Governance — EU AI Act Compliance & Responsible AI",
   description:
     "Structured AI governance programs covering risk classification, bias and fairness auditing, EU AI Act alignment, model accountability, AI incident response, and regulatory reporting. Deploy AI with confidence, not liability.",
-  alternates: { canonical: "/ai-governance/" },
+  alternates: {
+    canonical: "/ai-governance/",
+    languages: { "en": "https://illumiasolutions.com/ai-governance/", "x-default": "https://illumiasolutions.com/ai-governance/" },
+  },
 };
 
 const serviceSchema = {

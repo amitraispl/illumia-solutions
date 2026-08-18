@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "NetBox Platform — Network Source of Truth",
   description:
     "Deploy NetBox as your network source of truth — IPAM, DCIM, cable plant, VLAN management, and full REST/GraphQL API. Replace spreadsheets and Visio diagrams with a single, queryable, automation-ready platform.",
-  alternates: { canonical: "/netbox-platform/" },
+  alternates: {
+    canonical: "/netbox-platform/",
+    languages: { "en": "https://illumiasolutions.com/netbox-platform/", "x-default": "https://illumiasolutions.com/netbox-platform/" },
+  },
 };
 
 const serviceSchema = {

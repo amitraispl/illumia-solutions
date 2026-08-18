@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Application Security",
   description:
     "Illumia Solutions provides comprehensive application security services, from identifying vulnerabilities to enhancing security architecture and integrating secure development practices.",
-  alternates: { canonical: "/application-security/" },
+  alternates: {
+    canonical: "/application-security/",
+    languages: { "en": "https://illumiasolutions.com/application-security/", "x-default": "https://illumiasolutions.com/application-security/" },
+  },
 };
 
 const serviceSchema = {

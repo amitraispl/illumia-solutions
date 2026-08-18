@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "SIEM as a Service — Security Intelligence",
   description:
     "Continuous security event correlation and threat intelligence powered by Wazuh and OSSIM for complete environment visibility.",
-  alternates: { canonical: "/siem-as-a-service/" },
+  alternates: {
+    canonical: "/siem-as-a-service/",
+    languages: { "en": "https://illumiasolutions.com/siem-as-a-service/", "x-default": "https://illumiasolutions.com/siem-as-a-service/" },
+  },
 };
 
 const serviceSchema = {

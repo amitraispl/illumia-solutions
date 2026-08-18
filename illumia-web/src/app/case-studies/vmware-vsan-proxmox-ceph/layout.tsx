@@ -4,7 +4,10 @@ export const metadata: Metadata = {
   title: "VMware vSAN to Proxmox VE Ceph Migration — Data Consultants Corp",
   description:
     "How Illumia Solutions migrated Data Consultants Corporation from VMware vSphere with vSAN to Proxmox VE with Ceph — a phased node-liberation strategy on existing hardware, sub-24-hour downtime, and PBS replacing Veeam.",
-  alternates: { canonical: "/case-studies/vmware-vsan-proxmox-ceph/" },
+  alternates: {
+    canonical: "/case-studies/vmware-vsan-proxmox-ceph/",
+    languages: { "en": "https://illumiasolutions.com/case-studies/vmware-vsan-proxmox-ceph/", "x-default": "https://illumiasolutions.com/case-studies/vmware-vsan-proxmox-ceph/" },
+  },
 };
 
 const articleSchema = {

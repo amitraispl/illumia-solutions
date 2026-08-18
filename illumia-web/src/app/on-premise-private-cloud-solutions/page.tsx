@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "On-Premise Private Cloud with Proxmox VE",
   description:
     "Build a production-grade on-premise private cloud with Proxmox Virtual Environment. KVM VMs, LXC containers, Ceph HCI storage, HA clustering — open-source. Illumia is a certified Proxmox Silver Partner.",
-  alternates: { canonical: "/on-premise-private-cloud-solutions/" },
+  alternates: {
+    canonical: "/on-premise-private-cloud-solutions/",
+    languages: { "en": "https://illumiasolutions.com/on-premise-private-cloud-solutions/", "x-default": "https://illumiasolutions.com/on-premise-private-cloud-solutions/" },
+  },
 };
 
 const serviceSchema = {

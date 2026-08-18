@@ -4,7 +4,10 @@ export const metadata: Metadata = {
   title: "VMware to Proxmox VE Migration — Force Ten Technologies",
   description:
     "How Illumia Solutions delivered an 80% licensing cost reduction for Force Ten Technologies Pvt. Ltd. by migrating a multi-node VMware vSphere cluster and Veeam to Proxmox VE and Proxmox Backup Server — zero new hardware, no VM lost.",
-  alternates: { canonical: "/case-studies/vmware-proxmox-migration-forceten/" },
+  alternates: {
+    canonical: "/case-studies/vmware-proxmox-migration-forceten/",
+    languages: { "en": "https://illumiasolutions.com/case-studies/vmware-proxmox-migration-forceten/", "x-default": "https://illumiasolutions.com/case-studies/vmware-proxmox-migration-forceten/" },
+  },
 };
 
 const articleSchema = {

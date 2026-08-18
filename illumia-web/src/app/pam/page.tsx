@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Privileged Access Management Solution",
   description:
     "Advanced PAM solutions powered by Apache Guacamole — web-based, centralized, and scalable privileged access management for modern enterprises.",
-  alternates: { canonical: "/pam/" },
+  alternates: {
+    canonical: "/pam/",
+    languages: { "en": "https://illumiasolutions.com/pam/", "x-default": "https://illumiasolutions.com/pam/" },
+  },
 };
 
 const serviceSchema = {

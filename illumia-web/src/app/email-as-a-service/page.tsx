@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Email as a Service — Enterprise Mail",
   description:
     "Enterprise-grade email infrastructure built on Zimbra/Carbonio with Proxmox Mail Gateway for secure, reliable communications.",
-  alternates: { canonical: "/email-as-a-service/" },
+  alternates: {
+    canonical: "/email-as-a-service/",
+    languages: { "en": "https://illumiasolutions.com/email-as-a-service/", "x-default": "https://illumiasolutions.com/email-as-a-service/" },
+  },
 };
 
 const serviceSchema = {

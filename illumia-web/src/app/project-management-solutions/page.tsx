@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Project Management Solutions — Redmine, Zammad & OpenProject",
   description:
     "Flexible open-source project management with Redmine, Zammad, and OpenProject tailored to your team's workflow.",
-  alternates: { canonical: "/project-management-solutions/" },
+  alternates: {
+    canonical: "/project-management-solutions/",
+    languages: { "en": "https://illumiasolutions.com/project-management-solutions/", "x-default": "https://illumiasolutions.com/project-management-solutions/" },
+  },
 };
 
 const serviceSchema = {

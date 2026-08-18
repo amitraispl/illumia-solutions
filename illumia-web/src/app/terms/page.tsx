@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Terms of Service",
   description:
     "Terms of Service for Illumia Solutions — the conditions governing use of our website and services.",
-  alternates: { canonical: "/terms/" },
+  alternates: {
+    canonical: "/terms/",
+    languages: { "en": "https://illumiasolutions.com/terms/", "x-default": "https://illumiasolutions.com/terms/" },
+  },
 };
 
 const EFFECTIVE_DATE = "1 January 2025";

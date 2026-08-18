@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Software Development — Design, Mobile, Web & Integrations",
   description:
     "Custom software development services: UI/UX design & development, native mobile applications, custom web applications, and third-party API integrations for enterprise and mid-market businesses.",
-  alternates: { canonical: "/software-development/" },
+  alternates: {
+    canonical: "/software-development/",
+    languages: { "en": "https://illumiasolutions.com/software-development/", "x-default": "https://illumiasolutions.com/software-development/" },
+  },
 };
 
 const serviceSchema = {

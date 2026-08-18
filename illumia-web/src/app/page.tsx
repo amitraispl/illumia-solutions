@@ -23,7 +23,10 @@ export const metadata: Metadata = {
   title: "Illumia Solutions | Enterprise IT Services | Cloud, Cybersecurity & Open Source",
   description:
     "Illumia Solutions is a certified Proxmox Silver Partner based in Kolkata, India, delivering enterprise-grade cloud infrastructure, cybersecurity, open-source and software development services. CISA, CISSP, CEH, CCIE certified.",
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    languages: { "en": "https://illumiasolutions.com/", "x-default": "https://illumiasolutions.com/" },
+  },
   openGraph: {
     url: "https://illumiasolutions.com/",
     title: "Illumia Solutions | Enterprise IT Services | Cloud, Cybersecurity & Open Source",

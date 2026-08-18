@@ -4,7 +4,10 @@ export const metadata: Metadata = {
   title: "VMware to Proxmox VE Migration — Lifebank Foundation",
   description:
     "How Illumia Solutions delivered an 80% licensing cost reduction for Lifebank Foundation Inc. by migrating a multi-node VMware vSphere cluster to Proxmox VE — zero new hardware, zero VMs lost.",
-  alternates: { canonical: "/case-studies/proxmox-vmware-migration/" },
+  alternates: {
+    canonical: "/case-studies/proxmox-vmware-migration/",
+    languages: { "en": "https://illumiasolutions.com/case-studies/proxmox-vmware-migration/", "x-default": "https://illumiasolutions.com/case-studies/proxmox-vmware-migration/" },
+  },
 };
 
 const articleSchema = {

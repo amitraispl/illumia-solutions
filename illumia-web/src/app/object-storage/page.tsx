@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Storage Solutions",
   description:
     "Illumia Solutions provides cutting-edge storage solutions — high-performance block storage, scalable object storage, and cost-efficient cold storage — each designed to meet specific data storage requirements.",
-  alternates: { canonical: "/object-storage/" },
+  alternates: {
+    canonical: "/object-storage/",
+    languages: { "en": "https://illumiasolutions.com/object-storage/", "x-default": "https://illumiasolutions.com/object-storage/" },
+  },
 };
 
 const serviceSchema = {

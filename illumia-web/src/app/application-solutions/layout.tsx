@@ -4,7 +4,10 @@ export const metadata: Metadata = {
   title: "Digital Transformation & Application Solutions",
   description:
     "Modernise legacy systems with DevSecOps, Kubernetes orchestration, and cloud-native application development. Includes collaboration tools, email, cloud storage, project management, and web conferencing — all on open-source infrastructure.",
-  alternates: { canonical: "/application-solutions/" },
+  alternates: {
+    canonical: "/application-solutions/",
+    languages: { "en": "https://illumiasolutions.com/application-solutions/", "x-default": "https://illumiasolutions.com/application-solutions/" },
+  },
 };
 
 const serviceSchema = {

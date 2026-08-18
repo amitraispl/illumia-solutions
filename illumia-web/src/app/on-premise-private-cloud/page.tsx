@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "On-Premise Private Cloud Solutions with Proxmox",
   description:
     "Our On-Premise Private Cloud Solutions are built on Hyperconverged Infrastructure (HCI), which integrates compute, storage, and networking into a single cohesive system.",
-  alternates: { canonical: "/on-premise-private-cloud/" },
+  alternates: {
+    canonical: "/on-premise-private-cloud/",
+    languages: { "en": "https://illumiasolutions.com/on-premise-private-cloud/", "x-default": "https://illumiasolutions.com/on-premise-private-cloud/" },
+  },
 };
 
 const serviceSchema = {

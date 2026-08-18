@@ -3,7 +3,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact Us",
   description: "Get in touch with Illumia Solutions for enterprise IT services, cybersecurity, cloud infrastructure, and open-source solutions. Reach our team in Kolkata, India.",
-  alternates: { canonical: "/contact/" },
+  alternates: {
+    canonical: "/contact/",
+    languages: { "en": "https://illumiasolutions.com/contact/", "x-default": "https://illumiasolutions.com/contact/" },
+  },
 };
 
 const breadcrumbSchema = {

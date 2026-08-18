@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Governance, Risk & Compliance — GRC Framework",
   description:
     "Advanced GRC solutions powered by OpenGRC — comprehensive risk management, compliance monitoring, and audit management.",
-  alternates: { canonical: "/governance-risk-compliance/" },
+  alternates: {
+    canonical: "/governance-risk-compliance/",
+    languages: { "en": "https://illumiasolutions.com/governance-risk-compliance/", "x-default": "https://illumiasolutions.com/governance-risk-compliance/" },
+  },
 };
 
 const serviceSchema = {

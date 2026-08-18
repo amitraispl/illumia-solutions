@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "EDR Solution — Endpoint Detection & Response",
   description:
     "Advanced Endpoint Detection and Response solutions powered by OpenEDR — real-time threat detection, behavioral analysis, and automated response for comprehensive endpoint security.",
-  alternates: { canonical: "/edr-solution/" },
+  alternates: {
+    canonical: "/edr-solution/",
+    languages: { "en": "https://illumiasolutions.com/edr-solution/", "x-default": "https://illumiasolutions.com/edr-solution/" },
+  },
 };
 
 const serviceSchema = {

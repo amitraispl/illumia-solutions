@@ -7,7 +7,10 @@ export const metadata: Metadata = {
   title: "Case Studies",
   description:
     "Real-world transformations delivered by Illumia Solutions — from open source cost reduction to PCI DSS compliance and enterprise cybersecurity.",
-  alternates: { canonical: "/case-studies/" },
+  alternates: {
+    canonical: "/case-studies/",
+    languages: { "en": "https://illumiasolutions.com/case-studies/", "x-default": "https://illumiasolutions.com/case-studies/" },
+  },
 };
 
 const caseStudies = [

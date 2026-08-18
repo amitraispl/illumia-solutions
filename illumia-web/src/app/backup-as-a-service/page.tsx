@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Backup as a Service — Data Protection",
   description:
     "Automated, encrypted backup and recovery services ensuring your critical data is always protected and recoverable.",
-  alternates: { canonical: "/backup-as-a-service/" },
+  alternates: {
+    canonical: "/backup-as-a-service/",
+    languages: { "en": "https://illumiasolutions.com/backup-as-a-service/", "x-default": "https://illumiasolutions.com/backup-as-a-service/" },
+  },
 };
 
 const serviceSchema = {

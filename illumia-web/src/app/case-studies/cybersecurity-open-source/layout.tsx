@@ -3,7 +3,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Cybersecurity with Open Source Stack",
   description: "How Illumia Solutions strengthened cybersecurity and compliance for a major Philippine microfinance institution using an integrated open-source security stack.",
-  alternates: { canonical: "/case-studies/cybersecurity-open-source/" },
+  alternates: {
+    canonical: "/case-studies/cybersecurity-open-source/",
+    languages: { "en": "https://illumiasolutions.com/case-studies/cybersecurity-open-source/", "x-default": "https://illumiasolutions.com/case-studies/cybersecurity-open-source/" },
+  },
 };
 
 const articleSchema = {

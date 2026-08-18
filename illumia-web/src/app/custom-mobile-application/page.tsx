@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Custom Mobile Application Development — iOS, Android & Cross-Platform",
   description:
     "Native iOS and Android apps or cross-platform builds engineered for performance, offline resilience, and App Store-ready polish, with full post-launch support.",
-  alternates: { canonical: "/custom-mobile-application/" },
+  alternates: {
+    canonical: "/custom-mobile-application/",
+    languages: { "en": "https://illumiasolutions.com/custom-mobile-application/", "x-default": "https://illumiasolutions.com/custom-mobile-application/" },
+  },
 };
 
 const serviceSchema = {

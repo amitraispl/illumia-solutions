@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Cyber Security Services — MSSP India | PCI-DSS, ISO 27001, HIPAA",
   description:
     "Managed cybersecurity services: IT risk strategy, application and mobile security, cloud security, PCI-DSS, ISO 27001, HIPAA, and GDPR compliance. CISA, CISSP, CEH, CCIE certified security engineers.",
-  alternates: { canonical: "/cyber-security/" },
+  alternates: {
+    canonical: "/cyber-security/",
+    languages: { "en": "https://illumiasolutions.com/cyber-security/", "x-default": "https://illumiasolutions.com/cyber-security/" },
+  },
 };
 
 const serviceSchema = {

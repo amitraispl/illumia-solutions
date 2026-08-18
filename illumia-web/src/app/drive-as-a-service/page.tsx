@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Drive as a Service — Secure Cloud Storage",
   description:
     "Secure self-hosted cloud storage powered by Nextcloud — seamless file access with complete data sovereignty.",
-  alternates: { canonical: "/drive-as-a-service/" },
+  alternates: {
+    canonical: "/drive-as-a-service/",
+    languages: { "en": "https://illumiasolutions.com/drive-as-a-service/", "x-default": "https://illumiasolutions.com/drive-as-a-service/" },
+  },
 };
 
 const serviceSchema = {

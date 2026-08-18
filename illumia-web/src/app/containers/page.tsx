@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Container Solutions — LXC, LXD, Docker & Kubernetes",
   description:
     "Container hosting with LXC, LXD, Docker, and Kubernetes orchestration — horizontal isolation, managed support, and flexible deployment for modern workloads.",
-  alternates: { canonical: "/containers/" },
+  alternates: {
+    canonical: "/containers/",
+    languages: { "en": "https://illumiasolutions.com/containers/", "x-default": "https://illumiasolutions.com/containers/" },
+  },
 };
 
 const serviceSchema = {

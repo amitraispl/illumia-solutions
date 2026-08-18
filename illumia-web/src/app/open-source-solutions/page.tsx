@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Open Source IT Solutions — Proxmox, ERPNext, NetBox, Wazuh & More",
   description:
     "Enterprise open-source IT solutions: Proxmox private cloud, ERPNext ERP, NetBox network management, Wazuh SIEM, Nextcloud storage, and SDN/SD-WAN. Eliminate licensing fees without sacrificing enterprise capabilities.",
-  alternates: { canonical: "/open-source-solutions/" },
+  alternates: {
+    canonical: "/open-source-solutions/",
+    languages: { "en": "https://illumiasolutions.com/open-source-solutions/", "x-default": "https://illumiasolutions.com/open-source-solutions/" },
+  },
 };
 
 const serviceSchema = {

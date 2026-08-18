@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Collaborative Editing — OnlyOffice Solutions",
   description:
     "Collaborative editing solutions using OnlyOffice — delivering document editing, real-time collaboration, and security for your organisation.",
-  alternates: { canonical: "/collaborative-editing/" },
+  alternates: {
+    canonical: "/collaborative-editing/",
+    languages: { "en": "https://illumiasolutions.com/collaborative-editing/", "x-default": "https://illumiasolutions.com/collaborative-editing/" },
+  },
 };
 
 const serviceSchema = {

@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Honeypot Solution — MHN & T-POT",
   description:
     "Advanced honeypot solutions powered by Modern Honey Network (MHN) and T-POT — centralized management, real-time visualization, and automated threat detection.",
-  alternates: { canonical: "/honeypot-solution/" },
+  alternates: {
+    canonical: "/honeypot-solution/",
+    languages: { "en": "https://illumiasolutions.com/honeypot-solution/", "x-default": "https://illumiasolutions.com/honeypot-solution/" },
+  },
 };
 
 const serviceSchema = {

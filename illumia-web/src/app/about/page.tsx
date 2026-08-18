@@ -9,7 +9,10 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "Illumia Solutions — CISA, CISSP, CEH, CCIE certified IT services firm based in Kolkata, India. 20+ years collective experience in cybersecurity, cloud infrastructure, and open-source solutions across India, USA, Australia, and beyond.",
-  alternates: { canonical: "/about/" },
+  alternates: {
+    canonical: "/about/",
+    languages: { "en": "https://illumiasolutions.com/about/", "x-default": "https://illumiasolutions.com/about/" },
+  },
 };
 
 const values = [

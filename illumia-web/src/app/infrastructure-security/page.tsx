@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Infrastructure Security",
   description:
     "Infrastructure security is the backbone of a secure IT environment. Illumia Solutions offers comprehensive services to secure your network and endpoints, providing real-time threat detection and response.",
-  alternates: { canonical: "/infrastructure-security/" },
+  alternates: {
+    canonical: "/infrastructure-security/",
+    languages: { "en": "https://illumiasolutions.com/infrastructure-security/", "x-default": "https://illumiasolutions.com/infrastructure-security/" },
+  },
 };
 
 const serviceSchema = {

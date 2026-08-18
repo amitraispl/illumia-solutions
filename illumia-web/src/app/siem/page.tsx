@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Security Information and Event Management",
   description:
     "Robust SIEM solutions powered by Wazuh and OSSIM — comprehensive security monitoring, intrusion detection, and compliance management.",
-  alternates: { canonical: "/siem/" },
+  alternates: {
+    canonical: "/siem/",
+    languages: { "en": "https://illumiasolutions.com/siem/", "x-default": "https://illumiasolutions.com/siem/" },
+  },
 };
 
 const serviceSchema = {

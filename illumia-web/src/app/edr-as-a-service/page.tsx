@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "EDR as a Service — Comprehensive Protection for Your Business",
   description:
     "Endpoint Detection and Response (EDR) as a Service — real-time threat detection, behavioral analysis, automated responses, and expert-managed endpoint security.",
-  alternates: { canonical: "/edr-as-a-service/" },
+  alternates: {
+    canonical: "/edr-as-a-service/",
+    languages: { "en": "https://illumiasolutions.com/edr-as-a-service/", "x-default": "https://illumiasolutions.com/edr-as-a-service/" },
+  },
 };
 
 const serviceSchema = {

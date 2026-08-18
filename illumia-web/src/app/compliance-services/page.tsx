@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Compliance Services",
   description:
     "Illumia Solutions offers comprehensive compliance services to help you navigate complex regulatory requirements, ensuring your practices meet all necessary standards while managing costs effectively.",
-  alternates: { canonical: "/compliance-services/" },
+  alternates: {
+    canonical: "/compliance-services/",
+    languages: { "en": "https://illumiasolutions.com/compliance-services/", "x-default": "https://illumiasolutions.com/compliance-services/" },
+  },
 };
 
 const serviceSchema = {

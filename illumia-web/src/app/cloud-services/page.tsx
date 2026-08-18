@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Enterprise Cloud Services — Hosting, Migration, Storage & SD-WAN",
   description:
     "Comprehensive cloud infrastructure services: VPS, bare-metal hosting, cloud migration (Azure/AWS/GCP), Nextcloud storage, SD-WAN, disaster recovery, and 99.9% uptime SLA. Tailored for enterprise and mid-market businesses.",
-  alternates: { canonical: "/cloud-services/" },
+  alternates: {
+    canonical: "/cloud-services/",
+    languages: { "en": "https://illumiasolutions.com/cloud-services/", "x-default": "https://illumiasolutions.com/cloud-services/" },
+  },
 };
 
 const serviceSchema = {

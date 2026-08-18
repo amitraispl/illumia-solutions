@@ -4,7 +4,10 @@ export const metadata: Metadata = {
   title: "FAQs — Cloud Services, Cybersecurity & Open Source",
   description:
     "Answers to 30 common questions about Illumia Solutions' cloud services, cybersecurity portfolio, and open-source solutions — covering hybrid cloud, PCI-DSS compliance, EDR, BYOD security, Nextcloud, and more.",
-  alternates: { canonical: "/faqs/" },
+  alternates: {
+    canonical: "/faqs/",
+    languages: { "en": "https://illumiasolutions.com/faqs/", "x-default": "https://illumiasolutions.com/faqs/" },
+  },
 };
 
 const faqSchema = {

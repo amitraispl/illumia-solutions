@@ -5,7 +5,10 @@ export const metadata: Metadata = {
   title: "Web Meeting Solution — Carbonio, Jitsi & Nextcloud Talk",
   description:
     "Top-tier web-meeting solutions using Carbonio, Jitsi Meet, and Nextcloud Talk — secure, private, self-hosted video conferencing.",
-  alternates: { canonical: "/web-meeting-solution/" },
+  alternates: {
+    canonical: "/web-meeting-solution/",
+    languages: { "en": "https://illumiasolutions.com/web-meeting-solution/", "x-default": "https://illumiasolutions.com/web-meeting-solution/" },
+  },
 };
 
 const serviceSchema = {
