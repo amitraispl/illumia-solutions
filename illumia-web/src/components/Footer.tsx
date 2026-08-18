@@ -51,7 +51,7 @@ function ColHeading({ num, label }: { num: string; label: string }) {
       <span className="font-body text-[9px] tracking-[0.3em] uppercase text-primary font-bold tabular-nums">
         {num}
       </span>
-      <h4 className="font-headline italic text-[17px] text-white leading-none">{label}</h4>
+      <h3 className="font-headline italic text-[17px] text-white leading-none">{label}</h3>
     </div>
   );
 }

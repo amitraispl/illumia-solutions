@@ -114,6 +114,7 @@ export default function HomePage() {
         primaryCta={{ label: "Talk to Our Team", href: "/contact#contact-form" }}
         secondaryCta={{ label: "Learn About Us", href: "/about" }}
         imageSrc="/images/home/hero.jpg"
+        imageSrcMobile="/images/home/hero-mobile.jpg"
         imageAlt="Diverse team collaborating around a table with laptops"
       >
         {/* Stats row inside hero */}
@@ -343,13 +344,13 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
                 </svg>
               </div>
-              <span className="font-body text-xs tracking-[0.3em] uppercase text-white/60 font-bold block mb-3">
+              <span className="font-body text-xs tracking-[0.3em] uppercase text-white/80 font-bold block mb-3">
                 02 / Adaptive
               </span>
               <h3 className="font-headline text-3xl text-white mb-3">
                 Cyber Security Services
               </h3>
-              <p className="text-white/75 text-sm font-body leading-relaxed mb-6">
+              <p className="text-white/85 text-sm font-body leading-relaxed mb-6">
                 Not just tools — precision cybersecurity. Protecting your assets, ensuring compliance, and maintaining business continuity.
               </p>
               <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] uppercase tracking-widest text-white/80">

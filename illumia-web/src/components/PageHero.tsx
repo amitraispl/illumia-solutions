@@ -25,6 +25,8 @@ export interface PageHeroProps {
   primaryCta: { label: string; href: string; onClick?: (e: MouseEvent<HTMLAnchorElement>) => void };
   secondaryCta?: { label: string; href: string };
   imageSrc: string;
+  /** Smaller art-directed variant served only below the lg breakpoint (max-width: 1023px). Desktop always uses `imageSrc` unchanged. */
+  imageSrcMobile?: string;
   imageAlt: string;
   /** Apply grayscale + contrast filter to image (portrait/editorial style) */
   imageGrayscale?: boolean;
@@ -47,6 +49,7 @@ export default function PageHero({
   primaryCta,
   secondaryCta,
   imageSrc,
+  imageSrcMobile,
   imageAlt,
   imageGrayscale = false,
   imagePosition = "object-center",
@@ -120,6 +123,25 @@ export default function PageHero({
       >
         {imageNode ? (
           imageNode
+        ) : imageSrcMobile ? (
+          // Art-directed: smaller file below lg (1024px), original file unchanged at/above lg.
+          // Plain <picture> instead of next/image since `images.unoptimized: true` already
+          // makes next/image emit a single fixed src with no srcSet — this is the only way
+          // to actually vary what mobile downloads.
+          <picture>
+            <source media="(max-width: 1023px)" srcSet={imageSrcMobile} />
+            <link rel="preload" as="image" href={imageSrcMobile} media="(max-width: 1023px)" fetchPriority="high" />
+            <link rel="preload" as="image" href={imageSrc} media="(min-width: 1024px)" fetchPriority="high" />
+            <img
+              src={imageSrc}
+              alt={imageAlt}
+              fetchPriority="high"
+              decoding="async"
+              className={`absolute inset-0 h-full w-full object-cover ${imagePosition} ${
+                imageGrayscale ? "grayscale brightness-90 contrast-110" : ""
+              }`}
+            />
+          </picture>
         ) : (
           <Image
             src={imageSrc}
