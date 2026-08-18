@@ -24,6 +24,16 @@ export const metadata: Metadata = {
   description:
     "Illumia Solutions is a certified Proxmox Silver Partner based in Kolkata, India, delivering enterprise-grade cloud infrastructure, cybersecurity, open-source and software development services. CISA, CISSP, CEH, CCIE certified.",
   alternates: { canonical: "/" },
+  openGraph: {
+    url: "https://illumiasolutions.com/",
+    title: "Illumia Solutions | Enterprise IT Services | Cloud, Cybersecurity & Open Source",
+    description:
+      "Illumia Solutions is a certified Proxmox Silver Partner based in Kolkata, India, delivering enterprise-grade cloud infrastructure, cybersecurity, open-source and software development services. CISA, CISSP, CEH, CCIE certified.",
+    images: [{ url: "/og-default.jpg", width: 1200, height: 630 }],
+    type: "website",
+    siteName: "Illumia Solutions",
+    locale: "en_US",
+  },
 };
 
 const stats = [

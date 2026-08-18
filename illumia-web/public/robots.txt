@@ -7,4 +7,22 @@ Content-Signal: search=yes, ai-input=yes, ai-train=yes
 User-Agent: Bytespider
 Disallow: /
 
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://illumiasolutions.com/sitemap.xml

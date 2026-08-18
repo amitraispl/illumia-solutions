@@ -61,6 +61,18 @@ const orgSchema = {
     "https://www.linkedin.com/company/illumia-solutions-pvt-ltd/",
     "https://www.proxmox.com/en/partners/find-partner/all/partner/illumia-solutions",
   ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Illumia Solutions Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Cloud Services", url: "https://illumiasolutions.com/cloud-services/" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Cyber Security", url: "https://illumiasolutions.com/cyber-security/" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Open Source Solutions", url: "https://illumiasolutions.com/open-source-solutions/" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Software Development", url: "https://illumiasolutions.com/software-development/" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Proxmox VE Migration", url: "https://illumiasolutions.com/proxmox-migration/" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Infrastructure Solutions", url: "https://illumiasolutions.com/infrastructure-solutions/" } },
+    ],
+  },
 };
 
 const webSiteSchema = {
@@ -81,6 +93,7 @@ export const metadata: Metadata = {
   },
   description:
     "Enterprise-grade cybersecurity, cloud infrastructure, and open-source IT services for businesses across India, the USA, Australia, and beyond. Proxmox Silver Partner. CISA, CISSP, CEH, CCIE certified team with 20+ years of collective industry experience.",
+  robots: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
   openGraph: {
     images: [{ url: "/og-default.jpg", width: 1200, height: 630 }],
     type: "website",
@@ -105,6 +118,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("h-full", "font-sans", inter.variable, newsreader.variable)}>
       <body className="min-h-full flex flex-col bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+        <link rel="alternate" type="text/plain" href="https://illumiasolutions.com/llms.txt" title="LLMs.txt" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
@@ -117,6 +131,14 @@ export default function RootLayout({
         <Navbar />
         <main id="main-content" className="flex-1">{children}</main>
         <Footer />
+        <noscript>
+          <div style={{ padding: "1rem", textAlign: "center" }}>
+            <a href="/">Home</a> · <a href="/cloud-services/">Cloud Services</a> ·{" "}
+            <a href="/cyber-security/">Cyber Security</a> · <a href="/open-source-solutions/">Open Source</a> ·{" "}
+            <a href="/software-development/">Software Development</a> · <a href="/about/">About</a> ·{" "}
+            <a href="/contact/">Contact</a>
+          </div>
+        </noscript>
       </body>
     </html>
   );
