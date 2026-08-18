@@ -125,6 +125,37 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
+/* ── Hero entrance ──────────────────────────────────────────────────────
+   Above-the-fold hero content animates from the stylesheet, never from JS.
+   Framer's `initial="hidden"` renders the LCP element as
+   `style="opacity:0"` in the exported HTML, so nothing above the fold can
+   paint until motion/react downloads and hydrates — worth several seconds
+   of LCP on mobile. Same 700ms curve, 24px offset and 100ms stagger as the
+   variants they replace, so the animation looks unchanged; it just starts
+   at first paint instead of after hydration. Below-the-fold reveals still
+   use Framer, where the hydration delay costs nothing. */
+@keyframes hero-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero-reveal {
+  animation: hero-reveal 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Delays must follow `.hero-reveal` — the shorthand above resets
+   animation-delay, and equal specificity means source order decides. */
+.hero-reveal-1 { animation-delay: 100ms; }
+.hero-reveal-2 { animation-delay: 200ms; }
+.hero-reveal-3 { animation-delay: 300ms; }
+.hero-reveal-4 { animation-delay: 400ms; }
+
 a, button {
   transition-property: color, background-color, border-color, box-shadow, transform, opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -175,6 +206,13 @@ textarea:focus-visible {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  /* The rule above collapses the duration but leaves the stagger delay, which
+     would hold the hero at opacity 0 for up to 400ms. Zero it so the hero is
+     simply present. */
+  .hero-reveal {
+    animation-delay: 0ms !important;
   }
 }
 

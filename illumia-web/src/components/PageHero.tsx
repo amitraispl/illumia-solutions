@@ -2,21 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "motion/react";
 import type { MouseEvent, ReactNode } from "react";
 
-
-const EASE = [0.22, 1, 0.36, 1] as [number, number, number, number];
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
-};
-
-const stagger = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.1 } },
-};
+// The entrance animation is CSS (`.hero-reveal*` in globals.css), not Framer.
+// This is the LCP element on every page: a Framer `initial="hidden"` renders it
+// as `opacity:0` in the exported HTML, so it cannot paint until motion/react
+// downloads and hydrates. The CSS keyframes reproduce the same 700ms curve and
+// 100ms stagger but run at first paint.
 
 export interface PageHeroProps {
   badge: string;
@@ -62,34 +54,22 @@ export default function PageHero({
     <section className="flex flex-col lg:flex-row min-h-[100dvh] overflow-hidden">
       {/* ── Text half ── */}
       <div className="relative z-10 lg:w-[52%] bg-surface pt-24 pb-12 md:pt-36 md:pb-20 px-6 md:px-12 lg:pl-12 xl:pl-20 lg:pr-12 xl:pr-16 flex items-center">
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          animate="visible"
-          className="w-full max-w-2xl"
-        >
-          <motion.span
-            variants={fadeUp}
-            className={`font-body tracking-[0.25em] uppercase text-primary font-bold mb-6 block ${badgeClassName || "text-[13px] lg:text-[15px]"}`}
+        <div className="w-full max-w-2xl">
+          <span
+            className={`hero-reveal font-body tracking-[0.25em] uppercase text-primary font-bold mb-6 block ${badgeClassName || "text-[13px] lg:text-[15px]"}`}
           >
             {badge}
-          </motion.span>
+          </span>
 
-          <motion.h1
-            variants={fadeUp}
-            className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-stone-900 leading-[0.93] tracking-tighter mb-5 md:mb-8"
-          >
+          <h1 className="hero-reveal hero-reveal-1 font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-stone-900 leading-[0.93] tracking-tighter mb-5 md:mb-8">
             {title}
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            variants={fadeUp}
-            className="text-base md:text-xl text-on-surface-variant font-body leading-relaxed mb-8 md:mb-10 max-w-lg"
-          >
+          <p className="hero-reveal hero-reveal-2 text-base md:text-xl text-on-surface-variant font-body leading-relaxed mb-8 md:mb-10 max-w-lg">
             {description}
-          </motion.p>
+          </p>
 
-          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+          <div className="hero-reveal hero-reveal-3 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
             <Link
               href={primaryCta.href}
               onClick={primaryCta.onClick}
@@ -105,14 +85,14 @@ export default function PageHero({
                 {secondaryCta.label}
               </Link>
             )}
-          </motion.div>
+          </div>
 
           {children && (
-            <motion.div variants={fadeUp} className="mt-10">
+            <div className="hero-reveal hero-reveal-4 mt-10">
               {children}
-            </motion.div>
+            </div>
           )}
-        </motion.div>
+        </div>
       </div>
 
       {/* ── Image half — full-bleed to screen edge ── */}

@@ -19,17 +19,6 @@ export default function WhyChooseFlipCard({ title, description, href }: Props) {
       className="relative min-h-[320px] sm:min-h-[240px] [perspective:1200px]"
       onMouseEnter={() => setFlipped(true)}
       onMouseLeave={() => setFlipped(false)}
-      onClick={() => setFlipped((f) => !f)}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          setFlipped((f) => !f);
-        }
-      }}
-      role="button"
-      tabIndex={0}
-      aria-pressed={flipped}
-      aria-label={`${title} — press to flip for details`}
     >
       <div
         className={cn(
@@ -37,8 +26,24 @@ export default function WhyChooseFlipCard({ title, description, href }: Props) {
           flipped ? "[transform:rotateY(180deg)]" : "[transform:rotateY(0deg)]"
         )}
       >
-        {/* Front — image + quote */}
-        <div className="absolute inset-0 [backface-visibility:hidden] rounded-2xl overflow-hidden">
+        {/* Front — image + quote. This is the flip-open trigger. It has no
+            interactive children, so it's safe as a single tap/keyboard target
+            (unlike wrapping the whole card, which would nest this target
+            inside/around the "Get Support" link on the back face). */}
+        <div
+          className="absolute inset-0 [backface-visibility:hidden] rounded-2xl overflow-hidden cursor-pointer"
+          onClick={() => setFlipped(true)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              setFlipped(true);
+            }
+          }}
+          role="button"
+          tabIndex={flipped ? -1 : 0}
+          aria-hidden={flipped}
+          aria-label={`${title} — press to flip for details`}
+        >
           <Image
             src="/images/heroes/cloud-migration_hero.jpg"
             alt="Illumia Solutions infrastructure"
@@ -63,24 +68,37 @@ export default function WhyChooseFlipCard({ title, description, href }: Props) {
           </div>
         </div>
 
-        {/* Back — Continuous Support content */}
-        <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl bg-white border border-outline-variant/30 p-8 flex flex-col gap-4">
+        {/* Back — Continuous Support content. The real link and the explicit
+            close button below are the only interactive elements here, so
+            nothing overlaps them. Both are un-tabbable while the back face is
+            rotated away so no invisible focusable elements linger in the
+            front-face tab order. */}
+        <div
+          className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl bg-white border border-outline-variant/30 p-8 flex flex-col gap-4"
+          aria-hidden={!flipped}
+        >
           <h3 className="font-headline text-2xl text-stone-900">{title}</h3>
           <p className="font-body text-sm text-on-surface-variant leading-relaxed">{description}</p>
           <div className="flex items-center justify-between mt-auto">
             <Link
               href={href}
-              className="font-body font-semibold text-xs inline-flex items-center gap-2 uppercase tracking-widest text-primary/60 hover:text-primary transition-colors duration-200"
-              onClick={(e) => e.stopPropagation()}
+              className="font-body font-semibold text-xs inline-flex items-center gap-2 uppercase tracking-widest text-primary/80 hover:text-primary transition-colors duration-200 -m-2 p-2"
+              tabIndex={flipped ? 0 : -1}
             >
               Get Support
               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
-            <span className="md:hidden font-body text-[10px] uppercase tracking-widest text-stone-300">
+            <button
+              type="button"
+              onClick={() => setFlipped(false)}
+              tabIndex={flipped ? 0 : -1}
+              aria-label="Close details"
+              className="md:hidden font-body text-[10px] uppercase tracking-widest text-stone-500 -m-2 p-2"
+            >
               Tap to close
-            </span>
+            </button>
           </div>
         </div>
       </div>

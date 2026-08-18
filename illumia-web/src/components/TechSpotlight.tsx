@@ -150,7 +150,7 @@ export default function TechSpotlight() {
                 <span className="font-body text-xs tracking-[0.25em] uppercase text-primary font-bold">
                   Responsible AI
                 </span>
-                <span className="font-body text-[10px] tracking-[0.2em] uppercase text-primary/60 font-bold border border-primary/20 rounded-full px-3 py-1">
+                <span className="font-body text-[10px] tracking-[0.2em] uppercase text-primary font-bold border border-primary/20 rounded-full px-3 py-1">
                   EU AI Act 2025
                 </span>
               </div>
@@ -172,10 +172,10 @@ export default function TechSpotlight() {
               </div>
 
               <div className="relative flex items-center justify-between gap-3 flex-wrap border-t border-stone-100 pt-5">
-                <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] duration-200 uppercase tracking-widest text-primary/60 group-hover:text-primary">
+                <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] duration-200 uppercase tracking-widest text-primary group-hover:text-primary-dark">
                   Build Your Framework <Arrow />
                 </span>
-                <p className="font-body text-[10px] uppercase tracking-widest text-stone-400 font-bold">EU · NIST · ISO 42001</p>
+                <p className="font-body text-[10px] uppercase tracking-widest text-stone-500 font-bold">EU · NIST · ISO 42001</p>
               </div>
             </Link>
           </motion.div>
@@ -187,14 +187,14 @@ export default function TechSpotlight() {
               className="group block h-full bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-stone-200/80 overflow-hidden flex flex-col transition-[box-shadow] duration-300 hover:shadow-xl hover:shadow-[#00f2d4]/15"
             >
               <div className="mb-6">
-                <span className="font-body text-xs tracking-[0.25em] uppercase font-bold" style={{ color: "#00f2d4" }}>
+                <span className="font-body text-xs tracking-[0.25em] uppercase font-bold" style={{ color: "#00786a" }}>
                   Network Source of Truth
                 </span>
               </div>
 
-              <h3 className="font-headline text-3xl md:text-4xl text-stone-900 mb-4 leading-[0.95] tracking-tight transition-colors duration-300 group-hover:text-[#00c4aa]">
+              <h3 className="font-headline text-3xl md:text-4xl text-stone-900 mb-4 leading-[0.95] tracking-tight transition-colors duration-300 group-hover:text-[#00786a]">
                 Your Network, Documented.{" "}
-                <span className="italic font-normal" style={{ color: "#00f2d4" }}>Precisely.</span>
+                <span className="italic font-normal" style={{ color: "#00786a" }}>Precisely.</span>
               </h3>
               <p className="text-stone-500 text-sm font-body leading-[1.7] mb-6 flex-1">
                 Spreadsheets and tribal knowledge aren&apos;t a network strategy — they&apos;re a liability. NetBox is your single source of truth for IP addressing, DCIM, and rack management, integrating natively with Ansible, Terraform, and Nautobot.
@@ -209,7 +209,7 @@ export default function TechSpotlight() {
               </div>
 
               <div className="border-t pt-5" style={{ borderColor: "rgba(0,242,212,0.12)" }}>
-                <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] duration-200 uppercase tracking-widest" style={{ color: "rgba(0,242,212,0.6)" }}>
+                <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] duration-200 uppercase tracking-widest" style={{ color: "#00786a" }}>
                   Modernise Network Documentation <Arrow />
                 </span>
               </div>

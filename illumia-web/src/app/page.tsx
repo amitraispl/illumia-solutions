@@ -170,12 +170,16 @@ export default function HomePage() {
                   style={{ paddingLeft: `${px}px`, paddingRight: `${px}px` }}
                   className="flex items-center"
                 >
+                  {/* Deliberately left on the default lazy loading: `eager` here
+                      made Next emit a <link rel="preload"> per logo into <head>,
+                      ~320 KB of below-fold art competing with the hero image for
+                      the first connection. The repeated marquee copies share these
+                      URLs, so once the first copy loads the rest come from cache. */}
                   <Image
                     src={logo.src}
                     alt={logo.alt}
                     width={logo.width}
                     height={logo.height}
-                    loading="eager"
                     unoptimized
                     className={`object-contain max-h-12 w-auto transition-transform duration-200 hover:scale-110 ${logo.wide ? "max-w-72" : "max-w-36"}`}
                   />
@@ -524,7 +528,7 @@ export default function HomePage() {
               >
                 <h3 className="font-headline text-2xl text-white">{whyChoose[0].title}</h3>
                 <p className="font-body text-sm text-white/80 leading-relaxed">{whyChoose[0].description}</p>
-                <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] uppercase tracking-widest text-white/70">
+                <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] uppercase tracking-widest text-white/85">
                   Explore Our Expertise
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </span>
@@ -548,7 +552,7 @@ export default function HomePage() {
                   <h3 className="font-headline text-2xl text-stone-900 group-hover:text-primary transition-colors duration-300">{item.title}</h3>
                   <p className="font-body text-sm text-on-surface-variant leading-relaxed flex-1">{item.description}</p>
                   {i === 3 && (
-                    <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] uppercase tracking-widest text-primary/60 group-hover:text-primary">
+                    <span className="font-body font-semibold text-xs inline-flex items-center gap-2 group-hover:gap-4 transition-[gap] uppercase tracking-widest text-primary/80 group-hover:text-primary">
                       Our Global Reach
                       <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
