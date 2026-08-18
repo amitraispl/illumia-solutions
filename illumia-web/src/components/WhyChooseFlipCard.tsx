@@ -16,14 +16,24 @@ export default function WhyChooseFlipCard({ title, description, href }: Props) {
 
   return (
     <div
-      className="relative min-h-[240px] [perspective:1200px]"
+      className="relative min-h-[320px] sm:min-h-[240px] [perspective:1200px]"
       onMouseEnter={() => setFlipped(true)}
       onMouseLeave={() => setFlipped(false)}
       onClick={() => setFlipped((f) => !f)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          setFlipped((f) => !f);
+        }
+      }}
+      role="button"
+      tabIndex={0}
+      aria-pressed={flipped}
+      aria-label={`${title} — press to flip for details`}
     >
       <div
         className={cn(
-          "relative h-full min-h-[240px] w-full [transform-style:preserve-3d] transition-[transform] duration-700 ease-in-out",
+          "relative h-full min-h-[320px] sm:min-h-[240px] w-full [transform-style:preserve-3d] transition-[transform] duration-700 ease-in-out",
           flipped ? "[transform:rotateY(180deg)]" : "[transform:rotateY(0deg)]"
         )}
       >
@@ -55,9 +65,9 @@ export default function WhyChooseFlipCard({ title, description, href }: Props) {
 
         {/* Back — Continuous Support content */}
         <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl bg-white border border-outline-variant/30 p-8 flex flex-col gap-4">
-          <h3 className="font-headline text-xl sm:text-2xl text-stone-900">{title}</h3>
-          <p className="font-body text-sm text-on-surface-variant leading-relaxed flex-1">{description}</p>
-          <div className="flex items-center justify-between">
+          <h3 className="font-headline text-2xl text-stone-900">{title}</h3>
+          <p className="font-body text-sm text-on-surface-variant leading-relaxed">{description}</p>
+          <div className="flex items-center justify-between mt-auto">
             <Link
               href={href}
               className="font-body font-semibold text-xs inline-flex items-center gap-2 uppercase tracking-widest text-primary/60 hover:text-primary transition-colors duration-200"
